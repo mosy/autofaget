@@ -6,10 +6,22 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+.topnav	autofaget.css	/^.topnav {$/;"	c
+.topnav .icon	autofaget.css	/^.topnav .icon {$/;"	c
+.topnav a	autofaget.css	/^.topnav a {$/;"	s
+.topnav a.active	autofaget.css	/^.topnav a.active {$/;"	c
+.topnav a.icon	autofaget.css	/^	    .topnav a.icon {$/;"	c
+.topnav a:hover	autofaget.css	/^.topnav a:hover {$/;"	s
+.topnav a:not(:first-child)	autofaget.css	/^	  .topnav a:not(:first-child) {display: none;}$/;"	s
+.topnav.responsive	autofaget.css	/^	  .topnav.responsive {position: relative;}$/;"	c
+.topnav.responsive .icon	autofaget.css	/^	    .topnav.responsive .icon {$/;"	c
+.topnav.responsive a	autofaget.css	/^	      .topnav.responsive a {$/;"	s
 404	404.html	/^  <h1>404<\/h1>$/;"	h
-AFGV Automatiseringssystmer For Gand Videregående	index.html	/^                <h1>AFGV Automatiseringssystmer For Gand Videregående<\/h1>$/;"	h
+AFGV Automatiseringssystmer For Gand Videregående	index.html	/^				<h1>AFGV Automatiseringssystmer For Gand Videregående<\/h1>$/;"	h
 Oppgaver i sekvensprogrammering for 3AUA Gand VGS	oppgaver.html	/^                <h1>Oppgaver i sekvensprogrammering for 3AUA Gand VGS<\/h1>$/;"	h
-categories: jekyll update	_posts/2019-06-18-welcome-to-jekyll.markdown	/^categories: jekyll update$/;"	s
+body	autofaget.css	/^body {$/;"	s
 fade	oppgaver.html	/^    <div id="fade" class="black_overlay" onclick="document.getElementById('light').style.display/;"	I
 light	oppgaver.html	/^    <div id="light" class="white_content"><\/div>$/;"	I
+myTopnav	index.html	/^		<div class="topnav" id="myTopnav">$/;"	I
+myTopnav	oppgaver.html	/^		<div class="topnav" id="myTopnav">$/;"	I
 permalink: /about/	about.md	/^permalink: \/about\/$/;"	s
