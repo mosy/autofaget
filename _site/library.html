@@ -1,0 +1,586 @@
+<!doctype html>
+
+<style type="text/css" media="screen">
+    body {
+        margin: 0;
+    }
+
+    .container {
+        display: table;
+        margin: auto;
+    }
+
+    h1 {
+        color: #4f4c47;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        color: #4f4c47;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        color: #4f4c47;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 0;
+    }
+
+    span {
+        color: grey;
+    }
+
+    address {
+        color: grey;
+        font-style: normal;
+        margin-top: 5px;
+    }
+
+    em {
+        color: #686662;
+        font-size: 14px;
+        line-height: 1.9em;
+    }
+
+    p {
+        color: #686662;
+        font-size: 14px;
+        line-height: 1.9em;
+    }
+
+    p:link {
+        text-decoration: none;
+    }
+
+    td {
+        padding: 0;
+    }
+
+    a:link {
+        color: #7ab317;
+    }
+
+    ul {
+        list-style: none;
+        /* Remove default bullets */
+    }
+
+    li {
+        color: grey;
+        font-size: 14px;
+        line-height: 1.9em;
+    }
+
+    ul li::before {
+        content: "\2022";
+        /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: #7ab317;
+        /* Change the color */
+        font-weight: bold;
+        /* If you want it to be bold */
+        display: inline-block;
+        /* Needed to add space between the bullet and the text */
+        width: 1em;
+        /* Also needed for space (tweak if needed) */
+        margin-left: -1em;
+        /* Also needed for space (tweak if needed) */
+    }
+
+    .content {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    /* Style the header with a grey background and some padding */
+    .header {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        padding: 20px 30px;
+    }
+
+    /* Style the header links */
+    .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+    }
+
+    /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+    .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+        color: #7ab317;
+    }
+
+    /* Change the background color on mouse-over */
+    .header a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Style the active/current link*/
+    .header a.active {
+        background-color: #7ab317;
+        color: white;
+    }
+
+    /* Float the link section to the right */
+    .header-right {
+        float: right;
+    }
+
+    /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+    @media screen and (max-width: 500px) {
+        .header a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+        .header-right {
+            float: none;
+        }
+    }
+
+    .black_overlay {
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 1001;
+        -moz-opacity: 0.8;
+        opacity: .80;
+        filter: alpha(opacity=80);
+    }
+
+    .white_content {
+        display: none;
+        position: fixed;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: auto;
+        padding: 30px;
+        background-color: white;
+        z-index: 1002;
+        overflow: auto;
+    }
+
+    .footer {
+        height: 62.4px;
+        background-color: #f1f1f1;
+        color: white;
+        text-align: center;
+        padding: 10px 30px;
+    }
+</style>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Simumatik3D - Library</title>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <img href="/" src="../_images/logo.png" style="width: auto; height: 45px;" />
+            <div class="header-right">
+                <a  href="/">Downloads</a>
+                <a  class="active"  href="../library.html">Library</a>
+                <a 
+                    href="../tutorials.html">Tutorials</a>
+                <a  href="../examples.html">Examples</a>
+                <a  href="../research.html">Research</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <table style="width: 1040px; height: 80px;" cellpadding="10">
+    <tbody>
+        <tr>
+            <td>
+                <h1>Library</h1>
+            </td>
+        </tr>
+        <td>
+            <div style="height: 25px;"></div>
+        </td>
+        <tr style="display:inline-block; text-align: center;">
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                            IRB 6640-185_280
+                    </p>
+                    <p><img src="_images/IRB 6640-185_280.PNG"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/IRB.6640-185_280.sml"
+                            download="IRB.6640-185_280.sml">Download</a>
+                    </button>
+
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                            Metal Container
+                    </p>
+                    <p><img src="_images/Metal Container.png"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Metal.Container.sml"
+                            download="Metal.Container.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                            Euro Pallet
+                    </p>
+                    <p><img src="_images/Euro Pallet.png"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Euro.Pallet.sml"
+                            download="Euro.Pallet.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                            Servo Restrictor
+                    </p>
+                    <p><img src="_images/Servo Restrictor.png"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Servo.Restrictor.sml"
+                            download="Servo.Restrictor.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+
+        </tr>
+        <td>
+            <div style="height: 25px;"></div>
+        </td>
+        <tr style="display:inline-block; text-align: center;">
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                            Plastic Container
+                    </p>
+                    <p><img src="_images/Plastic Container.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;"width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Plastic.Container.sml"
+                            download="Plastic.Container.sml">Download</a>
+                    </button>
+
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                            Bottle
+                    </p>
+                    <p><img src="_images/Bottle.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Bottle.sml"
+                            download="Bottle.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                            Conveyor Y
+                    </p>
+                    <p><img src="_images/Conveyor Y.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Conveyor.Y.sml"
+                            download="Conveyor.Y.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                        Safety Glass.jpg
+                    </p>
+                    <p><img src="_images/Safety Glass.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Safety.Glass.sml"
+                            download="Safety.Glass.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+
+        </tr>
+        <td>
+            <div style="height: 25px;"></div>
+        </td>
+        <td>
+            <div style="height: 25px;"></div>
+        </td>
+        <tr style="display:inline-block; text-align: center;">
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                            2 Sensor Proximity With Housing
+                    </p>
+                    <p><img src="_images/Sensor Proximity With Housing 2.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Sensor.Proximity.With.Housing.2.sml"
+                            download="Sensor.Proximity.With.Housing.2.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                        Sensor Proximity With Housing
+                    </p>
+                    <p><img src="_images/Sensor Proximity With Housing.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Sensor.Proximity.With.Housing.sml"
+                            download="Sensor.Proximity.With.Housing.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                        Sensor Retro Reflective
+                    </p>
+                    <p><img src="_images/Sensor Retro Reflective.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Sensor.Retro.Reflective.sml"
+                            download="Sensor.Retro.Reflective.sml">Download</a>
+                    </button>
+                    <p></p>
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                        Servo Bilateral Restrictor
+                    </p>
+                    <p><img src="_images/Servo Bilateral Restrictor 1.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Servo.Bilateral.Restrictor.1.sml"
+                            download="Servo.Bilateral.Restrictor.1.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+
+        </tr>
+        <td>
+            <div style="height: 25px;"></div>
+        </td>
+        <td>
+            <div style="height: 25px;"></div>
+        </td>
+        <tr style="display:inline-block; text-align: center;">
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                        Servo Pusher
+                    </p>
+                    <p><img src="_images/Servo Pusher 1.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Servo.Pusher.1.sml"
+                            download="Servo.Pusher.1.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                        Servo Pusher Rotational
+                    </p>
+                    <p><img src="_images/Servo Pusher 2.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Servo.Pusher.2.sml"
+                            download="Servo.Pusher.2.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                        Servo Vertical Picker
+                    </p>
+                    <p><img src="_images/Servo Vertical Picker 1.jpg"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/Servo.Vertical.Picker.1.sml"
+                            download="Servo.Vertical.Picker.1.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div style="width: 25px;"></div>
+            </td>
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                        ABB IRB120T
+                    </p>
+                    <p><img src="_images/ABB IRB120T.png"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/ABB.IRB120T.sml"
+                            download="ABB.IRB120T.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+
+        </tr>
+        <td>
+            <div style="height: 25px;"></div>
+        </td>
+        <td>
+            <div style="height: 25px;"></div>
+        </td>
+        <tr style="display:inline-block; text-align: center;">
+            <td style="width: auto; height: 100px; padding: 10px; border: 1px solid lightgrey; border-radius: 5px">
+                <div>
+                    <p style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;">
+                            ABB IRB6620
+                    </p>
+                    <p><img src="_images/ABB IRB6620.png"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                    </p>
+                    <button
+                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
+                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
+                            href="https://github.com/simumatik3d/simumatik3d.github.io/releases/download/v1.1/ABB.IRB6620.sml"
+                            download="ABB.IRB6620.sml">Download</a>
+                    </button>
+                </div>
+            </td>
+        </tr>
+        <td>
+            <div style="height: 25px;"></div>
+        </td>
+    </tbody>
+</table>
+            </div>
+        </div>
+        <div class="footer">
+            <div style="width: 1040px; display: table; margin: 0 auto;">
+                <p style="font-size: 16px; float: left;">© Copyright 2019 Simumatik | All rights reserved</p>
+                <img href="/" src="../_images/logo.png"
+                    style="width: auto; height: 63px;float: right; vertical-align: middle;" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+
+<style type="text/css" media="screen">
+    body {
+        margin: 0;
+    }
+
+    .container {
+        display: table;
+        margin: auto;
+    }
+
+    h1 {
+        color: #4f4c47;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        color: #4f4c47;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        color: #4f4c47;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 0;
+    }
+
+    span {
+        color: grey;
+    }
+
+    address {
+        color: grey;
+        font-style: normal;
+        margin-top: 5px;
+    }
+
+    em {
+        color: #686662;
+        font-size: 14px;
+        line-height: 1.9em;
+    }
+
+    p {
+        color: #686662;
+        font-size: 14px;
+        line-height: 1.9em;
+    }
+
+    p:link {
+        text-decoration: none;
+    }
+
+    td {
+        padding: 0;
+    }
+
+    a:link {
+        color: #7ab317;
+    }
+
+    ul {
+        list-style: none;
+        /* Remove default bullets */
+    }
+
+    li {
+        color: grey;
+        font-size: 14px;
+        line-height: 1.9em;
+    }
+
+    ul li::before {
+        content: "\2022";
+        /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: #7ab317;
+        /* Change the color */
+        font-weight: bold;
+        /* If you want it to be bold */
+        display: inline-block;
+        /* Needed to add space between the bullet and the text */
+        width: 1em;
+        /* Also needed for space (tweak if needed) */
+        margin-left: -1em;
+        /* Also needed for space (tweak if needed) */
+    }
+
+    .content {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    /* Style the header with a grey background and some padding */
+    .header {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        padding: 20px 30px;
+    }
+
+    /* Style the header links */
+    .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+    }
+
+    /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+    .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+        color: #7ab317;
+    }
+
+    /* Change the background color on mouse-over */
+    .header a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Style the active/current link*/
+    .header a.active {
+        background-color: #7ab317;
+        color: white;
+    }
+
+    /* Float the link section to the right */
+    .header-right {
+        float: right;
+    }
+
+    /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+    @media screen and (max-width: 500px) {
+        .header a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+        .header-right {
+            float: none;
+        }
+    }
+
+    .black_overlay {
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 1001;
+        -moz-opacity: 0.8;
+        opacity: .80;
+        filter: alpha(opacity=80);
+    }
+
+    .white_content {
+        display: none;
+        position: fixed;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: auto;
+        padding: 30px;
+        background-color: white;
+        z-index: 1002;
+        overflow: auto;
+    }
+
+    .footer {
+        height: 62.4px;
+        background-color: #f1f1f1;
+        color: white;
+        text-align: center;
+        padding: 10px 30px;
+    }
+</style>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Simumatik3D - {{ page.title }}</title>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <a href="https://simumatik.com/">
+                <img href="https://simumatik.com/" src="../_images/logo.png" style="width: auto; height: 45px;" />
+            <a/>
+            <div class="header-right">
+                <a {% if page.url == '/' %} class="active" {% endif %} href="/">Downloads</a>
+                <a {% if page.url == '/library.html' %} class="active" {% endif %} href="../library.html">Library</a>
+                <a {% if page.url == '/tutorials.html' %} class="active" {% endif %}
+                    href="../tutorials.html">Tutorials</a>
+                <a {% if page.url == '/examples.html' %} class="active" {% endif %} href="../examples.html">Examples</a>
+                <a {% if page.url == '/research.html' %} class="active" {% endif %} href="../research.html">Research</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                {{ content }}
+            </div>
+        </div>
+        <div class="footer">
+            <div style="width: 1040px; display: table; margin: 0 auto;">
+                <p style="font-size: 16px; float: left;">© Copyright 2019 Simumatik | All rights reserved</p>
+                <img href="/" src="../_images/logo.png"
+                    style="width: auto; height: 63px;float: right; vertical-align: middle;" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
