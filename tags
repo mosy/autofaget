@@ -124,28 +124,19 @@
 .wrapper:after	_site/assets/main.css	/^.wrapper:after, .footer-col-wrapper:after {$/;"	c
 404	404.html	/^  <h1>404<\/h1>$/;"	h
 404	_site/404.html	/^  <h1>404<\/h1>$/;"	h
+AFGV Autoatiseringssystmer For Gand Videregående	index.html	/^                <h1>AFGV Autoatiseringssystmer For Gand Videregående<\/h1>$/;"	h
 About	_site/about/index.html	/^    <h1 class="post-title">About<\/h1>$/;"	h
 Downloads	_site/index.html	/^                <h1>Downloads<\/h1>$/;"	h
-Downloads	index.html	/^                <h1>Downloads<\/h1>$/;"	h
 Emulation of a manufacturing process: Focusing on maintenance and operator training	_site/research.html	/^        <h2>Emulation of a manufacturing process: Focusing on maintenance and operator training</;"	i
-Emulation of a manufacturing process: Focusing on maintenance and operator training	research.html	/^        <h2>Emulation of a manufacturing process: Focusing on maintenance and operator training</;"	i
 Emulation of a production cell including robot vision	_site/research.html	/^        <h2>Emulation of a production cell including robot vision<\/h2>$/;"	i
-Emulation of a production cell including robot vision	research.html	/^        <h2>Emulation of a production cell including robot vision<\/h2>$/;"	i
 Examples	_site/examples.html	/^                <h1>Examples<\/h1>$/;"	h
 Library	_site/library.html	/^                <h1>Library<\/h1>$/;"	h
-Library	library.html	/^                <h1>Library<\/h1>$/;"	h
-Oppgaver	examples.html	/^                <h1>Oppgaver<\/h1>$/;"	h
 Oppgaver i sekvensprogrammering for 3AUA Gand VGS	oppgaver.html	/^                <h1>Oppgaver i sekvensprogrammering for 3AUA Gand VGS<\/h1>$/;"	h
 Research	_site/research.html	/^        <h1>Research<\/h1>$/;"	h
-Research	research.html	/^        <h1>Research<\/h1>$/;"	h
 Tutorials	_site/tutorials.html	/^                <h1>Tutorials<\/h1>$/;"	h
-Tutorials	tutorials.html	/^<h1>Tutorials<\/h1>$/;"	h
 Virtual Commissioning: Emulation of a production cell	_site/research.html	/^        <h2>Virtual Commissioning: Emulation of a production cell<\/h2>$/;"	i
-Virtual Commissioning: Emulation of a production cell	research.html	/^        <h2>Virtual Commissioning: Emulation of a production cell<\/h2>$/;"	i
 Virtual commissioning : Verification of PLC logic in simulation programs	_site/research.html	/^        <h2>Virtual commissioning : Verification of PLC logic in simulation programs<\/h2>$/;"	i
-Virtual commissioning : Verification of PLC logic in simulation programs	research.html	/^        <h2>Virtual commissioning : Verification of PLC logic in simulation programs<\/h2>$/;"	i
 Virtual commissioning of a manufacturing system: Focus on verification of PLC logic	_site/research.html	/^        <h2>Virtual commissioning of a manufacturing system: Focus on verification of PLC logic</;"	i
-Virtual commissioning of a manufacturing system: Focus on verification of PLC logic	research.html	/^        <h2>Virtual commissioning of a manufacturing system: Focus on verification of PLC logic</;"	i
 Welcome to Jekyll!	_site/jekyll/update/2019/06/18/welcome-to-jekyll.html	/^    <h1 class="post-title p-name" itemprop="name headline">Welcome to Jekyll!<\/h1>$/;"	h
 a	_site/assets/main.css	/^a {$/;"	s
 a:hover	_site/assets/main.css	/^  a:hover {$/;"	s
@@ -164,7 +155,6 @@ dl	_site/assets/main.css	/^ul, ol, dl, figure,$/;"	s
 dribbble	_site/assets/minima-social-icons.svg	/^<symbol id="dribbble" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-mit/;"	i
 facebook	_site/assets/minima-social-icons.svg	/^<symbol id="facebook" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-mit/;"	i
 fade	_site/examples.html	/^    <div id="fade" class="black_overlay" onclick="document.getElementById('light').style.display/;"	I
-fade	examples.html	/^    <div id="fade" class="black_overlay" onclick="document.getElementById('light').style.display/;"	I
 fade	oppgaver.html	/^    <div id="fade" class="black_overlay" onclick="document.getElementById('light').style.display/;"	I
 figcaption	_site/assets/main.css	/^figcaption {$/;"	s
 figure	_site/assets/main.css	/^dl, dd, ol, ul, figure {$/;"	s
@@ -197,7 +187,6 @@ instagram	_site/assets/minima-social-icons.svg	/^<symbol id="instagram" fill-rul
 li > ol	_site/assets/main.css	/^li > ol {$/;"	s
 li > ul	_site/assets/main.css	/^li > ul,$/;"	s
 light	_site/examples.html	/^    <div id="light" class="white_content"><\/div>$/;"	I
-light	examples.html	/^    <div id="light" class="white_content"><\/div>$/;"	I
 light	oppgaver.html	/^    <div id="light" class="white_content"><\/div>$/;"	I
 linkedin	_site/assets/minima-social-icons.svg	/^<symbol id="linkedin" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-mit/;"	i
 main	_site/assets/main.css	/^main {$/;"	s
