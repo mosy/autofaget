@@ -7,7 +7,7 @@
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
 404	404.html	/^  <h1>404<\/h1>$/;"	h
-AFGV Autoatiseringssystmer For Gand Videregående	index.html	/^                <h1>AFGV Autoatiseringssystmer For Gand Videregående<\/h1>$/;"	h
+AFGV Automatiseringssystmer For Gand Videregående	index.html	/^                <h1>AFGV Automatiseringssystmer For Gand Videregående<\/h1>$/;"	h
 Oppgaver i sekvensprogrammering for 3AUA Gand VGS	oppgaver.html	/^                <h1>Oppgaver i sekvensprogrammering for 3AUA Gand VGS<\/h1>$/;"	h
 categories: jekyll update	_posts/2019-06-18-welcome-to-jekyll.markdown	/^categories: jekyll update$/;"	s
 fade	oppgaver.html	/^    <div id="fade" class="black_overlay" onclick="document.getElementById('light').style.display/;"	I
