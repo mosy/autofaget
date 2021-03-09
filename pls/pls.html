@@ -1,25 +1,28 @@
 <h!DOCTYPE html>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="../autofaget.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>HTML5 Navigation Bar Example - Example 1</title>
+    <link href="../style3.css" rel="stylesheet"/>
 	</head>
 	<body>
 
-		<div class="topnav" id="myTopnav">
-			  <a href="../index.html" >Home</a>
-			  <a href="../teori.html"class="active">teori</a>
-			  <a href="../oppgaver.html">Oppgaver</a>
-			  <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a>
-		</div>
-		<div class="topnav" id="myTopnav">
-			  <a href="../index.html">Elektroteknikk</a>
-			  <a href="../meassure.html">Flowmåling</a>
-			  <a href="pls.html" class="active">PLS</a>
-			  <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a>
-		</div>
+<nav>
+    <ul>
+        <li>
+            <a href="../index.html">Home</a>
+        </li>
+        <li>
+            <a href="../teori.html">Teori</a>
+            <ul>
+                <li><a href="pls/pls.html">PLS</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="../oppgaver.html">Oppgaver</a>
+        </li>
+    </ul>
+</nav>
 		Denne siden er basert på Tony R. Kuphaldts flotte arbied på https://www.ibiblio.org/kuphaldt/socratic/sinst/  <br>
 		Noe er oversatt til norsk, enkelte emner er lagt til og reseten er på orinalspråket.<br> 
 
