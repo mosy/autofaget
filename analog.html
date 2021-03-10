@@ -1,0 +1,1696 @@
+<h!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <title>Analog Instrumentering</title>
+    <link href="style3.css" rel="stylesheet"/>
+	</head>
+	<body>
+
+<nav>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="styringsteknikk.html">Styringsteknikk</a>
+            <ul>
+                <li><a href="pls.html">PLS</a></li>
+                <li><a href="analog.html">Analog</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="oppgaver.html">Oppgaver</a>
+        </li>
+    </ul>
+</nav>
+		Denne siden er basert på Tony R. Kuphaldts flotte arbied på https://www.ibiblio.org/kuphaldt/socratic/sinst/  <br>
+		Noe er oversatt til norsk, enkelte emner er lagt til og reseten er på orinalspråket.<br> 
+
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html65"
+  HREF="analog.html#SECTION00210000000000000000">4 til 20 mA analoge strøm signaler </A>
+<LI><A ID="tex2html66"
+  HREF="analog.html#SECTION00220000000000000000">Sammenhengen mellom 4-20mA signal og andre signaler</A>
+<UL>
+<LI><A ID="tex2html67"
+  HREF="analog.html#SECTION00221000000000000000">Eksempel: Regulatorutgang til reguleringsventil.</A>
+<LI><A ID="tex2html68"
+  HREF="analog.html#SECTION00222000000000000000">Eksempel: Strømningsmåler</A>
+<LI><A ID="tex2html69"
+  HREF="analog.html#SECTION00223000000000000000">Eksempel: Temperaturtransmitter</A>
+<LI><A ID="tex2html70"
+  HREF="analog.html#SECTION00224000000000000000">Example calculation: pH transmitter</A>
+<LI><A ID="tex2html71"
+  HREF="analog.html#SECTION00225000000000000000">Eksempel: I/P omformer med reverserende utgangsignal</A>
+<LI><A ID="tex2html72"
+  HREF="analog.html#SECTION00226000000000000000">Eksempel: PLS analog inngang</A>
+</UL>
+<BR>
+<LI><A ID="tex2html73"
+  HREF="analog.html#SECTION00230000000000000000">Controller output current loops</A>
+<LI><A ID="tex2html74"
+  HREF="analog.html#SECTION00240000000000000000">4-wire (&ldquo;self-powered&rdquo;) transmitter current loops</A>
+<LI><A ID="tex2html75"
+  HREF="analog.html#SECTION00250000000000000000">2-wire (&ldquo;loop-powered&rdquo;) transmitter current loops</A>
+<LI><A ID="tex2html76"
+  HREF="analog.html#SECTION00260000000000000000">4-wire &ldquo;passive&rdquo; versus &ldquo;active&rdquo; output transmitters</A>
+<LI><A ID="tex2html77"
+  HREF="analog.html#SECTION00270000000000000000">Troubleshooting current loops</A>
+<UL>
+<LI><A ID="tex2html78"
+  HREF="analog.html#SECTION00271000000000000000">Using a standard milliammeter to measure loop current</A>
+<LI><A ID="tex2html79"
+  HREF="analog.html#SECTION00272000000000000000">Using a clamp-on milliammeter to measure loop current</A>
+<LI><A ID="tex2html80"
+  HREF="analog.html#SECTION00273000000000000000">Using &ldquo;test&rdquo; diodes to measure loop current</A>
+<LI><A ID="tex2html81"
+  HREF="analog.html#SECTION00274000000000000000">Using shunt resistors to measure loop current</A>
+<LI><A ID="tex2html82"
+  HREF="analog.html#SECTION00275000000000000000">Troubleshooting current loops with voltage measurements</A>
+<LI><A ID="tex2html83"
+  HREF="analog.html#SECTION00276000000000000000">Using loop calibrators</A>
+<LI><A ID="tex2html84"
+  HREF="analog.html#SECTION00277000000000000000">NAMUR signal levels</A>
+</UL>
+<BR>
+<LI><A ID="tex2html85"
+  HREF="analog.html#SECTION00280000000000000000">Review of fundamental principles</A>
+<LI><A ID="tex2html86"
+  HREF="analog.html#SECTION00290000000000000000">References</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00200000000000000000">
+Analog Instrmentering</A>
+</H1>
+
+<P>
+Et analogt singal er en spenning eller en strøm som er proporsjonal med en fysisk måling. Betegnelsen analog henspeiler på egenskapen til hva som måles og ikke hvordan signalet behandles internt i måleutstyret (her behandles det ofte digitalt). 
+
+<P>
+
+<H1><A ID="SECTION00210000000000000000">
+4 til 20 mA analoge strøm signaler </A>
+</H1>
+
+<P>
+Den mest vanlige måten å overføre analoge signaler i automatiserteanlegg er med en 4-20 mA strømsløyfe. Dette er en <SPAN  CLASS="textit">analog</SPAN>signalstandart. Det betyr at verdien på  strømmen angir et signal fra 0-100%(4-20 mA). Om en f.eks. skal angi hastigheten til en bil med 4-20mA signal, må en definere at måleområde for hastighet. Det kan f.eks. være 0-200km/t. Da vil 0 km/t være lik 0% som skal gi et strømsignal på 4mA. (Hvorfor 4mA lurer du kansjke på dette får du svar på senere). 200km/t representerer 100% som vil gi en strøm på 20 mA. Nedenfor er en tabell med oversikt over hvor mange milliamper ulike prosent av målesignalet tilsvarer. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Current value} & \textbf{\% of scale} \cr
+\noalign{\hrule }
+4 mA & 0\% \cr
+\noalign{\hrule }
+8 mA & 25\% \cr
+\noalign{\hrule }
+12 mA & 50\% \cr
+\noalign{\hrule }
+16 mA & 75\% \cr
+\noalign{\hrule }
+20 mA & 100\% \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 17.51ex; vertical-align: -0.10ex; " SRC="analog/img1.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+
+<P>
+Om vi for eksempel setter opp en temperaturtransmitter til å måle et temperaturområde på 50-250°C, vil temperaturen i forhold til strøm gi følgende graf. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 78.77ex; vertical-align: -0.10ex; " SRC="analog/img2.svg"
+ ALT="$\displaystyle \includegraphics{current01.eps}$">
+</DIV><P></P>
+
+<P>
+This is not unlike 3-15 pounds per square inch (PSI) pneumatic signal standard, where a varying air pressure signal proportionately represents some process variable.  Both 3-15 PSI and 4-20 mA signal standards are referred to as <SPAN  CLASS="textit">live zero</SPAN> because their ranges begin with a non-zero value.  This &ldquo;live&rdquo; zero provides a simple means of discriminating between a legitimate 0% signal value and a failed signal (e.g. leaking tube or severed cable)<A ID="tex2html1"
+  HREF="footnode.html#foot41"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>.  <A NAME="42"></A>
+
+<P>
+
+<P>
+Et viktig konsept i analog instrumentering enheter som sender og mottar må være tilpasset i måleområde til hveradre. Dette for at den målte verdien skal representeres korrekt hos mottaker. For å illustrere dette skal vi se på et målesystem for måling av temperatur med termoelement. <A ID="tex2html2"
+  HREF="footnode.html#foot43"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>, a temperature transmitter, a 250 ohm resistor (to convert the 4-20 mA analog signal into a 1-5 volt analog signal), and a special voltmeter functioning as a temperature indicator:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current60.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.77ex; vertical-align: -0.10ex; " SRC="analog/img4.svg"
+ ALT="$\displaystyle \includegraphics{current60.eps}$">
+</DIV><P></P>
+
+<P>
+Legg merke til hvordan utgangsområdet for hver enhet passer med inngangsenheten som skal motta signalet. I målesystemet må kommunikasjonen mellom hver mottaker og sender være avklart på forhånd, om den ikke er det vil ikke avlesningen av signalet ha noen sammenheng med det målte signalet. 
+
+<P>
+Denne sammenhengen kommer ikke av seg selv, men må settes opp av en automatikker. Automåtikkeren må kalibrere (justere) temperaturtransmitteren til det måle området som er valgt. Han må også sørge for av displayet er tilpasset temperaturområdet som måles. I dette systmet er både termoelementet og motstanden ikke mulig å justere da deres egenskaper er bestemt av fysiske egenskaper. 
+
+<P>
+<P>
+
+<P>
+DC current signals are also used in control systems to command the positioning of a final control element, such as a control valve or a variable-speed motor drive (VSD).  In these cases, the milliamp value does not directly represent a process measurement, but rather how the degree to which the final control element influences the process.  Typically (but not always!), 4 milliamps commands a closed (shut) control valve or a stopped motor, while 20 milliamps commands a wide-open valve or a motor running at full speed.  Final control elements often are equipped with adjustable ranges so that an accurate correspondence between the analog signal and the desired control action may be ensured.
+
+<P>
+<P>
+Thus, most industrial control systems use at least <SPAN  CLASS="textit">two</SPAN> different 4-20 mA signals: one to represent the process variable (PV) and one to represent the command signal to the final control element (the &ldquo;manipulated variable&rdquo; or MV):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.06ex; vertical-align: -0.10ex; " SRC="analog/img5.svg"
+ ALT="$\displaystyle \includegraphics{current02.eps}$">
+</DIV><P></P>
+
+<P>
+The relationship between these two signals depends entirely on the response of the controller.  There is no reason to ever expect the PV and MV current signals to be equal to each other except by chance, for they represent entirely different variables.  In fact, if the controller is reverse-acting, it is entirely normal for the two current signals to be inversely related: as the PV signal increases going to a reverse-acting controller, the output signal will decrease.  If the controller is placed into &ldquo;manual&rdquo; mode by a human operator, the output signal will have no automatic relation to the PV signal at all, instead being entirely determined by the operator's whim.
+
+<P>
+
+<H1><A ID="SECTION00220000000000000000">
+Sammenhengen mellom 4-20mA signal og andre signaler</A>
+</H1>
+
+<P>
+Et 4-20mA strømsignal representerer et eller annet signal fra 0 100%. Denne sammenhengen er vanligvis lineær. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current42.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 50.13ex; vertical-align: -0.10ex; " SRC="analog/img6.svg"
+ ALT="$\displaystyle \includegraphics{current42.eps}$">
+</DIV><P></P>
+
+<P>
+<A ID="instrument_range_linear_equation"></A>
+<P>
+Siden dette er en lineær funksjon, kan vi bruke formelen for en rett linje til å relatere rett signal % til strømverdier.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = mx + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="analog/img7.svg"
+ ALT="$\displaystyle y = mx + b$">
+</DIV><P></P>
+
+<P>
+Hvor,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img8.svg"
+ ALT="$y$"></SPAN> = Utgangen fra instrumentet
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="analog/img9.svg"
+ ALT="$x$"></SPAN> = Inngangen fra instrumentet
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="analog/img10.svg"
+ ALT="$m$"></SPAN> = Stigningstallet for linjen
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="analog/img11.svg"
+ ALT="$b$"></SPAN> = <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img8.svg"
+ ALT="$y$"></SPAN>-skjeringspunktet (m.a.o. <SPAN  CLASS="textit">aktivt</SPAN> nullpunkt for instrumentutgangen. <A NAME="51"></A>) Denne vil vi kalle <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img12.svg"
+ ALT="$y_{start}$"></SPAN> fra nå av. 
+<P>
+Med en gang vi har passende verdier for <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="analog/img10.svg"
+ ALT="$m$"></SPAN> og <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img12.svg"
+ ALT="$y_{start}$"></SPAN>, kan vi bruke formelen for en rett linje for å konvertere mellom inn og utgangen på en transmitter. 
+
+<P>
+Før vi kan bruke formelen må vi finne verdiene for stigningstallet og y-skjæringspunktet for den transmitteren vi jobber med.  
+
+<P>
+For den lineære funksjonen som vises skal vi finne stigningstallet (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="analog/img10.svg"
+ ALT="$m$"></SPAN>) ved å dele linjens <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.75ex; " SRC="analog/img13.svg"
+ ALT="$y_{range}$"></SPAN> med linjens <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.75ex; " SRC="analog/img14.svg"
+ ALT="$x_{range}$"></SPAN>. <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.75ex; " SRC="analog/img13.svg"
+ ALT="$y_{range}$"></SPAN> er transmitterens inngangsområde, og <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.75ex; " SRC="analog/img14.svg"
+ ALT="$x_{range}$"></SPAN> er transmitteres utgangsområde. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current43.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 55.35ex; vertical-align: -0.10ex; " SRC="analog/img15.svg"
+ ALT="$\displaystyle \includegraphics{current43.eps}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m =\dfrac{ y_{range}} {x_{range}} = \dfrac {20 - 4} {100 - 0} = \dfrac{ 16} {100}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.48ex; vertical-align: -2.34ex; " SRC="analog/img16.svg"
+ ALT="$\displaystyle m =\dfrac{ y_{range}} {x_{range}} = \dfrac {20 - 4} {100 - 0} = \dfrac{ 16} {100}$">
+</DIV><P></P>
+
+<P>
+Dette gir:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = \left({16 \over 100}\right)x + y_{start}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="analog/img17.svg"
+ ALT="$\displaystyle y = \left({16 \over 100}\right)x + y_{start}$">
+</DIV><P></P>
+
+<P>
+For å finne skjæringspunktet med y-aksen (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="analog/img11.svg"
+ ALT="$b$"></SPAN>), må vi løse denne ligningen for noen kjente verdier av <SPAN CLASS="MATH"><IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="analog/img18.svg"
+ ALT="$(x,y)$"></SPAN>. Vi kjenner verdiene i starten og enden av måleområde, og kan velge det vi vil. Vi velger starten med <!-- MATH
+ $(x,y) = (0,4)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="analog/img19.svg"
+ ALT="$(x,y) = (0,4)$"></SPAN>. 
+
+<P>
+<P></P>
+<DIV CLASS="displaymath"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="analog/img20.svg"
+ ALT="$\displaystyle 4$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="analog/img21.svg"
+ ALT="$\displaystyle = \left({16 \over 100}\right)0 + y_{start}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="analog/img20.svg"
+ ALT="$\displaystyle 4$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.98ex; vertical-align: -0.27ex; " SRC="analog/img22.svg"
+ ALT="$\displaystyle = 0 + b$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="analog/img23.svg"
+ ALT="$\displaystyle b$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="analog/img24.svg"
+ ALT="$\displaystyle = 4$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P>
+Nå har vi en komplett formel for å konvertere en prosentverdi om til en milliampere verdi:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = \left({16 \over 100}\right)x + 4
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="analog/img25.svg"
+ ALT="$\displaystyle y = \left({16 \over 100}\right)x + 4$">
+</DIV><P></P>
+
+<P>
+Vi kan nå bruke denne formelen for å regne ut hvor mange milliamper en gitt prosent inngangssignal tilsvarer. Vi kan f.eks. bruke et inngangsignal på 34.7% til å regne ut tilhørende milliamper verdi:
+
+<P>
+<P></P>
+<DIV CLASS="displaymath"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="analog/img27.svg"
+ ALT="$\displaystyle = \left({16 \over 100}\right)34.7 + 4$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.27ex; " SRC="analog/img28.svg"
+ ALT="$\displaystyle = 5.552 + 4$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="analog/img29.svg"
+ ALT="$\displaystyle = 9.552$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+Vi ser altså at 34.7% er det samme som 9.552 mA i 4-20 mA signalområdet. 
+
+<P>
+<P>
+Denne formelen kan brukes til alle lineære instrumenter. Men om vi har forsøvet nullpunkt på instrumentaksen <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="analog/img9.svg"
+ ALT="$x$"></SPAN> kreves ofte flere mellom regninger.
+
+<P>
+Mange elever foretrekker å bruke en grafisk representasjon av de to måleområdene vi skal konvertere mellom. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current63.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 27.10ex; vertical-align: -0.10ex; " SRC="analog/img30.svg"
+ ALT="$\displaystyle \includegraphics{current63.eps}$">
+</DIV><P></P>
+
+<P>
+Ut fra denne representasjonen kan vi sette opp følgende formel for konvertering mellom signaler. 
+	<P></P>
+<DIV CLASS="displaymath"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img31.svg"
+ ALT="$\displaystyle \dfrac{y-y_{start}}{y_{range}}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img32.svg"
+ ALT="$\displaystyle =\dfrac{x-x_{start}}{x_{range}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Merk her at <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.75ex; " SRC="analog/img13.svg"
+ ALT="$y_{range}$"></SPAN> og <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.75ex; " SRC="analog/img14.svg"
+ ALT="$x_{range}$"></SPAN> regnes ut fra måleområde slutt til måleområde start. 
+
+<P>
+For en transmitter som 4mA som nullpunkt blir det (20-4=16), mens for en transmitter med 20mA som nullpunkt blir det (4-20=-16). 
+
+<P>
+Vi kan også sette opp denne formelen med rene transmitter begreper:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current59.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.03ex; vertical-align: -0.10ex; " SRC="analog/img33.svg"
+ ALT="$\displaystyle \includegraphics{current59.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00221000000000000000">
+Eksempel: Regulatorutgang til reguleringsventil.</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current44.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.00ex; vertical-align: -0.10ex; " SRC="analog/img34.svg"
+ ALT="$\displaystyle \includegraphics{current44.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+<SPAN  CLASS="textit">En PID regulator sender et utgangsignal til en direkteverkende reguleringsventil (d.v.s 4mA er lukket og 20mA er helt åpen).Hvor åpen (0-100%i) vil reguleringsventilen være med dette signalet?</SPAN>
+
+<P>
+<P>
+For å løse utregningen med hensyn på  ventilutslag (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="analog/img9.svg"
+ ALT="$x$"></SPAN>), bruker vi formelen som vi har kommet frem til tidligere. 
+
+<P>
+<P></P>
+<DIV CLASS="displaymath"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img31.svg"
+ ALT="$\displaystyle \dfrac{y-y_{start}}{y_{range}}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img32.svg"
+ ALT="$\displaystyle =\dfrac{x-x_{start}}{x_{range}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img35.svg"
+ ALT="$\displaystyle \dfrac{8.55-4}{16}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img36.svg"
+ ALT="$\displaystyle =\dfrac{x-0}{100}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img37.svg"
+ ALT="$\displaystyle \dfrac{100 \cdot 4.55}{16}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="analog/img38.svg"
+ ALT="$\displaystyle =x$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="analog/img39.svg"
+ ALT="$\displaystyle x$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="analog/img40.svg"
+ ALT="$\displaystyle ={28.4}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Vi kan derfor forvente at reguleringsventilen er 28.4% åpen når den får tilført 8.55mA
+
+<P>
+
+<H2><A ID="SECTION00222000000000000000">
+Eksempel: Strømningsmåler</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current45.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 18.77ex; vertical-align: -0.10ex; " SRC="analog/img41.svg"
+ ALT="$\displaystyle \includegraphics{current45.eps}$">
+</DIV><P></P>
+
+<P>
+
+<SPAN  CLASS="textit">En strømningsmåler har et måleområde på 0 til 1400 liter per minutt. Regn ut strømsignalet med en strømningsrate på 816 l/m.</SPAN>
+
+<P>
+<P>
+Vi velger strøm som <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img8.svg"
+ ALT="$y$"></SPAN> i formelen og setter inn. 
+
+<P>
+<P></P>
+<DIV CLASS="displaymath"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img31.svg"
+ ALT="$\displaystyle \dfrac{y-y_{start}}{y_{range}}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img32.svg"
+ ALT="$\displaystyle =\dfrac{x-x_{start}}{x_{range}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img42.svg"
+ ALT="$\displaystyle \dfrac{y-4}{16}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img43.svg"
+ ALT="$\displaystyle =\dfrac{816-0}{1400}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img44.svg"
+ ALT="$\displaystyle =\dfrac{816\cdot16}{1400}+4$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="analog/img45.svg"
+ ALT="$\displaystyle ={13.3mA}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Vi ser at transmitteren skal sende ut en strøm på 13.3mA med en strømningsrate på 816 l/m. 
+
+<P>
+<P>
+
+<H2><A ID="SECTION00223000000000000000">
+Eksempel: Temperaturtransmitter</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current47.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 10.84ex; vertical-align: -0.10ex; " SRC="analog/img46.svg"
+ ALT="$\displaystyle \includegraphics{current47.eps}$">
+</DIV><P></P>
+
+<P>
+
+<SPAN  CLASS="textit">En elektronisk temperaturtransmitter har et måleområde på 50-140°C, med en strømutgang på 4-20mA utgangssignal. Regn ut strømmen denne transmitteren sender ut når den måler en temperatur på 79°C.</SPAN>
+
+<P>
+<P>
+Først kan vi sette opp en en oversikt med aksene parallelle. Dette kan vi gjøre for alle lineære konverteringer og det gir et mer kompakt over oversiktlig bilde av sammenhengen.  
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=0.8\textwidth]{current48.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 19.14ex; vertical-align: -0.10ex; " SRC="analog/img47.svg"
+ ALT="$\displaystyle \includegraphics[width=0.8\textwidth]{current48.eps}$">
+</DIV><P></P>
+
+<P>
+Nå kan vi sette opp konverteringsformelen. 
+
+<P>
+<P></P>
+<DIV CLASS="displaymath"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img31.svg"
+ ALT="$\displaystyle \dfrac{y-y_{start}}{y_{range}}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img32.svg"
+ ALT="$\displaystyle =\dfrac{x-x_{start}}{x_{range}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img42.svg"
+ ALT="$\displaystyle \dfrac{y-4}{16}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img48.svg"
+ ALT="$\displaystyle =\dfrac{79-50}{90}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img49.svg"
+ ALT="$\displaystyle =\dfrac{29\cdot16}{90}+4$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="analog/img50.svg"
+ ALT="$\displaystyle ={9.2mA}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<H2><A ID="SECTION00224000000000000000">
+Example calculation: pH transmitter</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=0.4\textwidth]{current49.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 12.13ex; vertical-align: -0.10ex; " SRC="analog/img51.svg"
+ ALT="$\displaystyle \includegraphics[width=0.4\textwidth]{current49.eps}$">
+</DIV><P></P>
+
+<P>
+
+<SPAN  CLASS="textit">En pH transmitter er kalibrert for et måleområde på 4pH til 10pH, med et 4-20mA utgangssignal. Regn ut hvilken pH som måles når transmitteren sender en strøm på 11.3 mA. </SPAN>
+
+<P>
+Først setter vi opp en parallell oversikt over de to måleområdene. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=0.4\textwidth]{current50.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 10.39ex; vertical-align: -0.10ex; " SRC="analog/img52.svg"
+ ALT="$\displaystyle \includegraphics[width=0.4\textwidth]{current50.eps}$">
+</DIV><P></P>
+
+<P>
+Så er det bare å sette inn i konverteringsformelen. 
+
+<P>
+<P></P>
+<DIV CLASS="displaymath"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img31.svg"
+ ALT="$\displaystyle \dfrac{y-y_{start}}{y_{range}}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img32.svg"
+ ALT="$\displaystyle =\dfrac{x-x_{start}}{x_{range}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img53.svg"
+ ALT="$\displaystyle \dfrac{y-4}{6}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img54.svg"
+ ALT="$\displaystyle =\dfrac{11.3-4}{16}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img55.svg"
+ ALT="$\displaystyle =\dfrac{7.3\cdot6}{16}+4$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="analog/img56.svg"
+ ALT="$\displaystyle ={6.74mA}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Transmitteren måler en pH på 6.7 når utgangen sender en strøm på 11.3 mA
+
+<P>
+
+<H2><A ID="SECTION00225000000000000000">
+Eksempel: I/P omformer med reverserende utgangsignal</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current51.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 25.74ex; vertical-align: -0.10ex; " SRC="analog/img57.svg"
+ ALT="$\displaystyle \includegraphics{current51.eps}$">
+</DIV><P></P>
+
+<P>
+<SPAN  CLASS="textit">En strøm til trykkomformer brukes for å konvertere 4-20mA strømsignal til et 3-15PSI pneumatisk signal. Akkurat denne transmitteren er konfigurert for å ha en reverserende utgang istedenfor direkte. Dette betyr at trykket på utgangen er 15PSI med en strøm på 4mA, og 3 PSI med 20mA. Regn ut hvilken strøm som sendes til omformeren når utgangen har et trykk på 12.7 PSI.</SPAN>
+
+<P>
+<P>
+Reverserende instrumenter er fremdeles lineære, og vi kan verfor bruke samme oppsett som før. Legg merke til range på x-aksen som går fra 15 til 3 som gir en range på -12 (<SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="analog/img58.svg"
+ ALT="$3-15=-12$"></SPAN>).
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current52.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 19.55ex; vertical-align: -0.10ex; " SRC="analog/img59.svg"
+ ALT="$\displaystyle \includegraphics{current52.eps}$">
+</DIV><P></P>
+
+<P>
+<P></P>
+<DIV CLASS="displaymath"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img31.svg"
+ ALT="$\displaystyle \dfrac{y-y_{start}}{y_{range}}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img32.svg"
+ ALT="$\displaystyle =\dfrac{x-x_{start}}{x_{range}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img42.svg"
+ ALT="$\displaystyle \dfrac{y-4}{16}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.03ex; vertical-align: -1.88ex; " SRC="analog/img60.svg"
+ ALT="$\displaystyle =\dfrac{12.7-15}{-12}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.03ex; vertical-align: -1.88ex; " SRC="analog/img61.svg"
+ ALT="$\displaystyle =\dfrac{-2.3\cdot16}{-12}+4$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="analog/img26.svg"
+ ALT="$\displaystyle y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="analog/img62.svg"
+ ALT="$\displaystyle ={7.1mA}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Strømmen som sendes til transmitteren er 7.1mA. 
+
+<P>
+
+<H2><A ID="SECTION00226000000000000000">
+Eksempel: PLS analog inngang</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current53.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 50.90ex; vertical-align: -0.10ex; " SRC="analog/img63.svg"
+ ALT="$\displaystyle \includegraphics{current53.eps}$">
+</DIV><P></P>
+
+<P>
+
+<SPAN  CLASS="textit">En Allen-Bradley SLC500 PLS bruker en 16-bit analog-til-digital omformer i AI kortet 1746-NI4. I dette kortet konverteres 4-20 mA til digitale nummer(integere) fra 3277 (ved 4 mA) til 16384 (ved 20 mA). I en PLS-en skal denne verdien vises på det display (HMI). En verdi fra 3277-16384 vil ikke være særlig nyttig for en operatør. Derfor må disse verdiene skalleres ved å regne de om til 0-700 l/m. Utrenginger med integere er ikke serlig praktisk og vi må derfor først konvertere de til floating point datatyper. Finn en formel for utregningen og vis hvordan denne kan implementeres i PLS programmet.</SPAN>
+
+<P>
+<P>
+We are already given the raw number values from the analog card's analog-to-digital converter (ADC) circuit for 4 mA and 20 mA: 3277 and 16384, respectively.  These values define the domain of our linear graph:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current64.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.68ex; vertical-align: -0.10ex; " SRC="analog/img64.svg"
+ ALT="$\displaystyle \includegraphics{current64.eps}$">
+</DIV><P></P>
+
+<P>
+Vi kan nå sette opp konverteringsformelen:
+
+<P>
+<P></P>
+<DIV CLASS="displaymath"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img31.svg"
+ ALT="$\displaystyle \dfrac{y-y_{start}}{y_{range}}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.34ex; " SRC="analog/img32.svg"
+ ALT="$\displaystyle =\dfrac{x-x_{start}}{x_{range}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="analog/img65.svg"
+ ALT="$\displaystyle \dfrac{y-0}{700}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.03ex; vertical-align: -1.88ex; " SRC="analog/img66.svg"
+ ALT="$\displaystyle =\dfrac{x-3277}{16384-3277}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="analog/img67.svg"
+ ALT="$\displaystyle f(x)=y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.08ex; vertical-align: -1.69ex; " SRC="analog/img68.svg"
+ ALT="$\displaystyle =\dfrac{(x-3277)\cdot700}{13107}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Når vi skal lage PLS programmet følger vi regnerekkefølgen:
+
+<P>
+
+<OL>
+<LI>Paranteser
+</LI>
+<LI>Potenser og røtter
+</LI>
+<LI>Multiplikasjon og divisjon
+</LI>
+<LI>Addisjon og subtraksjon
+
+<P>
+</LI>
+</OL>
+
+<P>
+Vi tar altså utgangpunkt  i den variable (x) og utfører følgende:
+
+<P>
+
+<OL>
+<LI>Utregning i parantesen <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="analog/img69.svg"
+ ALT="$x-3277$"></SPAN>
+</LI>
+<LI>Multiplisering og dividering. Rekkefølgen er likegyldig eller den kan slåes sammen i en blokk. 
+</LI>
+<LI>Vi legger så resultatet inn i variabelen y som  kan brukes i HMI-en. 
+</LI>
+</OL>
+
+<P>
+I pragrammet legger vi først inn en konverteringsblokk for så å legge blokker inn ut fra regnefekkefølgen.
+
+<P>
+En annen mulighet er å bruke en ferdig converteringsblokk, f.eks. LIN_TRAFO fra util biblioteket til Codesys. 
+
+<P>
+
+<H1><A ID="SECTION00230000000000000000">
+Controller output current loops</A>
+</H1>
+
+<P>
+The simplest form of 4-20 mA current loop is the type used to represent the output of a process controller, sending a command signal to a final control element.  Here, the controller supplies both the electrical power and signal information to the final control element, which acts as an electrical load.  To illustrate, consider the example of a controller sending a 4-20 mA signal to an I/P (current-to-pressure) signal converter, which then pneumatically drives a control valve:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.00ex; vertical-align: -0.10ex; " SRC="analog/img70.svg"
+ ALT="$\displaystyle \includegraphics{current03.eps}$">
+</DIV><P></P>
+
+<P>
+This particular controller has two digital displays, one for process variable (PV) and one for setpoint (SP), with a bargraph for displaying the output value (Out).  One pushbutton provides the operator with a way to switch between Automatic and Manual modes (A/M), while two other pushbuttons provide means to decrement and increment either the setpoint value (in Automatic mode) or the Output value (in Manual mode).
+
+<P>
+Inside the controller, a <SPAN  CLASS="textit">dependent current source</SPAN> provides the 4-20 mA DC current signal to the I/P transducer.  Like all current sources, its purpose is to maintain current in the &ldquo;loop&rdquo; circuit regardless of circuit resistance or any external voltage sources.  Unlike a constant current source, a &ldquo;dependent&rdquo; current source (represented by a diamond shape instead of a circle shape) varies its current value according to some external stimulus.  In this case, either the mathematical function of the controller (Automatic mode) or the arbitrary action of the human operator (Manual mode) tells the current source how much DC current it should maintain in the circuit. <A NAME="191"></A>
+
+<P>
+For example, if the operator happened to switch the controller into Manual mode and set the output value at 50%, the proper amount of DC current for this signal percentage would be 12 mA (exactly half-way between 4 mA and 20 mA).  If everything is working properly, the current in the &ldquo;loop&rdquo; circuit to the I/P transducer should remain exactly at 12 mA regardless of slight changes in wire resistance, I/P coil resistance, or anything else: the current source inside the controller will &ldquo;fight&rdquo; as hard as it has to in order to maintain this set amount of current.  This current, as it flows through the wire coil of the I/P transducer mechanism, creates a magnetic field inside the I/P to actuate the pneumatic mechanism and produce a 9 PSI pressure signal output to the control valve (9 PSI being exactly half-way between 3 PSI and 15 PSI in the 3-15 PSI signal standard range).  This should move the control valve to the half-way position.
+
+<P>
+The details of the controller's internal current source are not terribly important.  Usually, it takes the form of an operational amplifier circuit driven by the voltage output of a DAC (Digital-to-Analog Converter).  The DAC converts a binary number (either from the controller's automatic calculations, or from the human operator's manual setting) into a small DC voltage, which then commands the opamp circuit to regulate output current at a proportional value.
+
+<P>
+<P>
+The scenario is much the same if we replace the I/P and control valve with a variable-speed motor drive.  From the controller's perspective, the only difference it sees is a resistive load instead of an inductive load.  The input resistance of the motor drive circuit converts the 4-20 mA signal into an analog voltage signal (typically 1-5 V, but not always).  This voltage signal then commands the motor drive circuitry, telling it to modulate the power going to the electric motor in order to drive it at the desired speed:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current04.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 41.03ex; vertical-align: -0.10ex; " SRC="analog/img71.svg"
+ ALT="$\displaystyle \includegraphics{current04.eps}$">
+</DIV><P></P>
+
+<P>
+Here, the variable-speed motor drive is a high-power electronic circuit that takes 3-phase AC power in and converts it to DC power at a variable voltage (that voltage level controlled by the 4-20 mA signal from the controller output).  Another style of motor &ldquo;drive&rdquo; is one that takes in AC power and outputs 3-phase AC power at variable voltage and frequency to power an AC induction motor.  This latter style is usually called a <SPAN  CLASS="textit">variable frequency drive</SPAN> or <SPAN  CLASS="textit">VFD</SPAN>, but it looks the same to the controller output: a fixed resistive load accepting the 4-20 mA output signal.  <A NAME="195"></A>  <A NAME="196"></A>
+
+<P>
+<P>
+
+<P>
+In some process applications the final control element is &ldquo;reverse-acting&rdquo; in that a controller output current value of 4 mA tells the FCE to go to its &ldquo;full&rdquo; (100%) capacity and a controller output current value of 20 mA commands the FCE to go to its minimum (0%) capacity.  Such is the case with an I/P transducer driving an &ldquo;air-to-close&rdquo; pneumatic control valve, where the valve's spring works to push the throttling mechanism open and air pressure on the valve diaphragm works to push the throttling mechanism shut.  A practical reason for designing a control system like this is if the dictates of process safety require the valve go wide-open if ever the instrument air supply fails or the 4-20 mA output signal circuit fails. 
+
+<P>
+In such applications, we need to configure the controller in such a way that the output display (digital read-out and/or bargraph) is <SPAN  CLASS="textit">reverse-indicating</SPAN> so as to avoid confusing any human operator using the controller.  Since 4 mA represents a wide-open control valve and 20 mA represents a fully shut control valve, a reverse-indicating controller will display 0% output when the current signal is 20 mA and 100% output when the current signal is 4 mA (i.e. the controller display is a direct representation of <SPAN  CLASS="textit">control valve stem position</SPAN>, not of the current signal itself):  <A NAME="199"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current62.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.64ex; vertical-align: -0.10ex; " SRC="analog/img72.svg"
+ ALT="$\displaystyle \includegraphics{current62.eps}$">
+</DIV><P></P>
+
+<P>
+It should be noted that direct or reverse <SPAN  CLASS="textit">indication</SPAN> on the controller's faceplate is unrelated to direct or reverse <SPAN  CLASS="textit">control action</SPAN> of the controller's algorithm.  The former is merely the way in which the output signal is graphically represented to the human operator while the latter is the relationship between the process variable (PV) signal and the controller's output (MV) signal necessary for negative-feedback control.  For the sake of argument, this controller's automatic action could still be <SPAN  CLASS="textit">direct</SPAN> (i.e. greater PV signal = greater output signal) even though its output bargraph indication is <SPAN  CLASS="textit">reverse</SPAN> in order to faithfully show valve stem position to the human operator.
+
+<P>
+
+<H1><A ID="SECTION00240000000000000000">
+4-wire (&ldquo;self-powered&rdquo;) transmitter current loops</A>
+</H1>
+
+<P>
+DC electric current signals may also be used to communicate process measurement information from transmitters to controllers, indicators, recorders, alarms, and other input devices.  Recall that the purpose of a <SPAN  CLASS="textit">transmitter</SPAN> is to sense some physical variable (e.g. pressure, temperature, flow) and then report that quantity in the form of a signal, in this case a 4 to 20 milliamp DC current proportional to that measured quantity.  The simplest form of 4-20 mA measurement loop is one where the transmitter has two terminals for the 4-20 mA signal wires to connect, and two more terminals where a power source connects.  These transmitters are called &ldquo;4-wire&rdquo; or &ldquo;self-powered&rdquo; units.  The current signal from the transmitter connects to the <SPAN  CLASS="textit">process variable input</SPAN> terminals of the controller to complete the loop: <A NAME="208"></A> <A NAME="209"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current09.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 41.03ex; vertical-align: -0.10ex; " SRC="analog/img73.svg"
+ ALT="$\displaystyle \includegraphics{current09.eps}$">
+</DIV><P></P>
+
+<P>
+Some process controllers are not equipped to directly accept milliamp input signals, but rather can only interpret DC voltage signals.  In such cases we must connect a precision resistor across the controller's input terminals to convert the 4-20 mA transmitter signal into a standardized analog voltage signal the controller can understand.  A voltage signal range of 1 to 5 volts is standard, although some models of controller use different voltage ranges and therefore require different precision resistor values.  If the voltage range is 1-5 volts and the current range is 4-20 mA, the precision resistor value must be 250 ohms according to Ohm's Law.
+
+<P>
+Since this is a digital controller, the input voltage at the controller terminals is interpreted by an analog-to-digital converter (ADC) circuit, which converts the measured voltage into a digital number the controller's microprocessor can interpret.
+
+<P>
+
+<P>
+In some installations, transmitter power is supplied through additional wires in the cable from a power source located near the controller:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current10.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 41.03ex; vertical-align: -0.10ex; " SRC="analog/img74.svg"
+ ALT="$\displaystyle \includegraphics{current10.eps}$">
+</DIV><P></P>
+
+<P>
+The obvious disadvantage of this scheme is the requirement of two more conductors in the cable.  More conductors means the cable will be larger-diameter and more expensive for a given length.  Cables with more conductors will require larger electrical conduit to fit in to, and all field wiring panels will have to contain more terminal blocks to marshal the additional conductors.  If no suitable electrical power source exists at the transmitter location, though, a 4-wire cable is necessary to service a 4-wire transmitter.
+
+<P>
+
+<H1><A ID="SECTION00250000000000000000">
+2-wire (&ldquo;loop-powered&rdquo;) transmitter current loops</A>
+</H1>
+
+<P>
+<A ID="2-wire_transmitters"></A>
+<P>
+It is possible to convey electrical power <SPAN  CLASS="textit">and</SPAN> communicate analog information over the same two wires using 4 to 20 milliamps DC, if we design the transmitter to be <SPAN  CLASS="textit">loop-powered</SPAN>.  A loop-powered transmitter connects to a process controller with only two wires, which is why loop-powered transmitters are synonymously known as <SPAN  CLASS="textit">2-wire transmitters</SPAN>:  <A NAME="217"></A>  <A NAME="218"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current11.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 41.03ex; vertical-align: -0.10ex; " SRC="analog/img75.svg"
+ ALT="$\displaystyle \includegraphics{current11.eps}$">
+</DIV><P></P>
+
+<P>
+Here, the transmitter is not really a current <SPAN  CLASS="textit">source</SPAN> in the sense that a 4-wire transmitter is.  Instead, a 2-wire transmitter's circuitry is designed to act as a current <SPAN  CLASS="textit">regulator</SPAN>, limiting current in the series loop to a value representing the process measurement, while relying on a remote source of power to motivate the electric current.  Please note the direction of the arrow in the transmitter's dependent current source symbol, and how it relates to the voltage polarity marks.  Refer back to the illustration of a 4-wire transmitter circuit for comparison.  The current &ldquo;source&rdquo; in this loop-powered transmitter actually behaves as an electrical <SPAN  CLASS="textit">load</SPAN><A ID="tex2html3"
+  HREF="footnode.html#foot357"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A>, while the current source in the 4-wire transmitter functioned as a true electrical source.
+
+<P>
+A loop-powered transmitter gets its operating power from the minimum terminal voltage and current available at its two terminals.  With the typical source voltage being 24 volts DC, and the maximum voltage dropped across the controller's 250 ohm resistor being 5 volts DC, the transmitter should always have at least 19 volts available at its terminals.  Given the lower end of the 4-20 mA signal range, the transmitter should always have at least 4 mA of current to function on.  Thus, the transmitter will always have a certain minimum amount of electrical power available on which to operate, while regulating current to signal the process measurement to the receiving instrument.
+
+<P>
+
+<P>
+Internally, the electronic hardware of a 2-wire transmitter circuitry resembles the following (simplified) diagram.  Note that everything shown within the shaded rectangle is represented by the &ldquo;2-wire transmitter&rdquo; circle in the previous diagram:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current12.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.94ex; vertical-align: -0.10ex; " SRC="analog/img76.svg"
+ ALT="$\displaystyle \includegraphics{current12.eps}$">
+</DIV><P></P>
+
+<P>
+All sensing, scaling, and output conditioning circuitry inside the transmitter must be designed to operate on less than 4 mA of DC current, and at a modest terminal voltage.  In order to create loop currents exceeding 4 mA &ndash; as the transmitter must do in order to span the entire 4 to 20 milliamp signal range &ndash; the transmitter circuitry uses a transistor to shunt (bypass) extra current from one terminal to the other as needed to make the total current indicative of the process measurement.  For example, if the transmitter's internal operating current is only 3.8 mA, and it must regulate loop current at a value of 16 mA to represent a condition of 75% process measurement, the shunt transistor will be driven by the opamp to bypass exactly 12.2 mA of current (because 3.8 mA + 12.2 mA = 16.0 mA).
+
+<P>
+The very low amount of electrical power available at a 2-wire transmitter's terminals limits its functionality.  If the transmitter requires more electrical power than can be delivered with 4 milliamps and 19 volts (minimum each), the only solution is to go with a 4-wire transmitter where the power conductors are separate from the signal conductors.  An example of a process transmitter that must be 4-wire is a chemical analyzer such as a chromatograph, requiring enough power to operate an electrical heater, solenoid valves, and an on-board computer to process the sensor data.  There is simply no way to operate a machine as complex and power-hungry as a 2010-era chromatograph on 4 milliamps and 19 volts!
+
+<P>
+Early current-based industrial transmitters were not capable of operating on such low levels of electrical power, and so used a different current signal standard: 10 to 50 milliamps DC.  Loop power supplies for these transmitters ranged upwards of 90 volts to provide enough power for the transmitter.  Safety concerns made the 10-50 mA standard unsuitable for some industrial installations, and modern microelectronic circuitry with its reduced power consumption made the 4-20 mA standard practical for nearly all types of process transmitters. <A NAME="225"></A>
+
+<P>
+
+<H1><A ID="SECTION00260000000000000000">
+4-wire &ldquo;passive&rdquo; versus &ldquo;active&rdquo; output transmitters</A>
+</H1>
+
+<P>
+Some self-powered (4-wire) analog electronic transmitters are designed to behave as electrical loads rather than as electrical sources.  Such transmitters are commonly referred to as having <SPAN  CLASS="textit">passive</SPAN> or <SPAN  CLASS="textit">sinking</SPAN> 4-20 mA outputs, as opposed to the <SPAN  CLASS="textit">active</SPAN> or <SPAN  CLASS="textit">sourcing</SPAN> 4-wire transmitters previously described:  <A NAME="231"></A>  <A NAME="232"></A>  <A NAME="233"></A>  <A NAME="234"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current61.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 41.03ex; vertical-align: -0.10ex; " SRC="analog/img77.svg"
+ ALT="$\displaystyle \includegraphics{current61.eps}$">
+</DIV><P></P>
+
+<P>
+At first this seems needlessly confusing.  Why build a self-powered transmitter requiring a second power supply in the circuit to drive the 4-20 mA signal?  The reason for this type of transmitter's existence is the sheer popularity of loop-powered 2-wire 4-20 mA transmitters.  Loop-powered field instruments have become so popular in industry that many control systems, PLCs, indicators, and other receiving devices have their own loop power supply built in so that these systems can <SPAN  CLASS="textit">only</SPAN> connect to loads and are therefore incompatible with current-sourcing 4-wire transmitters.  Thus, &ldquo;passive&rdquo; or &ldquo;sinking&rdquo; 4-wire transmitters were developed to accommodate control systems designed to work (only) with loop-powered instruments.
+
+<P>
+Some 4-wire transmitters are configurable for either passive or active (i.e. sinking versus sourcing) operation, requiring the installing technician to pay close attention in order for the circuit to properly function.
+
+<P>
+
+<H1><A ID="SECTION00270000000000000000">
+Troubleshooting current loops</A>
+</H1>
+
+<P>
+A fundamental principle in instrumentation system troubleshooting is that every instrument has at least one input and at least one output, and that the output(s) should accurately correspond to the input(s).  If an instrument's output is not properly corresponding to its input according to the instrument's design function, there must be something wrong with that instrument.
+
+<P>
+Consider the inputs and outputs of several common instruments: transmitters, controllers, indicators, and control valves.  Each of these instruments takes in (input) data in some form, and generates (output) data in some form.  In any instrument &ldquo;loop,&rdquo; the output of one instrument feeds into the input of the next, such that information passes from one instrument to another.  By intercepting the data communicated between components of an instrument system, we are able to locate and isolate faults.  In order to properly understand the intercepted data, we must understand the inputs and outputs of the respective instruments and the basic functions of those instruments.
+
+<P>
+The following illustrations highlight inputs and outputs for instruments commonly found in control systems:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{trouble09.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 59.42ex; vertical-align: -0.10ex; " SRC="analog/img78.svg"
+ ALT="$\displaystyle \includegraphics{trouble09.eps}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{trouble10.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 47.61ex; vertical-align: -0.10ex; " SRC="analog/img79.svg"
+ ALT="$\displaystyle \includegraphics{trouble10.eps}$">
+</DIV><P></P>
+
+<P>
+In order to check for proper correspondence between instrument inputs and outputs, we must be able to use appropriate test equipment to intercept the signals going into and out of those instruments.  For 4-20 mA analog signal-based instruments, this means we must be able to use electrical meters capable of accurately measuring current and voltage.
+
+<P>
+
+<H2><A ID="SECTION00271000000000000000">
+Using a standard milliammeter to measure loop current</A>
+</H2>
+
+<P>
+Since the signal of interest is represented by an electric current in an instrumentation current &ldquo;loop&rdquo; circuit, the obvious tool to use for troubleshooting is a multimeter capable of accurately measuring DC milliamperes.  Unfortunately, though, there is a major disadvantage to the use of a milliammeter: the circuit must be &ldquo;broken&rdquo; at some point to connect the meter in series with the current, and this means the current will fall to 0 mA until the meter is connected (then fall to 0 mA when the meter is removed from the circuit).  Interrupting the current means interrupting the flow of information conveyed by that current, be it a process measurement or a command signal to a final control element.  This <SPAN  CLASS="textit">will</SPAN> have adverse effects on a control system unless certain preparatory steps are taken.
+
+<P>
+Before &ldquo;breaking the loop&rdquo; to connect your meter, one must first warn all appropriate personnel that the signal will be interrupted at least twice, falling to a value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="analog/img80.svg"
+ ALT="$-25$"></SPAN>% each time.  If the signal to be interrupted is coming from a process transmitter to a controller, the controller should be placed in Manual mode so it will not cause an upset in the process (by moving the final control element in response to the sudden loss of PV signal).  Also, process alarms should be temporarily disabled so they do not cause panic.  If this current signal also drives process shutdown alarms, these should be temporarily disabled so that nothing shuts down upon interruption of the signal.
+
+<P>
+If the current signal to be interrupted is a command signal from a controller to a final control element, the final control element either needs to be manually overridden so as to hold a fixed setting while the signal varies, or it needs to be bypasses completely by some other device(s).  If the final control element is a control valve, this typically takes the form of opening a bypass valve and closing at least one block valve:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current05.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.39ex; vertical-align: -0.10ex; " SRC="analog/img81.svg"
+ ALT="$\displaystyle \includegraphics{current05.eps}$">
+</DIV><P></P>
+
+<P>
+Since the manually-operated bypass valve now performs the job the automatic control valve used to do, a human operator must remain posted at the bypass valve to carefully throttle it and maintain control of the process.
+
+<P>
+Block and bypass valves for a large gas flow control valve may be seen in the following photograph:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{current26.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="analog/img82.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{current26.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+In consideration of the labor necessary to safely interrupt the current signal to a control valve in a live process, we see that the seemingly simple task of connecting a milliammeter in series with a 4-20 mA current signal is not as easy as it may first appear.  Better ways must exist, no?
+
+<P>
+
+<H2><A ID="SECTION00272000000000000000">
+Using a clamp-on milliammeter to measure loop current</A>
+</H2>
+
+<P>
+One better way to measure a 4-20 mA signal without interrupting it is to do so magnetically, using a clamp-on milliammeter.  Modern Hall-effect sensors are sensitive and accurate enough to monitor the weak magnetic fields created by the passage of small DC currents in wires.  Ammeters using Hall-effect sensors have are completely non-intrusive because they merely clamp around the wire, with no need to &ldquo;break&rdquo; the circuit.  An example of a such a clamp-on current meter is the Fluke model 771, shown in this photograph:  <A NAME="245"></A>   <A NAME="246"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2in]{current27.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 54.31ex; vertical-align: -0.10ex; " SRC="analog/img83.svg"
+ ALT="$\displaystyle \includegraphics[width=2in]{current27.eps}$">
+</DIV><P></P>
+
+<P>
+Note how this milliammeter not only registers loop current (3.98 mA as shown in the photograph), but it also converts the milliamp value into a percentage of range, following the 4 to 20 mA signal standard.  One disadvantage to be aware of for clamp-on milliammeters is the susceptibility to error from strong external magnetic fields.  Steady magnetic fields (from permanent magnets or DC-powered electromagnets) may be compensated for by performing a &ldquo;zero&rdquo; adjustment with the instrument held in a similar orientation prior to measuring loop current through a wire.
+
+<P>
+
+<H2><A ID="SECTION00273000000000000000">
+Using &ldquo;test&rdquo; diodes to measure loop current</A>
+</H2>
+
+<P>
+Another way to measure a 4-20 mA signal without interrupting it involves the use of a rectifying diode, originally installed in the loop circuit when it was commissioned.  A &ldquo;test&rdquo; diode may be placed anywhere in series within the loop in such a way that it will be forward-biased.  During normal operation, the diode will drop approximately 0.7 volts, as is typical for any silicon rectifying diode when forward biased.  The following schematic diagram shows such a diode installed in a 2-wire transmitter loop circuit: <A NAME="249"></A>  <A NAME="250"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current06.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 14.32ex; vertical-align: -0.10ex; " SRC="analog/img84.svg"
+ ALT="$\displaystyle \includegraphics{current06.eps}$">
+</DIV><P></P>
+
+<P>
+If someone connects a milliammeter in parallel with this diode, however, the very low input resistance of the ammeters &ldquo;shorts past&rdquo; the diode and prevents any substantial voltage drop from forming across it.  Without the necessary forward voltage drop, the diode effectively turns off and conducts 0 mA, leaving the entire loop current to pass through the ammeter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current07.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.61ex; vertical-align: -0.10ex; " SRC="analog/img85.svg"
+ ALT="$\displaystyle \includegraphics{current07.eps}$">
+</DIV><P></P>
+
+<P>
+When the milliammeter is disconnected, the requisite 0.7 volt drop appears to turn on the diode, and all loop current flows through the diode again.  At no time is the loop current ever interrupted, which means a technician may take current measurements this way and never have to worry about generating false process variable indications, setting off alarms, or upsetting the process.
+
+<P>
+Such a diode may be installed at the nearest junction box, between terminals on a terminal strip, or even incorporated into the transmitter itself.  Some process transmitters have an extra pair of terminals labeled &ldquo;Test&rdquo; for this exact purpose.  A diode is already installed in the transmitter, and these &ldquo;test&rdquo; terminals serve as points to connect the milliammeter across.  
+
+<P>
+
+<P>
+The following photograph shows an example of this on a Rosemount model 3051 differential pressure transmitter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{current28.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="analog/img86.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{current28.eps}$">
+</DIV><P></P>
+
+<P>
+Note the two test points labeled &ldquo;TEST&rdquo; below and to the right of the main screw terminals where the loop wiring attaches.  Connecting an ammeter to these two test points allows for direct measurement of the 4-20 mA current signal without having to un-do any wire connections in the circuit.
+
+<P>
+Transmitters equipped with analog meter movements for direct visual indication of the 4-20 mA signal usually connect the analog milliammeter in parallel with just such a diode.  The reason for doing this is to maintain loop continuity in the event the fine-wire coil inside the milliammeter movement were to accidently break open.
+
+<P>
+
+<H2><A ID="SECTION00274000000000000000">
+Using shunt resistors to measure loop current</A>
+</H2>
+
+<P>
+A similar method for non-invasively measuring current in a 4-20 mA instrumentation circuit is to install a precision resistor in series.  If the resistance value is precisely known, the technician merely needs to measure voltage across it with a voltmeter and use Ohm's Law to calculate current:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current08.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 19.16ex; vertical-align: -0.10ex; " SRC="analog/img87.svg"
+ ALT="$\displaystyle \includegraphics{current08.eps}$">
+</DIV><P></P>
+
+<P>
+In electronics, such a precision resistor used for measuring current is often referred to as a <SPAN  CLASS="textit">shunt</SPAN> resistor.  Shunt resistor values are commonly very small, for their purpose is to assist in current measurement without imposing undue voltage drop within a circuit.  It is rare to find a 250 ohm resistor used strictly as a diagnostic shunt resistor, because the extra voltage drop (1 to 5 volts, depending on the current signal level) may &ldquo;starve&rdquo; loop-powered instruments of voltage necessary to operate.  Shunt resistor values as low as 1 ohm may be found installed in 4-20 mA current loops at strategic locations where technicians may need to measure loop current<A ID="tex2html4"
+  HREF="footnode.html#foot257"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">4</SPAN></SUP></A>.  <A NAME="258"></A>
+
+<P>
+
+<H2><A ID="SECTION00275000000000000000">
+Troubleshooting current loops with voltage measurements</A>
+</H2>
+
+<P>
+If neither component (diode nor shunt resistor) is pre-installed in the circuit, and if a Hall-effect (clamp-on) precision milliammeter is unavailable, a technician may still perform useful troubleshooting measurements using nothing but a DC voltmeter.  Here, however, one must be careful of how to interpret these voltage measurements, for they may not directly correspond to the loop current as was the case with measurements taken in parallel with the precision resistor.
+
+<P>
+Take for example this 4-20 mA loop where a controller sends a command signal to an I/P transducer: <A NAME="260"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.00ex; vertical-align: -0.10ex; " SRC="analog/img70.svg"
+ ALT="$\displaystyle \includegraphics{current03.eps}$">
+</DIV><P></P>
+
+<P>
+There is no standardized resistance value for I/P transducer coils, and so the amount of voltage dropped across the I/P terminals for any given amount of loop current will be unique for every different model of I/P.  The Fisher model 567 I/P transducer built for 4-20 mA signals has a normal coil resistance of 176 ohms.  Thus, we would expect to see a voltage drop of approximately 0.7 volts at 4 mA and a drop of approximately 3.5 volts at 20 mA across the I/P terminals.  Since the controller output terminals are directly in parallel with the I/P terminals, we would expect to see approximately the same voltage there as well (slightly greater due to wire resistance).  The lack of known precision in the I/P coil resistance makes it difficult to tell exactly how much current is in the loop for any given voltage measurement we take with a voltmeter.  However, if we do know the approximate coil resistance of the I/P, we can at least obtain an estimate of loop current, which is usually good enough for diagnostic purposes.  
+
+<P>
+If the I/P coil resistance is completely unknown, voltage measurements become useless for quantitative determination of loop current.  Voltage measurements would be useful only for qualitatively determining loop continuity (i.e. whether there is a break in the wiring between the controller and I/P).
+
+<P>
+
+<P>
+Another example for consideration is this loop-powered 4-20 mA transmitter and controller circuit, where the controller supplies DC power for the loop:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current13.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 41.81ex; vertical-align: -0.10ex; " SRC="analog/img88.svg"
+ ALT="$\displaystyle \includegraphics{current13.eps}$">
+</DIV><P></P>
+
+<P>
+It is very common to find controllers with their own built-in loop power supplies, due to the popularity of loop-powered (2-wire) 4-20 mA transmitters.  If we know the transmitter requires a DC voltage source somewhere in the circuit to power it up, it makes sense to include one in the controller, right?
+
+<P>
+The only voltage measurement that directly and accurately corresponds to loop current is the voltage directly across the 250 ohm precision resistor.  A loop current of 4 mA will yield a voltage drop of 1 volt, 12 mA will drop 3 volts, 20 mA will drop 5 volts, etc.  
+
+<P>
+A voltage measurement across the transmitter terminals will show us the <SPAN  CLASS="textit">difference</SPAN> in voltage between the 26 volt power supply and the voltage dropped across the 250 ohm resistor.  In other words, the transmitter's terminal voltage is simply what is left over from the source voltage of 26 volts after subtracting the resistor's voltage drop.  This makes the transmitter terminal voltage inversely proportional to loop current: the transmitter sees approximately 25 volts at 4 mA loop current (0% signal) and approximately 21 volts at 20 mA loop current (100% signal).
+
+<P>
+The use of the word &ldquo;approximate&rdquo; is very intentional here, for loop power supplies are usually non-regulated.  In other words, the &ldquo;26 volt&rdquo; rating is approximate and subject to change!  One of the advantages of the loop-powered transmitter circuit is that the source voltage is largely irrelevant, so long as it exceeds the minimum value necessary to ensure adequate power to the transmitter.  If the source voltage drifts for any reason, it will have no impact on the measurement signal at all, because the transmitter is built as a <SPAN  CLASS="textit">current regulator</SPAN>, regulating current in the loop to whatever value represents the process measurement, regardless of slight changes in loop source voltage, wire resistance, etc.  This rejection of power supply voltage changes means the loop power supply need not be regulated, and so in practice it rarely is.
+
+<P>
+This brings us to a common problem in loop-powered 4-20 mA transmitter circuits: maintaining sufficient operating voltage at the transmitter terminals.  Recall that a loop-powered transmitter relies on the voltage dropped across its terminals (combined with a current of less than 4 mA) to power its internal workings.  This means the terminal voltage must not be allowed to dip below a certain minimum value, or else the transmitter will not have enough electrical power to continue its normal operation.  This makes it possible to &ldquo;starve&rdquo; the transmitter of voltage if the loop power supply voltage is insufficient, and/or if the loop resistance is excessive.  
+
+<P>
+To illustrate how this can be a problem, consider the following 4-20 mA measurement loop, where the controller supplies only 20 volts DC to power the loop, and an indicator is included in the circuit to provide operators with a field-mounted indication of the transmitter's measurement:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current14.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.77ex; vertical-align: -0.10ex; " SRC="analog/img89.svg"
+ ALT="$\displaystyle \includegraphics{current14.eps}$">
+</DIV><P></P>
+
+<P>
+The indicator contains its own 250 ohm resistor to provide a 1-5 volt signal for the meter mechanism to sense.  This means the total loop resistance has now risen from 250 ohms to 500 ohms (plus any wire resistance).  At full current (20 mA), this total circuit resistance will drop (at least) 10 volts, leaving 10 volts or less at the transmitter terminals to power the transmitter's internal workings.  10 volts may not be enough for the transmitter to successfully operate, though.  The Rosemount model 3051 pressure transmitter, for example, requires a minimum of 10.5 volts at the terminals to operate. <A NAME="266"></A>
+
+<P>
+However, the transmitter <SPAN  CLASS="textit">will</SPAN> operate just fine at lower loop current levels.  When the loop current is only 4 mA, for example, the combined voltage drop across the two 250 ohm resistors will be only 2 volts, leaving about 18 volts at the transmitter terminals: more than enough for practically any model of 4-20 mA loop-powered transmitter to successfully operate.  Thus, the problem of insufficient supply voltage only manifests itself when the process measurement nears 100% of range.  This could be a difficult problem to diagnose, since it appears only during certain process conditions and not others.  A technician looking only for wiring faults (loose connections, corroded terminals, etc.) would never find the problem.
+
+<P>
+When a loop-powered transmitter is starved of voltage, its behavior becomes erratic.  This is especially true of &ldquo;smart&rdquo; transmitters with built-in microprocessor circuitry.  If the terminal voltage dips below the required minimum, the microprocessor circuit shuts down.  When the circuit shuts down, the current draw decreases accordingly.  This causes the terminal voltage to rise again, at which point the microprocessor has enough voltage to start up.  As the microprocessor &ldquo;boots&rdquo; back up again, it increases loop current to reflect the near-100% process measurement.  This causes the terminal voltage to sag, which subsequently causes the microprocessor to shut down again.  The result is a slow on/off cycling of the transmitter's current, which makes the process controller think the process variable is surging wildly.  The problem disappears, though, as soon as the process measurement decreases enough that the transmitter is allowed enough terminal voltage to operate normally. <A NAME="268"></A>
+
+<P>
+
+<H2><A ID="SECTION00276000000000000000">
+Using loop calibrators</A>
+</H2>
+
+<P>
+Special-purpose electronic test instruments called <SPAN  CLASS="textit">loop calibrators</SPAN> exist for the express purpose of 4-20 mA current loop circuit troubleshooting.  These versatile instruments are generally capable of not only measuring current, but also <SPAN  CLASS="textit">sourcing</SPAN> current to unpowered devices in a loop, and also <SPAN  CLASS="textit">simulating</SPAN> loop-powered 4-20 mA transmitters.  <A NAME="273"></A>  <A NAME="274"></A>
+
+<P>
+A very popular loop calibrator unit is the Altek model 334A, a battery-powered, hand-held unit with a rotary knob for current adjustment and toggle switches for mode setting.  The following illustration shows how this calibrator would be used to measure current in a functioning input signal loop<A ID="tex2html5"
+  HREF="footnode.html#foot275"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">5</SPAN></SUP></A>: <A NAME="276"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current29.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.71ex; vertical-align: -0.10ex; " SRC="analog/img90.svg"
+ ALT="$\displaystyle \includegraphics{current29.eps}$">
+</DIV><P></P>
+
+<P>
+Here, the loop wiring is broken at the negative terminal of the loop-powered transmitter, and the calibrator connected in series to measure current.  If this loop had a test diode installed, the calibrator could be connected in parallel with the diode to achieve the same function.  Note the polarity of the calibrator's test leads in relation to the circuit being tested: the calibrator is acting as a passive device (i.e. as a <SPAN  CLASS="textit">load</SPAN> rather than as a <SPAN  CLASS="textit">source</SPAN>), with the more positive loop terminal connected to the calibrator's red test lead and the more negative terminal connected to the black test lead.
+
+<P>
+<P>
+The same loop calibrator may be used to <SPAN  CLASS="textit">source</SPAN> (or <SPAN  CLASS="textit">drive</SPAN>) a 4-20 mA signal into an indicating instrument to test the function of that instrument independently.  Here, we see the Altek calibrator used as a current source to send a 16.00 mA signal to the PV (process variable) input of the controller, in order to check that the controller properly senses and displays the analog current signal:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current30.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.19ex; vertical-align: -0.10ex; " SRC="analog/img91.svg"
+ ALT="$\displaystyle \includegraphics{current30.eps}$">
+</DIV><P></P>
+
+<P>
+No transmitter need be included in this illustration, because the calibrator takes its place.  Note how the calibrator functions here as an active <SPAN  CLASS="textit">source</SPAN> of current rather than a passive load as it was in the last example.  Not only does it supply the information (i.e. regulate the current), but it also provides the energy in the circuit.  The DC power source inside the controller is not used for loop power, because the calibrator in &ldquo;source&rdquo; mode provides the necessary power to drive current through the 250 ohm resistor.
+
+<P>
+
+<P>
+A very common use of a loop calibrator in &ldquo;source&rdquo; mode is to test a control valve for proper calibration, quick response, and to measure friction.  Here, the loop calibrator takes place of the loop controller output, serving as the sole source of current to the I/P transducer:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current57.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.00ex; vertical-align: -0.10ex; " SRC="analog/img92.svg"
+ ALT="$\displaystyle \includegraphics{current57.eps}$">
+</DIV><P></P>
+
+<P>
+This circuit configuration is extremely useful to any instrument technician testing the response of a control valve, because it allows the signal to be finely adjusted while in the direct presence of the valve to monitor its motion.  If a control valve is suspected of having excessive friction in its moving parts, for instance, a technician may test the valve by incrementing and decrementing the loop calibrator's source current in progressively smaller steps.  Large step-changes in current should cause the valve to overcome friction and move, but small step-changes will fail to move the valve mechanism when frictional forces exceed the incremental forces produced by the changing pressure.
+
+<P>
+
+<P>
+A photograph showing this very use of a loop calibrator in a valve rebuild shop appears here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=5in]{current58.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 69.87ex; vertical-align: -0.10ex; " SRC="analog/img93.svg"
+ ALT="$\displaystyle \includegraphics[height=5in]{current58.eps}$">
+</DIV><P></P>
+
+<P>
+In this particular example, the loop calibrator connects to a device on the control valve called a <SPAN  CLASS="textit">positioner</SPAN>, which is a more sophisticated device than an I/P transducer.  In addition to converting a 4-20 mA signal into an air pressure, the positioner also actively monitors the valve stem's position to ensure it goes to the correct position for any given 4-20 mA command signal.  Here, the technician is using the loop calibrator to verify the control valve faithfully obeys the command signal through the entire 4 to 20 milliamp signal range.
+
+<P>
+
+<P>
+An alternative method of sending a known current signal into an indicating instrument providing loop power is to set the loop calibrator such that it mimics (or <SPAN  CLASS="textit">simulates</SPAN>) the behavior of a loop-powered (2-wire) transmitter.  In this mode, the calibrator regulates loop current at a user-determined value, but provides no motivating voltage to drive this current.  Instead, it passively relies on the loop's regular voltage source to provide the necessary power:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{current31.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.71ex; vertical-align: -0.10ex; " SRC="analog/img94.svg"
+ ALT="$\displaystyle \includegraphics{current31.eps}$">
+</DIV><P></P>
+
+<P>
+Note the polarity of the calibrator's test leads: current entering the red lead and exiting the black lead, behaving as an electrical <SPAN  CLASS="textit">load</SPAN> just the same as a loop-powered transmitter.  Like a 2-wire transmitter, the calibrator in simulate mode regulates the circuit current while depending on an external voltage source for energy.  
+
+<P>
+A loop calibrator's <SPAN  CLASS="textit">simulate transmitter</SPAN> mode is especially useful for testing the transmitter cable and controller input to ensure any 4-20 mA signal sent by a transmitter will be correctly received and displayed by the controller.  This sort of test is commonly performed on newly-installed control systems as part of the commissioning procedure, prior to start-up of the controlled process, in order to verify the controller's process variable input, 24 VDC power supply, and transmitter wiring are all properly functioning.  Typically an instrument technician would simulate several different current values (e.g. 4 mA, 8 mA, 12 mA, 16 mA, 20 mA) with the calibrator in &ldquo;simulate&rdquo; mode while someone else monitors the controller's PV display and alarms to check for proper function.
+
+<P>
+<P>
+
+<P>
+A legacy loop calibrator still familiar to many instrument technicians at the time of this writing is the classic Transmation model 1040:  <A NAME="291"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{current32.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="analog/img95.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{current32.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Other examples of vintage loop calibrator technology include the Nassau model 8060 (left) and the Biddle Versa-Cal (right):  <A NAME="293"></A>  <A NAME="294"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{current33.eps} \hskip 30pt \includegraphics[width=2.5in]{current34.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.36ex; vertical-align: -0.10ex; " SRC="analog/img96.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{current33.eps} \hskip 30pt \includegraphics[width=2.5in]{current34.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+A modern loop calibrator manufactured by Fluke is the model 705:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{current35.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="analog/img97.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{current35.eps}$">
+</DIV><P></P>
+
+<P>
+With this calibrator, the <SPAN  CLASS="textit">measure</SPAN>, <SPAN  CLASS="textit">source</SPAN>, and <SPAN  CLASS="textit">simulate</SPAN> modes are accessed by repeatedly pushing a button, with the current mode displayed on the screen:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=1.5in]{current36.eps} \hskip 15pt \includegraphics[width=1.5in]{current37.eps} \hskip 15pt \includegraphics[width=1.5in]{current38.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 8.93ex; vertical-align: -0.10ex; " SRC="analog/img98.svg"
+ ALT="$\displaystyle \includegraphics[width=1.5in]{current36.eps} \hskip 15pt \include...
+...=1.5in]{current37.eps} \hskip 15pt \includegraphics[width=1.5in]{current38.eps}$">
+</DIV><P></P>
+
+<P>
+Note the dual-numeric display, showing both loop current and percentage (assuming a 4-20 mA range).
+
+<P>
+
+<H2><A ID="SECTION00277000000000000000">
+NAMUR signal levels</A>
+</H2>
+
+<P>
+One of the intrinsic benefits of a &ldquo;live zero&rdquo; analog signal standard such as 4-20 mA is that a wire break (open fault) can immediately be detected by the absence of current in the circuit.  If the signal scale started at zero (e.g. 0-20 mA), there would be no way to electrically distinguish between a broken wire and a legitimate 0% signal value.  In other words, the &ldquo;live&rdquo; LRV point of a 4-20 mA signal provides us with a way to indicate a certain type of circuit fault in addition to indicating an analog measurement during normal operation.
+
+<P>
+The <SPAN  CLASS="textit">NAMUR</SPAN> signal standard takes this philosophy one step further by defining specific diagnostic meaning to values of current lying outside the 4-20 mA range:  <A ID="NAMUR_signal_levels"></A>
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Signal level} & \textbf{Fault condition} \cr
+\noalign{\hrule }
+Output $\leq$ 3.6 mA & Sensing transducer failed low \cr
+\noalign{\hrule }
+3.6 mA $<$ Output $<$ 3.8 mA & Sensing transducer failed (detected) low \cr
+\noalign{\hrule }
+3.8 mA $\leq$ Output $<$ 4.0 mA & Measurement under-range \cr
+\noalign{\hrule }
+21.0 $>$ Output $\geq$ 20.5 mA & Measurement over-range \cr
+\noalign{\hrule }
+Output $\geq$ 21.0 mA & Sensing transducer failed high \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 17.51ex; vertical-align: -0.10ex; " SRC="analog/img99.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+NAMUR-compliant transmitters are designed to limit their output signals between 3.8 mA and less than 21 mA when functioning properly.  Signals lying outside this range indicate some form of failure has occurred within the transmitter or the circuit wiring.
+
+<P>
+NAMUR-compliant control systems will recognize these errant milliamp values as fault states, and may be programmed to take specific action upon receiving these signal values.  Such actions include forcing controllers into manual mode, initiating automatic shutdown procedures, or taking some other form of safe action appropriate to the knowledge of a failed process transmitter.
+
+<P>
+
+<H1><A ID="SECTION00280000000000000000">
+Review of fundamental principles</A>
+</H1>
+
+<P>
+Shown here is a partial listing of principles applied in the subject matter of this chapter, given for the purpose of expanding the reader's view of this chapter's concepts and of their general inter-relationships with concepts elsewhere in the book.  Your abilities as a problem-solver and as a life-long learner will be greatly enhanced by mastering the applications of these principles to a wide variety of topics, the more varied the better.
+
+<P>
+
+<UL>
+<LI><SPAN  CLASS="textbf">Linear equations</SPAN>: any function represented by a straight line on a graph may be represented symbolically by the slope-intercept formula <!-- MATH
+ $y = mx + b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="analog/img100.svg"
+ ALT="$y = mx + b$"></SPAN>.  Relevant to instrument input/output scaling.
+</LI>
+<LI><SPAN  CLASS="textbf">Electrical sources versus loads</SPAN>: electrical power sources output current (conventional flow) on their positive terminals and input current on their negative terminals (e.g. batteries and generators).  Electrical loads do the opposite (e.g. resistors).  Relevant to determining voltage drops and current directions in analog current loop circuits, as well as matching polarities between field instruments and controllers.
+</LI>
+<LI><SPAN  CLASS="textbf">Voltage versus current sources</SPAN>: voltage sources try to maintain constant voltage with variable current, while current sources try to maintain constant current with variable voltage.  Relevant to the operation of 4-20 mA signaling circuits: loop transmitter act as current sources (or in some cases as current regulators), dropping as much or as little voltage as needed to maintain the desired amount of current in the circuit.
+</LI>
+<LI><SPAN  CLASS="textbf">Self-balancing opamp circuits</SPAN>: all self-balancing operational amplifier circuits work on the principle of negative feedback maintaining a nearly zero differential input voltage to the opamp.  Making the &ldquo;simplifying assumption&rdquo; that the opamp's differential input voltage is exactly zero assists in circuit analysis, as does the assumption that the input terminals draw negligible current.
+</LI>
+</UL>
+
+<P>
+
+<H1><A ID="SECTION00290000000000000000">
+References</A>
+</H1>
+
+<P>
+
+&ldquo;Designing a 4-20mA Current Loop Using the MAX1459 Sensor Signal Conditioner&rdquo; application note 1064, Maxim Integrated Products, 2005.  
+
+<P>
+<P>
+Lipták, Béla G. et al., <SPAN  CLASS="textit">Instrument Engineers' Handbook &ndash; Process Software and Digital Networks</SPAN>, Third Edition, CRC Press, New York, NY, 2002.
+
+<P>
+<P>
+
+&ldquo;NAMUR&rdquo; whitepaper, Emerson Process Management, 2007.
+
+<P>
+
+<P>
+	</body>
+</html>
+
