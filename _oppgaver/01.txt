@@ -1,0 +1,9 @@
+System description:
+
+A motor is connected to the door and commanded with a reversing contactor. MotorFwd and MotorRev PLC outputs are connected to the contactor to open and close the door respectively. The door has two sensors connected to “SensorClose” and “SensorOpen” inputs to know when the door is completely closed and open.
+
+There is a pushbutton on the panel connected to “Button” PLC input and a light beacon connected to PLC output “Light”.
+
+Workflow:
+
+When the button is pressed the door should open. Once open the beacon light is on for 5 seconds, then it blinks (T=0,5s) for another 5 extra seconds, and after that the door should close
