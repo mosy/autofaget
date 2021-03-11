@@ -15,12 +15,13 @@
         <li>
             <a href="styringsteknikk.html">Styringsteknikk</a>
             <ul>
-                <li><a href="pls.html">PLS</a></li>
+                <li><a href="pls.html">PLS</a>
+		    <ul>
+			<li><a href="oppgaver.html">Sekvens oppgaver</a></li>
+		    </ul>
+		</li>
                 <li><a href="analog.html">Analog</a></li>
             </ul>
-        </li>
-        <li>
-            <a href="oppgaver.html">Oppgaver</a>
         </li>
     </ul>
 </nav>
@@ -36,7 +37,7 @@
 	<!--Oppgave 1-->
             <td style="width: auto; height: 100px; padding: 5px; border: 1px solid black; border-radius: 5px">
                 <div>
-			<h3>    Oppgave 1 - Garage Door</h3>
+			<h3 style="text-align: center;">    Oppgave 1 - Garasje dør</h3>
                     <p><img src="_images/01_garage_door.png"
                             style="display: block; margin-left: auto; margin-right: auto; width: 500px; height: 300px;" />
                     </p>
@@ -71,32 +72,18 @@ When the button is pressed the door should open. Once open the beacon light is o
 	<!--Oppgave 2-->
             <td style="width: auto; height: 100px; padding: 10px; border: 1px solid black; border-radius: 5px">
                 <div>
-                    <a style="color: #7ab317; font-weight: bold; font-size: 16px; margin-top: 0px;" href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'; document.getElementById('light').innerHTML='<h4>System description</h4><p>There are 4 conveyors, 3 of them are regular conveyors (1, 3 and 4), but conveyor 2 is also a turning conveyor. This means that it can rotate on its vertical axis. Each conveyor has a motor commanded with a motor contactor to run it forward. The contactors are connected to outputs&nbsp;<em>&ldquo;MotorControl1&rdquo;</em>&nbsp;to&nbsp;<em>&ldquo;MotorControl4&rdquo;</em>. Each conveyor has also one sensor (sensors 1 to 4) which will be activated if any box (small or big) goes through the conveyor and crosses the detection line. An additional sensor (sensor 5) is placed on conveyor 2 to detect just the big boxes. The sensors are connected to PLC inputs&nbsp;<em>&ldquo;Sensor1&rdquo;</em>&nbsp;to&nbsp;<em>&ldquo;Sensor5&rdquo;.</em>&nbsp;Conveyor 2 has an additional motor contactor to make the conveyor turn. Running the turning motor reverse, it aligns conveyor 2 with 1 and 3, running it forward with conveyor 4, <em>TurnControlFwd&rdquo;</em>&nbsp;and&nbsp;<em>&ldquo;TurnControlRev&rdquo;</em>&nbsp;PLC outputs are used for that. Two sensors connected to inputs&nbsp;<em>&ldquo;Sensor6&rdquo;</em>&nbsp;and&nbsp;<em>&ldquo;Sensor7&rdquo;</em>&nbsp;are placed to know if it is on forward or reverse position respectively.</p><p>The system includes a panel with two buttons to drop small or big boxes on conveyor 1.</p><h4>Workflow:</h4><p>The sequence starts when a box is dropped in Conveyor 1 (using a button from the panel) which is automatically detected by the sensor. The box should be moved to conveyor 2 directly. Once in conveyor 2, the box should stop at sensor 2 and after 1 second when the dimension is determined, it should be moved to the proper conveyor. A small box should be moved to conveyor 3. A big box should be moved to conveyor 4 turning the conveyor. When the sensor in conveyor 4 is activated the conveyor is turned back. When the box arrives to conveyor 3 or 4 it can be removed manually in order to empty the system and restart the sequence.</p>'">
-                        Oppgave 2 - Turning conveyor
-                    </a>
+			<h3 style="text-align: center;">    Oppgave 2 - Roterende transportbånd</h3>
                     <p><img src="_images/02_turning_conveyor.png"
-                            style="display: block; margin-left: auto; margin-right: auto; width: 250px; height: 150px;" />
+                            style="display: block; margin-left: auto; margin-right: auto; width: 500px; height: 300px;" />
                     </p>
                     <p>
-			Et anlegg med et transportbånd inn og to ut. Mellom dem er det et transportbånd som kan snu.
+                        <a href="_oppgaver/02.smk"download="02.smk">Simuleringsfil til simumatik 3d</a>
                     </p>
-                    <button
-                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
-                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
-                            href="_oppgaver/02.smk"
-                            download="02.smk">Download</a>
-                    </button>
-                    <button
-                        style="width: 170px; background-color: #7ab317; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; font-weight: bold; margin-top: 5px; cursor: pointer;">
-                        <a style="color: white; font-size: 20px; font-weight: bold; text-decoration: none;"
-                            href="https://youtu.be/kyqgbzKJCco">Demo</a>
-                    </button>
-		    System description<br>
+		    <h4>    System description</h4><br>
 		    There are 4 conveyors, 3 of them are regular conveyors (1, 3 and 4), but conveyor 2 is also a turning conveyor. This means that it can rotate on its vertical axis. Each conveyor has a motor commanded with a motor contactor to run it forward. The contactors are connected to outputs “MotorControl1” to “MotorControl4”. Each conveyor has also one sensor (sensors 1 to 4) which will be activated if any box (small or big) goes through the conveyor and crosses the detection line. An additional sensor (sensor 5) is placed on conveyor 2 to detect just the big boxes. The sensors are connected to PLC inputs “Sensor1” to “Sensor5”. Conveyor 2 has an additional motor contactor to make the conveyor turn. Running the turning motor reverse, it aligns conveyor 2 with 1 and 3, running it forward with conveyor 4, TurnControlFwd” and “TurnControlRev” PLC outputs are used for that. Two sensors connected to inputs “Sensor6” and “Sensor7” are placed to know if it is on forward or reverse position respectively.<br>
 <br>
 		    The system includes a panel with two buttons to drop small or big boxes on conveyor 1.
-<br><br>
-		    Workflow:<br><br>
+<h4>	    Workflow:</h4>
 		    The sequence starts when a box is dropped in Conveyor 1 (using a button from the panel) which is automatically detected by the sensor. The box should be moved to conveyor 2 directly. Once in conveyor 2, the box should stop at sensor 2 and after 1 second when the dimension is determined, it should be moved to the proper conveyor. A small box should be moved to conveyor 3. A big box should be moved to conveyor 4 turning the conveyor. When the sensor in conveyor 4 is activated the conveyor is turned back. When the box arrives to conveyor 3 or 4 it can be removed manually in order to empty the system and restart the sequence.<br><br>
                 </div>
             </td>
