@@ -1,0 +1,3268 @@
+<h!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <title>Fluiddynamikk</title>
+    <link href="style3.css" rel="stylesheet"/>
+	</head>
+	<body>
+
+<nav>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="styringsteknikk.html">Styringsteknikk</a>
+            <ul>
+                <li><a href="pls.html">PLS</a>
+		    <ul>
+			<li><a href="oppgaver.html">Sekvens oppgaver</a></li>
+		    </ul>
+		</li>
+                <li><a href="analog.html">Analog</a></li>
+            </ul>
+        </li>
+	<li>
+            <a href="index.html">Flowmåling</a>
+            <ul>
+                <li><a href="fluiddyn.html">Fluiddynamikk</a>
+		    <ul>
+			<li><a href="oppgaver.html">Sekvens oppgaver</a></li>
+		    </ul>
+		</li>
+            </ul>
+	</li>
+	<li>
+
+
+
+	</li>
+    </ul>
+</nav>
+		Denne siden er basert på Tony R. Kuphaldts flotte arbied på https://www.ibiblio.org/kuphaldt/socratic/sinst/  <br>
+		Noe er oversatt til norsk, enkelte emner er lagt til og reseten er på orinalspråket.<br> 
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html404"
+  HREF="fluiddyn.html#SECTION002111000000000000000">Pressure</A>
+<LI><A ID="tex2html405"
+  HREF="fluiddyn.html#SECTION002112000000000000000">Pascal's Principle and hydrostatic pressure</A>
+<LI><A ID="tex2html406"
+  HREF="fluiddyn.html#SECTION002113000000000000000">Fluid density expressions</A>
+<LI><A ID="tex2html407"
+  HREF="fluiddyn.html#SECTION002114000000000000000">Manometers</A>
+<LI><A ID="tex2html408"
+  HREF="fluiddyn.html#SECTION002115000000000000000">Systems of pressure measurement</A>
+<LI><A ID="tex2html409"
+  HREF="fluiddyn.html#SECTION002116000000000000000">Negative pressure</A>
+<LI><A ID="tex2html410"
+  HREF="fluiddyn.html#SECTION002117000000000000000">Buoyancy</A>
+<LI><A ID="tex2html411"
+  HREF="fluiddyn.html#SECTION002118000000000000000">Gas Laws</A>
+<LI><A ID="tex2html412"
+  HREF="fluiddyn.html#SECTION002119000000000000000">Fluid viscosity</A>
+<LI><A ID="tex2html413"
+  HREF="fluiddyn.html#SECTION0021110000000000000000">Reynolds number</A>
+<LI><A ID="tex2html414"
+  HREF="fluiddyn.html#SECTION0021111000000000000000">Law of Continuity</A>
+<LI><A ID="tex2html415"
+  HREF="fluiddyn.html#SECTION0021112000000000000000">Viscous flow</A>
+<LI><A ID="tex2html416"
+  HREF="fluiddyn.html#SECTION0021113000000000000000">Bernoulli's equation</A>
+<LI><A ID="tex2html417"
+  HREF="fluiddyn.html#SECTION0021114000000000000000">Torricelli's equation</A>
+<LI><A ID="tex2html418"
+  HREF="fluiddyn.html#SECTION0021115000000000000000">Flow through a venturi tube</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION002110000000000000000">
+Fluid mechanics</A>
+</H1>
+
+<P>
+A <SPAN  CLASS="textit">fluid</SPAN> is any substance having the ability to <SPAN  CLASS="textit">flow</SPAN>: to freely change shape and move under the influence of a motivating force.  Fluid motion may be analyzed on a microscopic level, treating each fluid molecule as an individual projectile body.  This approach is extraordinarily tedious on a practical level, but still useful as a model of fluid behavior.  <A NAME="1486"></A>
+
+<P>
+Some fluid properties are accurately predicted by this model, especially predictions dealing with potential and kinetic energies.  However, the ability of a fluid's molecules to independently move give it unique properties that solids do not possess.  One of these properties is the ability to effortlessly transfer <SPAN  CLASS="textit">pressure</SPAN>, defined as force applied over area. <A NAME="1488"></A>
+
+<P>
+
+<H2><A ID="SECTION002111000000000000000">
+Pressure</A>
+</H2>
+
+<P>
+The common phases of matter are <SPAN  CLASS="textit">solid</SPAN>, <SPAN  CLASS="textit">liquid</SPAN>, and <SPAN  CLASS="textit">gas</SPAN>.  Liquids and gases are fundamentally distinct from solids in their intrinsic inability to maintain a fixed shape.  In other words, liquids and gases tend to fill whatever solid containers they are held in.  Similarly, both liquids and gases both have the ability to flow, which is why they are collectively called <SPAN  CLASS="textit">fluids</SPAN>. <A NAME="1494"></A>  <A NAME="1495"></A>  <A NAME="1496"></A> <A NAME="1497"></A>
+
+<P>
+Due to their lack of definite shape, fluids tend to disperse any force applied to them.  This stands in marked contrast to solids, which tend to transfer force only in the applied direction.  Take for example the force transferred by a nail, from a hammer to a piece of wood:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img338.svg"
+ ALT="$\displaystyle \includegraphics{pressure01.eps}$">
+</DIV><P></P>
+
+<P>
+The impact of the hammer's blow is directed straight through the solid nail into the wood below &ndash; nothing surprising here.
+
+<P>
+
+<P>
+Now consider what a <SPAN  CLASS="textit">fluid</SPAN> would do when subjected to the same hammer blow:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.74ex; vertical-align: -0.10ex; " SRC="fluiddyn/img339.svg"
+ ALT="$\displaystyle \includegraphics{pressure02.eps}$">
+</DIV><P></P>
+
+<P>
+Given the freedom of a fluid's molecules to move about, the impact of the hammer blow becomes directed <SPAN  CLASS="textit">everywhere</SPAN> against the inside surface of the container (the cylinder).  This is true for all fluids: liquids and gases alike.  The only difference between the behavior of a liquid versus a gas in the same scenario is that the gas will compress (i.e. the piston will move down as the hammer struck it), whereas the liquid will not compress (i.e. the piston will remain in its resting position).  Gases yield under pressure, liquids do not.
+
+<P>
+It is very useful to quantify force applied to a fluid in terms of force per unit area, since the force applied to a fluid becomes evenly dispersed in all directions to the surface containing it.  This is the definition of <SPAN  CLASS="textit">pressure</SPAN><A ID="tex2html60"
+  HREF="footnode.html#foot2412"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">60</SPAN></SUP></A> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img26.svg"
+ ALT="$P$"></SPAN>): the amount of force (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img3.svg"
+ ALT="$F$"></SPAN>) distributed across a given area (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img254.svg"
+ ALT="$A$"></SPAN>). <A NAME="1505"></A>  <A NAME="1506"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = {F \over A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="fluiddyn/img340.svg"
+ ALT="$\displaystyle P = {F \over A}$">
+</DIV><P></P>
+
+<P>
+In the metric system, the standard unit of pressure is the <SPAN  CLASS="textit">pascal</SPAN> (Pa), defined as one Newton (N) of force per square meter (m<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img18.svg"
+ ALT="$^{2}$"></SPAN>) of area.  In the British system of measurement, the standard unit of pressure is the <SPAN  CLASS="textit">PSI</SPAN>: pounds (lb) of force per square inch (in<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img18.svg"
+ ALT="$^{2}$"></SPAN>) of area.  Pressure is often expressed in units of kilopascals (kPa) when metric units are used because one pascal is a rather small<A ID="tex2html61"
+  HREF="footnode.html#foot1512"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">61</SPAN></SUP></A> pressure for most engineering applications.  <A NAME="1513"></A>  <A NAME="1514"></A>  <A NAME="1515"></A>
+
+<P>
+
+<P>
+The even distribution of force throughout a fluid has some very practical applications.  One application of this principle is the <SPAN  CLASS="textit">hydraulic lift</SPAN>, which functions somewhat like a fluid lever: <A NAME="1517"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 60.58ex; vertical-align: -0.10ex; " SRC="fluiddyn/img341.svg"
+ ALT="$\displaystyle \includegraphics{pressure03.eps}$">
+</DIV><P></P>
+
+<P>
+Force applied to the small piston creates a pressure throughout the fluid.  That pressure exerts a greater force on the large piston than what is exerted on the small piston, by a factor equal to the ratio of piston areas.  Since area for a circular piston is proportional to the square of the radius (<!-- MATH
+ $A = \pi r^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img342.svg"
+ ALT="$A = \pi r^2$"></SPAN>), even modest ratios of piston diameter yield large ratios of area and therefore of force.  If the large piston has five times the area of the small piston (i.e. the large piston's diameter is 2.236 times greater than the small piston's diameter), force will be multiplied five-fold.  Just as with the lever, however, there must be a trade-off so as to not violate the Conservation of Energy.  The trade-off for increased force is decreased distance, whether in the lever system or in the hydraulic lift system.  If the large piston generates a force five times greater than what is applied to the small piston, it must move only one-fifth as far as the small piston's motion.  In this way, energy in equals energy out (remember that <SPAN  CLASS="textit">work</SPAN>, which is equivalent to energy, is calculated by multiplying force by parallel distance traveled).  <A NAME="1520"></A>
+
+<P>
+
+<P>
+For those familiar with electricity, what you see here in either the lever system or the hydraulic lift is analogous to a <SPAN  CLASS="textit">transformer</SPAN>: we can step AC voltage up, but only by reducing AC current.  Being a passive device, a transformer cannot boost power.  Therefore, power out can never be greater than power in, and given a perfectly efficient transformer, power out will always be precisely equal to power in:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Power} = (\hbox{Voltage in}) (\hbox{Current in}) = (\hbox{Voltage out}) (\hbox{Current out})
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="fluiddyn/img343.svg"
+ ALT="$\displaystyle \hbox{Power} = (\hbox{Voltage in}) (\hbox{Current in}) = (\hbox{Voltage out}) (\hbox{Current out})$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Work} = (\hbox{Force in}) (\hbox{Distance in}) = (\hbox{Force out}) (\hbox{Distance out})
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="fluiddyn/img344.svg"
+ ALT="$\displaystyle \hbox{Work} = (\hbox{Force in}) (\hbox{Distance in}) = (\hbox{Force out}) (\hbox{Distance out})$">
+</DIV><P></P>
+
+<P>
+Fluid may be used to transfer power just as electricity is used to transfer power.  Such systems are called <SPAN  CLASS="textit">hydraulic</SPAN> if the fluid is a liquid (usually oil), and <SPAN  CLASS="textit">pneumatic</SPAN> if the fluid is a gas (usually air).  In either case, a machine (pump or compressor) is used to generate a continuous fluid pressure, pipes are used to transfer the pressurized fluid to the point of use, and then the fluid is allowed to exert a force against a piston or a set of pistons to do mechanical work: <A NAME="1534"></A> <A NAME="1535"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure04.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 55.35ex; vertical-align: -0.10ex; " SRC="fluiddyn/img345.svg"
+ ALT="$\displaystyle \includegraphics{pressure04.eps}$">
+</DIV><P></P>
+
+<P>
+To learn more about fluid power systems, refer to section <A HREF="#Fluid_power_systems"><IMG  ALT="[*]" SRC="crossref.png"></A> beginning on page <A HREF="#Fluid_power_systems"><IMG  ALT="[*]" SRC="crossref.png"></A>.
+
+<P>
+
+<P>
+An interesting use of fluid we see in the field of instrumentation is as a <SPAN  CLASS="textit">signaling medium</SPAN>, to transfer information between places rather than to transfer power between places.  This is analogous to using electricity to transmit voice signals in telephone systems, or digital data between computers along copper wire.  Here, fluid pressure represents some other quantity, and the principle of force being distributed equally throughout the fluid is exploited to transmit that representation to some distant location, through piping or tubing:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure05.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 17.81ex; vertical-align: -0.10ex; " SRC="fluiddyn/img346.svg"
+ ALT="$\displaystyle \includegraphics{pressure05.eps}$">
+</DIV><P></P>
+
+<P>
+This illustration shows a simple temperature-measuring system called a <SPAN  CLASS="textit">filled bulb</SPAN>, where an enclosed bulb filled with fluid is exposed to a temperature that we wish to measure.  A rise in temperature makes the fluid expand and thereby increases pressure sensed at the gauge.  The purpose of the fluid here is two-fold: first to sense temperature, and second to relay this temperature measurement a long distance away to the gauge.  The principle of even pressure distribution allows the fluid to act as a signal medium to convey the information (bulb temperature) to a distant location. <A NAME="1542"></A>
+
+<P>
+
+<H2><A ID="SECTION002112000000000000000">
+Pascal's Principle and hydrostatic pressure</A>
+</H2>
+
+<P>
+<A ID="Physics_of_hydrostatic_pressure"></A>
+<P>
+We learned earlier that fluids tend to evenly distribute any applied force.  This fundamental principle is the basis of fluid power and fluid signaling systems, where pressure is assumed to be transferred equally to all points in a confined fluid.  In the example of a hydraulic lift given earlier, we assume that the pressure throughout the fluid pathway is equal:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure15.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 35.81ex; vertical-align: -0.10ex; " SRC="fluiddyn/img347.svg"
+ ALT="$\displaystyle \includegraphics{pressure15.eps}$">
+</DIV><P></P>
+
+<P>
+If additional force is applied to the small piston (say, 160 lbs instead of 150 lbs), the fluid pressure throughout the system will increase, not just the fluid pressure in the vicinity of the piston.  The effect of this additional force will be immediately<A ID="tex2html62"
+  HREF="footnode.html#foot2413"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">62</SPAN></SUP></A> &ldquo;felt&rdquo; at all points of the system.  The phenomenon of pressure changes being evenly distributed throughout an enclosed fluid is called <SPAN  CLASS="textit">Pascal's principle</SPAN>.  <A NAME="1548"></A>
+
+<P>
+Pascal's principle is really nothing more than the direct consequence of fluids' ability to <SPAN  CLASS="textit">flow</SPAN>.  The only way an additional applied pressure would <SPAN  CLASS="textit">not</SPAN> be transmitted to all points within a confined fluid volume is if the fluid molecules were somehow not free to move.  Since they are mobile, any compression applied to one region of that fluid will propagate to all other regions within that fluid volume.  As fluid molecules are subjected to greater pressure, they naturally try to migrate to regions of lower pressure where they &ldquo;bump up&rdquo; against other fluid molecules, distributing that increased pressure in doing so.
+
+<P>
+
+<P>
+Pascal's principle tells us any <SPAN  CLASS="textit">change</SPAN> in applied pressure to a confined fluid will be distributed evenly throughout, but it does not say <SPAN  CLASS="textit">pressure</SPAN> will be the same throughout all points.  If forces other than those applied to pistons exert pressure on the fluid, we may indeed experience gradients of pressure throughout a confined fluid volume.
+
+<P>
+In cases where we are dealing with tall columns of dense fluid, there is another force we must consider: the weight of the fluid itself.  Suppose we took a cubic foot of water which weighs approximately 62.4 pounds, and poured it into a very tall vertical tube with a cross-sectional area of 1 square inch:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure16.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img348.svg"
+ ALT="$\displaystyle \includegraphics{pressure16.eps}$">
+</DIV><P></P>
+
+<P>
+Naturally, we would expect the pressure measured at the bottom of this tall tube to be 62.4 pounds per square inch<A ID="tex2html63"
+  HREF="footnode.html#foot2414"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">63</SPAN></SUP></A>, since the entire column of water (weighing 62.4 pounds) has its weight supported by one square inch of area.
+
+<P>
+
+<P>
+If we placed another pressure gauge mid-way up the tube, though, how much pressure would it register?  At first you might be inclined to say 62.4 PSI as well, because you learned earlier in this lesson that fluids naturally distribute force throughout their bulk.  However, in this case the pressure is <SPAN  CLASS="textit">not</SPAN> the same mid-way up the column as it is at the bottom:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure17.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img349.svg"
+ ALT="$\displaystyle \includegraphics{pressure17.eps}$">
+</DIV><P></P>
+
+<P>
+The reason for this apparent discrepancy is that the source of pressure in this fluid system comes from the weight of the water column itself.  Half-way up the column, the water only experiences half the total weight (31.2 pounds), and so the pressure is half of what it is at the very bottom.  We did not consider this effect before, because we assumed the force exerted by the piston in the hydraulic lift was so large it &ldquo;swamped&rdquo; the weight of the fluid itself.  Here, with our very tall column of water (144 feet tall!), the effect of gravity upon the water's mass is quite substantial.  Indeed, without a piston to exert an external force on the water, weight is the <SPAN  CLASS="textit">only</SPAN> source of force we have to consider when calculating pressure.  <A NAME="1558"></A>
+
+<P>
+This fact does not invalidate Pascal's principle.  Any <SPAN  CLASS="textit">change</SPAN> in pressure applied to the fluid column will still be distributed equally throughout.  For example, if we were to place a piston at the top of this fluid column and apply a force to the fluid, pressure at all points in that fluid column would increase by the same amount<A ID="tex2html64"
+  HREF="footnode.html#foot2415"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">64</SPAN></SUP></A>.  This is not the same as saying all pressures will be equal throughout the column, however.
+
+<P>
+
+<P>
+An interesting fact about pressure generated by a column of fluid is that the width or shape of the containing vessel is irrelevant: the <SPAN  CLASS="textit">height</SPAN> of the fluid column is the only dimension we need to consider.  Examine the following tube shapes, all connected at the bottom:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure18.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.39ex; vertical-align: -0.10ex; " SRC="fluiddyn/img350.svg"
+ ALT="$\displaystyle \includegraphics{pressure18.eps}$">
+</DIV><P></P>
+
+<P>
+Since the force of fluid weight is generated only along the axis of gravitational attraction (straight down), that is the only axis of measurement important in determining &ldquo;hydrostatic&rdquo; fluid pressure. <A NAME="1563"></A> <A NAME="1564"></A>
+
+<P>
+The fixed relationship between the vertical height of a water column and pressure is such that sometimes water column height is used as a unit of measurement for pressure.  That is, instead of saying &ldquo;30 PSI,&rdquo; we could just as correctly quantify that same pressure as 830.4 inches of water ("W.C. or "H<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.45ex; " SRC="fluiddyn/img52.svg"
+ ALT="$_{2}$"></SPAN>O), the conversion factor being approximately 27.68 inches of vertical water column per PSI. <A NAME="1566"></A>
+
+<P>
+As one might guess, the <SPAN  CLASS="textit">density</SPAN> of the fluid in a vertical column has a significant impact on the hydrostatic pressure that column generates.  A liquid twice as dense as water, for example, will produce twice the pressure for a given column height.  For example, a column of this liquid (twice as dense as water) 14 inches high will produce a pressure at the bottom equal to 28 inches of water (28 "W.C.), or just over 1 PSI.  An extreme example is liquid mercury, which is over 13.5 times as dense as water.  Due to its exceptional density and ready availability, the height of a mercury column is also used as a standard unit of pressure measurement.  For instance, 25 PSI could be expressed as 50.9 inches of mercury ("Hg), the conversion factor being approximately 2.036 inches of vertical mercury column per PSI. <A NAME="1568"></A>
+
+<P>
+The mathematical relationship between vertical liquid height and hydrostatic pressure is quite simple, and may be expressed by either of the following formulae:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \rho g h
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="fluiddyn/img351.svg"
+ ALT="$\displaystyle P = \rho g h$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \gamma h
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="fluiddyn/img352.svg"
+ ALT="$\displaystyle P = \gamma h$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img26.svg"
+ ALT="$P$"></SPAN> = Hydrostatic pressure in units of weight per square area unit: pascals (N/m<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img18.svg"
+ ALT="$^{2}$"></SPAN>) or lb/ft<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img18.svg"
+ ALT="$^{2}$"></SPAN> 
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN> = Mass density of liquid in kilograms per cubic meter (metric) or slugs per cubic foot (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img7.svg"
+ ALT="$g$"></SPAN> = Acceleration of gravity (9.81 meters per second squared or 32.2 feet per second squared)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img14.svg"
+ ALT="$\gamma$"></SPAN> = Weight density of liquid in newtons per cubic meter (metric) or pounds per cubic foot (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img71.svg"
+ ALT="$h$"></SPAN> = Vertical height of liquid column
+
+<P>
+<P>
+Dimensional analysis &ndash; where we account for all units of measurement in a formula &ndash; validates the mathematical relationship between pressure, density, and height.  Taking the second formula as an example:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \gamma h
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="fluiddyn/img352.svg"
+ ALT="$\displaystyle P = \gamma h$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left[\hbox{lb} \over \hbox{ft}^2\right] = \left[ \hbox{lb} \over \hbox{ft}^3 \right] \left[\hbox{ft} \over 1 \right]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="fluiddyn/img353.svg"
+ ALT="$\displaystyle \left[\hbox{lb} \over \hbox{ft}^2\right] = \left[ \hbox{lb} \over \hbox{ft}^3 \right] \left[\hbox{ft} \over 1 \right]$">
+</DIV><P></P>
+
+<P>
+As you can see, the unit of &ldquo;feet&rdquo; in the height term cancels out one of the &ldquo;feet&rdquo; units in the denominator of the density term, leaving an answer for pressure in units of pounds per <SPAN  CLASS="textit">square</SPAN> foot.  If one wished to set up the problem so the answer presented in a more common pressure unit such as pounds per square <SPAN  CLASS="textit">inch</SPAN>, both the liquid density and height would have to be expressed in appropriate units (pounds per cubic <SPAN  CLASS="textit">inch</SPAN> and <SPAN  CLASS="textit">inches</SPAN>, respectively).  <A NAME="1580"></A>
+
+<P>
+Applying this to a realistic problem, consider the case of a tank filled with 8 feet (vertical) of castor oil, having a weight density of 60.5 pounds per cubic foot:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure73.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img354.svg"
+ ALT="$\displaystyle \includegraphics{pressure73.eps}$">
+</DIV><P></P>
+
+<P>
+This is how we would set up the formula to calculate for hydrostatic pressure at the bottom of the tank:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \gamma h
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="fluiddyn/img352.svg"
+ ALT="$\displaystyle P = \gamma h$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \left({60.5 \hbox{ lb} \over \hbox{ft}^3}\right) \left(8 \hbox{ ft}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="fluiddyn/img355.svg"
+ ALT="$\displaystyle P = \left({60.5 \hbox{ lb} \over \hbox{ft}^3}\right) \left(8 \hbox{ ft}\right)$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = {484 \hbox{ lb} \over \hbox{ft}^2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.10ex; vertical-align: -1.84ex; " SRC="fluiddyn/img356.svg"
+ ALT="$\displaystyle P = {484 \hbox{ lb} \over \hbox{ft}^2}$">
+</DIV><P></P>
+
+<P>
+If we wished to convert this result into a more common unit such as PSI (pounds per square inch), we could do so using an appropriate fraction of conversion units:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \left({484 \hbox{ lb} \over \hbox{ft}^2}\right) \left({1 \hbox{ ft}^2 \over 144 \hbox{ in}^2}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.95ex; vertical-align: -2.30ex; " SRC="fluiddyn/img357.svg"
+ ALT="$\displaystyle P = \left({484 \hbox{ lb} \over \hbox{ft}^2}\right) \left({1 \hbox{ ft}^2 \over 144 \hbox{ in}^2}\right) $">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = {3.36 \hbox{ lb} \over \hbox{in}^2} = 3.36 \hbox{ PSI}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.03ex; vertical-align: -1.77ex; " SRC="fluiddyn/img358.svg"
+ ALT="$\displaystyle P = {3.36 \hbox{ lb} \over \hbox{in}^2} = 3.36 \hbox{ PSI}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION002113000000000000000">
+Fluid density expressions</A>
+</H2>
+
+<P>
+The <SPAN  CLASS="textit">density</SPAN> of any substance is defined as the ratio of its mass or weight to the volume occupied by that mass or weight.  Common expressions of density include pounds per cubic foot (British units) and kilograms per cubic meter (metric units).  When the substance in question is a liquid, a common form of expression for density is a ratio of the liquid's density to the density of pure water at standard temperature<A ID="tex2html65"
+  HREF="footnode.html#foot1596"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">65</SPAN></SUP></A>.  This ratio is known as <SPAN  CLASS="textit">specific gravity</SPAN>.  For example, the specific gravity of glycerin may be determined by dividing the density of glycerin by the density of water:  <A NAME="1598"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Specific gravity of any liquid} = {D_{liquid} \over D_{water}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.27ex; vertical-align: -2.04ex; " SRC="fluiddyn/img359.svg"
+ ALT="$\displaystyle \hbox{Specific gravity of any liquid} = {D_{liquid} \over D_{water}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Specific gravity of glycerin} = {D_{glycerin} \over D_{water}} = { 78.6 \hbox{ lb/ft}^3 \over 62.4 \hbox{ lb/ft}^3} = 1.26
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 6.32ex; vertical-align: -2.55ex; " SRC="fluiddyn/img360.svg"
+ ALT="$\displaystyle \hbox{Specific gravity of glycerin} = {D_{glycerin} \over D_{water}} = { 78.6 \hbox{ lb/ft}^3 \over 62.4 \hbox{ lb/ft}^3} = 1.26 $">
+</DIV><P></P>
+
+<P>
+The density of gases may also be expressed in ratio form, except the standard of comparison is ambient air instead of water.  Chlorine gas, for example, has a specific gravity of 2.47 (each volumetric unit of chlorine having 2.47 times the mass of the same volume of air under identical temperature and pressure conditions).  Specific gravity values for gases are sometimes called <SPAN  CLASS="textit">relative gas densities</SPAN> to avoid confusion with &ldquo;specific gravity&rdquo; values for liquids.  <A NAME="1608"></A>
+
+<P>
+As with all ratios, specific gravity is a unitless quantity.  In our example with glycerine, we see how the identical units of pounds per cubic foot cancel out of both numerator and denominator, to leave a quotient with no unit at all.
+
+<P>
+<P>
+An alternative to expressing fluid density as a ratio of mass (or weight) to volume, or to compare it against the density of a standard fluid such as pure water or air, is to express it as the ratio of volume to mass.  This is most commonly applied to vapors such as steam, and it is called <SPAN  CLASS="textit">specific volume</SPAN>.  The relationship between specific volume and density is one of mathematical reciprocation: the reciprocal of density (e.g. pounds per cubic foot) is specific volume (e.g. cubic feet per pound).  For example, consulting a table of saturated steam properties, we see that saturated steam at a pressure of 60 PSIA has a specific volume of 7.175 cubic feet per pound.  Translating this into units of pounds per cubic feet, we reciprocate the value 7.175 to arrive at 0.1394 pounds per cubic foot.   <A NAME="1610"></A>
+
+<P>
+<P>
+Industry-specific units of measurement also exist for expressing the relative density of a fluid.  These units of measurement all begin with the word &ldquo;degree&rdquo; much the same as for units of temperature measurement, for example:  <A NAME="1611"></A> <A NAME="1612"></A> <A NAME="1613"></A>  <A NAME="1614"></A> <A NAME="1615"></A> <A NAME="1616"></A>
+
+<P>
+
+<UL>
+<LI>Degrees API <SPAN  CLASS="textit">(used in the petroleum industries)</SPAN>
+</LI>
+<LI>Degrees Baumé <SPAN  CLASS="textit">(used in a variety of industries including paper manufacture and alcohol production)</SPAN>
+</LI>
+<LI>Degrees Twaddell <SPAN  CLASS="textit">(used in the textile industry for tanning solutions and the like)</SPAN>
+</LI>
+</UL>
+
+<P>
+
+<P>
+The mathematical relationships between each of these &ldquo;degree&rdquo; units of density versus specific gravity<A ID="tex2html66"
+  HREF="footnode.html#foot1622"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">66</SPAN></SUP></A> is as follows:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Degrees API} = {141.5 \over \hbox{Specific gravity}} - 131.5
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.29ex; vertical-align: -2.14ex; " SRC="fluiddyn/img361.svg"
+ ALT="$\displaystyle \hbox{Degrees API} = {141.5 \over \hbox{Specific gravity}} - 131.5$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Degrees Twaddell} = 200 \times (\hbox{Specific gravity} - 1)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="fluiddyn/img362.svg"
+ ALT="$\displaystyle \hbox{Degrees Twaddell} = 200 \times (\hbox{Specific gravity} - 1)$">
+</DIV><P></P>
+
+<P>
+Two different formulae exist for the calculation of degrees Baumé, depending on whether the liquid in question is heavier or lighter than water.  For lighter-than-water liquids:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Degrees Baum\'e (light)} = {140 \over \hbox{Specific gravity}} - 130
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.29ex; vertical-align: -2.14ex; " SRC="fluiddyn/img363.svg"
+ ALT="$\displaystyle \hbox{Degrees Baum\'e (light)} = {140 \over \hbox{Specific gravity}} - 130$">
+</DIV><P></P>
+
+<P>
+Note that pure water would measure 10<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="fluiddyn/img49.svg"
+ ALT="$^{o}$"></SPAN> Baumé on the light scale.  As liquid density decreases, the light Baumé value increases.  For heavier-than-water liquids:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Degrees Baum\'e (heavy)} = 145 - {145 \over \hbox{Specific gravity}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.29ex; vertical-align: -2.14ex; " SRC="fluiddyn/img364.svg"
+ ALT="$\displaystyle \hbox{Degrees Baum\'e (heavy)} = 145 - {145 \over \hbox{Specific gravity}}$">
+</DIV><P></P>
+
+<P>
+Note that pure water would measure 0<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="fluiddyn/img49.svg"
+ ALT="$^{o}$"></SPAN> Baumé on the heavy scale.  As liquid density increases, the heavy Baumé value increases.  
+
+<P>
+
+<P>
+Just to make things confusing, there are different standards for the heavy Baumé scale.  Instead of the constant value 145 shown in the above equation (used throughout the United States of America), an older Dutch standard used the same formula with a constant value of 144.  The <SPAN  CLASS="textit">Gerlach</SPAN> heavy Baumé scale uses a constant value of 146.78: <A NAME="1634"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Degrees Baum\'e (heavy, old Dutch)} = 144 - {144 \over \hbox{Specific gravity}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.29ex; vertical-align: -2.14ex; " SRC="fluiddyn/img365.svg"
+ ALT="$\displaystyle \hbox{Degrees Baum\'e (heavy, old Dutch)} = 144 - {144 \over \hbox{Specific gravity}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Degrees Baum\'e (heavy, Gerlach scale)} = 146.78 - {146.78 \over \hbox{Specific gravity}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.29ex; vertical-align: -2.14ex; " SRC="fluiddyn/img366.svg"
+ ALT="$\displaystyle \hbox{Degrees Baum\'e (heavy, Gerlach scale)} = 146.78 - {146.78 \over \hbox{Specific gravity}}$">
+</DIV><P></P>
+
+<P>
+There exists a seemingly endless array of &ldquo;degree&rdquo; scales used to express liquid density, scattered throughout the pages of history.  For the measurement of sugar concentrations in the food industries, the unit of degrees <SPAN  CLASS="textit">Balling</SPAN> was invented.  This scale was later revised to become the unit of degrees <SPAN  CLASS="textit">Brix</SPAN>, which is directly proportional to the percent concentration of sugar in the liquid.  Another density scale used for expressing sugar concentration is degrees <SPAN  CLASS="textit">Plato</SPAN>.  The density of tanning liquor may be measured in degrees <SPAN  CLASS="textit">Bark</SPAN>.  Milk density may be measured in degrees <SPAN  CLASS="textit">Soxhlet</SPAN>.  Vegetable oil density (and in older times, the density of oil extracted from sperm whales) may be measured in degrees <SPAN  CLASS="textit">Oleo</SPAN>.  <A NAME="1645"></A> <A NAME="1646"></A>  <A NAME="1647"></A> <A NAME="1648"></A> <A NAME="1649"></A> <A NAME="1650"></A> <A NAME="1651"></A> <A NAME="1652"></A> <A NAME="1653"></A> <A NAME="1654"></A>  <A NAME="1655"></A>  <A NAME="1656"></A>
+
+<P>
+
+<H2><A ID="SECTION002114000000000000000">
+Manometers</A>
+</H2>
+
+<P>
+Expressing fluid pressure in terms of a vertical liquid column makes perfect sense when we use a very simple kind of motion-balance pressure instrument called a <SPAN  CLASS="textit">manometer</SPAN>.  A manometer is nothing more than a piece of clear (glass or plastic) tubing filled with a liquid of known density, situated next to a scale for measuring distance.  The most basic form of manometer is the <SPAN  CLASS="textit">U-tube</SPAN> manometer, shown here: <A NAME="1660"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure19.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 36.97ex; vertical-align: -0.10ex; " SRC="fluiddyn/img367.svg"
+ ALT="$\displaystyle \includegraphics{pressure19.eps}$">
+</DIV><P></P>
+
+<P>
+The basis for all manometers is the mathematical relationship between a liquid's density (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN> in mass units or <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img14.svg"
+ ALT="$\gamma$"></SPAN> in weight units) and vertical height.  The diameter of the manometer tubes is irrelevant:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \rho g h
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="fluiddyn/img351.svg"
+ ALT="$\displaystyle P = \rho g h$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \gamma h
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="fluiddyn/img352.svg"
+ ALT="$\displaystyle P = \gamma h$">
+</DIV><P></P>
+
+<P>
+Pressure is read on the scale as the difference in height (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img71.svg"
+ ALT="$h$"></SPAN>) between the two liquid columns.  One nice feature of a manometer is it really cannot become &ldquo;uncalibrated&rdquo; so long as the fluid is pure and the assembly is maintained in an upright position.  If the fluid used is water, the manometer may be filled and emptied at will, and even rolled up for storage if the tubes are made of flexible plastic.
+
+<P>
+
+<P>
+We may create even more sensitive manometers by purposely inclining one or more of the tubes, so that the liquid must travel a farther distance along the tube length to achieve the same vertical shift in height.  This has the effect of &ldquo;amplifying&rdquo; the liquid's motion to make it easier to resolve small pressures: <A NAME="1662"></A> <A NAME="1663"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure20.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 25.74ex; vertical-align: -0.10ex; " SRC="fluiddyn/img368.svg"
+ ALT="$\displaystyle \includegraphics{pressure20.eps}$">
+</DIV><P></P>
+
+<P>
+This way, a greater motion of liquid (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img12.svg"
+ ALT="$x$"></SPAN>) is required to generate the same hydrostatic pressure (vertical liquid displacement, <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img71.svg"
+ ALT="$h$"></SPAN>) than in an upright manometer, making the inclined manometer more sensitive.  As the similar triangle in the illustration shows, <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img12.svg"
+ ALT="$x$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img71.svg"
+ ALT="$h$"></SPAN> are related trigonometrically by the sine function:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\sin \theta = {h \over x}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="fluiddyn/img369.svg"
+ ALT="$\displaystyle \sin \theta = {h \over x}$">
+</DIV><P></P>
+
+<P>
+The difference in fluid column positions measured diagonally along the scale (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img12.svg"
+ ALT="$x$"></SPAN>) must always be greater than the vertical height difference between the two columns (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img71.svg"
+ ALT="$h$"></SPAN>) by a factor of <!-- MATH
+ $1 \over {\sin \theta}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.90ex; vertical-align: -0.90ex; " SRC="fluiddyn/img370.svg"
+ ALT="$1 \over {\sin \theta}$"></SPAN>, which will always be greater than one for angles less than 90<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="fluiddyn/img49.svg"
+ ALT="$^{o}$"></SPAN>.  The smaller the angle <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img94.svg"
+ ALT="$\theta$"></SPAN>, the greater the ratio between <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img12.svg"
+ ALT="$x$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img71.svg"
+ ALT="$h$"></SPAN>, leading to more sensitivity.
+
+<P>
+<P>
+
+<P>
+If even more sensitivity is desired, we may construct something called a <SPAN  CLASS="textit">micromanometer</SPAN>, consisting of a gas bubble trapped in a clear horizontal tube between two large vertical manometer chambers: <A NAME="1669"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure21.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 32.32ex; vertical-align: -0.10ex; " SRC="fluiddyn/img371.svg"
+ ALT="$\displaystyle \includegraphics{pressure21.eps}$">
+</DIV><P></P>
+
+<P>
+Pressure applied to the top of either vertical chamber will cause the vertical liquid columns to shift just the same as any U-tube manometer.  However, the bubble trapped in the clear horizontal tube will move much farther than the vertical displacement of either liquid column, owing to the huge difference in cross-sectional area between the vertical chambers and the horizontal tube.  This amplification of motion is analogous to the amplification of motion in a hydraulic piston system (where the smaller piston moves farther than the larger piston), and makes the micromanometer exceptionally sensitive to small pressures.
+
+<P>
+The movement of the gas bubble within the clear horizontal viewing tube (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img12.svg"
+ ALT="$x$"></SPAN>) relates to applied pressure by the following formula:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x = {{\gamma h} A_{large} \over {2 A_{small}}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.30ex; vertical-align: -2.04ex; " SRC="fluiddyn/img372.svg"
+ ALT="$\displaystyle x = {{\gamma h} A_{large} \over {2 A_{small}}}$">
+</DIV><P></P>
+
+<P>
+<P>
+Using water as the working liquid in a standard U-tube manometer, 1 PSI of applied gas pressure results in approximately 27.7 inches of vertical liquid column displacement (i.e. 27.7 inches of height <SPAN  CLASS="textit">difference</SPAN> between the two water columns).  This relatively large range of motion limits the usefulness of water manometers to modest pressures only.  If we wished to use a water manometer to measure the pressure of compressed air in an industrial pneumatic supply system at approximately 100 PSI, the manometer would have to be in excess of 230 feet tall!  Clearly, a water manometer would not be the proper instrument to use for such an application.
+
+<P>
+However, water is not the only viable liquid for use in manometers.  We could take the exact same clear U-tube and fill it partially full of liquid <SPAN  CLASS="textit">mercury</SPAN> instead, which is substantially denser than water.  In a mercury manometer, 1 PSI of applied gas pressure results in very slightly more than 2 inches of liquid column displacement.  A mercury manometer applied to the task of measuring air pressure in an industrial pneumatic system would only have to be 17 feet tall &ndash; still quite large and cumbersome<A ID="tex2html67"
+  HREF="footnode.html#foot1676"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">67</SPAN></SUP></A> for a measuring instrument, but not impossible to construct or to use.
+
+<P>
+
+<P>
+A common form of manometer seen in industrial instrument calibration shops is the <SPAN  CLASS="textit">well</SPAN> type, consisting of a single vertical tube and a relatively large reservoir (called the &ldquo;well&rdquo;) acting as the second column:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure22.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 31.35ex; vertical-align: -0.10ex; " SRC="fluiddyn/img373.svg"
+ ALT="$\displaystyle \includegraphics{pressure22.eps}$">
+</DIV><P></P>
+
+<P>
+Due to the well's much larger cross-sectional area, liquid motion inside of it is negligible compared to the motion of liquid inside the clear viewing tube.  For all practical purposes<A ID="tex2html68"
+  HREF="footnode.html#foot2430"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">68</SPAN></SUP></A>, the liquid level inside the &ldquo;well&rdquo; is constant, and so the liquid inside the tube moves the full distance equivalent to the applied pressure.  Thus, the well manometer provides an easier means of reading pressure: no longer does one have to measure the difference of height between <SPAN  CLASS="textit">two</SPAN> liquid columns, only the height of a single column.
+
+<P>
+
+<H2><A ID="SECTION002115000000000000000">
+Systems of pressure measurement</A>
+</H2>
+
+<P>
+Pressure measurement is often a relative thing.  When we say there is 35 PSI of air pressure in an inflated car tire, what we mean is that the pressure inside the tire is 35 pounds per square inch <SPAN  CLASS="textit">greater than</SPAN> the surrounding, ambient air pressure.  It is a fact that we live and breathe in a pressurized environment.  Just as a vertical column of liquid generates a hydrostatic pressure, so does a vertical column of gas.  If the column of gas is very tall, the pressure generated by it will be substantial.  Such is the case with Earth's atmosphere, the pressure at sea level caused by the weight of the atmosphere being approximately 14.7 PSI.
+
+<P>
+You and I do not perceive this constant air pressure around us because the pressure inside our bodies is equal to the pressure outside our bodies.  Thus our eardrums, which serve as differential pressure-sensing diaphragms, detect no <SPAN  CLASS="textit">difference</SPAN> of pressure between the inside and outside of our bodies.  The only time the Earth's air pressure becomes perceptible to us is if we rapidly ascend or descend, where the pressure inside our bodies does not have time to equalize with the pressure outside, and we feel the force of that differential pressure on our eardrums. <A NAME="1684"></A> <A NAME="1685"></A>
+
+<P>
+If we wish to speak of a fluid pressure in terms of how it compares to a perfect vacuum (absolute zero pressure), we specify it in terms of <SPAN  CLASS="textit">absolute</SPAN> units.  For example, when I said earlier that the atmospheric pressure at sea level was 14.7 PSI, what I really meant is it is 14.7 PSIA (pounds per square inch <SPAN  CLASS="textit">absolute</SPAN>), meaning 14.7 pounds per square inch <SPAN  CLASS="textit">greater than a perfect vacuum</SPAN>.  When I said earlier that the air pressure inside an inflated car tire was 35 PSI, what I really meant is it was 35 PSIG (pounds per square inch <SPAN  CLASS="textit">gauge</SPAN>), meaning 35 pounds per square inch <SPAN  CLASS="textit">greater than ambient air pressure</SPAN>.  The qualifier &ldquo;gauge&rdquo; implies the pressure indicated by a pressure-measuring gauge, which in most cases works by comparing the sample fluid's pressure to that of the surrounding atmosphere.  When units of pressure measurement are specified without a &ldquo;G&rdquo; or &ldquo;A&rdquo; suffix, &ldquo;gauge&rdquo; pressure is usually<A ID="tex2html69"
+  HREF="footnode.html#foot1691"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">69</SPAN></SUP></A> assumed.  <A NAME="1692"></A>  <A NAME="1693"></A>  <A NAME="1694"></A>  <A NAME="1695"></A>
+
+<P>
+
+<P>
+Gauge and absolute pressure values for some common fluid pressures are shown in this table:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Gauge pressure} & \textbf{Fluid example} & \textbf{Absolute pressure} \cr
+\noalign{\hrule }
+90 PSIG & Bicycle tire air pressure & 104.7 PSIA \cr
+\noalign{\hrule }
+35 PSIG & Automobile tire air pressure & 49.7 PSIA \cr
+\noalign{\hrule }
+0 PSIG & Atmospheric pressure & 14.7 PSIA \cr
+ & at sea level & \cr
+\noalign{\hrule }
+$-9.8$ PSIG & Engine manifold vacuum & 4.9 PSIA \cr
+(9.8 PSI vacuum) & under idle conditions & \cr
+\noalign{\hrule }
+$-14.7$ PSIG & Perfect vacuum & 0 PSIA \cr
+(14.7 PSI vacuum) & (no fluid molecules present) & \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 25.90ex; vertical-align: -0.10ex; " SRC="fluiddyn/img376.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+Note that the only difference between each of the corresponding <SPAN  CLASS="textit">gauge</SPAN> and <SPAN  CLASS="textit">absolute</SPAN> pressures is an offset of 14.7 PSI, with absolute pressure being the larger (more positive) value.
+
+<P>
+This offset of 14.7 PSI between <SPAN  CLASS="textit">absolute</SPAN> and <SPAN  CLASS="textit">gauge</SPAN> pressures can be confusing if we must convert between different pressure units.  Suppose we wished to express the tire pressure of 35 PSIG in units of inches of water column ("W.C.).  If we stay in the gauge-pressure scale, all we have to do is multiply by 27.68:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{{35 \> \hbox{\sout{PSI}}} \over 1} \times {{27.68 \> \hbox{"W.C.}} \over {1 \> \hbox{\sout{PSI}}}} = 968.8 \> \hbox{"W.C.}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="fluiddyn/img377.svg"
+ ALT="$\displaystyle {{35 \&gt; \hbox{\sout{PSI}}} \over 1} \times {{27.68 \&gt; \hbox{''W.C.}} \over {1 \&gt; \hbox{\sout{PSI}}}} = 968.8 \&gt; \hbox{''W.C.}$">
+</DIV><P></P>
+
+<P>
+Note how the fractions have been arranged to facilitate cancellation of units.  The &ldquo;PSI&rdquo; unit in the numerator of the first fraction cancels with the &ldquo;PSI&rdquo; unit in the denominator of the second fraction, leaving inches of water column ("W.C.) as the only unit standing.  Multiplying the first fraction (35 PSI over 1) by the second fraction (27.68 "W.C. over 1 PSI) is &ldquo;legal&rdquo; to do since the second fraction has a <SPAN  CLASS="textit">physical</SPAN> value of unity (1): being that 27.68 inches of water column is the same physical pressure as 1 PSI, the second fraction is really the number &ldquo;1&rdquo; in disguise.  As we know, multiplying any quantity by unity does not change its value, so the result of 968.8 "W.C. we get has the exact same physical meaning as the original figure of 35 PSI.  This technique of unit conversion is sometimes known as <SPAN  CLASS="textit">unity fractions</SPAN>, and it is discussed in more general terms in another section of this book (refer to section <A HREF="node6.html#Unit_conversions">1.4</A> beginning on page <A HREF="node6.html#Unit_conversions"><IMG  ALT="[*]" SRC="crossref.png"></A>).
+
+<P>
+<P>
+If, however, we wished to express the car's tire pressure in terms of inches of water column <SPAN  CLASS="textit">absolute</SPAN> (in reference to a perfect vacuum), we would have to include the 14.7 PSI offset in our calculation, and do the conversion in two steps:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+35 \> \hbox{PSIG} + 14.7 \> \hbox{PSI} = 49.7 \> \hbox{PSIA}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.95ex; vertical-align: -0.27ex; " SRC="fluiddyn/img378.svg"
+ ALT="$\displaystyle 35 \&gt; \hbox{PSIG} + 14.7 \&gt; \hbox{PSI} = 49.7 \&gt; \hbox{PSIA}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{{49.7 \> \hbox{\sout{PSIA}}} \over 1} \times {{27.68 \> \hbox{"W.C.A}} \over {1 \> \hbox{\sout{PSIA}}}} = 1375.7 \> \hbox{"W.C.A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="fluiddyn/img379.svg"
+ ALT="$\displaystyle {{49.7 \&gt; \hbox{\sout{PSIA}}} \over 1} \times {{27.68 \&gt; \hbox{''W.C.A}} \over {1 \&gt; \hbox{\sout{PSIA}}}} = 1375.7 \&gt; \hbox{''W.C.A}$">
+</DIV><P></P>
+
+<P>
+The ratio between inches of water column and pounds per square inch is still the same (27.68:1) in the absolute scale as it is in the gauge scale.  The only difference is that we included the 14.7 PSI offset in the very beginning to express the tire's pressure on the absolute scale rather than on the gauge scale.  From then on, all conversions were performed in absolute units.
+
+<P>
+This two-step conversion process is not unlike converting between different units of temperature (degrees Celsius versus degrees Fahrenheit), and for the exact same reason.  To convert from <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="fluiddyn/img49.svg"
+ ALT="$^{o}$"></SPAN>F to <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="fluiddyn/img49.svg"
+ ALT="$^{o}$"></SPAN>C, we must first <SPAN  CLASS="textit">subtract</SPAN> an offset of 32 degrees, then <SPAN  CLASS="textit">multiply</SPAN> by <SPAN CLASS="MATH"><IMG STYLE="height: 2.90ex; vertical-align: -0.90ex; " SRC="fluiddyn/img311.svg"
+ ALT="$5 \over 9$"></SPAN>.  The reason an offset is involved in this temperature conversion is because the two temperature scales do not share the same &ldquo;zero&rdquo; point: 0 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="fluiddyn/img49.svg"
+ ALT="$^{o}$"></SPAN>C is <SPAN  CLASS="textit">not</SPAN> the same temperature as 0 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="fluiddyn/img49.svg"
+ ALT="$^{o}$"></SPAN>F.  Likewise, 0 PSIG is <SPAN  CLASS="textit">not</SPAN> the same pressure as 0 PSIA, and so an offset is always necessary to convert between gauge and absolute pressure units.
+
+<P>
+<P>
+
+<P>
+As seen with the unit of pounds per square inch (PSI), the distinction between gauge and absolute pressure is typically shown by a lettered suffix &ldquo;G&rdquo; or &ldquo;A&rdquo; following the unit, respectively.  Following this convention, we may encounter other units of pressure measurement qualified as either gauge or absolute by these letters: kPaA (kilopascals absolute), inches HgG (inches of mercury gauge), inches W.C.A (inches of water column absolute), etc.  
+
+<P>
+There are some pressure units that are <SPAN  CLASS="textit">always</SPAN> in absolute terms, and as such require no letter &ldquo;A&rdquo; to specify.  One is the unit of <SPAN  CLASS="textit">atmospheres</SPAN>, 1 atmosphere being 14.7 PSIA.  There is no such thing as &ldquo;atmospheres gauge&rdquo; pressure.  For example, if we were given a pressure as being 4.5 atmospheres and we wanted to convert that into pounds per square inch gauge (PSIG), the conversion would be a two-step process: <A NAME="1736"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{{4.5 \> \hbox{\sout{atm}}} \over 1} \times {{14.7 \> \hbox{PSIA}} \over {1 \> \hbox{\sout{atm}}}} = 66.15 \> \hbox{PSIA}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="fluiddyn/img380.svg"
+ ALT="$\displaystyle {{4.5 \&gt; \hbox{\sout{atm}}} \over 1} \times {{14.7 \&gt; \hbox{PSIA}} \over {1 \&gt; \hbox{\sout{atm}}}} = 66.15 \&gt; \hbox{PSIA}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+66.15 \> \hbox{PSIA} - 14.7 \> \hbox{PSI} = 51.45 \> \hbox{PSIG}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.97ex; vertical-align: -0.29ex; " SRC="fluiddyn/img381.svg"
+ ALT="$\displaystyle 66.15 \&gt; \hbox{PSIA} - 14.7 \&gt; \hbox{PSI} = 51.45 \&gt; \hbox{PSIG}$">
+</DIV><P></P>
+
+<P>
+Another unit of pressure measurement that is always absolute is the <SPAN  CLASS="textit">torr</SPAN>, equal to 1 millimeter of mercury column absolute (mmHgA).  0 torr is absolute zero, equal to 0 atmospheres, 0 PSIA, or <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="fluiddyn/img382.svg"
+ ALT="$-14.7$"></SPAN> PSIG.  Atmospheric pressure at sea level is 760 torr, equal to 1 atmosphere, 14.7 PSIA, or 0 PSIG. <A NAME="1745"></A>
+
+<P>
+If we wished to convert the car tire's pressure of 35 PSIG into torr, we would once again have to offset the initial value to get everything into absolute terms.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+35 \> \hbox{PSIG} + 14.7 \> \hbox{PSI} = 49.7 \> \hbox{PSIA}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.95ex; vertical-align: -0.27ex; " SRC="fluiddyn/img378.svg"
+ ALT="$\displaystyle 35 \&gt; \hbox{PSIG} + 14.7 \&gt; \hbox{PSI} = 49.7 \&gt; \hbox{PSIA}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{{49.7 \> \hbox{\sout{PSIA}}} \over 1} \times {{760 \> \hbox{torr}} \over {14.7 \> \hbox{\sout{PSIA}}}} = 2569.5 \> \hbox{torr}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="fluiddyn/img383.svg"
+ ALT="$\displaystyle {{49.7 \&gt; \hbox{\sout{PSIA}}} \over 1} \times {{760 \&gt; \hbox{torr}} \over {14.7 \&gt; \hbox{\sout{PSIA}}}} = 2569.5 \&gt; \hbox{torr}$">
+</DIV><P></P>
+
+<P>
+<P>
+One last unit of pressure measurement deserves special comment, for it may be used to express either gauge or absolute pressure, yet it is <SPAN  CLASS="textit">not</SPAN> customary to append a &ldquo;G&rdquo; or an &ldquo;A&rdquo; to the unit.  This unit is the <SPAN  CLASS="textit">bar</SPAN>, exactly equal to 100 kPa, and approximately equal<A ID="tex2html70"
+  HREF="footnode.html#foot2444"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">70</SPAN></SUP></A> to 14.5 PSI.  Some technical references append a lower-case letter &ldquo;g&rdquo; or &ldquo;a&rdquo; to the word &ldquo;bar&rdquo; to show either gauge pressure (<SPAN  CLASS="textit">barg</SPAN>) or absolute pressure (<SPAN  CLASS="textit">bara</SPAN>), but this notation seems no longer favored.  Modern usage typically omits the &ldquo;g&rdquo; or &ldquo;a&rdquo; suffix in favor of context: the word &ldquo;gauge&rdquo; or &ldquo;absolute&rdquo; may be included in the expression to clarify the meaning of &ldquo;bar.&rdquo;  Sadly, many references fail to explicitly declare either &ldquo;gauge&rdquo; or &ldquo;absolute&rdquo; when using units of <SPAN  CLASS="textit">bar</SPAN>, leaving the reader to interpret the intended context.  Despite this ambiguity, the <SPAN  CLASS="textit">bar</SPAN> is frequently used in European literature as a unit of pressure measurement.  <A NAME="1760"></A>  <A NAME="1761"></A>  <A NAME="1762"></A>
+
+<P>
+
+<H2><A ID="SECTION002116000000000000000">
+Negative pressure</A>
+</H2>
+
+<P>
+<A NAME="1764"></A>  <A NAME="1765"></A>
+
+<P>
+If a chamber is completely evacuated of any and all fluid molecules such that it contains nothing but empty space, we say that it contains a perfect <SPAN  CLASS="textit">vacuum</SPAN>.  With no fluid molecules inside the chamber whatsoever, there will be no pressure exerted on the chamber walls by any fluid.  This is the defining condition of zero absolute pressure (e.g. 0 PSIA, 0 torr, 0 atmospheres, etc.).  Referencing atmospheric air pressure<A ID="tex2html71"
+  HREF="footnode.html#foot1767"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">71</SPAN></SUP></A> outside of this vessel, we could say that the &ldquo;gauge&rdquo; pressure of a perfect vacuum is <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="fluiddyn/img382.svg"
+ ALT="$-14.7$"></SPAN> PSIG.
+
+<P>
+A commonly-taught principle is that a perfect vacuum is the lowest pressure possible in any physical system.  However, this is not strictly true.  It is, in fact, possible to generate pressures <SPAN  CLASS="textit">below</SPAN> 0 PSIA &ndash; pressures that are actually <SPAN  CLASS="textit">less</SPAN> than that of a perfect vacuum.  The key to understanding this is to consider non-gaseous systems, where the pressure in question exists within a solid or a liquid substance.
+
+<P>
+<P>
+Let us begin our exploration of this concept by considering the case of weight applied to a solid metal bar: <A NAME="1770"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_36.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 10.06ex; vertical-align: -0.10ex; " SRC="fluiddyn/img384.svg"
+ ALT="$\displaystyle \includegraphics{fluids_36.eps}$">
+</DIV><P></P>
+
+<P>
+Recall that pressure is defined as force exerted over area.  This metal bar certainly has a cross-sectional area, and if a compressive force is applied to the bar then the molecules of metal inside the bar will experience a pressure attempting to force them closer together.  Supposing the bar in question measured 1.25 inches wide and thick, its cross-sectional area would be (1.25 in)<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img18.svg"
+ ALT="$^{2}$"></SPAN>, or 1.5625 in<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img18.svg"
+ ALT="$^{2}$"></SPAN>.  Applying a force of 80 pounds along the bar's length would set up an internal pressure within the bar of 51.2 pounds per square inch, or 51.2 PSI:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_37.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 17.81ex; vertical-align: -0.10ex; " SRC="fluiddyn/img385.svg"
+ ALT="$\displaystyle \includegraphics{fluids_37.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Now suppose we reverse the direction of the applied force to the bar, applying <SPAN  CLASS="textit">tension</SPAN> to the bar rather than <SPAN  CLASS="textit">compression</SPAN>.  If the force is still 80 pounds and the cross-sectional area is still 1.5625 square inches, then the internal pressure inside the bar must be <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="fluiddyn/img386.svg"
+ ALT="$-51.2$"></SPAN> PSI:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_38.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 17.81ex; vertical-align: -0.10ex; " SRC="fluiddyn/img387.svg"
+ ALT="$\displaystyle \includegraphics{fluids_38.eps}$">
+</DIV><P></P>
+
+<P>
+The negative pressure value describes the tensile force experienced by the molecules of metal inside the bar: a degree of force per unit area attempting to pull those molecules apart from each other rather than push them closer together as was the case with a compressive force.
+
+<P>
+If you believe that the lowest possible pressure is a perfect vacuum (0 PSIA, or <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="fluiddyn/img382.svg"
+ ALT="$-14.7$"></SPAN> PSIG), then this figure of <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="fluiddyn/img386.svg"
+ ALT="$-51.2$"></SPAN> PSI seems impossible.  However, it is indeed possible because we are dealing with a solid rather than with a gas.  Gas molecules exert pressure on a surface by striking that surface and exerting a force by the momentum of their impact.  Since gas molecules can only strike (i.e. <SPAN  CLASS="textit">push</SPAN>) against a surface, and cannot <SPAN  CLASS="textit">pull</SPAN> against a surface, one cannot generate a negative absolute pressure using a gas.  In solids, however, the molecules comprising the sample exhibit <SPAN  CLASS="textit">cohesion</SPAN>, allowing us to set up a tension within that material impossible in a gaseous sample where there is no cohesion between the molecules.  Thus, negative pressures are possible within samples of solid material even though they are impossible within gases.
+
+<P>
+<P>
+Negative pressures are also possible within <SPAN  CLASS="textit">liquid</SPAN> samples, provided there are no bubbles of gas or vapor anywhere within the sample.  Like solids, the molecules within a liquid also exhibit cohesion (i.e. they tend to &ldquo;stick&rdquo; together rather than drift apart from each other).  If a piston-and-cylinder arrangement is completely filled with liquid, and a tension applied to the movable piston, the molecules within that liquid will experience tension as well.  Thus, it is possible to generate negative pressures (below 0 PSIA) within liquids that are impossible with gases.
+
+<P>
+Even vertical columns of liquid may generate negative pressure.  The famous British scientists Hooke and Boyle demonstrated a negative pressure of <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="fluiddyn/img388.svg"
+ ALT="$-0.2$"></SPAN> MPa (<SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="fluiddyn/img389.svg"
+ ALT="$-29$"></SPAN> PSI) using a column of liquid mercury.  Trees naturally generate huge negative pressures in order to draw water to their full height, up from the ground.  Two scientists, H.H. Dixon and J. Joly, presented a scientific paper entitled <SPAN  CLASS="textit">On the Ascent of Sap</SPAN> in 1895 proposing liquid tension as the mechanism by which trees could draw water up tremendous heights.
+
+<P>
+If even the smallest bubble of gas exists within a liquid sample, however, negative pressures become impossible.  Since gases can only exert positive pressures, and Pascal's Principle tells us that pressure will be equally distributed throughout a fluid sample, the low-limit of 0 PSIA for gases establishes a low pressure limit for the entire liquid/gas sample.  In other words, the presence of any gas within an otherwise liquid sample prevents the entire sample from experiencing tension.
+
+<P>
+<P>
+One limitation to the generation of negative pressures within liquids is that disturbances and/or impurities within the liquid may cause that liquid to spontaneously boil (changing phase from liquid to vapor), at which point a sustained negative pressure becomes impossible.
+
+<P>
+
+<H2><A ID="SECTION002117000000000000000">
+Buoyancy</A>
+</H2>
+
+<P>
+<A ID="Physics_of_buoyancy"></A>
+<P>
+When a solid body is immersed in a fluid, it <SPAN  CLASS="textit">displaces</SPAN> an equal volume of that fluid.  This displacement of fluid generates an upward force on the object called the <SPAN  CLASS="textit">buoyant force</SPAN>.  The magnitude of this force is equal to the weight of the fluid displaced by the solid body, and it is always directed exactly opposite the line of gravitational attraction.  This is known as <SPAN  CLASS="textit">Archimedes' Principle</SPAN>.  <A NAME="1788"></A> <A NAME="1789"></A> <A NAME="1790"></A>
+
+<P>
+Buoyant force is what makes ships float.  A ship sinks into the water just enough so the weight of the water displaced is equal to the total weight of the ship and all it holds (cargo, crew, food, fuel, etc.):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_10.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 21.68ex; vertical-align: -0.10ex; " SRC="fluiddyn/img390.svg"
+ ALT="$\displaystyle \includegraphics{fluids_10.eps}$">
+</DIV><P></P>
+
+<P>
+If we could somehow measure the weight of that water displaced, we would find it exactly equals the dry weight of the ship:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_11.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 21.68ex; vertical-align: -0.10ex; " SRC="fluiddyn/img391.svg"
+ ALT="$\displaystyle \includegraphics{fluids_11.eps}$">
+</DIV><P></P>
+
+<P>
+Expressed mathematically, Archimedes' Principle states that the buoyant force is the product of the liquid volume and liquid density:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F_{buoyant} = \gamma V
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="fluiddyn/img392.svg"
+ ALT="$\displaystyle F_{buoyant} = \gamma V$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img393.svg"
+ ALT="$F_{b}$"></SPAN> = Buoyant force exerted on object, opposite in direction from gravity
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img14.svg"
+ ALT="$\gamma$"></SPAN> = Weight density of liquid
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img28.svg"
+ ALT="$V$"></SPAN> = Volume of liquid displaced by the submerged object
+
+<P>
+<P>
+
+<P>
+We may use dimensional analysis to confirm correct cancellation of British units in the Archimedes' Principle formula:   <A NAME="1795"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F_{buoyant} = \gamma V
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="fluiddyn/img392.svg"
+ ALT="$\displaystyle F_{buoyant} = \gamma V$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+[\hbox{lb}] = {[\hbox{lb}] \over [\hbox{ft}^3]} [\hbox{ft}^3]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.81ex; vertical-align: -2.42ex; " SRC="fluiddyn/img394.svg"
+ ALT="$\displaystyle [\hbox{lb}] = {[\hbox{lb}] \over [\hbox{ft}^3]} [\hbox{ft}^3]$">
+</DIV><P></P>
+
+<P>
+Notice how the units of measurement for weight density (pounds per cubic foot) combine with the unit of measurement for volume (cubic feet) to cancel the unit of cubic feet and leave us with force measured in pounds.
+
+<P>
+<P>
+Archimedes' Principle also explains why hot-air balloons and helium aircraft float.  By filling a large enclosure with a gas that is less dense than the surrounding air, that enclosure experiences an upward (buoyant) force equal to the difference between the weight of the air displaced and the weight of the gas enclosed.  If this buoyant force equals the weight of the craft and all it holds (cargo, crew, food, fuel, etc.), it will exhibit an apparent weight of zero, which means it will float.  If the buoyant force exceeds the weight of the craft, the resultant force will cause an upward acceleration according to Newton's Second Law of motion (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img83.svg"
+ ALT="$F = ma$"></SPAN>). <A NAME="1801"></A>
+
+<P>
+Submarines also make use of Archimedes' Principle, adjusting their buoyancy by adjusting the amount of water held by <SPAN  CLASS="textit">ballast tanks</SPAN> on the hull.  Positive buoyancy is achieved by &ldquo;blowing&rdquo; water out of the ballast tanks with high-pressure compressed air, so the submarine weighs less (but still occupies the same hull volume and therefore displaces the same amount of water).  Negative buoyancy is achieved by &ldquo;flooding&rdquo; the ballast tanks so the submarine weighs more.  Neutral buoyancy is when the buoyant force exactly equals the weight of the submarine and the remaining water stored in the ballast tanks, so the submarine is able to &ldquo;hover&rdquo; in the water with no vertical acceleration or deceleration.
+
+<P>
+<P>
+An interesting application of Archimedes' Principle is the quantitative determination of an object's density by submersion in a liquid.  For instance, copper is 8.96 times as dense as water, with a mass of 8.96 grams per cubic centimeter (8.96 g/cm<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img19.svg"
+ ALT="$^{3}$"></SPAN>) as opposed to water at 1.00 gram per cubic centimeter (1.00 g/cm<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img19.svg"
+ ALT="$^{3}$"></SPAN>).  If we had a sample of pure, solid copper exactly 1 cubic centimeter in volume, it would have a mass of 8.96 grams.  Completely submerged in pure water, this same sample of solid copper would appear to have a mass of only 7.96 grams, because it would experience a buoyant force equivalent to the mass of water it displaces (1 cubic centimeter = 1 gram of water).  Thus, we see that the difference between the dry mass (mass measured in air) and the wet mass (mass measured when completely submerged in water) is the mass of the water displaced.  Dividing the sample's dry mass by this mass difference (dry <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="fluiddyn/img50.svg"
+ ALT="$-$"></SPAN> wet mass) yields the ratio between the sample's mass and the mass of an equivalent volume of water, which is the very definition of specific gravity.  The same calculation yields a quantity for specific gravity if <SPAN  CLASS="textit">weights</SPAN> instead of <SPAN  CLASS="textit">masses</SPAN> are used, since weight is nothing more than mass multiplied by the acceleration of gravity (<!-- MATH
+ $F_{weight} = mg$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="fluiddyn/img395.svg"
+ ALT="$F_{weight} = mg$"></SPAN>), and the constant <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img7.svg"
+ ALT="$g$"></SPAN> cancels out of both numerator and denominator:  <A NAME="1808"></A> <A NAME="1809"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Specific Gravity} = {m_{dry} \over {m_{dry} - m_{wet}}} = {m_{dry}g \over {m_{dry}g - m_{wet}g}} = {\hbox{Dry weight} \over \hbox{Dry weight} - \hbox{Wet weight}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.60ex; vertical-align: -2.34ex; " SRC="fluiddyn/img396.svg"
+ ALT="$\displaystyle \hbox{Specific Gravity} = {m_{dry} \over {m_{dry} - m_{wet}}} = {...
+... - m_{wet}g}} = {\hbox{Dry weight} \over \hbox{Dry weight} - \hbox{Wet weight}}$">
+</DIV><P></P>
+
+<P>
+<P>
+
+<P>
+Another application of Archimedes' Principle is the use of a <SPAN  CLASS="textit">hydrometer</SPAN> for measuring liquid density.  If a narrow cylinder of precisely known volume and weight (most of the weight concentrated at one end) is immersed in liquid, that cylinder will sink to a level dependent on the liquid's density.  In other words, it will sink to a level sufficient to displace its own weight in fluid.  Calibrated marks made along the cylinder's length may then serve to register liquid density in any unit desired.  <A NAME="1821"></A>
+
+<P>
+A simple style of hydrometer used to measure the density of lead-acid battery electrolyte is shown in this illustration:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_22.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 49.35ex; vertical-align: -0.10ex; " SRC="fluiddyn/img397.svg"
+ ALT="$\displaystyle \includegraphics{fluids_22.eps}$">
+</DIV><P></P>
+
+<P>
+To use this hydrometer, you must squeeze the rubber bulb at the top and dip the open end of the tube into the liquid to be sampled.  Relaxing the rubber bulb will draw a sample of liquid up into the tube where it immerses the float.  When enough liquid has been drawn into the tube to suspend the float so that it neither rests on the bottom of the tapered glass tube or &ldquo;tops out&rdquo; near the bulb, the liquid's density may be read at the air/liquid interface.
+
+<P>
+
+<P>
+A denser electrolyte liquid results in the float rising to a higher level inside the hydrometer tube:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_23.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 57.48ex; vertical-align: -0.10ex; " SRC="fluiddyn/img398.svg"
+ ALT="$\displaystyle \includegraphics{fluids_23.eps}$">
+</DIV><P></P>
+
+<P>
+Like all floating objects, the hydrometer float naturally seeks a condition of neutral buoyancy where the weight of the displaced liquid exactly equals the dry weight of the float.  If the liquid happens to be very dense, the float will not have to sink very far in order to achieve neutral buoyancy; the less dense the liquid, the deeper the float must sink in order to achieve neutral buoyancy.  
+
+<P>
+This means the float's graduated density scale will read less density toward the top and greater density toward the bottom.
+
+<P>
+
+<P>
+The following photograph shows a set of antique hydrometers used to measure the density of beer.  The middle hydrometer bears a label showing its calibration to be in degrees Baumé (heavy):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=6in]{fluids_21.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 83.81ex; vertical-align: -0.10ex; " SRC="fluiddyn/img399.svg"
+ ALT="$\displaystyle \includegraphics[height=6in]{fluids_21.eps}$">
+</DIV><P></P>
+
+<P>
+Liquid density measurement is useful in the alcoholic beverage industry to infer alcohol content.  Since alcohol is less dense than water, a sample containing a greater concentration of alcohol (a greater <SPAN  CLASS="textit">proof</SPAN> rating) will be less dense than a &ldquo;weaker&rdquo; sample, all other factors being equal.
+
+<P>
+
+<P>
+A less sophisticated version of hydrometer uses multiple balls of differing density.  A common application for such a hydrometer is measuring the concentration of &ldquo;antifreeze&rdquo; coolant for automobile engines, comprised of a mixture of ethylene glycol and water.  Ethylene glycol is a denser compound than water, and so a &ldquo;stronger&rdquo; mixture of antifreeze will have a greater bulk density than a &ldquo;weaker&rdquo; density of antifreeze.  This style of hydrometer yields a crude measurement of ethylene glycol concentration based on the number of balls that float:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_24.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 29.81ex; vertical-align: -0.10ex; " SRC="fluiddyn/img400.svg"
+ ALT="$\displaystyle \includegraphics{fluids_24.eps}$">
+</DIV><P></P>
+
+<P>
+A greater number of floating balls represents a &ldquo;stronger&rdquo; concentration of glycol in the coolant.  &ldquo;Weak&rdquo; glycol concentrations represent a greater percentage of water in the coolant, with a correspondingly higher freezing temperature.
+
+<P>
+<P>
+Similar hydrometers are used to measure the concentration of sulfuric acid in lead-acid battery electrolyte, comprised of acid and water.  The more fully charged a lead-acid battery is, the higher the concentration of sulfuric acid in the electrolyte fluid.  The more discharged a lead-acid battery becomes, the less sulfuric acid (and the more water) is present in the electrolyte.  Since sulfuric acid is a denser compound than water, measuring electrolyte density with a hydrometer yields a crude measurement of battery charge state.
+
+<P>
+
+<H2><A ID="SECTION002118000000000000000">
+Gas Laws</A>
+</H2>
+
+<P>
+The <SPAN  CLASS="textit">Ideal Gas Law</SPAN> relates pressure, volume, molecular quantity, and temperature of an ideal gas together in one concise mathematical expression:  <A NAME="1829"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+PV = nRT
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img401.svg"
+ ALT="$\displaystyle PV = nRT$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img26.svg"
+ ALT="$P$"></SPAN> = Absolute pressure (atmospheres)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img28.svg"
+ ALT="$V$"></SPAN> = Volume (liters)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img402.svg"
+ ALT="$n$"></SPAN> = Gas quantity (moles)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img70.svg"
+ ALT="$R$"></SPAN> = Universal<A ID="tex2html72"
+  HREF="footnode.html#foot1830"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">72</SPAN></SUP></A> gas constant (0.0821 L <SPAN CLASS="MATH"><IMG STYLE="height: 1.22ex; vertical-align: -0.10ex; " SRC="fluiddyn/img55.svg"
+ ALT="$\cdot$"></SPAN> atm / mol <SPAN CLASS="MATH"><IMG STYLE="height: 1.22ex; vertical-align: -0.10ex; " SRC="fluiddyn/img55.svg"
+ ALT="$\cdot$"></SPAN> K)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img86.svg"
+ ALT="$T$"></SPAN> = Absolute temperature (K)
+
+<P>
+<P>
+For example, the Ideal Gas Law predicts five moles of helium gas (20 grams worth) at a pressure of 1.4 atmospheres and a temperature of 310 Kelvin will occupy 90.9 liters of volume.
+
+<P>
+<P>
+An alternative form of the Ideal Gas Law uses the number of actual gas molecules (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img404.svg"
+ ALT="$N$"></SPAN>) instead of the number of moles of molecules (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img402.svg"
+ ALT="$n$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+PV = NkT
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img405.svg"
+ ALT="$\displaystyle PV = NkT$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img26.svg"
+ ALT="$P$"></SPAN> = Absolute pressure (Pascals)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img28.svg"
+ ALT="$V$"></SPAN> = Volume (cubic meters)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img404.svg"
+ ALT="$N$"></SPAN> = Gas quantity (molecules)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img63.svg"
+ ALT="$k$"></SPAN> = Boltzmann's constant (1.38 <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="fluiddyn/img39.svg"
+ ALT="$\times$"></SPAN> 10<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img245.svg"
+ ALT="$^{-23}$"></SPAN> J / K)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img86.svg"
+ ALT="$T$"></SPAN> = Absolute temperature (K)
+
+<P>
+<P>
+Interestingly, the Ideal Gas Law holds true for <SPAN  CLASS="textit">any</SPAN> gas.  The theory behind this assumption is that gases are mostly empty space: there is far more volume of empty space <SPAN  CLASS="textit">separating</SPAN> individual gas molecules in a sample than there is space <SPAN  CLASS="textit">occupied</SPAN> by the gas molecules themselves.  This means variations in the sizes of individual gas molecules within any sample is negligible, and therefore the type of gas molecules contained within the sample is irrelevant.  Thus, we may apply either form of the Ideal Gas Law to situations regardless of the type of gas involved.  This is also why the Ideal Gas Law does <SPAN  CLASS="textit">not</SPAN> apply to liquids or to phase changes (e.g. liquids boiling into gas): only in the gaseous phase will you find individual molecules separated by relatively large distances.
+
+<P>
+To modify the previous example, where 5 moles of helium gas occupied 90.9 liters at 1.4 atmospheres and 310 Kelvin, it is also true that 5 moles of <SPAN  CLASS="textit">nitrogen</SPAN> gas will occupy the same volume (90.9 liters) at 1.4 atmospheres and 310 Kelvin.  The only difference will be the <SPAN  CLASS="textit">mass</SPAN> of each gas sample.  5 moles of helium gas (<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img74.svg"
+ ALT="$^{4}$"></SPAN>He) will have a mass of 20 grams, whereas 5 moles of nitrogen gas (<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img406.svg"
+ ALT="$^{14}$"></SPAN>N<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.45ex; " SRC="fluiddyn/img52.svg"
+ ALT="$_{2}$"></SPAN>) will have a mass of 140 grams.
+
+<P>
+Although no gas in real life is ideal, the Ideal Gas Law is a close approximation for conditions of modest gas density, and no phase changes (gas turning into liquid or vice-versa).  You will find this Law appearing again and again in calculations of gas volume and gas flow rates, where engineers and technicians must know the relationship between gas volume, pressure, and temperature.
+
+<P>
+<P>
+
+<P>
+Since the molecular quantity of an enclosed gas is constant, and the universal gas constant <SPAN  CLASS="textit">must</SPAN> be constant, the Ideal Gas Law may be written as a proportionality instead of an equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+PV \propto T
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img407.svg"
+ ALT="$\displaystyle PV \propto T$">
+</DIV><P></P>
+
+<P>
+Several &ldquo;gas laws&rdquo; are derived from this proportionality.  They are as follows: <A NAME="1842"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+PV = \hbox{Constant \hskip 20pt \textbf{Boyle's Law} (assuming constant temperature } T \hbox{)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="fluiddyn/img408.svg"
+ ALT="$\displaystyle PV = \hbox{Constant \hskip 20pt \textbf{Boyle's Law} (assuming constant temperature } T \hbox{)}$">
+</DIV><P></P> <A NAME="1845"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V \propto T \hbox{\hskip 20pt \textbf{Charles's Law} (assuming constant pressure } P \hbox{)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="fluiddyn/img409.svg"
+ ALT="$\displaystyle V \propto T \hbox{\hskip 20pt \textbf{Charles's Law} (assuming constant pressure } P \hbox{)}$">
+</DIV><P></P> <A NAME="1848"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P \propto T \hbox{\hskip 20pt \textbf{Gay-Lussac's Law} (assuming constant volume } V \hbox{)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="fluiddyn/img410.svg"
+ ALT="$\displaystyle P \propto T \hbox{\hskip 20pt \textbf{Gay-Lussac's Law} (assuming constant volume } V \hbox{)}$">
+</DIV><P></P> <A NAME="1851"></A>
+
+<P>
+You will see these laws referenced in explanations where the specified quantity is constant (or very nearly constant).
+
+<P>
+<P>
+For non-ideal conditions, the &ldquo;Real&rdquo; Gas Law formula incorporates a corrected term for the <SPAN  CLASS="textit">compressibility</SPAN> of the gas: <A NAME="1853"></A> <A NAME="1854"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+PV = ZnRT
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img411.svg"
+ ALT="$\displaystyle PV = ZnRT$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img26.svg"
+ ALT="$P$"></SPAN> = Absolute pressure (atmospheres)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img28.svg"
+ ALT="$V$"></SPAN> = Volume (liters)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img412.svg"
+ ALT="$Z$"></SPAN> = Gas compressibility factor (unitless)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img402.svg"
+ ALT="$n$"></SPAN> = Gas quantity (moles)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img70.svg"
+ ALT="$R$"></SPAN> = Universal gas constant (0.0821 L <SPAN CLASS="MATH"><IMG STYLE="height: 1.22ex; vertical-align: -0.10ex; " SRC="fluiddyn/img55.svg"
+ ALT="$\cdot$"></SPAN> atm / mol <SPAN CLASS="MATH"><IMG STYLE="height: 1.22ex; vertical-align: -0.10ex; " SRC="fluiddyn/img55.svg"
+ ALT="$\cdot$"></SPAN> K)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img86.svg"
+ ALT="$T$"></SPAN> = Absolute temperature (K)
+
+<P>
+<P>
+The compressibility factor for an ideal gas is unity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img412.svg"
+ ALT="$Z$"></SPAN> = 1), making the Ideal Gas Law a limiting case of the Real Gas Law.  Real gases have compressibility factors less than unity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.75ex; vertical-align: -0.16ex; " SRC="fluiddyn/img413.svg"
+ ALT="$&lt; 1$"></SPAN>).  What this means is real gases tend to compress more than the Ideal Gas Law would predict (i.e. occupies less volume for a given amount of pressure than predicted, and/or exerts less pressure for a given volume than predicted).  <A NAME="1855"></A>
+
+<P>
+
+<H2><A ID="SECTION002119000000000000000">
+Fluid viscosity</A>
+</H2>
+
+<P>
+<SPAN  CLASS="textit">Viscosity</SPAN> is a measure of a fluid's resistance to shear.  It may be visualized as a sort of internal friction, where individual fluid molecules experience either cohesion or collision while flowing past one another.  The more &ldquo;viscous&rdquo; a fluid is, the &ldquo;thicker&rdquo; it is when stirred.  Clean water is an example of a low-viscosity liquid, while liquid honey at room temperature is an example of a high-viscosity liquid.  <A NAME="1858"></A>
+
+<P>
+There are two different ways to quantify the viscosity of a fluid: <SPAN  CLASS="textit">absolute viscosity</SPAN> and <SPAN  CLASS="textit">kinematic viscosity</SPAN>.  Absolute viscosity (symbolized by the Greek symbol &ldquo;eta&rdquo; <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img191.svg"
+ ALT="$\eta$"></SPAN>, or sometimes by the Greek symbol &ldquo;mu&rdquo; <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img414.svg"
+ ALT="$\mu$"></SPAN>), also known as <SPAN  CLASS="textit">dynamic viscosity</SPAN>, is a direct relation between stress placed on a fluid and its rate of deformation (or shear).  The textbook definition of absolute viscosity is based on a model of two flat plates moving past each other with a film of fluid separating them.  The relationship between the shear stress applied to this fluid film (force divided by area) and the velocity/film thickness ratio is viscosity:  <A NAME="1862"></A> <A NAME="1863"></A> <A NAME="1864"></A> <A NAME="1865"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_09.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 17.81ex; vertical-align: -0.10ex; " SRC="fluiddyn/img415.svg"
+ ALT="$\displaystyle \includegraphics{fluids_09.eps}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\eta = {FL \over Av}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="fluiddyn/img416.svg"
+ ALT="$\displaystyle \eta = {FL \over Av}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img191.svg"
+ ALT="$\eta$"></SPAN> = Absolute viscosity (pascal-seconds), also symbolized as <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img414.svg"
+ ALT="$\mu$"></SPAN> 
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img3.svg"
+ ALT="$F$"></SPAN> = Force (newtons)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img310.svg"
+ ALT="$L$"></SPAN> = Film thickness (meters) &ndash; typically <SPAN  CLASS="textit">much</SPAN> less than 1 meter for any realistic demonstration!
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img254.svg"
+ ALT="$A$"></SPAN> = Plate area (square meters)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img9.svg"
+ ALT="$v$"></SPAN> = Relative velocity (meters per second)
+
+<P>
+<P>
+Another common unit of measurement for absolute viscosity is the <SPAN  CLASS="textit">poise</SPAN>, with 1 poise being equal to 0.1 pascal-seconds.  Both units are too large for common use, and so absolute viscosity is often expressed in <SPAN  CLASS="textit">centipoise</SPAN>.  Water has an absolute viscosity of very nearly 1.000 centipoise.  <A NAME="1871"></A>
+
+<P>
+<P>
+
+<P>
+Kinematic viscosity (symbolized by the Greek letter &ldquo;nu&rdquo; <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img417.svg"
+ ALT="$\nu$"></SPAN>) includes an assessment of the fluid's density in addition to all the above factors.  It is calculated as the quotient of absolute viscosity and mass density:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\nu = {\eta \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.79ex; vertical-align: -2.14ex; " SRC="fluiddyn/img418.svg"
+ ALT="$\displaystyle \nu = {\eta \over \rho}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img417.svg"
+ ALT="$\nu$"></SPAN> = Kinematic viscosity (stokes)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img191.svg"
+ ALT="$\eta$"></SPAN> = Absolute viscosity (poise)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN> = Mass density (grams per cubic centimeter)
+
+<P>
+<P>
+As with the unit of poise, the unit of stokes is too large for convenient use, so kinematic viscosities are often expressed in units of <SPAN  CLASS="textit">centistokes</SPAN>.  Water has a kinematic viscosity of very nearly 1.000 centistokes.  <A NAME="1874"></A>
+
+<P>
+<P>
+The mechanism of viscosity in liquids is inter-molecular <SPAN  CLASS="textit">cohesion</SPAN>.  Since this cohesive force is overcome with increasing temperature, most liquids tend to become &ldquo;thinner&rdquo; (less viscous) as they heat up.  The mechanism of viscosity in gases, however, is inter-molecular <SPAN  CLASS="textit">collisions</SPAN>.  Since these collisions increase in frequency and intensity with increasing temperature, gases tend to become &ldquo;thicker&rdquo; (more viscous) as they heat up. <A NAME="1877"></A>
+
+<P>
+As a ratio of stress to strain (applied force to yielding velocity), viscosity is often constant for a given fluid at a given temperature.  Interesting exceptions exist, though.  Fluids whose viscosities change with applied stress, and/or over time with all other factors constant, are referred to as <SPAN  CLASS="textit">non-Newtonian fluids</SPAN>.  A simple example of a non-Newtonian fluid is cornstarch mixed with water, which &ldquo;solidifies&rdquo; under increasing stress and then returns to a liquid state when the stress is removed.  <A NAME="1879"></A>
+
+<P>
+
+<H2><A ID="SECTION0021110000000000000000">
+Reynolds number</A>
+</H2>
+
+<P>
+<SPAN  CLASS="textit">Viscous flow</SPAN> is a condition where friction forces dominate the behavior of a moving fluid, typically in cases where viscosity (internal fluid friction) is great.  <SPAN  CLASS="textit">Inviscid flow</SPAN>, by contrast, is a condition where friction within a moving fluid is negligible and the fluid moves freely.  The <SPAN  CLASS="textit">Reynolds number</SPAN> of a fluid is a dimensionless quantity expressing the ratio between a moving fluid's momentum and its viscosity, and is a helpful gauge in predicting how a fluid stream will move.  <A NAME="1884"></A> <A NAME="1885"></A> <A NAME="1886"></A>
+
+<P>
+<A ID="Reynolds_number"></A>
+<P>
+A couple of formulae for calculating Reynolds number of a flow are shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = {{D \overline{v} \rho} \over \mu}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.38ex; vertical-align: -2.14ex; " SRC="fluiddyn/img419.svg"
+ ALT="$\displaystyle \hbox{Re} = {{D \overline{v} \rho} \over \mu}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+Re = Reynolds number (unitless)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img420.svg"
+ ALT="$D$"></SPAN> = Diameter of pipe, (meters)
+
+<P>
+<!-- MATH
+ $\overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.65ex; vertical-align: -0.10ex; " SRC="fluiddyn/img243.svg"
+ ALT="$\overline{v}$"></SPAN> = Average velocity of fluid (meters per second)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN> = Mass density of fluid (kilograms per cubic meter)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img414.svg"
+ ALT="$\mu$"></SPAN> = Absolute viscosity of fluid (pascal-seconds)
+
+<P>
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = {{(3160) G_f Q} \over {D \mu}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.53ex; vertical-align: -2.14ex; " SRC="fluiddyn/img421.svg"
+ ALT="$\displaystyle \hbox{Re} = {{(3160) G_f Q} \over {D \mu}}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+Re = Reynolds number (unitless)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="fluiddyn/img422.svg"
+ ALT="$G_f$"></SPAN> = Specific gravity of liquid (unitless)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img273.svg"
+ ALT="$Q$"></SPAN> = Flow rate (gallons per minute)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img420.svg"
+ ALT="$D$"></SPAN> = Diameter of pipe (inches)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img414.svg"
+ ALT="$\mu$"></SPAN> = Absolute viscosity of fluid (centipoise)
+
+<P>
+3160 = Conversion factor for British units
+
+<P>
+<P>
+
+<P>
+The first formula, with all metric units, is the textbook &ldquo;definition&rdquo; for Reynolds number.  If you take the time to dimensionally analyze this formula, you will find that all units do indeed cancel to leave the Reynolds number unitless:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = {{D \overline{v} \rho} \over \mu}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.38ex; vertical-align: -2.14ex; " SRC="fluiddyn/img419.svg"
+ ALT="$\displaystyle \hbox{Re} = {{D \overline{v} \rho} \over \mu}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = {{[\hbox{m}] \left[{\hbox{m} \over \hbox{s}}\right] \left[{\hbox{kg} \over \hbox{m}^3}\right] \over {[\hbox{Pa} \cdot \hbox{s}]}}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.54ex; vertical-align: -2.27ex; " SRC="fluiddyn/img423.svg"
+ ALT="$\displaystyle \hbox{Re} = {{[\hbox{m}] \left[{\hbox{m} \over \hbox{s}}\right] \left[{\hbox{kg} \over \hbox{m}^3}\right] \over {[\hbox{Pa} \cdot \hbox{s}]}}}$">
+</DIV><P></P>
+
+<P>
+Recalling that the definition of a &ldquo;pascal&rdquo; is one Newton of force per square meter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = {\left[{\hbox{kg} \over {\hbox{m} \cdot \hbox{s}}}\right] \over \left[{\hbox{N} \cdot \hbox{s} \over \hbox{m}^2}\right]}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.28ex; vertical-align: -4.02ex; " SRC="fluiddyn/img424.svg"
+ ALT="$\displaystyle \hbox{Re} = {\left[{\hbox{kg} \over {\hbox{m} \cdot \hbox{s}}}\right] \over \left[{\hbox{N} \cdot \hbox{s} \over \hbox{m}^2}\right]}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = {\left[{\hbox{kg} \over {\hbox{m} \cdot \hbox{s}}}\right] \cdot \left[{\hbox{m}^2 \over \hbox{N} \cdot \hbox{s}}\right]}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.79ex; vertical-align: -2.30ex; " SRC="fluiddyn/img425.svg"
+ ALT="$\displaystyle \hbox{Re} = {\left[{\hbox{kg} \over {\hbox{m} \cdot \hbox{s}}}\right] \cdot \left[{\hbox{m}^2 \over \hbox{N} \cdot \hbox{s}}\right]}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = \left[{{\hbox{kg} \cdot \hbox{m}} \over {\hbox{N} \cdot \hbox{s}^2}}\right]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="fluiddyn/img426.svg"
+ ALT="$\displaystyle \hbox{Re} = \left[{{\hbox{kg} \cdot \hbox{m}} \over {\hbox{N} \cdot \hbox{s}^2}}\right]$">
+</DIV><P></P>
+
+<P>
+Recalling that the definition of a &ldquo;newton&rdquo; is one kilogram times meters per second squared (from Newton's Second Law equation <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img83.svg"
+ ALT="$F = ma$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = \left[{{\hbox{kg} \cdot \hbox{m} \cdot \hbox{s}^2} \over {\hbox{kg} \cdot \hbox{m} \cdot \hbox{s}^2}}\right]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.79ex; vertical-align: -2.30ex; " SRC="fluiddyn/img427.svg"
+ ALT="$\displaystyle \hbox{Re} = \left[{{\hbox{kg} \cdot \hbox{m} \cdot \hbox{s}^2} \over {\hbox{kg} \cdot \hbox{m} \cdot \hbox{s}^2}}\right]$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = \hbox{\textit{unitless}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img428.svg"
+ ALT="$\displaystyle \hbox{Re} = \hbox{\textit{unitless}}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+The second formula given for calculating Reynolds number includes a conversion constant of 3160, which bears the unwieldy unit of &ldquo;inches-centipoise-minutes per gallon&rdquo; in order that the units of all variables (flow in gallons per minute, pipe diameter in inches, and viscosity in centipoise) may cancel.  Note that specific gravity (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="fluiddyn/img422.svg"
+ ALT="$G_f$"></SPAN>) is unitless and therefore does not appear in this dimensional analysis:  <A NAME="1932"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = {{(3160) G_f Q} \over {D \mu}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.53ex; vertical-align: -2.14ex; " SRC="fluiddyn/img421.svg"
+ ALT="$\displaystyle \hbox{Re} = {{(3160) G_f Q} \over {D \mu}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = { {{\left[{\hbox{in} \cdot \hbox{cp} \cdot \hbox{min}} \over \hbox{gal} \right]} \left[{\hbox{gal} \over \hbox{min}}\right]} \over {[\hbox{in} \cdot \hbox{cp}]}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.65ex; vertical-align: -2.27ex; " SRC="fluiddyn/img429.svg"
+ ALT="$\displaystyle \hbox{Re} = { {{\left[{\hbox{in} \cdot \hbox{cp} \cdot \hbox{min}...
+...left[{\hbox{gal} \over \hbox{min}}\right]} \over {[\hbox{in} \cdot \hbox{cp}]}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Re} = \hbox{\textit{unitless}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img428.svg"
+ ALT="$\displaystyle \hbox{Re} = \hbox{\textit{unitless}}$">
+</DIV><P></P>
+
+<P>
+You will often find this formula, and the conversion constant of 3160, shown without units at all.  Its sole purpose is to make the calculation of Reynolds number easy when working with British units customary in the United States.
+
+<P>
+<P>
+
+<P>
+The Reynolds number of a fluid stream may be used to qualitatively predict whether the flow regime will be <SPAN  CLASS="textit">laminar</SPAN> or <SPAN  CLASS="textit">turbulent</SPAN>.  Low Reynolds number values predict laminar (viscous) flow, where fluid molecules move in straight &ldquo;stream-line&rdquo; paths, and fluid velocity near the center of the pipe is substantially greater than near the pipe walls:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_04.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 18.00ex; vertical-align: -0.10ex; " SRC="fluiddyn/img430.svg"
+ ALT="$\displaystyle \includegraphics{fluids_04.eps}$">
+</DIV><P></P>
+
+<P>
+High Reynolds number values predict turbulent (inviscid) flow, where individual molecule motion is chaotic on a microscopic scale, and fluid velocities across the face of the flow profile are similar:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_05.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 18.00ex; vertical-align: -0.10ex; " SRC="fluiddyn/img431.svg"
+ ALT="$\displaystyle \includegraphics{fluids_05.eps}$">
+</DIV><P></P>
+
+<P>
+It should be emphasized that this turbulence is microscopic in nature, and occurs even when the fluid flows through a piping system free of obstructions, rough surfaces, and/or sudden directional changes.  At high Reynolds number values, turbulence simply <SPAN  CLASS="textit">happens</SPAN>.
+
+<P>
+Other forms of turbulence, such as <SPAN  CLASS="textit">eddies</SPAN> and <SPAN  CLASS="textit">swirl</SPAN> are possible at high Reynolds numbers, but are caused by disturbances in the flow stream such as pipe elbows, tees, control valves, thermowells, and other irregular surfaces.  The &ldquo;micro-turbulence&rdquo; naturally occurring at high Reynolds numbers will actually randomize such macroscopic (large-scale) motions if the fluid subsequently passes through a long enough length of straight pipe.  
+
+<P>
+Turbulent flow is actually the desired condition for many industrial processes.  When different fluids must be mixed together, for example, laminar flow is a bad thing: only turbulent flow will guarantee thorough mixing.  The same is true for convective heat exchange: in order for two fluids to effectively exchange heat energy within a heat exchanger, the flow must be turbulent so that molecules from all portions of the flow stream will come into contact with the exchanger walls.  Many types of flowmeters require a condition called <SPAN  CLASS="textit">fully-developed turbulent flow</SPAN>, where the flow profile is relatively flat and the only turbulence is that existing on a microscopic scale.  Large-scale disturbances in the flow profile such as eddies and swirl tend to negatively affect the measurement performance of many flowmeter designs.  This is why such flowmeters usually require long lengths of &ldquo;straight-run&rdquo; piping both upstream and downstream: to give micro-turbulence the opportunity to randomize any large-scale motions and homogenize the velocity profile.  <A NAME="1955"></A>
+
+<P>
+
+<P>
+A generally accepted rule-of-thumb is that Reynolds number values less than 2000 will probably be laminar, while values in excess of 10000 will probably be turbulent.  There is no definite threshold value for all fluids and piping configurations, though.  To illustrate, I will share with you some examples of Reynolds number thresholds for laminar versus turbulent flows given by various technical sources:  <A NAME="1956"></A>  <A NAME="1957"></A>  <A NAME="1958"></A>
+
+<P>
+<P>
+
+<SPAN ID="txt1959">Chapter 2.8: Laminar Flowmeters</SPAN> of the <SPAN  CLASS="textit">Instrument Engineers' Handbook, Process Measurement and Analysis, Third Edition</SPAN> (pg. 105 &ndash; authors: R. Siev, J.B. Arant, B.G. Lipták) define Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img432.svg"
+ ALT="$&lt;$"></SPAN> 2000 as &ldquo;laminar&rdquo; flow, Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img433.svg"
+ ALT="$&gt;$"></SPAN> 10000 as &ldquo;fully developed turbulent&rdquo; flow, and any Reynolds number values between 2000 and 10000 as &ldquo;transitional&rdquo; flow.
+
+<P>
+<P>
+
+<SPAN ID="txt1961">Chapter 2: Fluid Properties &ndash; Part II</SPAN> of the <SPAN  CLASS="textit">ISA Industrial Measurement Series &ndash; Flow</SPAN> (pg. 11) define &ldquo;laminar&rdquo; flow as Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img432.svg"
+ ALT="$&lt;$"></SPAN> 2000, &ldquo;turbulent&rdquo; flow as Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img433.svg"
+ ALT="$&gt;$"></SPAN> 4000, and any Reynolds values in between 2000 and 4000 as &ldquo;transitional&rdquo; flow.
+
+<P>
+<P>
+The <SPAN ID="txt1963">Laminar Flow in a Pipe</SPAN> section in the <SPAN  CLASS="textit">Standard Handbook of Engineering Calculations</SPAN> (pg. 1-202) defines &ldquo;laminar&rdquo; flow as Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img432.svg"
+ ALT="$&lt;$"></SPAN> 2100, and &ldquo;turbulent&rdquo; flow as Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img433.svg"
+ ALT="$&gt;$"></SPAN> 3000.  In a later section of that <SPAN  CLASS="textit">same book</SPAN> (<SPAN ID="txt1966">Piping and Fluid Flow</SPAN> &ndash; page 3-384), &ldquo;laminar&rdquo; flow is defined as Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img432.svg"
+ ALT="$&lt;$"></SPAN> 1200 and &ldquo;turbulent&rdquo; flow as Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img433.svg"
+ ALT="$&gt;$"></SPAN> 2500.
+
+<P>
+<P>
+Douglas Giancoli, in his physics textbook <SPAN  CLASS="textit">Physics</SPAN> (third edition, pg. 11), defines &ldquo;laminar&rdquo; flow as Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img432.svg"
+ ALT="$&lt;$"></SPAN> 2000 and &ldquo;turbulent&rdquo; flow as Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img433.svg"
+ ALT="$&gt;$"></SPAN> 2000.
+
+<P>
+<P>
+Finally, a source on the Internet (<SPAN  CLASS="texttt">http://flow.netfirms.com/reynolds/theory.htm</SPAN>) attempts to define the threshold separating laminar from turbulent flow to an unprecedented degree of precision: Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img432.svg"
+ ALT="$&lt;$"></SPAN> 2320 is supposedly the defining point of &ldquo;laminar&rdquo; flow, while Re <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="fluiddyn/img433.svg"
+ ALT="$&gt;$"></SPAN> 2320 is supposedly marks the onset of &ldquo;turbulent&rdquo; flow.
+
+<P>
+<P>
+Clearly, Reynolds number alone is insufficient for consistent prediction of laminar or turbulent flow, otherwise we would find far greater consistency in the reported Reynolds number values for each regime.  Pipe roughness, swirl, and other factors influence flow regime, making Reynolds number an approximate indicator only.  It should be noted that laminar flow may be sustained at Reynolds numbers significantly in excess of 10000 under very special circumstances.  For example, in certain coiled capillary tubes, laminar flow may be sustained all the way up to Re = 15000, due to a phenomenon known as the <SPAN  CLASS="textit">Dean effect</SPAN>!  <A NAME="1970"></A>
+
+<P>
+
+<H2><A ID="SECTION0021111000000000000000">
+Law of Continuity</A>
+</H2>
+
+<P>
+Any fluid moving through a pipe obeys the Law of Continuity, which states that the product of average velocity (<!-- MATH
+ $\overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.65ex; vertical-align: -0.10ex; " SRC="fluiddyn/img243.svg"
+ ALT="$\overline{v}$"></SPAN>), pipe cross-sectional area (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img254.svg"
+ ALT="$A$"></SPAN>), and fluid density (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN>) for a given flow stream must remain constant:
+
+<P>
+<A ID="Law_of_Continuity"></A>
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\rho_1 A_1 \overline{v_1} = \rho_2 A_2 \overline{v_2} = \cdots \rho_n A_n \overline{v_n}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img434.svg"
+ ALT="$\displaystyle \rho_1 A_1 \overline{v_1} = \rho_2 A_2 \overline{v_2} = \cdots \rho_n A_n \overline{v_n}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 20.52ex; vertical-align: -0.10ex; " SRC="fluiddyn/img435.svg"
+ ALT="$\displaystyle \includegraphics{fluids_01.eps}$">
+</DIV><P></P>
+
+<P>
+Fluid continuity is an expression of a more fundamental law of physics: the <SPAN  CLASS="textit">Conservation of Mass</SPAN>.  If we assign appropriate units of measurement to the variables in the continuity equation, we see that the units cancel in such a way that only units of mass per unit time remain:  <A NAME="1979"></A> <A NAME="1980"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\rho A \overline{v} = \left[\hbox{kg} \over \hbox{m}^3\right] \left[\hbox{m}^2 \over 1 \right] \left[\hbox{m} \over \hbox{s} \right] = \left[\hbox{kg} \over \hbox{s} \right]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.79ex; vertical-align: -2.30ex; " SRC="fluiddyn/img436.svg"
+ ALT="$\displaystyle \rho A \overline{v} = \left[\hbox{kg} \over \hbox{m}^3\right] \le...
+... \left[\hbox{m} \over \hbox{s} \right] = \left[\hbox{kg} \over \hbox{s} \right]$">
+</DIV><P></P>
+
+<P>
+This means we may define the product <!-- MATH
+ $\rho A \overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img437.svg"
+ ALT="$\rho A \overline{v}$"></SPAN> as an expression of <SPAN  CLASS="textit">mass flow rate</SPAN>, or <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img85.svg"
+ ALT="$W$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = \rho A \overline{v}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img438.svg"
+ ALT="$\displaystyle W = \rho A \overline{v}$">
+</DIV><P></P>
+
+<P>
+In order for the product <!-- MATH
+ $\rho A \overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img437.svg"
+ ALT="$\rho A \overline{v}$"></SPAN> to differ between any two points in a pipe, mass would have to mysteriously appear and disappear.  So long as the flow is continuous (not pulsing), and the pipe does not leak, it is impossible to have different rates of mass flow at different points along the flow path without violating the Law of Mass Conservation.  The continuity principle for fluid through a pipe is analogous to the principle of current being the same everywhere in a series-connected electric circuit, and for equivalently the same reason<A ID="tex2html73"
+  HREF="footnode.html#foot2472"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">73</SPAN></SUP></A>.  <A NAME="1994"></A>
+
+<P>
+<P>
+
+<P>
+We refer to a flowing fluid as <SPAN  CLASS="textit">incompressible</SPAN> if its density does not substantially change with modest changes in pressure<A ID="tex2html74"
+  HREF="footnode.html#foot2473"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">74</SPAN></SUP></A>.  For this limiting case, <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN> is constant and the continuity equation simplifies to the following form:  <A NAME="1998"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A_1 \overline{v_1} = A_2 \overline{v_2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img439.svg"
+ ALT="$\displaystyle A_1 \overline{v_1} = A_2 \overline{v_2}$">
+</DIV><P></P>
+
+<P>
+Examining this equation in light of dimensional analysis, we see that the product <!-- MATH
+ $A \overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img440.svg"
+ ALT="$A \overline{v}$"></SPAN> is also an expression of flow rate:  <A NAME="2002"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A \overline{v} = \left[\hbox{m}^2 \over 1 \right] \left[\hbox{m} \over \hbox{s} \right] = \left[\hbox{m}^3 \over \hbox{s} \right]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.79ex; vertical-align: -2.30ex; " SRC="fluiddyn/img441.svg"
+ ALT="$\displaystyle A \overline{v} = \left[\hbox{m}^2 \over 1 \right] \left[\hbox{m} \over \hbox{s} \right] = \left[\hbox{m}^3 \over \hbox{s} \right]$">
+</DIV><P></P>
+
+<P>
+Cubic meters per second is an expression of <SPAN  CLASS="textit">volumetric flow rate</SPAN>, often symbolized by the variable <SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img273.svg"
+ ALT="$Q$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = A \overline{v}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img442.svg"
+ ALT="$\displaystyle Q = A \overline{v}$">
+</DIV><P></P>
+
+<P>
+The practical implication of this principle is that fluid velocity is inversely proportional to the cross-sectional area of a pipe.  That is, fluid slows down when the pipe's diameter expands, and vice-versa.  We readily see this principle manifest in the natural world: rivers run slowest where they are deep and wide, and run fastest where they are shallow and narrow.  
+
+<P>
+More specifically, we may say that the average velocity of a fluid through a pipe varies inversely with the square of the diameter, since cross-sectional area is proportional to the square of the pipe diameter.  For example, if fluid flows at a velocity of 2 feet per second through a 12-inch pipe, and that pipe extends to a narrower section only 6 inches (half the diameter of the wide section), the velocity at the narrower section will be <SPAN  CLASS="textit">four times</SPAN> as great (8 feet per second), since the area of that skinnier section is one-quarter the area of the wider section.
+
+<P>
+
+<P>
+For example, consider a pipe with an inside diameter of 8 inches (2/3 of a foot), passing a liquid flow of 5 cubic feet per minute.  The average velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img9.svg"
+ ALT="$v$"></SPAN>) of this fluid may be calculated as follows:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = A \overline{v}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img442.svg"
+ ALT="$\displaystyle Q = A \overline{v}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\overline{v} = {Q \over A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="fluiddyn/img443.svg"
+ ALT="$\displaystyle \overline{v} = {Q \over A}$">
+</DIV><P></P>
+
+<P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img254.svg"
+ ALT="$A$"></SPAN> in units of square feet:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A = \pi r^2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.14ex; vertical-align: -0.10ex; " SRC="fluiddyn/img444.svg"
+ ALT="$\displaystyle A = \pi r^2$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A = \pi \left({1 \over 3} \hbox{ ft}\right)^2 = {\pi \over 9} \hbox{ ft}^2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 6.13ex; vertical-align: -2.30ex; " SRC="fluiddyn/img445.svg"
+ ALT="$\displaystyle A = \pi \left({1 \over 3} \hbox{ ft}\right)^2 = {\pi \over 9} \hbox{ ft}^2$">
+</DIV><P></P>
+
+<P>
+Now, solving for average velocity <!-- MATH
+ $\overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.65ex; vertical-align: -0.10ex; " SRC="fluiddyn/img243.svg"
+ ALT="$\overline{v}$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\overline{v} = {Q \over A} = {{5 \hbox{ ft}^3 \over \hbox{min}} \over {{\pi \over 9} \hbox{ ft}^2}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.51ex; vertical-align: -2.64ex; " SRC="fluiddyn/img446.svg"
+ ALT="$\displaystyle \overline{v} = {Q \over A} = {{5 \hbox{ ft}^3 \over \hbox{min}} \over {{\pi \over 9} \hbox{ ft}^2}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\overline{v} = \left({5 \hbox{ ft}^3 \over \hbox{min}}\right) \left({9 \over {\pi \hbox{ ft}^2}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.95ex; vertical-align: -2.30ex; " SRC="fluiddyn/img447.svg"
+ ALT="$\displaystyle \overline{v} = \left({5 \hbox{ ft}^3 \over \hbox{min}}\right) \left({9 \over {\pi \hbox{ ft}^2}}\right)$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\overline{v} = {45 \hbox{ ft} \over \pi \hbox{ min}} = 14.32 {\hbox{ft} \over \hbox{min}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="fluiddyn/img448.svg"
+ ALT="$\displaystyle \overline{v} = {45 \hbox{ ft} \over \pi \hbox{ min}} = 14.32 {\hbox{ft} \over \hbox{min}}$">
+</DIV><P></P>
+
+<P>
+Thus, the average fluid velocity inside an 8-inch pipe passing a volumetric flow rate of 5 cubic feet per minute is 14.32 feet per minute.
+
+<P>
+
+<H2><A ID="SECTION0021112000000000000000">
+Viscous flow</A>
+</H2>
+
+<P>
+The pressure dropped by a slow-moving, viscous fluid through a pipe is described by the <SPAN  CLASS="textit">Hagen-Poiseuille equation</SPAN>.  This equation applies only for conditions of low Reynolds number; i.e. when viscous forces are the dominant restraint to fluid motion through the pipe, and turbulence is nonexistent:  <A NAME="2037"></A> <A NAME="2038"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k \left({{\Delta P D^4} \over {\mu L}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.79ex; vertical-align: -2.30ex; " SRC="fluiddyn/img449.svg"
+ ALT="$\displaystyle Q = k \left({{\Delta P D^4} \over {\mu L}}\right)$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img273.svg"
+ ALT="$Q$"></SPAN> = Flow rate (gallons per minute)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img63.svg"
+ ALT="$k$"></SPAN> = Unit conversion factor = 7.86 <!-- MATH
+ $\times 10^5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.29ex; " SRC="fluiddyn/img450.svg"
+ ALT="$\times 10^5$"></SPAN>
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img451.svg"
+ ALT="$\Delta P$"></SPAN> = Pressure drop (inches of water column)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img420.svg"
+ ALT="$D$"></SPAN> = Pipe diameter (inches)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img414.svg"
+ ALT="$\mu$"></SPAN> = Liquid viscosity (centipoise) &ndash; this is a temperature-dependent variable!
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img310.svg"
+ ALT="$L$"></SPAN> = Length of pipe section (inches)
+
+<P>
+<P>
+
+<H2><A ID="SECTION0021113000000000000000">
+Bernoulli's equation</A>
+</H2>
+
+<P>
+<A ID="Bernoulli_s_equation"></A>
+<P>
+<SPAN  CLASS="textit">Bernoulli's equation</SPAN> is an expression of the <SPAN  CLASS="textit">Law of Energy Conservation</SPAN> for an inviscid (frictionless) fluid stream, named after Daniel Bernoulli<A ID="tex2html75"
+  HREF="footnode.html#foot2481"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">75</SPAN></SUP></A>.  It states that the sum total energy at any point in a passive fluid stream (i.e. no pumps or other energy-imparting machines in the flow path, nor any energy-dissipating elements) must be constant.  Two versions of the equation are shown here:  <A NAME="2047"></A>  <A NAME="2048"></A>  <A NAME="2049"></A>  <A NAME="2050"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+z_1 \rho g + {v_1^2 \rho \over 2} + P_1 = z_2 \rho g + {v_2^2 \rho \over 2} + P_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -1.69ex; " SRC="fluiddyn/img452.svg"
+ ALT="$\displaystyle z_1 \rho g + {v_1^2 \rho \over 2} + P_1 = z_2 \rho g + {v_2^2 \rho \over 2} + P_2$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+z_1 + {v_1^2 \over {2 g}} + {P_1 \over \gamma} = z_2 + {v_2^2 \over {2 g}} + {P_2 \over \gamma}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.63ex; vertical-align: -2.14ex; " SRC="fluiddyn/img453.svg"
+ ALT="$\displaystyle z_1 + {v_1^2 \over {2 g}} + {P_1 \over \gamma} = z_2 + {v_2^2 \over {2 g}} + {P_2 \over \gamma}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img454.svg"
+ ALT="$z$"></SPAN> = Height of fluid (from a common reference point, usually ground level)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN> = Mass density of fluid
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img14.svg"
+ ALT="$\gamma$"></SPAN> = Weight density of fluid (<!-- MATH
+ $\gamma = \rho g$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img455.svg"
+ ALT="$\gamma = \rho g$"></SPAN>)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img7.svg"
+ ALT="$g$"></SPAN> = Acceleration of gravity
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img9.svg"
+ ALT="$v$"></SPAN> = Velocity of fluid
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img26.svg"
+ ALT="$P$"></SPAN> = Pressure of fluid
+
+<P>
+<P>
+Each of the three terms in Bernoulli's equation is an expression of a different kind of energy, commonly referred to as <SPAN  CLASS="textit">head</SPAN>: <A NAME="2058"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+z \rho g \hbox{\hskip 20pt Elevation head}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="fluiddyn/img456.svg"
+ ALT="$\displaystyle z \rho g \hbox{\hskip 20pt Elevation head}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{v^2 \rho \over 2} \hbox{\hskip 20pt Velocity head}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -1.69ex; " SRC="fluiddyn/img457.svg"
+ ALT="$\displaystyle {v^2 \rho \over 2} \hbox{\hskip 20pt Velocity head}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P \hbox{\hskip 20pt Pressure head}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img458.svg"
+ ALT="$\displaystyle P \hbox{\hskip 20pt Pressure head}$">
+</DIV><P></P>
+
+<P>
+Elevation and Pressure heads are potential forms of energy, while Velocity head is a kinetic form of energy.  Note how the elevation and velocity head terms so closely resemble the formulae for potential and kinetic energy of solid objects:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_p = mgh \hbox{\hskip 20pt Potential energy formula}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="fluiddyn/img459.svg"
+ ALT="$\displaystyle E_p = mgh \hbox{\hskip 20pt Potential energy formula}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_k = {1 \over 2}mv^2 \hbox{\hskip 20pt Kinetic energy formula}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="fluiddyn/img460.svg"
+ ALT="$\displaystyle E_k = {1 \over 2}mv^2 \hbox{\hskip 20pt Kinetic energy formula}$">
+</DIV><P></P>
+
+<P>
+The only real differences between the solid-object and fluid formulae for energies is the use of mass <SPAN  CLASS="textit">density</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN>) for fluids instead of mass (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img2.svg"
+ ALT="$m$"></SPAN>) for solids, and the arbitrary use of the variable <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img454.svg"
+ ALT="$z$"></SPAN> for height instead of <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="fluiddyn/img71.svg"
+ ALT="$h$"></SPAN>.  In essence, the elevation and velocity head terms within Bernoulli's equation come from the assumption of individual fluid molecules behaving as miniscule solid masses.
+
+<P>
+<P>
+It is very important to maintain consistent units of measurement when using Bernoulli's equation!  Each of the three energy terms (elevation, velocity, and pressure) <SPAN  CLASS="textit">must</SPAN> possess the exact same units if they are to add appropriately<A ID="tex2html76"
+  HREF="footnode.html#foot2484"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">76</SPAN></SUP></A>.  Here is an example of dimensional analysis applied to the first version of Bernoulli's equation (using British units):  <A NAME="2069"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+z \rho g + {v^2 \rho \over 2} + P
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -1.69ex; " SRC="fluiddyn/img461.svg"
+ ALT="$\displaystyle z \rho g + {v^2 \rho \over 2} + P$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+[\hbox{ft}] \left[\hbox{slug} \over \hbox{ft}^3\right] \left[\hbox{ft} \over \hbox{s}^2 \right] +  \left[\hbox{ft} \over \hbox{s} \right]^2 \left[\hbox{slug} \over \hbox{ft}^3\right] + \left[\hbox{lb} \over  \hbox{ft}^2\right] = \left[\hbox{slug} \over \hbox{ft} \cdot \hbox{s}^2 \right]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 6.13ex; vertical-align: -2.30ex; " SRC="fluiddyn/img462.svg"
+ ALT="$\displaystyle [\hbox{ft}] \left[\hbox{slug} \over \hbox{ft}^3\right] \left[\hbo...
+...\hbox{ft}^2\right] = \left[\hbox{slug} \over \hbox{ft} \cdot \hbox{s}^2 \right]$">
+</DIV><P></P>
+
+<P>
+As you can see, both the first and second terms of the equation (elevation and velocity heads) bear the same unit of slugs per foot-second squared after all the &ldquo;feet&rdquo; are canceled.  The third term (pressure head) does not appear as though its units agree with the other two terms, until you realize that the unit definition of a &ldquo;pound&rdquo; is a slug of mass multiplied by the acceleration of gravity in feet per second squared, following Newton's Second Law of motion (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img83.svg"
+ ALT="$F = ma$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+[\hbox{lb}] = [\hbox{slug}] \left[\hbox{ft} \over \hbox{s}^2\right]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="fluiddyn/img463.svg"
+ ALT="$\displaystyle [\hbox{lb}] = [\hbox{slug}] \left[\hbox{ft} \over \hbox{s}^2\right]$">
+</DIV><P></P>
+
+<P>
+Once we make this substitution into the pressure head term, the units are revealed to be the same as the other two terms, slugs per foot-second squared:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left[\hbox{lb} \over  \hbox{ft}^2\right] = \left[\hbox{slug} \left[\hbox{ft} \over \hbox{s}^2\right] \over  \hbox{ft}^2\right] = \left[\hbox{slug} \over \hbox{ft} \cdot \hbox{s}^2 \right]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 8.85ex; vertical-align: -3.70ex; " SRC="fluiddyn/img464.svg"
+ ALT="$\displaystyle \left[\hbox{lb} \over \hbox{ft}^2\right] = \left[\hbox{slug} \lef...
+...\hbox{ft}^2\right] = \left[\hbox{slug} \over \hbox{ft} \cdot \hbox{s}^2 \right]$">
+</DIV><P></P>
+
+<P>
+In order for our British units to be consistent here, we must use <SPAN  CLASS="textit">feet</SPAN> for elevation, <SPAN  CLASS="textit">slugs</SPAN> per cubic <SPAN  CLASS="textit">foot</SPAN> for mass density, <SPAN  CLASS="textit">feet</SPAN> per <SPAN  CLASS="textit">second</SPAN> squared for acceleration, <SPAN  CLASS="textit">feet</SPAN> per <SPAN  CLASS="textit">second</SPAN> for velocity, and <SPAN  CLASS="textit">pounds</SPAN> per square <SPAN  CLASS="textit">foot</SPAN> for pressure.  If one wished to use the more common pressure unit of PSI (pounds per square inch) with Bernoulli's equation instead of PSF (pounds per square foot), all the other units would have to change accordingly: elevation in <SPAN  CLASS="textit">inches</SPAN>, mass density in slugs per cubic <SPAN  CLASS="textit">inch</SPAN>, acceleration in <SPAN  CLASS="textit">inches</SPAN> per second squared, and velocity in <SPAN  CLASS="textit">inches</SPAN> per second. 
+
+<P>
+Just for fun, we can try dimensional analysis on the second version of Bernoulli's equation, this time using metric units:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+z + {v^2 \over {2 g}} + {P \over \gamma}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.63ex; vertical-align: -2.14ex; " SRC="fluiddyn/img465.svg"
+ ALT="$\displaystyle z + {v^2 \over {2 g}} + {P \over \gamma}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+[\hbox{m}] + \left[\left[\hbox{m} \over \hbox{s}\right]^2 \over \left[\hbox{m} \over \hbox{s}^2\right]\right] + \left[\left[\hbox{N} \over \hbox{m}^2 \right] \over \left[\hbox{N} \over \hbox{m}^3\right] \right] = [\hbox{m}]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.17ex; vertical-align: -4.02ex; " SRC="fluiddyn/img466.svg"
+ ALT="$\displaystyle [\hbox{m}] + \left[\left[\hbox{m} \over \hbox{s}\right]^2 \over \...
+...{m}^2 \right] \over \left[\hbox{N} \over \hbox{m}^3\right] \right] = [\hbox{m}]$">
+</DIV><P></P>
+
+<P>
+Here, we see that all three terms end up being cast in simple units of meters.  That is, the fluid's elevation, velocity, and pressure heads are all expressed as simple elevations.  In order for our metric units to be consistent here, we must use <SPAN  CLASS="textit">meters</SPAN> for elevation, <SPAN  CLASS="textit">meters</SPAN> per <SPAN  CLASS="textit">second</SPAN> for velocity, <SPAN  CLASS="textit">meters</SPAN> per <SPAN  CLASS="textit">second</SPAN> squared for acceleration, <SPAN  CLASS="textit">pascals</SPAN> (<SPAN  CLASS="textit">newtons</SPAN> per square <SPAN  CLASS="textit">meter</SPAN>) for pressure, and <SPAN  CLASS="textit">newtons</SPAN> per cubic <SPAN  CLASS="textit">meter</SPAN> for weight density.
+
+<P>
+<P>
+Applying Bernoulli's equation to real-life applications can be a bit daunting, as there are so many different units of measurement to contend with, and so many calculations which must be precise in order to arrive at a correct final answer.  The following example serves to illustrate how Bernoulli's equation may be applied to the solution of pressure at a point in a water piping system, assuming no frictional losses anywhere in the system:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_12.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 59.23ex; vertical-align: -0.10ex; " SRC="fluiddyn/img467.svg"
+ ALT="$\displaystyle \includegraphics{fluids_12.eps}$">
+</DIV><P></P>
+
+<P>
+We know without a doubt that Bernoulli's equation will be what we need to evaluate in order to solve for the unknown pressure <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img468.svg"
+ ALT="$P_2$"></SPAN>, but where do we begin?  A good place to start is by writing the equation we know we will need, then identifying all known values and all unknown values:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+z_1 \rho g + {v_1^2 \rho \over 2} + P_1 = z_2 \rho g + {v_2^2 \rho \over 2} + P_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -1.69ex; " SRC="fluiddyn/img452.svg"
+ ALT="$\displaystyle z_1 \rho g + {v_1^2 \rho \over 2} + P_1 = z_2 \rho g + {v_2^2 \rho \over 2} + P_2$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Here is a list of known values, given to us already:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Known quantity} & \textbf{Comments} \cr
+\noalign{\hrule }
+$z_1$ & 0 ft (arbitrarily assigned as 0 height) \cr
+\noalign{\hrule }
+$z_2$ & 3 ft (if $z_1$ is 0 feet, then $z_2$ is 3 ft above it) \cr
+\noalign{\hrule }
+$v_1$ & 11 ft/s \cr
+\noalign{\hrule }
+$P_1$ & 46 PSI (\textit{need to convert into PSF so all units match}) \cr
+\noalign{\hrule }
+$g$ & 32.2. ft/s$^{2}$ \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 17.51ex; vertical-align: -0.10ex; " SRC="fluiddyn/img469.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+The conversion for <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img470.svg"
+ ALT="$P_1$"></SPAN> from units of PSI into units of PSF is quite simple: multiply 46 PSI by 144 to get 6624 PSF.
+
+<P>
+<P>
+Here is a list of values unknown to us at this time:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Unknown quantity} & \textbf{Comments} \cr
+\noalign{\hrule }
+$\rho$ & (needs to be in units of slugs/ft$^{3}$) \cr
+\noalign{\hrule }
+$v_2$ & (needs to be in units of ft/s just like $v_1$) \cr
+\noalign{\hrule }
+$P_2$ & (the quantity we are ultimately solving for) \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 11.76ex; vertical-align: -0.10ex; " SRC="fluiddyn/img471.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+Now all we must do is solve for <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="fluiddyn/img472.svg"
+ ALT="$v_2$"></SPAN>, and we will be ready to use Bernoulli's equation to solve for <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img468.svg"
+ ALT="$P_2$"></SPAN>.  The important of identifying all the known and unknown quantities <SPAN  CLASS="textit">before</SPAN> beginning any calculations cannot be overstated.  Doing so allows us to <SPAN  CLASS="textit">develop a plan</SPAN> for solving the problem.  Without a plan, one has no idea of where or how to proceed, which is a condition many students repeatedly find themselves in when solving physics-type problems.
+
+<P>
+We know that <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN> is an expression of mass density for the fluid, and we were told the fluid in this example is water.  Water has a maximum density of 62.4 pounds per cubic foot, but this figure is not usable in our chosen form of Bernoulli's equation because it is <SPAN  CLASS="textit">weight</SPAN> density (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img14.svg"
+ ALT="$\gamma$"></SPAN>) and not <SPAN  CLASS="textit">mass</SPAN> density (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN>).
+
+<P>
+The relationship between weight density <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img14.svg"
+ ALT="$\gamma$"></SPAN> and mass density <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN> is the exact same relationship between weight (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img473.svg"
+ ALT="$F_W$"></SPAN>) and mass (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img2.svg"
+ ALT="$m$"></SPAN>) in a gravitational field (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img7.svg"
+ ALT="$g$"></SPAN>).  Newton's Second Law equation relating force to mass and acceleration (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img83.svg"
+ ALT="$F = ma$"></SPAN>) works well to relate weight to mass and gravitational acceleration:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F = ma
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img4.svg"
+ ALT="$\displaystyle F = ma$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F_W = mg
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img474.svg"
+ ALT="$\displaystyle F_W = mg$">
+</DIV><P></P>
+
+<P>
+Dividing both sides of this equation by volumetric units (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img28.svg"
+ ALT="$V$"></SPAN>) (e.g. cubic feet) gives us our relationship between <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img14.svg"
+ ALT="$\gamma$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img13.svg"
+ ALT="$\rho$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{F_W \over V} = {m \over V} g
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="fluiddyn/img475.svg"
+ ALT="$\displaystyle {F_W \over V} = {m \over V} g$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\gamma = \rho g
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="fluiddyn/img476.svg"
+ ALT="$\displaystyle \gamma = \rho g$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Water has a weight density of 62.4 pounds per cubic foot in Earth gravity (32.2 feet per second squared), so:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\rho = {\gamma \over g}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.79ex; vertical-align: -2.14ex; " SRC="fluiddyn/img477.svg"
+ ALT="$\displaystyle \rho = {\gamma \over g}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\rho = {62.4 \hbox{ lb/ft}^3 \over 32.2 \hbox{ ft/s}^2} = 1.94 \hbox{ slugs/ft}^3
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 6.32ex; vertical-align: -2.55ex; " SRC="fluiddyn/img478.svg"
+ ALT="$\displaystyle \rho = {62.4 \hbox{ lb/ft}^3 \over 32.2 \hbox{ ft/s}^2} = 1.94 \hbox{ slugs/ft}^3$">
+</DIV><P></P>
+
+<P>
+Now we may calculate the total value for the left-hand side of Bernoulli's equation, representing the sum total of potential and kinetic heads for the fluid within the 10-inch pipe:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+z_1 \rho g + {v_1^2 \rho \over 2} + P_1 = \hbox{Total head at 10-inch pipe}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -1.69ex; " SRC="fluiddyn/img479.svg"
+ ALT="$\displaystyle z_1 \rho g + {v_1^2 \rho \over 2} + P_1 = \hbox{Total head at 10-inch pipe}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Head} & \textbf{Calculation} at 10 inch pipe & \textbf{Value} \cr
+\noalign{\hrule }
+$z_1 \rho g$ & (0 ft) (1.94 slugs/ft$^{3}$) (32.2 ft/s$^{2}$) & 0 lb/ft$^{2}$ \cr
+\noalign{\hrule }
+$v_1^2 \rho / 2$ & (11 ft/s)$^{2}$ (1.94 slugs/ft$^{3}$) / 2 & 117.4 lb/ft$^{2}$ \cr
+\noalign{\hrule }
+$P_1$ & (46 lb/in$^{2}$) (144 in$^{2}$/1 ft$^{2}$) & 6624 lb/ft$^{2}$ \cr
+\noalign{\hrule }
+\textbf{Total} &  0 lb/ft$^{2}$ + 117.4 lb/ft$^{2}$ + 6624 lb/ft$^{2}$ & \textbf{6741.4 lb/ft$^{2}$} \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 14.64ex; vertical-align: -0.10ex; " SRC="fluiddyn/img480.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+Note the absolutely consistent use of units: all units of distance are <SPAN  CLASS="textit">feet</SPAN>.  All units of mass as <SPAN  CLASS="textit">slugs</SPAN>.  All units of time are <SPAN  CLASS="textit">seconds</SPAN>.  Failure to maintain consistency of units will result in (often severely) incorrect results!<A ID="tex2html77"
+  HREF="footnode.html#foot2490"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">77</SPAN></SUP></A>
+<P>
+<P>
+
+<P>
+There is one more unknown quantity to solve for before we may calculate values at the 6-inch pipe, and that unknown quantity is <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="fluiddyn/img472.svg"
+ ALT="$v_2$"></SPAN>.  We know that the Continuity equation gives us a mathematical relationship between volumetric flow (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img273.svg"
+ ALT="$Q$"></SPAN>), pipe area (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="fluiddyn/img254.svg"
+ ALT="$A$"></SPAN>), and velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img9.svg"
+ ALT="$v$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = A_1 v_1 = A_2 v_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img481.svg"
+ ALT="$\displaystyle Q = A_1 v_1 = A_2 v_2$">
+</DIV><P></P>
+
+<P>
+Looking at this equation, the only variable we know the value of at this point is <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="fluiddyn/img482.svg"
+ ALT="$v_1$"></SPAN>, and we need to find <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="fluiddyn/img472.svg"
+ ALT="$v_2$"></SPAN>.  However, if we could find the values of <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img483.svg"
+ ALT="$A_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img484.svg"
+ ALT="$A_2$"></SPAN>, and/or <SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img273.svg"
+ ALT="$Q$"></SPAN>, we would have the information we need to solve for <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="fluiddyn/img472.svg"
+ ALT="$v_2$"></SPAN>, which in turn would give us the information we would need to solve for <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img468.svg"
+ ALT="$P_2$"></SPAN> in Bernoulli's equation.
+
+<P>
+One way to approach this problem is to express the areas and velocities as ratios, eliminating <SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="fluiddyn/img273.svg"
+ ALT="$Q$"></SPAN> entirely so all we need to find are <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img483.svg"
+ ALT="$A_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img484.svg"
+ ALT="$A_2$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{A_1 \over A_2} = {v_2 \over v_1}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.27ex; vertical-align: -2.04ex; " SRC="fluiddyn/img485.svg"
+ ALT="$\displaystyle {A_1 \over A_2} = {v_2 \over v_1}$">
+</DIV><P></P>
+
+<P>
+The area of a circular pipe is given by the basic equation <!-- MATH
+ $A = \pi r^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img342.svg"
+ ALT="$A = \pi r^2$"></SPAN>.  Since the problem gives us each pipe's diameter (10 inches and 6 inches), we know the radii (5 inches and 3 inches, respectively) which we may then plug into our ratio equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\pi (5\hbox{ in})^2 \over \pi (3\hbox{ in})^2} = {v_2 \over v_1}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.76ex; vertical-align: -2.27ex; " SRC="fluiddyn/img486.svg"
+ ALT="$\displaystyle {\pi (5\hbox{ in})^2 \over \pi (3\hbox{ in})^2} = {v_2 \over v_1}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{25 \over 9} = {v_2 \over v_1}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -2.04ex; " SRC="fluiddyn/img487.svg"
+ ALT="$\displaystyle {25 \over 9} = {v_2 \over v_1}$">
+</DIV><P></P>
+
+<P>
+Knowing <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="fluiddyn/img482.svg"
+ ALT="$v_1$"></SPAN> has a value of 11 feet per second, the solution for <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="fluiddyn/img472.svg"
+ ALT="$v_2$"></SPAN> is now quite simple:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v_2 = 11 \hbox{ ft/s} \left({25 \over 9}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="fluiddyn/img488.svg"
+ ALT="$\displaystyle v_2 = 11 \hbox{ ft/s} \left({25 \over 9}\right)$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v_2 = (11 \hbox{ ft/s}) (2.778) = 30.56 \hbox{ ft/s}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="fluiddyn/img489.svg"
+ ALT="$\displaystyle v_2 = (11 \hbox{ ft/s}) (2.778) = 30.56 \hbox{ ft/s}$">
+</DIV><P></P>
+
+<P>
+<P>
+
+<P>
+Finally, we have all the pieces necessary to solve for <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img468.svg"
+ ALT="$P_2$"></SPAN> in the right-hand side of Bernoulli's equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+z_2 \rho g + {v_2^2 \rho \over 2} + P_2 = \hbox{Total head at 6-inch pipe}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -1.69ex; " SRC="fluiddyn/img490.svg"
+ ALT="$\displaystyle z_2 \rho g + {v_2^2 \rho \over 2} + P_2 = \hbox{Total head at 6-inch pipe}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Head} & \textbf{Calculation} at 6 inch pipe & \textbf{Value} \cr
+\noalign{\hrule }
+$z_2 \rho g$ & (3 ft) (1.94 slugs/ft$^{3}$) (32.2 ft/s$^{2}$) & 187.4 lb/ft$^{2}$ \cr
+\noalign{\hrule }
+$v_2^2 \rho / 2$ & (30.56 ft/s)$^{2}$ (1.94 slugs/ft$^{3}$) / 2 & 905.6 lb/ft$^{2}$ \cr
+\noalign{\hrule }
+$P_2$ &  & (unknown) \cr
+\noalign{\hrule }
+\textbf{Total} & 187.4 lb/ft$^{2}$ + 905.6 lb/ft$^{2}$ + $P_2$ & \textbf{1093 lb/ft$^{2}$} + $P_2$ \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 14.64ex; vertical-align: -0.10ex; " SRC="fluiddyn/img491.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+Knowing that the total head calculated at the first location was 6741.4 lb/ft<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="fluiddyn/img18.svg"
+ ALT="$^{2}$"></SPAN>, and the Conservation of Energy requires total heads at both locations be equal (assuming no energy lost to fluid friction along the way), <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img468.svg"
+ ALT="$P_2$"></SPAN> must be equal to:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+6741.4 \hbox{ lb/ft}^2 = 1093 \hbox{ lb/ft}^2 + P_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.89ex; vertical-align: -0.68ex; " SRC="fluiddyn/img492.svg"
+ ALT="$\displaystyle 6741.4 \hbox{ lb/ft}^2 = 1093 \hbox{ lb/ft}^2 + P_2$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P_2 = 6741.4 \hbox{ lb/ft}^2 - 1093 \hbox{ lb/ft}^2 = 5648.3 \hbox{ lb/ft}^2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.89ex; vertical-align: -0.68ex; " SRC="fluiddyn/img493.svg"
+ ALT="$\displaystyle P_2 = 6741.4 \hbox{ lb/ft}^2 - 1093 \hbox{ lb/ft}^2 = 5648.3 \hbox{ lb/ft}^2$">
+</DIV><P></P>
+
+<P>
+Converting pounds per square foot into the more customary unit of pounds per square inch (PSI):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P_2 = (5648.3 \hbox{ lb/ft}^2) \left({1 \hbox{ ft}^2 \over 144 \hbox{ in}^2}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.95ex; vertical-align: -2.30ex; " SRC="fluiddyn/img494.svg"
+ ALT="$\displaystyle P_2 = (5648.3 \hbox{ lb/ft}^2) \left({1 \hbox{ ft}^2 \over 144 \hbox{ in}^2}\right)$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P_2 = 39.2 \hbox{ lb/in}^2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.89ex; vertical-align: -0.68ex; " SRC="fluiddyn/img495.svg"
+ ALT="$\displaystyle P_2 = 39.2 \hbox{ lb/in}^2$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Before discussing the larger meaning of our solution, it would be good to review the problem-solving plan we followed to calculate <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img468.svg"
+ ALT="$P_2$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_34.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.84ex; vertical-align: -0.10ex; " SRC="fluiddyn/img496.svg"
+ ALT="$\displaystyle \includegraphics{fluids_34.eps}$">
+</DIV><P></P>
+
+<P>
+First, we identified Bernoulli's equation as being the central equation necessary for solving <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img468.svg"
+ ALT="$P_2$"></SPAN>.  Then, we identified all the known variables within Bernoulli's equation given to us in the problem, and also if there were any unit-conversion operations necessary.  Next, we identified any unknown variables necessary to solve for <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img468.svg"
+ ALT="$P_2$"></SPAN> in Bernoulli's equation.  For each of those unknown variables, we found or developed equations to solve for them, based on variables known to us.  The graphic shown above illustrates our plan of solution, with arrows showing the dependent relationships where equations supplied values for unknown quantities in other equations.
+
+<P>
+This is not just a problem-solving technique unique to Bernoulli's equation; it is a general strategy applicable to <SPAN  CLASS="textit">any</SPAN> type of problem where multiple equations must be used to solve for some quantity.  The study of physics is general is filled with problems like this!
+
+<P>
+<P>
+
+<P>
+Note how our calculated value for <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img468.svg"
+ ALT="$P_2$"></SPAN> at the second gauge is so much lower than the pressure at the first gauge: 39.2 PSI compared to 46 PSI.  This represents nearly a 7 PSI decrease in pressure!  Note also how little vertical distance separates the two gauges: only 3 feet.  Clearly, the change in elevation between those two points in insufficient to account for the large loss in pressure<A ID="tex2html78"
+  HREF="footnode.html#foot2247"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">78</SPAN></SUP></A>.  Given a 3 foot difference in elevation, one would expect a pressure reduction of about 1.3 PSI for a static column of water, but what we're seeing in this piping system is a pressure drop of nearly 7 PSI.  The difference is due to an exchange of energy from potential to kinetic form, as the fluid enters a much narrower pipe (6 inches instead of 10) and must increase velocity.
+
+<P>
+Furthermore, if we were to increase the flow rate discharged from the pump, resulting in even more velocity through the narrow pipe, pressure at <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="fluiddyn/img468.svg"
+ ALT="$P_2$"></SPAN> might even drop lower than atmospheric.  In other words, Bernoulli's equation tells us we can actually produce a <SPAN  CLASS="textit">vacuum</SPAN> by accelerating a fluid through a constriction.  This principle is widely used in industry with devices known as <SPAN  CLASS="textit">eductors</SPAN> or <SPAN  CLASS="textit">ejectors</SPAN><A ID="tex2html79"
+  HREF="footnode.html#foot2494"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">79</SPAN></SUP></A>: tapered tubes through which fluid flows at high velocity to produce a vacuum at the throat.    <A NAME="2253"></A>  <A NAME="2254"></A>  <A NAME="2255"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_35.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.00ex; vertical-align: -0.10ex; " SRC="fluiddyn/img497.svg"
+ ALT="$\displaystyle \includegraphics{fluids_35.eps}$">
+</DIV><P></P>
+
+<P>
+This, in fact, is how a <SPAN  CLASS="textit">carburetor</SPAN> works in an older automobile engine to vaporize liquid gasoline fuel into a stream of air drawn into the engine: the engine's intake air passes through a venturi tube, where vacuum at the throat of the venturi produces enough negative pressure to draw liquid gasoline into the stream to produce a fine mist.
+
+<P>
+
+<P>
+Ejectors use a high-velocity gas or vapor (e.g. superheated steam) to produce significant vacuums.  Eductors use process liquid flow, such as the eductor shown in this next photograph where wastewater flow creates a vacuum to draw gaseous chlorine into the stream for biological disinfection:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=5in]{fluids_20.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 69.87ex; vertical-align: -0.10ex; " SRC="fluiddyn/img498.svg"
+ ALT="$\displaystyle \includegraphics[height=5in]{fluids_20.eps}$">
+</DIV><P></P>
+
+<P>
+Here, the eductor helps fulfill an important safety function.  By creating a vacuum to draw toxic chlorine gas from the supply tank into the water stream, the chlorine gas piping may be continuously maintained at a slightly negative pressure throughout.  If ever a leak were to develop in the chlorine system, this vacuum would cause ambient air to enter the chlorine pipe rather than toxic chlorine gas to exit the pipe, making a leak far less dangerous than if the chlorine gas piping were maintained in a pressurized state.
+
+<P>
+
+<H2><A ID="SECTION0021114000000000000000">
+Torricelli's equation</A>
+</H2>
+
+<P>
+The velocity of a liquid stream exiting from a nozzle, pressured solely by a vertical column of that same liquid, is equal to the free-fall velocity of a solid mass dropped from the same height as the top of the liquid column.  In both cases, potential energy (in the form of vertical height) converts to kinetic energy (motion):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 38.32ex; vertical-align: -0.10ex; " SRC="fluiddyn/img499.svg"
+ ALT="$\displaystyle \includegraphics{fluids_02.eps}$">
+</DIV><P></P>
+
+<P>
+This was discovered by Evangelista Torricelli almost 100 years prior to Bernoulli's more comprehensive formulation.  The velocity may be determined by solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img9.svg"
+ ALT="$v$"></SPAN> after setting the potential and kinetic energy formulae equal to each other (since all potential energy at the upper height must translate into kinetic energy at the bottom, assuming no frictional losses): <A NAME="2261"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+mgh = {1 \over 2}mv^2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="fluiddyn/img500.svg"
+ ALT="$\displaystyle mgh = {1 \over 2}mv^2$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+gh = {1 \over 2}v^2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="fluiddyn/img501.svg"
+ ALT="$\displaystyle gh = {1 \over 2}v^2$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+2gh = v^2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.59ex; vertical-align: -0.55ex; " SRC="fluiddyn/img502.svg"
+ ALT="$\displaystyle 2gh = v^2$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = \sqrt{2gh}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 3.06ex; vertical-align: -0.69ex; " SRC="fluiddyn/img503.svg"
+ ALT="$\displaystyle v = \sqrt{2gh}$">
+</DIV><P></P>
+
+<P>
+Note how mass (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img2.svg"
+ ALT="$m$"></SPAN>) simply disappears from the equation, neatly canceling on both sides.  This means the nozzle velocity depends only on height, not the mass density of the liquid.  It also means the velocity of the falling object depends only on height, not the mass of the object.
+
+<P>
+
+<H2><A ID="SECTION0021115000000000000000">
+Flow through a venturi tube</A>
+</H2>
+
+<P>
+If an incompressible fluid moves through a <SPAN  CLASS="textit">venturi tube</SPAN> (i.e. a tube purposefully built to be narrow in the middle), the continuity principle tells us the fluid velocity must increase through the narrow portion.  This increase in velocity causes kinetic energy to increase at that point.  If the tube is level, there will be negligible difference in elevation (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="fluiddyn/img454.svg"
+ ALT="$z$"></SPAN>) between different points of the tube's centerline, which means elevation head remains constant.  According to the Law of Energy Conservation, some other form of energy must decrease to account for the increase in kinetic energy.  This other form is the pressure head, which decreases at the throat of the venturi: <A NAME="2267"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 28.45ex; vertical-align: -0.10ex; " SRC="fluiddyn/img504.svg"
+ ALT="$\displaystyle \includegraphics{fluids_03.eps}$">
+</DIV><P></P>
+
+<P>
+Ideally, the pressure downstream of the narrow throat should be the same as the pressure upstream, assuming equal pipe diameters upstream and down.  However, in practice the downstream pressure gauge will show slightly less pressure than the upstream gauge due to some inevitable energy loss as the fluid passed through the venturi.  Some of this loss is due to fluid friction against the walls of the tube, and some is due to viscous losses within the fluid driven by turbulent fluid motion at the high-velocity throat passage.
+
+<P>
+The difference between upstream and downstream pressure is called <SPAN  CLASS="textit">permanent pressure loss</SPAN>, while the difference in pressure between the narrow throat and downstream is called <SPAN  CLASS="textit">pressure recovery</SPAN>.  <A NAME="2271"></A> <A NAME="2272"></A>
+
+<P>
+
+<P>
+If we install vertical sight-tubes called <SPAN  CLASS="textit">piezometers</SPAN><A ID="tex2html80"
+  HREF="footnode.html#foot2274"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">80</SPAN></SUP></A> along a horizontal venturi tube, the differences in pressure will be shown by the heights of liquid columns within the tubes.  Here, we assume an ideal (inviscid) liquid with no permanent pressure loss:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_06.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 38.32ex; vertical-align: -0.10ex; " SRC="fluiddyn/img505.svg"
+ ALT="$\displaystyle \includegraphics{fluids_06.eps}$">
+</DIV><P></P>
+
+<P>
+The height of liquid in each piezometer tube represents the amount of <SPAN  CLASS="textit">potential energy</SPAN><A ID="tex2html81"
+  HREF="footnode.html#foot2277"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">81</SPAN></SUP></A> in the fluid at that point along the venturi tube.
+
+<P>
+<A ID="Piezometer"></A>
+<P>
+
+<P>
+We may gain more insight into the nature of energy in this moving fluid stream if we add three more piezometers, each one equipped with its own <SPAN  CLASS="textit">Pitot tube</SPAN> facing upstream to &ldquo;catch&rdquo; the velocity of the fluid.  Rather than represent potential energy by liquid height as the straight-tube piezometers do, the Pitot tube piezometers represent the <SPAN  CLASS="textit">total energy</SPAN> (potential plus kinetic) of the fluid.  As such, the liquid heights in these new piezometers are all equal to each other, showing that total energy is indeed conserved at every point in the system:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+z + {v^2 \over {2 g}} + {P \over \gamma} = \hbox{(constant)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.63ex; vertical-align: -2.14ex; " SRC="fluiddyn/img506.svg"
+ ALT="$\displaystyle z + {v^2 \over {2 g}} + {P \over \gamma} = \hbox{(constant)}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_07.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.97ex; vertical-align: -0.10ex; " SRC="fluiddyn/img507.svg"
+ ALT="$\displaystyle \includegraphics{fluids_07.eps}$">
+</DIV><P></P>
+
+<P>
+Here, each of the &ldquo;heads&rdquo; represented<A ID="tex2html82"
+  HREF="footnode.html#foot2285"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">82</SPAN></SUP></A> in Bernoulli's equation are shown in relation to the different piezometer heights.  The difference in liquid column height between each Pitot tube piezometer (potential + kinetic energy) and its corresponding straight-tube piezometer (potential energy alone) reflects the amount of kinetic energy possessed by the fluid stream at that point in the venturi tube.
+
+<P>
+
+<P>
+In a real venturi tube, there is some energy permanently lost in the moving fluid due to friction.  Consequently the piezometer measurements in a real venturi tube would look something like this:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_08.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 38.71ex; vertical-align: -0.10ex; " SRC="fluiddyn/img510.svg"
+ ALT="$\displaystyle \includegraphics{fluids_08.eps}$">
+</DIV><P></P>
+
+<P>
+The &ldquo;energy line&rdquo; is seen to slope downhill from inlet to outlet on the venturi tube, showing a degradation in total energy content from beginning to end.
+
+<P>
+	</body>
+</html>
+

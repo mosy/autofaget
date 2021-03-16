@@ -1,0 +1,1553 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Classical mechanics</TITLE>
+<META NAME="description" CONTENT="Classical mechanics">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node11.html">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html363"
+  HREF="node10.html#SECTION00281000000000000000">Newton's Laws of Motion</A>
+<LI><A ID="tex2html364"
+  HREF="node10.html#SECTION00282000000000000000">Work, energy, and power</A>
+<LI><A ID="tex2html365"
+  HREF="node10.html#SECTION00283000000000000000">Mechanical springs</A>
+<LI><A ID="tex2html366"
+  HREF="node10.html#SECTION00284000000000000000">Rotational motion</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00280000000000000000">
+Classical mechanics</A>
+</H1>
+
+<P>
+Classical mechanics (often called <SPAN  CLASS="textit">Newtonian</SPAN> mechanics in honor of Isaac Newton) deal with forces and motions of objects in common circumstances.  The vast majority of instrumentation applications deals with this realm of physics.  Two other areas of physics, <SPAN  CLASS="textit">relativistic</SPAN> and <SPAN  CLASS="textit">quantum</SPAN>, will not be covered in this chapter because their domains lie outside the typical experience of industrial instrumentation<A ID="tex2html7"
+  HREF="footnode.html#foot448"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">7</SPAN></SUP></A>.
+
+<P>
+
+<H2><A ID="SECTION00281000000000000000">
+Newton's Laws of Motion</A>
+</H2>
+
+<P>
+These laws were formulated by the great mathematician and physicist Isaac Newton (1642-1727).  Much of Newton's thought was inspired by the work of an individual who died the same year Newton was born, Galileo Galilei (1564-1642).  <A NAME="450"></A> <A NAME="451"></A>
+
+<P>
+
+<OL>
+<LI>An object at rest tends to stay at rest; an object in motion tends to stay in motion
+</LI>
+<LI>The acceleration of an object is directly proportional to the net force acting upon it and inversely proportional to the object's mass
+</LI>
+<LI>Forces between objects always exist in equal and opposite pairs
+</LI>
+</OL>
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Newton's first law</SPAN> may be thought of as the <SPAN  CLASS="textit">law of inertia</SPAN>, because it describes the property of inertia that all objects having mass exhibit: resistance to change in velocity.  This law is quite counter-intuitive for many people, who tend to believe that objects require continual force to keep moving.  While this is true for objects experiencing friction, it is not for ideal (frictionless) motion.  This is why satellites and other objects in space continue to travel with no mode of propulsion: they simply &ldquo;coast&rdquo; indefinitely on their own inertia because there is no friction in space to dissipate their kinetic energy and slow them down.  <A NAME="456"></A>
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Newton's second law</SPAN> is the verbal equivalent of the force/mass/acceleration formula: <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img83.svg"
+ ALT="$F = ma$"></SPAN>.  This law elaborates on the first, in that it mathematically relates force and motion in a very precise way.  For a frictionless object, the <SPAN  CLASS="textit">change in velocity</SPAN> (i.e. its <SPAN  CLASS="textit">acceleration</SPAN>) is proportional to force.  This is why a frictionless object may continue to move without any force applied: once moving, force would only be necessary for continued acceleration.  If zero force is applied, the acceleration will likewise be zero, and the object will maintain its velocity indefinitely (again, assuming no friction at work). <A NAME="460"></A>
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Newton's third law</SPAN> describes how forces always exist in <SPAN  CLASS="textit">pairs</SPAN> between two objects.  The rotating blades of a helicopter, for example, exert a downward force on the air (accelerating the air), but the air in turn exerts an upward force on the helicopter (suspending it in flight).  A spider hanging on the end of a thread exerts a downward force (weight) on the thread, while the thread exerts an upward force of equal magnitude on the spider (tension).  Force pairs are always equal in magnitude but opposite in direction.  <A NAME="463"></A>
+
+<P>
+
+<H2><A ID="SECTION00282000000000000000">
+Work, energy, and power</A>
+</H2>
+
+<P>
+Two very fundamental and closely-related concepts in physics are <SPAN  CLASS="textit">work</SPAN> and <SPAN  CLASS="textit">energy</SPAN>.  <SPAN  CLASS="textit">Work</SPAN> is simply what happens when any force acts through a parallel motion, such as when a weight is lifted against gravity or when a spring is compressed.  <SPAN  CLASS="textit">Energy</SPAN> is a more abstract concept and therefore more difficult to define.  One definition<A ID="tex2html8"
+  HREF="footnode.html#foot2351"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">8</SPAN></SUP></A> of energy is &ldquo;that which permits or results in motion,&rdquo; where the word &ldquo;motion&rdquo; is used in a very broad sense including even the motion of individual atoms within a substance.  Energy exists in many different forms, and may be transferred between objects and/or converted from one form to another, but cannot be created from nothing or be destroyed and turned into nothing (this is the <SPAN  CLASS="textit">Law of Energy Conservation</SPAN>).  <SPAN  CLASS="textit">Power</SPAN> is the rate at which work is done, or alternatively the rate at which energy transfer occurs.  <A NAME="475"></A>  <A NAME="476"></A>  <A NAME="477"></A>  <A NAME="478"></A>  <A NAME="479"></A>  <A NAME="480"></A>
+
+<P>
+First, just a little bit of math.  Work (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img85.svg"
+ ALT="$W$"></SPAN>) is mathematically defined as the dot-product of force (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img3.svg"
+ ALT="$F$"></SPAN>) and displacement (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN>) vectors<A ID="tex2html9"
+  HREF="footnode.html#foot2352"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">9</SPAN></SUP></A>, written as follows:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = \vec{F} \cdot \vec{x}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.43ex; vertical-align: -0.10ex; " SRC="img88.svg"
+ ALT="$\displaystyle W = \vec{F} \cdot \vec{x}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img85.svg"
+ ALT="$W$"></SPAN> = Work, in newton-meters (metric) or foot-pounds (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.10ex; " SRC="img87.svg"
+ ALT="$\vec{F}$"></SPAN> = Force vector (force and direction exerted) doing the work, in newtons (metric) or pounds (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.10ex; " SRC="img89.svg"
+ ALT="$\vec{x}$"></SPAN> = Displacement vector (distance and direction traveled) over which the work was done, in meters (metric) or feet (British)
+
+<P>
+<P>
+
+<P>
+The fact that both force and displacement appear as <SPAN  CLASS="textit">vectors</SPAN> tells us their relative directions are significant to the calculation of work.  If the force and displacement vectors point in exactly the same direction, work is simply the product of <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img3.svg"
+ ALT="$F$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN> magnitudes (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img90.svg"
+ ALT="$W = Fx$"></SPAN>).  If the force and displacement vectors point in opposite directions, work is the <SPAN  CLASS="textit">negative</SPAN> product (<SPAN CLASS="MATH"><IMG STYLE="height: 1.97ex; vertical-align: -0.29ex; " SRC="img91.svg"
+ ALT="$W = -Fx$"></SPAN>).  Another way to express the calculation of work is as the product of the force and displacement magnitudes (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img3.svg"
+ ALT="$F$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN>) and the cosine of the angle separating the two force vectors (<!-- MATH
+ $\cos \theta$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img92.svg"
+ ALT="$\cos \theta$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = Fx \cos \theta
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img93.svg"
+ ALT="$\displaystyle W = Fx \cos \theta$">
+</DIV><P></P>
+
+<P>
+When the two vectors <SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.10ex; " SRC="img87.svg"
+ ALT="$\vec{F}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.10ex; " SRC="img89.svg"
+ ALT="$\vec{x}$"></SPAN> point the same direction, the angle <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img94.svg"
+ ALT="$\theta$"></SPAN> between them is zero and therefore <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img90.svg"
+ ALT="$W = Fx$"></SPAN> because <!-- MATH
+ $\cos 0^{o} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img95.svg"
+ ALT="$\cos 0^{o} = 1$"></SPAN>.  When the two vectors point in opposite directions, the angle between them is 180<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img49.svg"
+ ALT="$^{o}$"></SPAN> and therefore <SPAN CLASS="MATH"><IMG STYLE="height: 1.97ex; vertical-align: -0.29ex; " SRC="img91.svg"
+ ALT="$W = -Fx$"></SPAN> because <!-- MATH
+ $\cos 180^{o} = -1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.89ex; vertical-align: -0.29ex; " SRC="img96.svg"
+ ALT="$\cos 180^{o} = -1$"></SPAN>.
+
+<P>
+<P>
+This means if a force acts in the same direction as a motion (i.e. force and displacement vectors pointing in the same direction), the work being done by that force will be a <SPAN  CLASS="textit">positive</SPAN> quantity.  If a force acts in the opposite direction of a motion (i.e. force and displacement vectors pointing in opposite directions), the work done by that force will be a <SPAN  CLASS="textit">negative</SPAN> quantity.  If a force acts perpendicularly to the direction of a motion (i.e. force and displacement vectors at right angles to each other), that force will do <SPAN  CLASS="textit">zero</SPAN> work.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{energy_11.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 53.03ex; vertical-align: -0.10ex; " SRC="img97.svg"
+ ALT="$\displaystyle \includegraphics{energy_11.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+
+<P>
+Illustrations are helpful in explaining these concepts.  Consider a crane hoisting a 2380 pound weight 15 feet up into the air by means of an attached cable:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{energy_06.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.77ex; vertical-align: -0.10ex; " SRC="img98.svg"
+ ALT="$\displaystyle \includegraphics{energy_06.eps}$">
+</DIV><P></P>
+
+<P>
+The amount of work done from the crane's perspective is <!-- MATH
+ $W_{crane} = +35700$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img99.svg"
+ ALT="$W_{crane} = +35700$"></SPAN> ft-lbs, since the crane's force (<!-- MATH
+ $F_{crane} =$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img100.svg"
+ ALT="$F_{crane} =$"></SPAN> 2380 lbs, up) points in the same upward direction as the cable's motion (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img101.svg"
+ ALT="$x =$"></SPAN> 15 ft, up) and therefore there is no angular difference between the crane force and motion vectors (i.e. <!-- MATH
+ $\theta = 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img102.svg"
+ ALT="$\theta = 0$"></SPAN>).  The amount of work done from weight's perspective, however, is <!-- MATH
+ $W_{weight} = -35700$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img103.svg"
+ ALT="$W_{weight} = -35700$"></SPAN> ft-lbs because the weight's force vector (<!-- MATH
+ $F_{weight} =$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img104.svg"
+ ALT="$F_{weight} =$"></SPAN> 2380 lbs, down) points in the <SPAN  CLASS="textit">opposite</SPAN> direction as the cable's motion vector (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img101.svg"
+ ALT="$x =$"></SPAN> 15 feet, up), yielding an angular difference of <!-- MATH
+ $\theta = 180^o$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img105.svg"
+ ALT="$\theta = 180^o$"></SPAN>.  Another way of expressing these two work values is to state the crane's work in the active voice and the weight's work in the passive voice: <SPAN  CLASS="textit">the crane <SPAN ID="txt505">did</SPAN> 35700 ft-lbs of work, while 35700 ft-lbs of work <SPAN ID="txt506">was done on</SPAN> the weight</SPAN>.  This language is truly appropriate, as the crane is indeed the <SPAN  CLASS="textit">active</SPAN> agent in this scenario, while the weight <SPAN  CLASS="textit">passively opposes</SPAN> the crane's efforts.  In other words, the crane is the <SPAN  CLASS="textit">motive source</SPAN> of the work, while the weight is a <SPAN  CLASS="textit">load</SPAN>.
+
+<P>
+Now, how does <SPAN  CLASS="textit">energy</SPAN> fit into this illustration?  Certainly we see that motion occurred, and therefore energy must have been involved.  The energy lifting the 2380 pound weight 15 feet upward didn't come from nowhere &ndash; it must have been present somewhere in the universe prior to the weight's ascension if the Law of Energy Conservation is indeed true.  If the crane is powered by an internal combustion engine, the energy came from the fuel stored in the crane's fuel tank.  If the crane is electric, the energy to hoist the weight came from a battery or from an electrical generator somewhere sending power to the crane through an electric cable.  The act of lifting the weight was actually an act of <SPAN  CLASS="textit">energy transfer</SPAN> from the crane's energy source, through the crane motor and cable, and finally to the weight.  Along the way, some of the initial energy was also converted into heat through inefficiencies in the crane's motor and mechanism.  However, if we were to calculate the sum of all the energy transferred to the lifted weight plus all energy &ldquo;dissipated&rdquo; in the form of heat, that total must be precisely equal to the initial energy of the fuel (or electricity) used by the crane in doing this lift.  In other words, the sum total of all energy in the universe is the same after the lift as it was before the lift.
+
+<P>
+<P>
+<SPAN  CLASS="textit">Power</SPAN> applies in this scenario to how <SPAN  CLASS="textit">quickly</SPAN> the weight rises.  So far, all we know about the weight's lifting is that it took 35700 ft-lbs of energy to do that work.  If we knew how long it took the crane to do that work, we could calculate the crane's power output.  For example, a crane with a power rating of 35700 ft-lbs per second could complete this 15-foot lift in only one second of time.  Likewise, a crane with a power rating of only 3570 ft-lbs per second would require 10 seconds of time to execute the same lift.
+
+<P>
+
+<P>
+An interesting thing happens if the crane moves sideways along the ground after lifting the weight 15 feet up into the air.  No work is being done by the crane on the weight, or by the weight on the crane, because the displacement vector is now perpendicular (<!-- MATH
+ $\theta = 90^o$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img106.svg"
+ ALT="$\theta = 90^o$"></SPAN>) to both force vectors:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{energy_09.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.77ex; vertical-align: -0.10ex; " SRC="img107.svg"
+ ALT="$\displaystyle \includegraphics{energy_09.eps}$">
+</DIV><P></P>
+
+<P>
+It should be noted that the crane's engine <SPAN  CLASS="textit">will</SPAN> do work as it overcomes rolling friction in the wheels to move the crane along, <SPAN  CLASS="textit">but this is not work done on or by the hoisted weight</SPAN>.  When we calculate work &ndash; as with all other calculations in physics &ndash; we must be very careful to keep in mind where the calculation(s) apply in the scenario.  Here, the forces and displacement with regard to the hoisted weight are perpendicular to each other, and therefore no work is being done there.  The only work done anywhere in this system as the crane rolls 15 feet horizontally involves the horizontal force required to roll the crane, which is unspecified in this illustration.
+
+<P>
+Similarly, there is no transfer of energy to or from the hoisted weight while the crane rolls along.  Whatever energy comes through the crane's engine only goes into overcoming rolling friction at the wheels and ground, not to do any work with the weight itself.  Generally this will be a very small amount of energy compared to the energy required to hoist a heavy load.
+
+<P>
+
+<P>
+A good question to ask after hoisting the weight is &ldquo;Where did that 35700 ft-lbs of energy go after the lift was complete?&rdquo;  The Law of Energy Conservation tells us that energy cannot be destroyed, and so the 35700 ft-lbs of work must be accounted for somehow.  In this case, the energy is now <SPAN  CLASS="textit">stored</SPAN> in the weight where it may be released at some later time.  We may demonstrate this fact by slowly lowering the weight back down to the ground and watching the energy transfer:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{energy_07.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.77ex; vertical-align: -0.10ex; " SRC="img108.svg"
+ ALT="$\displaystyle \includegraphics{energy_07.eps}$">
+</DIV><P></P>
+
+<P>
+Notice how the weight is now the actively-working object in the system, doing work on the crane.  The crane is now the passive element, opposing the work being done by the weight.  Both the crane and the weight are still pulling the same directions as before (crane pulling up, weight pulling down), but now the direction of displacement is going down which means the weight is &ldquo;winning&rdquo; and therefore doing the work, while the crane is &ldquo;losing&rdquo; and opposing the work.
+
+<P>
+If we examine what is happening inside the crane as the weight descends, we see that energy is being transferred from the descending weight to the crane.  In most cranes, the descent of a load is controlled by a <SPAN  CLASS="textit">brake</SPAN> mechanism, regulating the speed of descent by applying friction to the cable's motion.  This brake friction generates a great deal of heat, which is a form of energy transfer: energy stored in the elevated weight is now being converted into heat which exits the crane in the form of hot air (air whose molecules are now vibrating at a faster speed than they were at their previous temperature).  If the crane is electric, we have the option of <SPAN  CLASS="textit">regenerative braking</SPAN> where we recapture this energy instead of dissipating it in the form of heat.  This works by switching the crane's electric motor into an electric generator on demand, so the weight's descent turns the motor/generator shaft to generate electricity to re-charge the crane's battery or be injected back into the electric power grid to do useful work elsewhere.
+
+<P>
+<P>
+
+<P>
+Referring back to the illustration of the crane hoisting the weight, it is clear that the weight stored energy while it was being lifted up by the crane, and released this energy back to the crane while it was being lowered down to the ground.  The energy held by the elevated weight may therefore be characterized as <SPAN  CLASS="textit">potential energy</SPAN>, since it had the <SPAN  CLASS="textit">potential</SPAN> to do work even if no work was being done by that energy at that moment.  <A NAME="524"></A>  <A NAME="525"></A>
+
+<P>
+A special version of the general work formula <!-- MATH
+ $W = \vec{F} \cdot \vec{x}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.10ex; " SRC="img109.svg"
+ ALT="$W = \vec{F} \cdot \vec{x}$"></SPAN> exists for calculating this <SPAN  CLASS="textit">gravitational potential energy</SPAN>.  Rather than express force and displacement as vectors with arbitrary directions, we express the weight of the object as the product of its mass and the acceleration of gravity (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img110.svg"
+ ALT="$F = mg$"></SPAN>) and the vertical displacement of the object simply as its height above the ground (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img111.svg"
+ ALT="$x = h$"></SPAN>).  The amount of potential energy stored in the lift is simply equal to the work done during the lift (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img112.svg"
+ ALT="$W = E_P$"></SPAN>):  <A NAME="529"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_p = mgh
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="img113.svg"
+ ALT="$\displaystyle E_p = mgh$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img114.svg"
+ ALT="$E_p$"></SPAN> = Gravitational potential energy in newton-meters (metric) or foot-pounds (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img2.svg"
+ ALT="$m$"></SPAN> = Mass of object in kilograms (metric) or slugs (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img7.svg"
+ ALT="$g$"></SPAN> = Acceleration of gravity in meters per second squared (metric) or feet per second squared (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img71.svg"
+ ALT="$h$"></SPAN> = Height of lift in meters (metric) or feet (British)
+
+<P>
+<P>
+There is no need for vectors or cosine functions in the <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="img115.svg"
+ ALT="$E_p = mgh$"></SPAN> formula, because gravity and height are always guaranteed to act along the same axis.  A positive height (i.e. <SPAN  CLASS="textit">above</SPAN> ground level) is assumed to yield a positive potential energy value for the elevated mass.
+
+<P>
+<P>
+Many different forms of potential energy exist, although the standard &ldquo;textbook&rdquo; example is of a mass lifted to some height against the force of gravity.  Compressed (or stretched) springs have potential energy, as do pressurized fluids, chemical bonds (e.g. fuel molecules prior to combustion), hot masses, electrically-charged capacitors, and magnetized inductors.  Any form of energy with the potential to be released into a different form at some later time is, by definition, <SPAN  CLASS="textit">potential</SPAN> energy.
+
+<P>
+<P>
+
+<P>
+An important application of work, energy, and power is found in <SPAN  CLASS="textit">rotational</SPAN> motion.  Consider the application of a truck towing some load by a rope.  The truck exerts a linear (i.e. straight-line) pulling force on the load being towed, but it must do so by applying a <SPAN  CLASS="textit">rotary</SPAN> (i.e. turning) force through the axle shaft powering the drive wheels:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{energy_03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.00ex; vertical-align: -0.10ex; " SRC="img116.svg"
+ ALT="$\displaystyle \includegraphics{energy_03.eps}$">
+</DIV><P></P>
+
+<P>
+Clearly, the truck <SPAN  CLASS="textit">does work</SPAN> on the load by exerting a pulling force in the direction of motion.  If we wish to quantify this work, we may consider the work done by the truck as it tows the load a distance of 40 feet:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W_{truck} = Fx \cos \theta
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.15ex; vertical-align: -0.45ex; " SRC="img117.svg"
+ ALT="$\displaystyle W_{truck} = Fx \cos \theta$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W_{truck} = (1200 \hbox{ lb}) (40 \hbox{ ft}) \cos 0^o
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="img118.svg"
+ ALT="$\displaystyle W_{truck} = (1200 \hbox{ lb}) (40 \hbox{ ft}) \cos 0^o$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W_{truck} = 48000 \hbox{ lb-ft}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.15ex; vertical-align: -0.45ex; " SRC="img119.svg"
+ ALT="$\displaystyle W_{truck} = 48000 \hbox{ lb-ft}$">
+</DIV><P></P>
+
+<P>
+It should also be clear that <SPAN  CLASS="textit">work is being done on</SPAN> the load, since the load's force on the tow rope points in the opposite direction of its motion:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W_{load} = Fx \cos \theta
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.15ex; vertical-align: -0.45ex; " SRC="img120.svg"
+ ALT="$\displaystyle W_{load} = Fx \cos \theta$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W_{load} = (1200 \hbox{ lb}) (40 \hbox{ ft}) \cos 180^o
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="img121.svg"
+ ALT="$\displaystyle W_{load} = (1200 \hbox{ lb}) (40 \hbox{ ft}) \cos 180^o$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W_{load} = -48000 \hbox{ lb-ft}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.15ex; vertical-align: -0.45ex; " SRC="img122.svg"
+ ALT="$\displaystyle W_{load} = -48000 \hbox{ lb-ft}$">
+</DIV><P></P>
+
+<P>
+For the sake of this example, it matters not what happens to the energy delivered to the load.  Perhaps it gets converted to heat through the mechanism of friction at the load (e.g. friction from road contact, friction from wind resistance), perhaps it gets converted into potential energy in the case of the road inclining to a greater altitude, or perhaps (most likely) it is some combination of all these.
+
+<P>
+<P>
+
+<P>
+In order to quantify this amount of work from the perspective of the truck's rotating wheel, we must cast the variables of pulling force and pulling distance into rotary terms.  We will begin by first examining the distance traveled by the wheel.  Any circular wheel has a radius, and the wheel must turn a certain number of revolutions in order to pull the load any distance.  The obvious function of a wheel is to convert between linear and rotary motion, and the common measure between these two motions is the <SPAN  CLASS="textit">circumference</SPAN> of the wheel: each revolution of the wheel equates directly to one circumference's worth of linear travel.  In our truck example, the wheel has a radius of 1.5 feet, which means it must have a circumference of 9.425 feet (i.e. <!-- MATH
+ $2 \times \pi \times 1.5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img123.svg"
+ ALT="$2 \times \pi \times 1.5$"></SPAN> feet, since <!-- MATH
+ $C = \pi D = 2 \pi r$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img124.svg"
+ ALT="$C = \pi D = 2 \pi r$"></SPAN>).  Therefore, in order to travel 40 linear feet this wheel must rotate 4.244 times (i.e. 40 feet <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img125.svg"
+ ALT="$\div$"></SPAN> 9.425 feet/revolution = 4.244 revolutions).
+
+<P>
+Next, we must relate pulling force to rotational force.  The 1200 pounds of pulling force exerted by the wheel<A ID="tex2html10"
+  HREF="footnode.html#foot2354"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">10</SPAN></SUP></A> originates from the twisting force exerted by the axle at the wheel's center.  The technical term for this twisting force is <SPAN  CLASS="textit">torque</SPAN> (symbolized by the Greek letter &ldquo;tau&rdquo;, <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\tau$"></SPAN>), and it is a function of both the linear pulling force and the wheel's radius:  <A NAME="552"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tau = r F
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img127.svg"
+ ALT="$\displaystyle \tau = r F$">
+</DIV><P></P>
+
+<P>
+Solving for torque (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\tau$"></SPAN>) in this application, we calculate 1800 pound-feet given the wheel's linear pulling force of 1200 pounds and a radius of 1.5 feet.  Please note that the unit of &ldquo;pound-feet&rdquo; for torque is <SPAN  CLASS="textit">not</SPAN> the same as the unit of &ldquo;foot-pounds&rdquo; for work.  Work is the product of force and displacement (distance of motion), while torque is the product of force and radius length.  Work requires motion, while torque does not<A ID="tex2html11"
+  HREF="footnode.html#foot554"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">11</SPAN></SUP></A>.
+
+<P>
+The torque value of 1800 lb-ft and the turning of 4.244 revolutions should be sufficient to calculate work done by the wheel, since torque equates directly to pulling force and the number of revolutions equates directly to pulling distance.  It should be obvious that the product of 1800 lb-ft and 4.244 revolutions does not, however, equal 48000 ft-lbs of work, and so our torque-revolutions-work formula must contain an additional multiplication factor <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img63.svg"
+ ALT="$k$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = k \tau x
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img128.svg"
+ ALT="$\displaystyle W = k \tau x$">
+</DIV><P></P>
+
+<P>
+Substituting 48000 ft-lbs for work (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img85.svg"
+ ALT="$W$"></SPAN>), 1800 lb-ft for torque (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\tau$"></SPAN>), and 4.244 for the number of revolutions (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN>), we find that <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img63.svg"
+ ALT="$k$"></SPAN> must be equal to 6.283, or <SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="img129.svg"
+ ALT="$2 \pi$"></SPAN>.  Knowing the value for <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img63.svg"
+ ALT="$k$"></SPAN>, we may re-write our rotational work formula more precisely:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = 2 \pi \tau x
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img130.svg"
+ ALT="$\displaystyle W = 2 \pi \tau x$">
+</DIV><P></P>
+
+<P>
+This formula is correct no matter the wheel's size.  A larger-radius wheel will certainly travel farther for each revolution, but that larger radius will proportionately reduce the pulling force for any given amount of torque, resulting in an unchanged work value.
+
+<P>
+<P>
+
+<P>
+Applying this work formula to another application, let us consider an electric <SPAN  CLASS="textit">winch</SPAN> where a load is lifted against the force of gravity.  A &ldquo;winch&rdquo; is a mechanism comprised of a tubular drum and cable, the cable wrapping or unwrapping around the drum as the drum is turned by an electric motor.  For comparison we will use the same weight and lifting distance of the crane example, merely replacing the crane with a winch located atop a tower.  In this case we will make the winch drum 3 inches in diameter, and calculate both the torque required to rotate the drum as well as the number of rotations necessary to lift the weight 15 feet:  <A NAME="556"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{energy_04.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.00ex; vertical-align: -0.10ex; " SRC="img131.svg"
+ ALT="$\displaystyle \includegraphics{energy_04.eps}$">
+</DIV><P></P> 
+
+<P>
+From the crane example we already know the amount of work which must be done on the weight to hoist it 15 feet vertically: <SPAN  CLASS="textit">35700 ft-lbs</SPAN>.  Our rotational work formula (<!-- MATH
+ $W = 2 \pi \tau x$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img132.svg"
+ ALT="$W = 2 \pi \tau x$"></SPAN>) contains <SPAN  CLASS="textit">two</SPAN> unknowns at this point in time, since we know the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img85.svg"
+ ALT="$W$"></SPAN> but not <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\tau$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN>.  This means we cannot yet solve for either <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\tau$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN> using this formula.  If we also knew the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\tau$"></SPAN> we could solve for <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN> and vice-versa, which means we must find some other way to solve for one of those unknowns.
+
+<P>
+A drum radius of 3 inches is equivalent to 0.25 feet, and since we know the relationship between radius, force, and torque we may solve for torque in that manner:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tau = r F
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img127.svg"
+ ALT="$\displaystyle \tau = r F$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tau = (0.25 \hbox{ ft}) (2380 \hbox{ lb})
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="img133.svg"
+ ALT="$\displaystyle \tau = (0.25 \hbox{ ft}) (2380 \hbox{ lb})$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tau = 595 \hbox{ lb-ft}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img134.svg"
+ ALT="$\displaystyle \tau = 595 \hbox{ lb-ft}$">
+</DIV><P></P>
+
+<P>
+Now that we have a value for <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\tau$"></SPAN> we may substitute it into the rotational work formula to solve for the number of necessary drum rotations:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = 2 \pi \tau x
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img130.svg"
+ ALT="$\displaystyle W = 2 \pi \tau x$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x = {W \over 2 \pi \tau}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="img135.svg"
+ ALT="$\displaystyle x = {W \over 2 \pi \tau}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x = {35700 \hbox{ ft-lb} \over (2 \pi) (595 \hbox{ lb-ft})}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.53ex; vertical-align: -2.27ex; " SRC="img136.svg"
+ ALT="$\displaystyle x = {35700 \hbox{ ft-lb} \over (2 \pi) (595 \hbox{ lb-ft})}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x = 9.549 \hbox{ revolutions}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img137.svg"
+ ALT="$\displaystyle x = 9.549 \hbox{ revolutions}$">
+</DIV><P></P>
+
+<P>
+<P>
+
+<P>
+As always, energy is conserved in this electric winch system just as it is in any other system.  The 35700 foot-pounds of energy invested in the gravitational potential energy of the weight had to originate from somewhere, which in the case of an electric winch is the electrical power source feeding the winch motor.  If that winch motor were allowed to turn in reverse and act as a generator, it would convert the descending weight's loss in potential energy into electrical power to be returned to the source, whether that source by a rechargeable battery or an electrical power &ldquo;grid&rdquo; with other electrical loads that may use that energy.
+
+<P>
+The same, of course, is true for the tow truck example.  The energy expended in towing the load must come from somewhere, and in the case of a combustion-type truck engine that source is the fuel powering the engine.  For electric vehicles, the energy source is a rechargeable battery, and the reversible nature of electric motors means the vehicle may use its drive motor as a generator to &ldquo;brake&rdquo; (slow down), returning the vehicle's kinetic energy into electrical energy to recharge the battery for later use.  This is why all-electric and hybrid-electric vehicles are remarkably efficient in stop-and-go traffic conditions: they utilize their drive motors as <SPAN  CLASS="textit">regenerative brakes</SPAN> to recover the vehicle's kinetic energy rather than dissipating that same energy in the form of heat using friction-based brake mechanisms.
+
+<P>
+<P>
+Many applications exist within the industrial world for rotational work and electric motors.  Conveyor belts, pumps, fans, compressors, and a host of other mechanisms may be powered via electric motors, the speed and torque of those electric motors controlled using electronic circuits called <SPAN  CLASS="textit">motor drives</SPAN>.  Alternating-current (AC) electric motors are controlled by electronic devices called <SPAN  CLASS="textit">Variable Frequency Drives</SPAN>, or <SPAN  CLASS="textit">VFDs</SPAN>, which achieve precise speed control by varying the frequency of the AC power feeding the motor, and achieve precise torque control by varying the voltage and current feeding the motor.  VFDs are very important &ldquo;final control&rdquo; devices used in a wide variety of industrial control systems.  <A NAME="571"></A>  <A NAME="572"></A>  <A NAME="573"></A>  <A NAME="574"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{energy_05.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 38.71ex; vertical-align: -0.10ex; " SRC="img138.svg"
+ ALT="$\displaystyle \includegraphics{energy_05.eps}$">
+</DIV><P></P> 
+
+<P>
+Sophisticated VFDs control regeneration as well (i.e. using the motor as a generator to &ldquo;brake&rdquo; a rotating machine), allowing energy to be applied to and then extracted from the same mechanism. 
+
+<P>
+<P>
+
+<P>
+Potential energy is an important principle not just in the study of physics, but also for workplace safety.  When large amounts of potential energy are released, the effects may be hazardous to personnel and/or destructive to equipment.  An industrial maintenance procedure known as <SPAN  CLASS="textit">lock-out/tag-out</SPAN> (LOTO) requires that all potential energy sources on a system must either be exhausted or otherwise secured to that there will be negligible risk to maintenance personnel as they perform work on a system.  The most common way to ensure this is to place a padlock on each energy-disconnect device (e.g. switch, valve, etc.) to secure its position so that potential energy cannot be released in a hazardous or destructive way.  Each maintenance worker places a padlock on that disconnect device to prevent its actuation, and also places a tag on the device explaining when and why it was secured.  Each and every person performing work on the system must use their own personal padlock, so that the system cannot be re-activated without the active consent of all persons working on that system.  <A NAME="577"></A>   <A NAME="578"></A> 
+
+<P>
+An efficient strategy for safely locking out a large number of safety-disconnect devices on a system with multiple personal locks is to use a sheet-metal box containing a numbered padlock (with matching key) for each energy-flow device to be secured on the equipment, as well as a list identifying which lock goes on which energy-flow device.  Each energy-disconnect device is placed in the safe position and then locked in that position with a dedicated padlock.  After that, all the padlock keys are placed back inside the sheet-metal box.  The lid of this box is then shut and secured with a multi-lock device, permitting multiple peoples' personal locks to be applied so the lid cannot be opened unless <SPAN  CLASS="textit">all</SPAN> personal locks are removed from it:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{energy_01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.74ex; vertical-align: -0.10ex; " SRC="img139.svg"
+ ALT="$\displaystyle \includegraphics{energy_01.eps}$">
+</DIV><P></P>
+
+<P>
+None of the energy-securing devices may be altered unless <SPAN  CLASS="textit">all</SPAN> personal locks have been removed from the lock box, thereby ensuring the safety of all persons working on the system.
+
+<P>
+<P>
+Procedures created and maintained at the worksite will identify the energy-flow devices in need of securing prior to commencement of work on a piece of equipment.  These procedures are literally life-saving documents, as they ensure no energy-securing device is overlooked by personnel doing work on the equipment or system.
+
+<P>
+
+<P>
+A photograph of such a document &ndash; appropriately titled an &ldquo;Energy Control Procedure&rdquo; &ndash; shows the steps mandated to secure all potential energy sources prior to commencing work on a large industrial engine.  This procedure also serves to document which locks were used to secure which energy flow devices during the procedure, as well as who performed the procedure:  <A NAME="582"></A>  <A NAME="583"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=5in]{energy_02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 69.87ex; vertical-align: -0.10ex; " SRC="img140.svg"
+ ALT="$\displaystyle \includegraphics[height=5in]{energy_02.eps}$">
+</DIV><P></P>
+
+<P>
+Note the particular lock-out steps required in this procedure: switching the control mode to the &ldquo;off&rdquo; position and tagging it, closing the fuel gas valve supplying fuel to the engine and locking/tagging it, and finally closing the valve supplying high-pressure air for engine starting and locking/tagging it.  The closure of the starting air valve prevents the engine from being pneumatically turned while personnel are performing work on it.  The closure of the fuel gas valve eliminates hazards resulting from the pressure of the fuel gas as well as its chemical energy (i.e. fire hazard) and/or biological threats (poisoning or asphyxiation).  Note also how this procedure lists steps of notification to be taken prior to locking or tagging anything on the engine, as well as any other procedures possibly necessary (e.g. inspecting the maintenance crane if that will be needed for work on the engine).
+
+<P>
+
+<P>
+The following is a set of incomplete lists of various energy-securing devices and energy sources which may be &ldquo;locked out&rdquo; for maintenance on a larger system:
+
+<P>
+<P>
+
+<SPAN  CLASS="textbf">Electrical energy</SPAN>
+
+<P>
+
+<UL>
+<LI>Circuit breaker (locked in &ldquo;off&rdquo; position, also &ldquo;racked out&rdquo; if possible)
+</LI>
+<LI>Grounding switch (locked in &ldquo;on&rdquo; position to positively ground power conductors)
+</LI>
+<LI>Power cord (plastic cap locked onto plug, covering prongs)
+</LI>
+</UL>
+
+<P>
+<P>
+
+<SPAN  CLASS="textbf">Mechanical energy</SPAN>
+
+<P>
+
+<UL>
+<LI>Block valve (locked in &ldquo;shut&rdquo; position) to prevent pressurized fluid motion
+</LI>
+<LI>Flange blind (installed in line) to prevent pressurized fluid motion
+</LI>
+<LI>Vent valve (locked in &ldquo;open&rdquo; position) to prevent fluid pressure buildup
+</LI>
+<LI>Mechanical clutch (disengaged, and locked in that position) to prevent prime mover from moving something
+</LI>
+<LI>Mechanical coupling (disassembled, and locked in that state) to prevent prime mover from moving something
+</LI>
+<LI>Mechanical brake (engaged, and locked in that position) to prevent motion
+</LI>
+<LI>Mechanical locking pin (inserted, and held in position by a padlock) to prevent motion
+</LI>
+<LI>Raised masses lowered to ground level, with lifting machines locked out
+</LI>
+</UL>
+
+<P>
+<P>
+
+<SPAN  CLASS="textbf">Chemical energy</SPAN>
+
+<P>
+
+<UL>
+<LI>Block valve (locked in &ldquo;shut&rdquo; position) to prevent chemical fluid entry
+</LI>
+<LI>Vent valve (locked in &ldquo;open&rdquo; position) to prevent chemical fluid pressure buildup
+</LI>
+<LI>Ventilation fan (locked in &ldquo;run&rdquo; state) to prevent chemical vapor buildup
+</LI>
+</UL>
+
+<P>
+With all these preventive measures, the hope is that no form of potential energy great enough to pose danger may be accidently released.
+
+<P>
+<P>
+
+<P>
+Let us return to the crane illustration to explore another concept called <SPAN  CLASS="textit">kinetic energy</SPAN>.  As you might guess by the word &ldquo;kinetic,&rdquo; this form of energy exists when an object is in the process of <SPAN  CLASS="textit">moving</SPAN>.  Let's imagine the crane lifting the 2380 pound weight 15 feet up into the air, and then the cable snapping apart so that the weight free-falls back to the ground:  <A NAME="596"></A>  <A NAME="597"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{energy_08.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.00ex; vertical-align: -0.10ex; " SRC="img141.svg"
+ ALT="$\displaystyle \includegraphics{energy_08.eps}$">
+</DIV><P></P>
+
+<P>
+The Conservation of Energy still (and always!) holds true: all the potential energy stored in the elevated weight must be accounted for, even when it free-falls.  What happens, of course, is that the weight accelerates toward the ground at the rate determined by Earth's gravity: 32.2 feet per second per second (32.2 ft/s<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img18.svg"
+ ALT="$^{2}$"></SPAN>).  As the weight loses height, its potential energy decreases according to the gravitational potential energy formula (<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="img115.svg"
+ ALT="$E_p = mgh$"></SPAN>), but since we know energy cannot simply disappear we must conclude it is taking some other form.  This &ldquo;other form&rdquo; is based on the weight's <SPAN  CLASS="textit">velocity</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img9.svg"
+ ALT="$v$"></SPAN>), and is calculated by the kinetic energy formula: 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_k = {1 \over 2} mv^2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="img142.svg"
+ ALT="$\displaystyle E_k = {1 \over 2} mv^2$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img143.svg"
+ ALT="$E_k$"></SPAN> = Kinetic energy in joules or newton-meters (metric), or foot-pounds (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img2.svg"
+ ALT="$m$"></SPAN> = Mass of object in kilograms (metric) or slugs (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img9.svg"
+ ALT="$v$"></SPAN> = Velocity of mass in meters per second (metric) or feet per second (British)
+
+<P>
+<P>
+Thus, the Conservation of Energy explains why a falling object must fall faster as it loses height: kinetic energy must increase by the same amount that potential energy decreases, if energy is to be conserved.  A very small amount of this falling weight's potential energy will be dissipated in the form of heat (as air molecules are disturbed) rather than get converted into kinetic energy.  However, the vast majority of the initial 35700 ft-lbs of potential energy gets converted into kinetic energy, until the weight's energy is all kinetic and no potential the moment it first touches the ground.
+
+<P>
+When the weight finally slams into the ground, all that (nearly 35700 ft-lbs) of kinetic energy once again gets converted into other forms.  Compression of the soil upon impact converts much of the energy into heat (molecular vibrations).  Chunks of soil ejected from the impact zone possess their own kinetic energy, carrying that energy to other locations where they slam into other stationary objects.  Sound waves rippling through the air also convey energy away from the point of impact.  All in all, the 35700 ft-lbs of potential energy which turned into (nearly) 35700 ft-lbs of kinetic energy at ground level becomes dispersed.
+
+<P>
+
+<P>
+The Law of Energy Conservation is extremely useful in projectile mechanics problems, where we typically assume a projectile loses no energy and gains no energy in its flight.  The velocity of a projectile, therefore, depends on its height above the ground, because the sum of potential and kinetic energies must remain constant:  <A NAME="602"></A> <A NAME="603"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_p + E_k = \hbox{constant}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img144.svg"
+ ALT="$\displaystyle E_p + E_k = \hbox{constant}$">
+</DIV><P></P>
+
+<P>
+As a projectile rises in altitude (i.e. its gravitational potential energy increases), its velocity must slow down (i.e. its kinetic energy decreases) in order that its total energy remain the same in accordance with the Law of Energy Conservation.
+
+<P>
+In free-fall problems, where the only source of energy for a projectile is its initial height, the initial potential energy must be equal to the final kinetic energy:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_p \hbox{ (initial)} = E_k \hbox{ (final)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img145.svg"
+ ALT="$\displaystyle E_p \hbox{ (initial)} = E_k \hbox{ (final)}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+mgh_i = {1 \over 2} mv^2_f
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="img146.svg"
+ ALT="$\displaystyle mgh_i = {1 \over 2} mv^2_f$">
+</DIV><P></P>
+
+<P>
+We can see from this equation that mass cancels out of both sides, leaving us with this simpler form:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+gh_i = {1 \over 2} v^2_f
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="img147.svg"
+ ALT="$\displaystyle gh_i = {1 \over 2} v^2_f$">
+</DIV><P></P>
+
+<P>
+It also leads to the paradoxical conclusion that the mass of a free-falling object is irrelevant to its velocity.  That is, both a heavy object and a light object in free fall hit the ground with the same velocity, and fall for the same amount of time, if released from the same height under the influence of the same gravity<A ID="tex2html12"
+  HREF="footnode.html#foot609"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">12</SPAN></SUP></A>.
+
+<P>
+<P>
+
+<P>
+Dimensional analysis confirms the common nature of energy whether in the form of potential, kinetic, or even mass (as described by Einstein's equation).  First, we will set these three energy equations next to each other for comparison of their variables:  <A NAME="610"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_p = mgh \hbox{\hskip 20pt Potential energy due to elevation}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="img148.svg"
+ ALT="$\displaystyle E_p = mgh \hbox{\hskip 20pt Potential energy due to elevation}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_k = {1 \over 2} mv^2 \hbox{\hskip 20pt Kinetic energy due to velocity}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="img149.svg"
+ ALT="$\displaystyle E_k = {1 \over 2} mv^2 \hbox{\hskip 20pt Kinetic energy due to velocity}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E = mc^2 \hbox{\hskip 20pt Mass-to-energy conversion}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.59ex; vertical-align: -0.55ex; " SRC="img150.svg"
+ ALT="$\displaystyle E = mc^2 \hbox{\hskip 20pt Mass-to-energy conversion}$">
+</DIV><P></P>
+
+<P>
+Next, we will dimensionally analyze them using standard SI metric units (kilogram, meter, second).  Following the SI convention, mass (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img2.svg"
+ ALT="$m$"></SPAN>) is always expressed in kilograms [kg], distance (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img71.svg"
+ ALT="$h$"></SPAN>) in meters [m], and time (<SPAN CLASS="MATH"><IMG STYLE="height: 1.62ex; vertical-align: -0.10ex; " SRC="img10.svg"
+ ALT="$t$"></SPAN>) in seconds [s].  This means velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img9.svg"
+ ALT="$v$"></SPAN>, or <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img76.svg"
+ ALT="$c$"></SPAN> for the speed of light) in the SI system will be expressed in meters per second [m/s] and acceleration (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img5.svg"
+ ALT="$a$"></SPAN>, or <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img7.svg"
+ ALT="$g$"></SPAN> for gravitational acceleration) in meters per second squared [m/s<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img18.svg"
+ ALT="$^{2}$"></SPAN>]:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{[\hbox{kg}][\hbox{m}^2] \over [\hbox{s}^2]} = [\hbox{kg}] \left[\hbox{m} \over \hbox{s}^2\right] [\hbox{m}] \hbox{\hskip 20pt Potential energy due to elevation}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.76ex; vertical-align: -2.27ex; " SRC="img151.svg"
+ ALT="$\displaystyle {[\hbox{kg}][\hbox{m}^2] \over [\hbox{s}^2]} = [\hbox{kg}] \left[...
+...box{s}^2\right] [\hbox{m}] \hbox{\hskip 20pt Potential energy due to elevation}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{[\hbox{kg}][\hbox{m}^2] \over [\hbox{s}^2]} = [\hbox{kg}] \left[\hbox{m} \over \hbox{s}\right]^2 \hbox{\hskip 20pt Kinetic energy due to velocity}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.76ex; vertical-align: -2.27ex; " SRC="img152.svg"
+ ALT="$\displaystyle {[\hbox{kg}][\hbox{m}^2] \over [\hbox{s}^2]} = [\hbox{kg}] \left[\hbox{m} \over \hbox{s}\right]^2 \hbox{\hskip 20pt Kinetic energy due to velocity}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{[\hbox{kg}][\hbox{m}^2] \over [\hbox{s}^2]} = [\hbox{kg}] \left[\hbox{m} \over \hbox{s}\right]^2 \hbox{\hskip 20pt Mass-to-energy conversion}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.76ex; vertical-align: -2.27ex; " SRC="img153.svg"
+ ALT="$\displaystyle {[\hbox{kg}][\hbox{m}^2] \over [\hbox{s}^2]} = [\hbox{kg}] \left[\hbox{m} \over \hbox{s}\right]^2 \hbox{\hskip 20pt Mass-to-energy conversion}$">
+</DIV><P></P>
+
+<P>
+In all three cases, the unit for energy is the same: kilogram-meter squared per second squared.  This is the fundamental definition of a &ldquo;joule&rdquo; of energy (also equal to a &ldquo;newton-meter&rdquo; of energy), and it is the same result given by all three formulae.
+
+<P>
+<P>
+<SPAN  CLASS="textit">Power</SPAN> is defined as the rate at which work is being done, or the rate at which energy is transferred.  Mathematically expressed, power is the first time-derivative of work (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img85.svg"
+ ALT="$W$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = {dW \over dt}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img154.svg"
+ ALT="$\displaystyle P = {dW \over dt}$">
+</DIV><P></P>
+
+<P>
+The metric unit of measurement for power is the <SPAN  CLASS="textit">watt</SPAN>, defined as one joule of work performed per second of time.  The British unit of measurement for power is the <SPAN  CLASS="textit">horsepower</SPAN>, defined as 550 foot-pounds of work performed per second of time.
+
+<P>
+Although the term &ldquo;power&rdquo; is often colloquially used as a synonym for force or strength, it is in fact a very different concept.  A &ldquo;powerful&rdquo; machine is not necessarily a machine capable of doing a great amount of work, but rather (more precisely) a great amount of work <SPAN  CLASS="textit">in a short amount of time</SPAN>.  Even a &ldquo;weak&rdquo; machine is capable of doing a great amount of work given sufficient time to complete the task.  The &ldquo;power&rdquo; of any machine is the measure of <SPAN  CLASS="textit">how rapidly</SPAN> it may perform work.
+
+<P>
+
+<H2><A ID="SECTION00283000000000000000">
+Mechanical springs</A>
+</H2>
+
+<P>
+<A ID="mechanical_springs"></A>
+<P>
+Many instruments make use of springs to translate force into motion, or vice-versa.  The basic &ldquo;Ohm's Law&rdquo; equation for a mechanical spring relating applied force to spring motion (displacement) is called <SPAN  CLASS="textit">Hooke's Law</SPAN><A ID="tex2html13"
+  HREF="footnode.html#foot2359"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">13</SPAN></SUP></A>:  <A NAME="649"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F = -kx
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.99ex; vertical-align: -0.29ex; " SRC="img156.svg"
+ ALT="$\displaystyle F = -kx$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img3.svg"
+ ALT="$F$"></SPAN> = Force generated by the spring in newtons (metric) or pounds (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img63.svg"
+ ALT="$k$"></SPAN> = Constant of elasticity, or &ldquo;spring constant&rdquo; in newtons per meter (metric) or pounds per foot (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN> = Displacement of spring in meters (metric) or feet (British)
+
+<P>
+<P>
+Hooke's Law is a linear function, just like Ohm's Law is a linear function: doubling the displacement (either tension or compression) doubles the spring's force.  At least this is how springs behave when they are displaced a small percentage of their total length.  If you stretch or compress a spring more substantially, the spring's material will become strained beyond its elastic limit and either yield (permanently deform) or fail (break).
+
+<P>
+The amount of potential energy stored in a tensed spring may be predicted using calculus.  We know that potential energy stored in a spring is the same as the amount of work done on the spring, and work is equal to the product of force and displacement (assuming parallel lines of action for both):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_p = Fx
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img157.svg"
+ ALT="$\displaystyle E_p = Fx$">
+</DIV><P></P>
+
+<P>
+Thus, the amount of work done on a spring is the force applied to the spring (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img155.svg"
+ ALT="$F = kx$"></SPAN>) multiplied by the displacement (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN>).  The problem is, the force applied to a spring varies with displacement and therefore is not constant as we compress or stretch the spring.  A mathematician would say that the spring's force <SPAN  CLASS="textit">is a function of</SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN> because the force varies as <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN> varies.  Thus, in order to calculate the amount of potential energy stored in the spring (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img158.svg"
+ ALT="$E_p = Fx$"></SPAN>), we must calculate the amount of energy stored over infinitesimal amounts of displacement (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img159.svg"
+ ALT="$F \&gt; dx$"></SPAN>, or <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img160.svg"
+ ALT="$kx \&gt; dx$"></SPAN>) and then add those bits of energy up (<SPAN CLASS="MATH"><IMG STYLE="height: 2.76ex; vertical-align: -0.81ex; " SRC="img161.svg"
+ ALT="$\int$"></SPAN>) to arrive at a total:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_p = \int kx \> dx
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.34ex; vertical-align: -2.10ex; " SRC="img162.svg"
+ ALT="$\displaystyle E_p = \int kx \&gt; dx$">
+</DIV><P></P>
+
+<P>
+
+<P>
+We may evaluate this integral using the power rule (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN> is raised to the power of 1 in the integrand):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_p = {1 \over 2} k x^2 + E_0
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="img163.svg"
+ ALT="$\displaystyle E_p = {1 \over 2} k x^2 + E_0$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img114.svg"
+ ALT="$E_p$"></SPAN> = Energy stored in the spring in joules (metric) or foot-pounds (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img63.svg"
+ ALT="$k$"></SPAN> = Constant of elasticity, or &ldquo;spring constant&rdquo; in newtons per meter (metric) or pounds per foot (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN> = Displacement of spring in meters (metric) or feet (British)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img164.svg"
+ ALT="$E_0$"></SPAN> = The constant of integration, representing the amount of energy initially stored in the spring prior to our displacement of it
+
+<P>
+<P>
+For example, if we take a very large spring with a constant <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img63.svg"
+ ALT="$k$"></SPAN> equal to 60 pounds per foot and displace it by 4 feet, we will store 480 foot-pounds of potential energy in that spring (i.e. we will do 480 foot-pounds of work on the spring).
+
+<P>
+Graphing the force-displacement function on a graph yields a straight line (as we would expect, because Hooke's Law is a linear function).  The area accumulated underneath this line from 0 feet to 4 feet represents the integration of that function over the interval of 0 to 4 feet, and thus the amount of potential energy stored in the spring:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{spring_01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.74ex; vertical-align: -0.10ex; " SRC="img165.svg"
+ ALT="$\displaystyle \includegraphics{spring_01.eps}$">
+</DIV><P></P>
+
+<P>
+Note how the geometric interpretation of the shaded area on the graph exactly equals the result predicted by the equation <!-- MATH
+ $E_p = {1 \over 2}kx^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.90ex; vertical-align: -0.90ex; " SRC="img166.svg"
+ ALT="$E_p = {1 \over 2}kx^2$"></SPAN>: the area of a triangle is one-half times the base times the height.  One-half times 4 feet times 240 pounds is 480 foot-pounds.
+
+<P>
+
+<H2><A ID="SECTION00284000000000000000">
+Rotational motion</A>
+</H2>
+
+<P>
+Rotational motion may be quantified in terms directly analogous to linear motion, using different symbols and units.  
+
+<P>
+The rotational equivalent of linear <SPAN  CLASS="textit">force</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img3.svg"
+ ALT="$F$"></SPAN>) is <SPAN  CLASS="textit">torque</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\tau$"></SPAN>).  Linear force and rotational torque are both vector quantities, mathematically related to one another by the radial distance separating the force vector from the centerline of rotation.  To illustrate with a string pulling on the circumference of a wheel:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{rotation_01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 44.52ex; vertical-align: -0.10ex; " SRC="img167.svg"
+ ALT="$\displaystyle \includegraphics{rotation_01.eps}$">
+</DIV><P></P>
+
+<P>
+This relationship may be expressed mathematically as a <SPAN  CLASS="textit">vector cross-product</SPAN>, where the vector directions are shown by the <SPAN  CLASS="textit">right-hand rule</SPAN> (the first vector <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.10ex; " SRC="img168.svg"
+ ALT="$\vec{r}$"></SPAN> is the direction of the index finger, the second vector <SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.10ex; " SRC="img87.svg"
+ ALT="$\vec{F}$"></SPAN> is the direction of the middle finger, and the product vector <!-- MATH
+ $\vec{\tau}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.10ex; " SRC="img169.svg"
+ ALT="$\vec{\tau}$"></SPAN> is the direction of the thumb, with all three vectors perpendicular to each other):  <A NAME="663"></A>  <A NAME="664"></A>  <A NAME="665"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vec{\tau} = \vec{r} \times \vec{F}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.62ex; vertical-align: -0.29ex; " SRC="img170.svg"
+ ALT="$\displaystyle \vec{\tau} = \vec{r} \times \vec{F}$">
+</DIV><P></P>
+
+<P>
+Labeling force, radius, and torque as vectors is the formally correct way of noting the variables in a mechanical system such as this, and is the way college students studying physics typically learn the calculation of torque.  In less academic settings, the force vector (<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.10ex; " SRC="img87.svg"
+ ALT="$\vec{F}$"></SPAN>) is typically labeled as a force along the <SPAN  CLASS="textit">line of action</SPAN>, and the radius vector (<SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.10ex; " SRC="img168.svg"
+ ALT="$\vec{r}$"></SPAN>) is called the <SPAN  CLASS="textit">moment arm</SPAN>, with the line of action and moment arm always being perpendicular to each other.  <A NAME="673"></A>  <A NAME="674"></A>
+
+<P>
+The proper unit of measurement for torque is the product of the force unit and distance unit.  In the metric system, this is customarily the <SPAN  CLASS="textit">Newton-meter</SPAN> (N-m).  In the British system, this is customarily the <SPAN  CLASS="textit">foot-pound</SPAN> (ft-lb) or alternatively the <SPAN  CLASS="textit">pound-foot</SPAN> (lb-ft).  Note that while these are the exact same <SPAN  CLASS="textit">units</SPAN> as those used to express work, they are not the same types of <SPAN  CLASS="textit">quantities</SPAN>.  Torque is a vector cross-product, while work is a <SPAN  CLASS="textit">dot-product</SPAN> (<!-- MATH
+ $W = \vec{F} \cdot \vec{x}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.10ex; " SRC="img109.svg"
+ ALT="$W = \vec{F} \cdot \vec{x}$"></SPAN>).  The cross-product of two vectors is always another vector<A ID="tex2html14"
+  HREF="footnode.html#foot2360"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">14</SPAN></SUP></A>, while the dot-product of two vectors is always a scalar (direction-less) quantity.  Thus, torque always has a direction, whereas work or energy does not.  <A NAME="684"></A>  <A NAME="685"></A>
+
+<P>
+<P>
+
+<P>
+An example calculation applied to a hand wrench turning a bolt appears here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{rotation_03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.94ex; vertical-align: -0.10ex; " SRC="img171.svg"
+ ALT="$\displaystyle \includegraphics{rotation_03.eps}$">
+</DIV><P></P>
+
+<P>
+With the radius and force vectors at right angles to each other, torque is simply the product of both.  In many non-academic settings, torque is calculated this way as a scalar quantity, with the direction of rotation determined by observation rather than by strict adherence to the right-hand rule of vector cross products.  In this example, we see the magnitude of torque as the simple product of 58 pounds force and 0.61 feet of moment arm (35.38 lb-ft of torque), with the torque direction obviously counter-clockwise as viewed from the head of the bolt.
+
+<P>
+
+<P>
+If we apply the same force to the wrench handle at a different angle (not perpendicular to the handle), the resulting torque will be less.  The radius vector (moment arm), however, will still remain perpendicular to the force vector (line of action) &ndash; it just decreases in length.  To determine the placement of the radius vector, all one must do is draw a line straight from the axis of rotation perpendicular to the line of action, then use trigonometry to calculate its magnitude:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{rotation_04.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 36.39ex; vertical-align: -0.10ex; " SRC="img172.svg"
+ ALT="$\displaystyle \includegraphics{rotation_04.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+A very practical example of torque is in the action of meshing gears, transferring mechanical power from one gear to another.  Each gear effectively acts as a wheel, the point of contact between gear teeth acting to transfer force perpendicular to the radius of each gear (wheel).  Thus, torque applied to one gear becomes a linear force at the meshing teeth, which translates into another torque at the second gear:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{machine_12.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 13.74ex; vertical-align: -0.10ex; " SRC="img173.svg"
+ ALT="$\displaystyle \includegraphics{machine_12.eps}$">
+</DIV><P></P>
+
+<P>
+The ratio of torques between two meshing gears is equal to the ratio of gear teeth:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\tau_1 \over \tau_2} = {n_1 \over n_2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.69ex; vertical-align: -2.04ex; " SRC="img174.svg"
+ ALT="$\displaystyle {\tau_1 \over \tau_2} = {n_1 \over n_2}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img175.svg"
+ ALT="$\tau_1$"></SPAN> = Torque of first gear
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img176.svg"
+ ALT="$\tau_2$"></SPAN> = Torque of second gear
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img177.svg"
+ ALT="$n_1$"></SPAN> = Number of teeth on first gear
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img178.svg"
+ ALT="$n_2$"></SPAN> = Number of teeth on second gear
+
+<P>
+<P>
+
+<P>
+For example, if a small gear having 28 teeth meshes with a larger gear having 75 teeth, the torque multiplication factor from the small gear to the large gear will be 75:28, or 2.679 to 1.  A torque of 40 lb-ft applied to the small gear will result in a torque of 107.1 lb-ft or torque generated at the large gear.  This ratio of gear teeth is called the <SPAN  CLASS="textit">gear ratio</SPAN>.  <A NAME="692"></A>
+
+<P>
+As gears multiply torque (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\tau$"></SPAN>), they divide rotational speed (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img179.svg"
+ ALT="$\omega$"></SPAN>).  Thus, the 75:28 tooth gear set creates a multiplication of torque from the small gear to the large gear, and an identical <SPAN  CLASS="textit">reduction ratio</SPAN> of speed from the small gear to the large gear.  Given this ratio, the small gear will have to be turned 2.679 revolutions in order to make the large gear turn just one revolution.
+
+<P>
+We may express gear speeds as another ratio of gear teeth, reciprocated in relation to torque:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\omega_1 \over \omega_2} = {n_2 \over n_1}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.69ex; vertical-align: -2.04ex; " SRC="img180.svg"
+ ALT="$\displaystyle {\omega_1 \over \omega_2} = {n_2 \over n_1}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img181.svg"
+ ALT="$\omega_1$"></SPAN> = Rotational speed of first gear
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img182.svg"
+ ALT="$\omega_2$"></SPAN> = Rotational speed of second gear
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img177.svg"
+ ALT="$n_1$"></SPAN> = Number of teeth on first gear
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img178.svg"
+ ALT="$n_2$"></SPAN> = Number of teeth on second gear
+
+<P>
+<P>
+In a set of meshed gears, the smaller gear will have the least torque and the greatest speed; the larger gear will have the greatest torque and the least speed.
+
+<P>
+This is precisely how gear sets are used in industry: to transform torque and speed in mechanical power systems.  The complementary effects of a gear set on torque and speed is analogous to the complementary effects that a transformer has on AC voltage and current: a <SPAN  CLASS="textit">step-up transformer</SPAN> (having more turns of wire in the secondary coil than in the primary coil) will multiply voltage but reduce (divide) current, both by the same turns ratio.  <A NAME="697"></A>
+
+<P>
+<P>
+
+<P>
+Every quantity of force and motion which may be expressed in linear form has a rotational equivalent.  As we have seen, torque (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\tau$"></SPAN>) is the rotational equivalent of force (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img3.svg"
+ ALT="$F$"></SPAN>).  The following table contrasts equivalent quantities for linear and rotational motion (all units are metric, shown in <SPAN  CLASS="textit">italic</SPAN> font):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Linear quantity, symbol, and unit} & \textbf{Rotational quantity, symbol, and unit} \cr
+\noalign{\hrule }
+Force ($F$) \textit{N} & Torque ($\tau$) \textit{N-m} \cr
+\noalign{\hrule }
+Linear displacement ($x$) \textit{m} & Angular displacement ($\theta$) \textit{radian} \cr
+\noalign{\hrule }
+Linear velocity ($v$) \textit{m/s} & Angular velocity ($\omega$) \textit{rad/s} \cr
+\noalign{\hrule }
+Linear acceleration ($a$) \textit{m/s$^{2}$} & Angular acceleration ($\alpha$) \textit{rad/s$^{2}$} \cr
+\noalign{\hrule }
+Mass ($m$) \textit{kg} & Moment of Inertia ($I$) \textit{kg-m$^{2}$} \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 17.51ex; vertical-align: -0.10ex; " SRC="img183.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+Familiar equations for linear motion have rotational equivalents as well.  For example, Newton's Second Law of motion states, &ldquo;The acceleration of an object is directly proportional to the net force acting upon it and inversely proportional to the object's mass.&rdquo;  We may modify this law for rotational motion by saying, &ldquo;The angular acceleration of an object is directly proportional to the net torque acting upon it and inversely proportional to the object's moment of inertia.&rdquo;  The mathematical expressions of both forms of Newton's Second Law are as follows:  <A NAME="718"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F = ma \hskip 50pt \tau = I \alpha
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img184.svg"
+ ALT="$\displaystyle F = ma \hskip 50pt \tau = I \alpha$">
+</DIV><P></P>
+
+<P>
+The calculus-based relationships between displacement (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$x$"></SPAN>), velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img9.svg"
+ ALT="$v$"></SPAN>), and acceleration (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img5.svg"
+ ALT="$a$"></SPAN>) find parallels in the world of angular motion as well.  Consider the following formula pairs, linear motion on the left and angular motion on the right:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = {dx \over dt} \hbox{\hskip 20pt (Velocity as the time-derivative of displacement) \hskip 20pt} \omega = {d \theta \over dt}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img185.svg"
+ ALT="$\displaystyle v = {dx \over dt} \hbox{\hskip 20pt (Velocity as the time-derivative of displacement) \hskip 20pt} \omega = {d \theta \over dt}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+a = {dv \over dt} \hbox{\hskip 20pt (Acceleration as the time-derivative of velocity) \hskip 20pt} \alpha = {d \omega \over dt}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img186.svg"
+ ALT="$\displaystyle a = {dv \over dt} \hbox{\hskip 20pt (Acceleration as the time-derivative of velocity) \hskip 20pt} \alpha = {d \omega \over dt}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+a = {d^2x \over dt^2} \hbox{\hskip 20pt (Acceleration as the second time-derivative of displacement) \hskip 20pt} \alpha = {d^2 \theta \over dt^2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -1.69ex; " SRC="img187.svg"
+ ALT="$\displaystyle a = {d^2x \over dt^2} \hbox{\hskip 20pt (Acceleration as the second time-derivative of displacement) \hskip 20pt} \alpha = {d^2 \theta \over dt^2}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+An object's &ldquo;moment of inertia&rdquo; represents its angular inertia (opposition to changes in rotational velocity), and is proportional to the object's mass and to the square of its radius.  Two objects having the same mass will have different moments of inertia if there is a difference in the distribution of their mass relative to radius.  Thus, a hollow tube will have a greater moment of inertia than a solid rod of equal mass, assuming an axis of rotation in the center of the tube/rod length:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{rotation_02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 44.13ex; vertical-align: -0.10ex; " SRC="img188.svg"
+ ALT="$\displaystyle \includegraphics{rotation_02.eps}$">
+</DIV><P></P>
+
+<P>
+This is why <SPAN  CLASS="textit">flywheels</SPAN><A ID="tex2html15"
+  HREF="footnode.html#foot730"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">15</SPAN></SUP></A> are designed to be as wide as possible, to maximize their moment of inertia with a minimum of total mass. <A NAME="731"></A>
+
+<P>
+<P>
+The formula describing the amount of work done by a torque acting over an angular displacement is remarkably similar to the formula describing the amount of work done by a force acting over a linear displacement:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = Fx \hskip 50pt W = \tau \theta
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img189.svg"
+ ALT="$\displaystyle W = Fx \hskip 50pt W = \tau \theta$">
+</DIV><P></P>
+
+<P>
+The formula describing the amount of kinetic energy possessed by a spinning object is also similar to the formula describing the amount of energy possessed by a linearly-traveling object:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_k = {1 \over 2} mv^2 \hskip 50pt E_k = {1 \over 2} I \omega^2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.84ex; vertical-align: -1.69ex; " SRC="img190.svg"
+ ALT="$\displaystyle E_k = {1 \over 2} mv^2 \hskip 50pt E_k = {1 \over 2} I \omega^2$">
+</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html359"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html361"
+  HREF="node15.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node11.html">Simple machines</A>
+<B> Up:</B> <A
+ HREF="node2.html">Physics</A>
+<B> Previous:</B> <A
+ HREF="node9.html">Conservation Laws</A>
+ &nbsp; <B>  <A ID="tex2html360"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html362"
+  HREF="node15.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>
