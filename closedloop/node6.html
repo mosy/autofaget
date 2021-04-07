@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Proportional-only control</TITLE>
+<META NAME="description" CONTENT="Proportional-only control">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION00240000000000000000">
+Proportional-only control</A>
+</H1>
+
+<P>
+Imagine a liquid-level control system for a vessel, where the position of a level-sensing float directly sets the stem position of a control valve.  As the liquid level rises, the valve opens up proportionally:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont76.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.97ex; vertical-align: -0.10ex; " SRC="img9.svg"
+ ALT="$\displaystyle \includegraphics{cont76.eps}$">
+</DIV><P></P>
+
+<P>
+Despite its crude mechanical nature, this <SPAN  CLASS="textit">proportional</SPAN> control system would in fact help regulate the level of liquid inside the process vessel.  If an operator wished to change the &ldquo;setpoint&rdquo; value of this level control system, he or she would have to adjust the coupling between the float and valve stems for more or less distance between the two.  Increasing this distance (lengthening the connection) would effectively raise the level setpoint, while decreasing this distance (shortening the connection) would lower the setpoint.
+
+<P>
+
+<P>
+We may generalize the proportional action of this mechanism to describe <SPAN  CLASS="textit">any</SPAN> form of controller where the output is a direct function of process variable (PV) and setpoint (SP):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p e + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="img10.svg"
+ ALT="$\displaystyle m = K_p e + b$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN> = Controller output
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN> = Error (difference between PV and SP)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN> = Proportional gain
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img14.svg"
+ ALT="$b$"></SPAN> = Bias
+
+<P>
+<P>
+A new term introduced with this formula is <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN>, the &ldquo;error&rdquo; or difference between process variable and setpoint.  Error may be calculated as SP<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>PV or as PV<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>SP, depending on whether or not the controller must produce an <SPAN  CLASS="textit">increasing</SPAN> output signal in response to an increase in the process variable (&ldquo;direct&rdquo; acting), or output a <SPAN  CLASS="textit">decreasing</SPAN> signal in response to an increase in the process variable (&ldquo;reverse&rdquo; acting):  <A NAME="120"></A>  <A NAME="121"></A>  <A NAME="122"></A>  <A NAME="123"></A>  <A NAME="124"></A>  
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p (\hbox{PV} - \hbox{SP}) + b \hskip 30pt \hbox{(Direct-acting proportional controller)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img16.svg"
+ ALT="$\displaystyle m = K_p (\hbox{PV} - \hbox{SP}) + b \hskip 30pt \hbox{(Direct-acting proportional controller)}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p (\hbox{SP} - \hbox{PV}) + b \hskip 30pt \hbox{(Reverse-acting proportional controller)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img17.svg"
+ ALT="$\displaystyle m = K_p (\hbox{SP} - \hbox{PV}) + b \hskip 30pt \hbox{(Reverse-acting proportional controller)}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont77.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 25.35ex; vertical-align: -0.10ex; " SRC="img18.svg"
+ ALT="$\displaystyle \includegraphics{cont77.eps}$">
+</DIV><P></P>
+
+<P>
+The optional &ldquo;+&rdquo; and &ldquo;<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>&rdquo; symbols clarify the effect each input has on the controller output: a &ldquo;<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>&rdquo; symbol representing an <SPAN  CLASS="textit">inverting</SPAN> effect and a &ldquo;+&rdquo; symbol representing a <SPAN  CLASS="textit">noninverting</SPAN> effect.  When we say that a controller is &ldquo;direct-acting&rdquo; or &ldquo;reverse-acting&rdquo; we are referring to it reaction to the PV signal, therefore the output signal from a &ldquo;direct-acting&rdquo; controller goes in the same direction as the PV signal and the output from a &ldquo;reverse-acting&rdquo; controller goes in the opposite direction of its PV signal.  It is important to note, however, that the response to a change in setpoint (SP) will yield the <SPAN  CLASS="textit">opposite</SPAN> response as does a change in process variable (PV): a rising SP will drive the output of a direct-acting controller <SPAN  CLASS="textit">down</SPAN> while a rising SP drives the output of a reverse-acting controller <SPAN  CLASS="textit">up</SPAN>.  &ldquo;+&rdquo; and &ldquo;<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>&rdquo; symbols explicitly show the effect both inputs have on the controller output, helping to avoid confusion when analyzing the effects of PV changes versus the effects of SP changes.
+
+<P>
+
+<P>
+The direction of action required of the controller is determined by the nature of the process, transmitter, and final control element.  In the case of the crude mechanical level controller, the action needs to be <SPAN  CLASS="textit">direct</SPAN> so that a greater liquid level will result in a further-open control valve to drain the vessel faster.  In the case of the automated heat exchanger shown earlier, we are assuming that an increasing output signal sent to the control valve results in increased steam flow, and consequently higher temperature, so our controller will need to be reverse-acting (i.e. an increase in measured temperature results in a decrease in output signal; error calculated as SP<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>PV): 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont04.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 60.19ex; vertical-align: -0.10ex; " SRC="img4.svg"
+ ALT="$\displaystyle \includegraphics{cont04.eps}$">
+</DIV><P></P>
+
+<P>
+After the error has been calculated, the controller then multiplies the error signal by a constant value called the <SPAN  CLASS="textit">gain</SPAN>, which is programmed into the controller.  The resulting figure, plus a &ldquo;bias&rdquo; quantity, becomes the output signal sent to the valve to proportion it.  The &ldquo;gain&rdquo; value is exactly what it seems to be for anyone familiar with electronic amplifier circuits: a ratio of output to input.  In this case, the gain of a proportional controller is the ratio of output signal change to input signal change, or how <SPAN  CLASS="textit">aggressive</SPAN> the controller reacts to changes in input (PV or SP). <A NAME="141"></A> <A NAME="142"></A>
+
+<P>
+To give a numerical example, a loop controller set to have a gain of 4 will change its output signal by 40% if it sees an input change of 10%: the ratio of output change to input change will be 4:1.  Whether the input change comes in the form of a setpoint adjustment, a drift in the process variable, or some combination of the two does not matter to the magnitude of the output change.
+
+<P>
+The bias value of a proportional controller is simply the value of its output whenever process variable happens to be equal to setpoint (i.e. a condition of zero <SPAN  CLASS="textit">error</SPAN>).  Without a bias term in the proportional control formula, the valve would always return to a fully shut (0%) condition if ever the process variable reached the setpoint value.  The bias term allows the final control element to achieve a non-zero state at setpoint.
+
+<P>
+<P>
+If the controller could be configured for infinite gain, its response would duplicate on/off control.  That is, <SPAN  CLASS="textit">any</SPAN> amount of error will result in the output signal becoming &ldquo;saturated&rdquo; at either 0% or 100%, and the final control element will simply turn on fully when the process variable drops below setpoint and turn off fully when the process variable rises above setpoint.  Conversely, if the controller is set for zero gain, it will become completely unresponsive to changes in either process variable <SPAN  CLASS="textit">or</SPAN> setpoint: the valve will hold its position at the bias point no matter what happens to the process.
+
+<P>
+Obviously, then, we must set the gain somewhere between infinity and zero in order for this algorithm to function any better than on/off control.  Just how much gain a controller needs to have depends on the process and all the other instruments in the control loop.  
+
+<P>
+<P>
+If the gain is set too high, there will be oscillations as the PV converges on a new setpoint value:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont09.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img19.svg"
+ ALT="$\displaystyle \includegraphics{cont09.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+If the gain is set too low, the process response will be stable under steady-state conditions but relatively slow to respond to changes in setpoint, as shown in the following trend recording:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont10.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img20.svg"
+ ALT="$\displaystyle \includegraphics{cont10.eps}$">
+</DIV><P></P>
+
+<P>
+A characteristic deficiency of proportional control action, exacerbated with low controller gain values, is a phenomenon known as <SPAN  CLASS="textit">proportional-only offset</SPAN> where the PV never fully reaches SP.  A full explanation of proportional-only offset is too lengthy for this discussion and will be presented in a subsequent section of the book, but may be summarized here simply by drawing attention to the proportional controller equation which tells us the output always returns to the bias value when PV reaches SP (i.e. <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img21.svg"
+ ALT="$m = b$"></SPAN> when PV = SP).  If anything changes in the process to require a different output value than the bias (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img14.svg"
+ ALT="$b$"></SPAN>) to stabilize the PV, an error between PV and SP <SPAN  CLASS="textit">must</SPAN> develop to drive the controller output to that necessary output value.  This means it is only by chance that the PV will settle precisely at the SP value &ndash; most of the time, the PV will deviate from SP in order to generate an output value sufficient to stabilize the PV and prevent it from drifting.  This persistent error, or offset, worsens as the controller gain is reduced.  Increasing controller gain causes this offset to decrease, but at the expense of oscillations.
+
+<P>
+
+<P>
+With proportional-only control, the choice of gain values is really a compromise between excessive oscillations and excessive offset.  A well-tuned proportional controller response is shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont11.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img22.svg"
+ ALT="$\displaystyle \includegraphics{cont11.eps}$">
+</DIV><P></P>
+
+<P>
+An unnecessarily confusing aspect of proportional control is the existence of two completely different ways to express controller proportionality.  In the proportional-only equation shown earlier, the degree of proportional action was specified by the constant <SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>, called <SPAN  CLASS="textit">gain</SPAN>.  However, there is another way to express the sensitivity of proportional action, and that is to state the percentage of error change necessary to make the output (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN>) change by 100%.  Mathematically, this is the inverse of gain, and it is called <SPAN  CLASS="textit">proportional band</SPAN> (PB):  <A NAME="153"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+K_p = {1 \over \hbox{PB}} \hskip 30pt \hbox{PB} = {1 \over K_p}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.48ex; vertical-align: -2.34ex; " SRC="img23.svg"
+ ALT="$\displaystyle K_p = {1 \over \hbox{PB}} \hskip 30pt \hbox{PB} = {1 \over K_p}$">
+</DIV><P></P>
+
+<P>
+Gain is always specified as a unitless value<A ID="tex2html2"
+  HREF="footnode.html#foot1052"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>, whereas proportional band is always specified as a percentage.  For example, a gain value of 2.5 is equivalent to a proportional band value of 40%, because the error input to this controller must change by 40% in order to make the output change a full 100%.
+
+<P>
+
+<P>
+Due to the existence of these two completely opposite conventions for specifying proportional action, you may see the proportional term of the control equation written differently depending on whether the author assumes the use of gain or the use of proportional band:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\quad\hfil # \ \hfil &
+\quad\hfil # \ \hfil \cr
+$K_p$ = gain & PB = proportional band \cr
+\noalign{\vskip 5pt}
+$K_p e$  &  ${1 \over \hbox{PB}} e$ \cr
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.05ex; vertical-align: -1.24ex; " SRC="img24.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\quad\hfil  ...">
+</DIV><P></P> 
+<P>
+Many modern digital electronic controllers allow the user to conveniently select the unit they wish to use for proportional action.  However, even with this ability, anyone tasked with adjusting a controller's &ldquo;tuning&rdquo; values may be required to translate between gain and proportional band, especially if certain values are documented in a way that does not match the unit configured for the controller.  
+
+<P>
+When you communicate the proportional action setting of a process controller, you should always be careful to specify either &ldquo;gain&rdquo; or &ldquo;proportional band&rdquo; to avoid ambiguity.  <SPAN  CLASS="textit">Never</SPAN> simply say something like, &ldquo;The proportional setting is twenty,&rdquo; for this could mean either:
+
+<P>
+
+<UL>
+<LI>Proportional band = 20%; Gain = 5 <SPAN  CLASS="textit">. . . or . . .</SPAN>
+</LI>
+<LI>Gain = 20; Proportional band = 5%
+</LI>
+</UL>
+
+<P>
+As you can see here, the real-life difference in controller response to an input disturbance (wave) depending on whether it has a proportional band of 20% or a gain of 20 is quite dramatic:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont87.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 55.16ex; vertical-align: -0.10ex; " SRC="img25.svg"
+ ALT="$\displaystyle \includegraphics{cont87.eps}$">
+</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html274"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html276"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node7.html">Proportional-only offset</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node5.html">On/off control</A>
+ &nbsp; <B>  <A ID="tex2html275"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html277"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

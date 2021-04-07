@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Practical PID controller features</TITLE>
+<META NAME="description" CONTENT="Practical PID controller features">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html351"
+  HREF="node16.html#SECTION002141000000000000000">Manual and automatic modes</A>
+<LI><A ID="tex2html352"
+  HREF="node16.html#SECTION002142000000000000000">Output and setpoint tracking</A>
+<LI><A ID="tex2html353"
+  HREF="node16.html#SECTION002143000000000000000">Alarm capabilities</A>
+<LI><A ID="tex2html354"
+  HREF="node16.html#SECTION002144000000000000000">Output and setpoint limiting</A>
+<LI><A ID="tex2html355"
+  HREF="node16.html#SECTION002145000000000000000">Security</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION002140000000000000000">
+Practical PID controller features</A>
+</H1>
+
+<P>
+In order for any PID controller to be practical, it must be able to do more than just implement the PID equation.  This section identifies and explains some of the basic features found on most (but not all!) modern PID controllers:
+
+<P>
+
+<UL>
+<LI>Manual versus Automatic mode
+</LI>
+<LI>Output tracking
+</LI>
+<LI>Setpoint tracking
+</LI>
+<LI>Alarming
+</LI>
+<LI>PV characterization and damping 
+</LI>
+<LI>Setpoint limits
+</LI>
+<LI>Output limits
+</LI>
+<LI>PID tuning security
+</LI>
+</UL>
+
+<P>
+
+<H2><A ID="SECTION002141000000000000000">
+Manual and automatic modes</A>
+</H2>
+
+<P>
+When a controller continually calculates output values based on PV and SP values over time, it is said to be operating in <SPAN  CLASS="textit">automatic</SPAN> mode.  This mode, of course, is what is necessary to regulate any process.  There are times, however, when it is desirable to allow a human operator to manually &ldquo;override&rdquo; the automatic action of the PID controller.  Applicable instances include process start-up and shut-down events, emergencies, and maintenance procedures.  A controller that is being &ldquo;overridden&rdquo; by a human being is said to be in <SPAN  CLASS="textit">manual mode</SPAN>.  <A NAME="823"></A>  <A NAME="824"></A>
+
+<P>
+A very common application of manual mode is during maintenance of the sensing element or transmitter.  If an instrument technician needs to disconnect a process transmitter for calibration or replacement, the controller receiving that transmitter's signal cannot be left in automatic mode.  If it is, then the controller may<A ID="tex2html41"
+  HREF="footnode.html#foot825"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">41</SPAN></SUP></A> take sudden corrective action the moment the transmitter's signal goes dead.  If the controller is first placed in manual mode before the technician disconnects the transmitter, however, the controller will ignore any changes in the PV signal, letting its output signal be adjusted at will by the human operator.  If there is another indicator of the same process variable as the one formerly reported by the disconnected transmitter, the human operator may elect to read that other indicator and play the part of a PID controller, manually adjusting the final control element to maintain the alternate indicator at setpoint while the technician completes the transmitter's maintenance.
+
+<P>
+<P>
+An extension of this &ldquo;mode&rdquo; concept applies to controllers configured to receive a setpoint from another device (called a <SPAN  CLASS="textit">remote</SPAN> or <SPAN  CLASS="textit">cascaded</SPAN> setpoint).  In addition to an automatic and a manual mode selection, a third selection called <SPAN  CLASS="textit">cascade</SPAN> exists to switch the controller's setpoint from human operator control to remote (or &ldquo;cascade&rdquo;) control.  <A NAME="829"></A>  <A NAME="830"></A>  <A NAME="831"></A>
+
+<P>
+
+<H2><A ID="SECTION002142000000000000000">
+Output and setpoint tracking</A>
+</H2>
+
+<P>
+The provision of manual and automatic operating modes creates a set of potential problems for the PID controller.  If, for example, a PID controller is switched from automatic to manual mode by a human operator, and then the output is manually adjusted to some new value, what will the output value do when the controller is switched <SPAN  CLASS="textit">back</SPAN> to automatic mode?  In some crude PID controller designs, the result would be an immediate &ldquo;jump&rdquo; back to the output value calculated by the PID equation while the controller was in manual.  In other words, some controllers never stop evaluating the PID equation &ndash; even while in manual mode &ndash; and will default to that automatically-calculated output value when the operating mode is switched from manual to automatic.
+
+<P>
+This can be very frustrating to the human operator, who may wish to use the controller's manual mode as a way to change the controller's bias value.  Imagine, for example, that a PD controller (no integral action) is operating in automatic mode at some low output value, which happens to be too low to achieve the desired setpoint.  The operator switches the controller to manual mode and then raises the output value, allowing the process variable to approach setpoint.  When PV nearly equals SP, the operator switches the controller's mode back to automatic, expecting the PID equation to start working again from this new starting point.  In a crude controller, however, the output would jump back to some lower value, right where the PD equation would have placed it for these PV and SP conditions.
+
+<P>
+A feature designed to overcome this problem &ndash; which is so convenient that I consider it an essential feature of any controller with a manual mode &ndash; is called <SPAN  CLASS="textit">output tracking</SPAN>.  With output tracking, the bias value of the controller shifts every time the controller is placed into manual mode and the output value manually changed.  Thus, when the controller is switched from manual mode to automatic mode, the output does <SPAN  CLASS="textit">not</SPAN> immediately jump to some previously-calculated value, but rather &ldquo;picks up&rdquo; from the last manually-set value and begins to control from that point as dictated by the PID equation.  In other words, output tracking allows a human operator to arbitrarily offset the output of a PID controller by switching to manual mode, adjusting the output value, and then switching back to automatic mode.  The output will continue its automatic action from this new starting point instead of the old starting point.  <A NAME="836"></A>
+
+<P>
+A very important application of output tracking is in the manual correction of integral wind-up (sometimes called <SPAN  CLASS="textit">reset windup</SPAN> or just <SPAN  CLASS="textit">windup</SPAN>).  This is what happens to a controller with integral action if for some reason the process variable <SPAN  CLASS="textit">cannot</SPAN> achieve setpoint no matter how far the output signal value is driven by integral action.  An example might be on a temperature controller where the source of heat for the process is a steam system.  If the steam system shuts down, the temperature controller <SPAN  CLASS="textit">cannot</SPAN> warm the process up to the temperature setpoint value no matter how far open the steam valve is driven by integral action.  If the steam system is shut down for too long, the result will be a controller output saturated at maximum value in a futile attempt to warm the process.  If and when the steam system starts back up, the controller's saturated output will now send <SPAN  CLASS="textit">too much heating steam</SPAN> to the process, causing the process temperature to overshoot setpoint until integral action drives the output signal back down to some reasonable level.  This situation may be averted, however, if the operator switches the temperature controller to manual mode as soon as the steam system shuts down.  Even if this preventive step is not taken, the problem of overshoot may be averted upon steam system start-up if the operator uses output tracking by quickly switching the controller into manual mode, adjusting the output down to a reasonable level, and then switching back into automatic mode so that the controller's output value is no longer &ldquo;wound up&rdquo; at a high level<A ID="tex2html42"
+  HREF="footnode.html#foot842"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">42</SPAN></SUP></A>.   <A NAME="843"></A> <A NAME="844"></A> <A NAME="845"></A>
+
+<P>
+<P>
+A similar feature to output tracking &ndash; also designed for the convenience of a human operator switching a PID controller between automatic and manual modes &ndash; is called <SPAN  CLASS="textit">setpoint tracking</SPAN>.  The purpose of setpoint tracking is to equalize SP and PV while the controller is in manual mode, so that when the controller gets switched back into automatic mode, it will begin its automatic operation with no error (PV = SP).  <A NAME="847"></A>
+
+<P>
+This feature is most useful during system start-ups, where the controller may have difficulty controlling the process in automatic mode under unusual conditions.  Operators often prefer to run certain control loops in manual mode from the time of initial start-up until such time that the process is near normal operating conditions.  At that point, when the operator is content with the stability of the process, the controller is assigned the responsibility of maintaining the process at setpoint.  With setpoint tracking present in the controller, the controller's SP value will be held equal to the PV value (whatever that value happens to be) for the entire time the controller is in manual mode.  Once the operator decides it is proper to switch the controller into automatic mode, the SP value freezes at that last manual-mode PV value, and the controller will continue to control the PV at that SP value.  Of course, the operator is free to adjust the SP value to any new value while the controller is in automatic mode, but this is at the operator's discretion.
+
+<P>
+Without setpoint tracking, the operator would <SPAN  CLASS="textit">have to</SPAN> make a setpoint adjustment either before or after switching the controller from manual mode to automatic mode, in order to ensure the controller was properly set up to maintain the process variable at the desired value.  With setpoint tracking, the setpoint value will default to the process variable value when the controller was last in manual mode, which (it is assumed) will be close enough to the desired value to suffice for continued operation.
+
+<P>
+Unlike output tracking, for which there is virtually no reason not to have the feature present in a PID controller, there may very well be applications where we do not wish to have setpoint tracking.  For some processes<A ID="tex2html43"
+  HREF="footnode.html#foot849"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">43</SPAN></SUP></A>, the setpoint value <SPAN  CLASS="textit">should</SPAN> remain fixed at all times, and as such it would be undesirable to have the setpoint value drift around with the process variable value every time the controller was placed into manual mode.
+
+<P>
+
+<H2><A ID="SECTION002143000000000000000">
+Alarm capabilities</A>
+</H2>
+
+<P>
+A common feature on many instrument systems is the ability to alert personnel to the onset of abnormal process conditions.  The general term for this function is <SPAN  CLASS="textit">alarm</SPAN>.  Process alarms may be triggered by process switches directly sensing abnormal conditions (e.g. high-temperature switches, low-level alarms, low-flow alarms, etc.), in which case they are called <SPAN  CLASS="textit">hard alarms</SPAN>.  A <SPAN  CLASS="textit">soft alarm</SPAN>, by contrast, is an alarm triggered by some continuous measurement (i.e. a signal from a process transmitter rather than a process switch) exceeding a pre-programmed alarm limit value.  <A NAME="855"></A>  <A NAME="856"></A>  <A NAME="857"></A>  <A NAME="858"></A>
+
+<P>
+Since PID controllers are designed to input continuous process measurements, it makes sense that a controller could be equipped with programmable alarm limit values as well, to provide &ldquo;soft&rdquo; alarm capability without adding additional instruments to the loop<A ID="tex2html44"
+  HREF="footnode.html#foot859"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">44</SPAN></SUP></A>.  Not only is PV alarming easy to implement in most PID controllers, but <SPAN  CLASS="textit">deviation</SPAN> alarming is easy to implement as well.  A &ldquo;deviation alarm&rdquo; is a soft alarm triggered by excessive deviation (error) between PV and SP.  Such an event indicates control problems, since a properly-operating feedback loop should be able to maintain reasonable agreement between PV and SP at all times.  <A NAME="861"></A>
+
+<P>
+Alarm capabilities find their highest level of refinement in modern distributed control systems (DCS), where the networked digital controllers of a DCS provide convenient access and advanced management of hard and soft alarms alike.  Not only can alarms be accessed from virtually any location in a facility in a DCS, but they are usually time-stamped and archived for later analysis, which is an <SPAN  CLASS="textit">extremely</SPAN> important feature for the analysis of emergency events, and the continual improvement of process safety.
+
+<P>
+
+<H2><A ID="SECTION002144000000000000000">
+Output and setpoint limiting</A>
+</H2>
+
+<P>
+In some process applications, it may not be desirable to allow the controller to automatically manipulate the final control element (control valve, variable-speed motor, heater) over its full 0% - 100% range.  In such applications, a useful controller feature is an <SPAN  CLASS="textit">output limit</SPAN>.  For example, a PID flow controller may be configured to have a minimum output limit of 5%, so that it is not able to close the control valve any further than the 5% open position in order to maintain &ldquo;minimum flow&rdquo; through a pump.  The valve may still be fully closed (0% stem position) in manual mode, but just not in automatic mode<A ID="tex2html45"
+  HREF="footnode.html#foot865"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">45</SPAN></SUP></A>.  <A NAME="866"></A>
+
+<P>
+Similarly, setpoint values may be internally limited in some PID controllers, such that an operator cannot adjust the setpoint above some limiting value or below some other limiting value.  In the event that the process variable <SPAN  CLASS="textit">must</SPAN> be driven outside these limits, the controller may be placed in manual mode and the process &ldquo;manually&rdquo; guided to the desired state by an operator.
+
+<P>
+
+<H2><A ID="SECTION002145000000000000000">
+Security</A>
+</H2>
+
+<P>
+There is justifiable reason to prevent certain personnel from having access to certain parameters and configurations on PID controllers.  Certainly, operations personnel need access to setpoint adjustments and automatic/manual mode controls, but it may be unwise to grant those same operators unlimited access to PID tuning constants and output limits.  Similarly, instrument technicians may require access to a PID controller's tuning parameters, but perhaps should be restricted from editing configuration programs maintained by the engineering staff.
+
+<P>
+Most digital PID controllers have some form of security access control, allowing for different levels of permission in altering PID controller parameters and configurations.  Security may be crude (a hidden switch located on a printed circuit board, which only the maintenance personnel should know about), sophisticated (login names and passwords, like a multi-user computer system), or anything in between, depending on the level of development invested in the feature by the controller's manufacturer.
+
+<P>
+An interesting solution to the problem of security in the days of analog control systems was the architecture of Foxboro's SPEC 200 analog electronic control system.  The controller displays, setpoint adjustments, and auto/manual mode controls were located on the control room panel where anyone could access them.  All other adjustments (PID settings, alarm settings, limit settings) could be located in the <SPAN  CLASS="textit">nest</SPAN> area where all the analog circuit control cards resided.  Since the &ldquo;nest&rdquo; racks could be physically located in a room separate from the control room, personnel access to the nest room served as access security to these system parameters.  <A NAME="870"></A>  <A NAME="871"></A>
+
+<P>
+<P>
+At first, the concept of controller parameter security may seen distrustful and perhaps even insulting to those denied access, especially when the denied persons possess the necessary knowledge to understand the functions and consequences of those parameters.  It is not uncommon for soft alarm values to be &ldquo;locked out&rdquo; from operator access despite the fact that operators understand very well the purpose and functions of these alarms.  At some facilities, PID tuning is the exclusive domain of process engineers, with instrument technicians and operators alike barred from altering PID tuning constants even though some operators and many technicians may well understand PID controller tuning.
+
+<P>
+When considering security access, there is more to regard than just knowledge or ability.  At a fundamental level, security is a task of limiting access commensurate with <SPAN  CLASS="textit">responsibility</SPAN>.  In other words, security restrictions exist to exclude those not charged with particular responsibilities.  Knowledge and ability are necessary conditions of responsibility (i.e. one cannot reasonably be held responsible for something beyond their knowledge or control), but they are not <SPAN  CLASS="textit">sufficient</SPAN> conditions of responsibility (i.e. knowing how to, and being able to perform a task does not confer responsibility for that task getting completed).  An operator may very well understand how and why a soft alarm on a controller works, but the responsibility for altering the alarm value may reside with someone else whose job description it is to ensure the alarm values correspond to plant-wide policies.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html347"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html349"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node17.html">Digital PID algorithms</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node15.html">Digital PID controllers</A>
+ &nbsp; <B>  <A ID="tex2html348"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html350"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

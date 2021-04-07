@@ -1,0 +1,583 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Digital PID algorithms</TITLE>
+<META NAME="description" CONTENT="Digital PID algorithms">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html360"
+  HREF="node17.html#SECTION002151000000000000000">Introduction to pseudocode</A>
+<UL>
+<LI><A ID="tex2html361"
+  HREF="node17.html#SECTION002151100000000000000">Program loops</A>
+<LI><A ID="tex2html362"
+  HREF="node17.html#SECTION002151200000000000000">Assigning values</A>
+<LI><A ID="tex2html363"
+  HREF="node17.html#SECTION002151300000000000000">Testing values (conditional statements)</A>
+<LI><A ID="tex2html364"
+  HREF="node17.html#SECTION002151400000000000000">Branching and functions</A>
+</UL>
+<BR>
+<LI><A ID="tex2html365"
+  HREF="node17.html#SECTION002152000000000000000">Position versus velocity algorithms</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION002150000000000000000">
+Digital PID algorithms</A>
+</H1>
+
+<P>
+Instrument technicians should not have to concern themselves over the programming details internal to digital PID controllers.  Ideally, a digital PID controller should simply perform the task of executing PID control with all the necessary features (setpoint tracking, output limiting, etc.) without the end-user having to know anything about those details.  However, in my years of experience I have seen enough examples of poor PID implementation to warrant an explanatory section in this book, both so instrumentation professionals may recognize poor PID implementation when they see it, and also so those with the responsibility of designing PID algorithms may avoid some common mistakes.
+
+<P>
+
+<H2><A ID="SECTION002151000000000000000">
+Introduction to pseudocode</A>
+</H2>
+
+<P>
+<A ID="pseudocode"></A>
+<P>
+In order to show digital algorithms, I will use a form of notation called <SPAN  CLASS="textit">pseudocode</SPAN>: a text-based language instructing a digital computing device to implement step-by-step procedures.  &ldquo;Pseudocode&rdquo; is written to be easily read and understood by human beings, yet similar enough in syntax and structure to real computer programming languages for a human programmer to be able to easily translate to a high-level programming language such as BASIC, C++, or Java.  Since pseudocode is not a formal computer language, we may use it to very efficiently describe certain algorithms (procedures) without having to abide by strict &ldquo;grammatical&rdquo; rules as we would if writing in a formal language such as BASIC, C++, or Java.  <A NAME="878"></A>
+
+<P>
+
+<H3><A ID="SECTION002151100000000000000">
+Program loops</A>
+</H3>
+
+<P>
+Each line of text in the following listing represents a command for the digital computer to follow, one by one, in order from top to bottom.  The <SPAN  CLASS="texttt">LOOP</SPAN> and <SPAN  CLASS="texttt">ENDLOOP</SPAN> markers represent the boundaries of a program <SPAN  CLASS="textit">loop</SPAN>, where the same set of encapsulated commands are executed over and over again in cyclic fashion:  <A NAME="883"></A>
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Pseudocode listing</SPAN> <A ID="tex2html46"
+  HREF="footnode.html#foot885"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">46</SPAN></SUP></A>
+<P>
+language=pseudocode
+<BR>
+<IMG STYLE=""
+ SRC="img220.svg"
+ ALT="\begin{lstlisting}
+LOOP
+PRINT ''Hello World!'' // This line prints text to the ...
+...ible beep on the speaker // This line beeps the speaker
+ENDLOOP
+\end{lstlisting}">
+<BR>
+
+<P>
+<P>
+In this particular case, the result of this program's execution is a continuous printing of the words &ldquo;Hello World!&rdquo; to the computer's display with a single &ldquo;beep&rdquo; tone accompanying each printed line.  The words following a double-slash (//) are called <SPAN  CLASS="textit">comments</SPAN>, and exist only to provide explanatory text for the human reader, not the computer.  Admittedly, this example program would be both impractical and annoying to actually run in a computer, but it does serve to illustrate the basic concept of a program &ldquo;loop&rdquo; shown in pseudocode.
+
+<P>
+
+<H3><A ID="SECTION002151200000000000000">
+Assigning values</A>
+</H3>
+
+<P>
+For another example of pseudocode, consider the following program.  This code causes a variable (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN>) in the computer's memory to alternate between two values of 0 and 2 indefinitely:  <A NAME="891"></A>
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Pseudocode listing</SPAN>
+
+<P>
+language=pseudocode
+<BR>
+<IMG STYLE=""
+ SRC="img222.svg"
+ ALT="\begin{lstlisting}
+DECLARE x to be an integer variable
+SET x = 2 // Initializing...
+...lternates the value of x with each pass
+SET x = 2 - x
+ENDLOOP
+\end{lstlisting}">
+<BR>
+
+<P>
+<P>
+The first instruction in this listing declares the type of variable <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> will be.  In this case, <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> will be an <SPAN  CLASS="textit">integer</SPAN> variable, which means it may only represent whole-number quantities and their negative counterparts &ndash; no other values (e.g. fractions, decimals) are possible.  If we wished to limit the scope of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> even further to represent just 0 or 1 (i.e. a single bit), we would have to declare it as a <SPAN  CLASS="textit">Boolean</SPAN> variable.  If we required <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> to be able to represent fractional values as well, we would have to declare it as a <SPAN  CLASS="textit">floating-point</SPAN> variable.  Variable declarations are important in computer programming because it instructs the computer how much space in its random-access memory to allocate to each variable, which necessarily limits the range of numbers each variable may represent.  <A NAME="899"></A>  <A NAME="900"></A>  <A NAME="901"></A>
+
+<P>
+The next instruction initializes <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> to a value of two.  Like the declaration, this instruction need only happen once at the beginning of the program's execution, and never again so long as the program continues to run.  The single <SPAN  CLASS="texttt">SET</SPAN> statement located between the <SPAN  CLASS="texttt">LOOP</SPAN> and <SPAN  CLASS="texttt">ENDLOOP</SPAN> markers, however, repeatedly executes as fast as the computer's processor allows, causing <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> to rapidly alternate between the values of two and zero.
+
+<P>
+It should be noted that the &ldquo;equals&rdquo; sign (<SPAN CLASS="MATH"><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img223.svg"
+ ALT="$=$"></SPAN>) in computer programming often has a different meaning from that commonly implied in ordinary mathematics.  When used in conjunction with the <SPAN  CLASS="texttt">SET</SPAN> command, an &ldquo;equals&rdquo; sign <SPAN  CLASS="textit">assigns</SPAN> the value of the right-hand quantity to the left-hand variable.  For example, the command <SPAN  CLASS="texttt">SET x = 2 <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> x</SPAN> tells the computer to first calculate the quantity <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img224.svg"
+ ALT="$2 - x$"></SPAN> and then set the variable <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> to this new value.  It definitely does <SPAN  CLASS="textit">not</SPAN> mean to imply <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> is actually equal in value to <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img224.svg"
+ ALT="$2 - x$"></SPAN>, which would be a mathematical contradiction.  Thus, you should interpret the <SPAN  CLASS="texttt">SET</SPAN> command to mean &ldquo;set equal to . . .&rdquo;
+
+<P>
+
+<H3><A ID="SECTION002151300000000000000">
+Testing values (conditional statements)</A>
+</H3>
+
+<P>
+If we mean to simply test for an equality between two quantities, we may use the same symbol (<SPAN CLASS="MATH"><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img223.svg"
+ ALT="$=$"></SPAN>) in the context of a different command, such as &ldquo;<SPAN  CLASS="texttt">IF</SPAN>&rdquo;:  <A NAME="912"></A>
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Pseudocode listing</SPAN>
+
+<P>
+language=pseudocode
+<BR>
+<IMG STYLE=""
+ SRC="img225.svg"
+ ALT="\begin{lstlisting}
+DECLARE x to be an integer variable
+\par
+LOOP
+\par
+// (other ...
+...umber is 5''
+OUTPUT audible beep on the speaker
+ENDIF
+ENDLOOP
+\end{lstlisting}">
+<BR>
+
+<P>
+<P>
+This program repeatedly tests whether or not the variable <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> is equal to 5, printing a line of text and producing a &ldquo;beep&rdquo; on the computer's speaker if that test evaluates as true.  Here, the context of the <SPAN  CLASS="texttt">IF</SPAN> command tells us the equals sign is a test for equality rather than a command to assign a new value to <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN>.  If the condition is met (<SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="img226.svg"
+ ALT="$x = 5$"></SPAN>) then all commands contained within the <SPAN  CLASS="texttt">IF</SPAN>/<SPAN  CLASS="texttt">ENDIF</SPAN> set are executed.
+
+<P>
+Some programming languages draw a more explicit distinction between the operations of equality test versus assignment by using different symbol combinations.  In C and C++, for example, a single equals sign (<SPAN CLASS="MATH"><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img223.svg"
+ ALT="$=$"></SPAN>) represents assignment while a double set of equals signs (<SPAN CLASS="MATH"><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img227.svg"
+ ALT="$==$"></SPAN>) represents a test for equality.  In Structured Text (ST) PLC programming, a single equals sign (<SPAN CLASS="MATH"><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img223.svg"
+ ALT="$=$"></SPAN>) represents a test for equality, while a colon plus equals sign (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img228.svg"
+ ALT="$:=$"></SPAN>) represents assignment.  The combination of an exclamation point and an equals sign (!=) represents &ldquo;not equal to,&rdquo; used as a test condition to check for <SPAN  CLASS="textit">inequality</SPAN> between two quantities.
+
+<P>
+
+<H3><A ID="SECTION002151400000000000000">
+Branching and functions</A>
+</H3>
+
+<P>
+A very important feature of any programming language is the ability for the path of execution to change (i.e. the program &ldquo;flow&rdquo; to <SPAN  CLASS="textit">branch</SPAN> in another direction) rather than take the exact same path every time.  We saw shades of this with the <SPAN  CLASS="texttt">IF</SPAN> statement in our previous example program: the computer would print some text and output a beep sound if the variable <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> happened to be equal to 5, but would completely skip the <SPAN  CLASS="texttt">PRINT</SPAN> and <SPAN  CLASS="texttt">OUTPUT</SPAN> commands if <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> happened to be any other value.  <A NAME="926"></A>
+
+<P>
+An elegant way to modularize a program into separate pieces involves writing portions of the program as separate <SPAN  CLASS="textit">functions</SPAN> which may be &ldquo;called&rdquo; as needed by the main program.  Let us examine how to apply this concept to the following conditional program:
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Pseudocode listing</SPAN>
+
+<P>
+language=pseudocode
+<BR>
+<IMG STYLE=""
+ SRC="img229.svg"
+ ALT="\begin{lstlisting}
+DECLARE x to be an integer variable
+\par
+LOOP
+\par
+// (other ...
+...mber is 11''
+OUTPUT audible beep on the speaker
+ENDIF
+ENDLOOP
+\end{lstlisting}">
+<BR>
+
+<P>
+<P>
+This program takes action (printing and outputting beeps) if ever the variable <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> equals either 5, 7, or 11, but not for any other values of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN>.  The actions taken with each condition are quite similar: print the numerical value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> and output a single beep.  In fact, one might argue this code is ugly because we have to keep repeating one of the commands verbatim: the <SPAN  CLASS="texttt">OUTPUT</SPAN> command for each condition where we wish to computer to output a beep sound.
+
+<P>
+
+<P>
+We may streamline this program by placing the <SPAN  CLASS="texttt">PRINT</SPAN> and <SPAN  CLASS="texttt">OUTPUT</SPAN> commands into their own separate &ldquo;function&rdquo; written outside the main loop, and then <SPAN  CLASS="textit">call</SPAN> that function whenever we need it.  The boundaries of this function's code are marked by the <SPAN  CLASS="texttt">BEGIN</SPAN> and <SPAN  CLASS="texttt">END</SPAN> labels shown near the bottom of the listing:
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Pseudocode listing</SPAN>
+
+<P>
+language=pseudocode
+<BR>
+<IMG STYLE=""
+ SRC="img230.svg"
+ ALT="\begin{lstlisting}
+DECLARE n to be an integer variable
+DECLARE x to be an intege...
+...UTPUT audible beep on the speaker
+RETURN
+END PrintAndBeep
+\par
+\end{lstlisting}">
+<BR>
+
+<P>
+<P>
+The main program loop is much shorter than before because the repetitive tasks of printing the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> and outputting beep sounds has been moved to a separate function.  In older computer languages, this was known as a <SPAN  CLASS="textit">subroutine</SPAN>, the concept being that flow through the main program (the &ldquo;routine&rdquo;) would branch to a separate sub-program (a &ldquo;subroutine&rdquo;) to do some specialized task and then return back to the main program when the sub-program was done with its task.
+
+<P>
+Note that the program execution flow never reaches the PrintAndBeep function unless <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> happens to equal 5, 7, or 11.  If the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> never matches any of those specific conditions, the program simply keeps looping between the <SPAN  CLASS="texttt">LOOP</SPAN> and <SPAN  CLASS="texttt">ENDLOOP</SPAN> markers.
+
+<P>
+
+<P>
+Note also how the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> gets <SPAN  CLASS="textit">passed</SPAN> on to the PrintAndBeep function, then read inside that function under another variable name, <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img231.svg"
+ ALT="$n$"></SPAN>.  This was not strictly necessary for the purpose of printing the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN>, since <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> is the only variable in the main program.  However, the use of a separate (&ldquo;local&rdquo;) variable within the PrintAndBeep function enables us at some later date to use that function to act on other variables within the main program while avoiding conflict.  Take this program for example:
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Pseudocode listing</SPAN>
+
+<P>
+language=pseudocode
+<BR>
+<IMG STYLE=""
+ SRC="img232.svg"
+ ALT="\begin{lstlisting}
+DECLARE n to be an integer variable
+DECLARE x to be an intege...
+...UTPUT audible beep on the speaker
+RETURN
+END PrintAndBeep
+\par
+\end{lstlisting}">
+<BR>
+
+<P>
+<P>
+Here, the PrintAndBeep function gets used to print certain values of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN>, then re-used to print certain values of <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img233.svg"
+ ALT="$y$"></SPAN>.  If we had used <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN> within the PrintAndBeep function instead of its own variable (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img231.svg"
+ ALT="$n$"></SPAN>), the function would only be useful for printing the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN>.  Being able to pass values to functions makes those functions more useful.
+
+<P>
+<P>
+A final note on branching and functions: most computer languages allow a function to call itself if necessary.  This concept is known as <SPAN  CLASS="textit">recursion</SPAN> in computer science.  <A NAME="951"></A>
+
+<P>
+
+<H2><A ID="SECTION002152000000000000000">
+Position versus velocity algorithms</A>
+</H2>
+
+<P>
+The canonical &ldquo;ideal&rdquo; or &ldquo;ISA&rdquo; variety of PID equation takes the following form:  <A NAME="953"></A>  <A NAME="954"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p \left(e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img234.svg"
+ ALT="$\displaystyle m = K_p \left(e + {1 \over \tau_i} \int e \&gt; dt + \tau_d {de \over dt} \right)$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN> = Controller output
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN> = Error (SP <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> PV or PV <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> SP, depending on controller action being direct or reverse)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN> = Controller gain
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN> = Integral (reset) time constant
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN> = Derivative (rate) time constant
+
+<P>
+<P>
+The same equation may be written in terms of &ldquo;gains&rdquo; rather than &ldquo;time constants&rdquo; for the integral and derivative terms.  This re-writing exhibits the advantage of consistency from the perspective of PID tuning, where each tuning constant has the same (increasing) effect as its numerical value grows larger:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p \left(e + K_i \int e \> dt + K_d {de \over dt} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img235.svg"
+ ALT="$\displaystyle m = K_p \left(e + K_i \int e \&gt; dt + K_d {de \over dt} \right)$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN> = Controller output
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN> = Error 
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN> = Controller gain
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img236.svg"
+ ALT="$K_i$"></SPAN> = Integral (reset) gain (repeats per unit time)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img237.svg"
+ ALT="$K_d$"></SPAN> = Derivative (rate) gain
+
+<P>
+<P>
+
+<P>
+However the equation is written, there are two major ways in which it is commonly implemented in a digital computer.  One way is the <SPAN  CLASS="textit">position</SPAN> algorithm, where the result of each pass through the program &ldquo;loop&rdquo; calculates the actual output value.  If the final control element for the loop is a control valve, this value will be the position of that valve's stem, hence the name <SPAN  CLASS="textit">position algorithm</SPAN>.  The other way is the so-called <SPAN  CLASS="textit">velocity</SPAN> algorithm, where the result of each pass through the program &ldquo;loop&rdquo; calculates the amount the output value will <SPAN  CLASS="textit">change</SPAN>.  Assuming a control valve for the final control element once again, the value calculated by this algorithm is the distance the valve stem will travel <SPAN  CLASS="textit">per scan of the program</SPAN>.  In other words, the magnitude of this value describes how <SPAN  CLASS="textit">fast</SPAN> the valve stem will travel, hence the name <SPAN  CLASS="textit">velocity algorithm</SPAN>.  <A NAME="965"></A>  <A NAME="966"></A>
+
+<P>
+Mathematically, the distinction between the position and velocity algorithms is a matter of differentials: the position equation solves for the output value (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN>) directly while the velocity equation solves for small increments (differentials) of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN>, or <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img238.svg"
+ ALT="$dm$"></SPAN>.
+
+<P>
+A comparison of the position and velocity equations shows both the similarities and the differences:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p \left(e + K_i \int e \> dt + K_d {de \over dt} \right) \hskip 30pt \hbox{Position equation}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img239.svg"
+ ALT="$\displaystyle m = K_p \left(e + K_i \int e \&gt; dt + K_d {de \over dt} \right) \hskip 30pt \hbox{Position equation}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+dm = K_p \left(de + K_i  e \> dt + K_d {d^2e \over dt} \right) \hskip 30pt \hbox{Velocity equation}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.79ex; vertical-align: -2.30ex; " SRC="img240.svg"
+ ALT="$\displaystyle dm = K_p \left(de + K_i e \&gt; dt + K_d {d^2e \over dt} \right) \hskip 30pt \hbox{Velocity equation}$">
+</DIV><P></P>
+
+<P>
+Of the two approaches to implementing PID control, the position algorithm makes the most intuitive sense and is the easiest to understand.
+
+<P>
+<P>
+
+<P>
+We will begin our exploration of both algorithms by examining their application to proportional-only control.  This will be a simpler and &ldquo;gentler&rdquo; introduction than showing how to implement full PID control.  The two respective proportional-only control equations we will consider are shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p e + \hbox{Bias} \hskip 30pt \hbox{Position equation for P-only control}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="img241.svg"
+ ALT="$\displaystyle m = K_p e + \hbox{Bias} \hskip 30pt \hbox{Position equation for P-only control}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+dm = K_p de \hskip 30pt \hbox{Velocity equation for P-only control}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="img242.svg"
+ ALT="$\displaystyle dm = K_p de \hskip 30pt \hbox{Velocity equation for P-only control}$">
+</DIV><P></P>
+
+<P>
+You will notice how a &ldquo;bias&rdquo; term is required in the position equation to keep track of the output's &ldquo;starting point&rdquo; each time a new output value is calculated.  No such term is required in the velocity equation, because the computer merely calculates <SPAN  CLASS="textit">how far the output moves from its last value</SPAN> rather than the output's value from some absolute reference.
+
+<P>
+<P>
+
+<P>
+First, we will examine a simple pseudocode program for implementing the proportional-only equation in its &ldquo;position&rdquo; form:
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Pseudocode listing for a &ldquo;position algorithm&rdquo; proportional-only controller</SPAN>
+
+<P>
+language=pseudocode
+<BR>
+<IMG STYLE=""
+ SRC="img243.svg"
+ ALT="\begin{lstlisting}
+DECLARE PV, SP, and Out to be floating-point variables
+DECLAR...
+...oint tracking
+SET Bias = Out // Output tracking
+ENDIF
+ENDLOOP
+\end{lstlisting}">
+<BR>
+
+<P>
+<P>
+The first SET instructions within the loop update the PV to whatever value is being measured by the computer's analog input channel (channel <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img244.svg"
+ ALT="$N$"></SPAN> in this case), and the K_p variable to whatever value is entered by the human operator through the use of a keypad, touch-screen interface, or networked computer.  Next, a set of IF/THEN conditionals determines which way the error should be calculated: Error = SP <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> PV if the control action is &ldquo;reverse&rdquo; (Action = 1) and Error = PV <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> SP if the control action is &ldquo;direct&rdquo; (Action = 0).
+
+<P>
+The next set of conditional instructions determines what to do in automatic versus manual modes.  In automatic mode (Mode = 1), the output value is calculated according to the position equation and the setpoint comes from a human operator's input.  In manual mode (Mode = 0), the output value is no longer calculated by an equation but rather is obtained from the human operator's input, the setpoint is forced equal to the process variable, and the Bias value is continually made equal to the value of the output.  Setting SP = PV provides the convenient feature of <SPAN  CLASS="textit">setpoint tracking</SPAN>, ensuring an initial error value of zero when the controller is switched back to automatic mode.  Setting the Bias equal to the output provides the essential feature of <SPAN  CLASS="textit">output tracking</SPAN>, where the controller begins automatic operation at an output value precisely equal to the last manual-mode output value.
+
+<P>
+
+<P>
+Next, we will examine a simple pseudocode program for implementing the proportional-only equation in its &ldquo;velocity&rdquo; form:
+
+<P>
+<P>
+<SPAN  CLASS="textbf">Pseudocode listing for a &ldquo;velocity algorithm&rdquo; proportional-only controller</SPAN>
+
+<P>
+language=pseudocode
+<BR>
+<IMG STYLE=""
+ SRC="img245.svg"
+ ALT="\begin{lstlisting}
+DECLARE PV, SP, and Out to be floating-point variables
+DECLAR...
+...tor interface
+SET SP = PV // Setpoint tracking
+ENDIF
+ENDLOOP
+\end{lstlisting}">
+<BR>
+
+<P>
+<P>
+The code for the velocity algorithm is mostly identical to the code for the position algorithm, with just a few minor changes.  The first difference we encounter in reading the code from top to bottom is that we calculate a new variable called &ldquo;last_Error&rdquo; immediately prior to calculating a new value for Error.  The reason for doing this is to provide a way to calculate the differential <SPAN  CLASS="textit">change</SPAN> in error (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img53.svg"
+ ALT="$de$"></SPAN>) from scan to scan of the program.  The variable &ldquo;last_Error&rdquo; remembers the value of Error during the previous scan of the program.  Thus, the expression &ldquo;Error <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> last_Error&rdquo; is equal to the amount the error has changed from last scan to the present scan.
+
+<P>
+When the time comes to calculate the output value in automatic mode, we see the SET command calculating the change in output (K_p multiplied by the change in error), then adding this change in output to the existing output value to calculate a new output value.  This is how the program translates calculated output increments into an actual output value to drive a final control element.  The mathematical expression &ldquo;K_p * (Error <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> last_Error)&rdquo; defines the incremental change in output value, and this increment is then added to the current output value to generate a new output value.
+
+<P>
+<P>
+From a human operator's point of view, the position algorithm and the velocity algorithm are identical with one exception: how each controller reacts to a sudden change in gain (K_p).  To understand this difference, let us perform a &ldquo;thought experiment&rdquo; where we imagine a condition of constant error between PV and SP.  Suppose the controller is operating in automatic mode, with a setpoint of 60% and a (steady) process variable value of 57%.  We should not be surprised that a constant error might exist for a proportional-only controller, since we should be well aware of the phenomenon of <SPAN  CLASS="textit">proportional-only offset</SPAN>.  <A NAME="987"></A>  <A NAME="988"></A>
+
+<P>
+How will this controller react if the gain is suddenly increased in value while operating in automatic mode?  If the controller executes the position algorithm, the result of a sudden gain change will be a sudden change in its output value, since output is a direct function of error and gain.  However, if the controller executes the velocity algorithm, the result of a sudden gain change will be no change to the output at all, so long as the error <SPAN  CLASS="textit">remains constant</SPAN>.  Only when the error begins to change will there be any noticeable difference in the controller's behavior compared to how it acted before the gain change.  This is because the velocity algorithm is a function of gain and <SPAN  CLASS="textit">change in error</SPAN>, not error directly.
+
+<P>
+Comparing the two responses, the velocity algorithm's response to changes in gain is regarded as &ldquo;better-mannered&rdquo; than the position algorithm's response to changes in gain.  When tuning a controller, we would rather not have the controller's output suddenly jump in response to simple gain changes<A ID="tex2html47"
+  HREF="footnode.html#foot1095"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">47</SPAN></SUP></A>, and so the velocity algorithm is generally preferred.  If we allow the gain of the algorithm to be set by another process variable<A ID="tex2html48"
+  HREF="footnode.html#foot1096"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">48</SPAN></SUP></A>, the need for &ldquo;stable&rdquo; gain-change behavior becomes even more important.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html356"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html358"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node18.html">Note to students</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node16.html">Practical PID controller features</A>
+ &nbsp; <B>  <A ID="tex2html357"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html359"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

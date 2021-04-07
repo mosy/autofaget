@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Diagnosing feedback control problems</TITLE>
+<META NAME="description" CONTENT="Diagnosing feedback control problems">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION00220000000000000000">
+Diagnosing feedback control problems</A>
+</H1>
+
+<P>
+Negative feedback systems, in general, tend to cause much confusion for those first learning their fundamental principles and behaviors.  The closed-cycle &ldquo;loop&rdquo; formed by the interaction of sensing element, controller, final control element, and process means essentially that <SPAN  CLASS="textit">everything affects everything else</SPAN>.  This is especially problematic when the feedback control system in question contains a fault and must be diagnosed.  For example, if an operator happens to notice that the process variable (as indicated by a manual measurement or by some trusted indicating instrument) is not holding to setpoint, it could be the result of a fault in <SPAN  CLASS="textit">any</SPAN> portion of the system (sensor, controller, FCE, or even the process itself).
+
+<P>
+<P>
+Recall that every feedback control loop consists of four basic elements: an element that <SPAN  CLASS="textit">senses</SPAN> the process variable (e.g. primary sensing element, transmitter), an element that <SPAN  CLASS="textit">decides</SPAN> what how to regulate this process variable (e.g. a PID controller), an element that <SPAN  CLASS="textit">influences</SPAN> the process variable (e.g. a control valve, motor drive, or some other final control device), and finally the process itself which <SPAN  CLASS="textit">reacts</SPAN> to the final control device's actions:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont98.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.06ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$\displaystyle \includegraphics{cont98.eps}$">
+</DIV><P></P>
+
+<P>
+One of the basic diagnostic strategies for any instrumentation system is to assess whether the <SPAN  CLASS="textit">input value(s)</SPAN> and <SPAN  CLASS="textit">output value(s)</SPAN> correspond for each instrument.  We may apply this same strategy to each of the four elements of a feedback control &ldquo;loop&rdquo; to identify where the problem might exist.  If you encounter one of these four system portions whose output does not correspond with its input, you know that portion of the system is faulted.
+
+<P>
+
+<P>
+You can check each element of your feedback control loop by comparing its input with its output to see if each element is doing what it should.  I recommend beginning with the controller (the decision-making element) because typically those values are the most easily monitored:
+
+<P>
+
+<UL>
+<LI><SPAN  CLASS="textbf">Decision-making:</SPAN> Carefully examine the controller faceplate, looking at the values of PV, SP, and Output.  Is the controller taking appropriate action to force PV equal to SP?  In other words, is the Output signal at a value you would expect if the controller were functioning properly to regulate the process variable at setpoint?  If so, then the controller's action and tuning are most likely not at fault.  If not, then the problem definitely lies with the controller.
+</LI>
+<LI><SPAN  CLASS="textbf">Sensing:</SPAN> Compare the controller's displayed value for PV with the actual process variable value as indicated by local gauges, by feel, or by any other means of detection.  If there is good correspondence between the controller's PV display and the real process variable, then there probably isn't anything wrong with the measurement portion of the control loop (e.g. transmitter, impulse lines, PV signal wiring, analog input of controller, etc.).  If the displayed PV disagrees with the actual process variable value, then something is definitely wrong here.
+</LI>
+<LI><SPAN  CLASS="textbf">Influencing:</SPAN> Compare the controller's displayed value for Output with the actual status of the final control element.  If there is good correspondence between the controller's Output display and the FCE's status, then there probably isn't anything wrong with the output portion of the control loop (e.g. FCE, output signal wiring, analog output of controller, etc.).  If the controller Output value differs from the FCE's state, then something is definitely wrong here.
+</LI>
+<LI><SPAN  CLASS="textbf">Reacting:</SPAN> Compare the process variable value with the final control element's state.  Is the process doing what you would expect it to?  If so, the problem is most likely not within the process (e.g. manual valves, relief valves, pumps, compressors, motors, and other process equipment).  If, however, the process is not reacting the way you would expect it to given the final control element's state, then something is definitely awry with the process itself.
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html266"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html268"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">On/off control</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node3.html">Basic feedback control principles</A>
+ &nbsp; <B>  <A ID="tex2html267"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html269"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

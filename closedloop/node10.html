@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Summary of PID control terms</TITLE>
+<META NAME="description" CONTENT="Summary of PID control terms">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node11.html">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html294"
+  HREF="node10.html#SECTION00281000000000000000">Proportional control mode (P)</A>
+<LI><A ID="tex2html295"
+  HREF="node10.html#SECTION00282000000000000000">Integral control mode (I)</A>
+<LI><A ID="tex2html296"
+  HREF="node10.html#SECTION00283000000000000000">Derivative control mode (D)</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00280000000000000000">
+Summary of PID control terms</A>
+</H1>
+
+<P>
+PID control can be a confusing concept to understand.  Here, a brief summary of each term within PID (P. I, and D) is presented for your learning benefit.
+
+<P>
+
+<H2><A ID="SECTION00281000000000000000">
+Proportional control mode (P)</A>
+</H2>
+
+<P>
+<SPAN  CLASS="textit">Proportional</SPAN> &ndash; sometimes called <SPAN  CLASS="textit">gain</SPAN> or <SPAN  CLASS="textit">sensitivity</SPAN> &ndash; is a control action reproducing changes in input as changes in output.  Proportional controller action responds to present changes in input by generating immediate and commensurate changes in output.  When you think of &ldquo;proportional action&rdquo; (P), think <SPAN  CLASS="textit">prompt</SPAN>: this control action works immediately (never too soon or too late) to match changes in the input signal.
+
+<P>
+<P>
+Mathematically defined, proportional action is the ratio of output change to input change.  This may be expressed as a quotient of differences, or as a derivative (a rate of change, using calculus notation): <A NAME="299"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Gain value} = {\Delta \hbox{Output} \over \Delta \hbox{Input}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.38ex; vertical-align: -2.14ex; " SRC="img56.svg"
+ ALT="$\displaystyle \hbox{Gain value} = {\Delta \hbox{Output} \over \Delta \hbox{Input}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Gain value} = {d\hbox{Output} \over d\hbox{Input}} = {dm \over de}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.40ex; vertical-align: -2.14ex; " SRC="img57.svg"
+ ALT="$\displaystyle \hbox{Gain value} = {d\hbox{Output} \over d\hbox{Input}} = {dm \over de}$">
+</DIV><P></P>
+
+<P>
+For example, if the PV input of a proportional-only process controller with a gain of 2 suddenly changes (&ldquo;steps&rdquo;) by 5 percent, and the output will immediately jump by 10 percent (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img58.svg"
+ ALT="$\Delta$"></SPAN>Output = Gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img58.svg"
+ ALT="$\Delta$"></SPAN>Input).  The direction of this output jump in relation to the direction of the input jump depends on whether the controller is configured for direct or reverse action.
+
+<P>
+A legacy term used to express this same concept is <SPAN  CLASS="textit">proportional band</SPAN>: the mathematical reciprocal of gain.  &ldquo;Proportional band&rdquo; is defined as the amount of input change necessary to evoke full-scale (100%) output change in a proportional controller.  Incidentally, it is always expressed as a percentage, never as fraction or as a per unit value:  <A NAME="308"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Proportional Band value} = {\Delta \hbox{Input} \over \Delta \hbox{Output}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.38ex; vertical-align: -2.14ex; " SRC="img60.svg"
+ ALT="$\displaystyle \hbox{Proportional Band value} = {\Delta \hbox{Input} \over \Delta \hbox{Output}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Proportional Band value} = {d\hbox{Input} \over d\hbox{Output}} = {de \over dm}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.40ex; vertical-align: -2.14ex; " SRC="img61.svg"
+ ALT="$\displaystyle \hbox{Proportional Band value} = {d\hbox{Input} \over d\hbox{Output}} = {de \over dm}$">
+</DIV><P></P>
+
+<P>
+Using the same example of a proportional controller exhibiting an output &ldquo;step&rdquo; of 10% in response to a PV &ldquo;step&rdquo; of 5%, the proportional band would be 50%: the reciprocal of its gain (<!-- MATH
+ ${1 \over 2} = 50\%$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.90ex; vertical-align: -0.90ex; " SRC="img62.svg"
+ ALT="${1 \over 2} = 50\%$"></SPAN>).  Another way of saying this is that a 50% input &ldquo;step&rdquo; would be required to change the output of this controller by a full 100%, since its gain is set to a value of 2.
+
+<P>
+<P>
+
+<H2><A ID="SECTION00282000000000000000">
+Integral control mode (I)</A>
+</H2>
+
+<P>
+<SPAN  CLASS="textit">Integral</SPAN> &ndash; sometimes called <SPAN  CLASS="textit">reset</SPAN> or <SPAN  CLASS="textit">floating control</SPAN> &ndash; is a control action causing the output signal to change over time at a rate proportional to the amount of error (the difference between PV and SP values).  Integral controller action responds to error accumulated over time, ramping the output signal are far as it needs to go to completely eliminate error.   If proportional (P) action tells the output how <SPAN  CLASS="textit">far</SPAN> to move when an error appears, integral (I) action tells the output how <SPAN  CLASS="textit">fast</SPAN> to move when an error appears.  If proportional (P) action acts on the <SPAN  CLASS="textit">present</SPAN>, integral (I) action acts on the <SPAN  CLASS="textit">past</SPAN>.  Thus, how far the output signal gets driven by integral action depends on the <SPAN  CLASS="textit">history</SPAN> of the error over time: how much error existed, and for how long.  When you think of &ldquo;integral action&rdquo; (I), think <SPAN  CLASS="textit">impatience</SPAN>: this control action drives the output further and further the longer PV fails to match SP.  <A NAME="327"></A>  <A NAME="328"></A>  <A NAME="329"></A>
+
+<P>
+<P>
+Mathematically defined, integral action is the ratio of output <SPAN  CLASS="textit">velocity</SPAN> to input error:   
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Integral value (repeats per minute)} = {\hbox{Output velocity} \over \hbox{Input error}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.40ex; vertical-align: -2.14ex; " SRC="img63.svg"
+ ALT="$\displaystyle \hbox{Integral value (repeats per minute)} = {\hbox{Output velocity} \over \hbox{Input error}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Integral value (repeats per minute)} = {{dm \over dt} \over e}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.46ex; vertical-align: -1.69ex; " SRC="img64.svg"
+ ALT="$\displaystyle \hbox{Integral value (repeats per minute)} = {{dm \over dt} \over e}$">
+</DIV><P></P>
+
+<P>
+An alternate way to express integral action is to use the reciprocal unit of &ldquo;minutes per repeat.&rdquo;  If we define integral action in these terms, the defining equations must be reciprocated:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Integral time constant (minutes per repeat)} = \tau_i = {\hbox{Input error} \over \hbox{Output velocity}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.38ex; vertical-align: -2.14ex; " SRC="img65.svg"
+ ALT="$\displaystyle \hbox{Integral time constant (minutes per repeat)} = \tau_i = {\hbox{Input error} \over \hbox{Output velocity}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Integral time constant (minutes per repeat)} = \tau_i = {e \over {dm \over dt}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.28ex; vertical-align: -2.63ex; " SRC="img66.svg"
+ ALT="$\displaystyle \hbox{Integral time constant (minutes per repeat)} = \tau_i = {e \over {dm \over dt}}$">
+</DIV><P></P>
+
+<P>
+For example, if an error of 5% appears between PV and SP on an integral-only process controller with an integral value of 3 repeats per minute (i.e. an integral time constant of 0.333 minutes per repeat), the output will begin ramping at a rate of 15% per minute (<!-- MATH
+ $dm \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img67.svg"
+ ALT="$dm \over dt$"></SPAN> = Integral_value <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN>, or <!-- MATH
+ $dm \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img67.svg"
+ ALT="$dm \over dt$"></SPAN> = <!-- MATH
+ $e \over \tau_i$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.80ex; vertical-align: -1.13ex; " SRC="img68.svg"
+ ALT="$e \over \tau_i$"></SPAN>).  In most PI and PID controllers, integral response is also multiplied by proportional gain, so the same conditions applied to a PI controller that happened to also have a gain of 2 would result in an output ramping rate of 30% per minute (<!-- MATH
+ $dm \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img67.svg"
+ ALT="$dm \over dt$"></SPAN> = Gain_value <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> Integral_value <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN>, or <!-- MATH
+ $dm \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img67.svg"
+ ALT="$dm \over dt$"></SPAN> = Gain_value <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> <!-- MATH
+ $e \over \tau_i$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.80ex; vertical-align: -1.13ex; " SRC="img68.svg"
+ ALT="$e \over \tau_i$"></SPAN>).  The direction of this ramping in relation to the direction (sign) of the error depends on whether the controller is configured for direct or reverse action.
+
+<P>
+<P>
+
+<H2><A ID="SECTION00283000000000000000">
+Derivative control mode (D)</A>
+</H2>
+
+<P>
+<SPAN  CLASS="textit">Derivative</SPAN> &ndash; sometimes called <SPAN  CLASS="textit">rate</SPAN> or <SPAN  CLASS="textit">pre-act</SPAN> &ndash; is a control action causing the output signal to be offset by an amount proportional to the rate at which the input is changing.  Derivative controller action responds to how quickly the input changes over time, biasing the output signal commensurate with that rate of input change.  If proportional (P) action tells the output how <SPAN  CLASS="textit">far</SPAN> to move when an error appears, derivative (D) action tells the output how far to move when the input <SPAN  CLASS="textit">ramps</SPAN>.  If proportional (P) action acts on the <SPAN  CLASS="textit">present</SPAN> and integral (I) action acts on the <SPAN  CLASS="textit">past</SPAN>, derivative (D) action acts on the <SPAN  CLASS="textit">future</SPAN>: it effectively &ldquo;anticipates&rdquo; overshoot by tempering the output response according to how fast the process variable is rising or falling.  When you think of &ldquo;derivative action&rdquo; (D), think <SPAN  CLASS="textit">discretion</SPAN>: this control action is cautious and prudent, working against change.
+
+<P>
+<P>
+Mathematically defined, derivative action is the ratio of output offset to input <SPAN  CLASS="textit">velocity</SPAN>:   <A NAME="352"></A>  <A NAME="353"></A>  <A NAME="354"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Derivative time constant (minutes)} = \tau_d = {\hbox{Output offset} \over \hbox{Input velocity}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.40ex; vertical-align: -2.14ex; " SRC="img69.svg"
+ ALT="$\displaystyle \hbox{Derivative time constant (minutes)} = \tau_d = {\hbox{Output offset} \over \hbox{Input velocity}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Derivative time constant (minutes)} = \tau_d = {\Delta \hbox{Output} \over {de \over dt}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.87ex; vertical-align: -2.63ex; " SRC="img70.svg"
+ ALT="$\displaystyle \hbox{Derivative time constant (minutes)} = \tau_d = {\Delta \hbox{Output} \over {de \over dt}}$">
+</DIV><P></P>
+
+<P>
+For example, if the PV signal begins to ramp at a rate of 5% per minute on a process controller with a derivative time constant of 4 minutes, the output will immediately become offset by 20% (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img58.svg"
+ ALT="$\Delta$"></SPAN>Output = Derivative_value <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> <!-- MATH
+ $de \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img52.svg"
+ ALT="$de \over dt$"></SPAN>).  In most PD and PID controllers, derivative response is also multiplied by proportional gain, so the same conditions applied to a PD controller that happened to also have a gain of 2 would result in an immediate offset of 40% (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img58.svg"
+ ALT="$\Delta$"></SPAN>Output = Gain_value <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> Derivative_value <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> <!-- MATH
+ $de \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img52.svg"
+ ALT="$de \over dt$"></SPAN>).  The direction (sign) of this offset in relation to the direction of the input ramping depends on whether the controller is configured for direct or reverse action.
+
+<P>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html290"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html292"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node11.html">P, I, and D</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node9.html">Derivative (rate) control</A>
+ &nbsp; <B>  <A ID="tex2html291"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html293"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

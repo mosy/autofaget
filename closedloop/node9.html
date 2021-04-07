@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Derivative (rate) control</TITLE>
+<META NAME="description" CONTENT="Derivative (rate) control">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION00270000000000000000">
+Derivative (rate) control</A>
+</H1>
+
+<P>
+The final element of PID control is the &ldquo;D&rdquo; term, which stands for <SPAN  CLASS="textit">derivative</SPAN>.  This is a calculus concept like integral, except most people consider it easier to understand.  Simply put, derivative is the expression of a variable's <SPAN  CLASS="textit">rate-of-change</SPAN> with respect to another variable.  Finding the derivative of a function (differentiation) is the inverse operation of integration.  With integration, we calculated accumulated value of some variable's product with time.  With derivative, we calculate the ratio of a variable's change per unit of time.  Whereas integration is fundamentally a multiplicative operation (products), differentiation always involves division (ratios). <A NAME="273"></A> <A NAME="274"></A>
+
+<P>
+A controller with derivative (or <SPAN  CLASS="textit">rate</SPAN>) action looks at how fast the process variable changes per unit of time, and takes action proportional to that rate of change.  In contrast to integral (reset) action which represents the &ldquo;impatience&rdquo; of the controller, derivative (rate) action represents the &ldquo;caution&rdquo; of the controller.
+
+<P>
+If the process variable starts to change at a high rate of speed, the job of derivative action is to move the final control element in such a direction as to counteract this rapid change, and thereby moderate the speed at which the process variable changes.  In simple terms, derivative action works to limit how fast the error can change.
+
+<P>
+What this will do is make the controller &ldquo;cautious&rdquo; with regard to rapid changes in process variable.  If the process variable is headed toward the setpoint value at a rapid rate, the derivative term of the equation will diminish the output signal, thus tempering the controller's response and slowing the process variable's approach toward setpoint.  This is analogous to a truck driver preemptively applying the brakes to slow the approach to an intersection, knowing that the heavy truck doesn't &ldquo;stop on a dime.&rdquo;  The heavier the truck's load, the sooner a cautious driver will apply the brakes, to avoid &ldquo;overshoot&rdquo; beyond the stop sign and into the intersection.  For this reason, derivative control action is also called <SPAN  CLASS="textit">pre-act</SPAN> in addition to being called <SPAN  CLASS="textit">rate</SPAN>, because it acts &ldquo;ahead of time&rdquo; to avoid overshoot.  <A NAME="278"></A>  <A NAME="279"></A>
+
+<P>
+If we modify the controller equation to incorporate differentiation, it will look something like this:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.36ex; vertical-align: -2.10ex; " SRC="img50.svg"
+ ALT="$\displaystyle m = K_p e + {1 \over \tau_i} \int e \&gt; dt + \tau_d {de \over dt} + b$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN> = Controller output
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN> = Error (difference between PV and SP)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN> = Proportional gain
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN> = Integral time constant (minutes)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN> = Derivative time constant (minutes)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.62ex; vertical-align: -0.10ex; " SRC="img46.svg"
+ ALT="$t$"></SPAN> = Time
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img14.svg"
+ ALT="$b$"></SPAN> = Bias
+
+<P>
+<P>
+The <!-- MATH
+ $de \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img52.svg"
+ ALT="$de \over dt$"></SPAN> term of the equation expresses the rate of change of error (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN>) over time (<SPAN CLASS="MATH"><IMG STYLE="height: 1.62ex; vertical-align: -0.10ex; " SRC="img46.svg"
+ ALT="$t$"></SPAN>).  The lower-case letter &ldquo;d&rdquo; symbols represent the calculus concept of <SPAN  CLASS="textit">differentials</SPAN> which may be thought of in this context as very tiny increments of the following variables.  In other words, <!-- MATH
+ $de \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img52.svg"
+ ALT="$de \over dt$"></SPAN> refers to the ratio of a very small change in error (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img53.svg"
+ ALT="$de$"></SPAN>) over a very small increment of time (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$dt$"></SPAN>).  On a graph, this is interpreted as the slope of a curve at a specific point (slope being defined as <SPAN  CLASS="textit">rise over run</SPAN>). <A NAME="284"></A>
+
+<P>
+
+<P>
+It is also possible to build a controller with proportional and derivative actions, but lacking integral action.  These are most commonly used in applications prone to wind-up<A ID="tex2html8"
+  HREF="footnode.html#foot285"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">8</SPAN></SUP></A>, and where the elimination of offset is not critical:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p e + \tau_d {de \over dt} + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img54.svg"
+ ALT="$\displaystyle m = K_p e + \tau_d {de \over dt} + b$">
+</DIV><P></P>
+
+<P>
+<P>
+Many PID controllers offer the option of calculating derivative response based on rates of change for the process variable (PV) only, rather than the error (PV <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> SP or SP <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> PV).  This avoids huge &ldquo;spikes&rdquo; in the output of the controller if ever a human operator makes a sudden change in setpoint<A ID="tex2html9"
+  HREF="footnode.html#foot287"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">9</SPAN></SUP></A>.  The mathematical expression for such a controller would look like this:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p e + {1 \over \tau_i} \int e \> dt + \tau_d {d\hbox{PV} \over dt} + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.36ex; vertical-align: -2.10ex; " SRC="img55.svg"
+ ALT="$\displaystyle m = K_p e + {1 \over \tau_i} \int e \&gt; dt + \tau_d {d\hbox{PV} \over dt} + b$">
+</DIV><P></P>
+
+<P>
+Even when derivative control action is calculated on PV alone (rather than on error), it is still useful for controlling processes dominated by large lag times.  The presence of derivative control action in a PID controller generally means the proportional (P) and integral (I) terms may be adjusted more aggressively than before, since derivative (D) will act to limit overshoot.  In other words, the judicious presence of derivative action in a PID controller lets us &ldquo;get away&rdquo; with using a bit more P and I action than we ordinarily could, resulting in faster approach to setpoint with minimal overshoot.
+
+<P>
+<P>
+It should be mentioned that derivative mode should be used with caution.  Since it acts on rates of change, derivative action will &ldquo;go crazy&rdquo; if it sees substantial noise in the PV signal.  Even small amounts of noise possess extremely large rates of change (defined as percent PV change per minute of time) owing to the relatively high frequency of noise compared to the timescale of physical process changes.
+
+<P>
+Ziegler and Nichols, the engineers who wrote the ground-breaking paper entitled &ldquo;Optimum Settings for Automatic Controllers&rdquo; had these words to say regarding &ldquo;pre-act&rdquo; control (page 762 of the November 1942 <SPAN  CLASS="textit">Transactions of the A.S.M.E.</SPAN>):
+
+<P>
+<P>
+<BLOCKQUOTE>The latest control effect made its appearance under the trade name &ldquo;Pre-Act.&rdquo;  On some control applications, the addition of pre-act response made such a remarkable improvement that it appeared to be in embodiment of mythical &ldquo;anticipatory&rdquo; controllers.  On other applications it appeared to be worse than useless.  Only the difficulty of predicting the usefulness and adjustment of this response has kept it from being more widely used.
+</BLOCKQUOTE>
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html286"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html288"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node10.html">Summary of PID control</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node8.html">Integral (reset) control</A>
+ &nbsp; <B>  <A ID="tex2html287"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html289"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Different PID equations</TITLE>
+<META NAME="description" CONTENT="Different PID equations">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html314"
+  HREF="node12.html#SECTION002101000000000000000">Parallel PID equation</A>
+<LI><A ID="tex2html315"
+  HREF="node12.html#SECTION002102000000000000000">Ideal PID equation</A>
+<LI><A ID="tex2html316"
+  HREF="node12.html#SECTION002103000000000000000">Series PID equation</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION002100000000000000000">
+Different PID equations</A>
+</H1>
+
+<P>
+<A ID="PID_equations"></A>
+<P>
+For better or worse, there are no fewer than <SPAN  CLASS="textit">three</SPAN> different forms of PID equations implemented in modern PID controllers: the <SPAN  CLASS="textit">parallel</SPAN>, <SPAN  CLASS="textit">ideal</SPAN>, and <SPAN  CLASS="textit">series</SPAN>.  Some controllers offer the choice of more than one equation, while others implement just one.  It should be noted that more variations of PID equation exist than these three, but that these are the three major variations.
+
+<P>
+
+<H2><A ID="SECTION002101000000000000000">
+Parallel PID equation</A>
+</H2>
+
+<P>
+The equation used to describe PID control so far in this chapter is the simplest form, sometimes called the <SPAN  CLASS="textit">parallel</SPAN> equation, because each action (P, I, and D) occurs in separate terms of the equation, with the combined effect being a simple sum:  <A NAME="423"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} + b \hbox{\hskip 50pt \textbf{Parallel PID equation}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.36ex; vertical-align: -2.10ex; " SRC="img100.svg"
+ ALT="$\displaystyle m = K_p e + {1 \over \tau_i} \int e \&gt; dt + \tau_d {de \over dt} + b \hbox{\hskip 50pt \textbf{Parallel PID equation}}$">
+</DIV><P></P>
+
+<P>
+In the parallel equation, each action parameter (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN>) is independent of the others.  At first, this may seem to be an advantage, for it means each adjustment made to the controller should only affect one aspect of its action.  However, there are times when it is better to have the gain parameter affect all three control actions (P, I, and D)<A ID="tex2html14"
+  HREF="footnode.html#foot1073"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">14</SPAN></SUP></A>.
+
+<P>
+We may show the independence of the three actions mathematically, by breaking the equation up into three different parts, each one describing its contribution to the output (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img101.svg"
+ ALT="$\Delta m$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta m = K_p \Delta e \hskip 30pt \hbox{Proportional action}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="img102.svg"
+ ALT="$\displaystyle \Delta m = K_p \Delta e \hskip 30pt \hbox{Proportional action}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta m = {1 \over \tau_i} \int e \> dt \hskip 30pt \hbox{Integral action}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.34ex; vertical-align: -2.10ex; " SRC="img103.svg"
+ ALT="$\displaystyle \Delta m = {1 \over \tau_i} \int e \&gt; dt \hskip 30pt \hbox{Integral action}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta m = \tau_d {de \over dt} \hskip 30pt \hbox{Derivative action}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img104.svg"
+ ALT="$\displaystyle \Delta m = \tau_d {de \over dt} \hskip 30pt \hbox{Derivative action}$">
+</DIV><P></P>
+
+<P>
+As you can see, the three portions of this PID equation are completely separate, with each tuning parameter (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN>) acting independently within its own term of the equation.
+
+<P>
+
+<H2><A ID="SECTION002102000000000000000">
+Ideal PID equation</A>
+</H2>
+
+<P>
+An alternate version of the PID equation designed such that the gain (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>) affects all three actions is called the <SPAN  CLASS="textit">Ideal</SPAN> or <SPAN  CLASS="textit">ISA</SPAN> equation:  <A NAME="436"></A>  <A NAME="437"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p \left( e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} \right) + b \hbox{\hskip 50pt \textbf{Ideal} or \textbf{ISA PID equation}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img105.svg"
+ ALT="$\displaystyle m = K_p \left( e + {1 \over \tau_i} \int e \&gt; dt + \tau_d {de \over dt} \right) + b \hbox{\hskip 50pt \textbf{Ideal} or \textbf{ISA PID equation}}$">
+</DIV><P></P>
+
+<P>
+Here, the gain constant (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>) is distributed to all terms within the parentheses, equally affecting all three control actions.  Increasing <SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN> in this style of PID controller makes the P, the I, <SPAN  CLASS="textit">and</SPAN> the D actions equally more aggressive.
+
+<P>
+We may show this mathematically, by breaking the &ldquo;ideal&rdquo; equation up into three different parts, each one describing its contribution to the output (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img101.svg"
+ ALT="$\Delta m$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta m = K_p \Delta e \hskip 30pt \hbox{Proportional action}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="img102.svg"
+ ALT="$\displaystyle \Delta m = K_p \Delta e \hskip 30pt \hbox{Proportional action}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta m = {K_p \over \tau_i} \int e \> dt \hskip 30pt \hbox{Integral action}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.34ex; vertical-align: -2.10ex; " SRC="img106.svg"
+ ALT="$\displaystyle \Delta m = {K_p \over \tau_i} \int e \&gt; dt \hskip 30pt \hbox{Integral action}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta m = K_p \tau_d {de \over dt} \hskip 30pt \hbox{Derivative action}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img107.svg"
+ ALT="$\displaystyle \Delta m = K_p \tau_d {de \over dt} \hskip 30pt \hbox{Derivative action}$">
+</DIV><P></P>
+
+<P>
+As you can see, all three portions of this PID equation are influenced by the gain (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>) owing to algebraic distribution, but the integral and derivative tuning parameters (<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN>) act independently within their own terms of the equation.
+
+<P>
+
+<H2><A ID="SECTION002103000000000000000">
+Series PID equation</A>
+</H2>
+
+<P>
+A third version, with origins in the peculiarities of pneumatic controller mechanisms and analog electronic circuits, is called the <SPAN  CLASS="textit">Series</SPAN> or <SPAN  CLASS="textit">Interacting</SPAN> equation:  <A NAME="451"></A>  <A NAME="452"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p \left[ \left({\tau_d \over \tau_i} + 1 \right) e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} \right] + b \hbox{\hskip 25pt \textbf{Series} or \textbf{Interacting PID equation}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img108.svg"
+ ALT="$\displaystyle m = K_p \left[ \left({\tau_d \over \tau_i} + 1 \right) e + {1 \ov...
+...ht] + b \hbox{\hskip 25pt \textbf{Series} or \textbf{Interacting PID equation}}$">
+</DIV><P></P>
+
+<P>
+Here, the gain constant (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>) affects all three actions (P, I, and D) just as with the &ldquo;ideal&rdquo; equation.  The difference, though, is the fact that both the integral and derivative constants have an effect on proportional action as well!  That is to say, adjusting either <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN> does not merely adjust those actions, but also influences the aggressiveness of proportional action<A ID="tex2html15"
+  HREF="footnode.html#foot1076"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">15</SPAN></SUP></A>.
+
+<P>
+We may show this mathematically, by breaking the &ldquo;series&rdquo; equation up into three different parts, each one describing its contribution to the output (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img101.svg"
+ ALT="$\Delta m$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta m = K_p \left({\tau_d \over \tau_i} + 1\right) \Delta e \hskip 30pt \hbox{Proportional action}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img110.svg"
+ ALT="$\displaystyle \Delta m = K_p \left({\tau_d \over \tau_i} + 1\right) \Delta e \hskip 30pt \hbox{Proportional action}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta m = {K_p \over \tau_i} \int e \> dt \hskip 30pt \hbox{Integral action}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.34ex; vertical-align: -2.10ex; " SRC="img106.svg"
+ ALT="$\displaystyle \Delta m = {K_p \over \tau_i} \int e \&gt; dt \hskip 30pt \hbox{Integral action}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta m = K_p \tau_d {de \over dt} \hskip 30pt \hbox{Derivative action}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img107.svg"
+ ALT="$\displaystyle \Delta m = K_p \tau_d {de \over dt} \hskip 30pt \hbox{Derivative action}$">
+</DIV><P></P>
+
+<P>
+As you can see, all three portions of this PID equation are influenced by the gain (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>) owing to algebraic distribution.  However, the proportional term is also affected by the values of the integral and derivative tuning parameters (<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN>).  Therefore, adjusting <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN> affects both the I and P actions, adjusting <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN> affects both the D and P actions, and adjusting <SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN> affects all three actions.
+
+<P>
+This &ldquo;interacting&rdquo; equation is an artifact of certain pneumatic and electronic controller designs.  Back when these were the dominant technologies, and PID controllers were modularly designed such that integral and derivative actions were separate hardware modules included in a controller at additional cost beyond proportional-only action, the easiest way to implement the integral and derivative actions was in a way that just happened to have an interactive effect on controller gain.  In other words, this odd equation form was a sort of compromise made for the purpose of simplifying the physical design of the controller.
+
+<P>
+Interestingly enough, many digital PID controllers are programmed to implement the &ldquo;interacting&rdquo; PID equation even though it is no longer an artifact of controller hardware.  The rationale for this programming is to have the digital controller behave identically to the legacy analog electronic or pneumatic controller it is replacing.  This way, the proven tuning parameters of the old controller may be plugged into the new digital controller, yielding the same results.  In essence, this is a form of &ldquo;backward compatibility&rdquo; between digital PID control and analog (electronic or pneumatic) PID control.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html310"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html312"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node13.html">Pneumatic PID controllers</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node11.html">P, I, and D</A>
+ &nbsp; <B>  <A ID="tex2html311"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html313"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

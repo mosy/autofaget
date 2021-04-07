@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>On/off control</TITLE>
+<META NAME="description" CONTENT="On/off control">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION00230000000000000000">
+On/off control</A>
+</H1>
+
+<P>
+Once while working as an instrument technician in an aluminum foundry, a mechanic asked me what it was that I did.  I began to explain my job, which was essentially to calibrate, maintain, troubleshoot, document, and modify (as needed) all automatic control systems in the facility.  The mechanic seemed puzzled as I explained the task of &ldquo;tuning&rdquo; loop controllers, especially those controllers used to maintain the temperature of large, gas-fired industrial furnaces holding many tons of molten metal.  &ldquo;Why does a controller have to be `tuned'?&rdquo; he asked.  &ldquo;All a controller does is turn the burner on when the metal's too cold, and turn it off when it becomes too hot!&rdquo;
+
+<P>
+In its most basic form, the mechanic's assessment of the control system was correct: to turn the burner on when the process variable (molten metal temperature) drops below setpoint, and turn it off when it rises above setpoint.  However, the actual algorithm is much more complex than that, finely adjusting the burner intensity according to the amount of <SPAN  CLASS="textit">error</SPAN> between PV and SP, the amount of time the error has accumulated, and the rate-of-change of the error over time.  In his casual observation of the furnace controllers, though, he had noticed nothing more than the full-on/full-off action of the controller.
+
+<P>
+The technical term for a control algorithm that merely checks for the process variable exceeding or falling below setpoint is <SPAN  CLASS="textit">on/off control</SPAN>.  In colloquial terms, it is known as <SPAN  CLASS="textit">bang-bang</SPAN> control, since the manipulated variable output of the controller rapidly switches between fully &ldquo;on&rdquo; and fully &ldquo;off&rdquo; with no intermediate state.  Control systems this crude usually provide very imprecise control of the process variable.  Consider our example of the shell-and-tube heat exchanger, if we were to implement simple on/off control<A ID="tex2html1"
+  HREF="footnode.html#foot1050"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>: <A NAME="107"></A> <A NAME="108"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont07.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img8.svg"
+ ALT="$\displaystyle \includegraphics{cont07.eps}$">
+</DIV><P></P>
+
+<P>
+As you can see, the degree of control is rather poor.  The process variable &ldquo;cycles&rdquo; between the upper and lower setpoints (USP and LSP) without ever stabilizing at the setpoint, because that would require the steam valve to be position somewhere <SPAN  CLASS="textit">between</SPAN> fully closed and fully open.  
+
+<P>
+This simple control algorithm may be adequate for temperature control in a house, but not for a sensitive chemical process!  Can you imagine what it would be like if an automobile's cruise control system relied on this algorithm?  Not only is the lack of precision a problem, but the frequent cycling of the final control element may contribute to premature failure due to mechanical wear.  In the heat exchanger scenario, thermal cycling (hot-cold-hot-cold) will cause metal fatigue in the tubes, resulting in a shortened service life.  Furthermore, every excursion of the process variable above setpoint is wasted energy, because the process fluid is being heated to a greater temperature than what is necessary.
+
+<P>
+Clearly, the only practical answer to this dilemma is a control algorithm able to <SPAN  CLASS="textit">proportion</SPAN> the final control element rather than just operate it at zero or full effect (the control valve fully closed or fully open).  This, in its simplest form, is called <SPAN  CLASS="textit">proportional control</SPAN>. <A NAME="113"></A>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html270"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html272"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node6.html">Proportional-only control</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node4.html">Diagnosing feedback control problems</A>
+ &nbsp; <B>  <A ID="tex2html271"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html273"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

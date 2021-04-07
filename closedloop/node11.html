@@ -1,0 +1,542 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>P, I, and D responses graphed</TITLE>
+<META NAME="description" CONTENT="P, I, and D responses graphed">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html301"
+  HREF="node11.html#SECTION00291000000000000000">Responses to a single step-change</A>
+<LI><A ID="tex2html302"
+  HREF="node11.html#SECTION00292000000000000000">Responses to a momentary step-and-return</A>
+<LI><A ID="tex2html303"
+  HREF="node11.html#SECTION00293000000000000000">Responses to two momentary steps-and-returns</A>
+<LI><A ID="tex2html304"
+  HREF="node11.html#SECTION00294000000000000000">Responses to a ramp-and-hold</A>
+<LI><A ID="tex2html305"
+  HREF="node11.html#SECTION00295000000000000000">Responses to an up-and-down ramp</A>
+<LI><A ID="tex2html306"
+  HREF="node11.html#SECTION00296000000000000000">Responses to a multi-slope ramp</A>
+<LI><A ID="tex2html307"
+  HREF="node11.html#SECTION00297000000000000000">Responses to a multiple ramps and steps</A>
+<LI><A ID="tex2html308"
+  HREF="node11.html#SECTION00298000000000000000">Responses to a sine wavelet</A>
+<LI><A ID="tex2html309"
+  HREF="node11.html#SECTION00299000000000000000">Note to students regarding quantitative graphing</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00290000000000000000">
+P, I, and D responses graphed</A>
+</H1>
+
+<P>
+A very helpful method for understanding the operation of proportional, integral, and derivative control terms is to analyze their respective responses to the same input conditions over time.  This section is divided into subsections showing P, I, and D responses for several different input conditions, in the form of graphs.  In each graph, the controller is assumed to be <SPAN  CLASS="textit">direct-acting</SPAN> (i.e. an increase in process variable results in an increase in output).
+
+<P>
+It should be noted that these graphic illustrations are all qualitative, not quantitative.  There is too little information given in each case to plot exact responses.  The illustrations of P, I, and D actions focus only on the <SPAN  CLASS="textit">shapes</SPAN> of the responses, not their exact numerical values.
+
+<P>
+In order to <SPAN  CLASS="textit">quantitatively</SPAN> predict PID controller responses, one would have to know the values of all PID settings, as well as the original starting value of the output before an input change occurred and a time index of when the change(s) occurred.
+
+<P>
+
+<H2><A ID="SECTION00291000000000000000">
+Responses to a single step-change</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img71.svg"
+ ALT="$\displaystyle \includegraphics{pid01.eps}$">
+</DIV><P></P>
+
+<P>
+Proportional action directly mimics the shape of the input change (a step).  Integral action ramps at a rate proportional to the magnitude of the input step.  Since the input step holds a constant value, the integral action ramps at a constant rate (a constant <SPAN  CLASS="textit">slope</SPAN>).  Derivative action interprets the step as an <SPAN  CLASS="textit">infinite</SPAN> rate of change, and so generates a &ldquo;spike<A ID="tex2html10"
+  HREF="footnode.html#foot369"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">10</SPAN></SUP></A>&rdquo; driving the output to saturation.
+
+<P>
+When combined into one PID output, the three actions produce this response:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid63.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img72.svg"
+ ALT="$\displaystyle \includegraphics{pid63.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00292000000000000000">
+Responses to a momentary step-and-return</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img73.svg"
+ ALT="$\displaystyle \includegraphics{pid02.eps}$">
+</DIV><P></P>
+
+<P>
+Proportional action directly mimics the shape of the input change (an up-and-down step).  Integral action ramps at a rate proportional to the magnitude of the input step, for as long as the PV is unequal to the SP.  Once PV = SP again, integral action stops ramping and simply holds the last value<A ID="tex2html11"
+  HREF="footnode.html#foot1071"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">11</SPAN></SUP></A>.  Derivative action interprets both steps as <SPAN  CLASS="textit">infinite</SPAN> rates of change, and so generates &ldquo;spikes<A ID="tex2html12"
+  HREF="footnode.html#foot376"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">12</SPAN></SUP></A>&rdquo; at the leading and at the trailing edges of the step.  Note how the leading (rising) edge causes derivative action to saturate high, while the trailing (falling) edge causes it to saturate low.
+
+<P>
+
+<P>
+When combined into one PID output, the three actions produce this response:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid64.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img74.svg"
+ ALT="$\displaystyle \includegraphics{pid64.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00293000000000000000">
+Responses to two momentary steps-and-returns</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid06.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img75.svg"
+ ALT="$\displaystyle \includegraphics{pid06.eps}$">
+</DIV><P></P>
+
+<P>
+Proportional action directly mimics the shape of all input changes.  Integral action ramps at a rate proportional to the magnitude of the input step, for as long as the PV is unequal to the SP.  Once PV = SP again, integral action stops ramping and simply holds the last value.  Derivative action interprets each step as an <SPAN  CLASS="textit">infinite</SPAN> rate of change, and so generates a &ldquo;spike&rdquo; at the leading and at the trailing edges of each step.  Note how a leading (rising) edge causes derivative action to saturate high, while a trailing (falling) edge causes it to saturate low.
+
+<P>
+When combined into one PID output, the three actions produce this response:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid65.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img76.svg"
+ ALT="$\displaystyle \includegraphics{pid65.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00294000000000000000">
+Responses to a ramp-and-hold</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img77.svg"
+ ALT="$\displaystyle \includegraphics{pid03.eps}$">
+</DIV><P></P>
+
+<P>
+Proportional action directly mimics the ramp-and-hold shape of the input.  Integral action ramps slowly at first (when the error is small) but increases ramping rate as error increases.  When error stabilizes, integral rate likewise stabilizes.  Derivative action offsets the output according to the input's ramping rate.
+
+<P>
+When combined into one PID output, the three actions produce this response:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid66.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img78.svg"
+ ALT="$\displaystyle \includegraphics{pid66.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00295000000000000000">
+Responses to an up-and-down ramp</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid04.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img79.svg"
+ ALT="$\displaystyle \includegraphics{pid04.eps}$">
+</DIV><P></P>
+
+<P>
+Proportional action directly mimics the up-and-down ramp shape of the input.  Integral action ramps slowly at first (when the error is small) but increases ramping rate as error increases, then ramps slower as error decreases back to zero.  Once PV = SP again, integral action stops ramping and simply holds the last value.  Derivative action offsets the output according to the input's ramping rate: first positive then negative.
+
+<P>
+When combined into one PID output, the three actions produce this response:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid67.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img80.svg"
+ ALT="$\displaystyle \includegraphics{pid67.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00296000000000000000">
+Responses to a multi-slope ramp</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid113.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img81.svg"
+ ALT="$\displaystyle \includegraphics{pid113.eps}$">
+</DIV><P></P>
+
+<P>
+Proportional action directly mimics the ramp shape of the input.  Integral action ramps slowly at first (when the error is small) but increases ramping rate as error increases, then accelerates its increase as the PV ramps even steeper.  Once PV = SP again, integral action stops ramping and simply holds the last value.  Derivative action offsets the output according to the input's ramping rate: first positive, then more positive, then it spikes negative when the PV suddenly returns to SP.
+
+<P>
+When combined into one PID output, the three actions produce this response:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid114.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img82.svg"
+ ALT="$\displaystyle \includegraphics{pid114.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00297000000000000000">
+Responses to a multiple ramps and steps</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid115.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img83.svg"
+ ALT="$\displaystyle \includegraphics{pid115.eps}$">
+</DIV><P></P>
+
+<P>
+Proportional action directly mimics the ramp-and-step shape of the input.  Integral action ramps slowly at first (when the error is small) but increases ramping rate as error increases.  Which each higher ramp-and-step in PV, integral action winds up at an ever-increasing rate.  Since PV never equals SP again, integral action never stops ramping upward.  Derivative action steps with each ramp of the PV.
+
+<P>
+When combined into one PID output, the three actions produce this response:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid116.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img84.svg"
+ ALT="$\displaystyle \includegraphics{pid116.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00298000000000000000">
+Responses to a sine wavelet</A>
+</H2>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid05.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img85.svg"
+ ALT="$\displaystyle \includegraphics{pid05.eps}$">
+</DIV><P></P>
+
+<P>
+As always, proportional action directly mimics the shape of the input.  The 90<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img86.svg"
+ ALT="$^{o}$"></SPAN> phase shift seen in the integral and derivative responses, compared to the PV wavelet, is no accident or coincidence.  The derivative of a sinusoidal function is <SPAN  CLASS="textit">always</SPAN> a cosine function, which is mathematically identical to a sine function with the angle advanced by 90<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img86.svg"
+ ALT="$^{o}$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{d \over dx} (\sin x) = \cos x = \sin (x + 90^o)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img87.svg"
+ ALT="$\displaystyle {d \over dx} (\sin x) = \cos x = \sin (x + 90^o)$">
+</DIV><P></P>
+
+<P>
+Conversely, the integral of a sine function is <SPAN  CLASS="textit">always</SPAN> a negative cosine function<A ID="tex2html13"
+  HREF="footnode.html#foot401"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">13</SPAN></SUP></A>, which is mathematically identical to a sine function with the angle retarded by 90<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img86.svg"
+ ALT="$^{o}$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\int \sin x \> dx = - \cos x = \sin (x - 90^o)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.34ex; vertical-align: -2.10ex; " SRC="img90.svg"
+ ALT="$\displaystyle \int \sin x \&gt; dx = - \cos x = \sin (x - 90^o)$">
+</DIV><P></P>
+
+<P>
+In summary, the derivative operation always adds a positive (leading) phase shift to a sinusoidal input waveform, while the integral operation always adds a negative (lagging) phase shift to a sinusoidal input waveform.
+
+<P>
+
+<P>
+When combined into one PID output, these particular integral and derivative actions mostly cancel, since they happen to be sinusoidal wavelets of equal amplitude and opposite phase.  Thus, the only way that the final (PID) output differs from proportional-only action in this particular case is the &ldquo;steps&rdquo; caused by derivative action responding to the input's sudden rise at the beginning and end of the wavelet:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid68.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.26ex; vertical-align: -0.10ex; " SRC="img91.svg"
+ ALT="$\displaystyle \includegraphics{pid68.eps}$">
+</DIV><P></P>
+
+<P>
+If the I and D tuning parameters were such that the integral and derivative responses were <SPAN  CLASS="textit">not</SPAN> equal in amplitude, their effects would not completely cancel.  Rather, the resultant of P, I, and D actions would be a sine wavelet having a phase shift somewhere between <SPAN CLASS="MATH"><IMG STYLE="height: 1.89ex; vertical-align: -0.29ex; " SRC="img92.svg"
+ ALT="$-90^{o}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.87ex; vertical-align: -0.27ex; " SRC="img93.svg"
+ ALT="$+90^{o}$"></SPAN> exclusive, depending on the relative strengths of the P, I, and D actions.
+
+<P>
+The 90 degree phase shifts associated with the integral and derivative operations are useful to understand when tuning PID controllers.  If one is familiar with these phase shift relationships, it is relatively easy to analyze the response of a PID controller to a sinusoidal input (such as when a process oscillates following a sudden load or setpoint change) to determine if the controller's response is dominated by any one of the three actions.  This may be helpful in &ldquo;de-tuning&rdquo; an over-tuned (overly aggressive) PID controller, if an excess of P, I, or D action may be identified from a phase comparison of PV and output waveforms.
+
+<P>
+
+<H2><A ID="SECTION00299000000000000000">
+Note to students regarding quantitative graphing</A>
+</H2>
+
+<P>
+A common exercise for students learning the function of PID controllers is to practice graphing a controller's output given input (PV and SP) conditions, either qualitatively or quantitatively.  This can be a frustrating experience for some students, as they struggle to accurately combine the effects of P, I, and/or D responses into a single output trend.  Here, I will present a way to ease the pain.
+
+<P>
+Suppose for example you were tasked with graphing the response of a PD (proportional + derivative) controller to the following PV and SP inputs over time.  You are told the controller has a gain of 1, a derivative time constant of 0.3 minutes, and is reverse-acting:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid73.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.16ex; vertical-align: -0.10ex; " SRC="img94.svg"
+ ALT="$\displaystyle \includegraphics{pid73.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+My first recommendation is to <SPAN  CLASS="textit">qualitatively</SPAN> sketch the individual P and D responses.  Simply draw two different trends, each one right above or below the given PV/SP trends, showing the shapes of each response over time.  You might even find it easier to do if you re-draw the original PV and SP trends on a piece of non-graph paper with the qualitative P and D trends also sketched on the same piece of non-graph paper.  The purpose of the qualitative sketches is to separate the task of determining shapes from the task of determining numerical values, in order to simplify the process.  
+
+<P>
+After sketching the separate P and D trends, label each one of the &ldquo;features&rdquo; (changes either up or down) in these qualitative trends.  This will allow you to more easily combine the effects into one output trend later:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid74.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 31.74ex; vertical-align: -0.10ex; " SRC="img95.svg"
+ ALT="$\displaystyle \includegraphics{pid74.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Now, you may qualitatively sketch an output trend combining each of these &ldquo;features&rdquo; into one graph.  Be sure to label each ramp or step originating with the separate P or D trends, so you know where each &ldquo;feature&rdquo; of the combined output graph originates from:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid75.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 50.90ex; vertical-align: -0.10ex; " SRC="img96.svg"
+ ALT="$\displaystyle \includegraphics{pid75.eps}$">
+</DIV><P></P>
+
+<P>
+Once the general shape of the output has been qualitatively determined, you may go back to the separate P and D trends to calculate numerical values for each of the labeled &ldquo;features.&rdquo;
+
+<P>
+<P>
+Note that each of the PV ramps is 15% in height, over a time of 15 seconds (one-quarter of a minute).  With a controller gain of 1, the proportional response to each of these ramps will also be a ramp that is 15% in height.
+
+<P>
+Taking our given derivative time constant of 0.3 minutes and multiplying that by the PV's rate-of-change (<!-- MATH
+ $d\hbox{PV} \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.48ex; vertical-align: -0.90ex; " SRC="img97.svg"
+ ALT="$d\hbox{PV} \over dt$"></SPAN>) during each of its ramping periods (15% per one-quarter minute, or 60% per minute) yields a derivative response of 18% during each of the ramping periods.  Thus, each derivative response &ldquo;step&rdquo; will be 18% in height.
+
+<P>
+
+<P>
+Going back to the qualitative sketches of P and D actions, and to the combined (qualitative) output sketch, we may apply the calculated values of 15% for each proportional ramp and 18% for each derivative step to the labeled &ldquo;features.&rdquo;  We may also label the starting value of the output trend as given in the original problem (35%), to calculate actual output values at different points in time.  Calculating output values at specific points in the graph becomes as easy as cumulatively adding and subtracting the P and D &ldquo;feature&rdquo; values to the starting output value:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid76.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.64ex; vertical-align: -0.10ex; " SRC="img98.svg"
+ ALT="$\displaystyle \includegraphics{pid76.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Now that we know the output values at all the critical points, we may quantitatively sketch the output trend on the original graph:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid77.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.16ex; vertical-align: -0.10ex; " SRC="img99.svg"
+ ALT="$\displaystyle \includegraphics{pid77.eps}$">
+</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html297"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html299"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node12.html">Different PID equations</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node10.html">Summary of PID control</A>
+ &nbsp; <B>  <A ID="tex2html298"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html300"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

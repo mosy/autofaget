@@ -1,0 +1,698 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Digital PID controllers</TITLE>
+<META NAME="description" CONTENT="Digital PID controllers">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html342"
+  HREF="node15.html#SECTION002131000000000000000">Stand-alone digital controllers</A>
+<LI><A ID="tex2html343"
+  HREF="node15.html#SECTION002132000000000000000">Direct digital control (DDC)</A>
+<LI><A ID="tex2html344"
+  HREF="node15.html#SECTION002133000000000000000">SCADA and telemetry systems</A>
+<LI><A ID="tex2html345"
+  HREF="node15.html#SECTION002134000000000000000">Distributed Control Systems (DCS)</A>
+<LI><A ID="tex2html346"
+  HREF="node15.html#SECTION002135000000000000000">Fieldbus control</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION002130000000000000000">
+Digital PID controllers</A>
+</H1>
+
+<P>
+The vast majority of PID controllers in service today are digital in nature.  Microprocessors executing PID algorithms provide many advantages over any form of analog PID control (pneumatic or electronic), not the least of which being the ability to network with personal computer workstations and other controllers over wired or wireless (radio) networks.
+
+<P>
+
+<H2><A ID="SECTION002131000000000000000">
+Stand-alone digital controllers</A>
+</H2>
+
+<P>
+If the internal components of a panel-mounted pneumatic or analog electronic controller (such as the Foxboro models 130 or 62, respectively) were completely removed and replaced by all-digital electronic componentry, the result would be a <SPAN  CLASS="textit">stand-alone digital PID controller</SPAN>.  From the outside, such a digital controller looks very similar its technological ancestors, but its capabilities are far greater.
+
+<P>
+An example of a popular panel-mounted digital controller is the Siemens model 353 (formerly the Moore Products model 353):  <A NAME="690"></A>  <A NAME="691"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid39.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img193.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid39.eps}$">
+</DIV><P></P>
+
+<P>
+This particular controller, like many high-end digital controllers and larger digital control systems, is programmed in a function block language.  Each function block in the controller is a software subroutine performing a specific function on input signals, generating at least one output signal.  Each function block has a set of configuration parameters telling it how to behave.  For example, the PID function block in a digital controller would have parameters specifying direct or reverse action, gain (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>), integral time constant (<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN>), derivative time constant (<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN>), output limits, etc.
+
+<P>
+
+<P>
+Even the &ldquo;stock&rdquo; configuration for simple, single-loop PID control is a collection of function blocks linked together:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid42.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 33.10ex; vertical-align: -0.10ex; " SRC="img194.svg"
+ ALT="$\displaystyle \includegraphics{pid42.eps}$">
+</DIV><P></P>
+
+<P>
+The beauty of function block programming is that the same blocks may be easily re-linked to implement custom control strategies.  Take for instance the following function block program written for a Siemens model 353 controller to provide a pulse-width-modulation (PWM, or time-proportioned) output signal instead of the customary 4-20 mA DC analog output signal.  The application is for an electric oven temperature control system, where the oven's heating element could only be turned on and off fully rather than continuously varied:  <A NAME="694"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid41.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.19ex; vertical-align: -0.10ex; " SRC="img195.svg"
+ ALT="$\displaystyle \includegraphics{pid41.eps}$">
+</DIV><P></P>
+
+<P>
+In order to specify links between function blocks, each of the used lettered block inputs is mapped to the output channel of another block.  In the case of the time-proportioned function block program, for example, the &ldquo;P&rdquo; (process variable) input of the PID function block is set to get its signal from the &ldquo;01&rdquo; output channel of the AIN1 (analog input 1) function block.  The &ldquo;TV&rdquo; (tracking value) input of the SETPT (setpoint) function block is also set to the &ldquo;01&rdquo; output channel of the AIN1 function block, so that the setpoint value generator has access to the process variable value in order to implement setpoint tracking.  Any function block output may drive an unlimited number of function block inputs (fan-out), but each function block input may receive a signal from <SPAN  CLASS="textit">only one</SPAN> function block output.  This is a rule followed within all function block languages to prevent multiple block output signals from conflicting (attempting to insert different signal values into the same input).  <A NAME="697"></A>
+
+<P>
+In the Siemens controllers, function block programming may be done by entering configuration data using the front-panel keypad, or by using graphical software running on a personal computer networked with the controller.
+
+<P>
+<P>
+
+<P>
+For applications not requiring so much capability, and/or requiring a smaller form factor, other panel-mounted digital controllers exist.  The Honeywell model UDC3000 is a popular example of a 1/4 DIN (96 mm <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> 96 mm) size digital controller:  <A NAME="698"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid40.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img196.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid40.eps}$">
+</DIV><P></P>
+
+<P>
+Even smaller panel-mounted controllers are produced by a wide array of manufacturers for applications requiring minimum functionality: 1/8 DIN (96 mm <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> 48 mm), 1/16 DIN (48 mm <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> 48 mm), and even 1/32 DIN (48 mm <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img59.svg"
+ ALT="$\times$"></SPAN> 24 mm) sizes are available.
+
+<P>
+
+<P>
+One of the advantageous capabilities of modern stand-alone controllers is the ability to exchange data over digital networks.  This provides operations and maintenance personnel alike the ability to remotely monitor and even control (adjust setpoints, switch modes, change tuning parameters, etc.) the process controller from a computer workstation.  The Siemens model 353 controller (with appropriate options) has the ability to digitally network over Ethernet, a very common and robust digital network standard.  The following photographs show three such controllers connected to a network through a common 4-port Ethernet &ldquo;hub&rdquo; device:  <A NAME="700"></A>  <A NAME="701"></A>  <A NAME="702"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{pid69.eps} \hskip 30pt \includegraphics[width=2.5in]{pid70.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.51ex; vertical-align: -0.10ex; " SRC="img197.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{pid69.eps} \hskip 30pt \includegraphics[width=2.5in]{pid70.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Special software (in this case, Siemens <SPAN  CLASS="textit">Procidia</SPAN>) running on a computer workstation connected to the same Ethernet network acquires data from and sends data to the networked controllers.  Screenshots of this software show typical displays allowing complete control over the function of the process controllers:  <A NAME="706"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=6in]{procidia_1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.92ex; vertical-align: -0.10ex; " SRC="img198.svg"
+ ALT="$\displaystyle \includegraphics[width=6in]{procidia_1.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION002132000000000000000">
+Direct digital control (DDC)</A>
+</H2>
+
+<P>
+A microprocessor operating at sufficient clock speed is able to execute more than one PID control algorithm for a process loop, by &ldquo;time-sharing&rdquo; its calculating power: devoting slices of time to the evaluation of each PID equation in rapid succession.  This not only makes multiple-loop digital control possible for a single microprocessor, but also makes it very attractive given the microprocessor's natural ability to manage data archival, transfer, and networking.  A single computer is able to execute PID control for multiple loops, and also make that loop control data accessible between loops (for purposes of cascade, ratio, feedforward, and other control strategies) and accessible on networks for human operators and technicians to easily access.
+
+<P>
+Such <SPAN  CLASS="textit">direct digital</SPAN> control (DDC) has been applied with great success to the problem of building automation, where temperature and humidity controls for large structures benefit from large-scale data integration.  The following photograph shows a Siemens APOGEE building automation system with multiple I/O (input/output) cards providing interface between analog instrument signals and the microprocessor's digital functions:  <A NAME="710"></A>  <A NAME="711"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{pid44.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="img199.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{pid44.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+A close-up view of an APOGEE processor shows the device handling all mathematical calculations for the PID control:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid45.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img200.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid45.eps}$">
+</DIV><P></P>
+
+<P>
+Other than a few LEDs, there is no visual indication in this panel of what the system is doing at any particular time.  Operators, engineers, and technicians alike must use software running on a networked personal computer to access data in this control system.
+
+<P>
+
+<P>
+An example of the HMI (Human-Machine Interface) software one might see used in conjunction with a DDC controller is shown here, also from a Siemens APOGEE building control system:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid111.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 53.23ex; vertical-align: -0.10ex; " SRC="img201.svg"
+ ALT="$\displaystyle \includegraphics{pid111.eps}$">
+</DIV><P></P>
+
+<P>
+This particular screenshot shows monitored and controlled variables for a heat exchanger (&ldquo;heat wheel&rdquo;) used to exchange heat between outgoing and incoming air for the building.
+
+<P>
+<P>
+
+<P>
+A smaller-scale example of a DDC system is the Delta model DSC-1280 controller, an example shown in the following photograph:  <A NAME="715"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{pid85.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="img202.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{pid85.eps}$">
+</DIV><P></P>
+
+<P>
+This system does not have plug-in I/O cards like the Siemens APOGEE, but instead is monolithic in design, with all inputs and outputs part of one large &ldquo;motherboard&rdquo; PCB.  The model DSC-1280 controller has 12 input channels and 8 output channels (hence the model number &ldquo;1280&rdquo;).  An Ethernet cable (RJ-45 plug) is seen in the upper-left corner of this unit, through which a remotely-located personal computer communicates with the DDC using a high-level protocol called BACnet.  In many ways, BACnet is similar to Modbus, residing at layer 7 of the OSI Reference Model (the so-called <SPAN  CLASS="textit">Application Layer</SPAN>), unconcerned with the details of data communication at the Physical or Data Link layers.  This means, like Modbus, BACnet commands may be sent and received over a variety of lower-level network standards, with Ethernet being the preferred<A ID="tex2html32"
+  HREF="footnode.html#foot718"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">32</SPAN></SUP></A> option at the time of this writing.  <A NAME="719"></A>
+
+<P>
+
+<P>
+Another example of a small-scale DDC is this Distech model ECP-410 unit:  <A NAME="720"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{pid101.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img203.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{pid101.eps}$">
+</DIV><P></P>
+
+<P>
+This controller uses <SPAN  CLASS="textit">LonWorks</SPAN> as its communication protocol rather than BACnet.  Like BACnet, LonWorks is an upper-layer protocol and may be transported over Ethernet as well as simpler serial communication formats.  The model ECP-410 DDC controller has a two-wire connection for its LonWorks network.  <A NAME="723"></A>
+
+<P>
+Programming of DDC controllers ranges from text-based languages (similar to BASIC) to function-block programming.  The Delta DSC-1280 is an example of a controller programmed in text, while the Distech ECP-410 supports function blocks in addition to text-based programming.
+
+<P>
+
+<P>
+The application-specific nature of DDC (environmental controls for the interior of large buildings and other facilities) lends itself to controller units pre-programmed to perform well-defined tasks rather than general-purpose controllers designed to be user-programmable for any task.  An example of such a &ldquo;fixed&rdquo; program controller is the Distech model EC-RTU-L, designed to control a &ldquo;rooftop unit&rdquo; for air handling:  <A NAME="724"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{pid102.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img204.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{pid102.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+
+<P>
+A more common application of industrial DDC is the use of programmable logic controllers (PLCs) to control multiple loops.  PLCs were originally invented for on/off (discrete) process control functions, but have subsequently grown in speed and capability to execute analog PID control functions as well.  This next photograph shows an Allen-Bradley (Rockwell) ControlLogix PLC used to control the operation of a gas turbine engine.  The PLC may be seen in the upper-left corner of the enclosure, with the rest of the enclosure devoted to terminal blocks and accessory components:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{pid46.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="img205.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{pid46.eps}$">
+</DIV><P></P>
+
+<P>
+A strong advantage of using PLCs for analog loop control is the ability to easily integrate discrete controls with the analog controls.  It is quite easy, for example, to coordinate the sequential start-up and shut-down functions necessary for intermittent operation with the analog PID controls necessary for continuous operation, all within one programmable logic controller.  It should be noted, however, that many early PLC implementations of PID algorithms were crude at best, lacking the finesse of stand-alone PID controllers.  Even some modern PLC analog functions are mediocre<A ID="tex2html33"
+  HREF="footnode.html#foot727"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">33</SPAN></SUP></A> at the time of this writing (2008).
+
+<P>
+
+<H2><A ID="SECTION002133000000000000000">
+SCADA and telemetry systems</A>
+</H2>
+
+<P>
+A similar control system architecture to Direct Digital Control (DDC) &ndash; assigning a single microprocessor to the task of managing multiple control functions, with digital communication between the microprocessor units &ndash; is used for the management of systems which are by their very nature spread over wide geographical regions.  Such systems are generally referred to as <SPAN  CLASS="textit">SCADA</SPAN>, which is an acronym standing for <SPAN  CLASS="textit">Supervisory Control And Data Acquisition</SPAN>.  <A NAME="731"></A>  <A NAME="732"></A>
+
+<P>
+The typical SCADA system consists of multiple <SPAN  CLASS="textit">Remote Terminal Unit</SPAN> (RTU) devices connected to process transmitters and final control elements, implementing basic control functions such as motor start/stop and PID loop control.  These RTU devices communicate digitally to a <SPAN  CLASS="textit">Master Terminal Unit</SPAN> (MTU) device at a central location where human operators may monitor the process and issue commands.   <A NAME="735"></A>  <A NAME="736"></A>  <A NAME="737"></A>  <A NAME="738"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid47.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 60.58ex; vertical-align: -0.10ex; " SRC="img206.svg"
+ ALT="$\displaystyle \includegraphics{pid47.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+A photograph of an RTU &ldquo;rack&rdquo; operating at a large electric power substation is shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid81.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.08ex; vertical-align: -0.10ex; " SRC="img207.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid81.eps}$">
+</DIV><P></P>
+
+<P>
+Some RTU hardware, such as the substation monitoring system shown above, is custom-manufactured for the application.  Other RTU hardware is more general in purpose, intended for the monitoring and control of natural gas and oil production wells, but applicable to other applications as well.  
+
+<P>
+
+<P>
+The Fisher ROC 800 &ndash; shown in the photograph below &ndash; is an example of an RTU designed to operate with a minimum of electrical power, so that a single solar panel and battery will be sufficient for year-round operation in remote environments.  The particular unit shown is installed in a natural gas metering station, where is monitors gas pressure, temperature, and flow rate, and also controls the injection of an &ldquo;odorizing&rdquo; compound into the gas to give it a bad smell:  <A NAME="741"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid112.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img208.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid112.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Standard programmable logic controllers (PLCs) are ideal candidates for use as RTU devices.  Modern PLCs have all the I/O, networking, and control algorithm capability necessary to function as remote terminal units.  Commercially available Human-Machine Interface (HMI) software allowing personal computers to display PLC variable values potentially turns every PC into a Master Terminal Unit (MTU) where operators can view process variables, change setpoints, and issue other commands for controlling the process.
+
+<P>
+A photograph of such HMI software used to monitor a SCADA system for a set of natural gas compressors is shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid82.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.91ex; vertical-align: -0.10ex; " SRC="img209.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid82.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Another photograph of a similar system used to monitor and control drinking water reservoirs for a city is shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid83.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img210.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid83.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+A concept closely related to SCADA is that of <SPAN  CLASS="textit">telemetry</SPAN>, the word literally meaning &ldquo;distance measuring&rdquo; (i.e. measuring something over a distance).  The acronym SCADA, by containing the word &ldquo;control,&rdquo; implies two-way communication (measurement and control) between the master location and the remote location.  In applications where the flow of information is strictly one-way (simplex) from the remote location to the master location, &ldquo;telemetry&rdquo; is a more apt description.  <A NAME="746"></A>  <A NAME="747"></A>
+
+<P>
+Telemetry systems find wide application in scientific research.  Seismographs, river and stream flowmeters, weather stations, and other remotely-located measurement instruments connected (usually by radio links) to some centralized data collection center are all examples of telemetry.  Any industrial measurement (-only) application spanning a large distance could likewise be classified as a telemetry system, although you will sometimes find the term &ldquo;SCADA&rdquo; applied even when the communication is simplex in nature.
+
+<P>
+
+<H2><A ID="SECTION002134000000000000000">
+Distributed Control Systems (DCS)</A>
+</H2>
+
+<P>
+A radically new concept appeared in the world of industrial control in the mid-1970's: the notion of <SPAN  CLASS="textit">distributed</SPAN> digital control.  Direct digital control during that era<A ID="tex2html34"
+  HREF="footnode.html#foot750"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">34</SPAN></SUP></A> suffered a substantial problem: the potential for catastrophic failure if the single digital computer executing <SPAN  CLASS="textit">multiple</SPAN> PID control functions were to ever halt.  Digital control brings many advantages, but it isn't worth the risk if the entire operation will shut down (or catastrophically fail!) following a hardware or software failure within that one computer.  <A NAME="752"></A>
+
+<P>
+Distributed control directly addressed this concern by having multiple control computers &ndash; each one responsible for only a handful of PID loops &ndash; distributed throughout the facility and networked together to share information with each other and with operator display consoles.  With individual process control &ldquo;nodes&rdquo; scattered throughout the campus, each one dedicated to controlling just a few loops, there would be less concentration of liability as there would be with a single-computer DDC system.  Such distribution of computing hardware also shortened the analog signal wiring, because now the hundreds or thousands of analog field instrument cables only had to reach as far as the distributed nodes, not all the way to a centralized control room.  Only the networking cable had to reach that far, representing a drastic reduction in wiring needs.  Furthermore, distributed control introduced the concept of <SPAN  CLASS="textit">redundancy</SPAN> to industrial control systems: where digital signal acquisition and processing hardware units were equipped with &ldquo;spare&rdquo; units designed to automatically take over all critical functions in the event of a primary failure.  <A NAME="754"></A>
+
+<P>
+
+<P>
+The following illustration shows a typical distributed control system (DCS) architecture:  <A NAME="755"></A>  <A NAME="756"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid48.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 61.94ex; vertical-align: -0.10ex; " SRC="img211.svg"
+ ALT="$\displaystyle \includegraphics{pid48.eps}$">
+</DIV><P></P>
+
+<P>
+Each &ldquo;rack&rdquo; contains a microprocessor to implement all necessary control functions, with individual I/O (input/output) &ldquo;cards&rdquo; for converting analog field instrument signals into digital format, and vice-versa.  Redundant processors, redundant network cables, and even redundant I/O cards address the possibility of component failure.  DCS processors are usually programmed to perform routine self-checks<A ID="tex2html35"
+  HREF="footnode.html#foot758"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">35</SPAN></SUP></A> on redundant system components to ensure availability of the spare components in the event of a failure.
+
+<P>
+If there ever was a total failure in one of the &ldquo;control racks&rdquo; where the redundancy proved insufficient for the fault(s), the only PID loops faulted will be those resident in that rack, not any of the other loops throughout the system.  Likewise, if ever the network cables become severed or otherwise faulted, only the information flow between those two points will suffer; the rest of the system will continue to communicate data normally.  Thus, one of the &ldquo;hallmark&rdquo; features of a DCS is its tolerance to serious faults: even in the event of severe hardware or software faults, the impact to process control is minimized by design.
+
+<P>
+
+<P>
+One of the very first distributed control systems in the world was the Honeywell TDC2000 system<A ID="tex2html36"
+  HREF="footnode.html#foot759"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">36</SPAN></SUP></A>, introduced in 1975.  By today's standards, the technology was crude<A ID="tex2html37"
+  HREF="footnode.html#foot760"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">37</SPAN></SUP></A>, but the concept was revolutionary.  <A NAME="761"></A>  <A NAME="762"></A>  <A NAME="763"></A>
+
+<P>
+Each rack (called a &ldquo;box&rdquo; by Honeywell) consisted of an aluminum frame holding several large printed circuit boards with card-edge connectors.  A &ldquo;basic controller&rdquo; box appears in the left-hand photograph.  The right-hand photograph shows the termination board where the field wiring (4-20 mA) connections were made.  A thick cable connected each termination board to its respective controller box:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{pid49.eps} \hskip 30pt \includegraphics[width=2.5in]{pid50.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.42ex; vertical-align: -0.10ex; " SRC="img212.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{pid49.eps} \hskip 30pt \includegraphics[width=2.5in]{pid50.eps}$">
+</DIV><P></P>
+
+<P>
+Controller redundancy in the TDC2000 DCS took the form of a &ldquo;spare&rdquo; controller box serving as a backup for up to eight other controller boxes.  Thick cables routed all analog signals to this spare controller, so that it would have access to them in the event it needed to take over for a failed controller.  The spare controller would become active on the event of <SPAN  CLASS="textit">any</SPAN> fault in any of the other controllers, including failures in the I/O cards.  Thus, this redundancy system provided for processor failures as well as I/O failures.  All TDC2000 controllers communicated digitally by means of a dual coaxial cable network known as the &ldquo;Data Hiway.&rdquo;  The dual cables provided redundancy in network communications.
+
+<P>
+
+<P>
+A typical TDC2000 operator workstation appears in the next photograph:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid51.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img213.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid51.eps}$">
+</DIV><P></P>
+
+<P>
+Over the years following its 1975 introduction, the Honeywell system grew in sophistication with faster networks (the &ldquo;Local Control Network&rdquo; or LCN), more capable controller racks (the &ldquo;Process Manager&rdquo; or PM series), and better operator workstations.  Many of these improvements were incremental, consisting of add-on components that could work with existing TDC2000 components so that the entire system need not be replaced to accept the new upgrades.
+
+<P>
+Other control equipment manufacturers responded to the DCS revolution started by Honeywell and Yokogawa by offering their own distributed control systems.  The Bailey Network 90 (Net90) DCS, Bailey Infi90 DCS, and the Fisher Provox systems are examples.  Foxboro, already an established leader in the control system field with their SPEC 200 analog system, first augmented the SPEC 200 with digital capabilities (the VIDEOSPEC workstation consoles, FOX I/A computer, INTERSPEC and FOXNET data networks), then developed an entirely digital distributed control system, the SPECTRUM.  <A NAME="768"></A>  <A NAME="769"></A>  <A NAME="770"></A>  <A NAME="771"></A>   <A NAME="772"></A>  <A NAME="773"></A>  <A NAME="774"></A>  <A NAME="775"></A>
+
+<P>
+
+<P>
+Some modern distributed control systems offered at the time of this writing (2008) include:  <A NAME="776"></A> <A NAME="777"></A> <A NAME="778"></A> <A NAME="779"></A> <A NAME="780"></A>  <A NAME="781"></A>
+
+<P>
+
+<UL>
+<LI>ABB <SPAN  CLASS="textit">800xA</SPAN>
+</LI>
+<LI>Emerson <SPAN  CLASS="textit">DeltaV</SPAN> and <SPAN  CLASS="textit">Ovation</SPAN>
+</LI>
+<LI>Foxboro (Invensys) <SPAN  CLASS="textit">I/A</SPAN>
+</LI>
+<LI>Honeywell <SPAN  CLASS="textit">Experion PKS</SPAN>
+</LI>
+<LI>Yokogawa <SPAN  CLASS="textit">CENTUM VP</SPAN> and <SPAN  CLASS="textit">CENTUM CS</SPAN>
+</LI>
+</UL>
+
+<P>
+
+<P>
+For a visual comparison with the Honeywell TDC2000 DCS, examine the following photograph of an Emerson DeltaV DCS rack, with processor and multiple I/O modules: 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid52.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.36ex; vertical-align: -0.10ex; " SRC="img214.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid52.eps}$">
+</DIV><P></P>
+
+<P>
+A photograph of an Emerson Ovation DCS rack shows a vertically-oriented backplane accepting multiple I/O modules:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=3.5in]{pid108.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.97ex; vertical-align: -0.10ex; " SRC="img215.svg"
+ ALT="$\displaystyle \includegraphics[height=3.5in]{pid108.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Many modern distributed control systems such as the Emerson DeltaV use regular personal computers rather than proprietary hardware as operator workstations.  This cost-saving measure leverages existing computer and display technologies without sacrificing control-level reliability (since the control hardware and software is still industrial-grade):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid53.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.36ex; vertical-align: -0.10ex; " SRC="img216.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid53.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+As previously mentioned in the Direct Digital Control (DDC) subsection, programmable logic controllers (PLCs) are becoming more and more popular as PID control platforms due to their ever-expanding speed, functionality, and relatively low cost.  It is now possible with modern PLC hardware and networking capabilities to build a truly distributed control system with individual PLCs as the processing nodes, and with redundancy built into each of those nodes so that any single failure does not interrupt critical control functions.  Such a system may be purchased at a fraction of the up-front cost of a fully-fledged DCS.
+
+<P>
+However, what is currently lacking in the PLC world is the same level of hardware and software integration necessary to build a functional distributed control system that comes as ready-to-use as a system pre-built by a DCS manufacturer.  In other words, if an enterprise chooses to build their own distributed control system using programmable logic controllers, they must be prepared to do a <SPAN  CLASS="textit">lot</SPAN> of programming work in order to emulate the same level of functionality and power as a pre-engineered DCS<A ID="tex2html38"
+  HREF="footnode.html#foot1093"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">38</SPAN></SUP></A>.  Any engineer or technician who has experienced the power of a modern DCS &ndash; with its self-diagnostic, &ldquo;smart&rdquo; instrument management, event auditing, advanced control strategy, pre-engineered redundancy, data collection and analysis, and alarm management capabilities &ndash; realizes these features are neither luxuries nor are they trivial to engineer.  Woe to anyone who thinks these critical features may be created by incumbent staff at a lesser cost!
+
+<P>
+
+<H2><A ID="SECTION002135000000000000000">
+Fieldbus control</A>
+</H2>
+
+<P>
+The DCS revolution started in the mid-1970's was fundamentally a moving of control system &ldquo;intelligence&rdquo; from a centralized location to distributed locations.  Rather than have a single computer (or a panel full of single-loop controllers) located in a central control room implement PID control for a multitude of process loops, many (smaller) computers located closer to the process areas would execute the PID and other control functions, with network cables shuttling data between those distributed locations and the central control room.
+
+<P>
+Beginning in the late 1980's, the next logical step in this evolution of control architecture saw the relocation of control &ldquo;intelligence&rdquo; to the field instruments themselves.  In other words, the new idea was to equip individual transmitters and control valve positioners with the necessary computational power to implement PID control all on their own, using digital networks to carry process data between the field instruments and any location desired.  This is the fundamental concept of <SPAN  CLASS="textit">fieldbus</SPAN>.  <A NAME="798"></A>
+
+<P>
+&ldquo;Fieldbus&rdquo; as a technical term has multiple definitions.  Many manufacturers use the word &ldquo;fieldbus&rdquo; to describe any digital network used to transport data to and from field instruments.  In this subsection, I use the word &ldquo;fieldbus&rdquo; to describe a design philosophy where field instruments possess all the necessary &ldquo;intelligence&rdquo; to control the process, with no need for separate centralized (or even distributed) control hardware.  <SPAN  CLASS="textit">FOUNDATION Fieldbus</SPAN> is the first standard to embody this fully-distributed control concept, the technical details of this open standard maintained and promoted by the <SPAN  CLASS="textit">Fieldbus Foundation</SPAN>.  The aim of this Foundation is to establish an open, technical standard for <SPAN  CLASS="textit">any</SPAN> manufacturer to follow in the design of their fieldbus instruments.  This means a FOUNDATION Fieldbus (FF) transmitter manufactured by Smar will work seamlessly with a FF control valve positioner manufactured by Fisher, communicating effortlessly with a FF-aware host system manufactured by ABB, and so on.  This may be thought of in terms of being the digital equivalent of the 3-15 PSI pneumatic signal standard or the 4-20 mA analog electronic signal standard: so long as all instruments &ldquo;talk&rdquo; according to the same standard, brands and models may be freely interchanged to build any control system desired.  <A NAME="802"></A>  <A NAME="803"></A>  <A NAME="804"></A>
+
+<P>
+
+<P>
+To illustrate the general fieldbus concept, consider this flow control system:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid54.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.45ex; vertical-align: -0.10ex; " SRC="img217.svg"
+ ALT="$\displaystyle \includegraphics{pid54.eps}$">
+</DIV><P></P>
+
+<P>
+Here, a fieldbus <SPAN  CLASS="textit">coupling device</SPAN> provides a convenient junction point for cables coming from the transmitter, valve positioner, and host system.  FOUNDATION Fieldbus devices both receive DC power and communicate digitally over the same twisted-pair cables.  In this case, the host system provides DC power for the transmitter and positioner to function, while communication of process data occurs primarily between the transmitter and positioner (with little necessary involvement of the host system<A ID="tex2html39"
+  HREF="footnode.html#foot1094"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">39</SPAN></SUP></A>).  <A NAME="808"></A>  <A NAME="809"></A>  <A NAME="810"></A>
+
+<P>
+
+<P>
+As with distributed control systems, FOUNDATION Fieldbus instruments are programmed using a function block language.  In this case, we must have an analog input (for the transmitter's measurement), a PID function block, and an analog output (for the valve positioner) to make a complete flow control system:  <A NAME="811"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid56.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 18.58ex; vertical-align: -0.10ex; " SRC="img218.svg"
+ ALT="$\displaystyle \includegraphics{pid56.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+The analog input (AI) block must reside in the transmitter, and the analog output (AO) block must reside in the valve positioner, since those blocks necessarily relate to the measured and controlled variables, respectively.  However, the PID block may reside in <SPAN  CLASS="textit">either</SPAN> field device:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid55.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 84.19ex; vertical-align: -0.10ex; " SRC="img219.svg"
+ ALT="$\displaystyle \includegraphics{pid55.eps}$">
+</DIV><P></P>
+
+<P>
+Practical reasons do exist for choosing one location of the PID function block over the other, most notably the difference in communication loading between the two options<A ID="tex2html40"
+  HREF="footnode.html#foot815"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">40</SPAN></SUP></A>.  However, there is no <SPAN  CLASS="textit">conceptual</SPAN> limitation to the location of the PID function block.  In a fieldbus control system where the control &ldquo;intelligence&rdquo; is distributed all the way to the field instrument devices themselves, there are no limits to system flexibility.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html338"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html340"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node16.html">Practical PID controller features</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node14.html">Analog electronic PID controllers</A>
+ &nbsp; <B>  <A ID="tex2html339"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html341"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

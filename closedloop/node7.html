@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Proportional-only offset</TITLE>
+<META NAME="description" CONTENT="Proportional-only offset">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION00250000000000000000">
+Proportional-only offset</A>
+</H1>
+
+<P>
+A fundamental limitation of proportional control has to do with its response to changes in setpoint and changes in process <SPAN  CLASS="textit">load</SPAN>.  A &ldquo;load&rdquo; in a controlled process is any variable not controlled by the loop controller which nevertheless affects the process variable the controller is trying to regulate.  In other words, a &ldquo;load&rdquo; is any factor the loop controller must compensate for while maintaining the process variable at setpoint. <A NAME="168"></A>
+
+<P>
+In our hypothetical heat exchanger system, the temperature of the incoming process fluid is an example of a load:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont12.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 60.19ex; vertical-align: -0.10ex; " SRC="img26.svg"
+ ALT="$\displaystyle \includegraphics{cont12.eps}$">
+</DIV><P></P>
+
+<P>
+If the incoming fluid temperature were to suddenly decrease, the immediate effect this would have on the process would be to decrease the outlet temperature (which is the temperature we are trying to maintain at a steady value).  It should make intuitive sense that a colder incoming fluid will require more heat input to raise it to the same outlet temperature as before.  If the heat input remains the same (at least in the immediate future), this colder incoming flow must make the outlet flow colder than it was before.  Thus, incoming feed temperature has an impact on the outlet temperature whether we like it or not, and the control system must compensate for these unforeseen and uncontrolled changes.  This is precisely the definition of a &ldquo;load&rdquo;: a burden<A ID="tex2html3"
+  HREF="footnode.html#foot1054"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A> on the control system.
+
+<P>
+Of course, it is the job of the controller to counteract any tendency for the outlet temperature to stray from setpoint, but as we shall soon see this cannot be perfectly achieved with proportional control alone.  
+
+<P>
+<P>
+Let us perform a &ldquo;thought experiment&rdquo; to demonstrate this phenomenon of proportional-only offset.  Imagine the controller has been controlling outlet temperature exactly at setpoint (PV = SP), and then suddenly the inlet feed temperature drops and remains colder than before.  Recall that the equation for a reverse-acting proportional controller is as follows:  <A NAME="171"></A>  <A NAME="172"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p (\hbox{SP} - \hbox{PV}) + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img27.svg"
+ ALT="$\displaystyle m = K_p (\hbox{SP} - \hbox{PV}) + b$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN> = Controller output
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN> = Proportional gain
+
+<P>
+SP = Setpoint
+
+<P>
+PV = Process variable
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img14.svg"
+ ALT="$b$"></SPAN> = Bias
+
+<P>
+<P>
+The introduction of colder feed fluid to the heat exchanger makes the outlet temperature (PV) begin to fall.  As the PV falls, the controller calculates a positive error (SP <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> PV).  This positive error, when multiplied by the controller's gain value, drives the output to a greater value.  This opens up the steam valve, adding more heat to the exchanger.
+
+<P>
+As more heat is added, the rate of temperature drop slows down.  The further the PV drops, the more the steam valve opens, until enough additional heat is being added to the heat exchanger to maintain a constant outlet temperature.  However, this new stable PV value will be less than it was prior to the introduction of colder feed (i.e. less than the SP).  In fact, the controller's automatic action can <SPAN  CLASS="textit">never</SPAN> return the PV to its original (SP) value so long as the feed remains colder than before.  The reason for this is that a greater flow of steam is necessary to balance a colder feed coming in, and the only way a proportional controller is ever going to automatically drive the steam valve to this greater-flow position is if an error develops between PV and SP.  Thus, an <SPAN  CLASS="textit">offset</SPAN> inevitably develops between PV and SP due to the load (colder feed).
+
+<P>
+We may prove the inevitability of this offset another way: imagine somehow that the PV did actually return to the SP value despite the colder feed fluid (remaining colder).  If this happened, the steam valve would also return to its former throttling position where it was before the feed temperature dropped.  However, we know that this former position will not allow enough steam through to the exchanger to overcome the colder feed &ndash; if it did, the PV never would have decreased to begin with!  A further-open valve is precisely what we need to stabilize the PV given this colder feed, yet the only way the proportional-only controller can achieve this is if the PV actually falls below SP.
+
+<P>
+To summarize: the only way a proportional-only controller can automatically generate a new output value (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN>) is if the PV deviates from SP.  Therefore, load changes (requiring new output values to compensate) force the PV to deviate from SP.
+
+<P>
+<P>
+
+<P>
+Another &ldquo;thought experiment&rdquo; may be helpful to illustrate the phenomenon of proportional-only offset.  Imagine building your own cruise control system for your automobile based on the proportional-only equation: the engine's throttle position is a function of the difference between PV (road speed) and SP (the desired &ldquo;target&rdquo; speed).  Let us further suppose that you carefully adjust the bias value of your cruise control system to achieve PV = SP on level ground at a speed of 70 miles per hour (70% on a 0 to 100 MPH speedometer scale), with the throttle at a position of 40%, and a gain (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>) of 2:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p (\hbox{SP} - \hbox{PV}) + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img27.svg"
+ ALT="$\displaystyle m = K_p (\hbox{SP} - \hbox{PV}) + b$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+40\% = 2 (70 - 70) + 40\%
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="img28.svg"
+ ALT="$\displaystyle 40\% = 2 (70 - 70) + 40\%$">
+</DIV><P></P>
+
+<P>
+Imagine now that after cruising precisely at setpoint (70% = 70 MPH), the road begins to incline uphill for several miles.  This, obviously, is a load on the cruise control system.  With the cruise control disengaged, the automobile would slow down because the same throttle position (40%) sufficient to maintain setpoint (70 MPH) on level ground is not enough power to maintain that same setpoint on an incline.  
+
+<P>
+With the cruise control engaged, the engine throttle will automatically open further as speed drops.  At a speed of 69 MPH, the throttle opens up to 42%.  At a speed of 68 MPH, the throttle opens up to 44%.  Every drop in speed of 1 MPH results in a 2% further-open throttle to send more power to the wheels.
+
+<P>
+Suppose the demands of this particular inclined road require a 50% throttle position for this automobile to maintain a constant speed.  In order for your proportional-only cruise control system to deliver this necessary 50% throttle position, the speed will have to &ldquo;droop&rdquo; by 5 MPH below setpoint:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p (\hbox{SP} - \hbox{PV}) + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img27.svg"
+ ALT="$\displaystyle m = K_p (\hbox{SP} - \hbox{PV}) + b$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+50\% = 2 (70 - 65) + 40\%
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="img29.svg"
+ ALT="$\displaystyle 50\% = 2 (70 - 65) + 40\%$">
+</DIV><P></P>
+
+<P>
+There is simply no other way for your proportional-only controller to automatically achieve the requisite 50% throttle position aside from letting the speed sag below setpoint by 5% (5 MPH).  Given this fact, the only way the proportional-only cruise control will ever return the speed to setpoint (70 MPH) is if and when the load conditions change to allow for a lesser throttle position of 40%.  So long as the load demands a different throttle position than the bias value, the speed <SPAN  CLASS="textit">must</SPAN> deviate from the setpoint value of 70 MPH.
+
+<P>
+<P>
+This necessary error developing between PV and SP is called <SPAN  CLASS="textit">proportional-only offset</SPAN>, sometimes called <SPAN  CLASS="textit">droop</SPAN>.  The amount of droop depends on how severe the load change is, and how aggressive the controller responds (i.e. how much gain it has).  The term &ldquo;droop&rdquo; is very misleading, as it is possible for the error to develop the other way (i.e. the PV might rise above SP due to a load change!).  Imagine the opposite load-change scenario in our steam heat exchanger process, where the incoming feed temperature suddenly <SPAN  CLASS="textit">rises</SPAN> instead of falls.  If the controller was controlling exactly at setpoint before this upset, the final result will be an outlet temperature that settles at some point <SPAN  CLASS="textit">above</SPAN> setpoint, enough so the controller is able to pinch the steam valve far enough closed to stop any further rise in temperature. <A NAME="186"></A> <A NAME="187"></A>
+
+<P>
+Proportional-only offset also occurs as a result of setpoint changes.  We could easily imagine the same sort of effect following an operator's increase of setpoint for the temperature controller on the heat exchanger.  After increasing the setpoint, the controller immediately increases the output signal, sending more steam to the heat exchanger.  As temperature rises, though, the proportional algorithm causes the output signal to decrease.  When the rate of heat energy input by the steam equals the rate of heat energy carried away from the heat exchanger by the heated fluid (a condition of <SPAN  CLASS="textit">energy balance</SPAN>), the temperature stops rising.  This new equilibrium temperature will not be at setpoint, assuming the temperature was holding at setpoint prior to the human operator's setpoint increase.  The new equilibrium temperature indeed <SPAN  CLASS="textit">cannot</SPAN> ever achieve any setpoint value higher than the one it did in the past, for if the error ever returned to zero (PV = SP), the steam valve would return to its old position, which we know would be insufficient to raise the temperature of the heated fluid to a new value.
+
+<P>
+<P>
+An example of proportional-only control in the context of electronic power supply circuits is the following opamp voltage regulator, used to stabilize voltage to a load with power supplied by an unregulated voltage source:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont68.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.58ex; vertical-align: -0.10ex; " SRC="img30.svg"
+ ALT="$\displaystyle \includegraphics{cont68.eps}$">
+</DIV><P></P>
+
+<P>
+In this circuit, a zener diode establishes a &ldquo;reference&rdquo; voltage (which may be thought of as a &ldquo;setpoint&rdquo; for the controlling opamp to follow).  The operational amplifier acts as the proportional-only controller, sensing voltage at the load (PV), and sending a driving output voltage to the base of the power transistor to keep load voltage constant despite changes in the supply voltage or changes in load current (both &ldquo;loads&rdquo; in the process-control sense of the word, since they tend to influence voltage at the load circuit without being under the control of the opamp).
+
+<P>
+If everything functions properly in this voltage regulator circuit, the load's voltage will be stable over a wide range of supply voltages and load currents.  However, the load voltage cannot ever <SPAN  CLASS="textit">precisely</SPAN> equal the reference voltage established by the zener diode, even if the operational amplifier (the &ldquo;controller&rdquo;) is without defect.  The reason for this incapacity to perfectly maintain &ldquo;setpoint&rdquo; is the simple fact that in order for the opamp to generate any output signal at all, there <SPAN  CLASS="textit">absolutely must be</SPAN> a differential voltage between the two input terminals for the amplifier to amplify.  Operational amplifiers (ideally) generate an output voltage equal to the enormously high gain value (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img31.svg"
+ ALT="$A_V$"></SPAN>) multiplied by the difference in input voltages (in this case, <!-- MATH
+ $V_{ref} - V_{load}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img32.svg"
+ ALT="$V_{ref} - V_{load}$"></SPAN>).  If <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img33.svg"
+ ALT="$V_{load}$"></SPAN> (the &ldquo;process variable&rdquo;) were to ever achieve equality with <SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img34.svg"
+ ALT="$V_{ref}$"></SPAN> (the &ldquo;setpoint&rdquo;), the operational amplifier would experience absolutely no differential input voltage to amplify, and its output signal driving the power transistor would fall to zero.  Therefore, there must always exist some <SPAN  CLASS="textit">offset</SPAN> between <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img33.svg"
+ ALT="$V_{load}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img34.svg"
+ ALT="$V_{ref}$"></SPAN> (between process variable and setpoint) in order to give the amplifier some input voltage to amplify.
+
+<P>
+The amount of offset is ridiculously small in such a circuit, owing to the enormous gain of the operational amplifier.  If we take the opamp's transfer function to be <!-- MATH
+ $V_{out} = A_V (V_{(+)} - V_{(-)})$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.67ex; vertical-align: -0.85ex; " SRC="img35.svg"
+ ALT="$V_{out} = A_V (V_{(+)} - V_{(-)})$"></SPAN>, then we may set up an equation predicting the load voltage as a function of reference voltage (assuming a constant 0.7 volt drop between the base and emitter terminals of the transistor):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = A_V(V_{(+)} - V_{(-)})
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.67ex; vertical-align: -0.85ex; " SRC="img36.svg"
+ ALT="$\displaystyle V_{out} = A_V(V_{(+)} - V_{(-)})$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = A_V(V_{ref} - V_{load})
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img37.svg"
+ ALT="$\displaystyle V_{out} = A_V(V_{ref} - V_{load})$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{load} + 0.7 = A_V(V_{ref} - V_{load})
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img38.svg"
+ ALT="$\displaystyle V_{load} + 0.7 = A_V(V_{ref} - V_{load})$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{load} + 0.7 = A_V V_{ref} - A_V V_{load}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img39.svg"
+ ALT="$\displaystyle V_{load} + 0.7 = A_V V_{ref} - A_V V_{load}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{load} + A_V V_{load} = A_V V_{ref} - 0.7
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img40.svg"
+ ALT="$\displaystyle V_{load} + A_V V_{load} = A_V V_{ref} - 0.7$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+(A_V + 1) V_{load} = A_V V_{ref} - 0.7
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img41.svg"
+ ALT="$\displaystyle (A_V + 1) V_{load} = A_V V_{ref} - 0.7$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{load} = {{A_V V_{ref} - 0.7} \over {A_V + 1}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.27ex; vertical-align: -2.04ex; " SRC="img42.svg"
+ ALT="$\displaystyle V_{load} = {{A_V V_{ref} - 0.7} \over {A_V + 1}}$">
+</DIV><P></P>
+
+<P>
+If, for example, our zener diode produced a reference voltage of 5.00000 volts and the operational amplifier had an open-loop voltage gain of 250000, the load voltage would settle at a theoretical value of 4.9999772 volts: just barely below the reference voltage value.  If the opamp's open-loop voltage gain were much less &ndash; say only 100 &ndash; the load voltage would only be 4.94356 volts.  This still is quite close to the reference voltage, but definitely not as close as it would be with a greater opamp gain!
+
+<P>
+<P>
+Clearly, then, we can minimize proportional-only offset by increasing the gain of the process controller gain (i.e. decreasing its proportional band).  This makes the controller more &ldquo;aggressive&rdquo; so it will move the control valve further for any given change in PV or SP.  Thus, not as much error needs to develop between PV and SP to move the valve to any new position it needs to go.  However, too much controller gain makes the control system unstable: at best it will exhibit residual oscillations after setpoint and load changes, and at worst it will oscillate out of control altogether.  Extremely high gains work well to minimize offset in operational amplifier circuits, only because time delays are negligible between output and input.  In applications where large physical processes are being controlled (e.g. furnace temperatures, tank levels, gas pressures, etc.) rather than voltages across small electronic loads, such high controller gains would be met with debilitating oscillations.
+
+<P>
+If we are limited in how much gain we can program in to the controller, how do we minimize this offset?  One way is for a human operator to periodically place the controller in manual mode and move the control valve just a little bit more so the PV once again reaches SP, then place the controller back into automatic mode.  In essence this technique adjusts the &ldquo;Bias&rdquo; term of the controller equation.  The disadvantage of this technique is rather obvious: it requires human intervention.  What is the point of having an automation system requiring periodic human intervention to maintain setpoint?
+
+<P>
+A more sophisticated method for eliminating proportional-only offset is to add a different control action to the controller: one that takes action based on the amount of error between PV and SP and the amount of time that error has existed.  We call this control mode <SPAN  CLASS="textit">integral</SPAN>, or <SPAN  CLASS="textit">reset</SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html278"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html280"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node8.html">Integral (reset) control</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Proportional-only control</A>
+ &nbsp; <B>  <A ID="tex2html279"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html281"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

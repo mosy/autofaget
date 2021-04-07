@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Review of fundamental principles</TITLE>
+<META NAME="description" CONTENT="Review of fundamental principles">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION002170000000000000000">
+Review of fundamental principles</A>
+</H1>
+
+<P>
+Shown here is a partial listing of principles applied in the subject matter of this chapter, given for the purpose of expanding the reader's view of this chapter's concepts and of their general inter-relationships with concepts elsewhere in the book.  Your abilities as a problem-solver and as a life-long learner will be greatly enhanced by mastering the applications of these principles to a wide variety of topics, the more varied the better.
+
+<P>
+
+<UL>
+<LI><SPAN  CLASS="textbf">Linear equations</SPAN>: any function represented by a straight line on a graph may be represented symbolically by the slope-intercept formula <!-- MATH
+ $y = mx + b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img247.svg"
+ ALT="$y = mx + b$"></SPAN>.  Relevant to proportional control algorithms.
+</LI>
+<LI><SPAN  CLASS="textbf">Zero shift</SPAN>: any shift in the offset of an instrument is fundamentally additive, being represented by the &ldquo;intercept&rdquo; (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img14.svg"
+ ALT="$b$"></SPAN>) variable of the slope-intercept linear formula <!-- MATH
+ $y = mx + b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img247.svg"
+ ALT="$y = mx + b$"></SPAN>.  Relevant to controller tuning: adjusting the &ldquo;bias&rdquo; of a loop controller always adds to or subtracts from its output signal.
+</LI>
+<LI><SPAN  CLASS="textbf">Span shift</SPAN>: any shift in the gain of an instrument is fundamentally multiplicative, being represented by the &ldquo;slope&rdquo; (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN>) variable of the slope-intercept linear formula <!-- MATH
+ $y = mx + b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img247.svg"
+ ALT="$y = mx + b$"></SPAN>.  Relevant to controller tuning: adjusting the &ldquo;gain&rdquo; of a loop controller always multiplies or divides the response of its output for a given input change.
+</LI>
+<LI><SPAN  CLASS="textbf">Negative feedback</SPAN>: when the output of a system is degeneratively fed back to the input of that same system, the result is decreased (overall) gain and greater stability.  Relevant to loop controller action: in order for a control system to be stable, the feedback must be negative.
+</LI>
+<LI><SPAN  CLASS="textbf">Self-balancing pneumatic mechanisms</SPAN>: all self-balancing pneumatic instruments work on the principle of negative feedback maintaining a nearly constant baffle-nozzle gap.  Force-balance mechanisms maintain this constant gap by balancing force against force with negligible motion, like a tug-of-war.  Motion-balance mechanisms maintain this constant gap by balancing one motion with another motion, like two dancers moving in unison.
+</LI>
+<LI><SPAN  CLASS="textbf">Self-balancing opamp circuits</SPAN>: all self-balancing operational amplifier circuits work on the principle of negative feedback maintaining a nearly zero differential input voltage to the opamp.  Making the &ldquo;simplifying assumption&rdquo; that the opamp's differential input voltage is exactly zero assists in circuit analysis, as does the assumption that the input terminals draw negligible current.
+</LI>
+<LI><SPAN  CLASS="textbf">Amplification</SPAN>: the control of a relatively large signal by a relatively small signal.  Relevant to the role of loop controllers exerting influence over a process variable at the command of a measurement signal.  In behaving as amplifiers, loop controllers may oscillate if certain criteria are met.
+</LI>
+<LI><SPAN  CLASS="textbf">Barkhausen criterion</SPAN>: is overall loop gain is unity (1) or greater, and phase shift is 360<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img86.svg"
+ ALT="$^{o}$"></SPAN>, the loop will sustain oscillations.  Relevant to control system stability, explaining why the loop will &ldquo;cycle&rdquo; (oscillate) if gain is too high.
+</LI>
+<LI><SPAN  CLASS="textbf">Time constant</SPAN>: (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img248.svg"
+ ALT="$\tau$"></SPAN>), defined as the amount of time it takes a system to change 63.2% of the way from where it began to where it will eventually stabilize.  The system will be within 1% of its final value after 5 time constants' worth of time has passed (<SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="img249.svg"
+ ALT="$5 \tau$"></SPAN>).  Relevant to process control loops, where natural lags contribute to time constants, usually of multiple order.
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html375"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html377"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node20.html">References</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node18.html">Note to students</A>
+ &nbsp; <B>  <A ID="tex2html376"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html378"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

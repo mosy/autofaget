@@ -1,0 +1,624 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Pneumatic PID controllers</TITLE>
+<META NAME="description" CONTENT="Pneumatic PID controllers">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html321"
+  HREF="node13.html#SECTION002111000000000000000">Proportional control action</A>
+<LI><A ID="tex2html322"
+  HREF="node13.html#SECTION002112000000000000000">Automatic and manual modes</A>
+<LI><A ID="tex2html323"
+  HREF="node13.html#SECTION002113000000000000000">Derivative control action</A>
+<LI><A ID="tex2html324"
+  HREF="node13.html#SECTION002114000000000000000">Integral control action</A>
+<LI><A ID="tex2html325"
+  HREF="node13.html#SECTION002115000000000000000">Fisher MultiTrol</A>
+<LI><A ID="tex2html326"
+  HREF="node13.html#SECTION002116000000000000000">Foxboro model 43AP</A>
+<LI><A ID="tex2html327"
+  HREF="node13.html#SECTION002117000000000000000">Foxboro model 130</A>
+<LI><A ID="tex2html328"
+  HREF="node13.html#SECTION002118000000000000000">External reset (integral) feedback</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION002110000000000000000">
+Pneumatic PID controllers</A>
+</H1>
+
+<P>
+A <SPAN  CLASS="textit">pneumatic</SPAN> controller receives a process variable (PV) signal as a variable air pressure, compares that signal against a desired setpoint (SP) value, and then mechanically generates another air pressure signal as the output, driving a final control element. 
+
+<P>
+Throughout this section I will make reference to a pneumatic controller mechanism of my own design.  This mechanism does not directly correspond to any particular manufacturer or model of pneumatic controller, but shares characteristics common to many.  This design is shown here for the purpose of illustrating the development of P, I, and D control actions in as simple a context as possible.
+
+<P>
+
+<H2><A ID="SECTION002111000000000000000">
+Proportional control action</A>
+</H2>
+
+<P>
+Many pneumatic PID controllers use the <SPAN  CLASS="textit">force-balance</SPAN> principle.  One or more input signals (in the form of pneumatic pressures) exert a force on a beam by acting through diaphragms, bellows, and/or bourdon tubes,  which is then counter-acted by the force exerted on the same beam by an output air pressure acting through a diaphragm, bellows, or bourdon tube.  The self-balancing mechanical system &ldquo;tries&rdquo; to keep the beam motionless through an exact balancing of forces, the beam's position precisely detected by a nozzle/baffle mechanism:   <A NAME="469"></A>  
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid07.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 54.77ex; vertical-align: -0.10ex; " SRC="img111.svg"
+ ALT="$\displaystyle \includegraphics{pid07.eps}$">
+</DIV><P></P>
+
+<P>
+The action of this particular controller is <SPAN  CLASS="textit">direct</SPAN>, since an increase in process variable signal (pressure) results in an increase in output signal (pressure).  Increasing process variable (PV) pressure attempts to push the right-hand end of the beam up, causing the baffle to approach the nozzle.  This blockage of the nozzle causes the nozzle's pneumatic backpressure to increase, thus increasing the amount of force applied by the output feedback bellows on the left-hand end of the beam and returning the flapper (very nearly) to its original position.  If we wished to reverse the controller's action, all we would need to do is swap the pneumatic signal connections between the input bellows, so that the PV pressure was applied to the upper bellows and the SP pressure to the lower bellows.
+
+<P>
+Any factor influencing the ratio of input pressure(s) to output pressure may be exploited as a gain (proportional band) adjustment in this mechanism.  Changing bellows area (either both the PV and SP bellows equally, or the output bellows by itself) would influence this ratio, as would a change in output bellows position (such that it pressed against the beam at some difference distance from the fulcrum point).  Moving the fulcrum left or right is also an option for gain control, and in fact is usually the most convenient to engineer.
+
+<P>
+
+<P>
+In this illustration the fulcrum is shown moved to two different positions, to effect a change in gain:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid86.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 32.52ex; vertical-align: -0.10ex; " SRC="img112.svg"
+ ALT="$\displaystyle \includegraphics{pid86.eps}$">
+</DIV><P></P>
+
+<P>
+Moving the fulcrum closer to the output bellows places that bellows at a mechanical disadvantage for generating torque (leverage) on the beam.  This means any given change in input (PV or SP) force is more difficult for the output bellows to counterbalance.  The output pressure, therefore, must change to a greater degree in order for this force-balance mechanism to achieve balance.  A greater change in output pressure for a given change in input pressure is the definition of a gain <SPAN  CLASS="textit">increase</SPAN>.
+
+<P>
+Conversely, moving the fulcrum farther away from the output bellows increases that bellows' mechanical advantage.  This additional leverage makes it easier for the output bellows to counter-act changes in input force, resulting in less output pressure change required to balance any given input pressure change.  A lesser change in output pressure for a given change in input pressure is characteristic of a gain <SPAN  CLASS="textit">decrease</SPAN>.
+
+<P>
+<P>
+
+<P>
+Some pneumatic controllers employ the <SPAN  CLASS="textit">motion-balance</SPAN> principle instead of the force-balance principle in their operation.  In contrast to a force-balance system where opposing forces cancel each other to restrain motion of the mechanism, a motion-balance system freely moves as the signal pressures traverse their working ranges.  A simple motion-balance proportional controller design appears here:  <A NAME="476"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid87.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 55.74ex; vertical-align: -0.10ex; " SRC="img113.svg"
+ ALT="$\displaystyle \includegraphics{pid87.eps}$">
+</DIV><P></P>
+
+<P>
+As the process variable signal increases, the right-hand end of the lever is forced up.  This motion draws the lever away from the nozzle, resulting in decreased nozzle backpressure.  The decreased backpressure causes the output bellows to collapse<A ID="tex2html16"
+  HREF="footnode.html#foot478"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">16</SPAN></SUP></A>, moving the left-hand end of the lever down and returning the nozzle/lever gap to (approximately) where it was before the PV signal change.  This behavior identifies this controller as <SPAN  CLASS="textit">reverse-acting</SPAN>.  If direct action were desired, all we would need to do is swap the process variable and setpoint input pressure connections.
+
+<P>
+Unlike the force-balance controller mechanism where the lever is maintained in an essentially stationary position by equal and opposite forces, the lever in this motion-balance system is free to tilt.  In fact, tilting is precisely how a (nearly) constant nozzle gap is maintained: as one end of the lever moves (either up or down), the other end moves in the opposite direction to keep the nozzle/lever gap constant in the middle.
+
+<P>
+
+<P>
+The gain of such a mechanism may be changed by moving the position of the nozzle along the lever's length.  However, it must be understood that this position change will have the opposite effect on gain compared with the fulcrum position change described for the force-balance mechanism.  Here in the motion-balance system, it is the relative <SPAN  CLASS="textit">travel</SPAN> of each bellows that matters for gain, not the relative <SPAN  CLASS="textit">leverage</SPAN> (torque):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid88.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 32.90ex; vertical-align: -0.10ex; " SRC="img114.svg"
+ ALT="$\displaystyle \includegraphics{pid88.eps}$">
+</DIV><P></P>
+
+<P>
+With the nozzle positioned closer to the output bellows, that bellows need not stretch or collapse as much in order to maintain the nozzle gap constant even with a large motion at the input (right-hand) end of the lever.  The output pressure in this case will change only slightly for large changes in PV or SP pressures: characteristic of a low gain.
+
+<P>
+Moving the nozzle closer to the input (PV and SP) bellows gives those bellows more influence over the nozzle/lever gap.  The output bellows must expand and contract quite a bit more than the input bellows in order to maintain a constant nozzle gap for any motion at the input side.  This requires a greater change in output pressure for a given change in input pressure: the definition of increased gain.
+
+<P>
+
+<H2><A ID="SECTION002112000000000000000">
+Automatic and manual modes</A>
+</H2>
+
+<P>
+A more practical pneumatic proportional controller mechanism is shown in the next illustration, complete with setpoint and bias adjustments, and a manual control mode:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid08.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 64.45ex; vertical-align: -0.10ex; " SRC="img115.svg"
+ ALT="$\displaystyle \includegraphics{pid08.eps}$">
+</DIV><P></P>
+
+<P>
+&ldquo;Bumpless&rdquo; transfer between automatic and manual modes is a very important feature for any loop controller because it allows human operators to change the mode of the controller without introducing an unnecessary disturbance to the process being controlled.  Without provision for bumpless transfer, the output signal of the controller may suddenly change whenever the mode is switched between automatic and manual.  This sudden signal change will cause the final control element to suddenly &ldquo;step&rdquo; to some new level of effect on the process.
+
+<P>
+In this particular pneumatic controller, bumpless auto/manual transfer is accomplished by the operator paying attention to the <SPAN  CLASS="textit">balance indicator</SPAN> revealing any air pressure difference between the output bellows and the output adjust pressure regulator.  When in automatic mode, a switch to manual mode involves adjusting the output regulator until the balance indicator registers zero pressure difference, then switching the transfer valve to the &ldquo;manual&rdquo; position.  The controller output is then at the direct command of the output adjust pressure regulator, and will not respond to changes in either PV or SP.  &ldquo;Bumplessly&rdquo; switching back to automatic mode requires that the setpoint pressure regulator be adjusted until the balance indicator once again registers zero pressure difference, then switching the transfer valve to the &ldquo;auto&rdquo; position.  The controller output will once again respond to changes in PV and SP.
+
+<P>
+
+<P>
+A photograph showing a Foxboro model 43AP pneumatic controller manual/auto transfer switch and balance indicator appears here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid110.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 70.90ex; vertical-align: -0.10ex; " SRC="img116.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid110.eps}$">
+</DIV><P></P>
+
+<P>
+The metal ball within the curved plastic tube indicates equal pressures between automatic and manual modes when centered in the tube.  To achieve bumpless transfer between automatic and manual modes, one must never switch the auto/manual valve unless that ball is centered.  To center the ball while in automatic mode, the manual output pressure must be adjusted to achieve balance with the automatic-mode output pressure.  To center the ball while in manual mode, the automatic-mode output pressure must be adjusted to achieve balance with the manual-mode output pressure &ndash; a condition attained by adjusting the <SPAN  CLASS="textit">setpoint</SPAN> knob.
+
+<P>
+
+<H2><A ID="SECTION002113000000000000000">
+Derivative control action</A>
+</H2>
+
+<P>
+Derivative (rate) control action is relatively easy to add to this pneumatic controller mechanism.  All we need to do is place a restrictor valve between the nozzle tube and the output feedback bellows, causing the bellows to delay filling or emptying its air pressure over time:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid09.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 64.45ex; vertical-align: -0.10ex; " SRC="img117.svg"
+ ALT="$\displaystyle \includegraphics{pid09.eps}$">
+</DIV><P></P>
+
+<P>
+If any sudden change occurs in PV or SP, the output pressure will saturate before the output bellows has the opportunity to equalize in pressure with the output signal tube.  Thus, the output pressure &ldquo;spikes&rdquo; with any sudden &ldquo;step change&rdquo; in input: exactly what we would expect with derivative control action.
+
+<P>
+If either the PV or the SP ramps over time, the output signal will ramp in direct proportion (proportional action), but there will <SPAN  CLASS="textit">also</SPAN> be an added offset of pressure at the output signal in order to keep air flowing either in or out of the output bellows at a constant rate to generate the force necessary to balance the changing input signal.  Thus, derivative action causes the output pressure to shift either up or down (depending on the direction of input change) more than it would with just proportional action alone in response to a ramping input: exactly what we would expect from a controller with both proportional and derivative control actions.
+
+<P>
+
+<H2><A ID="SECTION002114000000000000000">
+Integral control action</A>
+</H2>
+
+<P>
+Adding integral action to our hypothetical pneumatic controller mechanism requires the placement of a second bellows (a &ldquo;reset&rdquo; bellows) opposite the output feedback bellows, and another restrictor valve to the mechanism<A ID="tex2html17"
+  HREF="footnode.html#foot492"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">17</SPAN></SUP></A>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid10.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 66.97ex; vertical-align: -0.10ex; " SRC="img118.svg"
+ ALT="$\displaystyle \includegraphics{pid10.eps}$">
+</DIV><P></P>
+
+<P>
+This second bellows takes air pressure from the output line and translates it into force that opposes the original feedback bellows.  At first, this may seem counter-productive, for it nullifies the ability of this mechanism to continuously balance the force generated by the PV and SP bellows.  Indeed, it would render the force-balance system completely ineffectual if this new &ldquo;reset&rdquo; bellows were allowed to inflate and deflate with no time lag.  However, with a time lag provided by the restriction of the integral adjustment valve and the volume of the bellows (a sort of pneumatic &ldquo;RC time constant&rdquo;), the nullifying force of this bellows becomes delayed over time.  As this bellows slowly fills (or empties) with pressurized air from the nozzle, the change in force on the beam causes the regular output bellows to have to &ldquo;stay ahead&rdquo; of the reset bellows action by constantly filling (or emptying) at some rate over time.  
+
+<P>
+
+<P>
+To better understand this integrating action, let us perform a &ldquo;thought experiment&rdquo; on a simplified version of the controller.  The following mechanism has been stripped of all unnecessary complexity so that we may focus on just the proportional and integral actions.  Here, we envision the PV and SP air pressure signals differing by 3 PSI, causing the force-balance mechanism to instantly respond with a 3 PSI output pressure to the feedback bellows (assuming a central fulcrum location, giving a controller gain of 1).  The reset (integral) valve has been completely shut off at the start of this thought experiment:  <A NAME="494"></A>  <A NAME="495"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid11.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 51.29ex; vertical-align: -0.10ex; " SRC="img119.svg"
+ ALT="$\displaystyle \includegraphics{pid11.eps}$">
+</DIV><P></P>
+
+<P>
+With 0 PSI of air pressure in the reset bellows, it is as though the reset bellows does not exist at all.  The mechanism is a simple proportional-only pneumatic controller.
+
+<P>
+Now, imagine opening up the reset valve just a little bit, so that the output air pressure of 3 PSI begins to slowly fill the reset bellows.  As the reset bellows fills with pressurized air, it begins to push down on the left-hand end of the force beam.  This forces the baffle closer to the nozzle, causing the output pressure to rise.  The regular output bellows has no restrictor valve to impede its filling, and so it <SPAN  CLASS="textit">immediately</SPAN> applies more upward force on the beam with the rising output pressure.  With this greater output pressure, the reset bellows has an even greater &ldquo;final&rdquo; pressure to achieve, and so its rate of filling continues.  
+
+<P>
+
+<P>
+The result of these two bellows' opposing forces (one instantaneous, one time-delayed) is that the lower bellows' pressure must always <SPAN  CLASS="textit">lead 3 PSI ahead of the upper bellows' pressure</SPAN> in order to maintain a pressure difference of 3 PSI necessary to balance force with the PV and SP bellows (whose pressures differ by 3 PSI).  This creates a constant 3 PSI differential pressure across the reset restriction valve, resulting in a constant flow of air into the reset bellows at a rate determined by that pressure drop and the opening of the restrictor valve.  Eventually this will cause the output pressure to saturate at maximum, but until then the practical importance of this rising pressure action is that the mechanism now exhibits <SPAN  CLASS="textit">integral control response</SPAN> to the constant error between PV and SP:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid12.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 51.29ex; vertical-align: -0.10ex; " SRC="img120.svg"
+ ALT="$\displaystyle \includegraphics{pid12.eps}$">
+</DIV><P></P>
+
+<P>
+The greater the difference in pressures between PV and SP (i.e. the greater the <SPAN  CLASS="textit">error</SPAN>), the more pressure drop will develop across the reset restriction valve, causing the reset bellows to fill (or empty, depending on the sign of the error) with compressed air at a faster rate<A ID="tex2html18"
+  HREF="footnode.html#foot1077"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">18</SPAN></SUP></A>, causing the output pressure to change at a faster rate.  Thus, we see in this mechanism the defining nature of integral control action: that the magnitude of the error determines the <SPAN  CLASS="textit">velocity</SPAN> of the output signal (its rate of change over time, or <!-- MATH
+ $dm \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img67.svg"
+ ALT="$dm \over dt$"></SPAN>).  The rate of integration may be finely adjusted by changing the opening of the restrictor valve, or adjusted in large steps by connecting <SPAN  CLASS="textit">capacity tanks</SPAN> to the reset bellows to greatly increase its effective volume.  <A NAME="505"></A>
+
+<P>
+
+<H2><A ID="SECTION002115000000000000000">
+Fisher MultiTrol</A>
+</H2>
+
+<P>
+Front (left) and rear (right) photographs of a real pneumatic controller (a Fisher &ldquo;MultiTrol&rdquo; unit) appear here:  <A NAME="507"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{pid14.eps} \hskip 30pt \includegraphics[width=2.5in]{pid15.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.36ex; vertical-align: -0.10ex; " SRC="img121.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{pid14.eps} \hskip 30pt \includegraphics[width=2.5in]{pid15.eps}$">
+</DIV><P></P>
+
+<P>
+The mechanism is remarkably similar to the one used throughout the explanatory discussion, with the important distinction of being <SPAN  CLASS="textit">motion-balance</SPAN> instead of force balance.  Proportional and integral control modes are implemented through the actions of four brass bellows pushing as opposing pairs at either end of a beam:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid18.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img122.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid18.eps}$">
+</DIV><P></P>
+
+<P>
+The nozzle may be seen facing down at the middle of the beam, with the center of the beam acting as a baffle.  Setpoint control is achieved by moving the position of the nozzle up and down with respect to the beam.  A setpoint dial (labeled &ldquo;Increase Output Pressure&rdquo;) turns a cam which moves the nozzle closer to or farther away from the beam.  This being a motion-balance system, an offset in nozzle position equates to a biasing of the output signal, causing the controller to seek a new process variable value.
+
+<P>
+
+<P>
+Instead of altering the position of a fulcrum to alter the gain (proportional band) of this controller, gain control is effected through the use of a &ldquo;pressure divider&rdquo; valve proportioning the amount of output air pressure sent to the feedback bellows.  Integral rate control is implemented exactly the same way as in the hypothetical controller mechanism illustrated in the discussion: by adjusting a valve restricting air flow to and from the reset bellows.  Both valves are actuated by rotary knobs with calibrated scales.  The reset knob is actually calibrated in units of minutes per repeat, while the proportional band knob is labeled with a scale of arbitrary numbers:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{pid16.eps} \hskip 30pt \includegraphics[width=2.5in]{pid17.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.36ex; vertical-align: -0.10ex; " SRC="img123.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{pid16.eps} \hskip 30pt \includegraphics[width=2.5in]{pid17.eps}$">
+</DIV><P></P>
+
+<P>
+Selection of direct versus reverse action is accomplished in the same way as selection between proportional and snap-action (on-off) control: by movable manifolds re-directing air pressure signals to different bellows in the mechanism.  The direct/reverse manifold appears in the left-hand photograph (the letter &ldquo;D&rdquo; stands for <SPAN  CLASS="textit">direct</SPAN> action) while the proportional/snap manifold appears in the right-hand photograph (the letter &ldquo;P&rdquo; stands for <SPAN  CLASS="textit">proportional</SPAN> control):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{pid19.eps} \hskip 30pt \includegraphics[width=2.5in]{pid20.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.36ex; vertical-align: -0.10ex; " SRC="img124.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{pid19.eps} \hskip 30pt \includegraphics[width=2.5in]{pid20.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Either setting is made by removing the screw holding the manifold plate to the controller body, rotating the plate one-quarter turn, and re-attaching.  The following photograph shows one of the manifold plates removed and turned upside-down for inspection of the air passages:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{pid21.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 27.99ex; vertical-align: -0.10ex; " SRC="img125.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{pid21.eps}$">
+</DIV><P></P>
+
+<P>
+The two quarter-circumference slots seen in the manifold plate connect adjacent air ports together.  Rotating the plate 90 degrees connects the four air ports together as two different pairs.
+
+<P>
+
+<H2><A ID="SECTION002116000000000000000">
+Foxboro model 43AP</A>
+</H2>
+
+<P>
+The Fisher MultiTrol pneumatic controller is a very simple device, intended for field-mounting near the pneumatic transmitter and control valve to form a control loop for non-precision applications.  A more sophisticated field-mounted pneumatic controller is the Foxboro model 43AP, sporting actual PV and SP indicating pointers, plus more precise tuning controls.  The following photographs show one of these controllers, with the access door closed (left) and open (right):  <A NAME="520"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2in]{pid22.eps} \hskip 30pt \includegraphics[width=2in]{pid23.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.05ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\displaystyle \includegraphics[width=2in]{pid22.eps} \hskip 30pt \includegraphics[width=2in]{pid23.eps}$">
+</DIV><P></P>
+
+<P>
+At the heart of this controller is a motion-balance &ldquo;pneumatic control unit&rdquo; mechanism.  A dial for setting proportional band (and direct/reverse action) appears on the front of the mechanism:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=2.5in]{pid24.eps} \hskip 30pt \includegraphics[height=2.5in]{pid71.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 35.03ex; vertical-align: -0.10ex; " SRC="img127.svg"
+ ALT="$\displaystyle \includegraphics[height=2.5in]{pid24.eps} \hskip 30pt \includegraphics[height=2.5in]{pid71.eps}$">
+</DIV><P></P>
+
+<P>
+Note the simple way in which direct and reverse actions are described on this dial: either <SPAN  CLASS="textit">increasing measurement, decreasing output</SPAN> (reverse action) or <SPAN  CLASS="textit">increasing measurement, increasing output</SPAN> (direct action).
+
+<P>
+
+<H2><A ID="SECTION002117000000000000000">
+Foxboro model 130</A>
+</H2>
+
+<P>
+Foxboro also manufactured panel-mounted pneumatic controllers, the model 130 series, for larger-scale applications where multiple controllers needed to be located in one compact space.  A bank of four Foxboro model 130 pneumatic controllers appears in the next photograph:  <A NAME="528"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid25.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img128.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid25.eps}$">
+</DIV><P></P>
+
+<P>
+Each controller may be partially removed (slid out) from its slot in the rack, the P, I, and D settings adjustable on the left side panel with a screwdriver:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2in]{pid26.eps} \hskip 30pt \includegraphics[width=2in]{pid27.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.05ex; vertical-align: -0.10ex; " SRC="img129.svg"
+ ALT="$\displaystyle \includegraphics[width=2in]{pid26.eps} \hskip 30pt \includegraphics[width=2in]{pid27.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+With the side panel removed, the entire mechanism is open to viewing:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid28.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img130.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid28.eps}$">
+</DIV><P></P>
+
+<P>
+The heart of the model 130 controller is a four-bellows force-balance mechanism, identical in principle to the hypothetical force-balance PID controller mechanism used throughout the explanatory discussion.  Instead of the four bellows acting against a straight beam, however, these bellows push against a circular disk:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{pid29.eps} \hskip 30pt \includegraphics[width=2.5in]{pid30.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.36ex; vertical-align: -0.10ex; " SRC="img131.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{pid29.eps} \hskip 30pt \includegraphics[width=2.5in]{pid30.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+A nozzle (shown in the next photograph) detects if the disk is out of position (unbalanced), sending a back-pressure signal to an amplifying relay which then drives the feedback bellows:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2in]{pid33.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 18.72ex; vertical-align: -0.10ex; " SRC="img132.svg"
+ ALT="$\displaystyle \includegraphics[width=2in]{pid33.eps}$">
+</DIV><P></P>
+
+<P>
+The disk rocks along an axis established by a movable bar.  As this bar is rotated at different angles relative to the face of the disk, the fulcrum shifts with respect to the four bellows, providing a simple and effective gain adjustment: 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid72.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.16ex; vertical-align: -0.10ex; " SRC="img133.svg"
+ ALT="$\displaystyle \includegraphics{pid72.eps}$">
+</DIV><P></P>
+
+<P>
+If the moment arms (lever lengths) between the input (PV and SP) bellows and the feedback bellows are equal, both sets of bellows will have equal leverage, and the gain will be one (a proportional band setting of 100%).  However, if the fulcrum bar is rotated to give the input bellows more leverage and the feedback bellows less leverage, the feedback bellows will have to &ldquo;work harder&rdquo; (exert more force) to counteract any imbalance of force created by the input (PV and SP) bellows, thus creating a greater gain: more output pressure for the same amount of input pressure.
+
+<P>
+The fourth (lower-left) bellows acting on the disk provides an optional reset (integral) function.  Its moment arm (lever length) of course is always equal to that of the feedback bellows, just as the PV and SP bellows' moment arm lengths are always equal, being positioned opposite the fulcrum line.
+
+<P>
+
+<P>
+Selection between direct and reverse action works on the exact same principle as in the Fisher MultiTrol controller &ndash; by connecting four air ports in one of two paired configurations.  A selector (movable with a hex wrench) turns an air signal port &ldquo;switch&rdquo; on the bottom of the four-bellows unit, effectively switching the PV and SP bellows:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{pid31.eps} \hskip 30pt \includegraphics[width=2.5in]{pid32.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.36ex; vertical-align: -0.10ex; " SRC="img134.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{pid31.eps} \hskip 30pt \includegraphics[width=2.5in]{pid32.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+An interesting characteristic of most pneumatic controllers is modularity of function: it is possible to order a pneumatic controller that is proportional-only (P), proportional plus integral (P+I), or full PID.  Since each control mode requires additional components to implement, a P-only pneumatic controller costs less than a P+I pneumatic controller, which in turn costs less than a full PID pneumatic controller.  This explains the relative scarcity of full PID pneumatic controllers in industry: why pay for additional functionality if less will suffice for the task at hand?
+
+<P>
+
+<H2><A ID="SECTION002118000000000000000">
+External reset (integral) feedback</A>
+</H2>
+
+<P>
+Some pneumatic controllers come equipped with an option for <SPAN  CLASS="textit">external reset</SPAN>: a feature useful in control systems to avoid integral windup if and when the process stops responding to changes in controller output.  Instead of receiving a pneumatic signal directly from the output line of the controller, the reset bellows receives its signal through another pneumatic line, connected to a location in the control system where the final <SPAN  CLASS="textit">effect</SPAN> of the output signal (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN>) is seen.  If for some reason the final control element cannot achieve the state called for by the controller, the controller will sense this through the external reset signal, and will cease integration to avoid &ldquo;wind-up.&rdquo;
+
+<P>
+
+<P>
+In the following illustration<A ID="tex2html19"
+  HREF="footnode.html#foot1078"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">19</SPAN></SUP></A>, the external reset signal comes from a pneumatic <SPAN  CLASS="textit">position transmitter</SPAN> (ZT) mounted to the sliding stem of the control valve, sending back a 3-15 PSI signal representing valve stem position:  <A NAME="544"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid13.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 80.13ex; vertical-align: -0.10ex; " SRC="img135.svg"
+ ALT="$\displaystyle \includegraphics{pid13.eps}$">
+</DIV><P></P>
+
+<P>
+If something happens to the control valve causing it to freeze position when the controller commands it to move &ndash; suppose the stem encounters a mechanical &ldquo;stop&rdquo; limiting travel, or a piece of solid material jams the valve trim so it cannot close further &ndash; the pneumatic pressure signal sent from the position transmitter to the controller's reset bellows will similarly freeze.  After the pneumatic lag caused by the reset restrictor valve and bellows passes, the reset bellows force will remain fixed.  This halts the controller's integral action, which was formerly based on a &ldquo;race&rdquo; between the output feedback bellows and the reset bellows, causing the feedback bellows to &ldquo;lead&rdquo; the reset bellows pressure by an amount proportional to the error between PV and SP.  This &ldquo;race&rdquo; caused the output pressure to wind either up or down depending on the sign of the error.  Now that the reset bellows pressure is frozen due to the control valve stem position being frozen, however, the &ldquo;race&rdquo; comes to an end and the controller exhibits only proportional action.  Thus, the dreaded effect of integral windup &ndash; where the integral action of a controller continues to act even though the change in output is of no effect on the process &ndash; is averted.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html317"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html319"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node14.html">Analog electronic PID controllers</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node12.html">Different PID equations</A>
+ &nbsp; <B>  <A ID="tex2html318"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html320"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,1896 @@
+\batchmode
+\documentclass[12pt,a4paper,margin=2cm]{book}
+\RequirePackage{ifthen}
+
+
+
+
+\usepackage{ulem}
+
+
+\usepackage{makeidx}
+
+
+\usepackage[dvips]{graphicx} 
+
+
+\usepackage{array}
+\usepackage{amsmath}
+
+
+\usepackage{xcolor}
+
+
+\usepackage{listings}
+\usepackage{makecell} 
+\usepackage[	pdftitle = "{Automatiseringssystemer For Gand VGS}",    pdfauthor = "{Fred-Olav Mosdal}",    colorlinks = true,    breaklinks= true,    hyperindex = true]{hyperref}
+
+
+\lstdefinelanguage{pseudocode}
+{morekeywords={DECLARE,BEGIN,END,LOOP,ENDLOOP,SET,IF,THEN,CALL,RETURN,ELSEIF,ELSE,ENDIF,PRINT,OUTPUT,AND,OR},
+ morecomment=[l]{//}
+}
+
+
+\lstloadlanguages{pseudocode,[ANSI]C}
+
+
+\lstset{frame=single,keywordstyle=\color{blue}\bfseries ,commentstyle=\color{red}\itshape }
+
+
+
+\setlength{\parskip}{1em} 
+
+\setlength{\parindent}{0em} 
+
+
+
+\setlength{\textwidth}{16cm} 
+
+\setlength{\evensidemargin}{0cm} 
+
+\setlength{\oddsidemargin}{0cm} 
+
+\setlength{\extrarowheight}{3pt}  % adds extra space to the top of each LaTeX ("tabular") table row to make superscripted math expressions look better
+
+
+\makeindex
+
+
+
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\usepackage[tightpage,active]{preview}
+\newbox\lthtmlPageBox
+\newdimen\lthtmlCropMarkHeight
+\newdimen\lthtmlCropMarkDepth
+\long\def\lthtmlTightVBoxA#1{\def\lthtmllabel{#1}
+    \setbox\lthtmlPageBox\vbox\bgroup\catcode`\_=8 }%
+\long\def\lthtmlTightVBoxZ{\egroup
+    \lthtmlCropMarkHeight=\ht\lthtmlPageBox \advance \lthtmlCropMarkHeight 6pt
+    \lthtmlCropMarkDepth=\dp\lthtmlPageBox
+    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
+    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
+    \begin{preview}\copy\lthtmlPageBox\end{preview}}%
+\long\def\lthtmlTightFBoxA#1{\def\lthtmllabel{#1}%
+    \adjustnormalsize\setbox\lthtmlPageBox=\vbox\bgroup %
+    \let\ifinner=\iffalse \let\)\liih@math %
+    \bgroup\catcode`\_=8 }%
+\long\def\lthtmlTightFBoxZ{\egroup
+    \@next\next\@currlist{}{\def\next{\voidb@x}}%
+    \expandafter\box\next\egroup %
+    \lthtmlCropMarkHeight=\ht\lthtmlPageBox \advance \lthtmlCropMarkHeight 6pt
+    \lthtmlCropMarkDepth=\dp\lthtmlPageBox
+    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
+    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
+    \begin{preview}\copy\lthtmlPageBox\end{preview}}%
+    \long\def\lthtmlinlinemathA#1#2\lthtmlindisplaymathZ{\lthtmlTightVBoxA{#1}{\hbox\bgroup#2\egroup}\lthtmlTightVBoxZ}
+    \def\lthtmlinlineA#1#2\lthtmlinlineZ{\lthtmlTightVBoxA{#1}{\hbox\bgroup#2\egroup}\lthtmlTightVBoxZ}
+    \long\def\lthtmldisplayA#1#2\lthtmldisplayZ{\lthtmlTightVBoxA{#1}{#2}\lthtmlTightVBoxZ}
+    \long\def\lthtmldisplayB#1#2\lthtmldisplayZ{\\edef\preveqno{(\theequation)}%
+        \lthtmlTightVBoxA{#1}{\let\@eqnnum\relax#2}\lthtmlTightVBoxZ}
+    \long\def\lthtmlfigureA#1{\let\@savefreelist\@freelist
+        \lthtmlTightFBoxA{#1}}
+    \long\def\lthtmlfigureZ{
+        \lthtmlTightFBoxZ\global\let\@freelist\@savefreelist}
+    \long\def\lthtmlpictureA#1{\let\@savefreelist\@freelist
+        \lthtmlTightVBoxA{#1}}
+    \long\def\lthtmlpictureZ{
+        \lthtmlTightVBoxZ\global\let\@freelist\@savefreelist}
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Tau}{\textrm{T}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Alpha}{\textrm{A}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Rho}{\textrm{R}}
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+\stepcounter{chapter}
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4820}%
+$\displaystyle \includegraphics{cont01.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4822}%
+$\displaystyle \includegraphics{cont02.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4824}%
+$\displaystyle \includegraphics{cont03.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4826}%
+$\displaystyle \includegraphics{cont04.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4828}%
+$\displaystyle \includegraphics{cont05.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4830}%
+$\displaystyle \includegraphics{cont06.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4833}%
+$\displaystyle \includegraphics{cont98.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4838}%
+$\displaystyle \includegraphics{cont07.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4841}%
+$\displaystyle \includegraphics{cont76.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4843}%
+$\displaystyle m = K_p e + b$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4845}%
+$ m$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4847}%
+$ e$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4849}%
+$ K_p$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4851}%
+$ b$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4855}%
+$ -$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4859}%
+$\displaystyle m = K_p (\hbox{PV} - \hbox{SP}) + b \hskip 30pt \hbox{(Direct-acting proportional controller)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4861}%
+$\displaystyle m = K_p (\hbox{SP} - \hbox{PV}) + b \hskip 30pt \hbox{(Reverse-acting proportional controller)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4863}%
+$\displaystyle \includegraphics{cont77.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4875}%
+$\displaystyle \includegraphics{cont09.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4877}%
+$\displaystyle \includegraphics{cont10.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4879}%
+$ m = b$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4883}%
+$\displaystyle \includegraphics{cont11.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4889}%
+$\displaystyle K_p = {1 \over \hbox{PB}} \hskip 30pt \hbox{PB} = {1 \over K_p}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4893}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\quad\hfil # \  \hfil & 
+\quad\hfil # \  \hfil \cr
+$K_p$ = gain & PB = proportional band \cr
+\noalign{\vskip 5pt}
+$K_p e$  &  ${1 \over \hbox{PB}} e$ \cr
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4895}%
+$\displaystyle \includegraphics{cont87.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4898}%
+$\displaystyle \includegraphics{cont12.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4902}%
+$\displaystyle m = K_p (\hbox{SP} - \hbox{PV}) + b$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4918}%
+$\displaystyle 40\% = 2 (70 - 70) + 40\%$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4922}%
+$\displaystyle 50\% = 2 (70 - 65) + 40\%$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4924}%
+$\displaystyle \includegraphics{cont68.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4926}%
+$ A_V$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4928}%
+$ V_{ref} - V_{load}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4930}%
+$ V_{load}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4932}%
+$ V_{ref}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4938}%
+$ V_{out} = A_V (V_{(+)} - V_{(-)})$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4940}%
+$\displaystyle V_{out} = A_V(V_{(+)} - V_{(-)})$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4942}%
+$\displaystyle V_{out} = A_V(V_{ref} - V_{load})$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4944}%
+$\displaystyle V_{load} + 0.7 = A_V(V_{ref} - V_{load})$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4946}%
+$\displaystyle V_{load} + 0.7 = A_V V_{ref} - A_V V_{load}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4948}%
+$\displaystyle V_{load} + A_V V_{load} = A_V V_{ref} - 0.7$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4950}%
+$\displaystyle (A_V + 1) V_{load} = A_V V_{ref} - 0.7$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4952}%
+$\displaystyle V_{load} = {{A_V V_{ref} - 0.7} \over {A_V + 1}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4955}%
+$\displaystyle \includegraphics{cont78.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4965}%
+$\displaystyle m = K_p e + {1 \over \tau_i} \int e \> dt + b$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4973}%
+$ \tau_i$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4975}%
+$ t$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4979}%
+$ \int e \> dt$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4983}%
+$ dt$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4989}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\quad\hfil # \  \hfil & 
+\quad\hfil # \  \hfil \cr
+$\tau_i$ = minutes per repeat & $K_i$ = repeats per minute \cr
+\noalign{\vskip 5pt}
+${1 \over \tau_i} \int e \> dt$  &  $K_i \int e \> dt$ \cr
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4994}%
+$\displaystyle m = K_p e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} + b$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5004}%
+$ \tau_d$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5010}%
+$ de \over dt$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5018}%
+$ de$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5024}%
+$\displaystyle m = K_p e + \tau_d {de \over dt} + b$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5032}%
+$\displaystyle m = K_p e + {1 \over \tau_i} \int e \> dt + \tau_d {d\hbox{PV} \over dt} + b$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5036}%
+$\displaystyle \hbox{Gain value} = {\Delta \hbox{Output} \over \Delta \hbox{Input}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5038}%
+$\displaystyle \hbox{Gain value} = {d\hbox{Output} \over d\hbox{Input}} = {dm \over de}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5040}%
+$ \Delta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5042}%
+$ \times$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5046}%
+$\displaystyle \hbox{Proportional Band value} = {\Delta \hbox{Input} \over \Delta \hbox{Output}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5048}%
+$\displaystyle \hbox{Proportional Band value} = {d\hbox{Input} \over d\hbox{Output}} = {de \over dm}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5050}%
+$ {1 \over 2} = 50\%$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5053}%
+$\displaystyle \hbox{Integral value (repeats per minute)} = {\hbox{Output velocity} \over \hbox{Input error}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5055}%
+$\displaystyle \hbox{Integral value (repeats per minute)} = {{dm \over dt} \over e}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5057}%
+$\displaystyle \hbox{Integral time constant (minutes per repeat)} = \tau_i = {\hbox{Input error} \over \hbox{Output velocity}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5059}%
+$\displaystyle \hbox{Integral time constant (minutes per repeat)} = \tau_i = {e \over {dm \over dt}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5061}%
+$ dm \over dt$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5069}%
+$ e \over \tau_i$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5086}%
+$\displaystyle \hbox{Derivative time constant (minutes)} = \tau_d = {\hbox{Output offset} \over \hbox{Input velocity}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5088}%
+$\displaystyle \hbox{Derivative time constant (minutes)} = \tau_d = {\Delta \hbox{Output} \over {de \over dt}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5106}%
+$\displaystyle \includegraphics{pid01.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5110}%
+$\displaystyle \includegraphics{pid63.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5113}%
+$\displaystyle \includegraphics{pid02.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5121}%
+$\displaystyle \includegraphics{pid64.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5124}%
+$\displaystyle \includegraphics{pid06.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5126}%
+$\displaystyle \includegraphics{pid65.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5129}%
+$\displaystyle \includegraphics{pid03.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5131}%
+$\displaystyle \includegraphics{pid66.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5134}%
+$\displaystyle \includegraphics{pid04.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5136}%
+$\displaystyle \includegraphics{pid67.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5139}%
+$\displaystyle \includegraphics{pid113.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5141}%
+$\displaystyle \includegraphics{pid114.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5144}%
+$\displaystyle \includegraphics{pid115.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5146}%
+$\displaystyle \includegraphics{pid116.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5149}%
+$\displaystyle \includegraphics{pid05.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5151}%
+$ ^{o}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5155}%
+$\displaystyle {d \over dx} (\sin x) = \cos x = \sin (x + 90^o)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5159}%
+$ C$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5161}%
+$ \int \sin x \> dx = - \cos x + C = \sin (x - 90^o) + C$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5165}%
+$\displaystyle \int \sin x \> dx = - \cos x = \sin (x - 90^o)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5167}%
+$\displaystyle \includegraphics{pid68.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5169}%
+$ -90^{o}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5171}%
+$ +90^{o}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5174}%
+$\displaystyle \includegraphics{pid73.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5176}%
+$\displaystyle \includegraphics{pid74.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5178}%
+$\displaystyle \includegraphics{pid75.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5180}%
+$ d\hbox{PV} \over dt$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5182}%
+$\displaystyle \includegraphics{pid76.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5184}%
+$\displaystyle \includegraphics{pid77.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5188}%
+$\displaystyle m = K_p e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} + b \hbox{\hskip 50pt \textbf{Parallel PID equation}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5204}%
+$ \Delta m$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5206}%
+$\displaystyle \Delta m = K_p \Delta e \hskip 30pt \hbox{Proportional action}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5208}%
+$\displaystyle \Delta m = {1 \over \tau_i} \int e \> dt \hskip 30pt \hbox{Integral action}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5210}%
+$\displaystyle \Delta m = \tau_d {de \over dt} \hskip 30pt \hbox{Derivative action}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5221}%
+$\displaystyle m = K_p \left( e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} \right) + b \hbox{\hskip 50pt \textbf{Ideal} or \textbf{ISA PID equation}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5231}%
+$\displaystyle \Delta m = {K_p \over \tau_i} \int e \> dt \hskip 30pt \hbox{Integral action}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5233}%
+$\displaystyle \Delta m = K_p \tau_d {de \over dt} \hskip 30pt \hbox{Derivative action}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5242}%
+$\displaystyle m = K_p \left[ \left({\tau_d \over \tau_i} + 1 \right) e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} \right] + b \hbox{\hskip 25pt \textbf{Series} or \textbf{Interacting PID equation}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5254}%
+$ {\tau_d \over \tau_i} + 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5262}%
+$\displaystyle \Delta m = K_p \left({\tau_d \over \tau_i} + 1\right) \Delta e \hskip 30pt \hbox{Proportional action}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5282}%
+$\displaystyle \includegraphics{pid07.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5284}%
+$\displaystyle \includegraphics{pid86.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5286}%
+$\displaystyle \includegraphics{pid87.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5290}%
+$\displaystyle \includegraphics{pid88.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5293}%
+$\displaystyle \includegraphics{pid08.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5295}%
+$\displaystyle \includegraphics[width=4in]{pid110.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5298}%
+$\displaystyle \includegraphics{pid09.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5303}%
+$\displaystyle \includegraphics{pid10.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5305}%
+$\displaystyle \includegraphics{pid11.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5307}%
+$\displaystyle \includegraphics{pid12.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5314}%
+$\displaystyle \includegraphics[width=2.5in]{pid14.eps} \hskip 30pt \includegraphics[width=2.5in]{pid15.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5316}%
+$\displaystyle \includegraphics[width=4in]{pid18.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5318}%
+$\displaystyle \includegraphics[width=2.5in]{pid16.eps} \hskip 30pt \includegraphics[width=2.5in]{pid17.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5320}%
+$\displaystyle \includegraphics[width=2.5in]{pid19.eps} \hskip 30pt \includegraphics[width=2.5in]{pid20.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5322}%
+$\displaystyle \includegraphics[width=3in]{pid21.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5325}%
+$\displaystyle \includegraphics[width=2in]{pid22.eps} \hskip 30pt \includegraphics[width=2in]{pid23.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5327}%
+$\displaystyle \includegraphics[height=2.5in]{pid24.eps} \hskip 30pt \includegraphics[height=2.5in]{pid71.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5330}%
+$\displaystyle \includegraphics[width=4in]{pid25.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5332}%
+$\displaystyle \includegraphics[width=2in]{pid26.eps} \hskip 30pt \includegraphics[width=2in]{pid27.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5334}%
+$\displaystyle \includegraphics[width=4in]{pid28.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5336}%
+$\displaystyle \includegraphics[width=2.5in]{pid29.eps} \hskip 30pt \includegraphics[width=2.5in]{pid30.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5338}%
+$\displaystyle \includegraphics[width=2in]{pid33.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5340}%
+$\displaystyle \includegraphics{pid72.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5342}%
+$\displaystyle \includegraphics[width=2.5in]{pid31.eps} \hskip 30pt \includegraphics[width=2.5in]{pid32.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5349}%
+$\displaystyle \includegraphics{pid13.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5352}%
+$ ^{st}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5381}%
+$\displaystyle m = K_p (\hbox{PV} - \hbox{SP}) + b \hskip 30pt \hbox{Direct-acting}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5383}%
+$\displaystyle m = K_p (\hbox{SP} - \hbox{PV}) + b \hskip 30pt \hbox{Reverse-acting}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5387}%
+$\displaystyle \includegraphics{pid90.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5395}%
+$\displaystyle \includegraphics{pid91.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5399}%
+$\displaystyle \includegraphics{pid92.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5401}%
+$\displaystyle \includegraphics{pid89.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5404}%
+$\displaystyle I = C {dV \over dt}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5406}%
+$ I$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5410}%
+$ V$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5412}%
+$ dV \over dt$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5414}%
+$\displaystyle \includegraphics{pid94.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5416}%
+$ A$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5422}%
+$ I = C{dA \over dt}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5426}%
+$ RC$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5430}%
+$ \Omega$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5432}%
+$ \mu$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5436}%
+$ -1.419$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5438}%
+$\displaystyle V_{out} = -RC {dV_{in} \over dt}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5440}%
+$\displaystyle V_{out} = -(10000 \> \Omega)(33 \times 10^{-6} \hbox{ F}) \left({4.3 \hbox{ V} \over \hbox{s}}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5442}%
+$\displaystyle V_{out} = -(0.33 \hbox{ s}) \left({4.3 \hbox{ V} \over \hbox{s}}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5444}%
+$\displaystyle V_{out} = -1.419 \hbox{ V}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5450}%
+$ \rightarrow$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5456}%
+$\displaystyle \includegraphics{pid93.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5458}%
+$ R$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5462}%
+$ I = C {dV \over dt}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5468}%
+$ \Delta V_{out}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5470}%
+$ t_0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5472}%
+$ t_f$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5474}%
+$\displaystyle \Delta V_{out} = -{1 \over RC} \int_{t_0}^{t_f} V_{in} \> dt$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5476}%
+$ V_0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5480}%
+$\displaystyle V_{out} = -{1 \over RC} \int_{t_0}^{t_f} V_{in} \> dt + V_0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5488}%
+$ -0.447$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5496}%
+$ -3.0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5498}%
+$ -8.359$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5500}%
+$\displaystyle V_{out} = -{1 \over RC} \int_{t_{0}}^{t_{f}} V_{in} \> dt + V_0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5502}%
+$\displaystyle V_{out} = -\left({1 \over (81000 \> \Omega)(47 \times 10^{-6} \hbox{ F})}\right) \left(\int_0^{12} 1.7 \hbox{ V} \> dt \right) - 3 \hbox{ V}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5504}%
+$\displaystyle V_{out} = -\left({1 \over 3.807 \hbox{ s}}\right) (20.4 \hbox{ V} \cdot \hbox{s}) - 3 \hbox{ V}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5506}%
+$\displaystyle V_{out} = - 5.359 \hbox{ V} - 3 \hbox{ V}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5508}%
+$\displaystyle V_{out} = - 8.359 \hbox{ V}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5513}%
+$ _{(+)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5515}%
+$ _{(-)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5517}%
+$\displaystyle \includegraphics{pid96.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5523}%
+$\displaystyle m = K_p \left(e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} \right) \hbox{\hskip 50pt \textbf{Ideal PID equation}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5525}%
+$ R_{prop}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5533}%
+$\displaystyle \includegraphics[height=4in]{pid95.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5535}%
+$\displaystyle \includegraphics{pid78.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5541}%
+$\displaystyle m = K_p \left[ \left({\tau_d \over \tau_i} + 1 \right) e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} \right] \hbox{\hskip 25pt \textbf{Series} or \textbf{Interacting PID equation}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5548}%
+$\displaystyle \includegraphics[width=2.5in]{pid37.eps} \hskip 30pt \includegraphics[width=2.5in]{pid38.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5550}%
+$ ^{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5556}%
+$\displaystyle \includegraphics[height=3in]{pid117.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5560}%
+$\displaystyle \includegraphics[width=4in]{pid84.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5562}%
+$ \pm$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5571}%
+$\displaystyle \includegraphics[width=2.5in]{pid57.eps} \hskip 30pt \includegraphics[width=2.5in]{pid60.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5573}%
+$\displaystyle \includegraphics{pid59.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5585}%
+$\displaystyle \includegraphics[width=4in]{pid58.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5587}%
+$\displaystyle \includegraphics[width=5in]{pid118.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5593}%
+$\displaystyle \includegraphics[width=4in]{pid39.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5601}%
+$\displaystyle \includegraphics{pid42.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5603}%
+$\displaystyle \includegraphics{pid41.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5607}%
+$\displaystyle \includegraphics[width=4in]{pid40.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5615}%
+$\displaystyle \includegraphics[width=2.5in]{pid69.eps} \hskip 30pt \includegraphics[width=2.5in]{pid70.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5617}%
+$\displaystyle \includegraphics[width=6in]{procidia_1.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5620}%
+$\displaystyle \includegraphics[width=3in]{pid44.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5622}%
+$\displaystyle \includegraphics[width=4in]{pid45.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5624}%
+$\displaystyle \includegraphics{pid111.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5626}%
+$\displaystyle \includegraphics[width=3in]{pid85.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5630}%
+$\displaystyle \includegraphics[width=5in]{pid101.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5632}%
+$\displaystyle \includegraphics[width=5in]{pid102.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5634}%
+$\displaystyle \includegraphics[width=3in]{pid46.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5639}%
+$\displaystyle \includegraphics{pid47.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5641}%
+$\displaystyle \includegraphics[width=4in]{pid81.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5643}%
+$\displaystyle \includegraphics[width=4in]{pid112.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5645}%
+$\displaystyle \includegraphics[width=4in]{pid82.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5647}%
+$\displaystyle \includegraphics[width=4in]{pid83.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5652}%
+$\displaystyle \includegraphics{pid48.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5660}%
+$\displaystyle \includegraphics[width=2.5in]{pid49.eps} \hskip 30pt \includegraphics[width=2.5in]{pid50.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5662}%
+$\displaystyle \includegraphics[width=4in]{pid51.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5664}%
+$\displaystyle \includegraphics[width=4in]{pid52.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5666}%
+$\displaystyle \includegraphics[height=3.5in]{pid108.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5668}%
+$\displaystyle \includegraphics[width=4in]{pid53.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5673}%
+$\displaystyle \includegraphics{pid54.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5677}%
+$\displaystyle \includegraphics{pid56.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5679}%
+$\displaystyle \includegraphics{pid55.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{section}
+\stepcounter{subsection}
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting887}%
+\begin{lstlisting}
+LOOP
+  PRINT "Hello World!"  // This line prints text to the screen
+  OUTPUT audible beep on the speaker  // This line beeps the speaker
+ENDLOOP
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5705}%
+$ x$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting894}%
+\begin{lstlisting}
+DECLARE x to be an integer variable
+SET x = 2  // Initializing the value of x
+\par
+LOOP
+  // This SET command alternates the value of x with each pass
+  SET x = 2 - x  
+ENDLOOP
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5719}%
+$ =$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5723}%
+$ 2 - x$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting915}%
+\begin{lstlisting}
+DECLARE x to be an integer variable
+\par
+LOOP
+\par
+// (other code manipulating the value of x goes here)
+\par
+IF x = 5 THEN 
+    PRINT "The value of the number is 5"
+    OUTPUT audible beep on the speaker
+  ENDIF
+ENDLOOP
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5738}%
+$ x = 5$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5742}%
+$ ==$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5746}%
+$ :=$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting930}%
+\begin{lstlisting}
+DECLARE x to be an integer variable
+\par
+LOOP
+\par
+// (other code manipulating the value of x goes here)
+\par
+IF x = 5 THEN 
+    PRINT "The value of the number is 5"
+    OUTPUT audible beep on the speaker
+  ELSEIF x = 7 THEN
+    PRINT "The value of the number is 7"
+    OUTPUT audible beep on the speaker
+  ELSEIF x = 11 THEN
+    PRINT "The value of the number is 11"
+    OUTPUT audible beep on the speaker
+  ENDIF
+ENDLOOP
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting940}%
+\begin{lstlisting}
+DECLARE n to be an integer variable
+DECLARE x to be an integer variable
+DECLARE PrintAndBeep to be a function
+\par
+LOOP
+\par
+// (other code manipulating the value of x goes here)
+\par
+IF x = 5 OR x = 7 OR x = 11 THEN 
+    CALL PrintAndBeep(x)
+  ENDIF
+ENDLOOP
+\par
+BEGIN PrintAndBeep (n)
+  PRINT "The value of the number is" (n) "!"
+  OUTPUT audible beep on the speaker
+  RETURN
+END PrintAndBeep
+\par
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5767}%
+$ n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting948}%
+\begin{lstlisting}
+DECLARE n to be an integer variable
+DECLARE x to be an integer variable
+DECLARE y to be an integer variable
+DECLARE PrintAndBeep to be a function
+\par
+LOOP
+\par
+// (other code manipulating the value of x and y goes here)
+\par
+IF x = 5 OR x = 7 OR x = 11 THEN 
+    CALL PrintAndBeep(x)
+  ENDIF
+  IF y = 0 OR y = 2 THEN 
+    CALL PrintAndBeep(y)
+  ENDIF
+ENDLOOP
+\par
+BEGIN PrintAndBeep (n)
+  PRINT "The value of the number is" (n) "!"
+  OUTPUT audible beep on the speaker
+  RETURN
+END PrintAndBeep
+\par
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5775}%
+$ y$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5784}%
+$\displaystyle m = K_p \left(e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} \right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5800}%
+$\displaystyle m = K_p \left(e + K_i \int e \> dt + K_d {de \over dt} \right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5808}%
+$ K_i$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5810}%
+$ K_d$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5816}%
+$ dm$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5818}%
+$\displaystyle m = K_p \left(e + K_i \int e \> dt + K_d {de \over dt} \right) \hskip 30pt \hbox{Position equation}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5820}%
+$\displaystyle dm = K_p \left(de + K_i  e \> dt + K_d {d^2e \over dt} \right) \hskip 30pt \hbox{Velocity equation}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5822}%
+$\displaystyle m = K_p e + \hbox{Bias} \hskip 30pt \hbox{Position equation for P-only control}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5824}%
+$\displaystyle dm = K_p de \hskip 30pt \hbox{Velocity equation for P-only control}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting977}%
+\begin{lstlisting}
+DECLARE PV, SP, and Out to be floating-point variables
+DECLARE K_p, Error, and Bias to be floating-point variables
+DECLARE Action, and Mode to be boolean variables
+\par
+LOOP
+  SET PV = analog_input_channel_N  // Update PV 
+  SET K_p = operator_input_channel_Gain   // From operator interface
+\par
+IF Action = 1 THEN
+    SET Error = SP - PV      // Calculate error assuming reverse action
+  ELSE THEN
+    SET Error = PV - SP      // Calculate error assuming direct action
+  ENDIF
+\par
+IF Mode = 1 THEN       // Automatic mode (if Mode = 1)
+    SET Out = K_p * Error + Bias
+    SET SP = operator_input_channel_SP   // From operator interface
+  ELSE THEN              // Manual mode (if Mode = 0)
+    SET Out = operator_input_channel_Out // From operator interface 
+    SET SP = PV     // Setpoint tracking
+    SET Bias = Out  // Output tracking
+  ENDIF
+ENDLOOP
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5826}%
+$ N$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting983}%
+\begin{lstlisting}
+DECLARE PV, SP, and Out to be floating-point variables
+DECLARE K_p, Error, and last_Error to be floating-point variables
+DECLARE Action, and Mode to be boolean variables
+\par
+LOOP
+  SET PV = analog_input_channel_N  // Update PV 
+  SET K_p = operator_input_channel_Gain   // From operator interface
+  SET last_Error = Error
+\par
+IF Action = 1 THEN
+    SET Error = SP - PV      // Calculate error assuming reverse action
+  ELSE THEN
+    SET Error = PV - SP      // Calculate error assuming direct action
+  ENDIF
+\par
+IF Mode = 1 THEN       // Automatic mode (if Mode = 1)
+    SET Out = Out + (K_p * (Error - last_Error))
+    SET SP = operator_input_channel_SP   // From operator interface
+  ELSE THEN              // Manual mode (if Mode = 0)
+    SET Out = operator_input_channel_Out // From operator interface 
+    SET SP = PV   // Setpoint tracking
+  ENDIF
+ENDLOOP
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5845}%
+$\displaystyle \includegraphics{pid61.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{subsection}
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5853}%
+$ y = mx + b$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5865}%
+$ \tau$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5867}%
+$ 5 \tau$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

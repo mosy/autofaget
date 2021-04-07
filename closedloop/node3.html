@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Basic feedback control principles</TITLE>
+<META NAME="description" CONTENT="Basic feedback control principles">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION00210000000000000000">
+Basic feedback control principles</A>
+</H1>
+
+<P>
+Before we begin our discussion on process control, we must define a few key terms.  First, we have what is known as the <SPAN  CLASS="textit">process</SPAN>: the physical system we wish to monitor and control.  For the sake of illustration, consider a heat exchanger that uses high-temperature steam to transfer heat to a lower-temperature liquid.  Heat exchangers are used frequently in the chemical industries to maintain the necessary temperature of a chemical solution, so the desired blending, separation, or reactions can occur.  A very common design of heat exchanger is the &ldquo;shell-and-tube&rdquo; style, where a metal shell serves as a conduit for the chemical solution to flow through, while a network of smaller tubes runs through the interior of the shell, carrying steam or some other heat-transfer fluid.  The hotter steam flowing through the tubes transfers heat energy to the cooler process fluid surrounding the tubes, inside the shell of the heat exchanger: <A NAME="36"></A> <A NAME="37"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 54.97ex; vertical-align: -0.10ex; " SRC="img1.svg"
+ ALT="$\displaystyle \includegraphics{cont01.eps}$">
+</DIV><P></P>
+
+<P>
+In this case, the <SPAN  CLASS="textit">process</SPAN> is the entire heating system, consisting of the fluid we wish to heat, the heat exchanger, and the steam delivering the required heat energy.  In order to maintain steady control of the process fluid's exiting temperature, we must find a way to measure it and represent that measurement in signal form so it may be interpreted by other instruments taking some form of control action.  In instrumentation terms, the measuring device is known as a <SPAN  CLASS="textit">transmitter</SPAN>, because it <SPAN  CLASS="textit">transmits</SPAN> the process measurement in the form of a signal.  
+
+<P>
+
+<P>
+Transmitters are represented in process diagrams by small circles with identifying letters inside, in this case, &ldquo;TT,&rdquo; which stands for <SPAN  CLASS="textbf">T</SPAN>emperature <SPAN  CLASS="textbf">T</SPAN>ransmitter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 54.97ex; vertical-align: -0.10ex; " SRC="img2.svg"
+ ALT="$\displaystyle \includegraphics{cont02.eps}$">
+</DIV><P></P>
+
+<P>
+The signal output by the transmitter (represented by the &ldquo;PV&rdquo; dashed line), representing the heated fluid's exiting temperature, is called the <SPAN  CLASS="textit">process variable</SPAN>.  Like a variable in a mathematical equation that represents some story-problem quantity, this signal represents the measured quantity we wish to control in the process. <A NAME="46"></A>
+
+<P>
+In order to exert control over the process variable, we must have some way of altering fluid flow through the heat exchanger, either of the process fluid, the steam, or both.  Generally, it makes more sense to alter the flow of the heating medium (the steam), and let the process fluid flow rate be dictated by the demands of the larger process.  If this heat exchanger were part of an oil refinery unit, for example, it would be far better to throttle steam flow to control oil temperature rather than to throttle the oil flow itself, since altering the oil's flow will also affect other process variables upstream and downstream of the exchanger.  Ideally, the heat exchanger temperature control system would provide consistent temperature of the exiting oil, for any given incoming oil temperature and flow-rate of oil through it.
+
+<P>
+
+<P>
+One convenient way to throttle steam flow into the heat exchanger is to use a control valve (labeled &ldquo;TV&rdquo; because it is a <SPAN  CLASS="textbf">T</SPAN>emperature <SPAN  CLASS="textbf">V</SPAN>alve).  In general terms, a control valve is known as a <SPAN  CLASS="textit">final control element</SPAN>.  Other types of final control elements exist (servo motors, variable-flow pumps, and other mechanical devices used to vary some physical quantity at will), but valves are the most common, and probably the simplest to understand.  With a final control element in place, the steam flow becomes known as the <SPAN  CLASS="textit">manipulated variable</SPAN>, because it is the quantity we will manipulate in order to gain control over the process variable: <A NAME="51"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 60.19ex; vertical-align: -0.10ex; " SRC="img3.svg"
+ ALT="$\displaystyle \includegraphics{cont03.eps}$">
+</DIV><P></P>
+
+<P>
+Valves come in a wide variety of sizes and styles.  Some valves are hand-operated: that is, they have a &ldquo;wheel&rdquo; or other form of manual control that may be moved to &ldquo;pinch off&rdquo; or &ldquo;open up&rdquo; the flow passage through the pipe.  Other valves come equipped with signal receivers and positioner devices, which move the valve mechanism to various positions at the command of a signal (usually an electrical signal, like the type output by transmitter instruments).  This feature allows for remote control, so a human operator or computer device may exert control over the manipulated variable from a distance.  In the previous illustration, the steam control valve is equipped with such an electrical signal input, represented by the &ldquo;control signal&rdquo; dashed line.
+
+<P>
+
+<P>
+This brings us to the final component of the heat exchanger temperature control system: the <SPAN  CLASS="textit">controller</SPAN>.  This is a device designed to interpret the transmitter's process variable signal and decide how far open the control valve needs to be in order to maintain that process variable at the desired value.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont04.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 60.19ex; vertical-align: -0.10ex; " SRC="img4.svg"
+ ALT="$\displaystyle \includegraphics{cont04.eps}$">
+</DIV><P></P>
+
+<P>
+Here, the circle with the letters &ldquo;TC&rdquo; in the center represents the controller.  Those letters stand for <SPAN  CLASS="textbf">T</SPAN>emperature <SPAN  CLASS="textbf">C</SPAN>ontroller, since the process variable being controlled is the process fluid's <SPAN  CLASS="textit">temperature</SPAN>.  Usually, the controller consists of a computer making automatic decisions to open and close the valve as necessary to stabilize the process variable at some predetermined <SPAN  CLASS="textit">setpoint</SPAN>.  <A NAME="59"></A>
+
+<P>
+Note that the controller's circle has a solid line going through the center of it, while the transmitter and control valve circles are open.  An open circle represents a field-mounted device according to the ISA standard for instrumentation symbols, and a single solid line through the middle of a circle tells us the device is located on the front of a control panel in a main control room location.  So, even though the diagram might appear as though these three instruments are located close to one another, they in fact may be quite far apart.  Both the transmitter and the valve must be located near the heat exchanger (out in the &ldquo;field&rdquo; area rather than inside a building), but the controller may be located a long distance away where human operators can adjust the setpoint from inside a safe and secure control room.
+
+<P>
+These elements comprise the essentials of a <SPAN  CLASS="textit">feedback control system</SPAN>: the <SPAN  CLASS="textit">process</SPAN> (the system to be controlled), the <SPAN  CLASS="textit">process variable</SPAN> (the specific quantity to be measured and controlled), the <SPAN  CLASS="textit">transmitter</SPAN> (the device used to measure the process variable and output a corresponding signal), the <SPAN  CLASS="textit">controller</SPAN> (the device that decides what to do to bring the process variable as close to setpoint as possible), the <SPAN  CLASS="textit">final control element</SPAN> (the device that directly exerts control over the process), and the <SPAN  CLASS="textit">manipulated variable</SPAN> (the quantity to be directly altered to effect control over the process variable). <A NAME="67"></A>
+
+<P>
+Feedback control may be viewed as a sort of information &ldquo;loop,&rdquo; from the transmitter (measuring the process variable), to the controller, to the final control element, and through the process itself, back to the transmitter.  Ideally, a process control &ldquo;loop&rdquo; not only holds the process variable at a steady level (the setpoint), but also maintains control over the process variable given changes in setpoint, and even changes in other variables of the process:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont05.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.06ex; vertical-align: -0.10ex; " SRC="img5.svg"
+ ALT="$\displaystyle \includegraphics{cont05.eps}$">
+</DIV><P></P>
+
+<P>
+Specifically, the type of feedback we are employing here to control the process is <SPAN  CLASS="textit">negative</SPAN> or <SPAN  CLASS="textit">degenerative</SPAN> feedback.  The term &ldquo;negative&rdquo; refers to the direction of action the control system takes in response to any measured change in the process variable.  If something happens to drive the process variable up, the control system will automatically respond in such a way as to bring the process variable back down where it belongs.  If the process variable happens to sag below setpoint, the control system will automatically act to drive the process variable back up to setpoint.  Whatever the process variable does in relation to setpoint, the control system takes the opposite (inverse, or negative) action in an attempt to stabilize it at setpoint.
+
+<P>
+For example, if the unheated process fluid flow rate were to suddenly increase, the heat exchanger outlet temperature would fall due to the physics of heat transfer, but once this drop was detected by the transmitter and reported to the controller, the controller would automatically call for additional steam flow to compensate for the temperature drop, thus bringing the process variable back in agreement with the setpoint.  Ideally, a well-designed and well-tuned control loop will sense and compensate for <SPAN  CLASS="textit">any</SPAN> change in the process or in the setpoint, the end result being a process variable value that always holds steady at the setpoint value.
+
+<P>
+The unheated fluid flow rate is an example of an uncontrolled, or <SPAN  CLASS="textit">wild</SPAN>, variable because our control system here has no ability to influence it.  This flow is also referred to as a <SPAN  CLASS="textit">load</SPAN> because it &ldquo;loads&rdquo; or affects the process variable we are trying to stabilize.  Loads are present in nearly every controlled system, and indeed are the primary factor necessitating a control system at all.  Referring back to our heat exchanger process again, we could adequately control the operating temperature of it with just a manually-set steam control valve if only none of the other factors (steam temperature, fluid flow rate, incoming fluid temperature, etc.) ever changed!  <A NAME="74"></A>  <A NAME="75"></A>
+
+<P>
+<P>
+Many types of processes lend themselves to feedback control.  Consider an aircraft autopilot system, keeping an airplane on a steady course heading despite the effects of loads such as side-winds: reading the plane's heading (process variable) from an electronic compass and using the rudder as a final control element to change the plane's &ldquo;yaw.&rdquo;  An automobile's &ldquo;cruise control&rdquo; is another example of a feedback control system, with the process variable being the car's velocity, and the final control element being the engine's throttle.  The purpose of a cruise control is to maintain constant driving speed despite the influence of loads such as hills, head-winds, tail-winds, and road roughness.  Steam boilers with automatic pressure controls, electrical generators with automatic voltage and frequency controls, and water pumping systems with automatic flow controls are further examples of how feedback may be used to maintain control over certain process variables.
+
+<P>
+Modern technology makes it possible to control nearly anything that may be measured in an industrial process.  This extends beyond the pale of simple pressure, level, temperature, and flow variables to include even certain chemical properties.
+
+<P>
+
+<P>
+In municipal water and wastewater treatment systems, for example, numerous chemical quantities must be measured and controlled automatically to ensure maximum health and minimum environmental impact.  Take for instance the chlorination of treated wastewater, before it leaves the wastewater treatment facility into a large body of water such as a river, bay, or ocean.  Chlorine is added to the water to kill any residual bacteria so they do not consume oxygen in the body of water they are released to.  Too little chlorine added, and not enough bacteria are killed, resulting in a high <SPAN  CLASS="textit">biological oxygen demand</SPAN> or <SPAN  CLASS="textit">BOD</SPAN> in the water which will asphyxiate the fish swimming in it.  Too much chlorine added, and the chlorine itself poses a hazard to marine life.  Thus, the chlorine content must be carefully controlled at a particular setpoint, and the control system must take aggressive action if the dissolved chlorine concentration strays too low or too high: <A NAME="78"></A> <A NAME="79"></A> <A NAME="80"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{cont06.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 34.06ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$\displaystyle \includegraphics{cont06.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+Now that we have seen the basic elements of a feedback control system, we will concentrate on the <SPAN  CLASS="textit">algorithms</SPAN> used in the controller to maintain a process variable at setpoint.  For the scope of this topic, an &ldquo;algorithm&rdquo; is a mathematical relationship between the process variable and setpoint inputs of a controller, and the output (manipulated variable).  Control algorithms determine <SPAN  CLASS="textit">how</SPAN> the manipulated variable quantity is deduced from PV and SP inputs, and range from the elementary to the very complex.  In the most common form of control algorithm, the so-called &ldquo;PID&rdquo; algorithm, calculus is used to determine the proper final control element action for any combination of input signals. <A NAME="84"></A> <A NAME="85"></A>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html262"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html264"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Diagnosing feedback control problems</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+ &nbsp; <B>  <A ID="tex2html263"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html265"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

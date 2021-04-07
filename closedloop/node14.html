@@ -1,0 +1,835 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Analog electronic PID controllers</TITLE>
+<META NAME="description" CONTENT="Analog electronic PID controllers">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html333"
+  HREF="node14.html#SECTION002121000000000000000">Proportional control action</A>
+<LI><A ID="tex2html334"
+  HREF="node14.html#SECTION002122000000000000000">Derivative and integral control actions</A>
+<LI><A ID="tex2html335"
+  HREF="node14.html#SECTION002123000000000000000">Full-PID circuit design</A>
+<LI><A ID="tex2html336"
+  HREF="node14.html#SECTION002124000000000000000">Single-loop analog controllers</A>
+<LI><A ID="tex2html337"
+  HREF="node14.html#SECTION002125000000000000000">Multi-loop analog control systems</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION002120000000000000000">
+Analog electronic PID controllers</A>
+</H1>
+
+<P>
+Although analog electronic process controllers are considered a newer technology than pneumatic process controllers, they are actually &ldquo;more obsolete&rdquo; than pneumatic controllers.  Panel-mounted (inside a control room environment) analog electronic controllers were a great improvement over panel-mounted pneumatic controllers when they were first introduced to industry, but they were superseded by digital controller technology later on.  Field-mounted pneumatic controllers were either replaced by panel-mounted electronic controllers (either analog or digital) or left alone.  Applications still exist for field-mounted pneumatic controllers, even now at the beginning of the 21<SPAN CLASS="MATH"><IMG STYLE="height: 1.98ex; vertical-align: -0.10ex; " SRC="img136.svg"
+ ALT="$^{st}$"></SPAN> century, but very few applications exist for analog electronic controllers in any location.
+
+<P>
+Analog electronic controllers enjoy two inherent advantages over digital electronic controllers: greater reliability<A ID="tex2html20"
+  HREF="footnode.html#foot548"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">20</SPAN></SUP></A> and faster response.  However, these advantages have been diminishing as digital control technology has advanced.  Today's digital electronic technology is far more reliable than the digital technology available during the heyday of analog electronic controllers.  Now that digital controls have achieved very high levels of reliability, the first advantage of analog control is largely academic<A ID="tex2html21"
+  HREF="footnode.html#foot549"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">21</SPAN></SUP></A>, leaving only the second advantage for practical consideration.  The advantage of faster speed may be fruitful in applications such as motion control, but for most industrial processes even the slowest digital controller is fast enough<A ID="tex2html22"
+  HREF="footnode.html#foot550"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">22</SPAN></SUP></A>.  Furthermore, the numerous advantages offered by digital technology (data recording, networking capability, self-diagnostics, flexible configuration, function blocks for implementing different control strategies) severely weaken the relative importance of reliability and speed.
+
+<P>
+Most analog electronic PID controllers utilize <SPAN  CLASS="textit">operational amplifiers</SPAN> in their designs.  It is relatively easy to construct circuits performing amplification (gain), integration, differentiation, summation, and other useful control functions with just a few opamps, resistors, and capacitors.
+
+<P>
+
+<H2><A ID="SECTION002121000000000000000">
+Proportional control action</A>
+</H2>
+
+<P>
+The basic proportional-only control algorithm follows this formula:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p e + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.45ex; vertical-align: -0.75ex; " SRC="img10.svg"
+ ALT="$\displaystyle m = K_p e + b$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$m$"></SPAN> = Controller output
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN> = Error (difference between PV and SP)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN> = Proportional gain
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img14.svg"
+ ALT="$b$"></SPAN> = Bias
+
+<P>
+<P>
+The &ldquo;error&rdquo; variable (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN>) is the mathematical difference between process variable and setpoint.  If the controller is direct-acting, <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN> = PV <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> SP.  If the controller is reverse-acting, <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN> = SP <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> PV.  Thus,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p (\hbox{PV} - \hbox{SP}) + b \hskip 30pt \hbox{Direct-acting}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img137.svg"
+ ALT="$\displaystyle m = K_p (\hbox{PV} - \hbox{SP}) + b \hskip 30pt \hbox{Direct-acting}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p (\hbox{SP} - \hbox{PV}) + b \hskip 30pt \hbox{Reverse-acting}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.58ex; vertical-align: -0.75ex; " SRC="img138.svg"
+ ALT="$\displaystyle m = K_p (\hbox{SP} - \hbox{PV}) + b \hskip 30pt \hbox{Reverse-acting}$">
+</DIV><P></P>
+
+<P>
+Mathematical operations such as subtraction, multiplication by a constant, and addition are quite easy to perform using analog electronic (operational amplifier) circuitry.  Prior to the advent of reliable digital electronics for industrial applications, it was natural to use analog electronic circuitry to perform proportional control for process control loops.
+
+<P>
+
+<P>
+For example, the subtraction function necessary to calculate error (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN>) from process variable and setpoint signals may be performed with a three-amplifier &ldquo;subtractor&rdquo; circuit:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid90.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 26.13ex; vertical-align: -0.10ex; " SRC="img139.svg"
+ ALT="$\displaystyle \includegraphics{pid90.eps}$">
+</DIV><P></P>
+
+<P>
+This particular subtractor circuit calculates error for a reverse-acting controller.  As the PV signal increases, the error signal decreases (becomes more negative).  It could be modified for direct action simply by swapping the two inputs: SP on top and PV on bottom such that the Output becomes PV <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> SP.
+
+<P>
+
+<P>
+Gain is really nothing more than multiplication by a constant, in this case the constant being <SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>.  A very simple one-amplifier analog circuit for performing this multiplication is the <SPAN  CLASS="textit">inverting<A ID="tex2html23"
+  HREF="footnode.html#foot560"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">23</SPAN></SUP></A> amplifier</SPAN> circuit: 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid91.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.23ex; vertical-align: -0.10ex; " SRC="img140.svg"
+ ALT="$\displaystyle \includegraphics{pid91.eps}$">
+</DIV><P></P>
+
+<P>
+With the potentiometer's wiper in mid-position, the voltage gain of this circuit will be 1 (with an inverted polarity which we shall ignore for now).  Moving the wiper toward the left-hand side of the potentiometer increases the circuit's gain past unity, while moving the wiper toward the right-hand side of the potentiometer decreases the gain toward zero.
+
+<P>
+
+<P>
+In order to add the bias (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img14.svg"
+ ALT="$b$"></SPAN>) term in the proportional control equation, we need an analog circuit capable of summing two voltage signals.  This need is nicely met in the <SPAN  CLASS="textit">inverting summer</SPAN> circuit, shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid92.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 27.29ex; vertical-align: -0.10ex; " SRC="img141.svg"
+ ALT="$\displaystyle \includegraphics{pid92.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Combining all these analog functions together into one circuit, and adding a few extra features such as direct/reverse action selection, bias adjustment, and manual control with a null voltmeter to facilitate bumpless mode transfer, gives us this complete analog electronic proportional controller:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid89.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.26ex; vertical-align: -0.10ex; " SRC="img142.svg"
+ ALT="$\displaystyle \includegraphics{pid89.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION002122000000000000000">
+Derivative and integral control actions</A>
+</H2>
+
+<P>
+Differentiating and integrating live voltage signals with respect to time is quite simple using operational amplifier circuits.  Instead of using all resistors in the negative feedback network, we may implement these calculus functions by using a combination of <SPAN  CLASS="textit">capacitors</SPAN> and resistors, exploiting the capacitor's natural derivative relationship between voltage and current:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+I = C {dV \over dt}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img143.svg"
+ ALT="$\displaystyle I = C {dV \over dt}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img144.svg"
+ ALT="$I$"></SPAN> = Current through the capacitor (amperes)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img88.svg"
+ ALT="$C$"></SPAN> = Capacitance of capacitor (farads)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img145.svg"
+ ALT="$V$"></SPAN> = Voltage across the capacitor (volts)
+
+<P>
+<!-- MATH
+ $dV \over dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img146.svg"
+ ALT="$dV \over dt$"></SPAN> = Rate-of-change of voltage across the capacitor (volts per second)
+
+<P>
+<P>
+
+<P>
+If we build an operational amplifier with a resistor providing negative feedback current through a capacitor, we create a <SPAN  CLASS="textit">differentiator</SPAN> circuit where the output voltage is proportional to the rate-of-change of the input voltage:  <A NAME="569"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid94.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 22.06ex; vertical-align: -0.10ex; " SRC="img147.svg"
+ ALT="$\displaystyle \includegraphics{pid94.eps}$">
+</DIV><P></P>
+
+<P>
+Since the inverting input of the operational amplifier is held to ground potential by feedback (a &ldquo;virtual ground&rdquo;), the capacitor experiences the full input voltage of signal <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img148.svg"
+ ALT="$A$"></SPAN>.  So, as <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img148.svg"
+ ALT="$A$"></SPAN> varies over time, the current through that capacitor will directly represent the signal <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img148.svg"
+ ALT="$A$"></SPAN>'s rate of change over time (<!-- MATH
+ $I = C{dA \over dt}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img149.svg"
+ ALT="$I = C{dA \over dt}$"></SPAN>).  This current passes through the feedback resistor, creating a voltage drop at the output of the amplifier directly proportional to signal <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img148.svg"
+ ALT="$A$"></SPAN>'s rate of change over time.  Thus, the output voltage of this circuit reflects the input voltage's instantaneous rate of change, albeit with an inverted polarity.  The mathematical term <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img150.svg"
+ ALT="$RC$"></SPAN> is the <SPAN  CLASS="textit">time constant</SPAN> of this circuit.  For a differentiator circuit such as this, we typically symbolize its time constant as <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN> (the &ldquo;derivative&rdquo; time constant).  <A NAME="573"></A>
+
+<P>
+For example, if the input voltage to this differentiator circuit were to ramp at a constant rate of +4.3 volts per second (rising) with a resistor value of 10 k<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img151.svg"
+ ALT="$\Omega$"></SPAN> and a capacitor value of 33 <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img152.svg"
+ ALT="$\mu$"></SPAN>F (i.e. <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN> = 0.33 seconds), the output voltage would be a constant <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img153.svg"
+ ALT="$-1.419$"></SPAN> volts:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = -RC {dV_{in} \over dt}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img154.svg"
+ ALT="$\displaystyle V_{out} = -RC {dV_{in} \over dt}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = -(10000 \> \Omega)(33 \times 10^{-6} \hbox{ F}) \left({4.3 \hbox{ V} \over \hbox{s}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img155.svg"
+ ALT="$\displaystyle V_{out} = -(10000 \&gt; \Omega)(33 \times 10^{-6} \hbox{ F}) \left({4.3 \hbox{ V} \over \hbox{s}}\right)$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = -(0.33 \hbox{ s}) \left({4.3 \hbox{ V} \over \hbox{s}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img156.svg"
+ ALT="$\displaystyle V_{out} = -(0.33 \hbox{ s}) \left({4.3 \hbox{ V} \over \hbox{s}}\right)$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = -1.419 \hbox{ V}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img157.svg"
+ ALT="$\displaystyle V_{out} = -1.419 \hbox{ V}$">
+</DIV><P></P>
+
+<P>
+Recall that the purpose of derivative action in a PID controller is to react to sudden changes in either the error (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$e$"></SPAN>) or the process variable (PV).  This circuit fulfills that function, by generating an output proportional to the input voltage's rate of change.
+
+<P>
+<P>
+
+<P>
+If we simply swap<A ID="tex2html24"
+  HREF="footnode.html#foot587"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">24</SPAN></SUP></A> the locations of the resistor and capacitor in the feedback network of this operational amplifier circuit, we create an <SPAN  CLASS="textit">integrator</SPAN> circuit where the output voltage rate-of-change is proportional to the input voltage:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid93.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 22.06ex; vertical-align: -0.10ex; " SRC="img159.svg"
+ ALT="$\displaystyle \includegraphics{pid93.eps}$">
+</DIV><P></P>
+
+<P>
+This integrator circuit provides the exact inverse function of the differentiator.  Rather than a changing input signal generating an output signal proportional to the input's rate of change, an input signal in this circuit controls the rate at which the output signal changes.
+
+<P>
+The way it works is by acting as a <SPAN  CLASS="textit">current source</SPAN>, pumping current into the capacitor at a value determined by the input voltage and the resistor value.  Just as in the previous (differentiator) circuit where the inverting terminal of the amplifier was a &ldquo;virtual ground&rdquo; point, the input voltage in this circuit is impressed across the resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img160.svg"
+ ALT="$R$"></SPAN>.  This creates a current which must go through capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img88.svg"
+ ALT="$C$"></SPAN> on its way either to or from the amplifier's output terminal.  As we have seen in the capacitor's equation (<!-- MATH
+ $I = C {dV \over dt}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img161.svg"
+ ALT="$I = C {dV \over dt}$"></SPAN>), a current forced through a capacitor causes the capacitor's voltage to change over time.  This changing voltage becomes the output signal of the integrator circuit.  As in the case of the differentiator circuit, the mathematical term <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img150.svg"
+ ALT="$RC$"></SPAN> is the <SPAN  CLASS="textit">time constant</SPAN> of this circuit as well.  Being an integrator, we customarily represent this &ldquo;integral&rdquo; time constant as <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN>.  <A NAME="593"></A>
+
+<P>
+Any amount of change in output voltage (<!-- MATH
+ $\Delta V_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img162.svg"
+ ALT="$\Delta V_{out}$"></SPAN>) occurring between some initial time (<SPAN CLASS="MATH"><IMG STYLE="height: 1.96ex; vertical-align: -0.45ex; " SRC="img163.svg"
+ ALT="$t_0$"></SPAN>) and a finishing time (<SPAN CLASS="MATH"><IMG STYLE="height: 2.26ex; vertical-align: -0.75ex; " SRC="img164.svg"
+ ALT="$t_f$"></SPAN>) may be calculated by the following integral:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta V_{out} = -{1 \over RC} \int_{t_0}^{t_f} V_{in} \> dt
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.98ex; vertical-align: -2.41ex; " SRC="img165.svg"
+ ALT="$\displaystyle \Delta V_{out} = -{1 \over RC} \int_{t_0}^{t_f} V_{in} \&gt; dt$">
+</DIV><P></P>
+
+<P>
+If we wish to know the absolute output voltage at the end of that time interval, all we need to do is add the circuit's initial output voltage (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img166.svg"
+ ALT="$V_0$"></SPAN>, i.e. the voltage stored in the capacitor at the initial time <SPAN CLASS="MATH"><IMG STYLE="height: 1.96ex; vertical-align: -0.45ex; " SRC="img163.svg"
+ ALT="$t_0$"></SPAN>) to the calculated change:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = -{1 \over RC} \int_{t_0}^{t_f} V_{in} \> dt + V_0
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.98ex; vertical-align: -2.41ex; " SRC="img167.svg"
+ ALT="$\displaystyle V_{out} = -{1 \over RC} \int_{t_0}^{t_f} V_{in} \&gt; dt + V_0$">
+</DIV><P></P>
+
+<P>
+<P>
+
+<P>
+For example, if we were to input a constant DC voltage of +1.7 volts to this circuit with a resistor value of 81 k<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img151.svg"
+ ALT="$\Omega$"></SPAN> and a capacitor value of 47 <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img152.svg"
+ ALT="$\mu$"></SPAN>F (i.e. <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN> = 3.807 seconds), the output voltage would ramp at a constant rate of <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img168.svg"
+ ALT="$-0.447$"></SPAN> volts per second<A ID="tex2html25"
+  HREF="footnode.html#foot1083"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">25</SPAN></SUP></A>.  If the output voltage were to begin at <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img169.svg"
+ ALT="$-3.0$"></SPAN> volts and be allowed to ramp for exactly 12 seconds at this rate, it would reach a value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img170.svg"
+ ALT="$-8.359$"></SPAN> volts at the conclusion of that time interval:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = -{1 \over RC} \int_{t_{0}}^{t_{f}} V_{in} \> dt + V_0
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.98ex; vertical-align: -2.41ex; " SRC="img171.svg"
+ ALT="$\displaystyle V_{out} = -{1 \over RC} \int_{t_{0}}^{t_{f}} V_{in} \&gt; dt + V_0$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = -\left({1 \over (81000 \> \Omega)(47 \times 10^{-6} \hbox{ F})}\right) \left(\int_0^{12} 1.7 \hbox{ V} \> dt \right) - 3 \hbox{ V}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.92ex; vertical-align: -2.30ex; " SRC="img172.svg"
+ ALT="$\displaystyle V_{out} = -\left({1 \over (81000 \&gt; \Omega)(47 \times 10^{-6} \hbox{ F})}\right) \left(\int_0^{12} 1.7 \hbox{ V} \&gt; dt \right) - 3 \hbox{ V}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = -\left({1 \over 3.807 \hbox{ s}}\right) (20.4 \hbox{ V} \cdot \hbox{s}) - 3 \hbox{ V}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img173.svg"
+ ALT="$\displaystyle V_{out} = -\left({1 \over 3.807 \hbox{ s}}\right) (20.4 \hbox{ V} \cdot \hbox{s}) - 3 \hbox{ V}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = - 5.359 \hbox{ V} - 3 \hbox{ V}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img174.svg"
+ ALT="$\displaystyle V_{out} = - 5.359 \hbox{ V} - 3 \hbox{ V}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V_{out} = - 8.359 \hbox{ V}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img175.svg"
+ ALT="$\displaystyle V_{out} = - 8.359 \hbox{ V}$">
+</DIV><P></P>
+
+<P>
+If, after ramping for some amount of time, the input voltage of this integrator circuit is brought to zero, the integrating action will cease.  The circuit's output will simply hold at its last value until another non-zero input signal voltage appears.
+
+<P>
+Recall that the purpose of integral action in a PID controller is to eliminate offset between process variable and setpoint by calculating the error-time product (how far PV deviates from SP, and for how long).  This circuit will fulfills that function if the input voltage is the error signal, and the output voltage contributes to the output signal of the controller.
+
+<P>
+
+<H2><A ID="SECTION002123000000000000000">
+Full-PID circuit design</A>
+</H2>
+
+<P>
+The following schematic diagram shows a full PID controller implemented using eight operational amplifiers, designed to input and output voltage signals representing PV, SP, and Output<A ID="tex2html26"
+  HREF="footnode.html#foot1088"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">26</SPAN></SUP></A>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid96.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 76.64ex; vertical-align: -0.10ex; " SRC="img178.svg"
+ ALT="$\displaystyle \includegraphics{pid96.eps}$">
+</DIV><P></P>
+
+<P>
+It is somewhat stunning to realize that such a controller, fully capable of controlling many industrial process types, may be constructed using only two integrated circuit &ldquo;chips&rdquo; (two &ldquo;quad&rdquo; operational amplifiers) and a handful of passive electronic components.  The only significant engineering challenge in this simple circuit design is achieving slow enough time constants (in the range of minutes rather than seconds) in the integrator and differentiator functions using non-polarized capacitors<A ID="tex2html27"
+  HREF="footnode.html#foot631"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">27</SPAN></SUP></A>.
+
+<P>
+
+<P>
+This controller implements the so-called <SPAN  CLASS="textit">ideal</SPAN> PID algorithm, with the proportional (gain) value distributing to the integral and derivative terms:  <A NAME="633"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p \left(e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} \right) \hbox{\hskip 50pt \textbf{Ideal PID equation}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img179.svg"
+ ALT="$\displaystyle m = K_p \left(e + {1 \over \tau_i} \int e \&gt; dt + \tau_d {de \over dt} \right) \hbox{\hskip 50pt \textbf{Ideal PID equation}}$">
+</DIV><P></P>
+
+<P>
+We may determine this from the schematic diagram by noting that the I and D functions each receive their input signals from the output of the proportional amplifier (the one with the <SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img180.svg"
+ ALT="$R_{prop}$"></SPAN> potentiometer).  Adjusting <SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img180.svg"
+ ALT="$R_{prop}$"></SPAN> affects not only the controller's proportional gain, but also the sensitivity of <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$\tau_i$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$\tau_d$"></SPAN>.
+
+<P>
+<P>
+An actual implementation of this PID controller in printed circuit board form appears here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=4in]{pid95.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 55.94ex; vertical-align: -0.10ex; " SRC="img181.svg"
+ ALT="$\displaystyle \includegraphics[height=4in]{pid95.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+It is possible to construct an analog PID controller with fewer components.  An example is shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid78.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 26.90ex; vertical-align: -0.10ex; " SRC="img182.svg"
+ ALT="$\displaystyle \includegraphics{pid78.eps}$">
+</DIV><P></P>
+
+<P>
+As you can see, a <SPAN  CLASS="textit">single</SPAN> operational amplifier does all the work of calculating proportional, integral, <SPAN  CLASS="textit">and</SPAN> derivative responses.  The first two amplifiers do nothing but buffer the input signals and calculate error (PV <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> SP, or SP <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN> PV, depending on the direction of action).
+
+<P>
+One of the consequences of consolidating all three control terms in a single amplifier is that those control terms interact with each other.  The mathematical expression of this control action is shown here, called the <SPAN  CLASS="textit">series</SPAN> or <SPAN  CLASS="textit">interacting</SPAN> PID equation:  <A NAME="645"></A>  <A NAME="646"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+m = K_p \left[ \left({\tau_d \over \tau_i} + 1 \right) e + {1 \over \tau_i} \int e \> dt + \tau_d {de \over dt} \right] \hbox{\hskip 25pt \textbf{Series} or \textbf{Interacting PID equation}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img183.svg"
+ ALT="$\displaystyle m = K_p \left[ \left({\tau_d \over \tau_i} + 1 \right) e + {1 \ov...
+...\right] \hbox{\hskip 25pt \textbf{Series} or \textbf{Interacting PID equation}}$">
+</DIV><P></P>
+
+<P>
+Not only does a change in gain (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img13.svg"
+ ALT="$K_p$"></SPAN>) alter the relative responses of integral and derivative in the series equation (as it also does in the ideal equation), but changes in either integral or derivative time constants also have an effect on proportional response!  This is especially noticeable when the integral time constant is set to some very small value, which is typically the case on fast-responding, self-regulating processes such as liquid flow or liquid pressure control.
+
+<P>
+It should be apparent that an analog controller implementing the series equation is simpler in construction than one implementing either the parallel or ideal PID equation.  This also happens to be true for pneumatic PID controller mechanisms: the simplest analog controller designs all implement the series PID equation<A ID="tex2html28"
+  HREF="footnode.html#foot652"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">28</SPAN></SUP></A>.
+
+<P>
+
+<H2><A ID="SECTION002124000000000000000">
+Single-loop analog controllers</A>
+</H2>
+
+<P>
+One popular analog electronic controller was the Foxboro model 62H, shown in the following photographs.  Like the model 130 pneumatic controller, this electronic controller was designed to fit into a rack next to several other controllers.  Tuning parameters were adjustable by moving potentiometer knobs under a side-panel accessible by partially removing the controller from its rack: <A NAME="654"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{pid37.eps} \hskip 30pt \includegraphics[width=2.5in]{pid38.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.36ex; vertical-align: -0.10ex; " SRC="img184.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{pid37.eps} \hskip 30pt \includegraphics[width=2.5in]{pid38.eps}$">
+</DIV><P></P>
+
+<P>
+The Fisher corporation manufactured a series of analog electronic controllers called the AC<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img185.svg"
+ ALT="$^{2}$"></SPAN>, which were similar in construction to the Foxboro model 62H, but very narrow in width so that many could be fit into a compact panel space.  Here we see a pair of Fisher AC<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img185.svg"
+ ALT="$^{2}$"></SPAN> controllers mounted side-by-side in the same rack, used to control liquid level in a pulping process:  <A NAME="1091"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=3in]{pid117.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.00ex; vertical-align: -0.10ex; " SRC="img186.svg"
+ ALT="$\displaystyle \includegraphics[height=3in]{pid117.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+Like the pneumatic panel-mounted controllers preceding, and digital panel-mount controllers to follow, the tuning parameters for a panel-mounted analog electronic controller were typically accessed on the controller's side.  The controller could be slid partially out of the panel to reveal the P, I, and D adjustment knobs (as well as direct/reverse action switches and other configuration controls).
+
+<P>
+Indicators on the front of an analog electronic controller served to display the process variable (PV), setpoint (SP), and manipulated variable (MV, or output) for operator information.  Many analog electronic controllers did not have separate meter indications for PV and SP, but rather used a single meter movement to display the <SPAN  CLASS="textit">error signal</SPAN>, or difference between PV and SP.  On the Foxboro model 62H, a hand-adjustable knob provided both indication and control over SP, while a small edge-reading meter movement displayed the error.  A negative meter indication showed that the PV was below setpoint, and a positive meter indication showed that the PV was above setpoint.  
+
+<P>
+The Fisher AC<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img185.svg"
+ ALT="$^{2}$"></SPAN> analog electronic controller used the same basic technique, cleverly applied in such a way that the PV was displayed in real engineering units.  The setpoint adjustment was a large wheel, mounted so the edge faced the operator.  Along the circumference of this wheel was a scale showing the process variable range, from the LRV at one extreme of the wheel's travel to the URV at the other extreme of the wheel's travel.  The actual setpoint value was the middle of the wheel from the operator's view of the wheel edge.  A single meter movement needle traced an arc along the circumference of the wheel along this same viewable range.  If the error was zero (PV = SP), the needle would be positioned in the middle of this viewing range, pointed at the same value along the scale as the setpoint.  If the error was positive, the needle would rise up to point to a larger (higher) value on the scale, and if the error was negative the needle would point to a smaller (lower) value on the scale.  For any fixed value of PV, this error needle would therefore move in exact step with the wheel as it was rotated by the operator's hand.  Thus, a single adjustment and a single meter movement displayed both SP and PV in very clear and unambiguous form.
+
+<P>
+Taylor manufactured a line of analog panel-mounted controllers that worked much the same way, with the SP adjustment being a graduated tape reeled to and fro by the SP adjustment knob.  The middle of the viewable section of tape (as seen through a plastic window) was the setpoint value, and a single meter movement needle pointed to the PV value as a function of error.  If the error happened to be zero (PV = SP), the needle would point to the middle of this viewable section of tape, which was the SP value.  <A NAME="663"></A>
+
+<P>
+Another popular panel-mounted analog electronic controller was the Moore Syncro, which featured plug-in modules for implementing different control algorithms (different PID equations, nonlinear signal conditioning, etc.).  These plug-in function modules were a hardware precursor to the software &ldquo;function blocks&rdquo; appearing in later generations of digital controllers: a simple way of organizing controller functionality so that technicians unfamiliar with computer programming could easily configure a controller to do different types of control functions.  Later models of the Syncro featured fluorescent bargraph displays of PV and SP for easy viewing in low-light conditions.  <A NAME="664"></A>
+
+<P>
+<P>
+
+<P>
+Analog single-loop controllers are largely a thing of the past, with the exception of some low-cost or specialty applications.  An example of the former is shown here, a simple analog temperature controller small enough to fit in the palm of my hand:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid84.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 33.54ex; vertical-align: -0.10ex; " SRC="img187.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid84.eps}$">
+</DIV><P></P>
+
+<P>
+This particular controller happened to be part of a sulfur dioxide analyzer system, controlling the internal temperature of a gas regulator panel to prevent vapors in the sample stream from condensing in low spots of the tubing and regulator system.  The accuracy of such a temperature control application was not critical &ndash; if temperature was regulated to <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img188.svg"
+ ALT="$\pm$"></SPAN> 5 degrees Fahrenheit it would be more than adequate.  This is an application where an analog controller makes perfect sense: it is very compact, simple, extremely reliable, and inexpensive.  None of the features associated with digital PID controllers (programmability, networking, precision) would have any merit in this application.
+
+<P>
+
+<H2><A ID="SECTION002125000000000000000">
+Multi-loop analog control systems</A>
+</H2>
+
+<P>
+In contrast to single-loop analog controllers, <SPAN  CLASS="textit">multi-loop</SPAN> systems control dozens or even hundreds of process loops at a time.  Prior to the advent of reliable digital technology, the only electronic process control systems capable of handling the numerous loops within large industrial installations such as power generating plants, oil refineries, and chemical processing facilities were analog systems, and several manufacturers produced multi-loop analog systems just for these large-scale control applications.
+
+<P>
+One of the most technologically advanced analog electronic products manufactured for industrial control applications was the Foxboro SPEC 200 system<A ID="tex2html29"
+  HREF="footnode.html#foot668"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">29</SPAN></SUP></A>.  Although the SPEC 200 system used panel-mounted indicators, recorders, and other interface components resembling panel-mounted control systems, the actual control functions were implemented in a separate equipment rack which Foxboro called a <SPAN  CLASS="textit">nest</SPAN><A ID="tex2html30"
+  HREF="footnode.html#foot670"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">30</SPAN></SUP></A>.  Printed circuit boards plugged into each &ldquo;nest&rdquo; provided all the control functions (PID controllers, alarm units, integrators, signal selectors, etc.) necessary, with analog signal wires connecting the various functions together with panel-mounted displays and with field instruments to form a working system.  <A NAME="671"></A>  <A NAME="672"></A>
+
+<P>
+Analog field instrument signals (4-20 mA, or in some cases 10-50 mA) were all converted to a 0-10 VDC range for signal processing within the SPEC 200 nest.  Operational amplifiers (mostly the model LM301) formed the &ldquo;building blocks&rdquo; of the control functions, with a <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img188.svg"
+ ALT="$\pm$"></SPAN> 15 VDC power supply providing DC power for everything to operate.
+
+<P>
+
+<P>
+The following photographs show a model 2AX+A4 proportional-integral (P+I) controller card for a SPEC 200 system inserted into a metal frame (called a &ldquo;module&rdquo; by Foxboro).  This module was designed to fit into a slot in a SPEC 200 &ldquo;nest&rdquo; where it would reside alongside many other similar cards, each card performing its own control function:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{pid57.eps} \hskip 30pt \includegraphics[width=2.5in]{pid60.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.51ex; vertical-align: -0.10ex; " SRC="img189.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{pid57.eps} \hskip 30pt \includegraphics[width=2.5in]{pid60.eps}$">
+</DIV><P></P>
+
+<P>
+Tuning and alarm adjustments may be seen in the right-hand photograph.  This particular controller is set to a proportional band value of approximately 170%, and an integral time constant of just over 0.01 minutes per repeat.  A two-position rotary switch near the bottom of the card selected either reverse (&ldquo;Dec&rdquo;) or direct (&ldquo;Inc&rdquo;) control action.
+
+<P>
+The array of copper pins at the top of the module form the male half of a cable connector, providing connection between the control card and the front-panel instrument accessible to operations personnel.  Since the tuning controls appear on the face of this controller card (making it a &ldquo;card tuned&rdquo; controller), they were not accessible to operators but rather only to the technical personnel with access to the nest area.  Other versions of controller cards (&ldquo;control station tuned&rdquo;) had blank places where the P and I potentiometer adjustments appear on this model, with tuning adjustments provided on the panel-mounted instrument displays for easier access to operators.
+
+<P>
+
+<P>
+The set of ten screw terminals at the bottom of the module provided connection points for the input and output voltage signals.  The following list gives the general descriptions of each terminal pair, with the descriptions for this particular P + I controller written in <SPAN  CLASS="textit">italic</SPAN> type:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pid59.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 15.68ex; vertical-align: -0.10ex; " SRC="img190.svg"
+ ALT="$\displaystyle \includegraphics{pid59.eps}$">
+</DIV><P></P>
+
+<P>
+
+<UL>
+<LI>Terminals (1+) and (1<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>): Input signal #1 (<SPAN  CLASS="textit">Process variable input</SPAN>)
+</LI>
+<LI>Terminals (2+) and (2<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>): Output signal #1 (<SPAN  CLASS="textit">Manipulated variable output</SPAN>) 
+</LI>
+<LI>Terminals (3+) and (3<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>): Input #2, Output #4, or Option #1 (<SPAN  CLASS="textit">Remote setpoint</SPAN>) 
+</LI>
+<LI>Terminals (4+) and (4<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>): Input #3, Output #3, or Option #2 (<SPAN  CLASS="textit">Optional alarm</SPAN>) 
+</LI>
+<LI>Terminals (5+) and (5<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img15.svg"
+ ALT="$-$"></SPAN>): Input #4, Output #2, or Option #3 (<SPAN  CLASS="textit">Optional 24 VAC</SPAN>) 
+</LI>
+</UL>
+
+<P>
+
+<P>
+A photograph of the printed circuit board (card) removed from the metal module clearly shows the analog electronic components:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{pid58.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img191.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{pid58.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+The following photograph shows a set of functioning Foxboro SPEC 200 controller modules residing in a &ldquo;nest,&rdquo; used to control a flow loop and a pressure loop in a wood pulping process.  Both active controller modules are P + I units.  An unused PID module resides just to the left of the flow controller module:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{pid118.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 41.18ex; vertical-align: -0.10ex; " SRC="img192.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{pid118.eps}$">
+</DIV><P></P>
+
+<P>
+Foxboro engineers went to great lengths in their design process to maximize reliability of the SPEC 200 system, already an inherently reliable technology by virtue of its simple, analog nature.  As a result, the reliability of SPEC 200 control systems is the stuff of legend<A ID="tex2html31"
+  HREF="footnode.html#foot1092"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">31</SPAN></SUP></A>. 
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html329"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html331"
+  HREF="node21.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node15.html">Digital PID controllers</A>
+<B> Up:</B> <A
+ HREF="node2.html">Closed-loop control</A>
+<B> Previous:</B> <A
+ HREF="node13.html">Pneumatic PID controllers</A>
+ &nbsp; <B>  <A ID="tex2html330"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html332"
+  HREF="node21.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>
