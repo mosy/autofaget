@@ -1,0 +1,2889 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Pressure-based flowmeters</TITLE>
+<META NAME="description" CONTENT="Pressure-based flowmeters">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html207"
+  HREF="node3.html#SECTION00211000000000000000">Venturi tubes and basic principles</A>
+<LI><A ID="tex2html208"
+  HREF="node3.html#SECTION00212000000000000000">Volumetric flow calculations</A>
+<LI><A ID="tex2html209"
+  HREF="node3.html#SECTION00213000000000000000">Mass flow calculations</A>
+<LI><A ID="tex2html210"
+  HREF="node3.html#SECTION00214000000000000000">Square-root characterization</A>
+<LI><A ID="tex2html211"
+  HREF="node3.html#SECTION00215000000000000000">Orifice plates</A>
+<LI><A ID="tex2html212"
+  HREF="node3.html#SECTION00216000000000000000">Other differential producers</A>
+<LI><A ID="tex2html213"
+  HREF="node3.html#SECTION00217000000000000000">Proper installation</A>
+<LI><A ID="tex2html214"
+  HREF="node3.html#SECTION00218000000000000000">High-accuracy flow measurement</A>
+<LI><A ID="tex2html215"
+  HREF="node3.html#SECTION00219000000000000000">Equation summary</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00210000000000000000">
+Pressure-based flowmeters</A>
+</H1>
+
+<P>
+All masses require force to accelerate (we can also think of this in terms of the mass generating a reaction force as a result of being accelerated).  This is quantitatively expressed by Newton's Second Law of Motion:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow06.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 28.65ex; vertical-align: -0.10ex; " SRC="img1.svg"
+ ALT="$\displaystyle \includegraphics{flow06.eps}$">
+</DIV><P></P>
+
+<P>
+All fluids possess mass, and therefore require force to accelerate just like solid masses.  If we consider a quantity of fluid confined inside a pipe<A ID="tex2html2"
+  HREF="footnode.html#foot1284"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>, with that fluid quantity having a mass equal to its volume multiplied by its mass density (<!-- MATH
+ $m = \rho V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img2.svg"
+ ALT="$m = \rho V$"></SPAN>, where <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN> is the fluid's mass per unit volume), the force required to accelerate that fluid &ldquo;plug&rdquo; would be calculated just the same as for a solid mass:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow07.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 31.74ex; vertical-align: -0.10ex; " SRC="img4.svg"
+ ALT="$\displaystyle \includegraphics{flow07.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Since this accelerating force is applied on the cross-sectional area of the fluid plug, we may express it as a <SPAN  CLASS="textit">pressure</SPAN>, the definition of pressure being force per unit area: <A NAME="37"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F = \rho V a
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img5.svg"
+ ALT="$\displaystyle F = \rho V a$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{F \over A} = \rho {V \over A} a
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="img6.svg"
+ ALT="$\displaystyle {F \over A} = \rho {V \over A} a$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \rho {V \over A} a
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="img7.svg"
+ ALT="$\displaystyle P = \rho {V \over A} a$">
+</DIV><P></P>
+
+<P>
+Since the rules of algebra required we divide <SPAN  CLASS="textit">both</SPAN> sides of the force equation by area, it left us with a fraction of volume over area (<SPAN CLASS="MATH"><IMG STYLE="height: 2.96ex; vertical-align: -0.90ex; " SRC="img8.svg"
+ ALT="$V \over A$"></SPAN>) on the right-hand side of the equation.  This fraction has a physical meaning, since we know the volume of a cylinder divided by the area of its circular face is simply the length of that cylinder:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \rho {V \over A} a
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="img7.svg"
+ ALT="$\displaystyle P = \rho {V \over A} a$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \rho l a
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img9.svg"
+ ALT="$\displaystyle P = \rho l a$">
+</DIV><P></P>
+
+<P>
+When we apply this to the illustration of the fluid mass, it makes sense: the pressure described by the equation is actually a <SPAN  CLASS="textit">differential</SPAN><A ID="tex2html3"
+  HREF="footnode.html#foot1285"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A> pressure drop from one side of the fluid mass to the other, with the length variable (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img10.svg"
+ ALT="$l$"></SPAN>) describing the spacing between the differential pressure ports:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow08.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 21.29ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$\displaystyle \includegraphics{flow08.eps}$">
+</DIV><P></P>
+
+<P>
+This tells us we can accelerate a &ldquo;plug&rdquo; of fluid by applying a difference of pressure across its length.  The amount of pressure we apply will be in direct proportion to the density of the fluid and its rate of acceleration.  Conversely, we may measure a fluid's rate of acceleration by measuring the pressure developed across a distance over which it accelerates.  
+
+<P>
+We may easily force a fluid to accelerate by altering its natural flow path.  The difference of pressure generated by this acceleration will indirectly indicate the rate of acceleration.  Since the acceleration we see from a change in flow path is a direct function of how fast the fluid was originally moving, the acceleration (and therefore the pressure drop) indirectly indicates fluid flow rate.
+
+<P>
+
+<P>
+A very common way to cause linear acceleration in a moving fluid is to pass the fluid through a constriction in the pipe, thereby increasing its velocity (remember that the definition of acceleration is a change in velocity).  The following illustrations show several devices used to linearly accelerate moving fluids when placed in pipes, with differential pressure transmitters connected to measure the pressure drop resulting from this acceleration:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow09.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 74.90ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$\displaystyle \includegraphics{flow09.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Another way we may accelerate a fluid is to force it to turn a corner through a pipe fitting called an <SPAN  CLASS="textit">elbow</SPAN>.  This will generate radial acceleration, causing a pressure difference between the outside and inside of the elbow which may be measured by a differential pressure transmitter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow10.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 28.65ex; vertical-align: -0.10ex; " SRC="img13.svg"
+ ALT="$\displaystyle \includegraphics{flow10.eps}$">
+</DIV><P></P>
+
+<P>
+The pressure tap located on the outside of the elbow's turn registers a greater pressure than the tap located on the inside of the elbow's turn, due to the inertial force of the fluid's mass being &ldquo;flung&rdquo; to the outside of the turn as it rounds the corner.
+
+<P>
+
+<P>
+Yet another way to cause a change in fluid velocity is to force it to <SPAN  CLASS="textit">decelerate</SPAN> by bringing a portion of it to a full stop.  The pressure generated by this deceleration (called the <SPAN  CLASS="textit">stagnation pressure</SPAN>) tells us how fast it was originally flowing.  A few devices working on this principle are shown here:  <A NAME="52"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow11.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 80.71ex; vertical-align: -0.10ex; " SRC="img14.svg"
+ ALT="$\displaystyle \includegraphics{flow11.eps}$">
+</DIV><P></P>
+
+<P>
+The following subsections in this flow measurement chapter explore different primary sensing elements (PSE's) used to generate differential pressure in a moving fluid stream.  Despite their very different designs, they all operate on the same fundamental principle: causing a fluid to accelerate or decelerate by forcing a change in its flow path, and thus generating a measurable pressure difference.  The following subsection will introduce a device called a <SPAN  CLASS="textit">venturi tube</SPAN> used to measure fluid flow rates, and derive mathematical relationships between fluid pressure and flow rate starting from basic physical conservation laws.
+
+<P>
+
+<H2><A ID="SECTION00211000000000000000">
+Venturi tubes and basic principles</A>
+</H2>
+
+<P>
+The standard &ldquo;textbook example&rdquo; flow element used to create a pressure change by accelerating a fluid stream is the <SPAN  CLASS="textit">venturi tube</SPAN>: a pipe purposefully narrowed to create a region of low pressure.  As shown previously, venturi tubes are not the only structure capable of producing a flow-dependent pressure drop.  You should keep this in mind as we proceed to derive equations relating flow rate with pressure change: although the venturi tube is the canonical form, the exact same mathematical relationship applies to all flow elements generating a pressure drop by accelerating fluid, including orifice plates, flow nozzles, V-cones, segmental wedges, pipe elbows, pitot tubes, etc.
+
+<P>
+<P>
+If the fluid going through the venturi tube is a liquid under relatively low pressure, we may vividly show the pressure at different points in the tube by means of <SPAN  CLASS="textit">piezometers</SPAN><A ID="tex2html4"
+  HREF="footnode.html#foot58"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">4</SPAN></SUP></A>, which are transparent tubes allowing us to view liquid column heights.  The greater the height of liquid column in the piezometer, the greater the pressure at that point in the flowstream:  <A NAME="59"></A>  <A NAME="60"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow05.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.58ex; vertical-align: -0.10ex; " SRC="img15.svg"
+ ALT="$\displaystyle \includegraphics{flow05.eps}$">
+</DIV><P></P>
+
+<P>
+As indicated by the piezometer liquid heights, pressure at the constriction (point 2) is the least, while pressures at the wide portions of the venturi tube (points 1 and 3) are the greatest.  This is a counter-intuitive result, but it has a firm grounding in the physics of mass and energy conservation.  If we assume no energy is added (by a pump) or lost (due to friction) as fluid travels through this pipe, then the Law of Energy Conservation describes a situation where the fluid's energy must remain constant at all points in the pipe as it travels through.  If we assume no fluid joins this flowstream from another pipe, or is lost from this pipe through any leaks, then the Law of Mass Conservation describes a situation where the fluid's mass flow rate must remain constant at all points in the pipe as it travels through.  <A NAME="62"></A>  <A NAME="63"></A>
+
+<P>
+So long as fluid density remains fairly constant<A ID="tex2html5"
+  HREF="footnode.html#foot64"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">5</SPAN></SUP></A>, fluid velocity must increase as the cross-sectional area of the pipe decreases, as described by the Law of Continuity (see section <A HREF="#Law_of_Continuity"><IMG  ALT="[*]" SRC="crossref.png"></A> beginning on page <A HREF="#Law_of_Continuity"><IMG  ALT="[*]" SRC="crossref.png"></A> for more details on this concept):  <A NAME="67"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A_1 \overline{v_1} = A_2 \overline{v_2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img16.svg"
+ ALT="$\displaystyle A_1 \overline{v_1} = A_2 \overline{v_2}$">
+</DIV><P></P>
+
+<P>
+Rearranging variables in this equation to place velocities in terms of areas, we get the following result:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\> \overline{v_2} \> \over \> \overline{v_1} \>} = {A_1 \over A_2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.27ex; vertical-align: -2.04ex; " SRC="img17.svg"
+ ALT="$\displaystyle {\&gt; \overline{v_2} \&gt; \over \&gt; \overline{v_1} \&gt;} = {A_1 \over A_2}$">
+</DIV><P></P>
+
+<P>
+This equation tells us that the ratio of fluid velocity between the narrow throat (point 2) and the wide mouth (point 1) of the pipe is the same ratio as the mouth's area to the throat's area.  So, if the mouth of the pipe had an area 5 times as great as the area of the throat, then we would expect the fluid velocity in the throat to be 5 times as great as the velocity at the mouth.  Simply put, the narrow throat causes the fluid to accelerate from a lower velocity to a higher velocity.
+
+<P>
+
+<P>
+We know from our study of energy in physics that kinetic energy is proportional to the square of a mass's velocity (<!-- MATH
+ $E_k = {1 \over 2}mv^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.90ex; vertical-align: -0.90ex; " SRC="img18.svg"
+ ALT="$E_k = {1 \over 2}mv^2$"></SPAN>).  If we know the fluid molecules increase velocity as they travel through the venturi tube's throat, we may safely conclude that those molecules' kinetic energies must increase as well.  However, we also know that the total energy at any point in the fluid stream must remain constant, because no energy is added to or taken away from the stream in this simple fluid system<A ID="tex2html6"
+  HREF="footnode.html#foot74"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">6</SPAN></SUP></A>.  Therefore, if kinetic energy increases at the throat, potential energy must correspondingly decrease to keep the total amount of energy constant at any point in the fluid.
+
+<P>
+Potential energy may be manifest as height above ground, and/or as pressure in a fluid system.  Since this venturi tube is level with the ground, there cannot be a height change to account for a change in potential energy.  Therefore, there <SPAN  CLASS="textit">must</SPAN> be a change of pressure (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img19.svg"
+ ALT="$P$"></SPAN>) as the fluid travels through the venturi throat.  The Laws of Mass and Energy Conservation invariably lead us to this conclusion: fluid pressure must decrease as it travels through the narrow throat of the venturi tube<A ID="tex2html7"
+  HREF="footnode.html#foot1287"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">7</SPAN></SUP></A>.
+
+<P>
+Conservation of energy at different points in a fluid stream is neatly expressed in <SPAN  CLASS="textit">Bernoulli's Equation</SPAN> as a constant sum of elevation, pressure, and velocity &ldquo;heads&rdquo; (see section <A HREF="#Bernoulli_s_equation"><IMG  ALT="[*]" SRC="crossref.png"></A> beginning on page <A HREF="#Bernoulli_s_equation"><IMG  ALT="[*]" SRC="crossref.png"></A> for more details on this concept):  <A NAME="81"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+z_1 \rho g + {v_1^2 \rho \over 2} + P_1 = z_2 \rho g + {v_2^2 \rho \over 2} + P_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -1.69ex; " SRC="img20.svg"
+ ALT="$\displaystyle z_1 \rho g + {v_1^2 \rho \over 2} + P_1 = z_2 \rho g + {v_2^2 \rho \over 2} + P_2$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img21.svg"
+ ALT="$z$"></SPAN> = Height of fluid (from a common reference point, usually ground level)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN> = Mass density of fluid
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img22.svg"
+ ALT="$g$"></SPAN> = Acceleration of gravity
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$v$"></SPAN> = Velocity of fluid
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img19.svg"
+ ALT="$P$"></SPAN> = Pressure of fluid
+
+<P>
+<P>
+
+<P>
+We will use Bernoulli's equation to develop a precise mathematical relationship between pressure and flow rate in a venturi tube.  To simplify our task, we will hold to the following assumptions for our venturi tube system:
+
+<P>
+
+<UL>
+<LI>No energy lost or gained in the venturi tube (all energy is conserved)
+</LI>
+<LI>No mass lost or gained in the venturi tube (all mass is conserved)
+</LI>
+<LI>Fluid is incompressible
+</LI>
+<LI>Venturi tube centerline is level (no height changes to consider)
+</LI>
+</UL>
+
+<P>
+Applying the last two assumptions to Bernoulli's equation, we see that the &ldquo;elevation head&rdquo; term drops out of both sides, since <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img21.svg"
+ ALT="$z$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img22.svg"
+ ALT="$g$"></SPAN> are equal at all points in the system:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{v_1^2 \rho \over 2} + P_1 = {v_2^2 \rho \over 2} + P_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -1.69ex; " SRC="img24.svg"
+ ALT="$\displaystyle {v_1^2 \rho \over 2} + P_1 = {v_2^2 \rho \over 2} + P_2$">
+</DIV><P></P>
+
+<P>
+Now we will algebraically re-arrange this equation to show pressures at points 1 and 2 in terms of velocities at points 1 and 2:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{v_2^2 \rho \over 2} - {v_1^2 \rho \over 2} = P_1 - P_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.18ex; vertical-align: -1.69ex; " SRC="img25.svg"
+ ALT="$\displaystyle {v_2^2 \rho \over 2} - {v_1^2 \rho \over 2} = P_1 - P_2$">
+</DIV><P></P>
+
+<P>
+Factoring <!-- MATH
+ $\rho \over 2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.67ex; vertical-align: -0.90ex; " SRC="img26.svg"
+ ALT="$\rho \over 2$"></SPAN> out of the velocity head terms:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\rho \over 2} (v_2^2 - v_1^2) = P_1 - P_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.34ex; vertical-align: -1.69ex; " SRC="img27.svg"
+ ALT="$\displaystyle {\rho \over 2} (v_2^2 - v_1^2) = P_1 - P_2$">
+</DIV><P></P>
+
+<P>
+The Continuity equation shows us the relationship between velocities <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img28.svg"
+ ALT="$v_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img29.svg"
+ ALT="$v_2$"></SPAN> and the areas at those points in the venturi tube, assuming constant density (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A_1 v_1 = A_2 v_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img30.svg"
+ ALT="$\displaystyle A_1 v_1 = A_2 v_2$">
+</DIV><P></P>
+
+<P>
+Specifically, we need to re-arrange this equation to define <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img28.svg"
+ ALT="$v_1$"></SPAN> in terms of <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img29.svg"
+ ALT="$v_2$"></SPAN> so we may substitute into Bernoulli's equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v_1 = \left({A_2 \over A_1}\right) v_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img31.svg"
+ ALT="$\displaystyle v_1 = \left({A_2 \over A_1}\right) v_2$">
+</DIV><P></P>
+
+<P>
+Performing the algebraic substitution:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\rho \over 2} (v_2^2 - \left[\left({A_2 \over A_1}\right) v_2\right]^2) = P_1 - P_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 6.13ex; vertical-align: -2.30ex; " SRC="img32.svg"
+ ALT="$\displaystyle {\rho \over 2} (v_2^2 - \left[\left({A_2 \over A_1}\right) v_2\right]^2) = P_1 - P_2$">
+</DIV><P></P>
+
+<P>
+Distributing the &ldquo;square&rdquo; power:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\rho \over 2} (v_2^2 - \left({A_2 \over A_1}\right)^2 v_2^2) = P_1 - P_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 6.13ex; vertical-align: -2.30ex; " SRC="img33.svg"
+ ALT="$\displaystyle {\rho \over 2} (v_2^2 - \left({A_2 \over A_1}\right)^2 v_2^2) = P_1 - P_2$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Factoring <SPAN CLASS="MATH"><IMG STYLE="height: 2.60ex; vertical-align: -0.67ex; " SRC="img34.svg"
+ ALT="$v_2^2$"></SPAN> out of the outer parentheses set:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\rho v_2^2 \over 2} (1 - \left({A_2 \over A_1}\right)^2) = P_1 - P_2
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 6.13ex; vertical-align: -2.30ex; " SRC="img35.svg"
+ ALT="$\displaystyle {\rho v_2^2 \over 2} (1 - \left({A_2 \over A_1}\right)^2) = P_1 - P_2$">
+</DIV><P></P>
+
+<P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img29.svg"
+ ALT="$v_2$"></SPAN>, step by step:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\rho v_2^2 \over 2} = \left({1 \over {1 - \left({A_2 \over A_1}\right)^2}}\right) (P_1 - P_2)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.93ex; vertical-align: -4.41ex; " SRC="img36.svg"
+ ALT="$\displaystyle {\rho v_2^2 \over 2} = \left({1 \over {1 - \left({A_2 \over A_1}\right)^2}}\right) (P_1 - P_2)$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\rho v_2^2 = 2 \left({1 \over {1 - \left({A_2 \over A_1}\right)^2}}\right) (P_1 - P_2)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.93ex; vertical-align: -4.41ex; " SRC="img37.svg"
+ ALT="$\displaystyle \rho v_2^2 = 2 \left({1 \over {1 - \left({A_2 \over A_1}\right)^2}}\right) (P_1 - P_2)$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v_2^2 = 2 \left({1 \over {1 - \left({A_2 \over A_1}\right)^2}}\right) \left({{P_1 - P_2} \over \rho}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.93ex; vertical-align: -4.41ex; " SRC="img38.svg"
+ ALT="$\displaystyle v_2^2 = 2 \left({1 \over {1 - \left({A_2 \over A_1}\right)^2}}\right) \left({{P_1 - P_2} \over \rho}\right)$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v_2 = \sqrt{2} {1 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.92ex; vertical-align: -5.51ex; " SRC="img39.svg"
+ ALT="$\displaystyle v_2 = \sqrt{2} {1 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+The result shows us how to solve for fluid velocity at the venturi throat (<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img29.svg"
+ ALT="$v_2$"></SPAN>) based on a difference of pressure measured between the mouth and the throat (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img40.svg"
+ ALT="$P_1 - P_2$"></SPAN>).  We are only one step away from a volumetric flow equation here, and that is to convert velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$v$"></SPAN>) into flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>).  Velocity is expressed in units of length per time (feet or meters per second or minute), while volumetric flow is expressed in units of volume per time (cubic feet or cubic meters per second or minute).  Simply multiplying throat velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img29.svg"
+ ALT="$v_2$"></SPAN>) by throat area (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img42.svg"
+ ALT="$A_2$"></SPAN>) will give us the result we seek:
+
+<P>
+<P>
+General flow/area/velocity relationship:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = Av
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img43.svg"
+ ALT="$\displaystyle Q = Av$">
+</DIV><P></P>
+
+<P>
+Equation for throat velocity:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v_2 = \sqrt{2} {1 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.92ex; vertical-align: -5.51ex; " SRC="img39.svg"
+ ALT="$\displaystyle v_2 = \sqrt{2} {1 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+Multiplying both sides of the equation by throat area:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A_2 v_2 = \sqrt{2} A_2 {1 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.92ex; vertical-align: -5.51ex; " SRC="img44.svg"
+ ALT="$\displaystyle A_2 v_2 = \sqrt{2} A_2 {1 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Now we have an equation solving for volumetric flow (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>) in terms of pressures and areas:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = \sqrt{2} A_2 {1 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.92ex; vertical-align: -5.51ex; " SRC="img45.svg"
+ ALT="$\displaystyle Q = \sqrt{2} A_2 {1 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+<A ID="Ideal_flow_equation"></A>
+<P>
+Please note how many constants we have in this equation.  For any given venturi tube, the mouth and throat areas (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img46.svg"
+ ALT="$A_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img42.svg"
+ ALT="$A_2$"></SPAN>) will be fixed.  This means nearly half the variables found within this rather long equation are actually constant for any given venturi tube, and therefore do not change with pressure, density, or flow rate.  Knowing this, we may re-write the equation as a simple proportionality:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q \propto \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img47.svg"
+ ALT="$\displaystyle Q \propto \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+To make this a more precise mathematical statement, we may insert a <SPAN  CLASS="textit">constant of proportionality</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN>) and once more have a true equation to work with:  <A NAME="118"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img49.svg"
+ ALT="$\displaystyle Q = k \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00212000000000000000">
+Volumetric flow calculations</A>
+</H2>
+
+<P>
+As we saw in the previous subsection, we may derive a relatively simple equation for predicting flow through a fluid-accelerating element given the pressure drop generated by that element and the density of the fluid flowing through it:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img49.svg"
+ ALT="$\displaystyle Q = k \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+This equation is a simplified version of the one derived from the physical construction of a venturi tube:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = \sqrt{2} A_2 {1 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.92ex; vertical-align: -5.51ex; " SRC="img45.svg"
+ ALT="$\displaystyle Q = \sqrt{2} A_2 {1 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+As you can see, the constant of proportionality (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN>) shown in the simpler equation is nothing more than a condensation of the first half of the longer equation: <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> represents the geometry of the venturi tube.  If we define <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> by the mouth and throat areas (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img46.svg"
+ ALT="$A_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img42.svg"
+ ALT="$A_2$"></SPAN>) of any particular venturi tube, we must be very careful to express the pressures and densities in compatible units of measurement.  For example, with <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> strictly defined by flow element geometry (tube areas measured in square <SPAN  CLASS="textit">feet</SPAN>), the calculated flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>) must be in units of cubic <SPAN  CLASS="textit">feet</SPAN> per second, the pressure values <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img50.svg"
+ ALT="$P_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$P_2$"></SPAN> must be in units of pounds per square <SPAN  CLASS="textit">foot</SPAN>, and mass density must be in units of <SPAN  CLASS="textit">slugs</SPAN> per cubic <SPAN  CLASS="textit">foot</SPAN>.  We cannot arbitrarily choose different units of measurement for these variables, because the units must &ldquo;agree&rdquo; with one another.  If we wish to use more convenient units of measurement such as inches of water column for pressure and specific gravity (unitless) for density, the original (longer) equation simply will not work.
+
+<P>
+However, if we happen to know the differential pressure produced by any particular flow element tube with any particular fluid density at a specified flow rate (real-life conditions), we may <SPAN  CLASS="textit">calculate</SPAN> a value for <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> in the short equation that makes all those measurements &ldquo;agree&rdquo; with one another.  In other words, we may use the constant of proportionality (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN>) as a <SPAN  CLASS="textit">unit-of-measurement correction factor</SPAN> as well as a definition of element geometry.  This is a useful property of all proportionalities: simply insert values (expressed in any unit of measurement) determined by physical experiment and solve for the proportionality constant's value to satisfy the expression as an equation.  If we do this, the value we arrive at for <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> will automatically compensate for whatever units of measurement we arbitrarily choose for pressure and density.  
+
+<P>
+
+<P>
+For example, if we know a particular orifice plate develops 45 inches of water column differential pressure at a flow rate of 180 gallons per minute of water (specific gravity = 1), we may insert these values into the equation and solve for <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img49.svg"
+ ALT="$\displaystyle Q = k \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+180 = k \sqrt{{45} \over 1}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.84ex; vertical-align: -1.93ex; " SRC="img52.svg"
+ ALT="$\displaystyle 180 = k \sqrt{{45} \over 1}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+k = {180 \over \sqrt{45 \over 1}} = 26.83
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.25ex; vertical-align: -4.11ex; " SRC="img53.svg"
+ ALT="$\displaystyle k = {180 \over \sqrt{45 \over 1}} = 26.83$">
+</DIV><P></P>
+
+<P>
+Now we possess a value for <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> (26.83) that yields a flow rate in units of &ldquo;gallons per minute&rdquo; given differential pressure in units of &ldquo;inches of water column&rdquo; and density expressed as a specific gravity for this particular orifice plate.  From the known fact of all accelerating flow elements' behavior (flow rate proportional to the square root of pressure divided by density) and from a set of values experimentally determined for this particular orifice plate, we now have an equation useful for calculating flow rate given any set of pressure and density values we may happen to encounter with this particular orifice plate:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left[\hbox{gal} \over \hbox{min}\right] = 26.83 \sqrt{\left[\hbox{"W.C.}\right] \over \hbox{Specific gravity}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.73ex; " SRC="img54.svg"
+ ALT="$\displaystyle \left[\hbox{gal} \over \hbox{min}\right] = 26.83 \sqrt{\left[\hbox{''W.C.}\right] \over \hbox{Specific gravity}}$">
+</DIV><P></P>
+
+<P>
+This <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> value lets us predict flow for any given pressure difference &ndash; and vice-versa &ndash; for this particular orifice plate.  For example, if we wished to know the water flow rate corresponding to a pressure difference of 60 inches water column, we could use this equation to calculate a flow rate of 207.8 gallons per minute:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 26.83 \sqrt{60 \over 1}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.84ex; vertical-align: -1.93ex; " SRC="img55.svg"
+ ALT="$\displaystyle Q = 26.83 \sqrt{60 \over 1}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 207.8 \hbox{ GPM}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img56.svg"
+ ALT="$\displaystyle Q = 207.8 \hbox{ GPM}$">
+</DIV><P></P>
+
+<P>
+As another example, a measured differential pressure of 110 inches water column across this orifice plate generated by a flow of gasoline (specific gravity = 0.657) would correspond to a gasoline flow rate of 347 gallons per minute:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 26.83 \sqrt{110 \over 0.657}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.84ex; vertical-align: -1.93ex; " SRC="img57.svg"
+ ALT="$\displaystyle Q = 26.83 \sqrt{110 \over 0.657}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 347 \hbox{ GPM}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img58.svg"
+ ALT="$\displaystyle Q = 347 \hbox{ GPM}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Suppose, though, we wished to have an equation for calculating the flow rate through this same orifice plate given pressure and density data in different units (say, kPa instead of inches water column, and kilograms per cubic meter instead of specific gravity).  In order to do this, we would need to re-calculate the constant of proportionality (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN>) to accommodate those new units of measurement.  To do this, all we would need is a single set of experimental data for the orifice plate relating flow in GPM, pressure in kPa, and density in kg/m<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img59.svg"
+ ALT="$^{3}$"></SPAN>.
+
+<P>
+Applying this to our original data where a water flow rate of 180 GPM resulted in a pressure drop of 45 inches water column, we could convert the pressure drop of 45 "W.C. into 11.21 kPa and express the density as 1000 kg/m<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img59.svg"
+ ALT="$^{3}$"></SPAN> to solve for a new value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img49.svg"
+ ALT="$\displaystyle Q = k \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+180 = k \sqrt{{11.21} \over 1000}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.84ex; vertical-align: -1.93ex; " SRC="img60.svg"
+ ALT="$\displaystyle 180 = k \sqrt{{11.21} \over 1000}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+k = {180 \over \sqrt{11.21 \over 1000}} = 1700
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.25ex; vertical-align: -4.11ex; " SRC="img61.svg"
+ ALT="$\displaystyle k = {180 \over \sqrt{11.21 \over 1000}} = 1700$">
+</DIV><P></P>
+
+<P>
+Nothing about the orifice plate's geometry has changed from before, only the units of measurement we have chosen to work with.  Now we possess a value for <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> (1700) for the same orifice plate yielding a flow rate in units of &ldquo;gallons per minute&rdquo; given differential pressure in units of &ldquo;kilopascals&rdquo; and density in units of &ldquo;kilograms per cubic meter.&rdquo;  
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left[\hbox{gal} \over \hbox{min}\right] = 1700 \sqrt{\left[\hbox{kPa}\right] \over \hbox{kg/m}^3}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.93ex; " SRC="img62.svg"
+ ALT="$\displaystyle \left[\hbox{gal} \over \hbox{min}\right] = 1700 \sqrt{\left[\hbox{kPa}\right] \over \hbox{kg/m}^3}$">
+</DIV><P></P>
+
+<P>
+If we were to be given a pressure drop in kPa and a fluid density in kg/m<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img59.svg"
+ ALT="$^{3}$"></SPAN> for this orifice plate, we could calculate the corresponding flow rate (in GPM) with our new value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> (1700) just as easily as we could with the old value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> (26.83) given pressure in "W.C. and specific gravity.
+
+<P>
+
+<H2><A ID="SECTION00213000000000000000">
+Mass flow calculations</A>
+</H2>
+
+<P>
+Measurements of <SPAN  CLASS="textit">mass</SPAN> flow are preferred over measurements of <SPAN  CLASS="textit">volumetric</SPAN> flow in process applications where mass balance (monitoring the rates of mass entry and exit for a process) is important.  Whereas volumetric flow measurements express the fluid flow rate in such terms as <SPAN  CLASS="textit">gallons per minute</SPAN> or <SPAN  CLASS="textit">cubic meters per second</SPAN>, mass flow measurements always express fluid flow rate in terms of actual mass units over time, such <SPAN  CLASS="textit">pounds (mass) per second</SPAN> or <SPAN  CLASS="textit">kilograms per minute</SPAN>.  Applications for mass flow measurement include custody transfer (where a fluid product is bought or sold by its mass), chemical reaction processes (where the mass flow rates of reactants must be maintained in precise proportion in order for the desired chemical reactions to occur), and steam boiler control systems (where the out-flow of vaporous steam must be balanced by an equivalent in-flow of liquid water to the boiler &ndash; here, volumetric comparisons of steam and water flow would be useless because one cubic foot of steam is certainly not the same number of H<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.45ex; " SRC="img63.svg"
+ ALT="$_{2}$"></SPAN>O molecules as one cubic foot of water).  <A NAME="161"></A>
+
+<P>
+<P>
+If we wish to calculate <SPAN  CLASS="textit">mass</SPAN> flow instead of volumetric flow, the equation does not change much.  The relationship between volume (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img64.svg"
+ ALT="$V$"></SPAN>) and mass (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img65.svg"
+ ALT="$m$"></SPAN>) for a sample of fluid is its mass density (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\rho = {m \over V}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.34ex; vertical-align: -1.69ex; " SRC="img66.svg"
+ ALT="$\displaystyle \rho = {m \over V}$">
+</DIV><P></P>
+
+<P>
+Similarly, the relationship between a volumetric <SPAN  CLASS="textit">flow rate</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>) and a mass <SPAN  CLASS="textit">flow rate</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img67.svg"
+ ALT="$W$"></SPAN>) is also the fluid's mass density (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\rho = {W \over Q}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.38ex; vertical-align: -2.14ex; " SRC="img68.svg"
+ ALT="$\displaystyle \rho = {W \over Q}$">
+</DIV><P></P>
+
+<P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img67.svg"
+ ALT="$W$"></SPAN> in this equation leads us to a product of volumetric flow rate and mass density:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = \rho Q
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img69.svg"
+ ALT="$\displaystyle W = \rho Q$">
+</DIV><P></P>
+
+<P>
+A quick dimensional analysis check using common metric units confirms this fact.  A mass flow rate in kilograms per second will be obtained by multiplying a mass density in kilograms per cubic meter by a volumetric flow rate in cubic meters per second:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left[\hbox{kg} \over \hbox{s}\right] = \left[{\hbox{kg} \over \hbox{m}^3}\right] \left[{\hbox{m}^3 \over \hbox{s} }\right]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.79ex; vertical-align: -2.30ex; " SRC="img70.svg"
+ ALT="$\displaystyle \left[\hbox{kg} \over \hbox{s}\right] = \left[{\hbox{kg} \over \hbox{m}^3}\right] \left[{\hbox{m}^3 \over \hbox{s} }\right]$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Therefore, all we have to do to turn our general volumetric flow equation into a mass flow equation is multiply both sides by fluid density (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img49.svg"
+ ALT="$\displaystyle Q = k \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\rho Q = k \rho \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img71.svg"
+ ALT="$\displaystyle \rho Q = k \rho \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = k \rho \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img72.svg"
+ ALT="$\displaystyle W = k \rho \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+It is generally considered &ldquo;inelegant&rdquo; to show the same variable more than once in an equation if it is not necessary, so let's try to consolidate the two densities (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN>) using algebra.  First, we may write <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN> as the product of two square-roots:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = k \sqrt{\rho} \sqrt{\rho} \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img73.svg"
+ ALT="$\displaystyle W = k \sqrt{\rho} \sqrt{\rho} \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+Next, we will break up the last radical into a quotient of two separate square roots:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = k \sqrt{\rho} \sqrt{\rho} {\sqrt{P_1 - P_2} \over \sqrt{\rho}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 6.10ex; vertical-align: -2.47ex; " SRC="img74.svg"
+ ALT="$\displaystyle W = k \sqrt{\rho} \sqrt{\rho} {\sqrt{P_1 - P_2} \over \sqrt{\rho}}$">
+</DIV><P></P>
+
+<P>
+Now we see how one of the square-rooted <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN> terms cancels out the one in the denominator of the fraction:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = k \sqrt{\rho} \sqrt{P_1 - P_2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 3.18ex; vertical-align: -0.77ex; " SRC="img75.svg"
+ ALT="$\displaystyle W = k \sqrt{\rho} \sqrt{P_1 - P_2}$">
+</DIV><P></P>
+
+<P>
+It is also considered &ldquo;inelegant&rdquo; to have multiple radicands in an equation where one will suffice, so we will re-write our equation for esthetic improvement<A ID="tex2html8"
+  HREF="footnode.html#foot1320"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">8</SPAN></SUP></A>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = k \sqrt{\rho(P_1 - P_2)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 3.06ex; vertical-align: -0.69ex; " SRC="img77.svg"
+ ALT="$\displaystyle W = k \sqrt{\rho(P_1 - P_2)}$">
+</DIV><P></P>
+
+<P>
+As with the volumetric flow equation, all we need in order to arrive at a suitable <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> value for any particular flow element is a set of values taken from that real element in service, expressed in whatever units of measurement we desire.  
+
+<P>
+
+<P>
+For example, if we had a venturi tube generating a differential pressure of 2.30 kilopascals (kPa) at a mass flow rate of 500 kilograms per minute of naphtha (a petroleum product having a density of 0.665 kilograms per liter), we could solve for the <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> value of this venturi tube as such:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = k \sqrt{\rho(P_1 - P_2)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 3.06ex; vertical-align: -0.69ex; " SRC="img77.svg"
+ ALT="$\displaystyle W = k \sqrt{\rho(P_1 - P_2)}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+500 = k \sqrt{(0.665)(2.3)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 3.06ex; vertical-align: -0.69ex; " SRC="img78.svg"
+ ALT="$\displaystyle 500 = k \sqrt{(0.665)(2.3)}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+k = {500 \over \sqrt{(0.665)(2.3)}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.86ex; vertical-align: -2.72ex; " SRC="img79.svg"
+ ALT="$\displaystyle k = {500 \over \sqrt{(0.665)(2.3)}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+k = 404.3
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img80.svg"
+ ALT="$\displaystyle k = 404.3$">
+</DIV><P></P>
+
+<P>
+Now that we know a value of 404.3 for <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> will yield kilograms per minute of liquid flow through this venturi tube given pressure in kPa and density in kilograms per liter, we may readily predict the mass flow rate through this tube for any other pressure drop and fluid density we might happen to encounter.  The value of 404.3 for <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> relates the disparate units of measurement for us: 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left[\hbox{kg} \over \hbox{min}\right] = 404.3 \sqrt{\left[\hbox{kg} \over \hbox{l}\right] \left[\hbox{kPa}\right]}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.78ex; " SRC="img81.svg"
+ ALT="$\displaystyle \left[\hbox{kg} \over \hbox{min}\right] = 404.3 \sqrt{\left[\hbox{kg} \over \hbox{l}\right] \left[\hbox{kPa}\right]}$">
+</DIV><P></P>
+
+<P>
+As with volumetric flow calculations, the calculated value for <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> neatly accounts for any set of measurement units we may arbitrarily choose.  The key is first knowing the proportional relationship between flow rate, pressure drop, and density.  Once we combine that proportionality with a specific set of data experimentally gathered from a particular flow element, we have a true equation properly relating all the variables together in our chosen units of measurement. 
+
+<P>
+If we happened to measure 6.1 kPa of differential pressure across this same venturi tube as it flowed sea water (density = 1.03 kilograms per liter), we could calculate the mass flow rate quite easily using the same equation (with the <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor of 404.3):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = 404.3 \sqrt{(1.03)(6.1)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 3.06ex; vertical-align: -0.69ex; " SRC="img82.svg"
+ ALT="$\displaystyle W = 404.3 \sqrt{(1.03)(6.1)}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = 1013.4 \> {\hbox{kg} \over \hbox{min}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img83.svg"
+ ALT="$\displaystyle W = 1013.4 \&gt; {\hbox{kg} \over \hbox{min}}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00214000000000000000">
+Square-root characterization</A>
+</H2>
+
+<P>
+It should be apparent by now that the relationship between flow rate (whether it be volumetric or mass) and differential pressure for any fluid-accelerating flow element is non-linear: a doubling of flow rate will <SPAN  CLASS="textit">not</SPAN> result in a doubling of differential pressure.  Rather, a doubling of flow rate will result in a <SPAN  CLASS="textit">quadrupling</SPAN> of differential pressure.  Likewise, a tripling of flow rate results in <SPAN  CLASS="textit">nine times</SPAN> as much differential pressure developed by the fluid-accelerating flow element.
+
+<P>
+When plotted on a graph, the relationship between flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>) and differential pressure (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img84.svg"
+ ALT="$\Delta P$"></SPAN>) is quadratic, like one-half of a parabola.  Differential pressure developed by a venturi, orifice plate, pitot tube, or any other acceleration-based flow element is proportional to the <SPAN  CLASS="textit">square</SPAN> of the flow rate:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{inverse_024.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 21.87ex; vertical-align: -0.10ex; " SRC="img85.svg"
+ ALT="$\displaystyle \includegraphics{inverse_024.eps}$">
+</DIV><P></P>
+
+<P>
+An unfortunate consequence of this quadratic relationship is that a pressure-sensing instrument connected to such a flow element will <SPAN  CLASS="textit">not</SPAN> directly sense flow rate.  Instead, the pressure instrument will be sensing what is essentially the square of the flow rate.  The instrument may register correctly at the 0% and 100% range points if correctly calibrated for the flow element it connects to, but it will fail to register linearly in between.  Any indicator, recorder, or controller connected to the pressure-sensing instrument will likewise register incorrectly at any point between 0% and 100% of range, because the pressure signal is not a direct representation of flow rate.
+
+<P>
+In order that we may have indicators, recorders, and controllers that actually do register linearly with flow rate, we must mathematically &ldquo;condition&rdquo; or &ldquo;characterize&rdquo; the pressure signal sensed by the differential pressure instrument.  Since the mathematical function inherent to the flow element is quadratic (square), the proper conditioning for the signal must be the inverse of that: <SPAN  CLASS="textit">square root</SPAN>.  Just as taking the square-root of the square of a number yields the original number<A ID="tex2html9"
+  HREF="footnode.html#foot208"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">9</SPAN></SUP></A>, taking the square-root of the differential pressure signal &ndash; which is itself a function of flow squared &ndash; yields a signal directly representing flow.
+
+<P>
+
+<P>
+The traditional means of implementing the necessary signal characterization was to install a &ldquo;square root&rdquo; function relay between the transmitter and the flow indicator, as shown in the following diagram: <A NAME="209"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{inverse_005.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 53.23ex; vertical-align: -0.10ex; " SRC="img86.svg"
+ ALT="$\displaystyle \includegraphics{inverse_005.eps}$">
+</DIV><P></P>
+
+<P>
+The modern solution to this problem is to incorporate square-root signal characterization either inside the transmitter or inside the receiving instrument (e.g. indicator, recorder, or controller).  Either way, the square-root function must be implemented <SPAN  CLASS="textit">somewhere</SPAN><A ID="tex2html10"
+  HREF="footnode.html#foot1324"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">10</SPAN></SUP></A> in the loop in order that flow may be accurately measured throughout the operating range.
+
+<P>
+
+<P>
+In the days of pneumatic instrumentation, this square-root function was performed in a separate device called a <SPAN  CLASS="textit">square root extractor</SPAN>.  The Foxboro model 557 (left) and Moore Products model 65 (right) pneumatic square root extractors are classic examples of this technology<A ID="tex2html11"
+  HREF="footnode.html#foot215"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">11</SPAN></SUP></A>:  <A NAME="216"></A> <A NAME="217"></A>  <A NAME="218"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=2.5in]{square_root.eps} \hskip 20pt \includegraphics[height=2.5in]{square_root2.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 35.03ex; vertical-align: -0.10ex; " SRC="img87.svg"
+ ALT="$\displaystyle \includegraphics[height=2.5in]{square_root.eps} \hskip 20pt \includegraphics[height=2.5in]{square_root2.eps}$">
+</DIV><P></P>
+
+<P>
+Pneumatic square root extraction relays approximated the square-root function by means of triangulated force or motion.  In essence, they were <SPAN  CLASS="textit">trigonometric</SPAN> function relays, not square-root relays per se.  However, for small angular motions, certain trigonometric functions were close enough to a square-root function that the relays were able to serve their purpose in characterizing the output signal of a pressure sensor to yield a signal representing flow rate.
+
+<P>
+
+<P>
+The following table shows the ideal response of a pneumatic square root relay:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Input signal} & \textbf{Input} \% & \textbf{Output} \% & \textbf{Output signal} \cr
+\noalign{\hrule }
+3 PSI & 0\% & 0\% & 3 PSI \cr
+\noalign{\hrule }
+4 PSI & 8.33\% & 28.87\% & 6.464 PSI \cr
+\noalign{\hrule }
+5 PSI & 16.67\% & 40.82\% & 7.899 PSI \cr
+\noalign{\hrule }
+6 PSI & 25\% & 50\% & 9 PSI \cr
+\noalign{\hrule }
+7 PSI & 33.33\% & 57.74\% & 9.928 PSI \cr
+\noalign{\hrule }
+8 PSI & 41.67\% & 64.55\% & 10.75 PSI \cr
+\noalign{\hrule }
+9 PSI & 50\% & 70.71\% & 11.49 PSI \cr
+\noalign{\hrule }
+10 PSI & 58.33\% & 76.38\% & 12.17 PSI \cr
+\noalign{\hrule }
+11 PSI & 66.67\% & 81.65\% & 12.80 PSI \cr
+\noalign{\hrule }
+12 PSI & 75\% & 86.60\% & 13.39 PSI \cr
+\noalign{\hrule }
+13 PSI & 83.33\% & 91.29\% & 13.95 PSI \cr
+\noalign{\hrule }
+14 PSI & 91.67\% & 95.74\% & 14.49 PSI \cr
+\noalign{\hrule }
+15 PSI & 100\% & 100\% & 15 PSI \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 40.49ex; vertical-align: -0.10ex; " SRC="img88.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+As you can see from the table, the square-root relationship is most evident in comparing the input and output <SPAN  CLASS="textit">percentage</SPAN> values.  For example, at an input signal pressure of 6 PSI (25%), the output signal percentage will be the square root of 25%, which is 50% (<!-- MATH
+ $0.5 = \sqrt{0.25}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.60ex; vertical-align: -0.41ex; " SRC="img89.svg"
+ ALT="$0.5 = \sqrt{0.25}$"></SPAN>) or 9 PSI as a pneumatic signal.  At an input signal pressure of 10 PSI (58.33%), the output signal percentage will be 76.38%, because <!-- MATH
+ $0.7638 = \sqrt{0.5833}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.60ex; vertical-align: -0.41ex; " SRC="img90.svg"
+ ALT="$0.7638 = \sqrt{0.5833}$"></SPAN>, yielding an output signal pressure of 12.17 PSI.
+
+<P>
+
+<P>
+When graphed, the function of a square-root extractor is precisely opposite (inverted) of the quadratic function of a flow-sensing element such as an orifice plate, venturi, or pitot tube:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{inverse_025.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 25.16ex; vertical-align: -0.10ex; " SRC="img91.svg"
+ ALT="$\displaystyle \includegraphics{inverse_025.eps}$">
+</DIV><P></P>
+
+<P>
+When cascaded &ndash; the square-root function placed immediately after the flow element's &ldquo;square&rdquo; function &ndash; the result is an output signal that tracks linearly with flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>).  An instrument connected to the square root relay's signal will therefore register flow rate as it should.
+
+<P>
+<P>
+
+<P>
+Although analog electronic square-root relays have been built and used in industry for characterizing the output of 4-20 mA electronic transmitters, a far more common implementation of electronic square-root characterization occurs in DP transmitters designed with the square-root function built in.  This way, no external relay device is necessary to characterize the DP transmitter's signal into a flow rate signal:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{inverse_023.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 56.13ex; vertical-align: -0.10ex; " SRC="img92.svg"
+ ALT="$\displaystyle \includegraphics{inverse_023.eps}$">
+</DIV><P></P>
+
+<P>
+Using a characterized DP transmitter, any 4-20 mA sensing instrument connected to the transmitter's output wires will directly interpret the signal as flow rate rather than as pressure.  A calibration table for such a DP transmitter (with an input range of 0 to 150 inches water column) is shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+$\Delta P$ & \textbf{Input} \% & \textbf{Output} \% = $\sqrt{\textbf{Input \%}}$ & \textbf{Output signal} \cr
+\noalign{\hrule }
+0 "W.C. & 0\% & 0\% & 4 mA \cr
+\noalign{\hrule }
+37.5 "W.C. & 25\% & 50\% & 12 mA \cr
+\noalign{\hrule }
+75 "W.C. & 50\% & 70.71\% & 15.31 mA \cr
+\noalign{\hrule }
+112.5 "W.C. & 75\% & 86.60\% & 17.86 mA \cr
+\noalign{\hrule }
+150 "W.C. & 100\% & 100\% & 20 mA \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 17.78ex; vertical-align: -0.10ex; " SRC="img93.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+Once again, we see how the square-root relationship is most evident in comparing the input and output <SPAN  CLASS="textit">percentages</SPAN>.  Note how the percentages in this table precisely match the percentages in the pneumatic relay table: 0% input gives 0% output; 25% input gives 50% output, 50% input gives 70.71% output, etc.
+
+<P>
+<P>
+
+<P>
+An ingenious solution to the problem of square-root characterization, commonly seen in pneumatic flow-measurement systems where the DP transmitter lacks square-root characterization, is to use an indicating device with a square-root indicating scale.  For example, the following photograph shows a 3-15 PSI &ldquo;receiver gauge&rdquo; designed to directly sense the output of a pneumatic DP transmitter:  <A NAME="258"></A>  <A NAME="259"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{inverse_022.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 53.93ex; vertical-align: -0.10ex; " SRC="img94.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{inverse_022.eps}$">
+</DIV><P></P>
+
+<P>
+Note how the gauge mechanism responds directly and linearly to a 3-15 PSI input signal range (note the &ldquo;3 PSI&rdquo; and &ldquo;15 PSI&rdquo; labels in small print at the extremes of the scale, and the linearly-spaced marks around the outside of the scale arc representing 1 PSI each), but how the flow markings (0 through 10 on the inside of the scale arc) are spaced in a non-linear fashion.
+
+<P>
+
+<P>
+An electronic variation on this theme is to draw a square-root scale on the face of a meter movement driven by the 4-20 mA output signal of an electronic DP transmitter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{inverse_026.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 45.01ex; vertical-align: -0.10ex; " SRC="img95.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{inverse_026.eps}$">
+</DIV><P></P>
+
+<P>
+As with the square-root receiver gauge, the meter movement's response to the transmitter signal is linear.  Note the linear scale (drawn in black text labeled &ldquo;LINEAR&rdquo;) on the bottom and the corresponding square-root scale (in green text labeled &ldquo;FLOW&rdquo;) on the top.  This makes it possible for a human operator to read the scale in terms of (characterized) flow units.  Instead of using complicated mechanisms or circuitry to characterize the transmitter's signal, a non-linear scale &ldquo;performs the math&rdquo; necessary to interpret flow.
+
+<P>
+A major disadvantage to the use of these non-linear indicator scales is that the transmitter signal itself remains un-characterized.  Any other instrument receiving this un-characterized signal will either require its own square-root characterization or simply not interpret the signal in terms of flow at all.  An un-characterized flow signal input to a process controller can cause loop instability at high flow rates, where small changes in actual flow rate result in huge changes in differential pressure sensed by the transmitter.  A fair number of flow control loops operating without characterization have been installed in industrial applications (usually with square-root scales drawn on the face of the indicators, and square-root paper installed in chart recorders), but these loops are notorious for achieving good flow control at only one setpoint value.  If the operator raises or lowers the setpoint value, the &ldquo;gain&rdquo; of the control loop changes thanks to the nonlinearities of the flow element, resulting in either under-responsive or over-responsive action from the controller.
+
+<P>
+<P>
+
+<P>
+Despite the limited practicality of non-linear indicating scales, they hold significant value as teaching tools.  Closely examine the scales of both the receiver gauge and the 4-20 mA indicating meter, comparing the linear and square-root values at common points on each scale.  A couple of examples are highlighted on the electric meter's scale:  <A NAME="262"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{inverse_027.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 36.32ex; vertical-align: -0.10ex; " SRC="img96.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{inverse_027.eps}$">
+</DIV><P></P>
+
+<P>
+A few correlations between the linear and square-root scales of either the pneumatic receiver gauge or the electric indicating meter verify the fact that the square-root function is <SPAN  CLASS="textit">encoded</SPAN> in the spacing of the numbers on each instrument's non-linear scale.
+
+<P>
+<P>
+Another valuable lesson we may take from the faces of these indicating instruments is how uncertain the flow measurement becomes at the low end of the scale.  Note how for each indicating instrument (both the receiver gauge and the meter movement), the square-root scale is &ldquo;compressed&rdquo; at the low end, to the point where it becomes impossible to interpret fine increments of flow at that end of the scale.  At the high end of each scale, it's a different situation entirely: the numbers are spaced so far apart that it's easy to read fine distinctions in flow values (e.g. 94% flow versus 95% flow).  However, the scale is so crowded at the low end that it's really impossible to clearly distinguish two different flow values such as 4% from 5%.
+
+<P>
+This &ldquo;crowding&rdquo; is not just an artifact of a visual scale; it is a reflection of a fundamental limitation in measurement certainty with this type of flow measurement.  The amount of differential pressure separating different low-range values of flow for a flow element is so little, even small amounts of pressure-measurement error equate to large amounts of flow-measurement error.  In other words, it becomes more and more difficult to precisely interpret flow rate as the flow rate decreases toward the low end of the scale.  The &ldquo;crowding&rdquo; we see on these indicator's square-root scales is a visual reflection of this fundamental problem: even a small error in interpreting the pointer's position at the low end of the scale can yield major errors in flow interpretation.
+
+<P>
+A technical term used to quantify this problem is <SPAN  CLASS="textit">turndown</SPAN>.  &ldquo;Turndown&rdquo; refers to the ratio of high-range measurement to low-range measurement possible for an instrument while maintaining reasonable accuracy.  For pressure-based flowmeters, which must deal with the non-linearities of Bernoulli's Equation, the practical turndown is often no more than 3 to 1 (3:1).  This means a flowmeter ranged for 0 to 300 GPM might only read with reasonable accurately down to a flow of 100 GPM.  Below that, the accuracy becomes so poor that the measurement is almost useless.  Advances in DP transmitter technology have pushed this ratio further, perhaps as far as 10:1 for certain installations.  However, the fundamental problem is not transmitter resolution, but rather the nonlinearity of the flow element itself.  This means <SPAN  CLASS="textit">any</SPAN> source of pressure-measurement error &ndash; whether originating in the transmitter's pressure sensor or not &ndash; compromises our ability to accurately measure flow at low rates.  Even with a <SPAN  CLASS="textit">perfectly</SPAN> calibrated transmitter, errors resulting from wear of the flow element (e.g. a dulled edge on an orifice plate) or from uneven liquid columns in the impulse tubes connecting the transmitter to the element, will cause large flow-measurement errors at the low end of the instrument's range where the flow element produces only small differential pressures.  Everyone involved with the technical details of flow measurement needs to understand this fact: the fundamental problem of limited turndown is grounded in the physics of turbulent flow and potential/kinetic energy exchange for these flow elements.  Technological improvements will help, but they cannot overcome the limitations imposed by physics.  If better turndown is required for a particular flow-measurement application, an entirely different flowmeter technology should be considered.  <A NAME="268"></A>
+
+<P>
+
+<H2><A ID="SECTION00215000000000000000">
+Orifice plates</A>
+</H2>
+
+<P>
+<P>
+Of all the pressure-based flow elements in existence, the most common is the <SPAN  CLASS="textit">orifice plate</SPAN>.  This is simply a metal plate with a hole in the middle for fluid to flow through.  Orifice plates are typically sandwiched between two flanges of a pipe joint, allowing for easy installation and removal: <A NAME="271"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow28.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.45ex; vertical-align: -0.10ex; " SRC="img97.svg"
+ ALT="$\displaystyle \includegraphics{flow28.eps}$">
+</DIV><P></P>
+
+<P>
+The point where the fluid flow profile constricts to a minimum cross-sectional area after flowing through the orifice is called the <SPAN  CLASS="textit">vena contracta</SPAN>, and it is the area of minimum fluid pressure.  The vena contracta corresponds to the narrow throat of a venturi tube.  The precise location of the vena contracta for an orifice plate installation will vary with flow rate, and also with the <SPAN  CLASS="textit">beta ratio</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img98.svg"
+ ALT="$\beta$"></SPAN>) of the orifice plate, defined as the ratio of bore diameter (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img99.svg"
+ ALT="$d$"></SPAN>) to inside pipe diameter (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img100.svg"
+ ALT="$D$"></SPAN>): <A NAME="275"></A>  <A NAME="276"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\beta = {d \over D}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img101.svg"
+ ALT="$\displaystyle \beta = {d \over D}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+The simplest design of orifice plate is the <SPAN  CLASS="textit">square-edged, concentric</SPAN> orifice.  This type of orifice plate is manufactured by machining a precise, straight hole in the middle of a thin metal plate.  Looking at a side view of a square-edged concentric orifice plate reveals sharp edges (90<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img102.svg"
+ ALT="$^{o}$"></SPAN> corners) at the hole:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow22.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 66.19ex; vertical-align: -0.10ex; " SRC="img103.svg"
+ ALT="$\displaystyle \includegraphics{flow22.eps}$">
+</DIV><P></P>
+
+<P>
+Square-edged orifice plates may be installed in either direction, since the orifice plate &ldquo;appears&rdquo; exactly the same from either direction of fluid approach.  In fact, this allows square-edged orifice plates to be used for measuring bidirectional flow rates (where the fluid flow direction reverses itself from time to time).  A text label printed on the &ldquo;paddle&rdquo; of any orifice plate customarily identifies the upstream side of that plate, but in the case of the square-edged orifice plate it does not matter. <A NAME="281"></A> <A NAME="282"></A> <A NAME="283"></A>
+
+<P>
+
+<P>
+The purpose of having a square edge on the hole in an orifice plate is to minimize contact with the fast-moving moving fluid stream going through the hole.  Ideally, this edge will be knife-sharp.  If the orifice plate is relatively thick (1/8 or an inch or more), it may be necessary to bevel the downstream side of the hole to further minimize contact with the fluid stream:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow25.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 66.19ex; vertical-align: -0.10ex; " SRC="img104.svg"
+ ALT="$\displaystyle \includegraphics{flow25.eps}$">
+</DIV><P></P>
+
+<P>
+Looking at the side-view of this orifice plate, the intended direction of flow is left-to-right, with the sharp edge facing the incoming fluid stream and the bevel providing a non-contact outlet for the fluid.  Beveled orifice plates are obviously uni-directional, and <SPAN  CLASS="textit">must</SPAN> be installed with the paddle text facing upstream. 
+
+<P>
+
+<P>
+Other square-edged orifice plates exist to address conditions where gas bubbles or solid particles may be present in liquid flows, or where liquid droplets or solid particles may be present in gas flows.  The first of this type is called the <SPAN  CLASS="textit">eccentric</SPAN> orifice plate, where the hole is located off-center to allow the undesired portions of the fluid to pass through the orifice rather than build up on the upstream face: <A NAME="287"></A> <A NAME="288"></A> 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow23.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 66.19ex; vertical-align: -0.10ex; " SRC="img105.svg"
+ ALT="$\displaystyle \includegraphics{flow23.eps}$">
+</DIV><P></P>
+
+<P>
+For gas flows, the hole should be offset downward, so any liquid droplets or solid particles may easily pass through.  For liquid flows, the hole should be offset upward to allow gas bubbles to pass through and offset downward to allow heavy solids to pass through.
+
+<P>
+
+<P>
+The second off-center orifice plate type is called the <SPAN  CLASS="textit">segmental orifice plate</SPAN>, where the hole is not circular but rather just a segment of a concentric circle: <A NAME="291"></A> <A NAME="292"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow24.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 66.19ex; vertical-align: -0.10ex; " SRC="img106.svg"
+ ALT="$\displaystyle \includegraphics{flow24.eps}$">
+</DIV><P></P>
+
+<P>
+As with the eccentric orifice plate design, the segmental hole should be offset downward in gas flow applications and either upward or downward in liquid flow applications depending on the type of undesired material(s) in the flowstream.
+
+<P>
+
+<P>
+An alternative to offsetting or re-shaping the bore hole of an orifice plate is to simply drill a small hole near the edge of the plate, flush with the inside diameter of the pipe, allowing undesired substances to pass through the plate rather than collect on the upstream side.  If such a hole is oriented upward to pass vapor bubbles, it is called a <SPAN  CLASS="textit">vent hole</SPAN>.  If the hole is oriented downward to pass liquid droplets or solids, it is called a <SPAN  CLASS="textit">drain hole</SPAN>.  Vent and drain holes are useful when the concentration of these undesirable substances is not significant enough to warrant either an eccentric or segmental orifice: <A NAME="296"></A> <A NAME="297"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow69.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 66.19ex; vertical-align: -0.10ex; " SRC="img107.svg"
+ ALT="$\displaystyle \includegraphics{flow69.eps}$">
+</DIV><P></P>
+
+<P>
+The addition of a vent or drain hole should have negligible impact on the performance of an orifice plate due to its small size relative to the main bore.  If the quantity of undesirable material in the flowstream (bubbles, droplets, or solids) is excessive, an eccentric or segmental orifice plate might be a better choice<A ID="tex2html12"
+  HREF="footnode.html#foot1327"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">12</SPAN></SUP></A>.
+
+<P>
+<P>
+Some orifice plates employ non-square-edged holes for the purpose of improving performance at low Reynolds number<A ID="tex2html13"
+  HREF="footnode.html#foot1328"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">13</SPAN></SUP></A> values, where the effects of fluid viscosity are more apparent.  These orifice plate types employ rounded- or conical-entrance holes in an effort to minimize the effects of fluid viscosity.  Experiments have shown that decreased Reynolds number causes the flowstream to not contract as much when traveling through an orifice, thus limiting fluid acceleration and decreasing the amount of differential pressure produced by the orifice plate.  However, experiments have also shown that decreased Reynolds number in a venturi-type flow element causes an <SPAN  CLASS="textit">increase</SPAN> in differential pressure due to the effects of friction against the entrance cone walls.  By manufacturing an orifice plate in such a way that the hole exhibits &ldquo;venturi-like&rdquo; properties (i.e. a dull edge where the fast-moving fluid stream has more contact with the plate), these two effects tend to cancel each other, resulting in an orifice plate that maintains consistent accuracy at lower flow rates and/or higher viscosities than the simple square-edged orifice.
+
+<P>
+
+<P>
+Two common non-square-edge orifice plate designs are the <SPAN  CLASS="textit">quadrant-edge</SPAN> and <SPAN  CLASS="textit">conical-entrance</SPAN> orifices.  The quadrant-edge is shown first: <A NAME="305"></A> <A NAME="306"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow26.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 66.19ex; vertical-align: -0.10ex; " SRC="img108.svg"
+ ALT="$\displaystyle \includegraphics{flow26.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+The conical-entrance orifice plate looks like a beveled square-edge orifice plate installed backwards, with flow entering the conical side and exiting the square-edged side: <A NAME="308"></A> <A NAME="309"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow27.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 66.19ex; vertical-align: -0.10ex; " SRC="img109.svg"
+ ALT="$\displaystyle \includegraphics{flow27.eps}$">
+</DIV><P></P>
+
+<P>
+Here, is it vitally important to pay attention to the paddle's text label.  This is the only sure indication of which direction an orifice plate needs to be installed.  One can easily imagine an instrument technician mistaking a conical-entrance orifice plate for a square-edged, beveled orifice plate and installing it backward!
+
+<P>
+<P>
+
+<P>
+Several standards exist for pressure tap locations.  Ideally, the upstream pressure tap will detect fluid pressure at a point of minimum velocity, and the downstream tap will detect pressure at the vena contracta (maximum velocity).  In reality, this ideal is never perfectly achieved.  An overview of the most popular tap locations for orifice plates is shown in the following illustration:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{013.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 79.35ex; vertical-align: -0.10ex; " SRC="img110.svg"
+ ALT="$\displaystyle \includegraphics{013.eps}$">
+</DIV><P></P>
+
+<P>
+<SPAN  CLASS="textit">Flange taps</SPAN> are the most popular tap location for orifice meter runs on large pipes in the United States.  Flanges may be manufactured with tap holes pre-drilled and finished before the flange is even welded to the pipe, making this a very convenient pressure tap configuration.  Most of the other tap configurations require drilling into the pipe after installation, which is not only labor-intensive, but may possibly weaken the pipe at the locations of the tap holes. <A NAME="313"></A>
+
+<P>
+<SPAN  CLASS="textit">Vena contracta taps</SPAN> offer the greatest differential pressure for any given flow rate, but require precise calculations to properly locate the downstream tap position.  <SPAN  CLASS="textit">Radius taps</SPAN> are an approximation of vena contracta taps for large pipe sizes (one-half pipe diameter downstream for the low-pressure tap location).  An unfortunate characteristic of both these taps is the requirement of drilling through the pipe wall.  Not only does this weaken the pipe, but the practical necessity of drilling the tap holes in the installed location rather than in a controlled manufacturing environment means there is considerable room for installation error<A ID="tex2html14"
+  HREF="footnode.html#foot316"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">14</SPAN></SUP></A>.
+
+<P>
+<SPAN  CLASS="textit">Corner taps</SPAN> must be used on small pipe diameters where the vena contracta is so close to the downstream face of the orifice plate that a downstream flange tap would sense pressure in the highly turbulent region (too far downstream).  Corner taps obviously require special (i.e. expensive) flange fittings, which is why they tend to be used only when necessary. <A NAME="318"></A>
+
+<P>
+Care should be taken to avoid measuring downstream pressure in the highly turbulent region following the vena contracta.  This is why the <SPAN  CLASS="textit">pipe tap</SPAN> (also known as <SPAN  CLASS="textit">full-flow tap</SPAN>) standard calls for a downstream tap location eight pipe diameters away from the orifice: to give the flow stream room to stabilize for more consistent pressure readings<A ID="tex2html15"
+  HREF="footnode.html#foot321"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">15</SPAN></SUP></A>. <A NAME="322"></A> <A NAME="323"></A>
+
+<P>
+Wherever the taps are located, it is vitally important that the tap holes be completely flush with the inside wall of the pipe or flange.  Even the smallest recess or burr left from drilling will cause measurement errors, which is why tap holes are best drilled in a controlled manufacturing environment rather that at the installation site where the task will likely be performed by non-experts.  <A NAME="324"></A>
+
+<P>
+<P>
+
+<P>
+A photograph of an orifice plate used to measure the flow of natural gas to a large turbine engine is shown here, with a Rosemount model 3051 differential pressure transmitter sensing the pressure drop generated by the orifice:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{flow88.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img111.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{flow88.eps}$">
+</DIV><P></P>
+
+<P>
+Flange taps are used in this orifice installation, with the taps and pressure transmitter located above the pipe centerline to avoid picking up any liquid droplets that may pass through the pipe.  The direction of gas flow in this particular installation is from left to right, making the left-hand pressure tap the &ldquo;high pressure&rdquo; side and the right-hand pressure tap the &ldquo;low pressure&rdquo; side.
+
+<P>
+As you can see by the pressure gauge's indication in the photograph, the static line pressure of the natural gas inside the pipe is over 300 PSI.  The amount of pressure drop generated by the orifice plate at full flow, however, is likely only a few PSI (100 inches water column is typical for many orifice plate installations).  This is why we must use a <SPAN  CLASS="textit">differential</SPAN> pressure transmitter to measure the orifice plate's pressure drop: only a DP transmitter will sense the difference in pressure across the orifice while rejecting the static (common-mode) line pressure inside the pipe.
+
+<P>
+
+<P>
+A photograph of another orifice plate with flange taps appears here, shown on a vertical pipe.  In this example, the pipe and flanges are formed of acrylic (transparent plastic):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{flow84.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.27ex; vertical-align: -0.10ex; " SRC="img112.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{flow84.eps}$">
+</DIV><P></P>
+
+<P>
+As is customary with orifice plates mounted in vertical pipes, the direction of flow is upward (from bottom to top), making the bottom tap the &ldquo;high pressure&rdquo; side and the top tap the &ldquo;low pressure&rdquo; side.  Since this is a liquid application, the transmitter is located below<A ID="tex2html16"
+  HREF="footnode.html#foot328"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">16</SPAN></SUP></A> the taps in order to avoid collecting bubbles of air or other gases in the impulse lines.
+
+<P>
+This particular orifice and flow transmitter (Rosemount model 1151) is used on a process &ldquo;trainer&rdquo; unit at Brazosport College in Lake Jackson, Texas.  The transparent flanges, pipes, and process vessels make it easier for students to visualize the fluid motion.  <A NAME="329"></A>  <A NAME="330"></A>
+
+<P>
+
+<P>
+For relatively low flow rates, an alternative arrangement is the <SPAN  CLASS="textit">integral orifice plate</SPAN>.  This is where a small orifice plate directly attaches to the differential pressure-sensing element, eliminating the need for impulse lines.  A photograph of an integral orifice plate and transmitter is shown here, in an application measuring the flow of purified oxygen gas through a copper pipe:  <A NAME="332"></A>  <A NAME="333"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{integral_orifice_plate_1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.77ex; vertical-align: -0.10ex; " SRC="img113.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{integral_orifice_plate_1.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Even smaller integral orifices exist for the measurement of very low flow rates, another type of integral orifice is available.  This style uses the pass-through nature of a typical differential pressure transmitter's capsule flanges to advantage.  Note the paths of fluid flow, as well as the unusual orientation of the three-valve manifold, in these two example illustrations:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{integral_orifice_plate_2.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 64.45ex; vertical-align: -0.10ex; " SRC="img114.svg"
+ ALT="$\displaystyle \includegraphics{integral_orifice_plate_2.eps}$">
+</DIV><P></P>
+
+<P>
+In both examples, the third hand valve serves the purpose of bypassing process fluid flow rather than equalizing both ports of the differential pressure transmitter.  Process fluid actually flows <SPAN  CLASS="textit">through</SPAN> at least one chamber of the DP transmitter's body.  Clearly, this kind of integral orifice plate is practical only for very low rates of flow, typically where the process flow line is no larger than the size of the pressure ports on the transmitter's body.
+
+<P>
+<P>
+
+<P>
+The task of properly sizing an orifice plate for any given application is complex enough to recommend the use of special orifice sizing computer software provided by orifice plate manufacturers.  There are a number of factors to consider in orifice plate sizing, and these software packages account for all of them.  Best of all, the software provided by manufacturers is often linked to data for that manufacturer's product line, helping to assure installed results in close agreement with predictions.
+
+<P>
+In the days before ubiquitous personal computers and the Internet, some orifice plate manufacturers provided customers with paper &ldquo;slide rule&rdquo; calculators to help them select appropriate orifice plate sizes from known process parameters.  The following photographs show the front and back sides of one such slide rule:  <A NAME="337"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{flow71.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 25.55ex; vertical-align: -0.10ex; " SRC="img115.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{flow71.eps}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{flow72.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.68ex; vertical-align: -0.10ex; " SRC="img116.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{flow72.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00216000000000000000">
+Other differential producers</A>
+</H2>
+
+<P>
+<P>
+Other pressure-based flow elements exist as alternatives to the orifice plate.  The <SPAN  CLASS="textit">Pitot tube</SPAN>, for example, senses pressure as the fluid stagnates (comes to a complete stop) against the open end of a forward-facing tube.  A shortcoming of the classic single-tube Pitot assembly is sensitivity to fluid velocity at just one point in the pipe, so a more common form of Pitot tube seen in industry is the <SPAN  CLASS="textit">averaging</SPAN> Pitot tube consisting of several stagnation holes sensing velocity at multiple points across the width of the flow: <A NAME="343"></A>  <A NAME="344"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow15.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 38.90ex; vertical-align: -0.10ex; " SRC="img117.svg"
+ ALT="$\displaystyle \includegraphics{flow15.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+A variation on the latter theme is the <SPAN  CLASS="textit">Annubar</SPAN> flow element, a trade name of the Dieterich Standard corporation.  An &ldquo;Annubar&rdquo; is an averaging pitot tube consolidating high and low pressure-sensing ports in a single probe assembly:  <A NAME="347"></A> 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow16.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 49.35ex; vertical-align: -0.10ex; " SRC="img118.svg"
+ ALT="$\displaystyle \includegraphics{flow16.eps}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{annubar_01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 27.99ex; vertical-align: -0.10ex; " SRC="img119.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{annubar_01.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+What appears at first glance to be a single, square-shaped tube inserted into the pipe is actually a double-ported tube with holes on both the upstream and downstream edges:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{annubar_03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img120.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{annubar_03.eps}$">
+</DIV><P></P>
+
+<P>
+A section of Annubar tube clearly shows the porting and dual chambers, designed to bring upstream (stagnation) and downstream pressures out of the pipe to a differential pressure-sensing instrument:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{annubar_02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img121.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{annubar_02.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+A less sophisticated realization of the stagnation principle is the <SPAN  CLASS="textit">target</SPAN> flow sensor, consisting of a blunt &ldquo;paddle&rdquo; (or &ldquo;drag disk&rdquo;) inserted into the flowstream.  The force exerted on this paddle by the moving fluid is sensed by a special transmitter mechanism, which then outputs a signal corresponding to flow rate (proportional to the square of fluid velocity, just like an orifice plate): <A NAME="353"></A>  <A NAME="354"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow17.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 36.97ex; vertical-align: -0.10ex; " SRC="img122.svg"
+ ALT="$\displaystyle \includegraphics{flow17.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+The following photograph shows a Foxboro model 18 target flow transmitter installed on a line conveying liquid wood pulp:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=3in]{flow94.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.00ex; vertical-align: -0.10ex; " SRC="img123.svg"
+ ALT="$\displaystyle \includegraphics[height=3in]{flow94.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+
+<P>
+The classic venturi tube pioneered by Clemens Herschel in 1887 has been adapted in a variety of forms broadly classified as <SPAN  CLASS="textit">flow tubes</SPAN>.  All flow tubes work on the same principle: developing a differential pressure by channeling fluid flow from a wide tube to a narrow tube.  The differ from the classic venturi only in construction details, the most significant detail being a significantly shorter length than the classic venturi tube.  Examples of flow tube designs include the <SPAN  CLASS="textit">Dall</SPAN> tube, <SPAN  CLASS="textit">Lo-Loss</SPAN> flow tube, <SPAN  CLASS="textit">Gentile</SPAN> or <SPAN  CLASS="textit">Bethlehem</SPAN> flow tube, and the <SPAN  CLASS="textit">B.I.F. Universal Venturi</SPAN>. <A NAME="363"></A> <A NAME="364"></A> <A NAME="365"></A> <A NAME="366"></A> <A NAME="367"></A> <A NAME="368"></A> <A NAME="369"></A>
+
+<P>
+Another variation on the venturi theme is called a <SPAN  CLASS="textit">flow nozzle</SPAN>, designed to be clamped between the faces of two pipe flanges in a manner similar to an orifice plate.  The goal here is to achieve simplicity of installation approximating that of an orifice plate while improving performance (less permanent pressure loss) over orifice plates:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow18.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.97ex; vertical-align: -0.10ex; " SRC="img124.svg"
+ ALT="$\displaystyle \includegraphics{flow18.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Two more variations on the venturi theme are the <SPAN  CLASS="textit">V-cone</SPAN> and <SPAN  CLASS="textit">Segmental wedge</SPAN> flow elements.  The V-cone (or &ldquo;venturi cone,&rdquo; a trade name of the McCrometer division of the Danaher corporation) may be thought of as a venturi tube or orifice plate in reverse<A ID="tex2html17"
+  HREF="footnode.html#foot374"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">17</SPAN></SUP></A>: instead of narrowing the tube's diameter to cause fluid acceleration, fluid must flow around a cone-shaped obstruction placed in the middle of the tube.  The tube's effective area will be reduced by the presence of this cone, causing fluid to accelerate through the restriction just as it would through the throat of a classic venturi tube: <A NAME="375"></A> 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow19.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 31.55ex; vertical-align: -0.10ex; " SRC="img125.svg"
+ ALT="$\displaystyle \includegraphics{flow19.eps}$">
+</DIV><P></P>
+
+<P>
+This cone is hollow, with a pressure-sensing port on the downstream side allowing for easy detection of fluid pressure near the vena contracta.  Upstream pressure is sensed by another port in the pipe wall upstream of the cone.  The following photograph shows a V-cone flow tube, cut away for demonstration purposes:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{v_cone_flow_element.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 22.92ex; vertical-align: -0.10ex; " SRC="img126.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{v_cone_flow_element.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+
+<P>
+Segmental wedge elements are special pipe sections with wedge-shaped restrictions built in.  These devices, albeit crude, are useful for measuring the flow rates of <SPAN  CLASS="textit">slurries</SPAN><A ID="tex2html18"
+  HREF="footnode.html#foot1329"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">18</SPAN></SUP></A>, especially when pressure is sensed by the transmitter through remote-seal diaphragms (to eliminate the possibility of impulse tube plugging): <A NAME="380"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow20.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 31.35ex; vertical-align: -0.10ex; " SRC="img127.svg"
+ ALT="$\displaystyle \includegraphics{flow20.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+Finally, the lowly pipe elbow may be pressed into service as a flow-measuring element, since fluid turning a corner<A ID="tex2html19"
+  HREF="footnode.html#foot382"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">19</SPAN></SUP></A> in the elbow experiences radial acceleration and therefore generates a differential pressure along the axis of acceleration:  <A NAME="383"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow21.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 33.48ex; vertical-align: -0.10ex; " SRC="img128.svg"
+ ALT="$\displaystyle \includegraphics{flow21.eps}$">
+</DIV><P></P>
+
+<P>
+Pipe elbows should be considered for flow measurement only as a last resort.  Their inaccuracies tend to be extreme, owing to the non-precise construction of most pipe elbows and the relatively weak differential pressures generated<A ID="tex2html20"
+  HREF="footnode.html#foot385"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">20</SPAN></SUP></A>.
+
+<P>
+<P>
+A final point should be mentioned on the subject of differential-producing elements, and that is their energy dissipation.  Orifice plates are simple and relatively inexpensive to install, but their permanent pressure loss is high compared with other primary elements such as venturi tubes.  Permanent pressure loss is permanent energy loss from the flowstream, which usually represents a loss in energy invested into the process by pumps, compressors, and/or blowers.  Fluid energy dissipated by an orifice plate thus (usually) translates into a requirement of greater energy input to that process<A ID="tex2html21"
+  HREF="footnode.html#foot386"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">21</SPAN></SUP></A>.  <A NAME="387"></A>
+
+<P>
+With the financial and ecological costs of energy being non-trivial in our modern world, it is important to consider energy loss as a significant factor in choosing the appropriate primary element for a pressure-based flowmeter.  It might very well be that an &ldquo;expensive&rdquo; venturi tube saves more money in the long term than a &ldquo;cheap&rdquo; orifice plate, while delivering greater measurement accuracy as an added benefit.
+
+<P>
+
+<H2><A ID="SECTION00217000000000000000">
+Proper installation</A>
+</H2>
+
+<P>
+Perhaps the most common way in which the flow measurement accuracy of any flowmeter becomes compromised is incorrect installation, and pressure-based flowmeters are no exception to this rule.  The following list shows some of the details one must consider in installing a pressure-based flowmeter element:
+
+<P>
+
+<UL>
+<LI>Necessary upstream and downstream straight-pipe lengths
+</LI>
+<LI>Beta ratio (ratio of orifice bore diameter to pipe diameter: <!-- MATH
+ $\beta = {d \over D}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img129.svg"
+ ALT="$\beta = {d \over D}$"></SPAN>)
+</LI>
+<LI>Impulse tube tap locations
+</LI>
+<LI>Tap finish
+</LI>
+<LI>Transmitter location in relation to the pipe
+</LI>
+</UL>
+
+<P>
+Sharp turns in piping networks introduce large-scale turbulence<A ID="tex2html22"
+  HREF="footnode.html#foot1330"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">22</SPAN></SUP></A> into the flowstream.  Elbows, tees, valves, fans, and pumps are some of the most common causes of large-scale turbulence in piping systems.  Successive pipe elbows in different planes are some of the worst offenders in this regard.  When the natural flow path of a fluid is disturbed by such piping arrangements, the velocity profile of that fluid becomes distorted; e.g. the velocity gradient from one wall boundary of the pipe to the other will not be orderly.  Large eddies in the flowstream (called <SPAN  CLASS="textit">swirl</SPAN>) will appear.  This may cause problems for pressure-based flow elements which rely on linear acceleration (change in velocity in one dimension) to measure fluid flow rate.  If the flow profile is distorted enough, the acceleration detected at the element may be too great or too little, and therefore not properly represent the full fluid flowstream<A ID="tex2html23"
+  HREF="footnode.html#foot1331"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">23</SPAN></SUP></A>.  For this reason, pressure-based flowmeters should always be located <SPAN  CLASS="textit">upstream</SPAN> of major disturbances such as control valves and pipe elbows where possible.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow29.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.00ex; vertical-align: -0.10ex; " SRC="img130.svg"
+ ALT="$\displaystyle \includegraphics{flow29.eps}$">
+</DIV><P></P>
+
+<P>
+Even disturbances located <SPAN  CLASS="textit">downstream</SPAN> of the flow element may affect measurement accuracy if the disturbances are severe enough and/or close enough to the flow element.  Unfortunately, both upstream and downstream flow disturbances are unavoidable on all but the simplest fluid systems.  This means we must devise ways to stabilize a flowstream's velocity profile near the flow element in order to achieve accurate measurements of flow rate.  A very simple and effective way to stabilize a flow profile is to provide adequate lengths of straight pipe ahead of (and behind) the flow element.  Given enough time, even the most chaotic flowstream will &ldquo;settle down&rdquo; to a symmetrical profile all on its own.  The following illustration shows the effect of a pipe elbow on a flowstream, and how the velocity profile returns to a normal (symmetrical) form after traveling through a sufficient length of straight pipe:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow30.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 13.74ex; vertical-align: -0.10ex; " SRC="img131.svg"
+ ALT="$\displaystyle \includegraphics{flow30.eps}$">
+</DIV><P></P>
+
+<P>
+Recommendations for minimum upstream and downstream straight-pipe lengths vary significantly with the nature of the turbulent disturbance, piping geometry, and flow element.  As a general rule, elements having a smaller beta ratio (ratio of throat diameter <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img99.svg"
+ ALT="$d$"></SPAN> to pipe diameter <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img100.svg"
+ ALT="$D$"></SPAN>) are more tolerant of disturbances, with profiled flow devices (e.g. venturi tubes, flow tubes, V-cones) having the greatest tolerance<A ID="tex2html24"
+  HREF="footnode.html#foot400"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">24</SPAN></SUP></A>.  Ultimately, you should consult the flow element manufacturer's documentation for a more detailed recommendation appropriate to any specific application.  <A NAME="401"></A>  <A NAME="402"></A>
+
+<P>
+In applications where sufficient straight-run pipe lengths are impractical, another option exists for &ldquo;taming&rdquo; turbulence generated by piping disturbances.  Devices called <SPAN  CLASS="textit">flow conditioners</SPAN> may be installed upstream of the flow element to help the flow profile achieve symmetry in a far shorter distance than simple straight pipe could do alone.  Flow conditioners take the form of a series of tubes or vanes installed inside the pipe, parallel to the direction of flow.  These tubes or vanes force the fluid molecules to travel in straighter paths, thus stabilizing the flowstream prior to entering a flow element: <A NAME="404"></A> <A NAME="405"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow31.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 12.97ex; vertical-align: -0.10ex; " SRC="img132.svg"
+ ALT="$\displaystyle \includegraphics{flow31.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+This next photograph shows a <SPAN  CLASS="textit">very poor</SPAN> orifice plate installation, where the straight-run pipe requirements were completely ignored:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{flow85.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 38.86ex; vertical-align: -0.10ex; " SRC="img133.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{flow85.eps}$">
+</DIV><P></P>
+
+<P>
+Not only is the orifice plate placed much too close to an elbow, the elbow happens to be on the upstream side of the orifice plate, where disturbances have the greatest effect!  The saving grace of this installation is that it is not used for critical monitoring or control: it is simply a manual indication of air flow rate where accuracy is not terribly important.  Nevertheless, it is sad to see how an orifice meter installation could have been so easily improved with just a simple re-location of the orifice plate along the piping length.
+
+<P>
+Poor installations such as this are surprisingly common, owing to the ignorance many piping designers have of flowmeter design and operating principles.  Of all the criteria which must be balanced when designing a piping layout, optimum flowmeter location is often placed low in the order of importance (if it appears at all!).  In applications where accuracy is important, flowmeter location needs to be a very high priority even if it means a more expensive, cumbersome, and/or unattractive<A ID="tex2html25"
+  HREF="footnode.html#foot409"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">25</SPAN></SUP></A> piping design.
+
+<P>
+<P>
+
+<P>
+Another common source of trouble for pressure-based flowmeters is improper transmitter location.  Here, the type of process fluid flow being measured dictates how the pressure-sensing instrument should be located in relation to the pipe.  For gas and vapor flows, it is important that no stray liquid droplets collect in the impulse lines leading to the transmitter, lest a vertical liquid column begin to collect in those lines and generate an error-producing pressure.  For liquid flows, it is important that no gas bubbles collect in the impulse lines, or else those bubbles may displace liquid from the lines and thereby cause unequal vertical liquid columns, which would (again) generate an error-producing differential pressure.
+
+<P>
+In order to let gravity do the work of preventing these problems, we must locate the transmitter <SPAN  CLASS="textit">above</SPAN> the pipe for gas flow applications and <SPAN  CLASS="textit">below</SPAN> the pipe for liquid flow applications.  This illustration shows both installations for a horizontal pipe:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow55.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.39ex; vertical-align: -0.10ex; " SRC="img134.svg"
+ ALT="$\displaystyle \includegraphics{flow55.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+This next illustration shows both installations on a vertical pipe:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow56.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 45.29ex; vertical-align: -0.10ex; " SRC="img135.svg"
+ ALT="$\displaystyle \includegraphics{flow56.eps}$">
+</DIV><P></P>
+
+<P>
+Condensible vapor applications (such as steam flow measurement) have traditionally been treated similarly to liquid measurement applications.  Here, condensed liquid will collect in the transmitter's impulse lines so long as the impulse lines are cooler than the vapor flowing through the pipe (which is typically the case).  Placing the transmitter below the pipe allows vapors to condense and fill the impulse lines with liquid (condensate), which then acts as a natural seal protecting the transmitter from exposure to hot process vapors.
+
+<P>
+In such applications it is important for the technician to pre-fill both impulse lines with condensed liquid prior to placing the flowmeter into service.  &ldquo;Tee&rdquo; fittings with removable plugs or fill valves are provided to do this.  Failure to pre-fill the impulse lines will likely result in measurement errors during initial operation, as condensed vapors will inevitably fill the impulse lines at slightly different rates and cause a difference in vertical liquid column heights within those lines.
+
+<P>
+It should be noted that some steam flow element installations, however, will work well if the impulse lines are above the pipe.  If such an installation is possible, the advantage of not having to deal with pre-filling impulse lines (or waiting for steam to condense to equal levels in both lines) are significant.  For more information, I recommend consulting the Rosemount whitepaper entitled &ldquo;Top Mount Installation for DP Flowmeters in Steam Service&rdquo; (document 00870-0200-4809 first published August 2009).
+
+<P>
+<P>
+If tap holes must be drilled into the pipe (or flanges) at the process site, great care must be taken to properly drill and de-burr the holes.  A pressure-sensing tap hole should be flush with the inner pipe wall, with no rough edges or burrs to create turbulence.  Also, there should be no reliefs or countersinking near the hole on the inside of the pipe.  Even small irregularities at the tap holes may generate surprisingly large flow-measurement errors.
+
+<P>
+
+<H2><A ID="SECTION00218000000000000000">
+High-accuracy flow measurement</A>
+</H2>
+
+<P>
+When we derived a formula for predicting flow rate from pressure dropped by a venturi tube (or orifice), we had to make many assumptions, chief among them being a total lack of friction (i.e. no energy dissipated due to friction) within the moving fluid and perfect stream-line flow (i.e. complete lack of turbulence).  Suffice it to say, the flow formulae you have seen so far in this chapter are only approximations of reality.  Orifice plates are some of the worst offenders in this regard, since the fluid encounters such abrupt changes in geometry passing through the orifice.  Venturi tubes are nearly ideal, since the machined contours of the tube ensure gradual changes in fluid pressure and minimize turbulence.
+
+<P>
+However, in the real world we must often do the best we can with imperfect technologies.  Orifice plates, despite being less than perfect as flow-sensing elements, are convenient and economical to install in flanged pipes.  Orifice plates are also the easiest type of flow element to replace in the event of damage or routine servicing.  In applications such as custody transfer (also called &ldquo;fiscal&rdquo; measurement), where the flow of fluid represents product being bought and sold, flow measurement accuracy is paramount.  It is therefore important to figure out how to coax the most accuracy from the common orifice plate in order that we may measure fluid flows both accurately and economically.  <A NAME="415"></A>  <A NAME="416"></A>
+
+<P>
+If we compare the true flow rate through a pressure-generating primary sensing element against the theoretical flow rate predicted by an idealized equation, we may notice a substantial discrepancy<A ID="tex2html26"
+  HREF="footnode.html#foot1332"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">26</SPAN></SUP></A>.  Causes of this discrepancy include, but are not limited to:  <A NAME="418"></A>
+
+<P>
+
+<UL>
+<LI>Energy losses due to turbulence and viscosity
+</LI>
+<LI>Energy losses due to friction against the pipe and element surfaces
+</LI>
+<LI>Unstable location of <SPAN  CLASS="textit">vena contracta</SPAN> with changes in flow
+</LI>
+<LI>Uneven velocity profiles caused by irregularities in the pipe
+</LI>
+<LI>Fluid compressibility
+</LI>
+<LI>Thermal expansion (or contraction) of the element and piping
+</LI>
+<LI>Non-ideal pressure tap location(s)
+</LI>
+<LI>Excessive turbulence caused by rough internal pipe surfaces
+</LI>
+</UL>
+
+<P>
+The ratio between true flow rate and theoretical flow rate for any measured amount of differential pressure is known as the <SPAN  CLASS="textit">discharge coefficient</SPAN> of the flow-sensing element, symbolized by the variable <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img136.svg"
+ ALT="$C$"></SPAN>.  Since a value of 1 represents a theoretical ideal, the actual value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img136.svg"
+ ALT="$C$"></SPAN> for any real pressure-generating flow element will be less than 1:  <A NAME="423"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+C = {\hbox{True flow} \over \hbox{Theoretical flow}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img137.svg"
+ ALT="$\displaystyle C = {\hbox{True flow} \over \hbox{Theoretical flow}}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+For gas and vapor flows, true flow rate deviates even more from the theoretical (ideal) flow value than liquids do, for reasons that have to do with the compressible nature of gases and vapors.  A <SPAN  CLASS="textit">gas expansion factor</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img138.svg"
+ ALT="$Y$"></SPAN>) may be calculated for any flow element by comparing its discharge coefficient for gases against its discharge coefficient for liquids.  As with the discharge coefficient, values of <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img138.svg"
+ ALT="$Y$"></SPAN> for any real pressure-generating element will be less than 1:  <A NAME="427"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Y = {C_{gas} \over C_{liquid}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.57ex; vertical-align: -2.34ex; " SRC="img139.svg"
+ ALT="$\displaystyle Y = {C_{gas} \over C_{liquid}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Y = {\left({\hbox{True gas flow} \over \hbox{Theoretical gas flow}}\right) \over \left({\hbox{True liquid flow} \over \hbox{Theoretical liquid flow}}\right)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.62ex; vertical-align: -4.25ex; " SRC="img140.svg"
+ ALT="$\displaystyle Y = {\left({\hbox{True gas flow} \over \hbox{Theoretical gas flow...
+...er \left({\hbox{True liquid flow} \over \hbox{Theoretical liquid flow}}\right)}$">
+</DIV><P></P>
+
+<P>
+Incorporating these factors into the ideal volumetric flow equation developed on in section <A HREF="#Ideal_flow_equation"><IMG  ALT="[*]" SRC="crossref.png"></A>, we arrive at the following formulation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = \sqrt{2} {C Y A_2 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.92ex; vertical-align: -5.51ex; " SRC="img141.svg"
+ ALT="$\displaystyle Q = \sqrt{2} {C Y A_2 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+If we wished, we could even add another factor to account for any necessary unit conversions (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img142.svg"
+ ALT="$N$"></SPAN>), getting rid of the constant <SPAN CLASS="MATH"><IMG STYLE="height: 2.60ex; vertical-align: -0.41ex; " SRC="img143.svg"
+ ALT="$\sqrt{2}$"></SPAN> in the process:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = N {C Y A_2 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.92ex; vertical-align: -5.51ex; " SRC="img144.svg"
+ ALT="$\displaystyle Q = N {C Y A_2 \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+Sadly, neither the discharge coefficient (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img136.svg"
+ ALT="$C$"></SPAN>) nor the gas expansion factor (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img138.svg"
+ ALT="$Y$"></SPAN>) will remain constant across the entire measurement range of any given flow element.  These variables are subject to some change with flow rate, which further complicates the task of accurately inferring flow rate from differential pressure measurement.  However, if we know the values of <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img136.svg"
+ ALT="$C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img138.svg"
+ ALT="$Y$"></SPAN> for typical flow conditions, we may achieve good accuracy most of the time.
+
+<P>
+Likewise, the fact that <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img136.svg"
+ ALT="$C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img138.svg"
+ ALT="$Y$"></SPAN> change with flow places limits on the accuracy obtainable with the &ldquo;proportionality constant&rdquo; formulae seen earlier.  Whether we are measuring volumetric or mass flow rate, the <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor calculated at one particular flow condition will not hold constant for <SPAN  CLASS="textit">all</SPAN> flow conditions:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k \sqrt{{P_1 - P_2} \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img49.svg"
+ ALT="$\displaystyle Q = k \sqrt{{P_1 - P_2} \over \rho}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = k \sqrt{\rho(P_1 - P_2)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 3.06ex; vertical-align: -0.69ex; " SRC="img77.svg"
+ ALT="$\displaystyle W = k \sqrt{\rho(P_1 - P_2)}$">
+</DIV><P></P>
+
+<P>
+This means after we have calculated a value for <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> based on a particular flow condition, we can only trust the results of the equation for flow conditions not too different from the one we used to calculate <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN>.
+
+<P>
+<P>
+
+<P>
+As you can see in both flow equations, the density of the fluid (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN>) is an important factor.  If fluid density is relatively stable, we may treat <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN> as a constant, incorporating its value into the proportionality factor (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN>) to make the two formulae even simpler:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k_Q \sqrt{P_1 - P_2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 3.16ex; vertical-align: -0.75ex; " SRC="img145.svg"
+ ALT="$\displaystyle Q = k_Q \sqrt{P_1 - P_2}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = k_W \sqrt{P_1 - P_2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 3.06ex; vertical-align: -0.65ex; " SRC="img146.svg"
+ ALT="$\displaystyle W = k_W \sqrt{P_1 - P_2}$">
+</DIV><P></P>
+
+<P>
+However, if fluid density is subject to change over time, we will need some means to continually calculate <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN> so our inferred flow measurement will remain accurate.  Variable fluid density is a typical state of affairs in gas flow measurement, since all gases are compressible by definition.  A simple change in static gas pressure within the pipe is all that is needed to make <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN> change, which in turn affects the relationship between flow rate and differential pressure drop.  <A NAME="446"></A>
+
+<P>
+The American Gas Association (AGA) provides a formula for calculating volumetric flow of any gas using orifice plates in their #3 Report, compensating for changes in gas pressure and temperature.  A variation of that formula is shown here (consistent with previous formulae in this section): <A NAME="447"></A> <A NAME="448"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = N {{C Y A_2} \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{Z_s P_1 (P_1 - P_2)} \over {G_f Z_{f1} T}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.90ex; vertical-align: -5.51ex; " SRC="img147.svg"
+ ALT="$\displaystyle Q = N {{C Y A_2} \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{Z_s P_1 (P_1 - P_2)} \over {G_f Z_{f1} T}}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Volumetric flow rate (SCFM = standard cubic feet per minute)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img142.svg"
+ ALT="$N$"></SPAN> = Unit conversion factor
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img136.svg"
+ ALT="$C$"></SPAN> = Discharge coefficient (accounts for energy losses, Reynolds number corrections, pressure tap locations, etc.)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img138.svg"
+ ALT="$Y$"></SPAN> = Gas expansion factor
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img46.svg"
+ ALT="$A_1$"></SPAN> = Cross-sectional area of mouth
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img42.svg"
+ ALT="$A_2$"></SPAN> = Cross-sectional area of throat
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img148.svg"
+ ALT="$Z_s$"></SPAN> = Compressibility factor of gas under standard conditions
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img149.svg"
+ ALT="$Z_{f1}$"></SPAN> = Compressibility factor of gas under flowing conditions, upstream
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img150.svg"
+ ALT="$G_f$"></SPAN> = Specific gravity of gas (density compared to ambient air)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img151.svg"
+ ALT="$T$"></SPAN> = Absolute temperature of gas
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img50.svg"
+ ALT="$P_1$"></SPAN> = Upstream pressure (absolute)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img51.svg"
+ ALT="$P_2$"></SPAN> = Downstream pressure (absolute)
+
+<P>
+<P>
+
+<P>
+This equation implies the continuous measurement of absolute gas pressure (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img50.svg"
+ ALT="$P_1$"></SPAN>) and absolute gas temperature (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img151.svg"
+ ALT="$T$"></SPAN>) inside the pipe, in addition to the differential pressure produced by the orifice plate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img40.svg"
+ ALT="$P_1 - P_2$"></SPAN>).  These measurements may be taken by three separate devices, their signals routed to a gas flow computer:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow13.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 50.52ex; vertical-align: -0.10ex; " SRC="img152.svg"
+ ALT="$\displaystyle \includegraphics{flow13.eps}$">
+</DIV><P></P>
+
+<P>
+Note the location of the RTD (thermowell), positioned downstream of the orifice plate so the turbulence it generates will not create additional turbulence at the orifice plate.  The American Gas Association (AGA) allows for upstream placement of the thermowell, but only if located at least three feet upstream of a flow conditioner<A ID="tex2html27"
+  HREF="footnode.html#foot455"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">27</SPAN></SUP></A>.
+
+<P>
+In order to best control all the physical parameters necessary for good orifice metering accuracy, it is standard practice for custody transfer flowmeter installations to use <SPAN  CLASS="textit">honed meter runs</SPAN> rather than standard pipe and pipe fittings.  A &ldquo;honed run&rdquo; is a complete piping assembly consisting of a manufactured fitting to hold the orifice plate and sufficient straight lengths of pipe upstream and downstream, the interior surfaces of that pipe machined (&ldquo;honed&rdquo;) to have a glass-smooth surface with precise and symmetrical dimensions.  Honed runs ensure minimum disruption to the flowing gas or liquid, thus improving measurement accuracy by avoiding unnecessary turbulence and/or distorted flow profiles.  Such piping &ldquo;runs&rdquo; are quite expensive, but necessary to achieve flow measurement accuracy worthy of custody transfer.  <A NAME="457"></A>  <A NAME="458"></A>  <A NAME="459"></A>
+
+<P>
+
+<P>
+This photograph shows a set of AGA3-compliant orifice meter runs measuring the flow of natural gas:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{aga3_gasflow.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img153.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{aga3_gasflow.eps}$">
+</DIV><P></P>
+
+<P>
+Note the special transmitter manifolds, built to accept both the differential pressure and absolute pressure (Rosemount model 3051) transmitters.  Also note the quick-change fittings (the ribbed metal housings) holding the orifice plates, to facilitate convenient change-out of the orifice plates which is periodically necessary due to wear.  It is not unheard of to replace orifice plates on a daily basis in some industries to ensure the sharp orifice edges necessary for accurate measurement<A ID="tex2html28"
+  HREF="footnode.html#foot461"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">28</SPAN></SUP></A>.  <A NAME="462"></A>
+
+<P>
+Although not visible in this photograph, these meter runs are connected together by a network of shut-off valves directing the flow of natural gas through as few meter runs as desired.  When the total gas flow rate is great, all meter runs are placed into service and their respective flow rates summed to yield a total flow measurement.  When the total flow rate decreases, individual meter runs are shut off, resulting in increased flow rates through the remaining meter runs.  This &ldquo;staging&rdquo; of meter runs expands the effective <SPAN  CLASS="textit">turndown</SPAN> or <SPAN  CLASS="textit">rangeability</SPAN> of the orifice plate as a flow-sensing element, resulting in much more accurate flow measurement over a wide range of flow rates than if a single (large) orifice meter run were used.  <A NAME="465"></A>  <A NAME="466"></A>
+
+<P>
+<P>
+
+<P>
+An alternative to multiple instruments (differential pressure, absolute pressure, and temperature) installed on each meter run is to use a single <SPAN  CLASS="textit">multi-variable</SPAN> transmitter capable of measuring gas temperature as well as both static and differential pressures.  This approach enjoys the advantage of simpler installation over the multi-instrument approach: <A NAME="468"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow14.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 39.48ex; vertical-align: -0.10ex; " SRC="img154.svg"
+ ALT="$\displaystyle \includegraphics{flow14.eps}$">
+</DIV><P></P>
+
+<P>
+The Rosemount model 3095MV and Yokogawa model EJX910 are examples of multi-variable transmitters designed to perform compensated gas flow measurement, equipped with multiple pressure sensors, a connection port for an RTD temperature sensor, and sufficient digital computing power to continuously calculate flow rate based on the AGA equation.  Such multi-variable transmitters may provide an analog output for computed flow rate, or a digital output where all three primary variables <SPAN  CLASS="textit">and</SPAN> the computed flow rate may be transmitted to a host system (as shown in the previous illustration).  The Yokogawa EJX910A provides an interesting signal output option: a digital <SPAN  CLASS="textit">pulse</SPAN> signal, where each pulse represents a specific quantity (either volume or mass) of fluid.  The frequency of this pulse train represents flow rate, while the total number of pulses counted over a period of time represents the total amount of fluid that has passed through the orifice plate over that amount of time.  <A NAME="472"></A>
+
+<P>
+
+<P>
+This photograph shows a Rosemount 3095MV transmitter used to measure mass flow on a pure oxygen (gas) line.  The orifice plate is an &ldquo;integral&rdquo; unit immediately below the transmitter body, sandwiched between two flange plates on the copper line.  A three-valve manifold interfaces the model 3095MV transmitter to the integral orifice plate structure:  <A NAME="473"></A>  <A NAME="474"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{flow75.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 34.72ex; vertical-align: -0.10ex; " SRC="img155.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{flow75.eps}$">
+</DIV><P></P>
+
+<P>
+The temperature-compensation RTD may be clearly seen on the left-hand side of the photograph, installed at the elbow fitting in the copper pipe.
+
+<P>
+<P>
+Liquid flow measurement applications may also benefit from compensation, because liquid density changes with temperature.  Static pressure is not a concern here, because liquids are considered incompressible for all practical purposes<A ID="tex2html29"
+  HREF="footnode.html#foot1344"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">29</SPAN></SUP></A>.  Thus, the formula for compensated liquid flow measurement does not include any terms for static pressure, just differential pressure and temperature:  <A NAME="478"></A>  <A NAME="479"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = N {{C Y A_2} \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{(P_1 - P_2)[1 + k_T(T - T_{ref})]}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 8.73ex; vertical-align: -5.51ex; " SRC="img156.svg"
+ ALT="$\displaystyle Q = N {{C Y A_2} \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{(P_1 - P_2)[1 + k_T(T - T_{ref})]}}$">
+</DIV><P></P>
+
+<P>
+The constant <SPAN CLASS="MATH"><IMG STYLE="height: 2.15ex; vertical-align: -0.45ex; " SRC="img157.svg"
+ ALT="$k_T$"></SPAN> shown in the above equation is the proportionality factor for liquid expansion with increasing temperature.  The difference in temperature between the measured condition (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img151.svg"
+ ALT="$T$"></SPAN>) and the reference condition (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img158.svg"
+ ALT="$T_{ref}$"></SPAN>) multiplied by this factor determines how much less dense the liquid is compared to its density at the reference temperature.  It should be noted that some liquids &ndash; notably hydrocarbons &ndash; have thermal expansion factors significantly greater than water.  This makes temperature compensation for hydrocarbon liquid flow measurement very important if the measurement principle is volumetric rather than mass-based.
+
+<P>
+
+<H2><A ID="SECTION00219000000000000000">
+Equation summary</A>
+</H2>
+
+<P>
+Volumetric flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>) full equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = N {{C Y A_2} \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho_f}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 9.82ex; vertical-align: -5.51ex; " SRC="img159.svg"
+ ALT="$\displaystyle Q = N {{C Y A_2} \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{{P_1 - P_2} \over \rho_f}$">
+</DIV><P></P>
+
+<P>
+<P>
+Volumetric flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>) simplified equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k \sqrt{{P_1 - P_2} \over \rho_f}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.90ex; " SRC="img160.svg"
+ ALT="$\displaystyle Q = k \sqrt{{P_1 - P_2} \over \rho_f}$">
+</DIV><P></P>
+
+<P>
+<P>
+Mass flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img67.svg"
+ ALT="$W$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = N {{C Y A_2} \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{\rho_f (P_1 - P_2)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 8.73ex; vertical-align: -5.51ex; " SRC="img161.svg"
+ ALT="$\displaystyle W = N {{C Y A_2} \over \sqrt{1 - \left({A_2 \over A_1}\right)^2}} \sqrt{\rho_f (P_1 - P_2)}$">
+</DIV><P></P>
+
+<P>
+<P>
+Mass flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img67.svg"
+ ALT="$W$"></SPAN>) simplified equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = k \sqrt{\rho_f (P_1 - P_2)}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.45ex; vertical-align: -1.42ex; " SRC="img162.svg"
+ ALT="$\displaystyle W = k \sqrt{\rho_f (P_1 - P_2)}$">
+</DIV><P></P>
+
+<P>
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Volumetric flow rate (e.g. gallons per minute, flowing cubic feet per second)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img67.svg"
+ ALT="$W$"></SPAN> = Mass flow rate (e.g. kilograms per second, slugs per minute)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img142.svg"
+ ALT="$N$"></SPAN> = Unit conversion factor
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img136.svg"
+ ALT="$C$"></SPAN> = Discharge coefficient (accounts for energy losses, Reynolds number corrections, pressure tap locations, etc.)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img138.svg"
+ ALT="$Y$"></SPAN> = Gas expansion factor (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img163.svg"
+ ALT="$Y = 1$"></SPAN> for liquids)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img46.svg"
+ ALT="$A_1$"></SPAN> = Cross-sectional area of mouth
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img42.svg"
+ ALT="$A_2$"></SPAN> = Cross-sectional area of throat
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.75ex; " SRC="img164.svg"
+ ALT="$\rho_f$"></SPAN> = Fluid density at flowing conditions (actual temperature and pressure at the element)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> = Constant of proportionality (determined by experimental measurements of flow rate, pressure, and density)
+
+<P>
+<P>
+
+<P>
+The beta ratio (<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img98.svg"
+ ALT="$\beta$"></SPAN>) of a differential-producing element is the ratio of throat diameter to mouth diameter (<!-- MATH
+ $\beta = {d \over D}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img129.svg"
+ ALT="$\beta = {d \over D}$"></SPAN>).  This is the primary factor determining acceleration as the fluid increases velocity entering the constricted throat of a flow element (venturi tube, orifice plate, wedge, etc.).  The following expression is often called the <SPAN  CLASS="textit">velocity of approach factor</SPAN> (commonly symbolized as <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img165.svg"
+ ALT="$E_v$"></SPAN>), because it relates the velocity of the fluid through the constriction to the velocity of the fluid as it approaches the flow element:  <A NAME="495"></A>  <A NAME="496"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_v = {1 \over \sqrt{1 - \beta^4}} = \hbox{ Velocity of approach factor}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.86ex; vertical-align: -2.72ex; " SRC="img166.svg"
+ ALT="$\displaystyle E_v = {1 \over \sqrt{1 - \beta^4}} = \hbox{ Velocity of approach factor}$">
+</DIV><P></P>
+
+<P>
+This same velocity approach factor may be expressed in terms of mouth and throat areas (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img46.svg"
+ ALT="$A_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img42.svg"
+ ALT="$A_2$"></SPAN>, respectively):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+E_v = {1 \over \sqrt{1 - \left(A_2 \over A_1\right)^2}} = \hbox{ Velocity of approach factor}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 8.64ex; vertical-align: -5.51ex; " SRC="img167.svg"
+ ALT="$\displaystyle E_v = {1 \over \sqrt{1 - \left(A_2 \over A_1\right)^2}} = \hbox{ Velocity of approach factor}$">
+</DIV><P></P>
+
+<P>
+<P>
+Beta ratio has a significant impact on the number of straight-run pipe lengths needed to condition the flow profile upstream and downstream of the flow element.  Large beta ratios (where the bore diameter approaches the flowtube's inside diameter) are more sensitive to piping disturbances, since there is less acceleration of the flowstream through the element, and therefore flow profile asymmetries caused by piping disturbances are significant in comparison to the fluid's through-bore velocity.  Small beta ratio values correspond to larger acceleration factors, where disturbances in the flow profile become &ldquo;swamped<A ID="tex2html30"
+  HREF="footnode.html#foot501"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">30</SPAN></SUP></A>&rdquo; by the high throat velocities created by the element's constriction.  A disadvantage of small beta ratio values is that the flow element exhibits a greater permanent pressure loss, which is an operational cost if the flow is provided by a machine such as an engine- or motor-driven pump (more energy required to turn the pump, equating to a greater operating cost to run the process).  <A NAME="502"></A>
+
+<P>
+
+<P>
+When computing the volumetric flow of a gas in <SPAN  CLASS="textit">standard</SPAN> volume units (e.g. SCFM), the equation becomes much more complex than the simple (flowing) volumetric rate equation.  Any equation computing flow in standard units must predict the effective expansion of the gas if it were to transition from flowing conditions (the actual pressure and temperature it experiences flowing through the pipe) to standard conditions (one atmosphere pressure at 60 degrees Fahrenheit).  The compensated gas flow measurement equation published by the American Gas Association (AGA Report #3) in 1992 for orifice plates with flange taps calculates this expansion to standard conditions with a series of factors accounting for flowing and standard (&ldquo;base&rdquo;) conditions, in addition to the more common factors such as velocity of approach and gas expansion.  Most of these factors are represented in the AGA3 equation by different variables beginning with the letter <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img168.svg"
+ ALT="$F$"></SPAN>:  <A NAME="504"></A> <A NAME="505"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = F_n (F_c + F_{sl}) Y F_{pb} F_{tb} F_{tf} F_{gr} F_{pv} \sqrt{h_W P_{f1}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 3.06ex; vertical-align: -0.79ex; " SRC="img169.svg"
+ ALT="$\displaystyle Q = F_n (F_c + F_{sl}) Y F_{pb} F_{tb} F_{tf} F_{gr} F_{pv} \sqrt{h_W P_{f1}}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Volumetric flow rate (standard cubic feet per hour &ndash; SCFH)
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img170.svg"
+ ALT="$F_n$"></SPAN> = Numeric conversion factor (accounts for certain numeric constants, unit-conversion coefficients, and the velocity of approach factor <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img165.svg"
+ ALT="$E_v$"></SPAN>)
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img171.svg"
+ ALT="$F_c$"></SPAN> = Orifice calculation factor (a polynomial function of the orifice plate's <SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img98.svg"
+ ALT="$\beta$"></SPAN> ratio and Reynolds number), appropriate for flange taps
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img172.svg"
+ ALT="$F_{sl}$"></SPAN> = Slope factor (another polynomial function of the orifice plate's <SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img98.svg"
+ ALT="$\beta$"></SPAN> ratio and Reynolds number), appropriate for flange taps
+
+<P>
+<P>
+<!-- MATH
+ $F_c + F_{sl}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img173.svg"
+ ALT="$F_c + F_{sl}$"></SPAN> = <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img174.svg"
+ ALT="$C_d$"></SPAN> = Discharge coefficient, appropriate for flange taps
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img138.svg"
+ ALT="$Y$"></SPAN> = Gas expansion factor (a function of <SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img98.svg"
+ ALT="$\beta$"></SPAN>, differential pressure, static pressure, and specific heats)
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img175.svg"
+ ALT="$F_{pb}$"></SPAN> = Base pressure factor = <!-- MATH
+ ${14.73 \hbox{ PSI} \over P_b}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.76ex; vertical-align: -1.17ex; " SRC="img176.svg"
+ ALT="${14.73 \hbox{ PSI} \over P_b}$"></SPAN>, with pressure in PSIA (absolute)
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img177.svg"
+ ALT="$F_{tb}$"></SPAN> = Base temperature factor = <!-- MATH
+ ${T_b \over 519.67}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.04ex; vertical-align: -0.90ex; " SRC="img178.svg"
+ ALT="${T_b \over 519.67}$"></SPAN>, with temperature in degrees Rankine
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img179.svg"
+ ALT="$F_{tf}$"></SPAN> = Flowing temperature factor = <!-- MATH
+ $\sqrt{519.67 \over T_f}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 4.45ex; vertical-align: -1.78ex; " SRC="img180.svg"
+ ALT="$\sqrt{519.67 \over T_f}$"></SPAN>, with temperature in degrees Rankine
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img181.svg"
+ ALT="$F_{gr}$"></SPAN> = Real gas relative density factor = <!-- MATH
+ $\sqrt{1 \over G_r}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 4.45ex; vertical-align: -1.62ex; " SRC="img182.svg"
+ ALT="$\sqrt{1 \over G_r}$"></SPAN>
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img183.svg"
+ ALT="$F_{pv}$"></SPAN> = Supercompressibility factor = <!-- MATH
+ $\sqrt{Z_b \over Z_{f1}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 4.45ex; vertical-align: -1.71ex; " SRC="img184.svg"
+ ALT="$\sqrt{Z_b \over Z_{f1}}$"></SPAN>
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.15ex; vertical-align: -0.45ex; " SRC="img185.svg"
+ ALT="$h_W$"></SPAN> = Differential pressure produced by orifice plate (inches water column)
+
+<P>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img186.svg"
+ ALT="$P_{f1}$"></SPAN> = Flowing pressure of gas at the upstream tap (PSI absolute)
+
+<P>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html203"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html205"
+  HREF="node16.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Laminar flowmeters</A>
+<B> Up:</B> <A
+ HREF="node2.html">Continuous fluid flow measurement</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Continuous fluid flow measurement</A>
+ &nbsp; <B>  <A ID="tex2html204"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html206"
+  HREF="node16.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

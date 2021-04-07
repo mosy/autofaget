@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Laminar flowmeters</TITLE>
+<META NAME="description" CONTENT="Laminar flowmeters">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION00220000000000000000">
+Laminar flowmeters</A>
+</H1>
+
+<P>
+A unique form of differential pressure-based flow measurement deserves its own section in this flow measurement chapter, and that is the <SPAN  CLASS="textit">laminar</SPAN> flowmeter. <A NAME="528"></A>
+
+<P>
+Laminar flow is a condition of fluid motion where viscous (internal fluid friction) forces greatly overshadow inertial (kinetic) forces.  A flowstream in a state of laminar flow exhibits no turbulence, with each fluid molecule traveling in its own path, with limited mixing and collisions with adjacent molecules.  The dominant mechanism for resistance to fluid motion in a laminar flow regime is friction with the pipe or tube walls.  Laminar flow is qualitatively predicted by low values of Reynolds number.
+
+<P>
+This pressure drop created by fluid friction in a laminar flowstream is quantifiable, and is expressed in the Hagen-Poiseuille equation: <A NAME="529"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k \left({{\Delta P D^4} \over {\mu L}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.79ex; vertical-align: -2.30ex; " SRC="img187.svg"
+ ALT="$\displaystyle Q = k \left({{\Delta P D^4} \over {\mu L}}\right)$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Flow rate
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img84.svg"
+ ALT="$\Delta P$"></SPAN> = Pressure dropped across a length of pipe
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img100.svg"
+ ALT="$D$"></SPAN> = Pipe diameter 
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img188.svg"
+ ALT="$\mu$"></SPAN> = Fluid viscosity
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img189.svg"
+ ALT="$L$"></SPAN> = Pipe length
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> = Coefficient accounting for units of measurement
+
+<P>
+<P>
+Laminar flowmeter elements generally consist of one or more tubes whose length greatly exceeds the inside diameter, arranged in such a way as to produce a slow-moving flow velocity.  An example is shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow12.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 36.58ex; vertical-align: -0.10ex; " SRC="img190.svg"
+ ALT="$\displaystyle \includegraphics{flow12.eps}$">
+</DIV><P></P>
+
+<P>
+The expanded diameter of the flow element ensures a lower fluid velocity than in the pipes entering and exiting the element.  This decreases the Reynolds number to the point where the flow regime exhibits laminar behavior.  The large number of small-diameter tubes packed in the wide area of the element provide adequate wall surface area for the fluid's viscosity to act upon, creating an overall pressure drop from inlet to outlet which is measured by the differential pressure transmitter.  This pressure drop is permanent (no recovery of pressure downstream) because the mechanism of pressure drop is friction: total dissipation (loss) of energy in the form of heat.
+
+<P>
+Another common form of laminar flow element is simply a coiled <SPAN  CLASS="textit">capillary tube</SPAN>: a long tube with a very small inside diameter.  The small inside diameter of such a tube makes wall-boundary effects dominant, such that the flow regime will remain laminar over a wide range of flow rates.  The extremely restrictive nature of a capillary tube, of course, limits the use of such flow elements to very low flow rates such as those encountered in the sampling networks of certain analytical instruments.  <A NAME="534"></A>
+
+<P>
+A unique advantage of the laminar flowmeter is its linear relationship between flow rate and developed pressure drop.  It is the only pressure-based flow measurement device for filled pipes that exhibits a linear pressure/flow relationship.  This means no &ldquo;square-root&rdquo; characterization is necessary to obtain linear flow measurements with a laminar flowmeter.  The big disadvantage of this meter type is its dependence on fluid viscosity, which in turn is strongly influenced by fluid temperature.  Thus, all laminar flowmeters require temperature compensation in order to derive accurate measurements, and some even use temperature <SPAN  CLASS="textit">control</SPAN> systems to force the fluid's temperature to be constant as it moves through the element<A ID="tex2html31"
+  HREF="footnode.html#foot536"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">31</SPAN></SUP></A>.
+
+<P>
+<P>
+Laminar flow elements find their widest application inside pneumatic instruments, where a linear pressure/flow relationship is highly advantageous (behaving like a &ldquo;resistor&rdquo; for instrument air flow) and the viscosity of the fluid (instrument air) is relatively constant.  Pneumatic controllers, for instance, use laminar restrictors as part of the derivative and integral calculation modules, the combination of &ldquo;resistance&rdquo; from the restrictor and &ldquo;capacitance&rdquo; from volume chambers forming a sort of pneumatic time-constant (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img191.svg"
+ ALT="$\tau$"></SPAN>) network. <A NAME="537"></A>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html216"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html218"
+  HREF="node16.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">Variable-area flowmeters</A>
+<B> Up:</B> <A
+ HREF="node2.html">Continuous fluid flow measurement</A>
+<B> Previous:</B> <A
+ HREF="node3.html">Pressure-based flowmeters</A>
+ &nbsp; <B>  <A ID="tex2html217"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html219"
+  HREF="node16.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

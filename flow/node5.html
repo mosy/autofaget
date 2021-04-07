@@ -1,0 +1,529 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Variable-area flowmeters</TITLE>
+<META NAME="description" CONTENT="Variable-area flowmeters">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html224"
+  HREF="node5.html#SECTION00231000000000000000">Rotameters</A>
+<LI><A ID="tex2html225"
+  HREF="node5.html#SECTION00232000000000000000">Weirs and flumes</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00230000000000000000">
+Variable-area flowmeters</A>
+</H1>
+
+<P>
+An <SPAN  CLASS="textit">variable-area</SPAN> flowmeter is one where the fluid must pass through a restriction whose area increases with flow rate.  This stands in contrast to flowmeters such as orifice plates and venturi tubes where the cross-sectional area of the flow element remains fixed.
+
+<P>
+
+<H2><A ID="SECTION00231000000000000000">
+Rotameters</A>
+</H2>
+
+<P>
+The simplest example of a variable-area flowmeter is the <SPAN  CLASS="textit">rotameter</SPAN>, which uses a solid object (called a <SPAN  CLASS="textit">plummet</SPAN> or <SPAN  CLASS="textit">float</SPAN>) as a flow indicator, suspended in the midst of a tapered tube:  <A NAME="544"></A> <A NAME="545"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow32.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.26ex; vertical-align: -0.10ex; " SRC="img192.svg"
+ ALT="$\displaystyle \includegraphics{flow32.eps}$">
+</DIV><P></P>
+
+<P>
+As fluid flows upward through the tube, a pressure differential develops across the plummet.  This pressure differential, acting on the effective area of the plummet body, develops an upward force (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img193.svg"
+ ALT="$F = {PA}$"></SPAN>).  If this force exceeds the weight of the plummet, the plummet moves up.  As the plummet moves farther up in the tapered tube, the area between the plummet and the tube walls (through which the fluid must travel) grows larger.  This increased flowing area allows the fluid to make it past the plummet without having to accelerate as much, thereby developing less pressure drop across the plummet's body.  At some point, the flowing area reaches a point where the pressure-induced force on the plummet body exactly matches the weight of the plummet.  This is the point in the tube where the plummet stops moving, indicating flow rate by it position relative to a scale mounted (or etched) on the outside of the tube.
+
+<P>
+
+<P>
+The following rotameter uses a spherical plummet, suspended in a flow tube machined from a solid block of clear plastic.  An adjustable valve at the bottom of the rotameter provides a means for adjusting gas flow:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{rotameter_1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="img194.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{rotameter_1.eps}$">
+</DIV><P></P>
+
+<P>
+The same basic flow equation used for pressure-based flow elements holds true for rotameters as well:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k \sqrt{P_1 - P_2 \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img195.svg"
+ ALT="$\displaystyle Q = k \sqrt{P_1 - P_2 \over \rho}$">
+</DIV><P></P>
+
+<P>
+However, the difference in this application is that the value inside the radicand is constant, since the pressure difference will remain constant<A ID="tex2html32"
+  HREF="footnode.html#foot1357"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">32</SPAN></SUP></A> and the fluid density will likely remain constant as well.  Thus, <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> will change in proportion to <SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>.  The only variable within <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> relevant to plummet position is the flowing area between the plummet and the tube walls.
+
+<P>
+Most rotameters are indicating devices only.  They may be equipped to transmit flow information electronically by adding sensors to detect the plummet's position in the tube, but this is not common practice.
+
+<P>
+Rotameters are very commonly used as purge flow indicators for pressure and level measurement systems requiring a constant flow of purge fluid (see sections <A HREF="#Purged_pressure"><IMG  ALT="[*]" SRC="crossref.png"></A> and <A HREF="#Purged_level">1.3.2</A> for practical examples).  Such rotameters are usually equipped with hand-adjustable needle valves for manual regulation of purge fluid flow rate.
+
+<P>
+
+<H2><A ID="SECTION00232000000000000000">
+Weirs and flumes</A>
+</H2>
+
+<P>
+A very different style of variable-area flowmeter is used extensively to measure flow rate through open channels, such as irrigation ditches.  If an obstruction is placed within a channel, any liquid flowing through the channel must rise on the upstream side of the obstruction.  By measuring this liquid level rise, it is possible to infer the rate of liquid flow past the obstruction.
+
+<P>
+The first form of open-channel flowmeter is the <SPAN  CLASS="textit">weir</SPAN>, which is nothing more than a dam obstructing passage of liquid through the channel.  Three styles of weir are shown in the following illustration; the <SPAN  CLASS="textit">rectangular</SPAN>, <SPAN  CLASS="textit">Cippoletti</SPAN>, and <SPAN  CLASS="textit">V-notch</SPAN>: <A NAME="561"></A> <A NAME="562"></A> <A NAME="563"></A> <A NAME="564"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow33.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 20.90ex; vertical-align: -0.10ex; " SRC="img197.svg"
+ ALT="$\displaystyle \includegraphics{flow33.eps}$">
+</DIV><P></P>
+
+<P>
+A rectangular weir has a notch of simple rectangular shape, as the name implies.  A Cippoletti weir is much like a rectangular weir, except that the vertical sides of the notch have a 4:1 slope (rise of 4, run of 1; approximately a 14 degree angle from vertical).  A V-notch weir has a triangular notch, customarily measuring either 60 or 90 degrees.
+
+<P>
+The following photograph shows water flowing through a Cippoletti weir made of 1/4 inch steel plate:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{weir_cippoletti.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 26.81ex; vertical-align: -0.10ex; " SRC="img198.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{weir_cippoletti.eps}$">
+</DIV><P></P>
+
+<P>
+At a condition of zero flow through the channel, the liquid level will be at or below the crest (lowest point on the opening) of the weir.  As liquid begins to flow through the channel, it must spill over the crest of the weir in order to get past the weir and continue downstream in the channel.  In order for this to happen, the level of the liquid upstream of the weir must rise above the weir's crest height.  This height of liquid upstream of the weir represents a hydrostatic pressure, much the same as liquid heights in piezometer tubes represent pressures in a liquid flowstream through an enclosed pipe (see section <A HREF="#Piezometer"><IMG  ALT="[*]" SRC="crossref.png"></A> for examples of this).  The height of liquid above the crest of a weir is analogous to the pressure differential generated by an orifice plate.  As liquid flow is increased even more, a greater pressure (head) will be generated upstream of the weir, forcing the liquid level to rise.  This effectively increases the cross-sectional area of the weir's &ldquo;throat&rdquo; as a taller stream of liquid exits the notch of the weir<A ID="tex2html33"
+  HREF="footnode.html#foot1358"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">33</SPAN></SUP></A>.  <A NAME="574"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow34.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 32.71ex; vertical-align: -0.10ex; " SRC="img199.svg"
+ ALT="$\displaystyle \includegraphics{flow34.eps}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow35.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 22.84ex; vertical-align: -0.10ex; " SRC="img200.svg"
+ ALT="$\displaystyle \includegraphics{flow35.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+This dependence of notch area on flow rate creates a very different relationship between flow rate and liquid height (measured above the crest) than the relationship between flow rate and differential pressure in an orifice plate:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 3.33 (L - 0.2H) H^{1.5} \hbox{\hskip 20pt Rectangular weir}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.72ex; vertical-align: -0.68ex; " SRC="img201.svg"
+ ALT="$\displaystyle Q = 3.33 (L - 0.2H) H^{1.5} \hbox{\hskip 20pt Rectangular weir}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 3.367 L H^{1.5} \hbox{\hskip 20pt Cippoletti weir}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.59ex; vertical-align: -0.55ex; " SRC="img202.svg"
+ ALT="$\displaystyle Q = 3.367 L H^{1.5} \hbox{\hskip 20pt Cippoletti weir}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 2.48 \left( \tan {\theta \over 2} \right) H^{2.5} \hbox{\hskip 20pt V-notch weir}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img203.svg"
+ ALT="$\displaystyle Q = 2.48 \left( \tan {\theta \over 2} \right) H^{2.5} \hbox{\hskip 20pt V-notch weir}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Volumetric flow rate (cubic feet per second &ndash; CFS)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img189.svg"
+ ALT="$L$"></SPAN> = Width of crest (feet)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img204.svg"
+ ALT="$\theta$"></SPAN> = V-notch angle (degrees)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img205.svg"
+ ALT="$H$"></SPAN> = Head (feet)
+
+<P>
+<P>
+As you can see from a comparison of characteristic flow equations between these three types of weirs, the shape of the weir's notch has a dramatic effect on the mathematical relationship between flow rate and head (liquid level upstream of the weir, measured above the crest height).  This implies that it is possible to create almost any characteristic equation we might like just by carefully shaping the weir's notch in some custom form.  A good example of this is the so-called <SPAN  CLASS="textit">proportional</SPAN> or <SPAN  CLASS="textit">Sutro</SPAN> weir, which is designed to have a linear relationship between head and flow rate: <A NAME="586"></A> <A NAME="587"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow36.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.19ex; vertical-align: -0.10ex; " SRC="img206.svg"
+ ALT="$\displaystyle \includegraphics{flow36.eps}$">
+</DIV><P></P>
+
+<P>
+Sutro weirs are not used very often, due to their inherently weak structure and tendency to clog with debris.  
+
+<P>
+
+<P>
+A rare example of a Sutro weir appears in the following photograph, discharging flow from a lake into a stream:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{flow86.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.40ex; vertical-align: -0.10ex; " SRC="img207.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{flow86.eps}$">
+</DIV><P></P>
+
+<P>
+The metal plates forming the weir's shape are quite thick (about 1/2 inch) to give the weir sufficient strength.  A good construction practice seen on this Sutro weir, but recommended on <SPAN  CLASS="textit">all</SPAN> weir designs, is to bevel the downstream edge of the weir plate much like a standard orifice plate profile.  The beveled edge provides a minimum-friction passageway for the liquid as it spills through the weir's opening.
+
+<P>
+<P>
+
+<P>
+A variation on the theme of a weir is another open-channel device called a <SPAN  CLASS="textit">flume</SPAN>.  If weirs may be thought of as open-channel orifice plates, then flumes may be thought of as open-channel venturi tubes: <A NAME="592"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow37.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 25.16ex; vertical-align: -0.10ex; " SRC="img208.svg"
+ ALT="$\displaystyle \includegraphics{flow37.eps}$">
+</DIV><P></P>
+
+<P>
+Like weirs, flumes generate upstream liquid level height changes indicative of flow rate.  One of the most common flume design is the <SPAN  CLASS="textit">Parshall flume</SPAN>, named after its inventor R.L. Parshall when it was developed in the year 1920.
+
+<P>
+The following formulae relate head (upstream liquid height) to flow rate for free-flowing Parshall flumes<A ID="tex2html34"
+  HREF="footnode.html#foot1359"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">34</SPAN></SUP></A>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 0.992 H^{1.547} \hbox{\hskip 20pt 3-inch wide throat Parshall flume}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.59ex; vertical-align: -0.55ex; " SRC="img209.svg"
+ ALT="$\displaystyle Q = 0.992 H^{1.547} \hbox{\hskip 20pt 3-inch wide throat Parshall flume}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 2.06 H^{1.58} \hbox{\hskip 20pt 6-inch wide throat Parshall flume}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.59ex; vertical-align: -0.55ex; " SRC="img210.svg"
+ ALT="$\displaystyle Q = 2.06 H^{1.58} \hbox{\hskip 20pt 6-inch wide throat Parshall flume}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 3.07 H^{1.53} \hbox{\hskip 20pt 9-inch wide throat Parshall flume}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.59ex; vertical-align: -0.55ex; " SRC="img211.svg"
+ ALT="$\displaystyle Q = 3.07 H^{1.53} \hbox{\hskip 20pt 9-inch wide throat Parshall flume}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = 4 L H^{1.53} \hbox{\hskip 20pt 1-foot to 8-foot wide throat Parshall flume}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.59ex; vertical-align: -0.55ex; " SRC="img212.svg"
+ ALT="$\displaystyle Q = 4 L H^{1.53} \hbox{\hskip 20pt 1-foot to 8-foot wide throat Parshall flume}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = (3.6875 L + 2.5) H^{1.53} \hbox{\hskip 20pt 10-foot to 50-foot wide throat Parshall flume}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.72ex; vertical-align: -0.68ex; " SRC="img213.svg"
+ ALT="$\displaystyle Q = (3.6875 L + 2.5) H^{1.53} \hbox{\hskip 20pt 10-foot to 50-foot wide throat Parshall flume}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Volumetric flow rate (cubic feet per second &ndash; CFS)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img189.svg"
+ ALT="$L$"></SPAN> = Width of flume throat (feet)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img205.svg"
+ ALT="$H$"></SPAN> = Head (feet)
+
+<P>
+<P>
+Flumes are generally less accurate than weirs, but they do enjoy the advantage of being inherently self-cleaning.  If the liquid stream being measured is drainage- or waste-water, a substantial amount of solid debris may be present in the flow that could cause repeated clogging problems for weirs.  In such applications, flumes are often the more practical flow element for the task (and more accurate over the long term as well, since even the finest weir will not register accurately once fouled by debris).
+
+<P>
+<P>
+Once a weir or flume has been installed in an open channel to measure the flow of liquid, some method must be employed to sense upstream liquid level and translate this level measurement into a flow measurement.  Perhaps the most common technology for weir/flume level sensing is <SPAN  CLASS="textit">ultrasonic</SPAN> (see section <A HREF="#Ultrasonic_level_measurement"><IMG  ALT="[*]" SRC="crossref.png"></A> beginning on page <A HREF="#Ultrasonic_level_measurement"><IMG  ALT="[*]" SRC="crossref.png"></A> for more information on how this technology works).  Ultrasonic level sensors are completely non-contact, which means they cannot become fouled by the process liquid (or debris in the process liquid).  However, they may be &ldquo;fooled&rdquo; by foam or debris floating on top of the liquid, as well as waves on the liquid surface.
+
+<P>
+The following photograph shows a Parshall flume measuring effluent flow from a municipal sewage treatment plant, with an ultrasonic transducer mounted above the middle of the flume to detect water level flowing through:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{flume_parshall.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.55ex; vertical-align: -0.10ex; " SRC="img214.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{flume_parshall.eps}$">
+</DIV><P></P>
+
+<P>
+Once the liquid level is successfully measured, a computing device is used to translate that level measurement into a suitable flow measurement (and in some cases even integrate that flow measurement with respect to time to arrive at a value for total liquid volume passed through the element, in accordance with the calculus relationship <!-- MATH
+ $V = \int Q \> dt + C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.76ex; vertical-align: -0.81ex; " SRC="img215.svg"
+ ALT="$V = \int Q \&gt; dt + C$"></SPAN>).
+
+<P>
+A technique for providing a clean and &ldquo;quiet&rdquo; (still) liquid surface to measure the level of is called a <SPAN  CLASS="textit">stilling well</SPAN>.  This is an open-top chamber connected to the weir/flume channel by a pipe, so the liquid level in the stilling well matches the liquid level in the channel.  The following illustration shows a stilling well connected to a weir/flume channel, with the direction of liquid flow in the channel being perpendicular to the page (i.e. either coming toward your eyes or going away from your eyes):  <A NAME="611"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow38.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 38.32ex; vertical-align: -0.10ex; " SRC="img216.svg"
+ ALT="$\displaystyle \includegraphics{flow38.eps}$">
+</DIV><P></P>
+
+<P>
+To discourage plugging of the passageway connecting the stilling well to the channel, a small flow rate of clean water may be introduced into the well.  This forms a constant <SPAN  CLASS="textit">purge flow</SPAN> into the channel, flushing out debris that might otherwise find its way into the connecting passageway to plug it up.  Note how the purge water enters the stilling well through a submerged tube, so it does not cause splashing on the water's surface inside the well which could cause measurement problems for the ultrasonic sensor:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow39.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.35ex; vertical-align: -0.10ex; " SRC="img217.svg"
+ ALT="$\displaystyle \includegraphics{flow39.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+A significant advantage that weirs and flumes have over other forms of flow measurement is exceptionally high <SPAN  CLASS="textit">rangeability</SPAN>: the ability to measure very wide ranges of flow with a modest pressure (height) span.  Another way to state this is to say that the accuracy of a weir or flume is quite high even at low flow rates.  <A NAME="616"></A>
+
+<P>
+Earlier in this section you saw a three-image representation of liquid flow through a rectangular weir.  As fluid flow rate increased, so did the height (head) of the liquid upstream of the weir:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow35.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 22.84ex; vertical-align: -0.10ex; " SRC="img200.svg"
+ ALT="$\displaystyle \includegraphics{flow35.eps}$">
+</DIV><P></P>
+
+<P>
+The height of liquid upstream of the weir depends on the flow rate (volumetric <SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> or mass <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img67.svg"
+ ALT="$W$"></SPAN>) as well as the effective area of the notch through which the fluid must pass.  Unlike an orifice plate, this area changes with flow rate in both weirs and flumes.  One way to envision this by comparison is to imagine a weir as acting like an elastic orifice plate, whose bore area increases with flow rate.  This flow-dependent notch area exhibited by both weirs and flumes means that these devices become <SPAN  CLASS="textit">more sensitive</SPAN> to changes in flow as the flow rate becomes smaller.
+
+<P>
+A comparison of transfer function graphs for closed-pipe head elements such as orifice plates and venturi tubes versus weirs and flumes shows this striking difference in characteristics:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow70.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.74ex; vertical-align: -0.10ex; " SRC="img218.svg"
+ ALT="$\displaystyle \includegraphics{flow70.eps}$">
+</DIV><P></P>
+
+<P>
+Looking at the orifice plate / venturi tube graph near the lower-left corner, you can see how small changes in flow result in extremely small changes in head (differential pressure), because the function has a very low slope (small <!-- MATH
+ $dH \over dQ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.27ex; vertical-align: -1.20ex; " SRC="img219.svg"
+ ALT="$dH \over dQ$"></SPAN>) at that end.  By comparison, a weir or flume produces relatively large changes in head (liquid elevation) for small changes in flow near the bottom end of the range, because the function has a very steep slope (large <!-- MATH
+ $dH \over dQ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.27ex; vertical-align: -1.20ex; " SRC="img219.svg"
+ ALT="$dH \over dQ$"></SPAN>) at that end.
+
+<P>
+The practical advantage this gives weirs and flumes is the ability to maintain high accuracy of flow measurement at very low flow rates &ndash; something a fixed-orifice element simply cannot do.  It is commonly understood in industry that traditional orifice plate flowmeters do not maintain good measurement accuracy much below a third of their full-range flow (a rangeability or <SPAN  CLASS="textit">turndown</SPAN> of 3:1), whereas weirs (especially the V-notch design) can achieve far greater turndown (up to 500:1 according to some sources<A ID="tex2html35"
+  HREF="footnode.html#foot1360"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">35</SPAN></SUP></A>).  <A NAME="622"></A>  <A NAME="623"></A>  <A NAME="624"></A>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html220"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html222"
+  HREF="node16.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node6.html">Velocity-based flowmeters</A>
+<B> Up:</B> <A
+ HREF="node2.html">Continuous fluid flow measurement</A>
+<B> Previous:</B> <A
+ HREF="node4.html">Laminar flowmeters</A>
+ &nbsp; <B>  <A ID="tex2html221"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html223"
+  HREF="node16.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

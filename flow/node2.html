@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Continuous fluid flow measurement</TITLE>
+<META NAME="description" CONTENT="Continuous fluid flow measurement">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION00200000000000000000">
+Continuous fluid flow measurement</A>
+</H1>
+
+<P>
+The measurement of fluid flow is arguably the single most complex type of process variable measurement in all of industrial instrumentation<A ID="tex2html1"
+  HREF="footnode.html#foot1283"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>.  Not only is there a bewildering array of technologies one might use to measure fluid flow &ndash; each one with its own limitations and idiosyncrasies &ndash; but the very nature of the variable itself lacks a singular definition.  &ldquo;Flow&rdquo; may refer to volumetric flow (the number of fluid <SPAN  CLASS="textit">volumes</SPAN> passing by per unit time), mass flow (the number of fluid mass units passing by per unit time), or even <SPAN  CLASS="textit">standardized</SPAN> volumetric flow (the number of gas volumes flowing, supposing different pressure and temperature values than what the actual process line operates at).  Flowmeters configured to work with gas or vapor flows often are unusable on liquid flows.  The dynamic properties of the fluids themselves change with flow rates.  Most flow measurement technologies cannot achieve respectable measurement linearity from the maximum rated flow all the way to zero flow, no matter how well matched they might be to the process application.
+
+<P>
+Furthermore, the performance of most flowmeter technologies critically depends on proper installation.  One cannot simply hang a flowmeter at any location in a piping system and expect it to function as designed.  This is a constant source of friction between piping (mechanical) engineers and instrumentation (controls) engineers on large industrial projects.  What might be considered excellent piping layout from the perspective of process equipment function and economy is often poor (at best) for good flow measurement, and vice-versa.  In many cases the flowmeter equipment gets installed improperly and the instrument technicians have to deal with the resulting measurement problems during process unit start-up.
+
+<P>
+Even after a flowmeter has been properly selected for the process application and properly installed in the piping, problems may arise due to changes in process fluid properties (density, viscosity, conductivity), or the presence of impurities in the process fluid.  Flowmeters are also subject to far more &ldquo;wear and tear&rdquo; than most other primary sensing elements, given the fact that a flowmeter's sensing element(s) must lie directly in the path of potentially abrasive fluid streams.
+
+<P>
+Given all these complications, it is imperative for instrumentation professionals to understand the complexities of flow measurement.  What matters most is that you thoroughly understand the <SPAN  CLASS="textit">physical principles</SPAN> upon which each flowmeter depends.  If the &ldquo;first principles&rdquo; of each technology are understood, the appropriate applications and potential problems become much easier to recognize.
+
+<P>
+
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html165"
+  HREF="node3.html">Pressure-based flowmeters</A>
+<UL>
+<LI><A ID="tex2html166"
+  HREF="node3.html#SECTION00211000000000000000">Venturi tubes and basic principles</A>
+<LI><A ID="tex2html167"
+  HREF="node3.html#SECTION00212000000000000000">Volumetric flow calculations</A>
+<LI><A ID="tex2html168"
+  HREF="node3.html#SECTION00213000000000000000">Mass flow calculations</A>
+<LI><A ID="tex2html169"
+  HREF="node3.html#SECTION00214000000000000000">Square-root characterization</A>
+<LI><A ID="tex2html170"
+  HREF="node3.html#SECTION00215000000000000000">Orifice plates</A>
+<LI><A ID="tex2html171"
+  HREF="node3.html#SECTION00216000000000000000">Other differential producers</A>
+<LI><A ID="tex2html172"
+  HREF="node3.html#SECTION00217000000000000000">Proper installation</A>
+<LI><A ID="tex2html173"
+  HREF="node3.html#SECTION00218000000000000000">High-accuracy flow measurement</A>
+<LI><A ID="tex2html174"
+  HREF="node3.html#SECTION00219000000000000000">Equation summary</A>
+</UL>
+<BR>
+<LI><A ID="tex2html175"
+  HREF="node4.html">Laminar flowmeters</A>
+<LI><A ID="tex2html176"
+  HREF="node5.html">Variable-area flowmeters</A>
+<UL>
+<LI><A ID="tex2html177"
+  HREF="node5.html#SECTION00231000000000000000">Rotameters</A>
+<LI><A ID="tex2html178"
+  HREF="node5.html#SECTION00232000000000000000">Weirs and flumes</A>
+</UL>
+<BR>
+<LI><A ID="tex2html179"
+  HREF="node6.html">Velocity-based flowmeters</A>
+<UL>
+<LI><A ID="tex2html180"
+  HREF="node6.html#SECTION00241000000000000000">Turbine flowmeters</A>
+<LI><A ID="tex2html181"
+  HREF="node6.html#SECTION00242000000000000000">Vortex flowmeters</A>
+<LI><A ID="tex2html182"
+  HREF="node6.html#SECTION00243000000000000000">Magnetic flowmeters</A>
+<LI><A ID="tex2html183"
+  HREF="node6.html#SECTION00244000000000000000">Ultrasonic flowmeters</A>
+<LI><A ID="tex2html184"
+  HREF="node6.html#SECTION00245000000000000000">Optical flowmeters</A>
+</UL>
+<BR>
+<LI><A ID="tex2html185"
+  HREF="node7.html">Positive displacement flowmeters</A>
+<LI><A ID="tex2html186"
+  HREF="node8.html">Standardized volumetric flow</A>
+<LI><A ID="tex2html187"
+  HREF="node9.html">True mass flowmeters</A>
+<UL>
+<LI><A ID="tex2html188"
+  HREF="node9.html#SECTION00271000000000000000">Coriolis flowmeters</A>
+<UL>
+<LI><A ID="tex2html189"
+  HREF="node9.html#SECTION00271100000000000000">Simplified explanation</A>
+<LI><A ID="tex2html190"
+  HREF="node9.html#SECTION00271200000000000000">The Coriolis force</A>
+<LI><A ID="tex2html191"
+  HREF="node9.html#SECTION00271300000000000000">Practical Coriolis flowmeter construction</A>
+<LI><A ID="tex2html192"
+  HREF="node9.html#SECTION00271400000000000000">Matched tubes and electronics</A>
+<LI><A ID="tex2html193"
+  HREF="node9.html#SECTION00271500000000000000">Density and temperature measurement</A>
+<LI><A ID="tex2html194"
+  HREF="node9.html#SECTION00271600000000000000">Proper installation</A>
+<LI><A ID="tex2html195"
+  HREF="node9.html#SECTION00271700000000000000">Coriolis flowmeter capabilities and limitations</A>
+</UL>
+<LI><A ID="tex2html196"
+  HREF="node9.html#SECTION00272000000000000000">Thermal flowmeters</A>
+</UL>
+<BR>
+<LI><A ID="tex2html197"
+  HREF="node10.html">Weighfeeders</A>
+<LI><A ID="tex2html198"
+  HREF="node11.html">Change-of-quantity flow measurement</A>
+<LI><A ID="tex2html199"
+  HREF="node12.html">Insertion flowmeters</A>
+<LI><A ID="tex2html200"
+  HREF="node13.html">Process/instrument suitability</A>
+<LI><A ID="tex2html201"
+  HREF="node14.html">Review of fundamental principles</A>
+<LI><A ID="tex2html202"
+  HREF="node15.html">References</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="html.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html161"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html163"
+  HREF="node16.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Pressure-based flowmeters</A>
+<B> Up:</B> <A
+ HREF="html.html">html</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Contents</A>
+ &nbsp; <B>  <A ID="tex2html162"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html164"
+  HREF="node16.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

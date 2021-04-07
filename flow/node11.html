@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Change-of-quantity flow measurement</TITLE>
+<META NAME="description" CONTENT="Change-of-quantity flow measurement">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION00290000000000000000">
+Change-of-quantity flow measurement</A>
+</H1>
+
+<P>
+<SPAN  CLASS="textit">Flow</SPAN>, by definition, is the passage of material from one location to another over time.  So far this chapter has explored technologies for measuring flow rate en route from source to destination.  However, a completely different method exists for measuring flow rates: measuring how much material has either departed or arrived at the terminal locations over time.
+
+<P>
+Mathematically, we may express flow as a ratio of quantity to time.  Whether it is volumetric flow or mass flow we are referring to, the concept is the same: quantity of material moved per quantity of time.  We may express average flow rates as ratios of changes:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\overline{W} = {\Delta m \over \Delta t} \hskip 50pt \overline{Q} = {\Delta V \over \Delta t}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="img375.svg"
+ ALT="$\displaystyle \overline{W} = {\Delta m \over \Delta t} \hskip 50pt \overline{Q} = {\Delta V \over \Delta t}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<!-- MATH
+ $\overline{W}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.24ex; vertical-align: -0.10ex; " SRC="img376.svg"
+ ALT="$\overline{W}$"></SPAN> = Average mass flow rate
+
+<P>
+<!-- MATH
+ $\overline{Q}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.69ex; vertical-align: -0.55ex; " SRC="img231.svg"
+ ALT="$\overline{Q}$"></SPAN> = Average volumetric flow rate
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img377.svg"
+ ALT="$\Delta m$"></SPAN> = Change in mass
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img378.svg"
+ ALT="$\Delta V$"></SPAN> = Change in volume
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img379.svg"
+ ALT="$\Delta t$"></SPAN> = Change in time
+
+<P>
+<P>
+Suppose a water storage vessel is equipped with load cells to precisely measure weight (which is directly proportional to mass with constant gravity).  Assuming only one pipe entering or exiting the vessel, any flow of water through that pipe will result in the vessel's total weight changing over time:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow67.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.77ex; vertical-align: -0.10ex; " SRC="img380.svg"
+ ALT="$\displaystyle \includegraphics{flow67.eps}$">
+</DIV><P></P>
+
+<P>
+If the measured mass of this vessel decreased from 74688 kilograms to 70100 kilograms between 4:05 AM and 4:07 AM, we could say that the average mass flow rate of water leaving the vessel is 2294 kilograms per minute over that time span.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\overline{W} = {\Delta m \over \Delta t} = {70100 \hbox{ kg} - 74688 \hbox{ kg} \over \hbox{4:07} - \hbox{4:05}} = {-4588 \hbox{ kg} \over 2 \hbox{ min}} = -2294 {\hbox{kg} \over \hbox{min}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.15ex; vertical-align: -1.88ex; " SRC="img381.svg"
+ ALT="$\displaystyle \overline{W} = {\Delta m \over \Delta t} = {70100 \hbox{ kg} - 74...
+...} = {-4588 \hbox{ kg} \over 2 \hbox{ min}} = -2294 {\hbox{kg} \over \hbox{min}}$">
+</DIV><P></P>
+
+<P>
+Note that this average flow measurement may be determined without any flowmeter of any kind installed in the pipe to intercept the water flow.  All the concerns of flowmeters studied thus far (turbulence, Reynolds number, fluid properties, etc.) are completely irrelevant.  We may measure practically any flow rate we desire simply by measuring stored weight (or volume) over time.  A computer may do this calculation automatically for us if we wish, on practically any time scale desired.
+
+<P>
+Now suppose the practice of determining average flow rates every two minutes was considered too infrequent.  Imagine that operations personnel require flow data calculated and displayed more often than just 30 times an hour.  All we must do to achieve better time resolution is take weight (mass) measurements more often.  Of course, each mass-change interval will be expected to be less with more frequent measurements, but the amount of time we divide by in each calculation will be proportionally smaller as well.  If the flow rate happens to be absolutely steady, we may sample mass as frequently as we might like and we will still arrive at the same flow rate value as before (sampling mass just once every two minutes).  If, however, the flow rate is not steady, sampling more often will allow us to better see the immediate &ldquo;ups&rdquo; and &ldquo;downs&rdquo; of flow behavior.
+
+<P>
+Imagine now that we had our hypothetical &ldquo;flow computer&rdquo; take weight (mass) measurements at an infinitely fast pace: an infinite number of samples per second.  Now, we are no longer <SPAN  CLASS="textit">averaging</SPAN> flow rates over finite periods of time; instead we would be calculating <SPAN  CLASS="textit">instantaneous</SPAN> flow rate at any given <SPAN  CLASS="textit">point</SPAN> in time.
+
+<P>
+Calculus has a special form of symbology to represent such hypothetical scenarios: we replace the Greek letter &ldquo;delta&rdquo; (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img382.svg"
+ ALT="$\Delta$"></SPAN>, meaning &ldquo;change&rdquo;) with the roman letter &ldquo;d&rdquo; (meaning <SPAN  CLASS="textit">differential</SPAN>).  A simple way of picturing the meaning of &ldquo;d&rdquo; is to think of it as meaning an <SPAN  CLASS="textit">infinitesimal</SPAN> change in whatever variable follows the &ldquo;d&rdquo; in the equation<A ID="tex2html78"
+  HREF="footnode.html#foot1403"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">78</SPAN></SUP></A>.  When we set up two differentials in a quotient, we call the <SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img383.svg"
+ ALT="$d \over d$"></SPAN> fraction a <SPAN  CLASS="textit">derivative</SPAN>.  Re-writing our average flow rate equations in derivative (calculus) form:  <A NAME="1171"></A>  <A NAME="1172"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+W = {dm \over dt} \hskip 50pt Q = {dV \over dt}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img384.svg"
+ ALT="$\displaystyle W = {dm \over dt} \hskip 50pt Q = {dV \over dt}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img67.svg"
+ ALT="$W$"></SPAN> = Instantaneous mass flow rate
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Instantaneous volumetric flow rate
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img385.svg"
+ ALT="$dm$"></SPAN> = Infinitesimal (infinitely small) change in mass
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img386.svg"
+ ALT="$dV$"></SPAN> = Infinitesimal (infinitely small) change in volume
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img387.svg"
+ ALT="$dt$"></SPAN> = Infinitesimal (infinitely small) change in time
+
+<P>
+<P>
+
+<P>
+We need not dream of hypothetical computers capable of infinite calculations per second in order to derive a flow measurement from a mass (or volume) measurement.  Analog electronic circuitry exploits the natural properties of resistors and capacitors to essentially do this very thing in real time<A ID="tex2html79"
+  HREF="footnode.html#foot1426"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">79</SPAN></SUP></A>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow68.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 29.81ex; vertical-align: -0.10ex; " SRC="img389.svg"
+ ALT="$\displaystyle \includegraphics{flow68.eps}$">
+</DIV><P></P>
+
+<P>
+In the vast majority of applications you will see digital computers used to calculate average flow rates rather than analog electronic circuits calculating instantaneous flow rates.  The broad capabilities of digital computers virtually ensures they will be used somewhere in the measurement/control system, so the rationale is to use the existing digital computer to calculate flow rates (albeit imperfectly) rather than complicate the system design with additional (analog) circuitry.  As fast as modern digital computers are able to process simple calculations such as these anyway, there is little practical reason to prefer analog signal differentiation except in specialized applications where high speed performance is paramount.
+
+<P>
+<P>
+Perhaps the single greatest disadvantage to inferring flow rate by differentiating mass or volume measurements over time is the requirement that the storage vessel have only one flow path in and out.  If the vessel has multiple paths for liquid to move in and out (simultaneously), any flow rate calculated on change-in-quantity will be a <SPAN  CLASS="textit">net</SPAN> flow rate only.  It is impossible to use this flow measurement technique to measure one flow out of multiple flows common to one liquid storage vessel. 
+
+<P>
+A simple &ldquo;thought experiment&rdquo; confirms this fact.  Imagine a water storage vessel receiving a flow rate in at 200 gallons per minute.  Next, imagine that same vessel emptying water out of a second pipe at the exact same flow rate: 200 gallons per minute.  With the exact same flow rate both entering and exiting the vessel, the water level in the vessel will remain constant.  Any change-of-quantity flow measurement system would register zero change in mass or volume over time, consequently calculating a flow rate of absolutely zero.  Truly, the <SPAN  CLASS="textit">net</SPAN> flow rate for this vessel is zero, but this tells us nothing about the flow in each pipe, except that those flow rates are equal in magnitude and opposite in direction.  <A NAME="1180"></A>  <A NAME="1181"></A>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html260"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html262"
+  HREF="node16.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node12.html">Insertion flowmeters</A>
+<B> Up:</B> <A
+ HREF="node2.html">Continuous fluid flow measurement</A>
+<B> Previous:</B> <A
+ HREF="node10.html">Weighfeeders</A>
+ &nbsp; <B>  <A ID="tex2html261"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html263"
+  HREF="node16.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Standardized volumetric flow</TITLE>
+<META NAME="description" CONTENT="Standardized volumetric flow">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<H1><A ID="SECTION00260000000000000000">
+Standardized volumetric flow</A>
+</H1>
+
+<P>
+The majority of flowmeter technologies operate on the principle of interpreting fluid flow based on the <SPAN  CLASS="textit">velocity</SPAN> of the fluid.  Magnetic, ultrasonic, turbine, and vortex flowmeters are prime examples, where the sensing elements (of each meter type) respond directly to fluid velocity.  Translating fluid velocity into volumetric flow is quite simple, following this equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = A \overline{v}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img259.svg"
+ ALT="$\displaystyle Q = A\overline{v}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Volumetric flow rate (e.g. cubic feet per minute)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img220.svg"
+ ALT="$A$"></SPAN> = Cross-sectional area of flowmeter throat (e.g. square feet)
+
+<P>
+<!-- MATH
+ $\overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.65ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$\overline{v}$"></SPAN> = Average fluid velocity at throat section (e.g. feet per minute)
+
+<P>
+<P>
+Positive displacement flowmeters are even more direct than velocity-sensing flowmeters.  A positive displacement flowmeter directly measures volumetric flow, counting discrete volumes of fluid as it passes through the meter.
+
+<P>
+Even pressure-based flowmeters such as orifice plates and venturi tubes are usually calibrated to measure in units of volume over time (e.g. gallons per minute, barrels per hour, cubic feet per second, etc.).  For a great many industrial fluid flow applications, measurement in volumetric units makes sense.
+
+<P>
+This is especially true if the fluid in question is a liquid.  Liquids are essentially incompressible: that is, they do not easily yield in volume to applied pressure.  This makes volumetric flow measurement relatively simple for liquids: one cubic foot of a liquid at high pressure inside a process vessel will occupy approximately the same volume (<SPAN CLASS="MATH"><IMG STYLE="height: 1.31ex; vertical-align: -0.10ex; " SRC="img311.svg"
+ ALT="$\approx$"></SPAN> 1 ft<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img59.svg"
+ ALT="$^{3}$"></SPAN>) when stored in a barrel at atmospheric pressure.
+
+<P>
+Gases and vapors, however, easily change volume under the influences of both pressure and temperature.  In other words, a gas will yield to an increasing pressure by decreasing in volume as the gas molecules are forced closer together, and it will yield to a decreasing temperature by decreasing in volume as the kinetic energy of the individual molecules is reduced.  This makes volumetric flow measurement more complex for gases than for liquids.  One cubic foot of gas at high pressure and temperature inside a process vessel will <SPAN  CLASS="textit">not</SPAN> occupy one cubic foot under ambient pressure and temperature conditions.
+
+<P>
+
+<P>
+The practical difference between volumetric flow measurement for liquids versus gases is easily seen through an example where we measure the volumetric flow rate before and after a pressure-reduction valve:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow77.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 73.16ex; vertical-align: -0.10ex; " SRC="img312.svg"
+ ALT="$\displaystyle \includegraphics{flow77.eps}$">
+</DIV><P></P>
+
+<P>
+The volumetric flow rate of liquid before and after the pressure-reducing valve is the same, since the volume of a liquid does not depend on the pressure applied to it (i.e. liquids are <SPAN  CLASS="textit">incompressible</SPAN>).  The volumetric flow rate of the gas, however, is significantly greater following the pressure-reducing valve than before, since the reduction in pressure allows the gas to expand (i.e. less pressure means the gas occupies a greater volume).
+
+<P>
+What this tells us is that volumetric flow measurement for gas is virtually meaningless without accompanying data on pressure and temperature.  A flow rate of &ldquo;430 ft<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img59.svg"
+ ALT="$^{3}$"></SPAN>/min&rdquo; reported by a flowmeter measuring gas at 250 PSIG means something completely different than the same volumetric flow rate (430 ft<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img59.svg"
+ ALT="$^{3}$"></SPAN>/min) reported at a different line pressure.
+
+<P>
+One solution to this problem is to dispense with volumetric flow measurement altogether in favor of <SPAN  CLASS="textit">mass flow measurement</SPAN>, constructing the flowmeter in such a way that the actual <SPAN  CLASS="textit">mass</SPAN> of the gas molecules is measured as they pass through the instrument.  This approach is explored in more detail in section <A HREF="node9.html#Mass_flow"><IMG  ALT="[*]" SRC="crossref.png"></A> beginning on page <A HREF="node9.html#Mass_flow"><IMG  ALT="[*]" SRC="crossref.png"></A>.  A more traditional approach to this problem is to specify gas flow in volume units per time, at some agreed-upon (standardized) set of pressure and temperature conditions.  This is known as <SPAN  CLASS="textit">standardized</SPAN> volumetric flow measurement.
+
+<P>
+
+<P>
+Referring to our pictorial example previously shown, imagine if we took a sample of the gas flowing at a line pressure of 250 PSIG and let that sample expand to atmospheric pressure (0 PSIG), measuring its new volume under those new conditions.  For the sake of keeping this example simple, we will consider only a change in pressure, but not a change in temperature.  Obviously, one cubic foot of gas at 250 PSIG would expand to a far greater volume than 1 ft<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img59.svg"
+ ALT="$^{3}$"></SPAN> at atmospheric pressure.  This ratio of &ldquo;standard volume&rdquo; to &ldquo;actual volume&rdquo; (in the pressurized pipe) could then be used to <SPAN  CLASS="textit">scale</SPAN> the flowmeter's measurement, so that the flowmeter registers in <SPAN  CLASS="textit">standard cubic feet per minute</SPAN>, or <SPAN  CLASS="textit">SCFM</SPAN>:  <A NAME="913"></A>  <A NAME="914"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow78.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 47.23ex; vertical-align: -0.10ex; " SRC="img313.svg"
+ ALT="$\displaystyle \includegraphics{flow78.eps}$">
+</DIV><P></P>
+
+<P>
+Assuming the same temperature inside the pipe as outside, the expansion ratio for this gas will be approximately 18:1, meaning the &ldquo;actual&rdquo; flowing rate of 430 ft<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img59.svg"
+ ALT="$^{3}$"></SPAN>/min is equivalent to approximately 7743 ft<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img59.svg"
+ ALT="$^{3}$"></SPAN>/min of gas flow at &ldquo;standard&rdquo; atmospheric conditions.  In order to unambiguously distinguish &ldquo;actual&rdquo; volumetric flow rate from &ldquo;standardized&rdquo; volumetric flow rate, we commonly preface each unit with a letter &ldquo;A&rdquo; or letter &ldquo;S&rdquo; (e.g. ACFM and SCFM).
+
+<P>
+<P>
+
+<P>
+If a volumetric-registering flowmeter is equipped with pressure and temperature sensors, it may automatically scale its own output signal to measure gas flow rate in standard volumetric units.  All we need to determine is the mathematical procedure to scale actual conditions to standard conditions for a gas.  To do this, we will refer to the Ideal Gas Law (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img314.svg"
+ ALT="$PV = nRT$"></SPAN>), which is a fair approximation for most real gases at conditions far from their critical phase-change points.  First, we shall write two versions of the Ideal Gas Law, one for the gas under &ldquo;standard&rdquo; atmospheric conditions, and one for the gas under &ldquo;actual&rdquo; flowing conditions (using the subscripts &ldquo;S&rdquo; and &ldquo;A&rdquo; to distinguish one set of variables from the other): <A NAME="918"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P_S V_S = nR T_S
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img315.svg"
+ ALT="$\displaystyle P_S V_S = nR T_S$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P_A V_A = nR T_A
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img316.svg"
+ ALT="$\displaystyle P_A V_A = nR T_A$">
+</DIV><P></P>
+
+<P>
+What we need to do is determine the <SPAN  CLASS="textit">ratio</SPAN> of standard volume to actual volume (<!-- MATH
+ $V_S \over V_A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.28ex; vertical-align: -1.16ex; " SRC="img317.svg"
+ ALT="$V_S \over V_A$"></SPAN>).  To do this, we may divide one equation by the other<A ID="tex2html55"
+  HREF="footnode.html#foot920"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">55</SPAN></SUP></A>: 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{P_S V_S \over P_A V_A} = {nR T_S \over nR T_A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.27ex; vertical-align: -2.04ex; " SRC="img320.svg"
+ ALT="$\displaystyle {P_S V_S \over P_A V_A} = {nR T_S \over nR T_A}$">
+</DIV><P></P>
+
+<P>
+Seeing that both the <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img321.svg"
+ ALT="$n$"></SPAN> variables are identical and <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img322.svg"
+ ALT="$R$"></SPAN> is a constant, we may cancel them both from the right-hand side of the equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{P_S V_S \over P_A V_A} = {T_S \over T_A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.27ex; vertical-align: -2.04ex; " SRC="img323.svg"
+ ALT="$\displaystyle {P_S V_S \over P_A V_A} = {T_S \over T_A}$">
+</DIV><P></P>
+
+<P>
+Solving for the ratio <!-- MATH
+ $V_S \over V_A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.28ex; vertical-align: -1.16ex; " SRC="img317.svg"
+ ALT="$V_S \over V_A$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{V_S \over V_A} = {P_A T_S \over P_S T_A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.27ex; vertical-align: -2.04ex; " SRC="img324.svg"
+ ALT="$\displaystyle {V_S \over V_A} = {P_A T_S \over P_S T_A} $">
+</DIV><P></P>
+
+<P>
+Since we know the definition of volumetric flow (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>) is volume over time (<SPAN CLASS="MATH"><IMG STYLE="height: 2.96ex; vertical-align: -0.90ex; " SRC="img325.svg"
+ ALT="$V \over t$"></SPAN>), we may divide each <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img64.svg"
+ ALT="$V$"></SPAN> variable by <SPAN CLASS="MATH"><IMG STYLE="height: 1.62ex; vertical-align: -0.10ex; " SRC="img304.svg"
+ ALT="$t$"></SPAN> to convert this into a volumetric flow <SPAN  CLASS="textit">rate</SPAN> correction ratio<A ID="tex2html56"
+  HREF="footnode.html#foot928"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">56</SPAN></SUP></A>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{{V_S \over t} \over {V_A \over t}} = {P_A T_S \over P_S T_A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 6.50ex; vertical-align: -2.68ex; " SRC="img327.svg"
+ ALT="$\displaystyle {{V_S \over t} \over {V_A \over t}} = {P_A T_S \over P_S T_A} $">
+</DIV><P></P>
+
+<P>
+This leaves us with a ratio of &ldquo;standardized&rdquo; volumetric flow (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img328.svg"
+ ALT="$Q_S$"></SPAN>) to &ldquo;actual&rdquo; volumetric flow (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img329.svg"
+ ALT="$Q_A$"></SPAN>), for any known pressures and temperatures, standard to actual:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{Q_S \over Q_A} = {P_A T_S \over P_S T_A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.38ex; vertical-align: -2.14ex; " SRC="img330.svg"
+ ALT="$\displaystyle {Q_S \over Q_A} = {P_A T_S \over P_S T_A} $">
+</DIV><P></P>
+
+<P>
+
+<P>
+We may apply this to a practical example, assuming flowing conditions of 250 PSIG and 90 degrees Fahrenheit, and &ldquo;standard&rdquo; conditions of 0 PSIG and 60 degrees Fahrenheit.  It is very important to ensure all values for pressure and temperature are expressed in <SPAN  CLASS="textit">absolute</SPAN> units (e.g. PSIA and degrees Rankine), which is what the Ideal Gas Law assumes:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow79.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 26.52ex; vertical-align: -0.10ex; " SRC="img331.svg"
+ ALT="$\displaystyle \includegraphics{flow79.eps}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{Q_S \over Q_A} = {P_A T_S \over P_S T_A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.38ex; vertical-align: -2.14ex; " SRC="img330.svg"
+ ALT="$\displaystyle {Q_S \over Q_A} = {P_A T_S \over P_S T_A} $">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q_S = Q_A \left({P_A T_S \over P_S T_A}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img332.svg"
+ ALT="$\displaystyle Q_S = Q_A \left({P_A T_S \over P_S T_A}\right) $">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+7320 \hbox{ SCFM} = (430 \hbox{ ACFM}) \left({(264.7 \hbox{ PSIA}) (519.67^{o}\hbox{R}) \over (14.7 \hbox{ PSIA}) (549.67^o \hbox{R})}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img333.svg"
+ ALT="$\displaystyle 7320 \hbox{ SCFM} = (430 \hbox{ ACFM}) \left({(264.7 \hbox{ PSIA}) (519.67^{o}\hbox{R}) \over (14.7 \hbox{ PSIA}) (549.67^o \hbox{R})}\right) $">
+</DIV><P></P>
+
+<P>
+This figure of 7320 SCFM indicates the volumetric flow rate of the gas through the pipe <SPAN  CLASS="textit">had it been allowed to expand to atmospheric pressure and cool to ambient temperature</SPAN>.  Although we know these are definitely not the same conditions inside the gas pipe, the correction of actual volumetric flow measurement to these imagined conditions allows us to express gas flow rates in an equitable fashion regardless of the process line pressure or temperature.  To phrase this in colloquial terms, standardized volumetric flow figures allow us to compare different process gas flow rates on an &ldquo;apples to apples&rdquo; basis, instead of the &ldquo;apples to oranges&rdquo; problem we faced earlier where flowmeters would register different volumetric flow values because their line pressures and/or flowing temperatures differed. 
+
+<P>
+
+<P>
+With pressure and temperature compensation integrated into volumetric flowmeters, we should be able to measure the exact same <SPAN  CLASS="textit">standardized</SPAN> flow rate at any point in a series gas piping system regardless of pressure or temperature changes:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow80.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 33.10ex; vertical-align: -0.10ex; " SRC="img334.svg"
+ ALT="$\displaystyle \includegraphics{flow80.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+An unfortunate state of affairs is the existence of multiple<A ID="tex2html57"
+  HREF="footnode.html#foot949"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">57</SPAN></SUP></A> &ldquo;standard&rdquo; conditions of pressure and temperature defined by different organizations.  In the previous example, 14.7 PSIA was assumed to be the &ldquo;standard&rdquo; atmospheric pressure, and 60 degrees Fahrenheit (519.67 degrees Rankine) was assumed to be the &ldquo;standard&rdquo; ambient temperature.  This conforms to the API (American Petroleum Institute) standards in the United States of America, but it does <SPAN  CLASS="textit">not</SPAN> conform to other standards in America or in Europe.  The ASME (American Society of Mechanical Engineers) uses 14.7 PSIA and 68 degrees Fahrenheit (527.67 degrees Rankine) as their &ldquo;standard&rdquo; conditions for calculating SCFM.  In Europe, the PNEUROP agency has standardized with the American CAGI (Compressed Air and Gas Institute) organization on 14.5 PSIA and 68 degrees Fahrenheit being the &ldquo;standard&rdquo; conditions.
+
+<P>
+For gas flows containing condensible vapors, the <SPAN  CLASS="textit">partial pressures</SPAN> of the vapors must be subtracted from the absolute pressures (<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img335.svg"
+ ALT="$P_A$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img336.svg"
+ ALT="$P_S$"></SPAN>) in order that the correction factor accurately reflects gas behavior alone.  A common application of standardized gas flow involving partial pressure correction is found in compressed air systems, where water vapor (relative humidity) is a factor.  Here too, standards differ as to the humidity conditions of &ldquo;standard&rdquo; cubic feet.  The API and PNEUROP/CAGI standards call for 0% humidity (perfectly dry air) as the &ldquo;standard,&rdquo; while the ASME defines 35% relative humidity as &ldquo;standard&rdquo; for compressed air calculations.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html239"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html241"
+  HREF="node16.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node9.html">True mass flowmeters</A>
+<B> Up:</B> <A
+ HREF="node2.html">Continuous fluid flow measurement</A>
+<B> Previous:</B> <A
+ HREF="node7.html">Positive displacement flowmeters</A>
+ &nbsp; <B>  <A ID="tex2html240"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html242"
+  HREF="node16.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

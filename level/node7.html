@@ -1,0 +1,778 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Ekko</TITLE>
+<META NAME="description" CONTENT="Ekko">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html172"
+  HREF="node7.html#SECTION00251000000000000000">Ultralyd nivåmåling</A>
+<LI><A ID="tex2html173"
+  HREF="node7.html#SECTION00252000000000000000">Radar level measurement</A>
+<LI><A ID="tex2html174"
+  HREF="node7.html#SECTION00253000000000000000">Laser level measurement</A>
+<LI><A ID="tex2html175"
+  HREF="node7.html#SECTION00254000000000000000">Magnetostrictive level measurement</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00250000000000000000">
+Ekko</A>
+</H1>
+
+<P>
+En annen måte å måle nivået i en tank på er reflektere en bølge på overflaten til væsken i tanken. Da monteres vanligvis nivåmåleren i toppen av tanken så bruker en tiden tar tar for  bølgen å reflektere fra overflaten som en indikasjon på nivået i tanken. Ekkobaserte nivåmålere har den fordelen at de ikke påvirkes av massetettheten til væsken, som andre nivåleprinsipper må kalibreres for. 
+
+<P>
+From a historical perspective, hydrostatic and displacement level instruments have a richer pedigree.  These instruments are simpler in nature than echo-based instruments, and were practical long before the advent of modern electronic technology.  Echo-based instruments require precision timing and wave-shaping circuitry, plus sensitive (and rugged!) transceiver elements, demanding a much higher level of technology.  However, modern electronic design and instrument manufacturing practices are making echo-based level instruments more and more practical for industrial applications.  At the time of this writing (2008), it is common practice in some industries to replace old displacer level instruments with guided-wave radar instruments, even in demanding applications operating at high pressures<A ID="tex2html18"
+  HREF="footnode.html#foot508"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">18</SPAN></SUP></A>. <A NAME="509"></A>
+
+<P>
+Liquid-liquid interfaces may also be measured with some types of echo-based level instruments, most commonly guided-wave radar.  
+
+<P>
+The single most important factor to the accuracy of any echo-based level instrument is the speed at which the wave travels en route to the liquid surface and back.  This wave propagation speed is as fundamental to the accuracy of an echo instrument as liquid density is to the accuracy of a hydrostatic or displacer instrument.  So long as this velocity is known and stable, good level measurement accuracy is possible.  Although it is true that the calibration of an echo-based level instrument does not depend on process fluid density for the reason it does in hydrostatic- or displacement-based level instruments, this does not necessarily mean the calibration of an echo-based level instrument remains fixed as process fluid density changes.  The propagation velocity of the wave used in an echo-based level instrument may indeed be subject to change as the process fluids change temperature or composition.  For ultrasonic (sound) echo instruments, the speed of sound is a function of medium density.  Thus, an ultrasonic level transmitter measuring time-of-flight through a vapor above the liquid may drift out of calibration if the speed of sound through that vapor changes substantially, which may happen if the vapor's temperature or pressure happens to change.  If the sound wave time-of-flight is measured while the waves pass through liquid, the calibration may drift if the speed of sound in that liquid changes substantially, which may happen if the liquid's temperature changes.  For radar (radio wave) echo instruments, the speed of radio wave propagation varies according to the dielectric permittivity of the medium.  Permittivity is also affected by changes in density for the fluid medium, and so even radar level instruments may suffer calibration drift with process fluid density changes.
+
+<P>
+<P>
+To summarize these effects, the speed of sound through any medium is a function of density and bulk modulus (the &ldquo;compressibility&rdquo; of the medium), with density generally being the more variable of the two.  For gases and vapors, this means the speed of sound is strongly affected by changes in gas pressure and/or gas temperature.  For liquids, this means the speed of sound is strongly affected by temperature.  For solids, this means the speed of sound is weakly affected by temperature.  The degree to which the speed of sound will be affected by temperature changes is directly related to the degree the medium's density changes with temperature: solid materials generally expand and contract less than liquids over the same temperature range, thus the strong temperature effect for liquids and the weak temperature effect for solids.  <A NAME="510"></A>  <A NAME="511"></A>
+
+<P>
+Radio wave velocity is a function of dielectric permittivity, which is also a function of density.  However, the degree of change in dielectric permittivity resulting from changes in pressure and/or temperature are generally much less than the degree of change in speed of sound for the same media and the same changes in pressure and/or temperature.  This means that &ndash; all other factors being equal &ndash; an echo-based level instrument using radio waves will suffer far less calibration error than an echo-based level instrument using sound waves when process fluid pressure and/or temperature change.  However, it should be noted that process fluid <SPAN  CLASS="textit">composition</SPAN> (i.e. its chemical make-up) may have a strong effect on radio wave propagation, not just on its time-of-flight but also on its ability to produce an adequate echo at the interface between two fluids.
+
+<P>
+<P>
+Echo-based level instruments may also be &ldquo;fooled&rdquo; by layers of foam resting on top of the liquid, and the liquid-to-liquid interface detection models may have difficulty detecting non-distinct interfaces (such as emulsions).  Irregular structures residing within the vapor space of a vessel (such as access portals, mixer paddles and shafts, ladders, etc.) may wreak havoc with echo-based level instruments by casting false echoes back to the instrument, although this problem may be mitigated by installing guide tubes for the waves to travel in, or using wave probes as in the cases of guided-wave radar instruments.  Liquid streams pouring in to the vessel through the vapor space may similarly cause problems for an echo instrument.  Additionally, all echo-based instruments have <SPAN  CLASS="textit">dead zones</SPAN> where liquid level is too close to the transceiver to be accurately measured or even detected (the echo time-of-flight being too short for the receiving electronics to distinguish from the incident pulse).
+
+<P>
+<P>
+As you can see, echo-based level instruments have strengths and weaknesses just like any other type of level instrument.  There is no &ldquo;perfect&rdquo; level instrument, but rather a wide array of choices from which the end-user must judiciously select for the particular application in mind.  Beware of sales pitches urging you to buy the &ldquo;perfect&rdquo; level meter!  The wise approach is to first research the underlying physics of the instrument, then determine how strongly its accuracy will be affected by realistic changes in process conditions (e.g. pressure, temperature, composition).
+
+<P>
+
+<H2><A ID="SECTION00251000000000000000">
+Ultralyd nivåmåling</A>
+</H2>
+
+<P>
+<A ID="Ultralyd_niv__m__ling"></A>
+<P>
+<SPAN  CLASS="textit">Ultralyd</SPAN> nivåmåleinstrumenter måler avstanden fra transpitteren, som festes i toppen av tanken, til overflaten på innholdet i tanken ved hjelp av reflekterte lydbølger. Frekvensen på disse lydbølgene er høydere en det mennesker kan høre, derfor kaller vi det ultralyd. Tiden det tar for en lydbølge å bli reflektert er et indirekte mål på avstanden, og tolkes av transmitteren som nivå i tanken. Transmitteren gir et signal på fyllinsgraden i tanken eller hvor mye tomrom det er over over væsken, også kalt <SPAN  CLASS="textit">ullasje</SPAN>. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level34.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 34.84ex; vertical-align: -0.10ex; " SRC="img166.svg"
+ ALT="$\displaystyle \includegraphics{level34.eps}$">
+</DIV><P></P>
+
+<P>
+Tomrom eller ullasje er det som naturlig måles av en ultarlydmåler. Dette fordi tiden det tar før ekkoet returneres er en funksjon av avstanden til toppen av væsken. Tankens totale høyde er en summen av fyllingsgrad og ullasje. En ultralyd nivåmåler må derfor programmeres med tankens totale høyde før den kan gi fyllingsgraden eller nivået. Dette er bare en enken kalkulasjon:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Nivå} = \hbox{Tankens totale høyde} - \hbox{Ullasje}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img167.svg"
+ ALT="$\displaystyle \hbox{Nivå} = \hbox{Tankens totale høyde} - \hbox{Ullasje}$">
+</DIV><P></P>
+
+<P>
+If a sound wave encounters a sudden change in the material's speed of sound, some of that wave's energy will be reflected in the form of another wave in the opposite direction.  In other words, the sound wave will &ldquo;echo&rdquo; when it encounters a material having a different sonic velocity<A ID="tex2html19"
+  HREF="footnode.html#foot830"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">19</SPAN></SUP></A>.  This is the basis of all ultrasonic ranging devices.  Thus, in order for an ultrasonic level transmitter to function reliably, the difference in sonic velocities at the interface between liquid and gas must be large.  Distinct interfaces of liquid and gas almost always exhibit huge differences in their speeds of sound, and so are relatively easy to detect using ultrasonic waves.  Liquids with a heavy layer of foam floating on top are more difficult, since the foam is less dense than the liquid, but considerably denser than the gas above.  A weak echo will be generated at the interface of foam and gas, and another generated at the interface of liquid and foam, with the foam acting to scatter and dissipate much of the second echo's energy.  <A NAME="523"></A>  <A NAME="524"></A>
+
+<P>
+
+<P>
+The instrument itself consists of an electronics module containing all the power, computation, and signal processing circuits; plus an ultrasonic transducer<A ID="tex2html20"
+  HREF="footnode.html#foot525"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">20</SPAN></SUP></A> to send and receive the sound waves.  This transducer is typically piezoelectric in nature, being the equivalent of a very high-frequency audio speaker.  The following photographs show a typical electronics module (left) and sonic transducer (right):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=3in]{ultrasonic_level_transmitter.eps} \hskip 30pt \includegraphics[height=3in]{ultrasonic_level_transducer.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.00ex; vertical-align: -0.10ex; " SRC="img171.svg"
+ ALT="$\displaystyle \includegraphics[height=3in]{ultrasonic_level_transmitter.eps} \hskip 30pt \includegraphics[height=3in]{ultrasonic_level_transducer.eps}$">
+</DIV><P></P>
+
+<P>
+The ISA-standard designations for each component would be &ldquo;LT&rdquo; (level transmitter) for the electronics module and &ldquo;LE&rdquo; (level element) for the transducer, respectively.  Even though we call the device responsible for transmitting and receiving the sound waves a <SPAN  CLASS="textit">transducer</SPAN> (in the scientific sense of the word), its function as a process instrument is to be the <SPAN  CLASS="textit">primary sensing element</SPAN> for the level measurement system, and therefore it is more properly designated a &ldquo;level element&rdquo; (LE).
+
+<P>
+
+<P>
+This photograph shows a typical installation for an ultrasonic level-sensing element (LE), here sensing the level of wastewater in an open channel:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=6in]{level75.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 83.81ex; vertical-align: -0.10ex; " SRC="img172.svg"
+ ALT="$\displaystyle \includegraphics[height=6in]{level75.eps}$">
+</DIV><P></P>
+
+<P>
+Electrical conduit serves to protect the signal cable from exposure to the elements as it routes back to an indoor location where the level transmitter (LT) is located.
+
+<P>
+
+<P>
+If the ultrasonic transducer is rugged enough, and the process vessel sufficiently free of sludge and other sound-damping materials accumulating at the vessel bottom, the transducer may be mounted at the bottom of the vessel, bouncing sound waves off the liquid surface through the liquid itself rather than through the vapor space.  As stated previously, any significant difference in sonic velocity between the two materials is sufficient to reflect a sound wave.  This being the case, it shouldn't matter which material the incident sound wave propagates through <SPAN  CLASS="textit">first</SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level35.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 33.87ex; vertical-align: -0.10ex; " SRC="img173.svg"
+ ALT="$\displaystyle \includegraphics{level35.eps}$">
+</DIV><P></P>
+
+<P>
+This arrangement makes fillage the natural measurement, and ullage a derived measurement (calculated by subtraction from total vessel height).
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Ullage} = \hbox{Total height} - \hbox{Fillage}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img174.svg"
+ ALT="$\displaystyle \hbox{Ullage} = \hbox{Total height} - \hbox{Fillage}$">
+</DIV><P></P>
+
+<P>
+As mentioned previously, the calibration of an ultrasonic level transmitter depends on the speed of sound through the medium between the transducer and the interface.  For top-mounted transducers, this is the speed of sound through the air (or vapor) over the liquid, since this is the medium through which the incident and reflected wave travel time is measured.  For bottom-mounted transducers, this is the speed of sound through the liquid.  In either case, to ensure good accuracy, one must make sure the speed of sound through the &ldquo;timed&rdquo; travel path remains reasonably constant (or else compensate for changes in the speed of sound through that medium by use of temperature or pressure measurements and a compensating algorithm).
+
+<P>
+
+<P>
+Ultrasonic level instruments enjoy the advantage of being able to measure the height of solid materials such as powders and grains stored in vessels, not just liquids.  Again, the fundamental criterion for detecting a level of material is that the speeds of sound through the upper and lower materials must differ (the greater the difference, the stronger the echo).  A unique challenge to solids measurement is the distinct possibility of uneven material profiles.  A classic problem encountered when measuring the level of a powdered or granular material in a vessel is the <SPAN  CLASS="textit">angle of repose</SPAN> formed by the material as a result of being fed into the vessel at one point:  <A NAME="537"></A>  <A NAME="538"></A>
+
+<P>
+<A ID="Repose_angle"></A>
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level39.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.16ex; vertical-align: -0.10ex; " SRC="img175.svg"
+ ALT="$\displaystyle \includegraphics{level39.eps}$">
+</DIV><P></P>
+
+<P>
+This angled surface is difficult for an ultrasonic device to detect because it tends to scatter the sound waves laterally instead of reflecting them strongly back toward the instrument.  However, even if the scattering problem is not significant, there still remains the problem of interpretation: what is the instrument actually measuring?  The detected level near the vessel wall will certainly register less than at the center, but the level detected mid-way between the vessel wall and vessel center may not be an accurate average of those two heights.  Moreover, this angle may decrease over time if mechanical vibrations cause the material to &ldquo;flow&rdquo; and tumble from center to edge.
+
+<P>
+For this reason, solids storage measurement applications demanding high accuracy generally use other techniques, such as weight-based measurement (see section <A HREF="node8.html#Weight-based_level">1.6</A> for more information) or three-dimensional scanning (see section <A HREF="#Storage_tank_characterization"><IMG  ALT="[*]" SRC="crossref.png"></A> for more information).
+
+<P>
+
+<H2><A ID="SECTION00252000000000000000">
+Radar level measurement</A>
+</H2>
+
+<P>
+<A ID="radar_level_measurement"></A>
+<P>
+<SPAN  CLASS="textit">Radar</SPAN><A ID="tex2html21"
+  HREF="footnode.html#foot546"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">21</SPAN></SUP></A> level instruments measure the distance from the transmitter (located at some high point) to the surface of a process material located farther below in much the same way as ultrasonic transmitters &ndash; by measuring the time-of-flight of a traveling wave.  The fundamental difference between a radar instrument and an ultrasonic instrument is the type of wave used: radio waves instead of sound waves.  Radio waves are electromagnetic in nature (comprised of alternating electric and magnetic fields), and very high frequency (in the microwave frequency range &ndash; GHz).  Sound waves are <SPAN  CLASS="textit">mechanical</SPAN> vibrations (transmitted from molecule to molecule in a fluid or solid substance) and of much lower frequency (tens or hundreds of kilohertz &ndash; still too high for a human being to detect as a tone) than radio waves.  In any case, a wave will refect off of an interface of two different substances if those two substances possess different wave-propagation velocities.
+
+<P>
+Some radar level instruments use waveguide &ldquo;probes&rdquo; to guide the electromagnetic waves to and from the process liquid while others send electromagnetic waves out through open space to reflect off the process material.  The instruments using waveguides are called <SPAN  CLASS="textit">guided-wave radar</SPAN> instruments, whereas the radar instruments relying on open space for signal propagation are called <SPAN  CLASS="textit">non-contact radar</SPAN>.  The differences between these two varieties of radar instruments is shown in the following illustration: <A NAME="550"></A>  <A NAME="551"></A> <A NAME="552"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level37.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 50.52ex; vertical-align: -0.10ex; " SRC="img176.svg"
+ ALT="$\displaystyle \includegraphics{level37.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Photographs of non-contact (left) and guided-wave (right) radar level transmitters are shown below.  The non-contact transmitter is placed on a table for inspection while the guided-wave transmitter is installed in a &ldquo;cage&rdquo;<A ID="tex2html22"
+  HREF="footnode.html#foot554"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">22</SPAN></SUP></A> similar to that of a displacement-style level transmitter attached to the vessel by two pipes:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=3in]{radar_noncontact_01.eps} \hskip 30pt \includegraphics[height=3in]{radar_guided_01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.00ex; vertical-align: -0.10ex; " SRC="img177.svg"
+ ALT="$\displaystyle \includegraphics[height=3in]{radar_noncontact_01.eps} \hskip 30pt \includegraphics[height=3in]{radar_guided_01.eps}$">
+</DIV><P></P>
+
+<P>
+Non-contact radar devices suffer much more signal loss than guided-wave radar devices, due to the natural tendency of electromagnetic radiation to disperse over space.  Waveguides combat this signal loss by channeling the radio energy along a straight-line path.  Probes used in guided-wave radar instruments may be single metal rods, parallel pairs of metal rods, or a coaxial metal rod-and-tube structure.  Single-rod probes suffer the greatest energy losses, while coaxial probes excel at guiding the microwave energy to the liquid interface and back.  However, single-rod probes are much more tolerant of process fouling than two-rod or (especially) coaxial probes, where sticky masses of viscous liquid and/or solid matter cling to the probe.  Such fouling deposits, if severe enough, will cause electromagnetic wave reflections that &ldquo;look&rdquo; to the transmitter like the reflection from an actual liquid level or interface.
+
+<P>
+
+<P>
+Non-contact radar instruments rely on antennas to direct microwave energy into the vessel, and to receive the echo (return) energy.  These antennas must be kept clean and dry, which may be a problem if the liquid being measured emits condensible vapors.  For this reason, non-contact radar instruments are often separated from the vessel interior by means of a <SPAN  CLASS="textit">dielectric window</SPAN> (made of some substance such as plastic that is relatively &ldquo;transparent&rdquo; to electromagnetic waves yet acts as an effective vapor barrier):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level41.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 50.52ex; vertical-align: -0.10ex; " SRC="img178.svg"
+ ALT="$\displaystyle \includegraphics{level41.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+Electromagnetic waves travel at the speed of light<A ID="tex2html23"
+  HREF="footnode.html#foot559"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">23</SPAN></SUP></A>, <!-- MATH
+ $2.9979 \times 10^8$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.29ex; " SRC="img179.svg"
+ ALT="$2.9979 \times 10^8$"></SPAN> meters per second in a perfect vacuum.  The velocity of an electromagnetic wave through space depends on the dielectric permittivity (symbolized by the Greek letter &ldquo;epsilon,&rdquo; <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img180.svg"
+ ALT="$\epsilon$"></SPAN>) of that space.  A formula relating wave velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img181.svg"
+ ALT="$v$"></SPAN>) to relative permittivity (the ratio of a substance's permittivity to that of a perfect vacuum, symbolized as <!-- MATH
+ $\epsilon_r$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img182.svg"
+ ALT="$\epsilon_r$"></SPAN> and sometimes called the <SPAN  CLASS="textit">dielectric constant</SPAN> of the substance) and the speed of light in a perfect vacuum (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img169.svg"
+ ALT="$c$"></SPAN>) is shown here<A ID="tex2html24"
+  HREF="footnode.html#foot561"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">24</SPAN></SUP></A>: <A NAME="562"></A> <A NAME="563"></A> <A NAME="564"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = {c \over \sqrt{\epsilon_r}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.07ex; vertical-align: -2.42ex; " SRC="img183.svg"
+ ALT="$\displaystyle v = {c \over \sqrt{\epsilon_r}}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+As mentioned previously, the calibration of any echo-based level transmitter depends on knowing the speed of wave propagation through the medium separating the instrument from the process fluid interface.  For radar transmitters sensing a single liquid below a gas or vapor, this speed is the speed of light through that gas or vapor space, which we know to be a function of electrical permittivity.
+
+<P>
+The relative permittivity of air at standard pressure and temperature is very nearly unity (1).  This means the speed of light in air under atmospheric pressure and ambient temperature will very nearly be the same as it is for a perfect vacuum (<!-- MATH
+ $2.9979 \times 10^8$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.29ex; " SRC="img179.svg"
+ ALT="$2.9979 \times 10^8$"></SPAN> meters per second).  If, however, the vapor space above the liquid is not ambient air, and is subject to large changes in temperature and/or pressure<A ID="tex2html25"
+  HREF="footnode.html#foot566"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">25</SPAN></SUP></A> which cause the vapor's density to change, the permittivity of that vapor may substantially change and consequently skew the speed of light, and therefore the calibration of the level instrument.  This calibration shift is sometimes referred to as the <SPAN  CLASS="textit">gas phase effect</SPAN>.  <A NAME="568"></A>
+
+<P>
+A formula useful for calculating the permittivity of any gas or vapor based on both pressure and temperature is shown here<A ID="tex2html26"
+  HREF="footnode.html#foot860"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">26</SPAN></SUP></A>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\epsilon_r = 1 + (\epsilon_{ref} - 1) {P T_{ref} \over P_{ref} T}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.57ex; vertical-align: -2.34ex; " SRC="img188.svg"
+ ALT="$\displaystyle \epsilon_r = 1 + (\epsilon_{ref} - 1) {P T_{ref} \over P_{ref} T}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<!-- MATH
+ $\epsilon_r$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img182.svg"
+ ALT="$\epsilon_r$"></SPAN> = Relative permittivity of a gas at a given pressure (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img20.svg"
+ ALT="$P$"></SPAN>) and temperature (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img189.svg"
+ ALT="$T$"></SPAN>)
+
+<P>
+<!-- MATH
+ $\epsilon_{ref}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.75ex; " SRC="img190.svg"
+ ALT="$\epsilon_{ref}$"></SPAN> = Relative permittivity of the same gas at standard pressure (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img191.svg"
+ ALT="$P_{ref}$"></SPAN>) and temperature (<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img192.svg"
+ ALT="$T_{ref}$"></SPAN>)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img20.svg"
+ ALT="$P$"></SPAN> = Absolute pressure of gas (bars)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img191.svg"
+ ALT="$P_{ref}$"></SPAN> = Absolute pressure of gas under standard conditions (<SPAN CLASS="MATH"><IMG STYLE="height: 1.31ex; vertical-align: -0.10ex; " SRC="img193.svg"
+ ALT="$\approx$"></SPAN> 1 bar)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img189.svg"
+ ALT="$T$"></SPAN> = Absolute temperature of gas (Kelvin)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img192.svg"
+ ALT="$T_{ref}$"></SPAN> = Absolute temperature of gas under standard conditions (<SPAN CLASS="MATH"><IMG STYLE="height: 1.31ex; vertical-align: -0.10ex; " SRC="img193.svg"
+ ALT="$\approx$"></SPAN> 273 K)
+
+<P>
+<P>
+This formula is based on the principle that bulk permittivity is a function of density.  We may see why this is by running a &ldquo;thought experiment&rdquo; in which a sample of gas becomes denser.  As gas density increases, more gas molecules will become packed into the same volume of space.  If each gas molecule's permittivity is greater than the permittivity of empty space, then having more of those gas molecules present will mean the permittivity of that volume increases.  Greater permittivity, of course, decreases the velocity of light through the gas, and thereby affects the calibration of the radar instrument.   <A NAME="582"></A>  <A NAME="583"></A>
+
+<P>
+Relating this concept to pressure and temperature variations in the gas, we can see that the permittivity of a gas increases with increasing pressure (by increasing gas density), and decreases with increasing temperature (by decreasing gas density).  This means the speed of light through a gas decreases with increasing pressure, and increases with increasing temperature.  For radar level instruments operating in gas environments subject to significant pressure and temperature (i.e. density) variations, the consequent variations in the speed of light through that gas will compromise the instrument's accuracy.
+
+<P>
+
+<P>
+For any echo-based level instruments, the necessary condition for an echo to occur is that the wave encounters a sudden change in propagation velocity.  With ultrasonic level instruments, the velocity of propagation for the sound wave depends on both the densities and the bulk moduli (incompressibilities) of the substances, so that a sudden change in either parameter from one substance to another will cause the sound wave to reflect.  With radar level instruments, the necessary condition for wave reflection is a sudden change in dielectric permittivity<A ID="tex2html27"
+  HREF="footnode.html#foot834"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">27</SPAN></SUP></A> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img180.svg"
+ ALT="$\epsilon$"></SPAN>).  When an electromagnetic wave encounters a sudden change in dielectric permittivity, some of that wave's energy will be reflected in the form of another wave traveling the opposite direction, while the balance of the wave's energy continues forward to propagate into the new material.  The strength of the reflected signal depends on how greatly the two materials' permittivities differ:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level36.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 44.90ex; vertical-align: -0.10ex; " SRC="img194.svg"
+ ALT="$\displaystyle \includegraphics{level36.eps}$">
+</DIV><P></P>
+
+<P>
+This same principle explains reflected signals in copper transmission lines as well.  Any discontinuities (sudden changes in characteristic impedance) along the length of a transmission line will reflect a portion of the electrical signal's power back to the source.  In a transmission line, continuities may be formed by pinches, breaks, or short-circuits.  In a radar level measurement system, any sudden change in electrical permittivity is a discontinuity that reflects some of the incident wave energy back to the source.  Thus, radar level instruments function best when there is a large difference in permittivity between the two substances at the interface.  As shown in the previous illustration, air and water meet this criterion, having an 80:1 permittivity ratio.
+
+<P>
+
+<P>
+The ratio of reflected power to incident (transmitted) power at any interface of materials is called the <SPAN  CLASS="textit">power reflection factor</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img195.svg"
+ ALT="$R$"></SPAN>).  This may be expressed as a unitless ratio, or more often as a decibel figure.  The relationship between dielectric permittivity and reflection factor is as follows:  <A NAME="587"></A> <A NAME="588"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+R = {\left({\sqrt{\epsilon_{r2}} - \sqrt{\epsilon_{r1}}}\right)^2 \over \left(\sqrt{\epsilon_{r2}} + \sqrt{\epsilon_{r1}}\right)^2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.16ex; vertical-align: -3.01ex; " SRC="img196.svg"
+ ALT="$\displaystyle R = {\left({\sqrt{\epsilon_{r2}} - \sqrt{\epsilon_{r1}}}\right)^2 \over \left(\sqrt{\epsilon_{r2}} + \sqrt{\epsilon_{r1}}\right)^2}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img195.svg"
+ ALT="$R$"></SPAN> = Power reflection factor at interface, as a unitless ratio
+
+<P>
+<!-- MATH
+ $\epsilon_{r1}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img197.svg"
+ ALT="$\epsilon_{r1}$"></SPAN> = Relative permittivity (dielectric constant) of the first medium
+
+<P>
+<!-- MATH
+ $\epsilon_{r2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img198.svg"
+ ALT="$\epsilon_{r2}$"></SPAN> = Relative permittivity (dielectric constant) of the second medium
+
+<P>
+<P>
+The fraction of incident power transmitted through the interface (<!-- MATH
+ $P_{forward} \over P_{incident}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.53ex; vertical-align: -1.17ex; " SRC="img199.svg"
+ ALT="$P_{forward} \over P_{incident}$"></SPAN>) is, of course, the mathematical complement of the power reflection factor: <SPAN CLASS="MATH"><IMG STYLE="height: 1.97ex; vertical-align: -0.29ex; " SRC="img200.svg"
+ ALT="$1 - R$"></SPAN>.
+
+<P>
+For situations where the first medium is air or some other low-permittivity gas, the formula simplifies to the following form (with <!-- MATH
+ $\epsilon_r$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img182.svg"
+ ALT="$\epsilon_r$"></SPAN> being the relative permittivity of the reflecting substance):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+R = {\left({\sqrt{\epsilon_{r}} - 1}\right)^2 \over \left(\sqrt{\epsilon_{r}} + 1 \right)^2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.16ex; vertical-align: -3.01ex; " SRC="img201.svg"
+ ALT="$\displaystyle R = {\left({\sqrt{\epsilon_{r}} - 1}\right)^2 \over \left(\sqrt{\epsilon_{r}} + 1 \right)^2}$">
+</DIV><P></P>
+
+<P>
+In the previous illustration, the two media were air (<!-- MATH
+ $\epsilon_r \approx 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.45ex; " SRC="img202.svg"
+ ALT="$\epsilon_r \approx 1$"></SPAN>) and water (<!-- MATH
+ $\epsilon_r \approx 80$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.45ex; " SRC="img203.svg"
+ ALT="$\epsilon_r \approx 80$"></SPAN>) &ndash; a nearly ideal scenario for strong signal reflection.  Given these relative permittivity values, the power reflection factor has a value of 0.638 (63.8%), or <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img204.svg"
+ ALT="$-1.95$"></SPAN> dB.  This means well over half the incident power reflects off the air/water interface to form a strong echo signal, with the remaining 0.362 (36.2%) of the wave's power traveling through the air-water interface and propagating into water.  If the liquid in question is gasoline rather than water (having a rather low relative permittivity value of approximately 2), the power reflection ratio will only be 0.0294 (2.94%) or <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img205.svg"
+ ALT="$-15.3$"></SPAN> dB, with the vast majority of the wave's power successfully penetrating the air-gasoline interface.
+
+<P>
+<P>
+The longer version of the power reflection factor formula suggests liquid-liquid interfaces should be detectable using radar, and indeed they are.  All that is needed is a sufficiently large difference in permittivity between the two liquids to create a strong enough echo to reliably detect.  Liquid-liquid interface level measurement with radar works best when the upper liquid has a substantially lesser permittivity value than the lower liquid<A ID="tex2html28"
+  HREF="footnode.html#foot841"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">28</SPAN></SUP></A>.  A layer of hydrocarbon oil on top of water (or any aqueous solution such as an acid or a caustic) is a good candidate for guided-wave radar level measurement.  An example of a liquid-liquid interface that would be very difficult for a radar instrument to detect is water (<!-- MATH
+ $\epsilon_r \approx 80$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.45ex; " SRC="img203.svg"
+ ALT="$\epsilon_r \approx 80$"></SPAN>) above glycerin (<!-- MATH
+ $\epsilon_r \approx 42$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.45ex; " SRC="img206.svg"
+ ALT="$\epsilon_r \approx 42$"></SPAN>).  
+
+<P>
+If the radar instrument uses a digital network protocol to communicate information with a host system (such as HART or any number of &ldquo;fieldbus&rdquo; standards), it may perform as a multi-variable transmitter, transmitting <SPAN  CLASS="textit">both</SPAN> the interface level measurement and the total liquid level measurement simultaneously.  This capability is rather unique to guided-wave radar transmitters, and is very useful in some processes because it eliminates the need for multiple instruments measuring multiple levels.  <A NAME="601"></A>  <A NAME="602"></A> <A NAME="603"></A>
+
+<P>
+One reason why a lesser-<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img180.svg"
+ ALT="$\epsilon$"></SPAN> fluid above a greater-<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img180.svg"
+ ALT="$\epsilon$"></SPAN> fluid is easier to detect than the inverse is due to the necessity of the signal having to travel through a gas-liquid interface above the liquid-liquid interface.  With gases and vapors having such small <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img180.svg"
+ ALT="$\epsilon$"></SPAN> values, the signal would have to pass through the gas-liquid interface first in order to reach the liquid-liquid interface.  This gas-liquid interface, having the greatest difference in <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img180.svg"
+ ALT="$\epsilon$"></SPAN> values of any interface within the vessel, will be <SPAN  CLASS="textit">most</SPAN> reflective to electromagnetic energy <SPAN  CLASS="textit">in both directions</SPAN>.  Thus, only a small portion of the incident wave will ever reach the liquid-liquid interface, and a similarly small portion of the wave reflected off the liquid-liquid interface (which itself is a fraction of the forward wave power that made it through the gas-liquid interface on its way down) will ever make it through the gas-liquid interface on its way <SPAN  CLASS="textit">back up</SPAN> to the instrument.  The situation is much improved if the <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img180.svg"
+ ALT="$\epsilon$"></SPAN> values of the two liquid layers are inverted, as shown in this hypothetical comparison (all calculations<A ID="tex2html29"
+  HREF="footnode.html#foot867"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">29</SPAN></SUP></A> assume no power dissipation along the way, only reflection at the interfaces):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level38.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 36.19ex; vertical-align: -0.10ex; " SRC="img211.svg"
+ ALT="$\displaystyle \includegraphics{level38.eps}$">
+</DIV><P></P>
+
+<P>
+As you can see in the illustration, the difference in power received back at the instrument is nearly two to one, just from the upper liquid having the lesser of two identical <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img180.svg"
+ ALT="$\epsilon$"></SPAN> values.  Of course, in real life you do not have the luxury of <SPAN  CLASS="textit">choosing</SPAN> which liquid will go on top of the other (this being determined by fluid density), but you do have the luxury of choosing the appropriate liquid-liquid interface level measurement technology, and as you can see here certain orientations of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img180.svg"
+ ALT="$\epsilon$"></SPAN> values are less detectable with radar than others.
+
+<P>
+Another factor working against radar as a liquid-liquid interface measurement technology for interfaces where the upper liquid has a greater dielectric constant is that fact that many high-<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img180.svg"
+ ALT="$\epsilon$"></SPAN> liquids are aqueous in nature, and water readily dissipates microwave energy.  This fact is exploited in microwave ovens, where microwave radiation excites water molecules in the food, dissipating energy in the form of heat.  For a radar-based level measurement system consisting of gas/vapor over water over some other (heavier) liquid, the echo signal will be extremely weak because the signal must pass through the &ldquo;lossy&rdquo; water layer <SPAN  CLASS="textit">twice</SPAN> before it returns to the radar instrument.
+
+<P>
+Electromagnetic energy losses are important to consider in radar level instrumentation, even when the detected interface is simply gas (or vapor) over liquid.  The power reflection factor formula only predicts the ratio of reflected power to incident power <SPAN  CLASS="textit">at an interface of substances</SPAN>.  Just because an air-water interface reflects 63.8% of the incident power does not mean 63.8% of the incident power will actually return to the transceiver antenna!  Any dissipative losses between the transceiver and the interface(s) of concern will weaken the signal, to the point where it may become difficult to distinguish from noise.
+
+<P>
+Another important factor in maximizing reflected power is the degree to which the microwaves disperse on their way to the liquid interface(s) and back to the transceiver.  Guided-wave radar instruments receive a far greater percentage of their transmitted power than non-contact radar instruments because the metal probe used to guide the microwave signal pulses help prevent the waves from spreading (and therefore weakening) throughout the liquids as they propagate.  In other words, the probe functions as a transmission line to direct and focus the microwave energy, ensuring a straight path from the instrument into the liquid, and a straight echo return path from the liquid back to the instrument.  This is why guided-wave radar is the only practical radar technology for measuring liquid-liquid interfaces.
+
+<P>
+<P>
+A critically important factor in accurate level measurement using radar instruments is that the dielectric permittivity of every substance lying between the radar instrument and the interface of interest be accurately known.  The reason for this is rooted in the dependence of electromagnetic wave propagation velocity to relative permittivity.  Recalling the wave velocity formula shown earlier: <A NAME="613"></A> <A NAME="614"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = {c \over \sqrt{\epsilon_r}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.07ex; vertical-align: -2.42ex; " SRC="img183.svg"
+ ALT="$\displaystyle v = {c \over \sqrt{\epsilon_r}}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img181.svg"
+ ALT="$v$"></SPAN> = Velocity of electromagnetic wave through a particular substance
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img169.svg"
+ ALT="$c$"></SPAN> = Speed of light in a perfect vacuum (<!-- MATH
+ $\approx 3 \times 10^8$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.29ex; " SRC="img212.svg"
+ ALT="$\approx 3 \times 10^8$"></SPAN> meters per second)
+
+<P>
+<!-- MATH
+ $\epsilon_r$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.45ex; " SRC="img182.svg"
+ ALT="$\epsilon_r$"></SPAN> = Relative permittivity (dielectric constant) of the substance
+
+<P>
+<P>
+In the case of a single-liquid application where nothing but gas or vapor exists above the liquid, the permittivity of that gas or vapor must be precisely known.  In the case of a two-liquid interface with gas or vapor above, the relative permittivities of <SPAN  CLASS="textit">both</SPAN> gas and upper liquids must be accurately known in order to accurately measure the liquid-liquid interface.  Changes in dielectric constant value of the medium or media through which the microwaves must travel and echo will cause the microwave radiation to propagate at different velocities.  Since all radar measurement is based on time-of-flight through the media separating the radar transceiver from the echo interface, changes in wave velocity through this media will affect the amount of time required for the wave to travel from the transceiver to the echo interface, and reflect back to the transceiver.  Therefore, changes in dielectric constant are relevant to the accuracy of any radar level measurement<A ID="tex2html30"
+  HREF="footnode.html#foot617"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">30</SPAN></SUP></A>.  
+
+<P>
+Factors influencing the dielectric constant of gases include pressure and temperature, which means the accuracy of a radar level instrument will vary as gas pressure and/or gas temperature vary!  This is often referred to as the <SPAN  CLASS="textit">gas phase effect</SPAN>.  Whether or not this variation is substantial enough to consider for any application depends on the desired measurement accuracy and the degree of permittivity change from one pressure/temperature extreme to another.  In no case should a radar instrument be considered for any level measurement application unless the dielectric constant value(s) of the upper media are precisely known.  This is analogous to the dependence on liquid density that hydrostatic level instruments face.  It is futile to attempt level measurement based on hydrostatic pressure if liquid density is unknown or widely varying, and it is just as futile to attempt level measurement based on radar if the dielectric constants are unknown<A ID="tex2html31"
+  HREF="footnode.html#foot619"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">31</SPAN></SUP></A> or varies widely.  <A NAME="620"></A>
+
+<P>
+One way to compensate for the gas phase effect in radar level instruments is to equip the instrument with a <SPAN  CLASS="textit">reference probe</SPAN> of fixed length oriented in such a way that its entire length is always above the liquid level (i.e. it only senses gas).  If the permittivity of the gas is constant, the echo time along this reference probe will remain the same.  If, however, the gas permittivity changes, the reference probe's echo time will correspondingly change, allowing the instrument's microprocessor to measure gas permittivity and consequently adjust calculations for liquid level based on this known change.  This concept is analogous to the <SPAN  CLASS="textit">compensating probe</SPAN> sometimes used in capacitive level sensors, designed to measure fluid permittivity so as to compensate for any changes in this critical parameter.  <A NAME="623"></A>
+
+<P>
+<P>
+As with ultrasonic level instruments, radar level instruments can sense the level of solid substances in vessels (e.g. powders and granules) and not just liquids.  The same caveat of repose angle applicable to ultrasonic level measurement (see section <A HREF="#Repose_angle">1.5.1</A> beginning on page <A HREF="node7.html#Repose_angle"><IMG  ALT="[*]" SRC="crossref.png"></A>), however, is a factor for radar measurement as well.  Also, low particulate solid density (i.e. significant amounts of air between the solid particles) tends to reduce the material's dielectric constant and thereby weaken the radar echo.
+
+<P>
+<P>
+
+<P>
+Modern radar level instruments provide a wealth of diagnostic information to aid in troubleshooting.  One of the most informative is the <SPAN  CLASS="textit">echo curve</SPAN>, showing each reflected signal received by the instrument along the incident signal's path of travel.  The following image is a screen capture of a computer display, from software used to configure a Rosemount model 3301 guided-wave radar level transmitter with a coaxial probe:  <A NAME="627"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level51.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 32.90ex; vertical-align: -0.10ex; " SRC="img213.svg"
+ ALT="$\displaystyle \includegraphics{level51.eps}$">
+</DIV><P></P>
+
+<P>
+To view a flip-book animation showing how a guided-wave radar (GWR) instrument detects both liquid surface level and liquid-liquid interface level, turn to Appendix <A HREF="#animation_GWR_level"><IMG  ALT="[*]" SRC="crossref.png"></A> beginning on page <A HREF="#animation_GWR_level"><IMG  ALT="[*]" SRC="crossref.png"></A>.
+
+<P>
+<P>
+Pulse <SPAN  CLASS="texttt">P1</SPAN> is the <SPAN  CLASS="textit">reference</SPAN> or <SPAN  CLASS="textit">fiducial</SPAN> pulse, resulting from the change in dielectric permittivity between the extended &ldquo;neck&rdquo; of the probe (connecting the transmitter to the probe tube) and the coaxial probe itself.  This pulse marks the top of the probe, thereby establishing a point of reference for ullage measurement.  <A NAME="634"></A>  <A NAME="635"></A>
+
+<P>
+
+<P>
+This next screen capture shows the same level transmitter measuring a water level that is 8 inches higher than before.  Note how pulse <SPAN  CLASS="texttt">P2</SPAN> is further to the left (indicating an echo received sooner in time), indicating a lesser ullage (greater level) measurement:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level52.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 33.10ex; vertical-align: -0.10ex; " SRC="img214.svg"
+ ALT="$\displaystyle \includegraphics{level52.eps}$">
+</DIV><P></P>
+
+<P>
+Several <SPAN  CLASS="textit">threshold</SPAN> settings determine how the transmitter categorizes each received pulse.  Threshold <SPAN  CLASS="texttt">T1</SPAN> for this particular radar instrument defines which pulse is the reference (fiducial).  Thus, the first echo in time to exceed the value of threshold <SPAN  CLASS="texttt">T1</SPAN> is interpreted by the instrument to be the reference point.  Threshold <SPAN  CLASS="texttt">T2</SPAN> defines the upper product level, so the first echo in time to exceed this threshold value is interpreted as the vapor/liquid interface point.  Threshold <SPAN  CLASS="texttt">T3</SPAN> for this particular transmitter is used to define the echo generated by a liquid-liquid interface.  However, threshold <SPAN  CLASS="texttt">T3</SPAN> does not appear in this echo plot because the interface measurement option was disabled during this experiment.  The last threshold, <SPAN  CLASS="texttt">T4</SPAN>, defines the end-of-probe detection.  Set at a negative value (just like the reference threshold <SPAN  CLASS="texttt">T1</SPAN>), threshold <SPAN  CLASS="texttt">T4</SPAN> looks for the first pulse in time to exceed that value and interprets that pulse as the one resulting from the signal reaching the probe's end.
+
+<P>
+All along the echo curve you can see weak echo signals showing up as bumps.  These echoes may be caused by discontinuities along the probe (solid deposits, vent holes, centering spacers, etc.), discontinuities in the process liquid (suspended solids, emulsions, etc.), or even discontinuities in the surrounding process vessel (for non-coaxial probes which exhibit varying degrees of sensitivity to surrounding objects).  A challenge in configuring a radar level transmitter is to set the threshold values such that &ldquo;false&rdquo; echoes are not interpreted as real liquid or interface levels.
+
+<P>
+A simple way to eliminate false echoes near the reference point is to set a <SPAN  CLASS="textit">null zone</SPAN> where any echoes are ignored.  The upper null zone (UNZ) setting on the Rosemount 3301 radar level transmitter whose screen capture image was shown previously was set to zero, meaning it would be sensitive to any and all echoes near the reference point.  If a false echo from a tank nozzle or some other discontinuity near the probe's entry point into the process vessel created a measurement problem, the upper null zone (UNZ) value could be set just beyond that point so the false echo would not be interpreted as a liquid level echo, regardless of the threshold value for <SPAN  CLASS="texttt">T2</SPAN>.  A &ldquo;null zone&rdquo; is sometimes referred to as a <SPAN  CLASS="textit">hold-off distance</SPAN>.  <A NAME="650"></A>  <A NAME="651"></A>
+
+<P>
+Some radar level instruments allow thresholds to be set as curves themselves rather than straight lines.  Thus, thresholds may be set high during certain periods along the horizontal (time/distance) axis to ignore false echoes, and set low during other periods to capture legitimate echo signals.
+
+<P>
+<P>
+
+<P>
+Regardless of how null zones and thresholds are set for any guided-wave radar level transmitter, the technician must be aware of <SPAN  CLASS="textit">transition zones</SPAN> near each end of the probe.  Measurements of liquid level or interface level within these zones may not be accurate or even linearly responsive.  Thus, it is strongly advised to range the instrument in such a way that the lower- and upper-range values (LRV and URV) lie between the transition zones:  <A NAME="653"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level53.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.84ex; vertical-align: -0.10ex; " SRC="img215.svg"
+ ALT="$\displaystyle \includegraphics{level53.eps}$">
+</DIV><P></P>
+
+<P>
+The size of these transition zones depends on both the process substances and the probe type<A ID="tex2html32"
+  HREF="footnode.html#foot655"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">32</SPAN></SUP></A>.  The instrument manufacturer will provide you with appropriate data for determining transition zone dimensions.
+
+<P>
+
+<H2><A ID="SECTION00253000000000000000">
+Laser level measurement</A>
+</H2>
+
+<P>
+The least-common form of echo-based level measurement is <SPAN  CLASS="textit">laser</SPAN>, which uses pulses of laser light reflected off the surface of a liquid to detect the liquid level.  Perhaps the most limiting factor with laser measurement is the necessity of having a sufficiently reflective surface for the laser light to &ldquo;echo&rdquo; off of.  Many liquids are not reflective enough for this to be a practical measurement technique, and the presence of dust or thick vapors in the space between the laser and the liquid will disperse the light, weakening the light signal and making the level more difficult to detect.
+
+<P>
+However, lasers have been applied with great success in measuring distances between objects.  Applications of this technology include motion control on large machines, where a laser points at a moving reflector, the laser's electronics calculating distance to the reflector based on the amount of time it takes for the laser &ldquo;echo&rdquo; to return.  The advent of mass-produced, precision electronics has made this technology practical and affordable for many applications.  At the time of this writing (2008), it is even possible for the average American consumer to purchase laser &ldquo;tape measures&rdquo; for use in building construction.
+
+<P>
+
+<H2><A ID="SECTION00254000000000000000">
+Magnetostrictive level measurement</A>
+</H2>
+
+<P>
+<A ID="magnetostrictive_level"></A>
+<P>
+A variation on the theme of echo-based level instruments, where the level of some process material in a vessel is measured by timing the travel of a wave between the instrument and the material interface, is one applied to float-type instruments: <SPAN  CLASS="textit">magnetostriction</SPAN>.  <A NAME="661"></A>
+
+<P>
+In a magnetostrictive level instrument, liquid level is sensed by a lightweight, donut-shaped float containing a magnet.  This float is centered around a long metal rod called a <SPAN  CLASS="textit">waveguide</SPAN>, hung vertically in the process vessel (or hung vertically in a protective cage like the type used for displacement-style level instruments) so that the float may rise and fall with process liquid level.  The magnetic field from the float's magnet at that point, combined with the magnetic field produced by an electric current pulse periodically sent through the rod, generates a torsional stress pulse<A ID="tex2html33"
+  HREF="footnode.html#foot845"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">33</SPAN></SUP></A> at the precise location of the float.  This torsional (twisting) stress travels at the speed of sound through the rod toward either end.  At the bottom end is a dampener device designed to absorb the mechanical wave<A ID="tex2html34"
+  HREF="footnode.html#foot846"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">34</SPAN></SUP></A>.  
+
+<P>
+One might argue that a magnetostrictive instrument is not an &ldquo;echo&rdquo; technology in the strictest sense of the word.  Unlike ultrasonic, radar, and laser instruments, we are not reflecting a wave off a discontinuous interface between materials.  Instead, a mechanical wave (pulse) is <SPAN  CLASS="textit">generated</SPAN> at the location of a magnetic float in response to an electrical pulse.  However, the principle of measuring distance by the wave's travel time is the same.  At the top end of the rod (above the process liquid level) is a sensor and electronics package designed to detect the arrival of the mechanical wave.  A precision electronic timing circuit measures the time elapsed between the electric current pulse (called the <SPAN  CLASS="textit">interrogation pulse</SPAN>) and the received mechanical pulse.  So long as the speed of sound through the metal waveguide rod remains fixed, the time delay is strictly a function of distance between the float and the sensor, which we already know is called <SPAN  CLASS="textit">ullage</SPAN>.  <A NAME="670"></A>
+
+<P>
+
+<P>
+The following photograph (left) and illustration (right) show a magnetostrictive level transmitter<A ID="tex2html35"
+  HREF="footnode.html#foot671"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">35</SPAN></SUP></A> propped up against a classroom wall and the same style of transmitter installed in a liquid-holding vessel, respectively:  <A NAME="672"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=5in]{level60.eps} \hskip 30pt \includegraphics[height=5in]{level58.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 69.87ex; vertical-align: -0.10ex; " SRC="img216.svg"
+ ALT="$\displaystyle \includegraphics[height=5in]{level60.eps} \hskip 30pt \includegraphics[height=5in]{level58.eps}$">
+</DIV><P></P>
+
+<P>
+The design of this instrument is reminiscent of a guided-wave radar transmitter, where a metal <SPAN  CLASS="textit">waveguide</SPAN> hangs vertically into the process liquid, guiding a pulse to the sensor head where the sensitive electronic components are located.  The major difference here is that the pulse is a sonic vibration traveling through the metal of the waveguide rod, not an electromagnetic pulse as is the case with radar.  Like all sound waves, the torsional pulse in a magnetostriction-based level transmitter is much slower-traveling<A ID="tex2html36"
+  HREF="footnode.html#foot847"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">36</SPAN></SUP></A> than electromagnetic waves.  <A NAME="677"></A>  <A NAME="678"></A>
+
+<P>
+
+<P>
+It is even possible to measure liquid-liquid interfaces with magnetostrictive instruments.  If the waveguide is equipped with a float of such density that it floats on the interface between the two liquids (i.e. the float is denser than the light liquid and less dense than the heavy liquid), the sonic pulse generated in the waveguide by that float's position will represent interface level.  Magnetostrictive instruments may even be equipped with two floats: one to sense a liquid-liquid interface, and the other to sense the liquid-vapor interface, so that it may measure both the interface and total levels simultaneously just like a guided-wave radar transmitter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level59.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.84ex; vertical-align: -0.10ex; " SRC="img219.svg"
+ ALT="$\displaystyle \includegraphics{level59.eps}$">
+</DIV><P></P>
+
+<P>
+With such an instrument, each electrical &ldquo;interrogation&rdquo; pulse returns <SPAN  CLASS="textit">two</SPAN> sonic pulses to the sensor head: the first pulse representing the total liquid level (upper, light float) and the second pulse representing the interface level (lower, heavy float).  If the instrument has digital communication capability (e.g. HART, FOUNDATION Fieldbus, Profibus, etc.), both levels may be reported to the control system over the same wire pair, making it a &ldquo;multivariable&rdquo; instrument. 
+
+<P>
+<P>
+Perhaps the greatest limitation of magnetostrictive level instruments is mechanical interference between the float and the rod.  In order for the magnetostrictive effect to be strong, the magnet inside the float must be in close proximity to the rod.  This means the inside diameter of the donut-shaped float must fit closely to the outside diameter of the waveguide.  Any fouling of the waveguide's or float's surfaces by suspended solids, sludge, or other semi-solid materials may cause the float to bind and therefore not respond to changes in liquid level.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html168"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html170"
+  HREF="node14.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node8.html">Weight</A>
+<B> Up:</B> <A
+ HREF="node2.html">Kontinuerlig nivåmålig</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Displacement</A>
+ &nbsp; <B>  <A ID="tex2html169"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html171"
+  HREF="node14.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

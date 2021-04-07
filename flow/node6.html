@@ -1,0 +1,1604 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Velocity-based flowmeters</TITLE>
+<META NAME="description" CONTENT="Velocity-based flowmeters">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html230"
+  HREF="node6.html#SECTION00241000000000000000">Turbine flowmeters</A>
+<LI><A ID="tex2html231"
+  HREF="node6.html#SECTION00242000000000000000">Vortex flowmeters</A>
+<LI><A ID="tex2html232"
+  HREF="node6.html#SECTION00243000000000000000">Magnetic flowmeters</A>
+<LI><A ID="tex2html233"
+  HREF="node6.html#SECTION00244000000000000000">Ultrasonic flowmeters</A>
+<LI><A ID="tex2html234"
+  HREF="node6.html#SECTION00245000000000000000">Optical flowmeters</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00240000000000000000">
+Velocity-based flowmeters</A>
+</H1>
+
+<P>
+The Law of Continuity for fluids states that the product of mass density (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN>), cross-sectional pipe area (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img220.svg"
+ ALT="$A$"></SPAN>) and average velocity (<!-- MATH
+ $\overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.65ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$\overline{v}$"></SPAN>) must remain constant through any continuous length of pipe: <A NAME="627"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{fluids_01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 20.52ex; vertical-align: -0.10ex; " SRC="img222.svg"
+ ALT="$\displaystyle \includegraphics{fluids_01.eps}$">
+</DIV><P></P>
+
+<P>
+If the density of the fluid is not subject to change as it travels through the pipe (a very good assumption for liquids), we may simplify the Law of Continuity by eliminating the density terms from the equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A_1 \overline{v_1} = A_2 \overline{v_2}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.12ex; vertical-align: -0.45ex; " SRC="img16.svg"
+ ALT="$\displaystyle A_1 \overline{v_1} = A_2 \overline{v_2}$">
+</DIV><P></P>
+
+<P>
+The product of cross-sectional pipe area and average fluid velocity is the volumetric flow rate of the fluid through the pipe (<!-- MATH
+ $Q = A\overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img223.svg"
+ ALT="$Q = A\overline{v}$"></SPAN>).  This tells us that fluid velocity will be directly proportional to volumetric flow rate given a known cross-sectional area and a constant density for the fluid flowstream.  Any device able to directly measure fluid velocity is therefore capable of inferring volumetric flow rate of fluid in a pipe.  This is the basis for <SPAN  CLASS="textit">velocity-based</SPAN> flowmeter designs.
+
+<P>
+
+<H2><A ID="SECTION00241000000000000000">
+Turbine flowmeters</A>
+</H2>
+
+<P>
+<SPAN  CLASS="textit">Turbine</SPAN> flowmeters use a free-spinning turbine wheel to measure fluid velocity, much like a miniature windmill installed in the flow stream.  The fundamental design goal of a turbine flowmeter is to make the turbine element as free-spinning as possible, so no torque will be required to sustain the turbine's rotation.  If this goal is achieved, the turbine blades will achieve a rotating (tip) velocity directly proportional to the linear velocity of the fluid, whether that fluid is a gas or a liquid: <A NAME="635"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow51.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 54.39ex; vertical-align: -0.10ex; " SRC="img224.svg"
+ ALT="$\displaystyle \includegraphics{flow51.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+The mathematical relationship between fluid velocity and turbine tip velocity &ndash; assuming frictionless conditions &ndash; is a ratio defined by the <SPAN  CLASS="textit">tangent</SPAN> of the turbine blade angle:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow76.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 33.48ex; vertical-align: -0.10ex; " SRC="img225.svg"
+ ALT="$\displaystyle \includegraphics{flow76.eps}$">
+</DIV><P></P>
+
+<P>
+For a 45<SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img102.svg"
+ ALT="$^{o}$"></SPAN> blade angle, the relationship is 1:1, with tip velocity equaling fluid velocity.  Smaller blade angles (each blade closer to parallel with the fluid velocity vector) result in the tip velocity being a fractional proportion of fluid velocity.
+
+<P>
+
+<P>
+Turbine tip velocity is quite easy to sense using a magnetic sensor, generating a voltage pulse each time one of the ferromagnetic turbine blades passes by.  Traditionally, this sensor is nothing more than a coil of wire in proximity to a stationary magnet, called a <SPAN  CLASS="textit">pickup coil</SPAN> or <SPAN  CLASS="textit">pickoff coil</SPAN> because it &ldquo;picks&rdquo; (senses) the passing of the turbine blades.  Magnetic flux through the coil's center increases and decreases as the passing of the steel turbine blades presents a varying reluctance (&ldquo;resistance&rdquo; to magnetic flux), causing voltage pulses equal in frequency to the number of blades passing by each second.  It is the <SPAN  CLASS="textit">frequency</SPAN> of this signal that represents fluid velocity, and therefore volumetric flow rate. <A NAME="643"></A>  <A NAME="644"></A>
+
+<P>
+A cut-away demonstration model of a turbine flowmeter is shown in the following photograph.  The blade sensor may be seen protruding from the top of the flowtube, just above the turbine wheel:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{turbineflowmeter1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.55ex; vertical-align: -0.10ex; " SRC="img226.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{turbineflowmeter1.eps}$">
+</DIV><P></P>
+
+<P>
+Note the sets of &ldquo;flow conditioner&rdquo; vanes immediately before and after the turbine wheel in the photograph.  As one might expect, turbine flowmeters are very sensitive to <SPAN  CLASS="textit">swirl</SPAN> in the process fluid flowstream.  In order to achieve high accuracy, the flow profile must not be swirling in the vicinity of the turbine, lest the turbine wheel spin faster or slower than it should to represent the velocity of a straight-flowing fluid.  A minimum straight-pipe length of 20 pipe diameters upstream and 5 pipe diameters downstream is typical for turbine flowmeters in order to dissipate swirl from piping disturbances.
+
+<P>
+Mechanical gears and rotating cables have also been historically used to link a turbine flowmeter's turbine wheel to indicators.  These designs suffer from greater friction than electronic (&ldquo;pickup coil&rdquo;) designs, potentially resulting in more measurement error (less flow indicated than there actually is, because the turbine wheel is slowed by friction).  One advantage of mechanical turbine flowmeters, though, is the ability to maintain a running total of gas usage by turning a simple odometer-style totalizer.  This design is often used when the purpose of the flowmeter is to track total fuel gas consumption (e.g. natural gas used by a commercial or industrial facility) for billing.
+
+<P>
+
+<P>
+In an electronic turbine flowmeter, volumetric flow is directly and linearly proportional to pickup coil output frequency.  We may express this relationship in the form of an equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f = kQ
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img227.svg"
+ ALT="$\displaystyle f = kQ$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img228.svg"
+ ALT="$f$"></SPAN> = Frequency of output signal (Hz, equivalent to pulses per second)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Volumetric flow rate (e.g. gallons per second)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> = &ldquo;K&rdquo; factor of the turbine element (e.g. pulses per gallon)
+
+<P>
+<P>
+Dimensional analysis confirms the validity of this equation.  Using units of GPS (gallons per second) and pulses per gallon, we see that the product of these two quantities is indeed pulses per second (equivalent to cycles per second, or Hz):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left[\hbox{Pulses} \over \hbox{s} \right] = \left[\hbox{Pulses} \over \hbox{gal} \right] \left[\hbox{gal} \over \hbox{s} \right]
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img229.svg"
+ ALT="$\displaystyle \left[\hbox{Pulses} \over \hbox{s} \right] = \left[\hbox{Pulses} \over \hbox{gal} \right] \left[\hbox{gal} \over \hbox{s} \right]$">
+</DIV><P></P>
+
+<P>
+Using algebra to solve for flow (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>), we see that it is the quotient of frequency and <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor that yields a volumetric flow rate for a turbine flowmeter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = {f \over k}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img230.svg"
+ ALT="$\displaystyle Q = {f \over k}$">
+</DIV><P></P>
+
+<P>
+The inherent linearity of a turbine flowmeter is a tremendous advantage over nonlinear flow elements such as venturi tubes and orifice plates because this linearity results in a much greater turndown ratio for accurate flow measurement.  Contrasted against common orifice-type meters which are usually limited to turndown ratios of 4:1 at best, turbine meters commonly exceed turndown ratios of 10:1.  <A NAME="654"></A>
+
+<P>
+<P>
+If pickup signal frequency directly represents volumetric flow rate, then the total number of pulses accumulated in any given time span will represent the amount of fluid volume (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img64.svg"
+ ALT="$V$"></SPAN>) passed through the turbine meter over that same time span.  We may express this algebraically as the product of average flow rate (<!-- MATH
+ $\overline{Q}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.69ex; vertical-align: -0.55ex; " SRC="img231.svg"
+ ALT="$\overline{Q}$"></SPAN>), average frequency (<!-- MATH
+ $\overline{f}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.71ex; vertical-align: -0.55ex; " SRC="img232.svg"
+ ALT="$\overline{f}$"></SPAN>), <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor, and time:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+V = \overline{Q}t = {\overline{f} t \over k}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.42ex; vertical-align: -1.69ex; " SRC="img233.svg"
+ ALT="$\displaystyle V = \overline{Q}t = {\overline{f} t \over k}$">
+</DIV><P></P>
+
+<P>
+A more sophisticated way of calculating total volume passed through a turbine meter requires calculus, representing change in volume as the time-integral of instantaneous signal frequency and <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor over a period of time from <SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="img234.svg"
+ ALT="$t = 0$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img235.svg"
+ ALT="$t = T$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta V = \int^T_0 Q \> dt \hbox{\hskip 30pt or \hskip 30pt} \Delta V = \int^T_0 {f \over k} \> dt
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.88ex; vertical-align: -2.19ex; " SRC="img236.svg"
+ ALT="$\displaystyle \Delta V = \int^T_0 Q \&gt; dt \hbox{\hskip 30pt or \hskip 30pt} \Delta V = \int^T_0 {f \over k} \&gt; dt$">
+</DIV><P></P>
+
+<P>
+We may achieve approximately the same result simply by using a digital counter circuit to totalize pulses output by the pickup coil and a microprocessor to calculate volume in whatever unit of measurement we deem appropriate.
+
+<P>
+<P>
+
+<P>
+As with the orifice plate flow element, standards have been drafted for the use of turbine flowmeters as precision measuring instruments in gas flow applications, particularly the custody transfer<A ID="tex2html36"
+  HREF="footnode.html#foot661"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">36</SPAN></SUP></A> of natural gas.  The American Gas Association has published a standard called the Report #7 specifying the installation of turbine flowmeters for high-accuracy gas flow measurement, along with the associated mathematics for precisely calculating flow rate based on turbine speed, gas pressure, and gas temperature.  <A NAME="662"></A>   <A NAME="663"></A> <A NAME="664"></A>
+
+<P>
+Pressure and temperature compensation is relevant to turbine flowmeters in gas flow applications because the density of the gas is a strong function of both pressure and temperature.  The turbine wheel itself only senses gas <SPAN  CLASS="textit">velocity</SPAN>, and so these other factors must be taken into consideration to accurately calculate mass flow (or <SPAN  CLASS="textit">standard</SPAN> volumetric flow; e.g. SCFM).
+
+<P>
+In high-accuracy applications, it is important to individually determine the <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor for a turbine flowmeter's calibration.  Manufacturing variations from flowmeter to flowmeter make precise duplication of <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor challenging, and so a flowmeter destined for high-accuracy measurement should be tested against a &ldquo;flow prover&rdquo; in a calibration laboratory to empirically determine its <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor.  If possible, the best way to test the flowmeter's <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor is to connect the prover to the meter on site where it will be used.  This way, the any effects due to the piping before and after the flowmeter will be incorporated in the measured <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor.  <A NAME="667"></A>  <A NAME="668"></A>
+
+<P>
+
+<P>
+The following photograph shows three AGA7-compliant installations of turbine flowmeters for measuring the flow rate of natural gas:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{turbineflowmeter2.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img237.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{turbineflowmeter2.eps}$">
+</DIV><P></P>
+
+<P>
+Note the pressure-sensing and temperature-sensing instrumentation installed in the pipe, reporting gas pressure and gas temperature to a flow-calculating computer (along with turbine pulse frequency) for the calculation of natural gas flow rate.  
+
+<P>
+
+<P>
+Less-critical gas flow measurement applications may use a &ldquo;compensated&rdquo; turbine flowmeter that mechanically performs the same pressure- and temperature-compensation functions on turbine speed to achieve true gas flow measurement, as shown in the following photograph:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{turbineflowmeter3.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.55ex; vertical-align: -0.10ex; " SRC="img238.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{turbineflowmeter3.eps}$">
+</DIV><P></P>
+
+<P>
+The particular flowmeter shown in the above photograph uses a filled-bulb temperature sensor (note the coiled, armored capillary tube connecting the flowmeter to the bulb) and shows total gas flow by a series of pointers, rather than gas flow <SPAN  CLASS="textit">rate</SPAN>.
+
+<P>
+<P>
+
+<P>
+A variation on the theme of turbine flow measurement is the <SPAN  CLASS="textit">paddlewheel</SPAN> flowmeter, a very inexpensive technology usually implemented in the form of an insertion-type sensor.  In this instrument, a small wheel equipped with &ldquo;paddles&rdquo; parallel to the shaft is inserted in the flowstream, with half the wheel shrouded from the flow.  A photograph of a plastic paddlewheel flowmeter appears here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{turbineflowmeter4.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 38.26ex; vertical-align: -0.10ex; " SRC="img239.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{turbineflowmeter4.eps}$">
+</DIV><P></P>
+
+<P>
+A surprisingly sophisticated method of &ldquo;pickup&rdquo; for the plastic paddlewheel shown in the photograph uses <SPAN  CLASS="textit">fiber-optic cables</SPAN> to send and receive light.  One cable sends a beam of light to the edge of the paddlewheel, and the other cable receives light on the other side of the paddlewheel.  As the paddlewheel turns, the paddles alternately block and pass the light beam, resulting in a pulsed light beam at the receiving cable.  The frequency of this pulsing is, of course, directly proportional to volumetric flow rate.
+
+<P>
+
+<P>
+The external ends of the two fiber optic cables appear in this next photograph, ready to connect to a light source and light pulse sensor to convert the paddlewheel's motion into an electronic signal:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{turbineflowmeter5.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 25.58ex; vertical-align: -0.10ex; " SRC="img240.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{turbineflowmeter5.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+A problem common to all turbine flowmeters is that of the turbine &ldquo;coasting&rdquo; when the fluid flow suddenly stops.  This is more often a problem in batch processes than continuous processes, where the fluid flow is regularly turned on and shut off.  This problem may be minimized by configuring the measurement system to ignore turbine flowmeter signals any time the automatic shutoff valve reaches the &ldquo;shut&rdquo; position.  This way, when the shutoff valve closes and fluid flow immediately halts, any coasting of the turbine wheel will be irrelevant.  In processes where the fluid flow happens to pulse for reasons other than the control system opening and shutting automatic valves, this problem is more severe.
+
+<P>
+Another problem common to all turbine flowmeters is lubrication of the turbine bearings.  Frictionless motion of the turbine wheel is essential for accurate flow measurement, which is a daunting design goal for the flowmeter manufacturing engineers.  The problem is not as severe in applications where the process fluid is naturally lubricating (e.g. diesel fuel), but in applications such as natural gas flow where the fluid provides no lubrication to the turbine bearings, external lubrication must be supplied.  This is often a regular maintenance task for instrument technicians: using a hand pump to inject light-weight &ldquo;turbine oil&rdquo; into the bearing assemblies of turbine flowmeters used in gas service.
+
+<P>
+Process fluid viscosity is another source of friction for the turbine wheel.  Fluids with high viscosity (e.g. heavy oils) will tend to slow down the turbine's rotation even if the turbine rotates on frictionless bearings.  This effect is especially pronounced at low flow rates, which leads to a <SPAN  CLASS="textit">minimum linear flow</SPAN> rating for the flowmeter: a flowrate below which it refuses to register proportionately to fluid flow rate.  <A NAME="677"></A>
+
+<P>
+
+<H2><A ID="SECTION00242000000000000000">
+Vortex flowmeters</A>
+</H2>
+
+<P>
+When a fluid moves with high Reynolds number past a stationary object (a &ldquo;bluff body&rdquo;), there is a tendency for the fluid to form <SPAN  CLASS="textit">vortices</SPAN> on either side of the object.  Each vortex will form, then detach from the object and continue to move with the flowing gas or liquid, one side at a time in alternating fashion.  This phenomenon is known as <SPAN  CLASS="textit">vortex shedding</SPAN>, and the pattern of moving vortices carried downstream of the stationary object is known as a <SPAN  CLASS="textit">vortex street</SPAN>. <A NAME="682"></A> <A NAME="683"></A>
+
+<P>
+It is commonplace to see the effects of vortex shedding on a windy day by observing the motion of flagpoles, light poles, and tall smokestacks.  Each of these objects has a tendency to oscillate perpendicular to the direction of the wind, owing to the pressure variations caused by the vortices as they alternately form and break away from the object:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow54.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.23ex; vertical-align: -0.10ex; " SRC="img241.svg"
+ ALT="$\displaystyle \includegraphics{flow54.eps}$">
+</DIV><P></P>
+
+<P>
+This alternating series of vortices was studied by Vincenc Strouhal in the late nineteenth century and later by Theodore von Kármán in the early twentieth century.  It was determined that the distance between successive vortices downstream of the stationary object is relatively constant, and directly proportional to the width of the object, for a wide range of Reynolds number values<A ID="tex2html37"
+  HREF="footnode.html#foot685"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">37</SPAN></SUP></A>.  If we view these vortices as crests of a continuous wave, the distance between vortices may be represented by the symbol customarily reserved for wavelength: the Greek letter &ldquo;lambda&rdquo; (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img242.svg"
+ ALT="$\lambda$"></SPAN>). <A NAME="686"></A>  <A NAME="687"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow52.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 19.16ex; vertical-align: -0.10ex; " SRC="img243.svg"
+ ALT="$\displaystyle \includegraphics{flow52.eps}$">
+</DIV><P></P>
+
+<P>
+The proportionality between object width (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img99.svg"
+ ALT="$d$"></SPAN>) and vortex street wavelength (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img242.svg"
+ ALT="$\lambda$"></SPAN>) is called the <SPAN  CLASS="textit">Strouhal number</SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img244.svg"
+ ALT="$S$"></SPAN>), approximately equal to 0.17: <A NAME="690"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lambda S = d \hbox{\hskip 50pt} \lambda \approx {d \over 0.17}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img245.svg"
+ ALT="$\displaystyle \lambda S = d \hbox{\hskip 50pt} \lambda \approx {d \over 0.17}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+If a differential pressure sensor is installed immediately downstream of the stationary object in such an orientation that it detects the passing vortices as pressure variations, an alternating signal will be detected:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow53.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 44.32ex; vertical-align: -0.10ex; " SRC="img246.svg"
+ ALT="$\displaystyle \includegraphics{flow53.eps}$">
+</DIV><P></P>
+
+<P>
+The <SPAN  CLASS="textit">frequency</SPAN> of this alternating pressure signal is directly proportional to fluid velocity past the object, since the wavelength is constant.  This follows the classic frequency-velocity-wavelength formula common to all traveling waves (<!-- MATH
+ $\lambda f = v$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img247.svg"
+ ALT="$\lambda f = v$"></SPAN>).  Since we know the wavelength will be equal to the bluff body's width divided by the Strouhal number (approximately 0.17), we may substitute this into the frequency-velocity-wavelength formula to solve for fluid velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$v$"></SPAN>) in terms of signal frequency (<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img228.svg"
+ ALT="$f$"></SPAN>) and bluff body width (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img99.svg"
+ ALT="$d$"></SPAN>).
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = \lambda f
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img248.svg"
+ ALT="$\displaystyle v = \lambda f$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = {d \over 0.17} f
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img249.svg"
+ ALT="$\displaystyle v = {d \over 0.17} f$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = {d f \over 0.17}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img250.svg"
+ ALT="$\displaystyle v = {d f \over 0.17}$">
+</DIV><P></P>
+
+<P>
+Thus, a stationary object and pressure sensor installed in the middle of a pipe section constitute a form of flowmeter called a <SPAN  CLASS="textit">vortex flowmeter</SPAN>.  Like a turbine flowmeter with an electronic &ldquo;pickup&rdquo; sensor to detect the passage of rotating turbine blades, the output frequency of a vortex flowmeter is linearly proportional to volumetric flow rate. <A NAME="698"></A>
+
+<P>
+The pressure sensors used in vortex flowmeters are not standard differential pressure transmitters, since the vortex frequency is too high to be successfully detected by such bulky instruments.  Instead, the sensors are typically piezoelectric crystals.  These pressure sensors need not be calibrated, since the amplitude of the pressure waves detected is irrelevant.  Only the frequency of the waves matter for measuring flow rate, and so nearly any pressure sensor with a fast enough response time will suffice.
+
+<P>
+Like turbine meters, the relationship between sensor frequency (<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img228.svg"
+ ALT="$f$"></SPAN>) and volumetric flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>) may be expressed as a proportionality, with the letter <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> used to represent the constant of proportionality for any particular flowmeter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f = kQ
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img227.svg"
+ ALT="$\displaystyle f = kQ$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img228.svg"
+ ALT="$f$"></SPAN> = Frequency of output signal (Hz)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Volumetric flow rate (e.g. gallons per second)<A ID="tex2html38"
+  HREF="footnode.html#foot1362"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">38</SPAN></SUP></A>
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> = &ldquo;K&rdquo; factor of the vortex shedding flowtube (e.g. pulses per gallon)
+
+<P>
+<P>
+This means vortex flowmeters, like electronic turbine meters, each have a particular &ldquo;<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> factor&rdquo; relating the number of pulses generated per unit volume passed through the meter<A ID="tex2html39"
+  HREF="footnode.html#foot701"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">39</SPAN></SUP></A>.  Counting the total number of pulses over a certain time span yields total fluid volume passed through the meter over that same time span, making the vortex flowmeter readily adaptable for &ldquo;totalizing&rdquo; fluid volume just like turbine meters.  The direct proportion between vortex frequency and volumetric flow rate also means vortex flowmeters are <SPAN  CLASS="textit">linear-responding</SPAN> instruments just like turbine flowmeters.  Unlike orifice plates which exhibit a quadratic response, turbine and vortex flowmeters alike enjoy a wider range (turndown) of flow measurement and do not require special signal characterization to function properly.
+
+<P>
+Since vortex flowmeters have no moving parts, they do not suffer the problems of wear and lubrication facing turbine meters.  There is no moving element to &ldquo;coast&rdquo; as in a turbine flowmeter if fluid flow suddenly stops, which means vortex flowmeters are better suited to measuring erratic flows.
+
+<P>
+A significant disadvantage of vortex meters is a behavior known as <SPAN  CLASS="textit">low flow cutoff</SPAN>, where the flowmeter simply stops working below a certain flow rate.  The reason for this is <SPAN  CLASS="textit">laminar</SPAN> flow: at low flow rates (i.e. low Reynolds number values) the effects of fluid viscosity overwhelm fluid momentum, preventing vortices from forming.  This cessation of vortices causes the vortex flowmeter to register absolutely no flow at all even when there is still some (laminar) flow through the pipe.  At high flow rates (i.e. high Reynolds number values), fluid momentum is enough to overcome viscosity and produce vortices, and the vortex flowmeter works just fine.  <A NAME="705"></A>
+
+<P>
+The phenomenon of low-flow cutoff for a vortex flowmeter at first seems analogous to the <SPAN  CLASS="textit">minimum linear flow</SPAN> limitation of a turbine flowmeter.  However, vortex flowmeter low-flow cutoff is actually a far more severe problem.  If the volumetric flow rate through a turbine flowmeter falls below the minimum linear value, the turbine continues to spin, albeit slower than it should.  If the volumetric flow rate through a vortex flowmeter falls below the low-flow cutoff value, however, the flowmeter's signal <SPAN  CLASS="textit">goes completely to zero</SPAN>, indicating no flow at all.  This idiosyncrasy makes vortex flowmeters entirely unsuitable in applications where the desired flow measurement range extends all the way down to zero.
+
+<P>
+
+<P>
+The following photograph shows a Rosemount model 8800C vortex flow transmitter:  <A NAME="708"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{vortex_flow_03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img252.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{vortex_flow_03.eps}$">
+</DIV><P></P>
+
+<P>
+The next two photographs show close-up views of the flowtube assembly, front (left) and rear (right): 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{vortex_flow_01.eps} \hskip 30pt \includegraphics[width=2.5in]{vortex_flow_02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.36ex; vertical-align: -0.10ex; " SRC="img253.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{vortex_flow_01.eps} \hskip 30pt \includegraphics[width=2.5in]{vortex_flow_02.eps}$">
+</DIV><P></P>
+
+<P>
+Vortex flowmeters, like other velocity-based meters, are affected by large-scale turbulence in the fluid stream and therefore require some length of straight pipe both upstream and downstream of the flowmeter to properly characterize the flow.  It is typical to install vortex flowmeters with 10 pipe diameters of straight-length pipe upstream and 5 pipe diameters downstream.
+
+<P>
+
+<H2><A ID="SECTION00243000000000000000">
+Magnetic flowmeters</A>
+</H2>
+
+<P>
+When an electrical conductor moves perpendicular to a magnetic field, a voltage is induced in that conductor perpendicular to both the magnetic flux lines and the direction of motion.  This phenomenon is known as <SPAN  CLASS="textit">electromagnetic induction</SPAN>, and it is the basic principle upon which all electro-mechanical generators operate.  <A NAME="714"></A>  
+
+<P>
+In a generator mechanism, the conductor in question is typically a coil (or set of coils) made of copper wire.  However, there is no reason the conductor must be made of copper wire.  <SPAN  CLASS="textit">Any</SPAN> electrically conductive substance in motion is sufficient to electromagnetically induce a voltage, even if that substance is a liquid<A ID="tex2html40"
+  HREF="footnode.html#foot1363"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">40</SPAN></SUP></A>.  Therefore, electromagnetic induction is a technique applicable to the measurement of liquid flow rates.
+
+<P>
+Consider water flowing through a pipe, with a magnetic field passing perpendicularly through the pipe:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow57.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 54.77ex; vertical-align: -0.10ex; " SRC="img254.svg"
+ ALT="$\displaystyle \includegraphics{flow57.eps}$">
+</DIV><P></P>
+
+<P>
+The direction of liquid flow cuts perpendicularly through the lines of magnetic flux, generating a voltage along an axis perpendicular to both.  Metal electrodes opposite each other in the pipe wall intercept this voltage, making it readable to an electronic circuit.
+
+<P>
+
+<P>
+A voltage induced by the linear motion of a conductor through a magnetic field is called <SPAN  CLASS="textit">motional EMF</SPAN>, the magnitude of which is predicted by the following formula (assuming perfect perpendicularity between the direction of velocity, the orientation of the magnetic flux lines, and the axis of voltage measurement):  <A NAME="719"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\mathcal{E} = Blv
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img255.svg"
+ ALT="$\displaystyle \mathcal{E} = Blv$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<!-- MATH
+ $\mathcal{E}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img256.svg"
+ ALT="$\mathcal{E}$"></SPAN> = Motional EMF (volts)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img257.svg"
+ ALT="$B$"></SPAN> = Magnetic flux density (Tesla)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img10.svg"
+ ALT="$l$"></SPAN> = Length of conductor passing through the magnetic field (meters)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$v$"></SPAN> = Velocity of conductor (meters per second)
+
+<P>
+<P>
+Assuming a fixed magnetic field strength (constant <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img257.svg"
+ ALT="$B$"></SPAN>) and an electrode spacing equal to the fixed diameter of the pipe (constant <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img258.svg"
+ ALT="$l = d$"></SPAN>), the only variable capable of influencing the magnitude of induced voltage is velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$v$"></SPAN>).  In our example, <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$v$"></SPAN> is not the velocity of a wire segment, but rather the average velocity of the liquid flowstream (<!-- MATH
+ $\overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.65ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$\overline{v}$"></SPAN>).  Since we see that this voltage will be proportional to average fluid velocity, it must also be proportional to volumetric flow rate, since volumetric flow rate is also proportional to average fluid velocity<A ID="tex2html41"
+  HREF="footnode.html#foot723"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">41</SPAN></SUP></A>.  Thus, what we have here is a type of flowmeter based on electromagnetic induction.  These flowmeters are commonly known as <SPAN  CLASS="textit">magnetic flowmeters</SPAN> or simply <SPAN  CLASS="textit">magflow meters</SPAN>. <A NAME="726"></A>
+
+<P>
+We may state the relationship between volumetric flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>) and motional EMF (<!-- MATH
+ $\mathcal{E}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img256.svg"
+ ALT="$\mathcal{E}$"></SPAN>) more precisely by algebraic substitution.  First, we will write the formula relating volumetric flow to average velocity, and then manipulate it to solve for average velocity:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = A\overline{v}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img259.svg"
+ ALT="$\displaystyle Q = A\overline{v}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{Q \over A} = \overline{v}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="img260.svg"
+ ALT="$\displaystyle {Q \over A} = \overline{v}$">
+</DIV><P></P>
+
+<P>
+Next, we re-state the motional EMF equation, and then substitute <SPAN CLASS="MATH"><IMG STYLE="height: 3.06ex; vertical-align: -0.90ex; " SRC="img261.svg"
+ ALT="$Q \over A$"></SPAN> for <!-- MATH
+ $\overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.65ex; vertical-align: -0.10ex; " SRC="img221.svg"
+ ALT="$\overline{v}$"></SPAN> to arrive at an equation relating motional EMF to volumetric flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>), magnetic flux density (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img257.svg"
+ ALT="$B$"></SPAN>), pipe diameter (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img99.svg"
+ ALT="$d$"></SPAN>), and pipe area (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img220.svg"
+ ALT="$A$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\mathcal{E} = Bd\overline{v}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img262.svg"
+ ALT="$\displaystyle \mathcal{E} = Bd\overline{v}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\mathcal{E} = Bd {Q \over A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="img263.svg"
+ ALT="$\displaystyle \mathcal{E} = Bd {Q \over A}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\mathcal{E} = {BdQ \over A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img264.svg"
+ ALT="$\displaystyle \mathcal{E} = {BdQ \over A}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Since we know this is a circular pipe, we know that area and diameter are directly related to each other by the formula <!-- MATH
+ $A = {\pi d^2 \over 4}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.19ex; vertical-align: -0.90ex; " SRC="img265.svg"
+ ALT="$A = {\pi d^2 \over 4}$"></SPAN>.  Thus, we may substitute this definition for area into the last equation, to arrive at a formula with one less variable (only <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img99.svg"
+ ALT="$d$"></SPAN>, instead of both <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img99.svg"
+ ALT="$d$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img220.svg"
+ ALT="$A$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\mathcal{E} = {BdQ \over {\pi d^2 \over 4}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 6.01ex; vertical-align: -2.75ex; " SRC="img266.svg"
+ ALT="$\displaystyle \mathcal{E} = {BdQ \over {\pi d^2 \over 4}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\mathcal{E} = {BdQ \over 1} {4 \over {\pi d^2}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img267.svg"
+ ALT="$\displaystyle \mathcal{E} = {BdQ \over 1} {4 \over {\pi d^2}}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\mathcal{E} = {4BQ \over {\pi d}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="img268.svg"
+ ALT="$\displaystyle \mathcal{E} = {4BQ \over {\pi d}}$">
+</DIV><P></P>
+
+<P>
+If we wish to have a formula defining flow rate <SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> in terms of motional EMF (<!-- MATH
+ $\mathcal{E}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img256.svg"
+ ALT="$\mathcal{E}$"></SPAN>), we may simply manipulate the last equation to solve for <SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = {\pi d \mathcal{E} \over 4B}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img269.svg"
+ ALT="$\displaystyle Q = {\pi d \mathcal{E} \over 4B}$">
+</DIV><P></P>
+
+<P>
+This formula will successfully predict flow rate only for absolutely perfect circumstances.  In order to compensate for inevitable imperfections, a &ldquo;proportionality constant&rdquo; (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN>) is usually included in the formula<A ID="tex2html42"
+  HREF="footnode.html#foot1368"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">42</SPAN></SUP></A>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k {\pi d \mathcal{E} \over 4B}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img270.svg"
+ ALT="$\displaystyle Q = k {\pi d \mathcal{E} \over 4B}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Volumetric flow rate (cubic meters per second)
+
+<P>
+<!-- MATH
+ $\mathcal{E}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img256.svg"
+ ALT="$\mathcal{E}$"></SPAN> = Motional EMF (volts)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img257.svg"
+ ALT="$B$"></SPAN> = Magnetic flux density (Tesla)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img99.svg"
+ ALT="$d$"></SPAN> = Diameter of flowtube (meters)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> = Constant of proportionality
+
+<P>
+<P>
+Note the linearity of this equation.  Nowhere do we encounter a power, root, or other non-linear mathematical function in the equation for a magnetic flowmeter.  This means no special characterization is required to calculate volumetric flow rate.
+
+<P>
+A few conditions must be met for this formula to successfully infer volumetric flow rate from induced voltage:
+
+<P>
+
+<UL>
+<LI>The liquid must be a reasonably good conductor of electricity (<SPAN  CLASS="textit">note: it is okay if the conducting fluid contains some non-conducting solids; the conductive fluid surrounding the non-conducting solid matter still provides electrical continuity between the electrodes necessary for induction</SPAN>)
+</LI>
+<LI>The pipe must be completely filled with liquid to ensure contact with both probes as well as to ensure flow across the entire cross-section of the pipe
+</LI>
+<LI>The flowtube must be properly grounded to avoid errors caused by stray electric currents in the liquid
+</LI>
+</UL>
+
+<P>
+
+<P>
+The first condition is met by careful consideration of the process liquid prior to installation.  Magnetic flowmeter manufacturers will specify the minimum conductivity value of the liquid to be measured.  The second and third conditions are met by correct installation of the magnetic flowtube in the pipe.  The installation must be done in such a way as to guarantee full flooding of the flowtube (no gas pockets).  The flowtube is usually installed with electrodes across from each other horizontally (never vertically!) so even a momentary gas bubble will not break electrical contact between an electrode tip and the liquid flowstream.  The following photograph shows how <SPAN  CLASS="textit">not</SPAN> to install magnetic flowmeters:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{magflow7.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.40ex; vertical-align: -0.10ex; " SRC="img271.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{magflow7.eps}$">
+</DIV><P></P>
+
+<P>
+Note in this example how the electrodes are vertically oriented instead of horizontal, because the pipes for these two magnetic flowmeters were placed too close<A ID="tex2html43"
+  HREF="footnode.html#foot756"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">43</SPAN></SUP></A> to allow proper clearance for the protruding electrodes to lie horizontally.  Sadly, poor flowmeter installation is all too common in new projects, as many piping designers and pipefitters are ignorant of flowmeter operating principles.  This is one way instrument engineers and technicians may deter operational problems: by involving themselves in the design phase of a piping system, and helping to educate piping designers.
+
+<P>
+<P>
+Magnetic flowmeters exhibit several advantages over other types of flowmeter.  They are fairly tolerant of swirl and other large-scale turbulent fluid behavior, because the induced voltage is proportional only to the <SPAN  CLASS="textit">perpendicular</SPAN> velocity of the conductor, in this case the velocity of the fluid along the centerline of the flowtube.  As such, magnetic flowmeters do not require the long straight-runs of pipe upstream and downstream that orifice plates do, which is a great advantage in many piping systems.  Upstream straight-pipe requirements of 5 diameters and downstream straight-pipe requirements of 3 diameters is typical<A ID="tex2html44"
+  HREF="footnode.html#foot758"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">44</SPAN></SUP></A>.
+
+<P>
+Additionally, the wide-open bore of a magnetic flowmeter's tube means there is absolutely nothing to restrict the flow, resulting in extremely low permanent pressure loss.  The lack of any obstruction within the path of fluid flow means magnetic flowmeters are quite tolerant of solids<A ID="tex2html45"
+  HREF="footnode.html#foot1370"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">45</SPAN></SUP></A> within the liquid flowstream, making them well-suited for measuring such process liquids as wastewater, slurries, wood pulp, and food products which might clog other types of flowmeters.  In fact, magnetic flowmeters are the dominant flowmeter technology used in wastewater, wood pulping, and food processing industries for this very reason.
+
+<P>
+<P>
+
+<P>
+Electrical conductivity of the process liquid must meet a certain minimum value, but that is all.  It is surprising to some technicians that changes in liquid conductivity have little to no effect on flow measurement accuracy.  It is not as though a doubling of liquid conductivity will result in a doubling of induced voltage!  Motional EMF is strictly a function of physical dimensions, magnetic field strength, and fluid velocity.  
+
+<P>
+Liquids with poor conductivity present a greater electrical resistance in the voltage-measuring circuit than liquids with good conductivity, but this is of little consequence because the input impedance of the detection circuitry is phenomenally high.  The effect of liquid conductivity on flowmeter operation may be modeled by the following DC circuits:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{magflow8.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 53.61ex; vertical-align: -0.10ex; " SRC="img272.svg"
+ ALT="$\displaystyle \includegraphics{magflow8.eps}$">
+</DIV><P></P>
+
+<P>
+Here, a ten-fold (one order of magnitude) change in liquid resistance barely affects the measured voltage (49.995 mV versus 49.95 mV) because the flow transmitter's voltage-sensing electronic circuit has such a high input impedance.  The liquid's equivalent resistance value must increase dramatically beyond the values shown in this example before it will have any significant effect on flow measurement accuracy.
+
+<P>
+In fact, the only time fluid conductivity is a problem with magnetic flowmeters is when the fluid in question has negligible conductivity.  Such fluids include deionized water (e.g. steam boiler feedwater, ultrapure water for pharmaceutical and semiconductor manufacturing) and oils.  Most aqueous (water-based) fluids work fine with magnetic flowmeters.
+
+<P>
+
+<P>
+Proper grounding of the flowtube is very important for magnetic flowmeters.  The motional EMF generated by most liquid flowstreams is very weak (1 millivolt or less!), and therefore may be easily overshadowed by noise voltage present as a result of stray electric currents in the piping and/or liquid.  To combat this problem, magnetic flowmeters are usually equipped with grounding conductors placed to shunt (bypass) stray electric currents around the flowtube so the only voltage intercepted by the electrodes will be the motional EMF produced by liquid flow, and not voltage drops created by stray currents through the resistance of the liquid.  The following photograph shows a Rosemount model 8700 magnetic flowtube, with two braided<A ID="tex2html46"
+  HREF="footnode.html#foot1371"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">46</SPAN></SUP></A>-wire grounding straps clearly visible:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{magflow3.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 66.58ex; vertical-align: -0.10ex; " SRC="img273.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{magflow3.eps}$">
+</DIV><P></P>
+
+<P>
+Note how both grounding straps attach to a common junction point on the flowtube housing.  This common junction point should also be bonded to a functional earth ground when the flowtube is installed in the process line.  On this particular flowtube you can see a stainless steel <SPAN  CLASS="textit">grounding ring</SPAN> on the face of the near flange, connected to one of the braided grounding straps.  An identical grounding ring lays on the other flange, but it is not clearly visible in this photograph.  These rings provide points of electrical contact with the liquid in installations where the pipe is made of plastic, or where the pipe is metal but lined with a plastic material for corrosion resistance.  <A NAME="764"></A>
+
+<P>
+
+<P>
+If the pipe connecting to a magnetic flowmeter's flowtube is conductive (e.g. metal), grounding may be accomplished by joining the metal pipes' flanges together with grounding straps to a common grounding point on the flowtube body as such:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{magflow9.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.97ex; vertical-align: -0.10ex; " SRC="img274.svg"
+ ALT="$\displaystyle \includegraphics{magflow9.eps}$">
+</DIV><P></P>
+
+<P>
+If the pipe connecting to a magnetic flowmeter's flowtube is non-conductive (e.g. plastic) or conductive with an insulating lining (e.g. metal pipe with plastic lining), grounding to the pipe flanges will be pointless.  In order for flowtube grounding to be effective, the grounding conductors must have electrical continuity to the fluid itself.  Special <SPAN  CLASS="textit">grounding rings</SPAN> may be sandwiched between the flanges of non-conducting pipes to provide points of electrical contact with the fluid.  These grounding rings are then joined together with grounding straps to a common grounding point on the flowtube body as such:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{magflow10.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 27.87ex; vertical-align: -0.10ex; " SRC="img275.svg"
+ ALT="$\displaystyle \includegraphics{magflow10.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+
+<P>
+Some magnetic flowmeters have their signal conditioning electronics located integral to the flowtube assembly.  A couple of examples are shown here (a pair of small Endress+Hauser flowmeters on the left and a large Toshiba flowmeter on the right):  <A NAME="768"></A>  <A NAME="769"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{magflow1.eps} \hskip 30pt \includegraphics[width=2.5in]{magflow2.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 26.37ex; vertical-align: -0.10ex; " SRC="img276.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{magflow1.eps} \hskip 30pt \includegraphics[width=2.5in]{magflow2.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Other magnetic flowmeters have separate electronics and flowtube assemblies, connected together by shielded cable.  In these installations, the electronics assembly is referred to as the flow transmitter (FT) and the flowtube as the flow element (FE):  <A NAME="772"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{magflow4.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img277.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{magflow4.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+This next photograph shows an enormous (36 inch diameter!) magnetic flow element (black) and flow transmitter (blue, behind the person's hand shown for scale) used to measure wastewater flow at a municipal sewage treatment plant:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=5in]{magflow6.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 69.87ex; vertical-align: -0.10ex; " SRC="img278.svg"
+ ALT="$\displaystyle \includegraphics[height=5in]{magflow6.eps}$">
+</DIV><P></P>
+
+<P>
+Note the vertical pipe orientation, ensuring constant contact between the electrodes and the water during flowing conditions.
+
+<P>
+<P>
+
+<P>
+While in theory a permanent magnet should be able to provide the necessary magnetic flux for a magnetic flowmeter to function, this is never done in industrial practice.  The reason for this has to do with a phenomenon called <SPAN  CLASS="textit">polarization</SPAN> which occurs when a DC voltage is impressed across a liquid containing ions (electrically charged molecules).  Electrically-charged molecules (ions) tend to collect near poles of opposite charge, which in this case would be the flowmeter electrodes.  This &ldquo;polarization&rdquo; would soon interfere with detection of the motional EMF if a magnetic flowmeter were to use a constant magnetic flux such as that produced by a permanent magnet.  A simple solution to this problem is to alternate the polarity of the magnetic field, so the motional EMF polarity also alternates and never gives the fluid ions enough time to polarize.
+
+<P>
+This is why magnetic flowmeter tubes always employ electromagnet <SPAN  CLASS="textit">coils</SPAN> to generate the magnetic flux instead of permanent magnets.  The electronics package of the flowmeter energizes these coils with currents of alternating polarity, so as to alternate the polarity of the induced voltage across the moving fluid.  Permanent magnets, with their unchanging magnetic polarities, would only be able to create an induced voltage with constant polarity, leading to ionic polarization and subsequent flow measurement errors.
+
+<P>
+A photograph of a Foxboro magnetic flowtube with one of the protective covers removed shows these wire coils clearly (in blue): <A NAME="777"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{magflow5.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.08ex; vertical-align: -0.10ex; " SRC="img279.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{magflow5.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Perhaps the simplest form of coil excitation is when the coil is energized by 60 Hz AC power taken from the line power source, such as the case with this Foxboro flowtube.  Since motional EMF is proportional to fluid velocity and to the flux density of the magnetic field, the induced voltage for such a coil will also be a 60 Hz sine wave whose amplitude varies<A ID="tex2html47"
+  HREF="footnode.html#foot1372"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">47</SPAN></SUP></A> with volumetric flow rate.   <A NAME="780"></A>
+
+<P>
+Unfortunately, if there is any stray electric current traveling through the liquid to produce erroneous voltage drops between the electrodes, chances are it will be 60 Hz AC as well<A ID="tex2html48"
+  HREF="footnode.html#foot781"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">48</SPAN></SUP></A>.  With the coil energized by 60 Hz AC, any such noise voltage may be falsely interpreted as fluid flow because the sensor electronics has no way to distinguish between 60 Hz noise in the fluid and a 60 Hz motional EMF caused by fluid flow.
+
+<P>
+A more sophisticated solution to this problem uses a <SPAN  CLASS="textit">pulsed</SPAN> excitation power source for the flowtube coils.  This is called <SPAN  CLASS="textit">DC</SPAN> excitation by magnetic flowmeter manufacturers, which is a bit misleading because these &ldquo;DC&rdquo; excitation signals often reverse polarity, appearing more like an AC square wave on an oscilloscope display.  The motional EMF for one of these flowmeters will exhibit the same waveshape, with amplitude once again being the indicator of volumetric flow rate.  The sensor electronics can more easily reject any AC noise voltage because the frequency and waveshape of the noise (60 Hz, sinusoidal) will not match that of the flow-induced motional EMF signal.  <A NAME="784"></A>  
+
+<P>
+The most significant disadvantage of pulsed-DC magnetic flowmeters is slower response time to changing flow rates.  In an effort to achieve a &ldquo;best-of-both-worlds&rdquo; result, some magnetic flowmeter manufacturers produce <SPAN  CLASS="textit">dual-frequency</SPAN> flowmeters which energize their flowtube coils with two mixed frequencies: one below 60 Hz and one above 60 Hz.  The resulting voltage signal intercepted by the electrodes is demodulated and interpreted as a flow rate.
+
+<P>
+
+<H2><A ID="SECTION00244000000000000000">
+Ultrasonic flowmeters</A>
+</H2>
+
+<P>
+<SPAN  CLASS="textit">Ultrasonic</SPAN> flowmeters measure fluid velocity by passing high-frequency sound waves along the fluid flow path.  Fluid motion influences the propagation of these sound waves, which may then be measured to infer fluid velocity.  Two major sub-types of ultrasonic flowmeters exist: <SPAN  CLASS="textit">Doppler</SPAN> and <SPAN  CLASS="textit">transit-time</SPAN>.  Both types of ultrasonic flowmeter work by transmitting a high-frequency sound wave into the fluid stream (the <SPAN  CLASS="textit">incident</SPAN> pulse) and analyzing the received pulse. <A NAME="791"></A> 
+
+<P>
+Doppler flowmeters exploit the <SPAN  CLASS="textit">Doppler effect</SPAN>, which is the shifting of frequency resulting from waves emitted by or reflected by a moving object.  A common realization of the Doppler effect is the perceived shift in frequency of a horn's report from a moving vehicle: as the vehicle approaches the listener, the pitch of the horn seems higher than normal; when the vehicle passes the listener and begins to move away, the horn's pitch appears to suddenly &ldquo;shift down&rdquo; to a lower frequency.  In reality, the horn's frequency never changes, but the velocity of the approaching vehicle relative to the stationary listener acts to &ldquo;compress&rdquo; the sonic vibrations in the air.  When the vehicle moves away, the sound waves are &ldquo;stretched&rdquo; from the perspective of the listener.  
+
+<P>
+The same effect takes place if a sound wave is aimed at a moving object, and the echo's frequency is compared to the transmitted (incident) frequency.  If the reflected wave returns from a bubble advancing toward the ultrasonic transducer<A ID="tex2html49"
+  HREF="footnode.html#foot793"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">49</SPAN></SUP></A>, the reflected frequency will be greater than the incident frequency.  If the flow reverses direction and the reflected wave returns from a bubble traveling away from the transducer, the reflected frequency will be less than the incident frequency.  This matches the phenomenon of a vehicle's horn pitch seemingly increasing as the vehicle approaches a listener and seemingly decreasing as the vehicle moves away from a listener.
+
+<P>
+
+<P>
+A Doppler flowmeter bounces sound waves off of bubbles or particulate material in the flow stream, measuring the frequency shift and inferring fluid velocity from the magnitude of that shift.  <A NAME="794"></A>  <A NAME="795"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow64.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 21.68ex; vertical-align: -0.10ex; " SRC="img280.svg"
+ ALT="$\displaystyle \includegraphics{flow64.eps}$">
+</DIV><P></P>
+
+<P>
+The requirement for there to be objects in the flow stream large enough to reflect sound waves limits Doppler ultrasonic flowmeters to liquid applications.  &ldquo;Dirty&rdquo; liquids such as slurries and wastewater, or liquids carrying a substantial number of gas bubbles (e.g. carbonated beverages) are good candidate fluids for this technology.  It is unrealistic to expect that any gas stream will be carrying liquid droplets or solid matter large enough to reflect strong echoes, and so Doppler flowmeters cannot be used to measure gas flow.
+
+<P>
+
+<P>
+The mathematical relationship between fluid velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$v$"></SPAN>) and the Doppler frequency shift (<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img281.svg"
+ ALT="$\Delta f$"></SPAN>) is as follows, for fluid velocities much less than the speed of sound through that fluid (<SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="img282.svg"
+ ALT="$v &lt;&lt; c$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta f = {{2vf \cos \theta} \over {c}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img283.svg"
+ ALT="$\displaystyle \Delta f = {{2vf \cos \theta} \over {c}}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img281.svg"
+ ALT="$\Delta f$"></SPAN> = Doppler frequency shift
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$v$"></SPAN> = Velocity of fluid (actually, of the particle reflecting the sound wave)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img228.svg"
+ ALT="$f$"></SPAN> = Frequency of incident sound wave
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img204.svg"
+ ALT="$\theta$"></SPAN> = Angle between transducer and pipe centerlines
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img284.svg"
+ ALT="$c$"></SPAN> = Speed of sound in the process fluid
+
+<P>
+<P>
+Note how the Doppler effect yields a direct measurement of fluid <SPAN  CLASS="textit">velocity</SPAN> from each echo received by the transducer.  This stands in marked contrast to measurements of <SPAN  CLASS="textit">distance</SPAN> based on time-of-flight (time domain reflectometry &ndash; where the amount of <SPAN  CLASS="textit">time</SPAN> between the incident pulse and the returned echo is proportional to distance between the transducer and the reflecting surface), such as in the application of ultrasonic liquid level measurement.  In a Doppler flowmeter, the time delay between the incident and reflected pulses is irrelevant.  Only the <SPAN  CLASS="textit">frequency shift</SPAN> between the incident and reflected signals matters.  This frequency shift is also directly proportional to the velocity of flow, making the Doppler ultrasonic flowmeter a linear measurement device.
+
+<P>
+Re-arranging the Doppler frequency shift equation to solve for velocity (again, assuming <SPAN CLASS="MATH"><IMG STYLE="height: 1.47ex; vertical-align: -0.16ex; " SRC="img282.svg"
+ ALT="$v &lt;&lt; c$"></SPAN>),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = {{c \Delta f} \over {2 f \cos \theta}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.40ex; vertical-align: -2.14ex; " SRC="img285.svg"
+ ALT="$\displaystyle v = {{c \Delta f} \over {2 f \cos \theta}}$">
+</DIV><P></P>
+
+<P>
+Knowing that volumetric flow rate is equal to the product of pipe area and the average velocity of the fluid (<!-- MATH
+ $Q = A\overline{v}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img223.svg"
+ ALT="$Q = A\overline{v}$"></SPAN>), we may re-write the equation to directly solve for calculated flow rate (<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = {{Ac \Delta f} \over {2 f \cos \theta}}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.40ex; vertical-align: -2.14ex; " SRC="img286.svg"
+ ALT="$\displaystyle Q = {{Ac \Delta f} \over {2 f \cos \theta}}$">
+</DIV><P></P>
+
+<P>
+A very important consideration for Doppler ultrasonic flow measurement is that the calibration of the flowmeter varies with the speed of sound through the fluid (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img284.svg"
+ ALT="$c$"></SPAN>).  This is readily apparent by the presence of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img284.svg"
+ ALT="$c$"></SPAN> in the above equation: as <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img284.svg"
+ ALT="$c$"></SPAN> increases, <SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img281.svg"
+ ALT="$\Delta f$"></SPAN> must proportionately decrease for any fixed volumetric flow rate <SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>.  Since the flowmeter is designed to directly interpret flow rate in terms of <SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img281.svg"
+ ALT="$\Delta f$"></SPAN>, an increase in <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img284.svg"
+ ALT="$c$"></SPAN> causing a decrease in <SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img281.svg"
+ ALT="$\Delta f$"></SPAN> will thus register as a decrease in <SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN>.  This means the speed of sound for a fluid must be precisely known in order for a Doppler ultrasonic flowmeter to accurately measure flow.  
+
+<P>
+
+<P>
+The speed of sound through any fluid is a function of that medium's density and bulk modulus (how easily it compresses):  <A NAME="808"></A>  <A NAME="809"></A>  <A NAME="810"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+c = \sqrt{B \over \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.23ex; vertical-align: -2.81ex; " SRC="img287.svg"
+ ALT="$\displaystyle c = \sqrt{B \over \rho}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img284.svg"
+ ALT="$c$"></SPAN> = speed of sound in a material (meters per second)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img257.svg"
+ ALT="$B$"></SPAN> = Bulk modulus (pascals, or newtons per square meter)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\rho$"></SPAN> = Mass density of fluid (kilograms per cubic meter)
+
+<P>
+<P>
+Temperature affects liquid density, and composition (the chemical constituency of the liquid) affects bulk modulus.  Thus, temperature and composition both are influencing factors for Doppler ultrasonic flowmeter calibration.  Pressure is not a concern here, since pressure only affects the density of gases, and we already know Doppler flowmeters only function with liquids. 
+
+<P>
+Following on the theme of requiring bubbles or particles of sufficient size, another limitation of Doppler ultrasonic flowmeters is their inability to measure flow rates of liquids that are too clean and too homogeneous.  In such applications, the sound-wave reflections will be too weak to reliably measure.  Such is also the case when the solid particles have a speed of sound too close to the that of the liquid, since reflection happens only when a sound wave encounters a material with a markedly different speed of sound.  Doppler-type ultrasonic flowmeters are useless in applications where we cannot obtain strong sound-wave reflections.
+
+<P>
+<P>
+
+<P>
+<SPAN  CLASS="textit">Transit-time</SPAN> flowmeters, sometimes called <SPAN  CLASS="textit">counterpropagation</SPAN> flowmeters, are an alternative to Doppler ultrasonic flowmeters.  A transit-time ultrasonic flowmeter uses a pair of opposed sensors to measure the time difference between a sound pulse traveling with the fluid flow versus a sound pulse traveling against the fluid flow.  Since the motion of fluid tends to carry a sound wave along, the sound pulse transmitted downstream will make the journey faster than a sound pulse transmitted upstream<A ID="tex2html50"
+  HREF="footnode.html#foot814"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">50</SPAN></SUP></A>:  <A NAME="815"></A>  <A NAME="816"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow65.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.39ex; vertical-align: -0.10ex; " SRC="img288.svg"
+ ALT="$\displaystyle \includegraphics{flow65.eps}$">
+</DIV><P></P>
+
+<P>
+The rate of volumetric flow through a transit-time flowmeter is a simple function of the upstream and downstream propagation times:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+Q = k {t_{up} - t_{down} \over (t_{up})(t_{down})}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.42ex; vertical-align: -2.34ex; " SRC="img289.svg"
+ ALT="$\displaystyle Q = k {t_{up} - t_{down} \over (t_{up})(t_{down})}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.22ex; vertical-align: -0.55ex; " SRC="img41.svg"
+ ALT="$Q$"></SPAN> = Calculated volumetric flow rate
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$k$"></SPAN> = Constant of proportionality
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.26ex; vertical-align: -0.75ex; " SRC="img290.svg"
+ ALT="$t_{up}$"></SPAN> = Time for sound pulse to travel from downstream location to upstream location (upstream, against the flow)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.96ex; vertical-align: -0.45ex; " SRC="img291.svg"
+ ALT="$t_{down}$"></SPAN> = Time for sound pulse to travel from upstream location to downstream location (downstream, with the flow)
+
+<P>
+<P>
+An interesting characteristic of transit-time velocity measurement is that the ratio of transit time difference over transit time product remains constant with changes in the speed of sound through the fluid<A ID="tex2html51"
+  HREF="footnode.html#foot1425"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">51</SPAN></SUP></A>.  When this equation is cast into terms of path length (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img189.svg"
+ ALT="$L$"></SPAN>), fluid velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$v$"></SPAN>), and sound velocity (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img284.svg"
+ ALT="$c$"></SPAN>), the equation simplifies to <!-- MATH
+ $Q = {2kv \over L}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img294.svg"
+ ALT="$Q = {2kv \over L}$"></SPAN>, proving that the transit-time flowmeter is linear just like the Doppler flowmeter, with the advantage of being immune to changes in the fluid's speed of sound.  Changes in bulk modulus resulting from changes in fluid composition, or changes in density resulting from compositional, temperature, or pressure variations therefore have little effect on a transit-time flowmeter's accuracy.  <A NAME="830"></A>  <A NAME="831"></A>
+
+<P>
+
+<P>
+Not only are transit-time ultrasonic flowmeters immune to changes in the speed of sound, but they are also able to measure that sonic velocity independent of the flow rate.  The equation for calculating speed of sound based on upstream and downstream propagation times is as follows:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+c = {L \over 2} \left({t_{up} + t_{down} \over (t_{up})(t_{down})}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.78ex; vertical-align: -2.34ex; " SRC="img295.svg"
+ ALT="$\displaystyle c = {L \over 2} \left({t_{up} + t_{down} \over (t_{up})(t_{down})}\right)$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img284.svg"
+ ALT="$c$"></SPAN> = Calculated speed of sound in fluid
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img189.svg"
+ ALT="$L$"></SPAN> = Path length 
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.26ex; vertical-align: -0.75ex; " SRC="img290.svg"
+ ALT="$t_{up}$"></SPAN> = Time for sound pulse to travel from downstream location to upstream location (upstream, against the flow)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.96ex; vertical-align: -0.45ex; " SRC="img291.svg"
+ ALT="$t_{down}$"></SPAN> = Time for sound pulse to travel from upstream location to downstream location (downstream, with the flow)
+
+<P>
+<P>
+While not necessary or even particularly relevant for the direct purpose of flow measurement, this inference of the fluid's speed of sound is nevertheless useful as a diagnostic tool.  If the true speed of sound for the fluid is known either by direct laboratory measurement of a sample or by chemical analysis<A ID="tex2html52"
+  HREF="footnode.html#foot1380"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">52</SPAN></SUP></A> of a sample, this speed may be compared against the flowmeter's reported speed of sound to check the flowmeter's absolute transit time measurement accuracy.  Certain problems within the sensors or within the sensor electronics may be detected in this way.  <A NAME="841"></A>
+
+<P>
+<P>
+A requirement for reliable operation of a transit-time ultrasonic flowmeter is that the process fluid be free from gas bubbles or solid particles which might scatter or obstruct the sound waves.  Note that this is precisely the opposite requirement of Doppler ultrasonic flowmeters, which <SPAN  CLASS="textit">require</SPAN> bubbles or particles to reflect sound waves.  These opposing requirements neatly distinguish applications suitable for transit-time flowmeters from applications suitable for Doppler flowmeters, and also raise the possibility of using transit-time ultrasonic flowmeters on gas flowstreams as well as on liquid flowstreams.
+
+<P>
+<P>
+
+<P>
+One potential problem with any ultrasonic flowmeter is being able to measure the true average fluid velocity when the flow profile changes with Reynolds number.  If just one ultrasonic &ldquo;beam&rdquo; is used to probe the fluid velocity, the path this beam takes will likely see a different velocity profile as the flow rate changes (and the Reynolds number changes along with it).  Recall the difference in fluid velocity profiles between low Reynolds number flows (left) and high Reynolds number flows (right):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{fluids_04.eps} \hskip 30pt \includegraphics[width=2.5in]{fluids_05.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 11.02ex; vertical-align: -0.10ex; " SRC="img296.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{fluids_04.eps} \hskip 30pt \includegraphics[width=2.5in]{fluids_05.eps}$">
+</DIV><P></P>
+
+<P>
+A popular way to mitigate this problem is to use multiple sensor pairs, sending acoustic signals along multiple paths through the fluid (i.e. a <SPAN  CLASS="textit">multipath</SPAN> ultrasonic flowmeter), and to average the resulting velocity measurements.  Dual-beam transit-time flowmeters have been in use for well over a decade at the time of this writing (2009), and one manufacturer even has a <SPAN  CLASS="textit">five beam</SPAN> ultrasonic flowmeter model which they claim maintains an accuracy of <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img297.svg"
+ ALT="$\pm$"></SPAN> 0.15% through the laminar-to-turbulent flow regime transition<A ID="tex2html53"
+  HREF="footnode.html#foot1381"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">53</SPAN></SUP></A>.  A simplified illustration of a Daniel four-beam (or four &ldquo;chord&rdquo;) ultrasonic flowmeter is shown here: <A NAME="848"></A>  <A NAME="849"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow87.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 28.06ex; vertical-align: -0.10ex; " SRC="img298.svg"
+ ALT="$\displaystyle \includegraphics{flow87.eps}$">
+</DIV><P></P> <A NAME="851"></A>
+
+<P>
+Multipath ultrasonic flowmeters, by virtue of measuring more than one sound wave path through the fluid, also have the ability to detect irregular flow profiles.  Each sonic path between sensor pairs in a transit-time ultrasonic flowmeter, called a <SPAN  CLASS="textit">chord</SPAN>, measures flow velocity.  The velocities reported for each chord may be compared to the flowmeter's calculated average flow velocity, and expressed as <SPAN  CLASS="textit">velocity ratios</SPAN>.  A particular chord measuring a velocity greater than the flowmeter's average will report a velocity ratio greater than one (<SPAN CLASS="MATH"><IMG STYLE="height: 1.75ex; vertical-align: -0.16ex; " SRC="img299.svg"
+ ALT="$&gt;1$"></SPAN>), whereas a chord measuring a velocity less than the meter's average will report a velocity ratio less than one (<SPAN CLASS="MATH"><IMG STYLE="height: 1.75ex; vertical-align: -0.16ex; " SRC="img300.svg"
+ ALT="$&lt;1$"></SPAN>).  In the Daniel four-chord ultrasonic flowmeter, two chords (B and C) measure velocity near the center of the pipe while the others (A and D) measure velocity closer to the pipe walls.  In normal operation, the center chord velocity ratios should exceed the outer chord velocity ratios by a small amount, since the flow profiles of laminar and turbulent flow regimes alike exhibit a greater velocity at the center of a pipe than near the walls of a pipe.  <A NAME="854"></A>
+
+<P>
+Another parameter called <SPAN  CLASS="textit">profile factor</SPAN> expresses the chord velocity factors as a ratio, inner velocity factors over outer velocity factors: <!-- MATH
+ ${B + C} \over {A + D}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.12ex; vertical-align: -1.06ex; " SRC="img301.svg"
+ ALT="${B + C} \over {A + D}$"></SPAN>, a number which should always exceed one (<SPAN CLASS="MATH"><IMG STYLE="height: 1.75ex; vertical-align: -0.16ex; " SRC="img299.svg"
+ ALT="$&gt;1$"></SPAN>).  The exact value of this profile factor varies with the flowmeter's installation, and may shift over time if the flow profile shifts for some reason (e.g. partial blockage in a flow conditioner, piping change, accumulation of debris on pipe wall).  For example, a pipe accumulating dirt or other solid material on its walls over time will tend to slow down the velocity of fluid near the walls compared to the velocity of fluid in the center.  This has the effect of decreasing chord A and D velocity ratios while increasing chord B and C velocity ratios, which in turn increases the profile factor value.  In this regard, the profile factor value for an operating flowmeter may be an important diagnostic tool, indicating some physical abnormality within the piping.  <A NAME="858"></A>
+
+<P>
+As previously mentioned, it is possible for a transit-time ultrasonic flowmeter to measure the speed of sound through the fluid from the sum of the upstream and downstream transit times.  Multipath transit-time flowmeters may use this feature to cross-check calculated speed of sound values measured by each chord, as a self-diagnostic tool.  Since each chord measures the same gas composition, each chord's calculated speed of sound should be exactly equal.  Significant differences in calculated speed of sound between chords suggests a failure in the acoustic sensor(s) or electronics for the errant chord.
+
+<P>
+<P>
+Some modern ultrasonic flowmeters have the ability to switch back and forth between Doppler and transit-time (counterpropagation) modes, automatically adapting to the fluid being sensed.  This capability enhances the suitability of ultrasonic flowmeters to a wider range of process applications.
+
+<P>
+Ultrasonic flowmeters are adversely affected by swirl and other large-scale fluid disturbances, and as such may require substantial lengths of straight pipe upstream and downstream of the measurement flowtube to stabilize the flow profile.
+
+<P>
+Like magnetic flowmeters, ultrasonic flowmeters are completely non-obstructive, which means they exhibit extremely low permanent pressure loss and will not accumulate debris.  
+
+<P>
+Advances in ultrasonic flow measurement technology have reached a point where it is now feasible to consider ultrasonic flowmeters for custody transfer measurement of natural gas.  The American Gas Association has released a report specifying the use of multipath transit-time ultrasonic flowmeters in this capacity (Report #9).  As with the AGA's #3 (orifice plate) and #7 (turbine) high-accuracy gas flow measurement standards, the AGA9 standard requires the addition of pressure and temperature instruments on the gas line to measure gas pressure and temperature in order to calculate flow either in units of mass or in units of standardized volume (e.g. SCFM).  The measurement of temperature and pressure for a transit-time ultrasonic flowmeter has nothing to do with correcting errors within the meter itself, since we know transit-time flowmeters are inherently immune to changes in gas density or composition.  Temperature and pressure measurements are necessary for custody transfer applications simply because ultrasonic flowmeters, like turbine flowmeters, measure only <SPAN  CLASS="textit">volumetric</SPAN> flow.  The fair sale and purchase of a gas requires measurement of <SPAN  CLASS="textit">molecular quantity</SPAN>, not just volume, which is why a flow computer requires measurements of pressure and temperature in order to convert the ultrasonic flowmeter's volumetric output to either mass flow or standardized volumetric flow.   <A NAME="861"></A> <A NAME="862"></A>
+
+<P>
+<P>
+
+<P>
+A unique advantage of ultrasonic flow measurement is the ability to measure flow through the use of temporary <SPAN  CLASS="textit">clamp-on</SPAN> sensors rather than a specialized flowtube with built-in ultrasonic transducers.  While clamp-on sensors are not without their share of problems<A ID="tex2html54"
+  HREF="footnode.html#foot864"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">54</SPAN></SUP></A>, they constitute an excellent solution for certain flow measurement applications.  <A NAME="865"></A>  
+
+<P>
+An important criterion for successful application of a clamp-on flowmeter is that the pipe material be homogeneous in nature, to efficiently conduct sound waves between the process fluid and the clamp-on transducers.  Porous pipe materials such as clay and concrete are therefore unsuitable for clamp-on ultrasonic flow measurement.
+
+<P>
+
+<H2><A ID="SECTION00245000000000000000">
+Optical flowmeters</A>
+</H2>
+
+<P>
+A relatively recent development in industrial flow measurement is the use of light to measure the velocity of a fluid through a pipe.  One such technology referred to as <SPAN  CLASS="textit">Laser-Two-Focus</SPAN> (L2F) uses two laser beams to detect the passage of any light-scattering particles carried along by the moving fluid:  <A NAME="868"></A>  <A NAME="869"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow89.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 56.52ex; vertical-align: -0.10ex; " SRC="img302.svg"
+ ALT="$\displaystyle \includegraphics{flow89.eps}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = {d \over t}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img303.svg"
+ ALT="$\displaystyle v = {d \over t}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$v$"></SPAN> = Velocity of particle
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img99.svg"
+ ALT="$d$"></SPAN> = Distance separating laser beams
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.62ex; vertical-align: -0.10ex; " SRC="img304.svg"
+ ALT="$t$"></SPAN> = Time difference between sensor pulses
+
+<P>
+<P>
+As a particle passes through each laser beam, it redirects the light away from its normal straight-line path in such a way that an optical sensor (one per beam) detects up the scattered light and generates a pulse signal.  As that same particle passes through the second beam, the scattered light excites a second optical sensor to generate a corresponding pulse signal.  The time delay between two successive pulses is inversely proportional to the velocity of that particle.  This technique is analogous to the that used by law-enforcement officers to measure the speed of a vehicle on a highway when viewed from an aircraft: measure how much time elapses as the vehicle passes between two marks on the road spaced a known distance from each other.
+
+<P>
+L2F flowmeters of course rely on the continual presence of light-scattering particles within the fluid.  These particles could be either liquid droplets or solids within a gas stream, or they could be solid particles or bubbles in a liquid stream.
+
+<P>
+<P>
+An alternative to passing laser beams across the entire width of the pipe is to shrink the assembly down to the size of a probe which may be inserted into a pipe.  While minimizing installation and maintenance costs, this approach suffers the disadvantage of sensing velocity at only one point within the flow stream, much like a classic Pitot tube.  In order to obtain a measurement of bulk (average) fluid velocity, the raw velocity measurement provided by the sensor must be corrected based on the expected Reynolds number for the process fluid, which is why insertion L2F flowmeters are equipped with pressure and temperature transmitters in addition to the optical probe.  When the three measurements (pressure, temperature, and velocity at the probe) are combined, the Reynolds number may be calculated which then predicts how &ldquo;flat&rdquo; (consistent) the velocity profile is for the fluid stream:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow90.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.84ex; vertical-align: -0.10ex; " SRC="img305.svg"
+ ALT="$\displaystyle \includegraphics{flow90.eps}$">
+</DIV><P></P>
+
+<P>
+For example, if the probe velocity, pressure, temperature, and dimensional parameters indicate a high Reynolds number, it means the velocity profile will be relatively flat, and thus the single-point velocity measurement at the probe will be a fair representation of velocity across the entire width of the pipe.  However, if the parameters indicate a low Reynolds number, it means the velocity profile will have a more pronounced &ldquo;bullet&rdquo; shape, and therefore the velocities near the pipe walls will be substantially less than the velocity at the center.  The flow computer uses this predicted velocity profile to interpret the probe's single-point velocity measurement and calculate the average velocity of the entire flowstream.
+
+<P>
+<P>
+
+<P>
+A more sophisticated technique for optical flow measurement relies on the principle of <SPAN  CLASS="textit">scintillation</SPAN>, whereby the fluid itself warps the path of light passing through, rather than entrained particulate matter scattering the light.  Scintillation is the same phenomenon responsible for the &ldquo;twinkling&rdquo; of stars and city lights viewed from a long distance: as air passes between the light and the observer, pockets of air having different density (due to differences in temperature) and/or sufficient turbulence cause some of the light to be refracted away from an otherwise straight-line path, making it appear as though the light source is randomly vibrating or oscillating.  In fact, the phenomenon of scintillation has been used for the measurement of air velocity (anemometry) for many years before its application to industrial flow measurement.  <A NAME="874"></A>
+
+<P>
+Velocity measurements are inferred by a scintillation flowmeter much the same as they are by an L2F optical flowmeter: measuring the time difference between two sensors' detection of the same scintillation pattern.  Therefore, the scintillation flowmeter applies the same basic formula <!-- MATH
+ $v = {d \over t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.97ex; vertical-align: -0.90ex; " SRC="img306.svg"
+ ALT="$v = {d \over t}$"></SPAN> to calculate fluid velocity.  A simplified diagram of a scintillation flowmeter is shown here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{flow91.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 55.16ex; vertical-align: -0.10ex; " SRC="img307.svg"
+ ALT="$\displaystyle \includegraphics{flow91.eps}$">
+</DIV><P></P>
+
+<P>
+Scintillation-style optical flowmeters require a long optical path in order to maximize the angle at which light will be refracted.  Thus, they function best when used to measure across the full diameter of a pipe.  An interesting feature of this flowmeter technology is that it functions <SPAN  CLASS="textit">best</SPAN> when the flow regime is highly turbulent, since increased fluid turbulence leads to greater scintillation.
+
+<P>
+<P>
+
+<P>
+Both L2F and scintillation flowmeters have phenomenal turndown ratios.  At the low end of the velocity measurement range, an L2F meter is limited by the number of particles entrained in the flow stream and also by the random motions of particles which might be misinterpreted by the flowmeter as bulk motion of the fluid.  Scintillation flowmeters are limited at the low end of their measurement range by loss of turbulence, which of course is one of the driving mechanisms of the scintillation effect.  However, it should be noted that in both cases the low-velocity measuring limit is quite low in comparison to other types of flowmeters.  With no moving parts and using light as the sensing medium, the upper limit for an optical flowmeter can extend into supersonic velocities.  This combination of excellent low-velocity and high-velocity sensing yields practical turndown ratios of 1000:1 or more.
+
+<P>
+<P>
+Optical flowmeters have been successfully used in one of the more challenging industrial flow measurement applications in existence: <SPAN  CLASS="textit">flare gas flow metering</SPAN>.  A &ldquo;flare&rdquo; is a continually-ignited burner used as a safety relief point for flammable gases in industries such as petroleum production and refining where a need exists to occasionally vent these gases to the atmosphere:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{flare.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 31.83ex; vertical-align: -0.10ex; " SRC="img308.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{flare.eps}$">
+</DIV><P></P>
+
+<P>
+Ideally, flares operate with no flow of gas to them except during emergency conditions, and then when there is an emergency the flow rate can be very high.  In order to accurately measure the low &ldquo;quiescent&rdquo; flow of gas to a flare during non-emergency operation (due to pressure relief valve leakage and other inefficiencies) while still being able to register full flow rates during emergencies, the flowmeter must have an extremely large turndown ratio (rangeability).  <A NAME="880"></A>  <A NAME="881"></A>  <A NAME="882"></A>
+
+<P>
+Gas sent to a flare typically varies widely in composition, temperature, and pressure, especially when multiple processing units share a common flare.  The random variability of the gas eliminates many types of flowmeters from consideration.  Pressure-based flowmeters such as orifice plates suffer from calibration errors due to density changes, as well as poor turndown ratio.  Thermal mass flowmeters suffer from calibration errors due to changes in the specific heat value of the flare gas.  Velocity-based gas flowmeters (e.g. turbine, vortex, ultrasonic) are not affected by compositional changes to the extent that pressure-based and thermal flowmeters are, but few exhibit the degree of turndown necessary to accurately measure the full range of flare gas flow.  Multi-path transit-time ultrasonic flowmeters show promise in this challenging application, but their relatively high cost (especially at the large pipe diameters typical of flare headers) is a limiting factor.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html226"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html228"
+  HREF="node16.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node7.html">Positive displacement flowmeters</A>
+<B> Up:</B> <A
+ HREF="node2.html">Continuous fluid flow measurement</A>
+<B> Previous:</B> <A
+ HREF="node5.html">Variable-area flowmeters</A>
+ &nbsp; <B>  <A ID="tex2html227"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html229"
+  HREF="node16.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>
