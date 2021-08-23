@@ -1,0 +1,1888 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Instrument calibration</TITLE>
+<META NAME="description" CONTENT="Instrument calibration">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html87"
+  HREF="node2.html#SECTION00210000000000000000">Calibration versus re-ranging</A>
+<LI><A ID="tex2html88"
+  HREF="node2.html#SECTION00220000000000000000">Zero and span adjustments (analog instruments)</A>
+<LI><A ID="tex2html89"
+  HREF="node2.html#SECTION00230000000000000000">Calibration errors and testing</A>
+<UL>
+<LI><A ID="tex2html90"
+  HREF="node2.html#SECTION00231000000000000000">Typical calibration errors</A>
+<LI><A ID="tex2html91"
+  HREF="node2.html#SECTION00232000000000000000">As-found and as-left documentation</A>
+<LI><A ID="tex2html92"
+  HREF="node2.html#SECTION00233000000000000000">Up-tests and Down-tests</A>
+<LI><A ID="tex2html93"
+  HREF="node2.html#SECTION00234000000000000000">Automated calibration</A>
+</UL>
+<BR>
+<LI><A ID="tex2html94"
+  HREF="node2.html#SECTION00240000000000000000">Damping adjustments</A>
+<LI><A ID="tex2html95"
+  HREF="node2.html#SECTION00250000000000000000">LRV and URV settings, digital trim (digital transmitters)</A>
+<LI><A ID="tex2html96"
+  HREF="node2.html#SECTION00260000000000000000">An analogy for calibration versus ranging</A>
+<LI><A ID="tex2html97"
+  HREF="node2.html#SECTION00270000000000000000">Calibration procedures</A>
+<UL>
+<LI><A ID="tex2html98"
+  HREF="node2.html#SECTION00271000000000000000">Linear instruments</A>
+<LI><A ID="tex2html99"
+  HREF="node2.html#SECTION00272000000000000000">Nonlinear instruments</A>
+<LI><A ID="tex2html100"
+  HREF="node2.html#SECTION00273000000000000000">Discrete instruments</A>
+</UL>
+<BR>
+<LI><A ID="tex2html101"
+  HREF="node2.html#SECTION00280000000000000000">Instrument turndown</A>
+<LI><A ID="tex2html102"
+  HREF="node2.html#SECTION00290000000000000000">NIST traceability</A>
+<LI><A ID="tex2html103"
+  HREF="node2.html#SECTION002100000000000000000">Practical calibration standards</A>
+<UL>
+<LI><A ID="tex2html104"
+  HREF="node2.html#SECTION002101000000000000000">Electrical standards</A>
+<LI><A ID="tex2html105"
+  HREF="node2.html#SECTION002102000000000000000">Temperature standards</A>
+<LI><A ID="tex2html106"
+  HREF="node2.html#SECTION002103000000000000000">Pressure standards</A>
+<LI><A ID="tex2html107"
+  HREF="node2.html#SECTION002104000000000000000">Flow standards</A>
+<LI><A ID="tex2html108"
+  HREF="node2.html#SECTION002105000000000000000">Analytical standards</A>
+</UL>
+<BR>
+<LI><A ID="tex2html109"
+  HREF="node2.html#SECTION002110000000000000000">Review of fundamental principles</A>
+<LI><A ID="tex2html110"
+  HREF="node2.html#SECTION002120000000000000000">References</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00200000000000000000">
+Instrument calibration</A>
+</H1>
+
+<P>
+Every instrument has at least one <SPAN  CLASS="textit">input</SPAN> and one <SPAN  CLASS="textit">output</SPAN>.  For a pressure sensor, the input would be some fluid pressure and the output would (most likely) be an electronic signal.  For a loop indicator, the input would be a 4-20 mA current signal and the output would be a human-readable display.  For a variable-speed motor drive, the input would be an electronic signal and the output would be electric power to the motor.
+
+<P>
+<SPAN  CLASS="textit">Calibration</SPAN> and <SPAN  CLASS="textit">ranging</SPAN> are two tasks associated with establishing an accurate correspondence between any instrument's input signal and its output signal.  Simply defined, <SPAN  CLASS="textit">calibration</SPAN> assures the instrument accurately senses the real-world variable it is supposed to measure or control.  Simply defined, <SPAN  CLASS="textit">ranging</SPAN> establishes the desired relationship between an instrument's input and its output.
+
+<P>
+
+<H1><A ID="SECTION00210000000000000000">
+Calibration versus re-ranging</A>
+</H1>
+
+<P>
+To <SPAN  CLASS="textit">calibrate</SPAN> an instrument means to check and adjust (if necessary) its response so the output accurately corresponds to its input throughout a specified range.  In order to do this, one must expose the instrument to an actual input stimulus of precisely known quantity.  For a pressure gauge, indicator, or transmitter, this would mean subjecting the pressure instrument to known fluid pressures and comparing the instrument response against those known pressure quantities.  One cannot perform a true calibration without comparing an instrument's response to known, physical stimuli.  <A NAME="42"></A>
+
+<P>
+To <SPAN  CLASS="textit">range</SPAN> an instrument means to set the lower and upper range values so it responds with the desired sensitivity to changes in input.  For example, a pressure transmitter set to a range of 0 to 200 PSI (0 PSI = 4 mA output ; 200 PSI = 20 mA output) could be re-ranged to respond on a scale of 0 to 150 PSI (0 PSI = 4 mA ; 150 PSI = 20 mA). <A NAME="44"></A>
+
+<P>
+In analog instruments, re-ranging could (usually) only be accomplished by re-calibration, since the same adjustments were used to achieve both purposes.  In digital instruments, calibration and ranging are typically separate adjustments (i.e. it is possible to re-range a digital transmitter without having to perform a complete recalibration), so it is important to understand the difference.
+
+<P>
+
+<H1><A ID="SECTION00220000000000000000">
+Zero and span adjustments (analog instruments)</A>
+</H1>
+
+<P>
+The purpose of <SPAN  CLASS="textit">calibration</SPAN> is to ensure the input and output of an instrument reliably correspond to one another throughout the entire range of operation.  We may express this expectation in the form of a graph, showing how the input and output of an instrument should relate.  For the vast majority of industrial instruments this graph will be linear:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.55ex; vertical-align: -0.10ex; " SRC="img1.svg"
+ ALT="$\displaystyle \includegraphics{calibrate01.eps}$">
+</DIV><P></P>
+
+<P>
+This graph shows how any given percentage of input should correspond to the same percentage of output, all the way from 0% to 100%.
+
+<P>
+
+<P>
+Things become more complicated when the input and output axes are represented by units of measurement other than &ldquo;percent.&rdquo;  Take for instance a pressure <SPAN  CLASS="textit">transmitter</SPAN>, a device designed to sense a fluid pressure and output an electronic signal corresponding to that pressure.  Here is a graph for a pressure transmitter with an input range of 0 to 100 pounds per square inch (PSI) and an electronic output signal range of 4 to 20 milliamps (mA) electric current:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.55ex; vertical-align: -0.10ex; " SRC="img2.svg"
+ ALT="$\displaystyle \includegraphics{calibrate02.eps}$">
+</DIV><P></P>
+
+<P>
+Although the graph is still linear, zero pressure does not equate to zero current.  This is called a <SPAN  CLASS="textit">live zero</SPAN>, because the 0% point of measurement (0 PSI fluid pressure) corresponds to a non-zero (&ldquo;live&rdquo;) electronic signal.  0 PSI pressure may be the LRV (Lower Range Value) of the transmitter's input, but the LRV of the transmitter's output is 4 mA, not 0 mA.  <A NAME="51"></A> <A NAME="52"></A> <A NAME="53"></A>
+
+<P>
+Any linear, mathematical function may be expressed in &ldquo;slope-intercept&rdquo; equation form:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = mx + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\displaystyle y = mx + b$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img4.svg"
+ ALT="$y$"></SPAN> = Vertical position on graph
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img5.svg"
+ ALT="$x$"></SPAN> = Horizontal position on graph
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$m$"></SPAN> = Slope of line
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$b$"></SPAN> = Point of intersection between the line and the vertical (<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img4.svg"
+ ALT="$y$"></SPAN>) axis
+
+<P>
+<P>
+This instrument's calibration is no different.  If we let <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img5.svg"
+ ALT="$x$"></SPAN> represent the input pressure in units of PSI and <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img4.svg"
+ ALT="$y$"></SPAN> represent the output current in units of milliamps, we may write an equation for this instrument as follows:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = 0.16x + 4
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.13ex; vertical-align: -0.55ex; " SRC="img8.svg"
+ ALT="$\displaystyle y = 0.16x + 4$">
+</DIV><P></P>
+
+<P>
+On the actual instrument (the pressure transmitter), there are two adjustments which let us match the instrument's behavior to the ideal equation.  One adjustment is called the <SPAN  CLASS="textit">zero</SPAN> while the other is called the <SPAN  CLASS="textit">span</SPAN>.  These two adjustments correspond exactly to the <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$b$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$m$"></SPAN> terms of the linear function, respectively: the &ldquo;zero&rdquo; adjustment shifts the instrument's function vertically on the graph (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$b$"></SPAN>), while the &ldquo;span&rdquo; adjustment changes the slope of the function on the graph (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$m$"></SPAN>).  By adjusting both zero and span, we may set the instrument for any range of measurement within the manufacturer's limits. <A NAME="56"></A> <A NAME="57"></A>
+
+<P>
+The relation of the slope-intercept line equation to an instrument's zero and span adjustments reveals something about how those adjustments are actually achieved in any instrument.  A &ldquo;zero&rdquo; adjustment is always achieved by <SPAN  CLASS="textit">adding</SPAN> or <SPAN  CLASS="textit">subtracting</SPAN> some quantity, just like the <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img4.svg"
+ ALT="$y$"></SPAN>-intercept term <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$b$"></SPAN> adds or subtracts to the product <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img9.svg"
+ ALT="$mx$"></SPAN>.  A &ldquo;span&rdquo; adjustment is always achieved by <SPAN  CLASS="textit">multiplying</SPAN> or <SPAN  CLASS="textit">dividing</SPAN> some quantity, just like the slope <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$m$"></SPAN> forms a product with our input variable <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img5.svg"
+ ALT="$x$"></SPAN>.  
+
+<P>
+<P>
+
+<P>
+Zero adjustments typically take one or more of the following forms in an instrument:
+
+<P>
+
+<UL>
+<LI>Bias force (spring or mass force applied to a mechanism)
+</LI>
+<LI>Mechanical offset (adding or subtracting a certain amount of motion)
+</LI>
+<LI>Bias voltage (adding or subtracting a certain amount of potential)
+</LI>
+</UL>
+
+<P>
+
+<P>
+Span adjustments typically take one of these forms:
+
+<P>
+
+<UL>
+<LI>Fulcrum position for a lever (changing the force or motion multiplication)
+</LI>
+<LI>Amplifier gain (multiplying or dividing a voltage signal)
+</LI>
+<LI>Spring rate (changing the force per unit distance of stretch)
+</LI>
+</UL>
+
+<P>
+It should be noted that for most analog instruments, zero and span adjustments are <SPAN  CLASS="textit">interactive</SPAN>.  That is, adjusting one has an effect on the other.  Specifically, changes made to the span adjustment almost always alter the instrument's zero point<A ID="tex2html1"
+  HREF="footnode.html#foot67"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>.  An instrument with interactive zero and span adjustments requires much more effort to accurately calibrate, as one must switch back and forth between the lower- and upper-range points repeatedly to adjust for accuracy. <A NAME="68"></A>
+
+<P>
+
+<H1><A ID="SECTION00230000000000000000">
+Calibration errors and testing</A>
+</H1>
+
+<P>
+The efficient identification and correction of instrument calibration errors is an important function for instrument technicians.  For some technicians &ndash; particularly those working in industries where calibration accuracy is mandated by law &ndash; the task of routine calibration consumes most of their working time.  For other technicians calibration may be an occasional task, but nevertheless these technicians must be able to quickly diagnose calibration errors when they cause problems in instrumented systems.  This section describes common instrument calibration errors and the procedures by which those errors may be detected and corrected.
+
+<P>
+
+<H2><A ID="SECTION00231000000000000000">
+Typical calibration errors</A>
+</H2>
+
+<P>
+Recall that the slope-intercept form of a linear equation describes the response of <SPAN  CLASS="textit">any</SPAN> linear instrument:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = mx + b
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img3.svg"
+ ALT="$\displaystyle y = mx + b$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img4.svg"
+ ALT="$y$"></SPAN> = Output
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$m$"></SPAN> = Span adjustment
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img5.svg"
+ ALT="$x$"></SPAN> = Input
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$b$"></SPAN> = Zero adjustment
+
+<P>
+<P>
+A <SPAN  CLASS="textit">zero shift</SPAN> calibration error shifts the function vertically on the graph, which is equivalent to altering the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$b$"></SPAN> in the slope-intercept equation.  This error affects <SPAN  CLASS="textit">all</SPAN> calibration points equally, creating the same percentage of error across the entire range.  Using the same example of a pressure transmitter with 0 to 100 PSI input range and 4 to 20 mA output range: <A NAME="74"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate06.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.55ex; vertical-align: -0.10ex; " SRC="img10.svg"
+ ALT="$\displaystyle \includegraphics{calibrate06.eps}$">
+</DIV><P></P>
+
+<P>
+If a transmitter suffers from a zero calibration error, that error may be corrected by carefully moving the &ldquo;zero&rdquo; adjustment until the response is ideal, essentially altering the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$b$"></SPAN> in the linear equation.
+
+<P>
+
+<P>
+A <SPAN  CLASS="textit">span shift</SPAN> calibration error shifts the slope of the function, which is equivalent to altering the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$m$"></SPAN> in the slope-intercept equation.  This error's effect is unequal at different points throughout the range: <A NAME="77"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate07.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.55ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$\displaystyle \includegraphics{calibrate07.eps}$">
+</DIV><P></P>
+
+<P>
+If a transmitter suffers from a span calibration error, that error may be corrected by carefully moving the &ldquo;span&rdquo; adjustment until the response is ideal, essentially altering the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$m$"></SPAN> in the linear equation.
+
+<P>
+
+<P>
+A <SPAN  CLASS="textit">linearity</SPAN> calibration error causes the instrument's response function to no longer be a straight line.  This type of error does not directly relate to a shift in either zero (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$b$"></SPAN>) or span (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$m$"></SPAN>) because the slope-intercept equation only describes straight lines:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate08.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.55ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$\displaystyle \includegraphics{calibrate08.eps}$">
+</DIV><P></P>
+
+<P>
+Some instruments provide means to adjust the linearity of their response, in which case this adjustment needs to be <SPAN  CLASS="textit">carefully</SPAN> altered.  The behavior of a linearity adjustment is unique to each model of instrument, and so you must consult the manufacturer's documentation for details on how and why the linearity adjustment works.  If an instrument does not provide a linearity adjustment, the best you can do for this type of problem is &ldquo;split the error&rdquo; between high and low extremes, so the maximum absolute error at any point in the range is minimized.  <A NAME="82"></A>
+
+<P>
+
+<P>
+A <SPAN  CLASS="textit">hysteresis</SPAN> calibration error occurs when the instrument responds differently to an increasing input compared to a decreasing input.  The only way to detect this type of error is to do an <SPAN  CLASS="textit">up-down</SPAN> calibration test, checking for instrument response at the same calibration points going down as going up:  <A NAME="85"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate09.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 43.55ex; vertical-align: -0.10ex; " SRC="img13.svg"
+ ALT="$\displaystyle \includegraphics{calibrate09.eps}$">
+</DIV><P></P>
+
+<P>
+Hysteresis errors are almost always caused by mechanical friction on some moving element (and/or a loose coupling between mechanical elements) such as bourdon tubes, bellows, diaphragms, pivots, levers, or gear sets.  Friction always acts in a direction opposite to that of relative motion, which is why the output of an instrument with hysteresis problems always <SPAN  CLASS="textit">lags</SPAN> behind the changing input, causing the instrument to register falsely low on a rising stimulus and falsely high on a falling stimulus.  Flexible metal strips called <SPAN  CLASS="textit">flexures</SPAN> &ndash; which are designed to serve as frictionless pivot points in mechanical instruments &ndash; may also cause hysteresis errors if cracked or bent.  Thus, hysteresis errors cannot be remedied by simply making calibration adjustments to the instrument &ndash; one must usually replace defective components or correct coupling problems within the instrument mechanism.  <A NAME="89"></A>
+
+<P>
+<P>
+In practice, most calibration errors are some combination of zero, span, linearity, and hysteresis problems.  An important point to remember is that with rare exceptions, zero errors always accompany other types of errors.  In other words, it is extremely rare to find an instrument with a span, linearity, or hysteresis error that does not <SPAN  CLASS="textit">also</SPAN> exhibit a zero error.  For this reason, technicians often perform a single-point calibration test of an instrument as a qualitative indication of its calibration health.  If the instrument performs within specification at that one point, its calibration over the entire range is <SPAN  CLASS="textit">probably</SPAN> good.  Conversely, if the instrument fails to meet specification at that one point, it definitely needs to be recalibrated.
+
+<P>
+
+<P>
+A very common single-point test for instrument technicians to perform on differential pressure (&ldquo;DP&rdquo;) instruments is to close both block valves on the three-valve manifold assembly and then open the equalizing valve, to produce a known condition of 0 PSI differential pressure:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{pressure72.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 42.19ex; vertical-align: -0.10ex; " SRC="img14.svg"
+ ALT="$\displaystyle \includegraphics{pressure72.eps}$">
+</DIV><P></P>
+
+<P>
+Most DP instrument ranges encompass 0 PSI, making this a very simple single-point check.  If the technician &ldquo;blocks and equalizes&rdquo; a DP instrument and it properly reads zero, its calibration is <SPAN  CLASS="textit">probably</SPAN> good across the entire range.  If the DP instrument fails to read zero during this test, it definitely needs to be recalibrated.
+
+<P>
+
+<H2><A ID="SECTION00232000000000000000">
+As-found and as-left documentation</A>
+</H2>
+
+<P>
+An important principle in calibration practice is to document every instrument's calibration as it was found <SPAN  CLASS="textit">and</SPAN> as it was left after adjustments were made.  The purpose for documenting both conditions is to make data available for calculating instrument <SPAN  CLASS="textit">drift</SPAN> over time.  If only one of these conditions is documented during each calibration event, it will be difficult to determine how well an instrument is holding its calibration over long periods of time.  Excessive drift is often an indicator of impending failure, which is vital for any program of predictive maintenance or quality control.  <A NAME="97"></A>  <A NAME="98"></A>  <A NAME="99"></A>  <A NAME="100"></A>
+
+<P>
+Typically, the format for documenting both As-Found and As-Left data is a simple table showing the points of calibration, the ideal instrument responses, the actual instrument responses, and the calculated error at each point.  The following table is an example for a pressure transmitter with a range of 0 to 200 PSI over a five-point scale:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Percent} & \textbf{Input} & \textbf{Output current} & \textbf{Output current} & \textbf{Error} \cr
+\textbf{of range} & pressure & (ideal) & (measured) & (percent of span) \cr
+\noalign{\hrule }
+0\% & 0 PSI & 4.00 mA &  & \cr
+\noalign{\hrule }
+25\% & 50 PSI & 8.00 mA &  & \cr
+\noalign{\hrule }
+50\% & 100 PSI & 12.00 mA &  & \cr
+\noalign{\hrule }
+75\% & 150 PSI & 16.00 mA &  & \cr
+\noalign{\hrule }
+100\% & 200 PSI & 20.00 mA &  & \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 20.31ex; vertical-align: -0.10ex; " SRC="img15.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+The following photograph shows a single-point &ldquo;As-Found&rdquo; calibration report on a temperature indicating controller, showing the temperature of the calibration standard (<SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img16.svg"
+ ALT="$-78.112$"></SPAN> degrees Celsius), the display of the instrument under test (IUT, <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img17.svg"
+ ALT="$-79$"></SPAN> degrees Celsius), and the error between the two (<SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img18.svg"
+ ALT="$-0.888$"></SPAN> degrees Celsius):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{calibrate28.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.51ex; vertical-align: -0.10ex; " SRC="img19.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{calibrate28.eps}$">
+</DIV><P></P>
+
+<P>
+Note that the mathematical sign of the error is important.  An instrument that registers <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img17.svg"
+ ALT="$-79$"></SPAN> degrees when it should register <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img16.svg"
+ ALT="$-78.112$"></SPAN> degrees exhibits a <SPAN  CLASS="textit">negative error</SPAN>, since its response is lower (i.e. more negative) than it should be.  Expressed mathematically: Error = IUT <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img20.svg"
+ ALT="$-$"></SPAN> Standard.  When the error must be expressed in percentage of span, the formula becomes:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Error} = {\hbox{IUT} - \hbox{Standard} \over \hbox{Span}} \times 100\%
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.40ex; vertical-align: -2.14ex; " SRC="img21.svg"
+ ALT="$\displaystyle \hbox{Error} = {\hbox{IUT} - \hbox{Standard} \over \hbox{Span}} \times 100\%$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00233000000000000000">
+Up-tests and Down-tests</A>
+</H2>
+
+<P>
+It is not uncommon for calibration tables to show multiple calibration points going <SPAN  CLASS="textit">up</SPAN> as well as going <SPAN  CLASS="textit">down</SPAN>, for the purpose of documenting hysteresis and deadband errors.  Note the following example, showing a transmitter with a maximum hysteresis of 0.313 % (the offending data points are shown in bold-faced type):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Percent} & \textbf{Input} & \textbf{Output current} & \textbf{Output current} & \textbf{Error} \cr
+\textbf{of range} & pressure & (ideal) & (measured) & (percent of span) \cr
+\noalign{\hrule }
+0\% & 0 PSI & 4.00 mA & 3.99 mA & $-0.0625$ \% \cr
+\noalign{\hrule }
+25\% $\uparrow$ & 50 PSI & 8.00 mA & \textbf{7.98 mA} & \textbf{$-$0.125 \%} \cr
+\noalign{\hrule }
+50\% $\uparrow$ & 100 PSI & 12.00 mA & 11.99 mA & $-0.0625$ \% \cr
+\noalign{\hrule }
+75\% $\uparrow$ & 150 PSI & 16.00 mA & 15.99 mA & $-0.0625$ \% \cr
+\noalign{\hrule }
+100\% $\uparrow$ & 200 PSI & 20.00 mA & 20.00 mA & 0 \% \cr
+\noalign{\hrule }
+75\% $\downarrow$ & 150 PSI & 16.00 mA & 16.01 mA & +0.0625 \% \cr
+\noalign{\hrule }
+50\% $\downarrow$ & 100 PSI & 12.00 mA & 12.02 mA & +0.125 \% \cr
+\noalign{\hrule }
+25\% $\downarrow$ & 50 PSI & 8.00 mA & \textbf{8.03 mA} & \textbf{+0.188 \%} \cr
+\noalign{\hrule }
+0\% $\downarrow$ & 0 PSI & 4.00 mA & 4.01 mA & +0.0625 \% \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 31.80ex; vertical-align: -0.10ex; " SRC="img22.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+Note again how error is expressed as either a positive or a negative quantity depending on whether the instrument's measured response is above or below what it should be under each condition.  The values of error appearing in this calibration table, expressed in percent of span, are all calculated by the following formula:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\hbox{Error} = \left( {{I_{measured} - I_{ideal}} \over 16 \hbox{ mA}} \right)  \left( 100 \% \right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 5.75ex; vertical-align: -2.30ex; " SRC="img23.svg"
+ ALT="$\displaystyle \hbox{Error} = \left( {{I_{measured} - I_{ideal}} \over 16 \hbox{ mA}} \right) \left( 100 \% \right)$">
+</DIV><P></P>
+
+<P>
+In the course of performing such a directional calibration test, it is important not to overshoot any of the test points.  If you do happen to overshoot a test point in setting up one of the input conditions for the instrument, simply &ldquo;back up&rdquo; the test stimulus and re-approach the test point from the same direction as before.  Unless each test point's value is approached from the proper direction, the data cannot be used to determine hysteresis/deadband error.
+
+<P>
+
+<H2><A ID="SECTION00234000000000000000">
+Automated calibration</A>
+</H2>
+
+<P>
+Maintaining the calibration of instruments at a large industrial facility is a daunting task.  Aside from the actual labor of checking and adjusting calibration, records must be kept not only of instrument performance but also of test conditions and criteria (e.g. calibration tolerance, time interval between calibrations, number of points to check, specific procedures, etc.).  Any practical method to minimize human error in this process is welcome.  For this reason, automated and semi-automated calibration tools have been developed to help manage the data associated with calibration, and to make the instrument technician's job more manageable.  
+
+<P>
+An example of a fully automated calibration system is a process chemical analyzer where a set of solenoid valves direct chemical samples of known composition to the analyzer at programmed time intervals, a computer inside the analyzer recording the analyzer's error (compared to the known standard) and auto-adjusting the analyzer in order to correct for whatever errors are detected.  In the following illustration we see a schematic of a gas analyzer with two compressed-gas cylinders holding gases of 0% and 100% concentration of the compound(s) of interest, called &ldquo;zero gas&rdquo; and &ldquo;span gas&rdquo;, connected through solenoid valves so that the chemical analyzer may be automatically tested against these standards:  <A NAME="149"></A>  <A NAME="150"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate15.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 57.68ex; vertical-align: -0.10ex; " SRC="img24.svg"
+ ALT="$\displaystyle \includegraphics{calibrate15.eps}$">
+</DIV><P></P>
+
+<P>
+The only time a human technician need attend to the analyzer is when parameters not monitored by the auto-calibration system must be checked, and when the auto-calibration system detects an error too large to self-correct (thus indicating a fault).
+
+<P>
+
+<P>
+An example of a semi-automated calibration system is an instrument such as Fluke's series of <SPAN  CLASS="textit">Documenting Process Calibrators</SPAN> (DPC).  These devices function as standards for electrical measurements such as voltage, current, and resistance, with built-in database capability for storing calibration records and test conditions:  <A NAME="153"></A>  <A NAME="154"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=4in]{calibrate29.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 55.94ex; vertical-align: -0.10ex; " SRC="img25.svg"
+ ALT="$\displaystyle \includegraphics[height=4in]{calibrate29.eps}$">
+</DIV><P></P>
+
+<P>
+A technician using a documenting calibrator such as this is able to log As-Found and As-Left data in the device's memory and download the calibration results to a computer database at some later time.  The calibrator may also be programmed with test conditions for each specific instrument on the technician's work schedule, eliminating the need for that technician to look up each instrument's test conditions in a book, and thereby reducing the potential for human error.  
+
+<P>
+
+<P>
+An example of database software used to schedule routine instrument calibrations and archive the results is Fluke's <SPAN  CLASS="textit">DPCTrack2</SPAN>, a point-and-click user interface serving as a front-end to an SQL database where the instrument data is maintained in digital format on the computer's hard drive:  <A NAME="157"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate30.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 63.10ex; vertical-align: -0.10ex; " SRC="img26.svg"
+ ALT="$\displaystyle \includegraphics{calibrate30.eps}$">
+</DIV><P></P>
+
+<P>
+Calibration management software allows managers to define calibration schedules, tolerances, and even technician work assignments, the software allowing for downloading of this setup information into a hand-held calibrator unit, as well as uploading and archival of calibration results following the procedure.  <A NAME="159"></A>
+
+<P>
+<P>
+In some industries, this degree of rigor in calibration record-keeping is merely helpful; in other industries it is vital for business.  Examples of the latter include pharmaceutical manufacturing, where regulatory agencies (such as the Food and Drug Administration in the United States) enforces rigorous standards for manufacturing quality including requirements for frequent testing and data archival of process instrument accuracy.  Record-keeping in such industries is not limited to As-Found and As-Left calibration results, either; each and every action taken on that instrument by a human being must be recorded and archived so that a complete audit of causes may be conducted should there ever be an incident of product mis-manufacture.  <A NAME="160"></A>
+
+<P>
+
+<H1><A ID="SECTION00240000000000000000">
+Damping adjustments</A>
+</H1>
+
+<P>
+<A ID="transmitter_damping"></A>
+<P>
+The vast majority of modern process transmitters (both analog and digital) come equipped with a feature known as <SPAN  CLASS="textit">damping</SPAN>.  This feature is essentially a low-pass filter function placed in-line with the signal, reducing the amount of process &ldquo;noise&rdquo; reported by the transmitter.  <A NAME="164"></A>
+
+<P>
+Imagine a pressure transmitter sensing water pressure at the outlet of a large pump.  The flow of water exiting a pump tends to be extremely turbulent, and any pressure-sensing device connected to the immediate discharge port of a pump will interpret this turbulence as fluctuations in pressure.  This means the pressure signal output by the transmitter will fluctuate as well, causing any indicator or control system connected to that transmitter to register a &ldquo;noisy&rdquo; water pressure:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate16.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 41.81ex; vertical-align: -0.10ex; " SRC="img27.svg"
+ ALT="$\displaystyle \includegraphics{calibrate16.eps}$">
+</DIV><P></P>
+
+<P>
+Such &ldquo;noise&rdquo; wreaks havoc with most forms of feedback control, since the control system will interpret these rapid fluctuations as real pressure changes requiring corrective action.  Although it is possible to configure some control systems to ignore such noise, the best solution is to correct the problem at the source either by relocating the pressure transmitter's impulse line tap to a place where it will not be exposed to so much turbulence, or somehow prevent that sensed turbulence from being represented in the transmitter's signal.
+
+<P>
+Since this noise is of a much greater frequency than the normal cycles of pressure in a process system, it is relatively easy to reduce the amount of noise in the transmitter signal simply by filtering that electronic signal using a low-pass filter circuit.  
+
+<P>
+
+<P>
+The simplest low-pass filter circuit is nothing more than a resistor and capacitor:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate17.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 18.77ex; vertical-align: -0.10ex; " SRC="img28.svg"
+ ALT="$\displaystyle \includegraphics{calibrate17.eps}$">
+</DIV><P></P>
+
+<P>
+Low-frequency voltage signals applied to this circuit emerge at the output terminal relatively unattenuated, because the reactance of the capacitor is quite large at low frequencies.  High-frequency signals applied to the same circuit become attenuated by the capacitor, which tends to &ldquo;short&rdquo; those signals to ground with its low reactance to high frequencies.  The performance of such a filter circuit is primarily characterized by its <SPAN  CLASS="textit">cutoff frequency</SPAN>, mathematically defined as <!-- MATH
+ $f = {1 \over 2 \pi RC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.90ex; vertical-align: -0.90ex; " SRC="img29.svg"
+ ALT="$f = {1 \over 2 \pi RC}$"></SPAN>.  The cutoff frequency is the point at which only 70.7% of the input signal appears at the output (i.e. a <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img30.svg"
+ ALT="$-3$"></SPAN> dB attenuation in voltage).
+
+<P>
+If successfully applied to a process transmitter, such low-pass filtering has the effect of &ldquo;quieting&rdquo; an otherwise noisy signal so only the real process pressure changes are seen, while the effect of turbulence (or whatever else was causing the noise) becomes minimal.  In the world of process control, the intentional low-pass filtering of process measurement signals is often referred to as <SPAN  CLASS="textit">damping</SPAN> because its effect is to &ldquo;damp&rdquo; (attenuate) the effects of process noise:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate18.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 41.81ex; vertical-align: -0.10ex; " SRC="img31.svg"
+ ALT="$\displaystyle \includegraphics{calibrate18.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+In order for damping to be a useful tool for the technician in mitigating measurement noise, it must be adjustable.  In the case of the RC filter circuit, the degree of damping (cutoff frequency) may be adjusted by changing the value or either <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img32.svg"
+ ALT="$R$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img33.svg"
+ ALT="$C$"></SPAN>, with <SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img32.svg"
+ ALT="$R$"></SPAN> being the easier component to adjust.  This next photograph shows the location of an adjustable resistance on the printed circuit board of a Rosemount model 1151 analog pressure transmitter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{calibrate34.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.95ex; vertical-align: -0.10ex; " SRC="img34.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{calibrate34.eps}$">
+</DIV><P></P>
+
+<P>
+In digital transmitters where the damping is performed by a digital algorithm<A ID="tex2html2"
+  HREF="footnode.html#foot172"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>, damping may be adjusted by setting a numerical value in the transmitter's configuration parameters.  In pneumatic transmitters, damping could be implemented by installing viscous elements to the mechanism, or more simply by adding volume to the signal line (e.g. excess tubing length, larger tubing diameter, or even &ldquo;capacity tanks&rdquo; connected to the tube for increased volume).  <A NAME="173"></A>  <A NAME="174"></A>  <A NAME="175"></A>  <A NAME="176"></A>  <A NAME="177"></A>
+
+<P>
+The key question for the technician then becomes, &ldquo;how much damping should be applied?&rdquo;  Insufficient damping will allow too much noise to reach the control system (causing &ldquo;noisy&rdquo; trends, indications, and erratic control), while excessive damping will cause the transmitter to understate the significance of sudden (real) process changes.  In my experience there is a bad tendency for instrument technicians to apply excessive damping in transmitters.  A transmitter with too much damping (i.e. cutoff frequency set too low, or time constant value set too high) causes the trend graph to be very smooth, which at first appears to be a good thing.  After all, the whole point of a control system is to hold the process variable tightly to setpoint, so the appearance of a &ldquo;flat line&rdquo; process variable trend is enticing indeed.  However, the problem with excessive damping is that the transmitter gives a sluggish response to any sudden changes in the real process variable.  
+
+<P>
+
+<P>
+A dual-trend graph of a pressure transmitter experiencing a sudden increase in process pressure shows this principle, where the undamped transmitter signal is shown in the upper portion and the over-damped signal in the lower portion (please note the vertical offset between these two trends is shown only for your convenience in comparing the two trend shapes):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate19.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 41.81ex; vertical-align: -0.10ex; " SRC="img35.svg"
+ ALT="$\displaystyle \includegraphics{calibrate19.eps}$">
+</DIV><P></P>
+
+<P>
+Excessive damping causes the transmitter to &ldquo;lie&rdquo; to the control system by reporting a process variable that changes much slower than it actually does.  The degree to which this &ldquo;lie&rdquo; adversely affects the control system (and/or the human operator's judgment in manually responding to the change in pressure) depends greatly on the nature of the control system and its importance to the overall plant operation.  
+
+<P>
+One way damping may cause control problems is in systems where the loop controller is aggressively tuned.  In such systems, even relatively small amounts of damping may cause the actual process variable to overshoot setpoint because the controller &ldquo;thinks&rdquo; the process variable is responding too slowly and takes action to speed its response.  A common example of this is liquid flow control, where the process variable signal is typically &ldquo;noisy&rdquo; and the control action is typically aggressive.  A technician may introduce damping to the transmitter with good intent, but unexpectedly causes the control system to wildly overshoot setpoint (or even oscillate) because the controller is trying to get a &ldquo;sluggish&rdquo; process variable to respond quicker than the transmitter filtering will allow the signal to change.  In reality, the process variable (fluid flow rate) is not sluggish at all, but only appears that way because the transmitter is damped.  What is worse, this instability will <SPAN  CLASS="textit">not</SPAN> appear on a trend of the process variable because the control system never sees the real process variable, but only the &ldquo;lie&rdquo; reported by the over-damped transmitter.  If any rule may be given as to how much damping to use in any transmitter, it is this: use as <SPAN  CLASS="textit">little</SPAN> as necessary to achieve good control.
+
+<P>
+Damping should be set to absolute minimum during calibration, so the results of applying stimuli to the transmitter will be immediately seen by the technician.
+
+<P>
+
+<H1><A ID="SECTION00250000000000000000">
+LRV and URV settings, digital trim (digital transmitters)</A>
+</H1>
+
+<P>
+The advent of &ldquo;smart&rdquo; field instruments containing microprocessors has been a great advance for industrial instrumentation.  These devices have built-in diagnostic ability, greater accuracy (due to digital compensation of sensor nonlinearities), and the ability to communicate digitally<A ID="tex2html3"
+  HREF="footnode.html#foot182"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A> with host devices for reporting of various parameters.  <A NAME="183"></A>  <A NAME="184"></A>
+
+<P>
+A simplified block diagram of a &ldquo;smart&rdquo; pressure transmitter looks something like this:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 58.45ex; vertical-align: -0.10ex; " SRC="img36.svg"
+ ALT="$\displaystyle \includegraphics{calibrate03.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+It is important to note all the adjustments within this device, and how this compares to the relative simplicity of an all-analog pressure transmitter:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate04.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 58.45ex; vertical-align: -0.10ex; " SRC="img37.svg"
+ ALT="$\displaystyle \includegraphics{calibrate04.eps}$">
+</DIV><P></P>
+
+<P>
+Note how the only calibration adjustments available in the analog transmitter are the &ldquo;zero&rdquo; and &ldquo;span&rdquo; settings.  This is clearly not the case with smart transmitters.  Not only can we set lower- and upper-range values (LRV and URV) in a smart transmitter, but it is also possible to calibrate the analog-to-digital and digital-to-analog converter circuits independently of each other.  What this means for the calibration technician is that a full calibration procedure on a smart transmitter potentially requires more work and a greater number of adjustments than an all-analog transmitter<A ID="tex2html4"
+  HREF="footnode.html#foot187"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">4</SPAN></SUP></A>. <A NAME="188"></A> <A NAME="189"></A> <A NAME="190"></A> <A NAME="191"></A> 
+
+<P>
+A common mistake made among students and experienced technicians alike is to confuse the range settings (LRV and URV) for actual calibration adjustments.  Just because you digitally set the LRV of a pressure transmitter to 0.00 PSI and the URV to 100.00 PSI does not necessarily mean it will register accurately at points within that range!  The following example will illustrate this fallacy.
+
+<P>
+Suppose we have a smart pressure transmitter ranged for 0 to 100 PSI with an analog output range of 4 to 20 mA, but this transmitter's pressure sensor is fatigued from years of use such that an actual applied pressure of 100 PSI generates a signal that the analog-to-digital converter interprets as only 96 PSI<A ID="tex2html5"
+  HREF="footnode.html#foot192"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">5</SPAN></SUP></A>.  Assuming everything else in the transmitter is in perfect condition, with perfect calibration, the output signal will still be in error:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate05.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 58.45ex; vertical-align: -0.10ex; " SRC="img38.svg"
+ ALT="$\displaystyle \includegraphics{calibrate05.eps}$">
+</DIV><P></P>
+
+<P>
+As the saying goes, &ldquo;a chain is only as strong as its weakest link.&rdquo;  Here we see how the calibration of the most sophisticated pressure transmitter may be corrupted despite perfect calibration of both analog/digital converter circuits, and perfect range settings in the microprocessor.  The microprocessor &ldquo;thinks&rdquo; the applied pressure is only 96 PSI, and it responds accordingly with a 19.36 mA output signal.  <SPAN  CLASS="textit">The only way anyone would ever know this transmitter was inaccurate at 100 PSI is to actually apply a known value of 100 PSI fluid pressure to the sensor and note the incorrect response.</SPAN>  The lesson here should be clear: digitally setting a smart instrument's LRV and URV points does <SPAN  CLASS="textit">not</SPAN> constitute a legitimate calibration of the instrument.
+
+<P>
+For this reason, smart instruments always provide a means to calibrate both the ADC and DAC circuits, to ensure the microprocessor &ldquo;sees&rdquo; the correct representation of the applied stimulus and to ensure the microprocessor's output signal gets accurately converted into a DC current, respectively.  This calibration function is called <SPAN  CLASS="textit">digital trim</SPAN>.
+
+<P>
+
+<P>
+A convenient way to test a digital transmitter's analog/digital converters is to monitor the microprocessor's process variable (PV) and analog output (AO) registers while comparing the real input and output values against trusted calibration standards.  A HART communicator device<A ID="tex2html6"
+  HREF="footnode.html#foot197"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">6</SPAN></SUP></A> provides this &ldquo;internal view&rdquo; of the registers so we may see what the microprocessor &ldquo;sees.&rdquo;  The following example shows a differential pressure transmitter with a sensor (analog-to-digital) calibration error:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate26.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 49.94ex; vertical-align: -0.10ex; " SRC="img39.svg"
+ ALT="$\displaystyle \includegraphics{calibrate26.eps}$">
+</DIV><P></P>
+
+<P>
+Here, the calibration standard for pressure input to the transmitter is a digital pressure gauge, registering 25.00 inches of water column.  The digital multimeter (DMM) is our calibration standard for the current output, and it registers 11.93 milliamps.  Since we would expect an output of 12.00 milliamps at this pressure (given the transmitter's range values of 0 to 50 inches W.C.), we immediately know from the pressure gauge and multimeter readings that some sort of calibration error exists in this transmitter.  Comparing the HART communicator's displays of PV and AO against our calibration standards reveals more information about the nature of this error: we see that the AO value (11.930 mA) agrees with the multimeter while the PV value (24.781 "W.C.) does <SPAN  CLASS="textit">not</SPAN> agree with the digital pressure gauge.  This tells us the calibration error lies within the sensor (input) of the transmitter and not with the DAC (output).  Thus, the correct calibration procedure to perform on this errant transmitter is a <SPAN  CLASS="textit">sensor trim</SPAN>.
+
+<P>
+
+<P>
+In this next example, we see what an output (DAC) error would look like with another differential pressure transmitter subjected to the same test:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate27.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 49.94ex; vertical-align: -0.10ex; " SRC="img40.svg"
+ ALT="$\displaystyle \includegraphics{calibrate27.eps}$">
+</DIV><P></P>
+
+<P>
+Once again, the calibration standard for pressure input to the transmitter is a digital pressure gauge, registering 25.00 inches of water column.  A digital multimeter (DMM) still serves as our calibration standard for the current output, and it registers 11.93 milliamps.  Since we expect 12.00 milliamps output at this pressure (given the transmitter's range values of 0 to 50 inches W.C.), we immediately know from the pressure gauge and multimeter readings that some sort of calibration error exists in this transmitter (just as before).  Comparing the HART communicator's displays of PV and AO against our calibration standards reveals more information about the nature of this error: we see that the PV value (25.002 inches W.C.) agrees with the digital pressure gauge while the AO value (12.001 mA) does <SPAN  CLASS="textit">not</SPAN> agree with the digital multimeter.  This tells us the calibration error lies within the digital-to-analog converter (DAC) of the transmitter and not with the sensor (input).  Thus, the correct calibration procedure to perform on this errant transmitter is an <SPAN  CLASS="textit">output trim</SPAN>.
+
+<P>
+Note how in both scenarios it was absolutely necessary to interrogate the transmitter's microprocessor registers with a HART communicator to determine where the error was located.  Merely comparing the pressure and current standards' indications was not enough to tell us any more than the fact we had some sort of calibration error inside the transmitter.  Not until we viewed the microprocessor's own values of PV and AO could we determine whether the calibration error was related to the ADC (input), the DAC (output), or perhaps even both.
+
+<P>
+<P>
+
+<P>
+Sadly, I have witnessed technicians attempt to use the LRV and URV settings in a manner not unlike the zero and span adjustments on an analog transmitter to correct errors such as these.  While it may be possible to get an out-of-calibration transmitter to yield correct output current signal values over its calibrated range of input values by skewing the LRV and URV settings, it defeats the purpose of having separate &ldquo;trim&rdquo; and &ldquo;range&rdquo; settings inside the transmitter.  Also, it causes confusion if ever the control system connected to the transmitter interrogates process variable values digitally rather than interpreting it via the 4-20 mA loop current signal.  Finally, &ldquo;calibrating&rdquo; a transmitter by programming it with skewed LRV/URV settings corrupts the accuracy of any intentionally nonlinear functions such as square-root characterization (used for flow measurement applications) or strapping tables (used for liquid level measurement applications in vessels where the cross-sectional area varies with liquid height).
+
+<P>
+Once digital trims have been performed on both input and output converters, of course, the technician is free to re-range the microprocessor as many times as desired without re-calibration.  This capability is particularly useful when re-ranging is desired for special conditions, such as process start-up and shut-down when certain process variables drift into uncommon regions.  An instrument technician may use a hand-held HART communicator device to re-set the LRV and URV range values to whatever new values are desired by operations staff without having to re-check calibration by applying known physical stimuli to the instrument.  So long as the ADC and DAC trims are both correct, the overall accuracy of the instrument will still be good with the new range.  With analog instruments, the only way to switch to a different measurement range was to change the zero and span adjustments, which <SPAN  CLASS="textit">necessitated</SPAN> the re-application of physical stimuli to the device (a full re-calibration).  Here and here alone we see where calibration is not necessary for a smart instrument.  If overall measurement accuracy must be verified, however, there is no substitute for an actual physical calibration, and this entails both ADC and DAC &ldquo;trim&rdquo; procedures for a smart instrument.
+
+<P>
+<P>
+Completely digital (&ldquo;Fieldbus&rdquo;) transmitters are similar to &ldquo;smart&rdquo; analog-output transmitters with respect to distinct trim and range adjustments.  For an explanation of calibration and ranging on FOUNDATION Fieldbus transmitters, refer to section <A HREF="#FF_transmitter_calibration"><IMG  ALT="[*]" SRC="crossref.png"></A> beginning on page <A HREF="#FF_transmitter_calibration"><IMG  ALT="[*]" SRC="crossref.png"></A>.
+
+<P>
+
+<H1><A ID="SECTION00260000000000000000">
+An analogy for calibration versus ranging</A>
+</H1>
+
+<P>
+<A ID="calibration_versus_ranging"></A>
+<P>
+The concepts of <SPAN  CLASS="textit">calibration</SPAN> (trimming) and <SPAN  CLASS="textit">ranging</SPAN> are often difficult for new students of instrumentation to immediately grasp.  A simple analogy useful for understanding these topics is that of setting a digital alarm clock.
+
+<P>
+Suppose you purchase a digital alarm clock to wake you up at 7:00 AM in the morning so that you can get to school on time.  It would be foolish to simply unpack your new clock from its box, power it up, and set the wake-up time to 7:00 AM expecting it will wake you at the correct time.  Before <SPAN  CLASS="textit">trusting</SPAN> this alarm time of 7:00 AM, you would first have to synchronize your new clock to some standard time source (such as the time broadcast by your local telephone service, or better yet the shortwave radio broadcast of WWV or WWVH<A ID="tex2html7"
+  HREF="footnode.html#foot212"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">7</SPAN></SUP></A>) so that it accurately registers time for the zone in which you live.  Otherwise, the wake-up setting of 7:00 AM will be hopelessly uncertain.
+
+<P>
+Once your clock is synchronized against a trusted time source, however, the wake-up (alarm) time may be set at will.  If your class schedule changed, allowing one more hour of sleep, you could re-set the wake-up time from 7:00 AM to 8:00 AM without any need to re-synchronize (re-calibrate) the clock.  The only reason for re-synchronizing your clock to the time standard is to compensate for inevitable <SPAN  CLASS="textit">drift</SPAN> due to imperfections in the clock circuitry.
+
+<P>
+Synchronizing the clock to a standard time source is analogous to &ldquo;calibrating&rdquo; or &ldquo;trimming&rdquo; a smart transmitter: you are establishing an accurate correspondence between what the device's microprocessor <SPAN  CLASS="textit">perceives</SPAN> and what the actual (real-life) values <SPAN  CLASS="textit">are</SPAN>.  This step need only be done at the very beginning of the device's service, and every so often as warranted by the device's calibration drift over time<A ID="tex2html8"
+  HREF="footnode.html#foot216"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">8</SPAN></SUP></A>.
+
+<P>
+Setting the wake-up (alarm) time on the clock is analogous to setting the LRV and URV parameters of a smart transmitter: you are defining the <SPAN  CLASS="textit">action(s)</SPAN> taken by the device at certain measured values.  For the alarm clock, you are defining the hour and minute of day when the alarm sounds.  For the transmitter, you are defining the measured variable values at which it will output 4 mA and 20 mA (for a 4-20 mA analog output range).
+
+<P>
+<P>
+By contrast, an analog transmitter blends the functions of calibration and ranging into one.  A useful analogy for this is to imagine using a simple wind-up mechanical timer to wake you at 7:00 AM.  Such a crude timing device does not even register time in hours and minutes like a digital alarm clock: instead, it simply counts down time from its starting point and sounds an alarm when the descending count reaches zero.  In order to set this device for a 7:00 AM wake-up alarm, you must first determine the current time and then calculate how many hours the timer must run before the time reaches 7:00 AM (e.g. if you are setting the wind-up alarm when you go to bed at 10:30 PM, this would equate to a timing period of 8.5 hours).
+
+<P>
+Every single time you set this wind-up alarm, you must consult a time standard to know how many hours and minutes of count-down time to set it for.  If you decide to wake up at a different time in the morning, you must (once again) consult a standard time source, perform the necessary arithmetic, and set the timer accordingly.  Setting the alarm time on this mechanism necessitates re-calibrating it to the local standard time without exception.  Here, there is no distinction between synchronization and alarm setting; no distinction between calibration and ranging &ndash; to do one is to do the other.
+
+<P>
+
+<H1><A ID="SECTION00270000000000000000">
+Calibration procedures</A>
+</H1>
+
+<P>
+As described earlier in this chapter, <SPAN  CLASS="textit">calibration</SPAN> refers to the adjustment of an instrument so its output accurately corresponds to its input throughout a specified range.  The only way we can know that an instrument's output accurately corresponds to its input over a continuous range is to subject that instrument to known input values while measuring the corresponding output signal values.  This means we must use trusted <SPAN  CLASS="textit">standards</SPAN> to establish known input conditions and to measure output<A ID="tex2html9"
+  HREF="footnode.html#foot221"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">9</SPAN></SUP></A> signals.  The following examples show both input and output standards used in the calibration of pressure and temperature transmitters:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate31.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.06ex; vertical-align: -0.10ex; " SRC="img41.svg"
+ ALT="$\displaystyle \includegraphics{calibrate31.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate32.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 64.45ex; vertical-align: -0.10ex; " SRC="img42.svg"
+ ALT="$\displaystyle \includegraphics{calibrate32.eps}$">
+</DIV><P></P>
+
+<P>
+It is the purpose of this section to describe procedures for efficiently calibrating different types of instruments.
+
+<P>
+
+<H2><A ID="SECTION00271000000000000000">
+Linear instruments</A>
+</H2>
+
+<P>
+The simplest calibration procedure for an analog, linear instrument is the so-called <SPAN  CLASS="textit">zero-and-span</SPAN> method.  The method is as follows:
+
+<P>
+
+<OL>
+<LI>Apply the lower-range value stimulus to the instrument, wait for it to stabilize
+</LI>
+<LI>Move the &ldquo;zero&rdquo; adjustment until the instrument registers accurately at this point
+</LI>
+<LI>Apply the upper-range value stimulus to the instrument, wait for it to stabilize
+</LI>
+<LI>Move the &ldquo;span&rdquo; adjustment until the instrument registers accurately at this point
+</LI>
+<LI>Repeat steps 1 through 4 as necessary to achieve good accuracy at both ends of the range
+</LI>
+</OL>
+
+<P>
+An improvement over this crude procedure is to check the instrument's response at several points between the lower- and upper-range values.  A common example of this is the so-called <SPAN  CLASS="textit">five-point calibration</SPAN> where the instrument is checked at 0% (LRV), 25%, 50%, 75%, and 100% (URV) of range.  A variation on this theme is to check at the five points of 10%, 25%, 50%, 75%, and 90%, while still making zero and span adjustments at 0% and 100%.  Regardless of the specific percentage points chosen for checking, the goal is to ensure that we achieve (at least) the minimum necessary accuracy at all points along the scale, so the instrument's response may be trusted when placed into service. <A NAME="229"></A> <A NAME="230"></A>
+
+<P>
+Yet another improvement over the basic five-point test is to check the instrument's response at five calibration points <SPAN  CLASS="textit">decreasing</SPAN> as well as <SPAN  CLASS="textit">increasing</SPAN>.  Such tests are often referred to as <SPAN  CLASS="textit">Up-down</SPAN> calibrations.  The purpose of such a test is to determine if the instrument has any significant <SPAN  CLASS="textit">hysteresis</SPAN>: a lack of responsiveness to a change in direction.  <A NAME="235"></A> <A NAME="236"></A>
+
+<P>
+Some analog instruments provide a means to adjust linearity.  This adjustment should be moved only if absolutely necessary!  Quite often, these linearity adjustments are very sensitive, and prone to over-adjustment by zealous fingers.  The linearity adjustment of an instrument should be changed only if the required accuracy cannot be achieved across the full range of the instrument.  Otherwise, it is advisable to adjust the zero and span controls to &ldquo;split&rdquo; the error between the highest and lowest points on the scale, and leave linearity alone.
+
+<P>
+<P>
+
+<P>
+The procedure for calibrating a &ldquo;smart&rdquo; digital transmitter &ndash; also known as <SPAN  CLASS="textit">trimming</SPAN> &ndash; is a bit different.  Unlike the zero and span adjustments of an analog instrument, the &ldquo;low&rdquo; and &ldquo;high&rdquo; trim functions of a digital instrument are typically non-interactive.  This means you should only have to apply the low- and high-level stimuli <SPAN  CLASS="textit">once</SPAN> during a calibration procedure.  Trimming the sensor of a &ldquo;smart&rdquo; instrument consists of these four general steps:
+
+<P>
+
+<OL>
+<LI>Apply the lower-range value stimulus to the instrument, wait for it to stabilize
+</LI>
+<LI>Execute the &ldquo;low&rdquo; sensor trim function
+</LI>
+<LI>Apply the upper-range value stimulus to the instrument, wait for it to stabilize
+</LI>
+<LI>Execute the &ldquo;high&rdquo; sensor trim function
+</LI>
+</OL>
+
+<P>
+Likewise, trimming the output (Digital-to-Analog Converter, or DAC) of a &ldquo;smart&rdquo; instrument consists of these six general steps:
+
+<P>
+
+<OL>
+<LI>Execute the &ldquo;low&rdquo; output trim test function
+</LI>
+<LI>Measure the output signal with a precision milliammeter, noting the value after it stabilizes
+</LI>
+<LI>Enter this measured current value when prompted by the instrument
+</LI>
+<LI>Execute the &ldquo;high&rdquo; output trim test function
+</LI>
+<LI>Measure the output signal with a precision milliammeter, noting the value after it stabilizes
+</LI>
+<LI>Enter this measured current value when prompted by the instrument
+</LI>
+</OL>
+
+<P>
+<P>
+After both the input and output (ADC and DAC) of a smart transmitter have been trimmed (i.e. calibrated against standard references known to be accurate), the lower- and upper-range values may be set.  In fact, once the trim procedures are complete, the transmitter may be ranged and ranged again as many times as desired.  The only reason for re-trimming a smart transmitter is to ensure accuracy over long periods of time where the sensor and/or the converter circuitry may have drifted out of acceptable limits.  This stands in stark contrast to analog transmitter technology, where re-ranging <SPAN  CLASS="textit">necessitates</SPAN> re-calibration every time.
+
+<P>
+
+<H2><A ID="SECTION00272000000000000000">
+Nonlinear instruments</A>
+</H2>
+
+<P>
+The calibration of inherently nonlinear instruments is much more challenging than for linear instruments.  No longer are two adjustments (zero and span) sufficient, because more than two points are necessary to define a curve.
+
+<P>
+Examples of nonlinear instruments include expanded-scale electrical meters, square root characterizers, and position-characterized control valves.
+
+<P>
+Every nonlinear instrument will have its own recommended calibration procedure, so I will defer you to the manufacturer's literature for your specific instrument.  I will, however, offer one piece of advice: when calibrating a nonlinear instrument, document all the adjustments you make (e.g. how many turns on each calibration screw) just in case you find the need to &ldquo;re-set&rdquo; the instrument back to its original condition.  More than once I have struggled to calibrate a nonlinear instrument only to find myself further away from good calibration than where I originally started.  In times like these, it is good to know you can always reverse your steps and start over!
+
+<P>
+
+<H2><A ID="SECTION00273000000000000000">
+Discrete instruments</A>
+</H2>
+
+<P>
+The word &ldquo;discrete&rdquo; means <SPAN  CLASS="textit">individual</SPAN> or <SPAN  CLASS="textit">distinct</SPAN>.  In engineering, a &ldquo;discrete&rdquo; variable or measurement refers to a true-or-false condition.  Thus, a discrete sensor is one that is only able to indicate whether the measured variable is above or below a specified setpoint. <A NAME="248"></A>
+
+<P>
+Examples of discrete instruments are <SPAN  CLASS="textit">process switches</SPAN> designed to turn on and off at certain values.  A pressure switch, for example, used to turn an air compressor on if the air pressure ever falls below 85 PSI, is an example of a discrete instrument.
+
+<P>
+Discrete instruments require periodic calibration just like continuous instruments.  Most discrete instruments have just one calibration adjustment: the <SPAN  CLASS="textit">set-point</SPAN> or <SPAN  CLASS="textit">trip-point</SPAN>.  Some process switches have two adjustments: the set-point as well as a <SPAN  CLASS="textit">deadband</SPAN> adjustment.  The purpose of a deadband adjustment is to provide an adjustable buffer range that must be traversed before the switch changes state.  To use our 85 PSI low air pressure switch as an example, the set-point would be 85 PSI, but if the deadband were 5 PSI it would mean the switch would not change state until the pressure rose above 90 PSI (85 PSI + 5 PSI).
+
+<P>
+When calibrating a discrete instrument, you must be sure to check the accuracy of the set-point <SPAN  CLASS="textit">in the proper direction of stimulus change</SPAN>.  For our air pressure switch example, this would mean checking to see that the switch changes states at 85 PSI <SPAN  CLASS="textit">falling</SPAN>, not 85 PSI <SPAN  CLASS="textit">rising</SPAN>.  If it were not for the existence of deadband, it would not matter which way the applied pressure changed during the calibration test.  However, deadband will always be present in a discrete instrument, whether that deadband is adjustable or not.
+
+<P>
+For example, a pressure switch with a deadband of 5 PSI set to trip at 85 PSI falling would re-set at 90 PSI rising.  Conversely, a pressure switch (with the same deadband of 5 PSI) set to trip at 85 PSI rising would re-set at 80 PSI falling.  In both cases, the switch &ldquo;trips&rdquo; at 85 PSI, but the direction of pressure change specified for that trip point defines which side of 85 PSI the re-set pressure will be found.
+
+<P>
+A procedure to efficiently calibrate a discrete instrument without too many trial-and-error attempts is to set the stimulus at the desired value (e.g. 85 PSI for our hypothetical low-pressure switch) and then move the set-point adjustment in the <SPAN  CLASS="textit">opposite</SPAN> direction as the intended direction of the stimulus (in this case, <SPAN  CLASS="textit">increasing</SPAN> the set-point value until the switch changes states).  The basis for this technique is the realization that most comparison mechanisms cannot tell the difference between a rising process variable and a falling setpoint (or vice-versa).  Thus, a falling pressure may be simulated by a rising set-point adjustment.  You should still perform an actual changing-stimulus test to ensure the instrument responds properly under realistic circumstances, but this &ldquo;trick&rdquo; will help you achieve good calibration in less time.
+
+<P>
+
+<H1><A ID="SECTION00280000000000000000">
+Instrument turndown</A>
+</H1>
+
+<P>
+An important performance parameter for transmitter instruments is something often referred to as <SPAN  CLASS="textit">turndown</SPAN> or <SPAN  CLASS="textit">rangedown</SPAN>.  &ldquo;Turndown&rdquo; is defined as the ratio of maximum allowable span to the minimum allowable span for a particular instrument. <A NAME="261"></A> <A NAME="262"></A>
+
+<P>
+Suppose a pressure transmitter has a maximum calibration range of 0 to 300 pounds per square inch (PSI), and a turndown of 20:1.  This means that a technician may adjust the span anywhere between 300 PSI (e.g. range = 0 to 300 PSI) and 15 PSI (e.g. range = 0 to 15 PSI).  This is important to know in order to select the proper transmitter for any given measurement application.  The odds of you finding a transmitter with just the perfect factory-calibrated range for your measurement application may be quite small, meaning you will have to adjust its range to fit your needs.  The turndown ratio tells you how far you will be able to practically adjust your instrument's range.
+
+<P>
+<P>
+For example, suppose you were working at a facility where the operations personnel requested a pressure transmitter installed on a process vessel with a measurement range of 50 PSI to 90 PSI.  You go to the warehouse where all the new instruments are stocked, and find a pressure transmitter with a (maximum) range of zero to 1000 PSI, and a turndown ratio of 20:1.  Dividing the maximum span of 1000 PSI by 20, we arrive at a minimum span of 50 PSI.  The span requested by operations for this pressure transmitter is 40 PSI (90 PSI <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img20.svg"
+ ALT="$-$"></SPAN> 50 PSI), which means the transmitter you found in the warehouse will <SPAN  CLASS="textit">not</SPAN> be able to &ldquo;turn down&rdquo; that far.  At best, we could range it for 50 PSI to 100 PSI, or perhaps for 40 PSI to 90 PSI, but not the 50 PSI to 90 PSI requested by operations.  At this point, you could return to the operations personnel to ask if a 50 PSI span would be acceptable &ndash; if not, you will have to order a different pressure transmitter with a smaller span (or with a greater turndown ratio<A ID="tex2html10"
+  HREF="footnode.html#foot264"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">10</SPAN></SUP></A>).
+
+<P>
+<P>
+Another important consideration with turndown is the <SPAN  CLASS="textit">accuracy</SPAN> of the instrument at the stated turndown.  The further an instrument is &ldquo;turned down&rdquo; from its maximum span, generally the worse its accuracy becomes at that reduced span.  For example, the Micro Motion &ldquo;ELITE&rdquo; series of Coriolis mass flowmeters<A ID="tex2html11"
+  HREF="footnode.html#foot266"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">11</SPAN></SUP></A> are advertised to perform within an accuracy envelope of <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img43.svg"
+ ALT="$\pm$"></SPAN>0.05% at turndown ratios up to 20:1, but that measurement uncertainty increases to <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img43.svg"
+ ALT="$\pm$"></SPAN>0.25% at a turndown of 100:1, and to <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img43.svg"
+ ALT="$\pm$"></SPAN>1.25% at a turndown of 500:1.  It should be noted that the degradation of measurement accuracy at large turndown ratios is not some defect of Micro Motion flowmeters (far from it!), but rather an inescapable consequence of pushing an instrument's turndown to its limit.  <A NAME="267"></A>
+
+<P>
+
+<H1><A ID="SECTION00290000000000000000">
+NIST traceability</A>
+</H1>
+
+<P>
+As defined previously, <SPAN  CLASS="textit">calibration</SPAN> means the comparison and adjustment (if necessary) of an instrument's response to a stimulus of precisely known quantity, to ensure operational accuracy.  In order to perform a calibration, one must be reasonably sure that the physical quantity used to stimulate the instrument is accurate in itself.  For example, if I try calibrating a pressure gauge to read accurately at an applied pressure of 200 PSI, I must be reasonably sure that the pressure I am using to stimulate the gauge is actually 200 PSI.  If it is not 200 PSI, then all I am doing is adjusting the pressure gauge to register 200 PSI when in fact it is sensing something different.
+
+<P>
+Ultimately, this is a philosophical question of <SPAN ID="txt270">epistemology</SPAN>: <SPAN  CLASS="textit">how do we know what is true?</SPAN>  There are no easy answers here, but teams of scientists and engineers known as <SPAN  CLASS="textit">metrologists</SPAN> devote their professional lives to the study of calibration standards to ensure we have access to the best approximation of &ldquo;truth&rdquo; for our calibration purposes.  <SPAN  CLASS="textit">Metrology</SPAN> is the science of measurement, and the central repository of expertise on this science within the United States of America is the <SPAN  CLASS="textit">National Institute of Standards and Technology</SPAN>, or the <SPAN  CLASS="textit">NIST</SPAN> (formerly known as the <SPAN  CLASS="textit">National Bureau of Standards</SPAN>, or <SPAN  CLASS="textit">NBS</SPAN>).  <A NAME="278"></A> <A NAME="279"></A>  <A NAME="280"></A>  <A NAME="281"></A>  <A NAME="282"></A>  <A NAME="283"></A>
+
+<P>
+Experts at the NIST work to ensure we have means of tracing measurement accuracy back to <SPAN  CLASS="textit">intrinsic standards</SPAN>, which are quantities inherently fixed (as far as anyone knows).  The vibrational frequency of an isolated cesium atom when stimulated by radio energy, for example, is an intrinsic standard used for the measurement of time (forming the basis of the so-called <SPAN  CLASS="textit">atomic clock</SPAN>).  So far as anyone knows, this frequency is fixed in nature and cannot vary: each and every isolated cesium atom has the exact same resonant frequency.  The distance traveled in a vacuum by 1650763.73 wavelengths of light emitted by an excited krypton-86 (<SPAN CLASS="MATH"><IMG STYLE="height: 2.03ex; vertical-align: -0.10ex; " SRC="img44.svg"
+ ALT="$^{86}$"></SPAN>Kr) atom is the intrinsic standard for one meter of length.  Again, so far as anyone knows, this distance is fixed in nature and cannot vary.  This means any suitably equipped laboratory in the world should be able to build their own intrinsic standards to reproduce the <SPAN  CLASS="textit">exact</SPAN> same quantities based on the same (universal) physical constants.  The accuracy of an intrinsic standard is ultimately a function of nature rather than a characteristic of the device.  Intrinsic standards therefore serve as absolute references which we may calibrate certain instruments against.  <A NAME="288"></A> <A NAME="289"></A>
+
+<P>
+
+<P>
+The machinery necessary to replicate intrinsic standards for practical use is quite expensive and usually delicate.  This means the average metrologist (let alone the average industrial instrument technician) simply will never have access to one.  While the concept of an intrinsic standard is tantalizing in its promise of ultimate accuracy and repeatability, it is simply beyond the reach of most laboratories to maintain.  An example of an intrinsic standard is this Josephson Junction array in the primary metrology lab at the Fluke corporation's headquarters in Everett, Washington:  <A NAME="290"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{calibrate25.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.55ex; vertical-align: -0.10ex; " SRC="img45.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{calibrate25.eps}$">
+</DIV><P></P>
+
+<P>
+A Josephson junction functions as an intrinsic standard for <SPAN  CLASS="textit">voltage</SPAN>, generating extremely precise DC voltages in response to a DC excitation current and a microwave radiation flux.  Josephson junctions are superconducting devices, and as such must be operated in an extremely cold environment, hence the dewar vessel filled with liquid helium in the right-hand side of the photograph.  The microwave radiation flux itself must be of a precisely known frequency, as the Josephson voltage varies in direct proportion to this frequency.  Thus, the microwave frequency source is synchronized with the NIST's atomic clock (another intrinsic standard).
+
+<P>
+While theoretically capable of generating voltages with uncertainties in the low <SPAN  CLASS="textit">parts per billion</SPAN> range, a Josephson Array such as this one maintained by Fluke is quite an expensive<A ID="tex2html12"
+  HREF="footnode.html#foot495"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">12</SPAN></SUP></A> beast, being too impractical for most working labs and shops to justify owning.  In order for these intrinsic standards to be useful within the industrial world, we use them to calibrate other instruments, which are then used to calibrate other instruments, and so on until we arrive at the instrument we intend to calibrate for field service in a process.  So long as this &ldquo;chain&rdquo; of instruments is calibrated against each other regularly enough to ensure good accuracy at the end-point, we may calibrate our field instruments with confidence.  The documented confidence is known as <SPAN  CLASS="textit">NIST traceability</SPAN>: that the accuracy of the field instrument we calibrate is ultimately ensured by a trail of documentation leading to intrinsic standards maintained by the NIST.  This &ldquo;paper trail&rdquo; proves to anyone interested that the accuracy of our calibrated field instruments is of the highest pedigree.  <A NAME="296"></A>  <A NAME="297"></A>
+
+<P>
+
+<H1><A ID="SECTION002100000000000000000">
+Practical calibration standards</A>
+</H1>
+
+<P>
+As previously defined, <SPAN  CLASS="textit">calibration</SPAN> refers to the checking and adjustment of an instrument so that its output faithfully corresponds to its input throughout a specified range.  In order to calibrate an instrument, we must have some means of knowing the input and/or output quantities associated with the instrument under test.  A substance or device used as a reference to compare against an instrument's response is called a <SPAN  CLASS="textit">calibration standard</SPAN>.  Simply put, a calibration standard is something we may <SPAN  CLASS="textit">compare</SPAN> the calibrated instrument to.  Thus, any calibration can only be as good as the standard used<A ID="tex2html13"
+  HREF="footnode.html#foot302"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">13</SPAN></SUP></A>.
+
+<P>
+Calibration standards fall into two broad categories: standards used to <SPAN  CLASS="textit">produce</SPAN> accurate physical quantities (e.g. pressure, temperature, voltage, current, etc.), and standards used to simply <SPAN  CLASS="textit">measure</SPAN> physical quantities to a high degree of accuracy.  An example of the former would be the use of boiling water (at sea level) to <SPAN  CLASS="textit">produce</SPAN> a temperature of 100 degrees Celsius (212 degrees Fahrenheit) in order to calibrate a temperature gauge, whereas an example of the latter would be the use of a laboratory-quality precision thermometer to measure some arbitrary source of temperature in comparison to the temperature gauge being calibrated.
+
+<P>
+<P>
+In metrology labs, the ultimate standards are based on fundamental constants of nature, and are called <SPAN  CLASS="textit">intrinsic standards</SPAN>.  A modern example of an intrinsic standard for time is the so-called <SPAN  CLASS="textit">atomic clock</SPAN>, using isolated atoms of Cesium to produce frequencies which are inherently fixed and reproduceable world-wide.  Instrument shops located in industrial facilities cannot afford the capital and consumable costs associated with intrinsic standards, and so must rely on other devices for their calibration purposes.  Ideally, there should be a &ldquo;chain&rdquo; of calibration from any device used as a shop standard traceable all the way back to some intrinsic standard in a national-level or primary metrology lab.   <A NAME="308"></A> <A NAME="309"></A>
+
+<P>
+Calibration standards used in instrument shops for industrial calibration work should therefore be periodically sent to a local metrology lab for re-standardization, where their accuracy may be checked against other (higher-level) standards which themselves are checked against even higher-level calibration standards, ultimately traceable all the way to intrinsic standards.  In each step of the calibration &ldquo;chain,&rdquo; there is a progressive degree of measurement uncertainty.  Intrinsic standards possess the least amount of uncertainty, while field instruments (e.g. pressure transmitters, temperature gauges, etc.) exhibit the greatest uncertainties.
+
+<P>
+<P>
+It is important that the degree of uncertainty in the accuracy of a test instrument is <SPAN  CLASS="textit">significantly less</SPAN> than the degree of uncertainty we hope to achieve in the instruments we calibrate.  Otherwise, calibration becomes a pointless exercise.  This ratio of uncertainties is called the <SPAN  CLASS="textit">Test Uncertainty Ratio</SPAN>, or <SPAN  CLASS="textit">TUR</SPAN>.  A good rule-of-thumb is to maintain a TUR of at least 4:1 (ideally 10:1 or better), the test equipment being many times more accurate (less uncertain) than the field instruments we calibrate with them.  <A NAME="313"></A> <A NAME="314"></A> 
+
+<P>
+I have personally witnessed the confusion and wasted time that results from trying to calibrate a field instrument to a tighter tolerance than what the calibration standard is capable of.  In one case, an instrument technician attempted to calibrate a pneumatic pressure transmitter to a tolerance of <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img43.svg"
+ ALT="$\pm$"></SPAN> 0.25% of span using a test gauge that was only good for <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img43.svg"
+ ALT="$\pm$"></SPAN> 1% of the same span.  This poor technician kept going back and forth, adjusting the transmitter's zero and span screws over and over again in a futile attempt to reign in the transmitter's response within the stated specification of <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img43.svg"
+ ALT="$\pm$"></SPAN> 0.25%.  After giving up, he tested the test gauges by comparing three of them at once, tied together on a common air pressure tube.  When he did this, it became clear that no two test gauges would consistently agree with each other within the specified tolerance over the 3 to 15 PSI range.  As he raised and lowered the pressure, the gauges' indications would deviate from one another far more than <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img43.svg"
+ ALT="$\pm$"></SPAN> 0.25% across the measurement range.  Simply put, the inherent uncertainty of the gauges exceeded the uncertainty he was trying to calibrate the transmitter to.  As a result, his calibration &ldquo;standard&rdquo; was in fact shifting on him as he performed the calibration.  His actions were analogous to trying to set up a fixed-position cannon to repeatedly hit a moving target.
+
+<P>
+The lesson to be learned here is to always ensure the standards used to calibrate industrial instruments are reliably accurate (enough).  No calibration standard is <SPAN  CLASS="textit">perfect</SPAN>, but perfection is not what we need.  Our goal is to be <SPAN  CLASS="textit">accurate enough</SPAN> that the final calibration will be reliable within specified boundaries.
+
+<P>
+<P>
+The next few subsections describe various standards used in instrument shops to calibrate industrial instruments.
+
+<P>
+
+<H2><A ID="SECTION002101000000000000000">
+Electrical standards</A>
+</H2>
+
+<P>
+Electrical calibration equipment &ndash; used to calibrate instruments measuring voltage, current, and resistance &ndash; must be periodically calibrated against higher-tier standards maintained by outside laboratories.  In years past, instrument shops would often maintain their own <SPAN  CLASS="textit">standard cell</SPAN> batteries (often called <SPAN  CLASS="textit">Weston</SPAN> cells) as a primary voltage reference.  These special-purpose batteries produced 1.0183 volts DC at room temperature with low uncertainty and drift, but were sensitive to vibration and non-trivial to actually use.  Now, electronic voltage references have all but displaced standard cells in calibration shops and laboratories, but these references must be checked and adjusted for drift in order to maintain their NIST traceability.  <A NAME="320"></A> <A NAME="321"></A>
+
+<P>
+One enormous benefit of electronic calibration references is that they are able to generate accurate currents and resistances in addition to voltage (and not just voltage at one fixed value, either!).  Modern electronic references are digitally-controlled as well, which lends themselves well to automated testing in assembly-line environments, and/or programmed multi-point calibrations with automatic documentation of as-found and as-left calibration data.  A photograph of some electronic calibration references appears here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{calibrate21.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.84ex; vertical-align: -0.10ex; " SRC="img46.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{calibrate21.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+If a shop cannot afford one of these versatile references for benchtop calibration use, an acceptable alternative in some cases is to purchase a high-accuracy multimeter and equip the calibration bench with adjustable voltage, current, and resistance sources.  These sources will be simultaneously connected to the high-accuracy multimeter and the instrument under test, and adjusted until the high-accuracy meter registers the desired value.  The measurement shown by the instrument under test is then compared against the reference meter and adjusted until matching (to within the required tolerance).  
+
+<P>
+
+<P>
+The following illustration shows how a high-accuracy voltmeter could be used to calibrate a handheld voltmeter in this fashion:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate10.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 50.90ex; vertical-align: -0.10ex; " SRC="img47.svg"
+ ALT="$\displaystyle \includegraphics{calibrate10.eps}$">
+</DIV><P></P>
+
+<P>
+It should be noted that the variable voltage source shown in this test arrangement need not be sophisticated.  It simply needs to be <SPAN  CLASS="textit">variable</SPAN> (to allow precise adjustment until the high-accuracy voltmeter registers the desired voltage value) and <SPAN  CLASS="textit">stable</SPAN> (so the adjustment will not drift appreciably over time).  The accuracy of your calibration in the previous circuit originates not from the variable voltage source, but rather from the high-accuracy multimeter used as the calibration standard.  It is the high-accuracy multimeter that serves as the calibration reference here, not the voltage source &ndash; it is the high-accuracy multimeter that functions as the <SPAN  CLASS="textit">standard</SPAN>.
+
+<P>
+
+<H2><A ID="SECTION002102000000000000000">
+Temperature standards</A>
+</H2>
+
+<P>
+The most common technologies for industrial temperature measurement are electrical in nature: RTDs and thermocouples.  As such, the standards used to calibrate such devices are the same standards used to calibrate electrical instruments such as digital multimeters (DMMs).  For RTDs, this means a precision resistance standard such as a <SPAN  CLASS="textit">decade box</SPAN> used to precisely set known quantities of electrical resistance.  For thermocouples, this means a <SPAN  CLASS="textit">precision potentiometer</SPAN> used to generate precise quantities of low DC voltage (in the millivolt range, with microvolt resolution).  
+
+<P>
+Photographs of antique potentiometers used to calibrate thermocouple-sensing temperature instruments appear here:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=1.75in]{calibrate22.eps} \hskip 20pt \includegraphics[height=1.75in]{calibrate23.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 24.58ex; vertical-align: -0.10ex; " SRC="img48.svg"
+ ALT="$\displaystyle \includegraphics[height=1.75in]{calibrate22.eps} \hskip 20pt \includegraphics[height=1.75in]{calibrate23.eps}$">
+</DIV><P></P>
+
+<P>
+Modern, electronic calibrators are also available now for RTD and thermocouple instrument calibration, capable of sourcing accurate quantities of electrical resistance and DC millivoltage for the simulation of RTD and thermocouple elements, respectively.  A photograph of a Fluke model 525A laboratory standard is shown here:  <A NAME="332"></A> <A NAME="333"></A>  <A NAME="334"></A> <A NAME="335"></A>  <A NAME="336"></A>  <A NAME="337"></A>  <A NAME="338"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{calibrate20.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 28.07ex; vertical-align: -0.10ex; " SRC="img49.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{calibrate20.eps}$">
+</DIV><P></P>
+
+<P>
+Both the antique potentiometers and modern laboratory calibrators such as the Fluke 525A are self-contained <SPAN  CLASS="textit">sources</SPAN> useful for simulating the electrical outputs of temperature sensors.  If you closely observe the potentiometer photos, you can see numbers engraved around the circumference of the dials, showing the user how much voltage the device output at any given setting.
+
+<P>
+
+<P>
+Given an accurate enough voltmeter, it is possible to construct your own calibration potentiometer for simulating the millivoltage output of a thermocouple.  A simple voltage divider set up to reduce the DC voltage of an ordinary variable-voltage power supply will suffice, so long as it provides fine enough adjustment:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate24.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.45ex; vertical-align: -0.10ex; " SRC="img50.svg"
+ ALT="$\displaystyle \includegraphics{calibrate24.eps}$">
+</DIV><P></P>
+
+<P>
+Unlike the potentiometers of old, providing direct read-out of millivoltage at the potentiometer dial(s), we rely here on the accuracy of the precision multimeter to tell us when we have reached the required millivoltage with our power supply and voltage divider circuit.  This means the high-accuracy multimeter functions as the calibration <SPAN  CLASS="textit">standard</SPAN> in this set-up, permitting the use of non-precision components in the rest of the circuit.  Since the multimeter's indication is the only variable being trusted as accurate when calibrating the thermocouple-input temperature transmitter, the multimeter is the only<A ID="tex2html14"
+  HREF="footnode.html#foot343"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">14</SPAN></SUP></A> component in the circuit affecting the uncertainty of our calibration.
+
+<P>
+<P>
+
+<P>
+Electrically simulating the output of a thermocouple or RTD may suffice when the instrument we wish to calibrate uses a thermocouple or an RTD as its sensing element.  However, there are some temperature-measuring instruments that are not electrical in nature: this category includes bimetallic thermometers, filled-bulb temperature systems, and optical pyrometers.  In order to calibrate these types of instruments, we must accurately create the calibration temperatures in the instrument shop.  In other words, the instrument to be calibrated must be subjected to an actual temperature of accurately known value.
+
+<P>
+Even with RTDs and thermocouples &ndash; where the sensor signal may be easily simulated using electronic test equipment &ndash; there is merit in using an actual source of precise temperature to calibrate the temperature instrument.  Simulating the voltage produced by a thermocouple at a precise temperature, for example, is fine for calibrating the instrument normally receiving the millivoltage signal from the thermocouple, but this calibration test does nothing to validate the accuracy of the thermocouple element itself!  The <SPAN  CLASS="textit">best</SPAN> type of calibration for any temperature-measuring instrument, from the perspective of overall integrity, is to actually subject the sensing element to a precisely known temperature.  For this we need special calibration equipment designed to produce accurate temperature samples on demand.
+
+<P>
+<P>
+A time-honored standard for low-temperature industrial calibrations is pure water, specifically the freezing and boiling points of water.  Pure water at sea level (full atmospheric pressure) freezes at 32 degrees Fahrenheit (0 degrees Celsius) and boils at 212 degrees Fahrenheit (100 degrees Celsius).  In fact, the Celsius temperature scale is <SPAN  CLASS="textit">defined</SPAN> by these two points of phase change for water at sea level<A ID="tex2html15"
+  HREF="footnode.html#foot496"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">15</SPAN></SUP></A>.  <A NAME="347"></A> <A NAME="348"></A> <A NAME="349"></A> <A NAME="350"></A> <A NAME="351"></A> <A NAME="352"></A> <A NAME="353"></A> <A NAME="354"></A>
+
+<P>
+To use water as a temperature calibration standard, simply prepare a vessel for one of two conditions: thermal equilibrium at freezing or thermal equilibrium at boiling. &ldquo;Thermal equilibrium&rdquo; in this context simply means equal temperature throughout the mixed-phase sample.  In the case of freezing, this means a well-mixed sample of solid ice and liquid water.  In the case of boiling, this means a pot of water at a steady boil (vaporous steam and liquid water in direct contact).  What you are trying to achieve here is ample contact between the two phases (either solid and liquid; or liquid and vapor) to eliminate hot or cold spots.  When the entire water sample is homogeneous in temperature and heterogeneous in phase (i.e. a mix of different phases), the sample will have only one degree of thermodynamic freedom: its temperature is an exclusive function of atmospheric pressure.  Since atmospheric pressure is relatively stable and well-known, this fixes the temperature at a constant value.  For ultra-precise temperature calibrations in laboratories, the <SPAN  CLASS="textit">triple point</SPAN> of water is used as the reference.  When water is brought to its triple point (i.e. all three phases of solid, liquid, and gas co-existing in direct contact with each other), the sample will have <SPAN  CLASS="textit">zero degrees</SPAN> of thermodynamic freedom, which means both its temperature and its pressure will become locked at stable values: pressure at 0.006 atmospheres, and temperature at 0.01 degrees Celsius.  <A NAME="357"></A>
+
+<P>
+<P>
+
+<P>
+The following photograph shows a <SPAN  CLASS="textit">triple-point cell</SPAN> for water, used as a laboratory calibration standard:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[height=4in]{calibrate33.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 55.94ex; vertical-align: -0.10ex; " SRC="img51.svg"
+ ALT="$\displaystyle \includegraphics[height=4in]{calibrate33.eps}$">
+</DIV><P></P>
+
+<P>
+The major limitation of water as a temperature calibration standard is it only provides two<A ID="tex2html16"
+  HREF="footnode.html#foot360"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">16</SPAN></SUP></A> points of calibration: 0 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img52.svg"
+ ALT="$^{o}$"></SPAN>C and 100 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img52.svg"
+ ALT="$^{o}$"></SPAN>C, with the latter<A ID="tex2html17"
+  HREF="footnode.html#foot363"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">17</SPAN></SUP></A> being strongly pressure-dependent.  If other reference temperatures are required for a calibration, some substance other than water must be used.
+
+<P>
+<P>
+
+<P>
+A variety of substances with known phase-change points have been standardized as fixed points on the International Practical Temperature Scale (ITS-90).  The following list is a sample of some of these substances and their respective phase states and temperatures<A ID="tex2html18"
+  HREF="footnode.html#foot364"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">18</SPAN></SUP></A>:  <A NAME="365"></A>  <A NAME="366"></A>
+
+<P>
+
+<UL>
+<LI>Neon (triple point) = <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img53.svg"
+ ALT="$-248.6$"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img52.svg"
+ ALT="$^{o}$"></SPAN>C
+</LI>
+<LI>Oxygen (triple point) = <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img54.svg"
+ ALT="$-218.8$"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img52.svg"
+ ALT="$^{o}$"></SPAN>C
+</LI>
+<LI>Mercury (triple point) = <SPAN CLASS="MATH"><IMG STYLE="height: 1.88ex; vertical-align: -0.29ex; " SRC="img55.svg"
+ ALT="$-38.83$"></SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img52.svg"
+ ALT="$^{o}$"></SPAN>C
+</LI>
+<LI>Tin (freezing point) = 231.93 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img52.svg"
+ ALT="$^{o}$"></SPAN>C
+</LI>
+<LI>Zinc (freezing point) = 419.53 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img52.svg"
+ ALT="$^{o}$"></SPAN>C
+</LI>
+<LI>Aluminum (freezing point) = 660.32 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img52.svg"
+ ALT="$^{o}$"></SPAN>C
+</LI>
+<LI>Copper (freezing point) = 1084.62 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img52.svg"
+ ALT="$^{o}$"></SPAN>C
+</LI>
+</UL>
+
+<P>
+Substances at the triple point must be in thermal equilibrium with solid, liquid, and vaporous phases co-existing.  Substances at the freezing point must be a two-phase mixture of solid and liquid (i.e. a liquid <SPAN  CLASS="textit">in the process of freezing</SPAN>, neither a completely liquid nor a completely solid sample).  The physical principle at work in all of these examples is that of <SPAN  CLASS="textit">latent heat</SPAN>: the thermal energy exchange required to change the phase of a substance.  So long as the minimum heat exchange requirement for complete phase change is not met, a substance in the midst of phase transition will exhibit a fixed temperature, and therefore behave as a temperature <SPAN  CLASS="textit">standard</SPAN>.  Small amounts of heat gain or loss to such a sample will merely change the proportion of one phase to another (e.g. how much solid versus how much liquid), but the temperature will remain locked at a constant value until the sample becomes a single phase.
+
+<P>
+<P>
+One major disadvantage of using phase changes to produce accurate temperatures in the shop is the limited availability of temperatures.  If you need to create some other temperature for calibration purposes, you either need to find a suitable material with a phase change happening at that exact same temperature (good luck!) or you need to find a finely adjustable temperature source and use an accurate thermometer to compare your instrument under test against.  The latter scenario is analogous to the use of a high-accuracy voltmeter and an adjustable voltage source to calibrate a voltage instrument: comparing one instrument (trusted to be accurate) against another (under test).
+
+<P>
+Laboratory-grade thermometers are relatively easy to secure.  Variable temperature sources suitable for calibration use include <SPAN  CLASS="textit">oil bath</SPAN> and <SPAN  CLASS="textit">sand bath</SPAN> calibrators.  These devices are exactly what they sound like: small pots filled with either oil or sand, containing an electric heating element and a temperature control system using a laboratory-grade (NIST-traceable) thermal sensor.  In the case of sand baths, a small amount of compressed air is introduced at the bottom of the vessel to &ldquo;fluidize&rdquo; the sand so the grains move around much like the molecules of a liquid, helping the system reach thermal equilibrium.  To use a bath-type calibrator, place the temperature instrument to be calibrated such the sensing element dips into the bath, then wait for the bath to reach the desired temperature. <A NAME="381"></A> <A NAME="382"></A>  <A NAME="383"></A>  <A NAME="384"></A>  <A NAME="385"></A> 
+
+<P>
+
+<P>
+An oil bath temperature calibrator is shown in the following photograph, with sockets to accept seven temperature probes into the heated oil reservoir:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{oilbath.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="img56.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{oilbath.eps}$">
+</DIV><P></P>
+
+<P>
+This particular oil bath unit has no built-in indication of temperature suitable for use as the calibration standard.  A standard-grade thermometer or other temperature-sensing element must be inserted into the oil bath along with the sensor under test in order to provide a reference indication useful for calibration.
+
+<P>
+
+<P>
+<SPAN  CLASS="textit">Dry-block</SPAN> temperature calibrators also exist for creating accurate calibration temperatures in the instrument shop environment.  Instead of a fluid (or fluidized powder) bath as the thermal medium, these devices use metal blocks with blind (dead-end) holes drilled for the insertion of temperature-sensing instruments. <A NAME="388"></A>  <A NAME="389"></A>
+
+<P>
+An inexpensive dry-block temperature calibrator intended for bench-top service is shown in this photograph:  <A NAME="390"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{dryblock.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img57.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{dryblock.eps}$">
+</DIV><P></P>
+
+<P>
+This particular dry-block temperature calibrator does provide direct visual indication of the block temperature by means of a digital display on its front panel.  If greater accuracy is desired, a laboratory reference-grade temperature sensor may be inserted into the same block along with the sensor being tested, and that reference-grade sensor relied upon as the temperature standard rather than the dry-block calibrator's digital display.
+
+<P>
+<P>
+Optical temperature instruments require a different sort of calibration tool: one that emits radiation equivalent to that of the process object at certain specified temperatures.  This type of calibration tool is called a <SPAN  CLASS="textit">blackbody calibrator</SPAN><A ID="tex2html19"
+  HREF="footnode.html#foot497"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">19</SPAN></SUP></A>, having a target area where the optical instrument may be aimed.  Like oil and sand bath calibrators, a blackbody calibrator relies on an internal temperature sensing element as a reference, to control the optical emissions of the blackbody target at any specified temperature within a practical range.  <A NAME="394"></A>
+
+<P>
+
+<H2><A ID="SECTION002103000000000000000">
+Pressure standards</A>
+</H2>
+
+<P>
+In order to accurately calibrate a pressure instrument in a shop environment, we must create fluid pressures of known magnitude against which we compare the instrument being calibrated.  As with other types of physical calibrations, our choice of standards falls into two broad categories: devices that inherently <SPAN  CLASS="textit">produce</SPAN> known pressures versus devices that accurately <SPAN  CLASS="textit">measure</SPAN> pressures created by some (other) adjustable source.
+
+<P>
+A <SPAN  CLASS="textit">deadweight tester</SPAN> (sometimes referred to as a <SPAN  CLASS="textit">dead-test</SPAN> calibrator) is an example in the former category.  These devices <SPAN  CLASS="textit">create</SPAN> accurately known pressures by means of precise masses and pistons of precise area: <A NAME="401"></A> <A NAME="402"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate11.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 28.26ex; vertical-align: -0.10ex; " SRC="img58.svg"
+ ALT="$\displaystyle \includegraphics{calibrate11.eps}$">
+</DIV><P></P>
+
+<P>
+After connecting the gauge (or other pressure instrument) to be calibrated, the technician adjusts the secondary piston to cause the primary piston to lift off its resting position and be suspended by oil pressure alone.  So long as the mass placed on the primary piston is precisely known, Earth's gravitational field is constant, and the piston is perfectly vertical, the fluid pressure applied to the instrument under test <SPAN  CLASS="textit">must</SPAN> be equal to the value described by the following equation:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = {F \over A}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="img59.svg"
+ ALT="$\displaystyle P = {F \over A}$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img60.svg"
+ ALT="$P$"></SPAN> = Fluid pressure
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img61.svg"
+ ALT="$F$"></SPAN> = Force exerted by the action of gravity on the mass (<!-- MATH
+ $F_{weight} = mg$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.75ex; " SRC="img62.svg"
+ ALT="$F_{weight} = mg$"></SPAN>)
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img63.svg"
+ ALT="$A$"></SPAN> = Area of piston
+
+<P>
+<P>
+The primary piston area, of course, is precisely set at the time of the deadweight tester's manufacture and does not change appreciably throughout the life of the device.
+
+<P>
+
+<P>
+A very simple deadweight tester unit appears in the next photograph, mounted to a yellow wooden base:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{deadweight_1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img64.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{deadweight_1.eps}$">
+</DIV><P></P>
+
+<P>
+When sufficient pressure has been accumulated inside the tester to overcome the weight on the piston, the piston rises off its rest and &ldquo;floats&rdquo; on the pressurized oil, as shown in this close-up photograph:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{deadweight_3.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img65.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{deadweight_3.eps}$">
+</DIV><P></P>
+
+<P>
+A common operating practice for any deadweight tester is to gently spin the mass during testing so the primary piston continually rotates within its cylinder.  Any motion will prevent static friction from taking hold, helping to ensure the only force on the primary piston is the force of the fluid within the deadweight tester.
+
+<P>
+
+<P>
+Most modern deadweight testers include extra features such as hand pumps and bleed valves in addition to secondary pistons, to facilitate both rapid and precise operation.  The next photograph shows a newer deadweight tester, with these extra features:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{deadweight_2.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img66.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{deadweight_2.eps}$">
+</DIV><P></P>
+
+<P>
+There is also such a thing as a <SPAN  CLASS="textit">pneumatic</SPAN> deadweight tester.  In these devices, a constant flow of gas such as compressed air or bottled nitrogen vents through a bleed port operated by the primary piston.  The piston moves as necessary to maintain just enough gas pressure inside the unit to suspend the mass(es) against gravity.  This gas pressure passes on to the instrument under test, just as liquid pressure in a hydraulic deadweight tester passes to the test instrument for comparison: <A NAME="411"></A> <A NAME="412"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate12.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.00ex; vertical-align: -0.10ex; " SRC="img67.svg"
+ ALT="$\displaystyle \includegraphics{calibrate12.eps}$">
+</DIV><P></P>
+
+<P>
+In fact, the construction and operation of a pneumatic deadweight tester is quite similar to a self-balancing (force-balance) pneumatic instrument mechanism with a baffle/nozzle assembly.  A moving element opens or closes a variable restriction downstream of a fixed restriction to generate a varying pressure.  In this case, that pressure directly operates the bleed vent to self-regulate gas pressure at whatever value is necessary to suspend the mass against gravity.
+
+<P>
+Deadweight testers (both hydraulic and pneumatic) lend themselves well to relatively high pressures, owing to the practical limitations of mass and piston area.  You could use a deadweight tester to calibrate a 100 PSI pressure gauge used for measuring water mains pressure, for example, but you could not use a deadweight tester to calibrate a 0 to 1 "W.C. (zero to one inch water column) pressure gauge used to measure draft pressure in a furnace flue.
+
+<P>
+For low-pressure calibrations, the simple <SPAN  CLASS="textit">manometer</SPAN> is a much more practical standard.  Manometers, of course, do not generate pressure on their own.  In order to use a manometer to calibrate a pressure instrument, you must connect both devices to a source of variable fluid pressure, typically instrument air through a precision pressure regulator: <A NAME="415"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate13.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 39.10ex; vertical-align: -0.10ex; " SRC="img68.svg"
+ ALT="$\displaystyle \includegraphics{calibrate13.eps}$">
+</DIV><P></P>
+
+<P>
+The difference in liquid column heights (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img69.svg"
+ ALT="$h$"></SPAN>) within the manometer shows the pressure applied to the gauge.  As with the deadweight tester, the accuracy of this pressure measurement is bound by just a few physical constants, none of which are liable to sudden change.  So long as the manometer's liquid density is precisely known, Earth's gravitational field is constant, and the manometer tubes are perfectly vertical, the fluid pressure indicated by the manometer <SPAN  CLASS="textit">must</SPAN> be equal to the value described by the following equation (two different forms given):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \rho gh \hbox{\hskip 25pt (or) \hskip 25pt} P = \gamma h
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 2.51ex; vertical-align: -0.68ex; " SRC="img70.svg"
+ ALT="$\displaystyle P = \rho gh \hbox{\hskip 25pt (or) \hskip 25pt} P = \gamma h$">
+</DIV><P></P>
+
+<P>
+Where,
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img60.svg"
+ ALT="$P$"></SPAN> = Fluid pressure
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img71.svg"
+ ALT="$\rho$"></SPAN> = Mass density of fluid
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img72.svg"
+ ALT="$\gamma$"></SPAN> = Weight density of fluid
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.55ex; " SRC="img73.svg"
+ ALT="$g$"></SPAN> = Acceleration of gravity
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img69.svg"
+ ALT="$h$"></SPAN> = Height difference between manometer liquid columns
+
+<P>
+<P>
+Of course, with pressure-measuring test instruments of suitable accuracy (preferably NIST-traceable), the same sort of calibration jig may be used for virtually any desired range of pressures:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate14.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.58ex; vertical-align: -0.10ex; " SRC="img74.svg"
+ ALT="$\displaystyle \includegraphics{calibrate14.eps}$">
+</DIV><P></P>
+
+<P>
+When the electronic test gauge is designed for very low pressures (inches of water column), they are sometimes referred to as <SPAN  CLASS="textit">electronic manometers</SPAN>.  <A NAME="421"></A>
+
+<P>
+Instrument calibrations performed in the field (i.e. in locations near or at the intended point of use rather than in a professionally-equipped shop) are almost always done this way: a pressure-generating source is connected to both the instrument under test and a trusted calibration gauge (&ldquo;test gauge&rdquo;), and the two indications are compared at several points along the calibrated range.  Test equipment suitable for field pressure calibrations include <SPAN  CLASS="textit">slack-tube manometers</SPAN> made from flexible plastic tubing hung from any available anchor point near eye level, and <SPAN  CLASS="textit">test gauges</SPAN> typically of the helical bourdon tube variety.  Portable electronic test gauges are also available for field use, many with built-in hand pumps for generating precise air pressures.  <A NAME="424"></A>  <A NAME="425"></A> <A NAME="426"></A>
+
+<P>
+A noteworthy example of a pneumatic pressure calibrator for field use was a device manufactured by the Wallace &amp; Tiernan corporation, affectionately called a <SPAN  CLASS="textit">Wally box</SPAN> by at least one generation of instrument technicians.  A &ldquo;Wally box&rdquo; consisted of a large dial pressure gauge (several inches in diameter) with a multi-turn needle and a very fine scale, connected to a network of valves and regulators which were used to set different air pressures from any common compressed air source.  The entire mechanism was housed in an impact-resistance case for ruggedness.  One of the many nice features of this calibration instrument was a selector valve allowing the technician to switch between two different pressures output by independent pressure regulators.  Once the two pressure regulator values were set to the instrument's lower- and upper-range values (LRV and URV), it was possible to switch back and forth between those two pressures at will, making the task of adjusting an analog instrument with interactive zero and span adjustments much easier than it would have been to precisely adjust a single pressure regulator again and again. <A NAME="428"></A> <A NAME="429"></A> <A NAME="430"></A> <A NAME="431"></A> <A NAME="432"></A> <A NAME="433"></A> <A NAME="434"></A>
+
+<P>
+
+<H2><A ID="SECTION002104000000000000000">
+Flow standards</A>
+</H2>
+
+<P>
+Most forms of continuous flow measurement are inferential; that is, we measure flow indirectly by measuring some other variable (such as pressure, voltage, or frequency) directly.  With this in mind, we may usually achieve reasonable calibration accuracy simply by calibrating the primary sensor and replacing the flow element (if inspection proves necessary).  In the case of an orifice plate used to measure fluid flow rate, this would mean calibrating the differential pressure transmitter to measure pressure accurately and replacing the orifice plate if it shows signs of wear. 
+
+<P>
+In some cases, though, direct validation of flow measurement accuracy is needed.  Most techniques of flow rate validation take the form of measuring accumulated fluid volume over time.  This may prove to be complicated, especially if the fluids in question are hazardous in any way, and/or the flow rates are large, and/or the fluid is a gas or vapor.
+
+<P>
+For simple validation of liquid flow rates, the flow may be diverted from its normal path in the process and into a container where either accumulated volume or accumulated weight may be measured over time.  If the rate of flow into this container is constant, the accumulated volume (or weight) should increase linearly over time.  The actual flow rate may then be calculated by dividing the change in volume (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img75.svg"
+ ALT="$\Delta V$"></SPAN>) by the time period over which the change in volume was measured (<SPAN CLASS="MATH"><IMG STYLE="height: 1.77ex; vertical-align: -0.10ex; " SRC="img76.svg"
+ ALT="$\Delta t$"></SPAN>).  The resulting quotient is the average flow rate between those two points in time, which is an approximation of instantaneous flow rate:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\Delta V \over \Delta t} = \hbox{ Average flow}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.93ex; vertical-align: -1.69ex; " SRC="img77.svg"
+ ALT="$\displaystyle {\Delta V \over \Delta t} = \hbox{ Average flow}$">
+</DIV><P></P>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\Delta V \over \Delta t} \approx {dV \over dt} = \hbox{ Instantaneous flow}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 4.95ex; vertical-align: -1.69ex; " SRC="img78.svg"
+ ALT="$\displaystyle {\Delta V \over \Delta t} \approx {dV \over dt} = \hbox{ Instantaneous flow}$">
+</DIV><P></P>
+
+<P>
+If a suitable vessel exists in the process with level-measuring capability (e.g. a liquid storage vessel equipped with a level transmitter), you may apply the same mathematical technique: use that vessel as an accumulator for the flow in question, tracking the accumulated (or lost) volume over time and then calculating <!-- MATH
+ $\Delta V \over \Delta t$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.96ex; vertical-align: -0.90ex; " SRC="img79.svg"
+ ALT="$\Delta V \over \Delta t$"></SPAN>.  The accuracy of this technique rests on some additional factors, though:
+
+<P>
+
+<UL>
+<LI>The accuracy of the level transmitter (as a <SPAN  CLASS="textit">volume</SPAN> measuring instrument!)
+</LI>
+<LI>The ability to ensure only <SPAN  CLASS="textit">one</SPAN> flow path in or out of that vessel
+</LI>
+</UL>
+
+<P>
+The first condition listed here places significant limitations on the flow calibration accuracy one can achieve with this method.  In essence, you are using the level instrument as the &ldquo;test gauge&rdquo; for the flow instrument, so it needs to be high-accuracy in order to achieve even reasonable accuracy for the flowmeter being calibrated.
+
+<P>
+<P>
+A more sophisticated approach for direct flow validation is the use of a device called a <SPAN  CLASS="textit">flow prover</SPAN>.  A &ldquo;flow prover&rdquo; is a precision piston-and-cylinder mechanism used to precisely measure a quantity of liquid over time.  Process flow is diverted through the prover, moving the piston over time.  Sensors on the prover mechanism detect when the piston has reached certain positions, and time measurements taken at those different positions enable the calculation of average flow (<!-- MATH
+ $\Delta V \over \Delta t$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.96ex; vertical-align: -0.90ex; " SRC="img79.svg"
+ ALT="$\Delta V \over \Delta t$"></SPAN>).  <A NAME="446"></A>  <A NAME="447"></A>
+
+<P>
+
+<H2><A ID="SECTION002105000000000000000">
+Analytical standards</A>
+</H2>
+
+<P>
+An <SPAN  CLASS="textit">analyzer</SPAN> measures intrinsic properties of a substance sample such as its density, chemical content, or purity.  Whereas the other types of instruments discussed in this chapter measure quantities incidental to the composition of a substance (pressure, level, temperature, and flow rate), an analyzer measures something related to the <SPAN  CLASS="textit">nature</SPAN> of substance being processed. <A NAME="451"></A>
+
+<P>
+As previously defined, to <SPAN  CLASS="textit">calibrate</SPAN> an instrument means to check and adjust (if necessary) its response so the output accurately corresponds to its input throughout a specified range.  In order to do this, one must expose the instrument to an actual input stimulus of precisely known quantity.  This is no different for an analytical instrument.  In order to calibrate an analyzer, we must exposed it to known quantities of substances with the desired physical and/or chemical properties (density, chemical composition, etc.).  In other words, we need to use <SPAN  CLASS="textit">chemical standards</SPAN>.  <A NAME="454"></A>
+
+<P>
+A classic example of this is the calibration of a pH analyzer.  pH is the measurement of hydrogen ion activity in an aqueous solution.  The standard range of measurement is 0 pH to 14 pH, the number representing a negative power of 10 approximately describing the hydrogen ion molarity of the solution (how many moles of active hydrogen ions per liter of solution)<A ID="tex2html20"
+  HREF="footnode.html#foot498"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">20</SPAN></SUP></A>. <A NAME="458"></A> <A NAME="459"></A>
+
+<P>
+<A ID="pH_buffer"></A>
+<P>
+The pH of a solution is typically measured with a pair of special electrodes immersed in the solution, which generate a voltage proportional to the pH of the solution.  In order to calibrate a pH instrument, you must have a sample of liquid solution with a known pH value.  For pH instrumentation, such calibration solutions are called <SPAN  CLASS="textit">buffers</SPAN>, because they are specially formulated to maintain stable pH values even in the face of (slight levels of) contamination.  <A NAME="462"></A>
+
+<P>
+pH buffers may be purchased in liquid form or in powder form.  Liquid buffer solutions may be used directly out of the bottle, while powdered buffers must be dissolved in appropriate quantities of de-ionized water to generate a solution ready for calibration use.  Pre-mixed liquid buffers are convenient to use, but have a fairly limited shelf life.  Powdered buffer capsules are generally superior for long-term storage, and also enjoy the advantage of occupying less storage space in their dry state than a liquid buffer solution.  
+
+<P>
+
+<P>
+The following photograph shows a few 7.00 pH (<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img43.svg"
+ ALT="$\pm$"></SPAN> 0.02 pH) buffer capsules ready to be mixed with water to form a usable buffer solution:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{ph_buffer_capsules.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 48.85ex; vertical-align: -0.10ex; " SRC="img81.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{ph_buffer_capsules.eps}$">
+</DIV><P></P>
+
+<P>
+After preparing the buffer solution in a cup, the pH probe is inserted into the buffer solution and given time to stabilize<A ID="tex2html21"
+  HREF="footnode.html#foot464"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">21</SPAN></SUP></A>.  One stabilized, the pH instrument may be adjusted to register the proper pH value.  Buffer solutions should not be exposed to ambient air for any longer than necessary (especially alkaline buffers such as 10.0 pH) due to contamination<A ID="tex2html22"
+  HREF="footnode.html#foot465"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">22</SPAN></SUP></A>.  Pre-mixed liquid buffer storage containers should be capped immediately after pouring into working cups.  Used buffer solution should be discarded rather than re-used at a later date.
+
+<P>
+<P>
+Analyzers designed to measure the concentration of certain gases in air must be calibrated in a similar manner.  Oxygen analyzers, for example, used to measure the concentration of free oxygen in the exhaust gases of furnaces, engines, and other combustion processes must be calibrated against known standards of oxygen concentration.  An oxygen analyzer designed to measure oxygen concentration over a range of ambient (20.9% oxygen) to 0% oxygen may be calibrated with ambient air as one of the standard values<A ID="tex2html23"
+  HREF="footnode.html#foot499"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">23</SPAN></SUP></A>, and a sample of pure nitrogen gas (containing 0% oxygen) as the other standard value.  An oxygen analyzer intended for the measurement of oxygen concentrations in excess of ambient air would require a different standard, most likely a sample of 100% pure oxygen, as a calibration reference.
+
+<P>
+<P>
+An analyzer designed to measure the concentration of hydrogen sulfide (H<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.45ex; " SRC="img82.svg"
+ ALT="$_{2}$"></SPAN>S), a toxic gas produced by anaerobic bacterial decomposition of organic matter, will require a sample of gas with a precisely known concentration of hydrogen sulfide mixed in it as a calibration reference.  A typical reference gas concentration might be 25 or 50 parts per million (ppm).  Gas mixtures with such precise concentration values as this may be purchased from chemical laboratories for the purpose of calibrating concentration analyzers, and are often referred to as <SPAN  CLASS="textit">span gases</SPAN> because they are used to set the span of analyzer instruments.  <A NAME="469"></A> <A NAME="470"></A> <A NAME="471"></A> <A NAME="472"></A> <A NAME="473"></A> <A NAME="474"></A>
+
+<P>
+<P>
+Analytical instruments are generally subject to greater drifting over time than instruments that measure incidental quantities such as pressure, level, temperature, or flow rate.  It is not uncommon for instrument technicians to be tasked with <SPAN  CLASS="textit">daily</SPAN> calibration checks of certain instruments responsible for monitoring atmospheric or water emissions at industrial facilities.  For this reason, it is often practical to equip such critical analyzers with <SPAN  CLASS="textit">self-calibration</SPAN> systems.  A self-calibration system is a system of solenoid (electrically controlled on-off) valves and reference gas bottles set up in such a way that a computer is able to switch the analyzer off-line and subject it to standard reference gases on a regular schedule to check calibration.  Many analyzers are programmed to automatically calibrate themselves against these reference gases, thus eliminating tedious work for the instrument technician.  
+
+<P>
+
+<P>
+A typical self-calibration system for a gas analyzer might look like this:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{calibrate15.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 57.68ex; vertical-align: -0.10ex; " SRC="img24.svg"
+ ALT="$\displaystyle \includegraphics{calibrate15.eps}$">
+</DIV><P></P>
+
+<P>
+The gas analyzer is equipped with its own auto-calibration controls and programming, allowing it to periodically shut off the process sample and switch to known reference gases for &ldquo;zero&rdquo; and &ldquo;span&rdquo; calibration checks.  If these checks indicate excessive drift or any other questionable results, the analyzer has the ability to flag a maintenance alarm to alert an instrument technician to a potential problem that may require servicing.  This sort of self-calibration and self-diagnostic capability saves the instrument technician from having to spend substantial time running manual calibration checks, yet alerts the technician if anything is in need of actual repair.  Barring any component failures within this system, the only maintenance this system will need is periodic replacement of the calibration gas bottles.
+
+<P>
+
+<H1><A ID="SECTION002110000000000000000">
+Review of fundamental principles</A>
+</H1>
+
+<P>
+Shown here is a partial listing of principles applied in the subject matter of this chapter, given for the purpose of expanding the reader's view of this chapter's concepts and of their general inter-relationships with concepts elsewhere in the book.  Your abilities as a problem-solver and as a life-long learner will be greatly enhanced by mastering the applications of these principles to a wide variety of topics, the more varied the better.
+
+<P>
+
+<UL>
+<LI><SPAN  CLASS="textbf">Linear equations</SPAN>: any function represented by a straight line on a graph may be represented symbolically by the slope-intercept formula <!-- MATH
+ $y = mx + b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img83.svg"
+ ALT="$y = mx + b$"></SPAN>.  Relevant to instrument input/output scaling.
+</LI>
+<LI><SPAN  CLASS="textbf">Zero shift</SPAN>: any shift in the offset of an instrument is fundamentally additive, being represented by the &ldquo;intercept&rdquo; (<SPAN CLASS="MATH"><IMG STYLE="height: 1.80ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$b$"></SPAN>) variable of the slope-intercept linear formula <!-- MATH
+ $y = mx + b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img83.svg"
+ ALT="$y = mx + b$"></SPAN>.  Relevant to instrument calibration: adjusting the &ldquo;zero&rdquo; of an instrument always adds to or subtracts from its response.
+</LI>
+<LI><SPAN  CLASS="textbf">Span shift</SPAN>: any shift in the gain of an instrument is fundamentally multiplicative, being represented by the &ldquo;slope&rdquo; (<SPAN CLASS="MATH"><IMG STYLE="height: 1.19ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$m$"></SPAN>) variable of the slope-intercept linear formula <!-- MATH
+ $y = mx + b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.25ex; vertical-align: -0.55ex; " SRC="img83.svg"
+ ALT="$y = mx + b$"></SPAN>.  Relevant to instrument calibration: adjusting the &ldquo;span&rdquo; of an instrument always multiplies or divides its response.
+</LI>
+<LI><SPAN  CLASS="textbf">Deadband and hysteresis</SPAN>: the difference in response with the independent variable increasing versus decreasing.  Usually caused by friction in a mechanism.  Relevant to the calibration testing of instruments, both analog and discrete.  For continuous measurement devices, the response of a sensor at some stimulus value (increasing) will not be the exactly the same as the response of that same sensor at that same value when decreasing.  For process switches, the &ldquo;trip&rdquo; the value at which a switch changes state when its stimulus increases is not the same value it changes state when its stimulus decreases.
+</LI>
+</UL>
+
+<P>
+
+<H1><A ID="SECTION002120000000000000000">
+References</A>
+</H1>
+
+<P>
+Agy, D. et al., <SPAN  CLASS="textit">Calibration: Philosophy In Practice</SPAN>, Second Edition, Fluke Corporation, Everett, WA, 1994.
+
+<P>
+<P>
+Lipták, Béla G. et al., <SPAN  CLASS="textit">Instrument Engineers' Handbook &ndash; Process Measurement and Analysis Volume I</SPAN>, Fourth Edition, CRC Press, New York, NY, 2003.
+
+<P>
+<P>
+
+&ldquo;Micro Motion ELITE Coriolis Flow and Density Meters&rdquo;, product data sheet DS-00374 revision L, Micro Motion, Inc., June 2009.
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="html.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html83"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html85"
+  HREF="node3.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Index</A>
+<B> Up:</B> <A
+ HREF="html.html">html</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Contents</A>
+ &nbsp; <B>  <A ID="tex2html84"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html86"
+  HREF="node3.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>
