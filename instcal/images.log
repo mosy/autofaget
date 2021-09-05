@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.8.3)  23 AUG 2021 22:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.8.3)  5 SEP 2021 22:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -418,9 +418,9 @@ Package pdftex.def Info: calibrate01-eps-converted-to.pdf  used on input line 1
 89.
 (pdftex.def)             Requested size: 273.01933pt x 224.83945pt.
 
-:tex2html_wrap_indisplay1677:lthtmlCropMarkHeight:=230.83945pt
+:tex2html_wrap_indisplay1609:lthtmlCropMarkHeight:=230.83945pt
 
-:tex2html_wrap_indisplay1677:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_indisplay1609:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 Preview: Tightpage -32891 -32891 32891 32891
 [1
 Non-PDF special ignored!
@@ -428,145 +428,140 @@ Non-PDF special ignored!
  </home/fred-olav/afgv/book/calibrate01-eps-converted-to.pdf{/var/lib/texmf/fon
 ts/map/pdftex/updmap/pdftex.map}>]
 Package epstopdf Info: Source file: <calibrate02.eps>
-(epstopdf)                    date: 2021-04-09 18:35:52
-(epstopdf)                    size: 11305 bytes
+(epstopdf)                    date: 2021-09-05 15:05:21
+(epstopdf)                    size: 12210 bytes
 (epstopdf)             Output file: <calibrate02-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-11 20:23:13
-(epstopdf)                    size: 8130 bytes
+(epstopdf)                    date: 2021-09-05 15:29:19
+(epstopdf)                    size: 8767 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate02-eps-converted-
 to.pdf calibrate02.eps>
 (epstopdf)             \includegraphics on input line 195.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate02-eps-converted-to.pdf, id=20, 292.09125pt x 224.84pt>
+<calibrate02-eps-converted-to.pdf, id=20, 300.12125pt x 224.84pt>
 File: calibrate02-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate02-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate02-eps-converted-to.pdf  used on input line 1
 95.
-(pdftex.def)             Requested size: 292.09052pt x 224.83945pt.
+(pdftex.def)             Requested size: 300.12051pt x 224.83945pt.
 
-:tex2html_wrap_indisplay1679:lthtmlCropMarkHeight:=230.83945pt
+:tex2html_wrap_indisplay1611:lthtmlCropMarkHeight:=230.83945pt
 
-:tex2html_wrap_indisplay1679:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_indisplay1611:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 [2 </home/fred-olav/afgv/book/calibrate02-eps-converted-to.pdf>]
 
-:tex2html_wrap_indisplay1681:lthtmlCropMarkHeight:=14.33331pt
+:tex2html_wrap_indisplay1613:lthtmlCropMarkHeight:=14.33331pt
 
-:tex2html_wrap_indisplay1681:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
+:tex2html_wrap_indisplay1613:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
 [3]
 
-:tex2html_wrap_inline1683:lthtmlCropMarkHeight:=11.16667pt
+:tex2html_wrap_inline1615:lthtmlCropMarkHeight:=11.16667pt
 
-:tex2html_wrap_inline1683:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
+:tex2html_wrap_inline1615:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
 [4]
 
-:tex2html_wrap_inline1685:lthtmlCropMarkHeight:=11.16667pt
+:tex2html_wrap_inline1617:lthtmlCropMarkHeight:=11.16667pt
 
-:tex2html_wrap_inline1685:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1617:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 [5]
 
-:tex2html_wrap_inline1687:lthtmlCropMarkHeight:=11.16667pt
+:tex2html_wrap_inline1619:lthtmlCropMarkHeight:=11.16667pt
 
-:tex2html_wrap_inline1687:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1619:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 [6]
 
-:tex2html_wrap_inline1689:lthtmlCropMarkHeight:=14.33331pt
+:tex2html_wrap_inline1621:lthtmlCropMarkHeight:=14.33331pt
 
-:tex2html_wrap_inline1689:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1621:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 [7]
 
-:tex2html_wrap_indisplay1697:lthtmlCropMarkHeight:=13.73332pt
+:tex2html_wrap_indisplay1627:lthtmlCropMarkHeight:=13.73332pt
 
-:tex2html_wrap_indisplay1697:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
+:tex2html_wrap_indisplay1627:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
 [8]
-
-:tex2html_wrap_inline1711:lthtmlCropMarkHeight:=11.16667pt
-
-:tex2html_wrap_inline1711:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[9]
 Package epstopdf Info: Source file: <calibrate06.eps>
-(epstopdf)                    date: 2021-04-09 18:35:52
-(epstopdf)                    size: 11742 bytes
+(epstopdf)                    date: 2021-09-05 16:20:17
+(epstopdf)                    size: 12658 bytes
 (epstopdf)             Output file: <calibrate06-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-11 20:23:14
-(epstopdf)                    size: 10697 bytes
+(epstopdf)                    date: 2021-09-05 16:31:08
+(epstopdf)                    size: 11947 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate06-eps-converted-
 to.pdf calibrate06.eps>
-(epstopdf)             \includegraphics on input line 245.
+(epstopdf)             \includegraphics on input line 239.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate06-eps-converted-to.pdf, id=67, 264.99pt x 224.84pt>
+<calibrate06-eps-converted-to.pdf, id=64, 272.01625pt x 224.84pt>
 File: calibrate06-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate06-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate06-eps-converted-to.pdf  used on input line 2
-45.
-(pdftex.def)             Requested size: 264.98935pt x 224.83945pt.
+39.
+(pdftex.def)             Requested size: 272.01558pt x 224.83945pt.
 
-:tex2html_wrap_indisplay1733:lthtmlCropMarkHeight:=230.83945pt
+:tex2html_wrap_indisplay1649:lthtmlCropMarkHeight:=230.83945pt
 
-:tex2html_wrap_indisplay1733:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[10 </home/fred-olav/afgv/book/calibrate06-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1649:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[9 </home/fred-olav/afgv/book/calibrate06-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate07.eps>
-(epstopdf)                    date: 2021-04-09 18:35:52
-(epstopdf)                    size: 11420 bytes
+(epstopdf)                    date: 2021-09-05 16:30:58
+(epstopdf)                    size: 12319 bytes
 (epstopdf)             Output file: <calibrate07-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-11 20:23:14
-(epstopdf)                    size: 10793 bytes
+(epstopdf)                    date: 2021-09-05 16:31:08
+(epstopdf)                    size: 11674 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate07-eps-converted-
 to.pdf calibrate07.eps>
-(epstopdf)             \includegraphics on input line 251.
+(epstopdf)             \includegraphics on input line 245.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate07-eps-converted-to.pdf, id=86, 264.99pt x 224.84pt>
+<calibrate07-eps-converted-to.pdf, id=84, 264.99pt x 224.84pt>
 File: calibrate07-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate07-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate07-eps-converted-to.pdf  used on input line 2
-51.
+45.
 (pdftex.def)             Requested size: 264.98935pt x 224.83945pt.
 
-:tex2html_wrap_indisplay1739:lthtmlCropMarkHeight:=230.83945pt
+:tex2html_wrap_indisplay1655:lthtmlCropMarkHeight:=230.83945pt
 
-:tex2html_wrap_indisplay1739:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[11 </home/fred-olav/afgv/book/calibrate07-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1655:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[10 </home/fred-olav/afgv/book/calibrate07-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate08.eps>
-(epstopdf)                    date: 2021-04-09 18:35:52
-(epstopdf)                    size: 11459 bytes
+(epstopdf)                    date: 2021-09-05 17:22:11
+(epstopdf)                    size: 12352 bytes
 (epstopdf)             Output file: <calibrate08-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-11 20:23:14
-(epstopdf)                    size: 9853 bytes
+(epstopdf)                    date: 2021-09-05 18:19:33
+(epstopdf)                    size: 10173 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate08-eps-converted-
 to.pdf calibrate08.eps>
-(epstopdf)             \includegraphics on input line 257.
+(epstopdf)             \includegraphics on input line 251.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate08-eps-converted-to.pdf, id=105, 264.99pt x 224.84pt>
+<calibrate08-eps-converted-to.pdf, id=104, 264.99pt x 224.84pt>
 File: calibrate08-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate08-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate08-eps-converted-to.pdf  used on input line 2
-57.
+51.
 (pdftex.def)             Requested size: 264.98935pt x 224.83945pt.
 
-:tex2html_wrap_indisplay1747:lthtmlCropMarkHeight:=230.83945pt
+:tex2html_wrap_indisplay1659:lthtmlCropMarkHeight:=230.83945pt
 
-:tex2html_wrap_indisplay1747:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[12 </home/fred-olav/afgv/book/calibrate08-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1659:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[11 </home/fred-olav/afgv/book/calibrate08-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate09.eps>
-(epstopdf)                    date: 2021-04-09 18:35:52
-(epstopdf)                    size: 11643 bytes
+(epstopdf)                    date: 2021-09-05 17:50:10
+(epstopdf)                    size: 12809 bytes
 (epstopdf)             Output file: <calibrate09-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-04-11 20:23:14
-(epstopdf)                    size: 10301 bytes
+(epstopdf)                    date: 2021-09-05 18:19:33
+(epstopdf)                    size: 10971 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate09-eps-converted-
 to.pdf calibrate09.eps>
-(epstopdf)             \includegraphics on input line 263.
+(epstopdf)             \includegraphics on input line 257.
 Package epstopdf Info: Output file is already uptodate.
 <calibrate09-eps-converted-to.pdf, id=121, 264.99pt x 224.84pt>
 File: calibrate09-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate09-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate09-eps-converted-to.pdf  used on input line 2
-63.
+57.
 (pdftex.def)             Requested size: 264.98935pt x 224.83945pt.
 
-:tex2html_wrap_indisplay1749:lthtmlCropMarkHeight:=230.83945pt
+:tex2html_wrap_indisplay1661:lthtmlCropMarkHeight:=230.83945pt
 
-:tex2html_wrap_indisplay1749:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[13 </home/fred-olav/afgv/book/calibrate09-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1661:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[12 </home/fred-olav/afgv/book/calibrate09-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <pressure72.eps>
 (epstopdf)                    date: 2021-04-09 18:35:53
 (epstopdf)                    size: 12484 bytes
@@ -575,39 +570,39 @@ Package epstopdf Info: Source file: <pressure72.eps>
 (epstopdf)                    size: 11423 bytes
 (epstopdf)             Command: <repstopdf --outfile=pressure72-eps-converted-t
 o.pdf pressure72.eps>
-(epstopdf)             \includegraphics on input line 269.
+(epstopdf)             \includegraphics on input line 263.
 Package epstopdf Info: Output file is already uptodate.
 <pressure72-eps-converted-to.pdf, id=138, 297.11pt x 217.81375pt>
 File: pressure72-eps-converted-to.pdf Graphic file (type pdf)
 <use pressure72-eps-converted-to.pdf>
 Package pdftex.def Info: pressure72-eps-converted-to.pdf  used on input line 26
-9.
+3.
 (pdftex.def)             Requested size: 297.10927pt x 217.8132pt.
 
-:tex2html_wrap_indisplay1751:lthtmlCropMarkHeight:=223.8132pt
+:tex2html_wrap_indisplay1663:lthtmlCropMarkHeight:=223.8132pt
 
-:tex2html_wrap_indisplay1751:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[14 </home/fred-olav/afgv/book/pressure72-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1663:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[13 </home/fred-olav/afgv/book/pressure72-eps-converted-to.pdf>]
 
-:tex2html_wrap_indisplay1754:lthtmlCropMarkHeight:=110.29985pt
+:tex2html_wrap_indisplay1666:lthtmlCropMarkHeight:=110.29985pt
 
-:tex2html_wrap_indisplay1754:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_indisplay1666:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[14]
+
+:tex2html_wrap_inline1668:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline1668:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
 [15]
 
-:tex2html_wrap_inline1756:lthtmlCropMarkHeight:=13.73332pt
+:tex2html_wrap_inline1670:lthtmlCropMarkHeight:=13.73332pt
 
-:tex2html_wrap_inline1756:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1670:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
 [16]
 
-:tex2html_wrap_inline1758:lthtmlCropMarkHeight:=13.73332pt
+:tex2html_wrap_inline1672:lthtmlCropMarkHeight:=13.73332pt
 
-:tex2html_wrap_inline1758:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1672:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
 [17]
-
-:tex2html_wrap_inline1760:lthtmlCropMarkHeight:=13.73332pt
-
-:tex2html_wrap_inline1760:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
-[18]
 Package epstopdf Info: Source file: <calibrate28.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 1163033 bytes
@@ -616,44 +611,39 @@ Package epstopdf Info: Source file: <calibrate28.eps>
 (epstopdf)                    size: 101806 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate28-eps-converted-
 to.pdf calibrate28.eps>
-(epstopdf)             \includegraphics on input line 322.
+(epstopdf)             \includegraphics on input line 316.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate28-eps-converted-to.pdf, id=174, 675.52374pt x 489.83pt>
+<calibrate28-eps-converted-to.pdf, id=175, 675.52374pt x 489.83pt>
 File: calibrate28-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate28-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate28-eps-converted-to.pdf  used on input line 3
-22.
+16.
 (pdftex.def)             Requested size: 216.81pt x 157.21219pt.
 
-:tex2html_wrap_indisplay1762:lthtmlCropMarkHeight:=163.21219pt
+:tex2html_wrap_indisplay1674:lthtmlCropMarkHeight:=163.21219pt
 
-:tex2html_wrap_indisplay1762:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[19 </home/fred-olav/afgv/book/calibrate28-eps-converted-to.pdf>]
-
-:tex2html_wrap_inline1768:lthtmlCropMarkHeight:=13.0pt
-
-:tex2html_wrap_inline1768:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
-[20]
+:tex2html_wrap_indisplay1674:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[18 </home/fred-olav/afgv/book/calibrate28-eps-converted-to.pdf>]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 334.
+(amsmath)                 on input line 322.
 
 
-:tex2html_wrap_indisplay1770:lthtmlCropMarkHeight:=22.4514pt
+:tex2html_wrap_indisplay1676:lthtmlCropMarkHeight:=22.4514pt
 
-:tex2html_wrap_indisplay1770:lthtmlCropMarkDepth:=10.56473pt:1ex:=5.16667pt
+:tex2html_wrap_indisplay1676:lthtmlCropMarkDepth:=10.56473pt:1ex:=5.16667pt
+[19]
+
+:tex2html_wrap_indisplay1679:lthtmlCropMarkHeight:=169.89977pt
+
+:tex2html_wrap_indisplay1679:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[20]
+
+:tex2html_wrap_indisplay1681:lthtmlCropMarkHeight:=23.40013pt
+
+:tex2html_wrap_indisplay1681:lthtmlCropMarkDepth:=11.40015pt:1ex:=5.16667pt
 [21]
-
-:tex2html_wrap_indisplay1773:lthtmlCropMarkHeight:=169.89977pt
-
-:tex2html_wrap_indisplay1773:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[22]
-
-:tex2html_wrap_indisplay1775:lthtmlCropMarkHeight:=23.40013pt
-
-:tex2html_wrap_indisplay1775:lthtmlCropMarkDepth:=11.40015pt:1ex:=5.16667pt
-[23]
 Package epstopdf Info: Source file: <calibrate15.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 13276 bytes
@@ -662,19 +652,19 @@ Package epstopdf Info: Source file: <calibrate15.eps>
 (epstopdf)                    size: 8465 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate15-eps-converted-
 to.pdf calibrate15.eps>
-(epstopdf)             \includegraphics on input line 384.
+(epstopdf)             \includegraphics on input line 372.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate15-eps-converted-to.pdf, id=200, 406.51875pt x 298.11375pt>
+<calibrate15-eps-converted-to.pdf, id=197, 406.51875pt x 298.11375pt>
 File: calibrate15-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate15-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate15-eps-converted-to.pdf  used on input line 3
-84.
+72.
 (pdftex.def)             Requested size: 406.51775pt x 298.11302pt.
 
-:tex2html_wrap_indisplay1778:lthtmlCropMarkHeight:=304.11302pt
+:tex2html_wrap_indisplay1684:lthtmlCropMarkHeight:=304.11302pt
 
-:tex2html_wrap_indisplay1778:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[24 </home/fred-olav/afgv/book/calibrate15-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1684:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[22 </home/fred-olav/afgv/book/calibrate15-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate29.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 77665 bytes
@@ -683,19 +673,19 @@ Package epstopdf Info: Source file: <calibrate29.eps>
 (epstopdf)                    size: 63116 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate29-eps-converted-
 to.pdf calibrate29.eps>
-(epstopdf)             \includegraphics on input line 390.
+(epstopdf)             \includegraphics on input line 378.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate29-eps-converted-to.pdf, id=212, 463.7325pt x 805.0075pt>
+<calibrate29-eps-converted-to.pdf, id=209, 463.7325pt x 805.0075pt>
 File: calibrate29-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate29-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate29-eps-converted-to.pdf  used on input line 3
-90.
+78.
 (pdftex.def)             Requested size: 166.52608pt x 289.07999pt.
 
-:tex2html_wrap_indisplay1780:lthtmlCropMarkHeight:=295.07999pt
+:tex2html_wrap_indisplay1686:lthtmlCropMarkHeight:=295.07999pt
 
-:tex2html_wrap_indisplay1780:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[25 </home/fred-olav/afgv/book/calibrate29-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1686:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[23 </home/fred-olav/afgv/book/calibrate29-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate30.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 2327671 bytes
@@ -704,19 +694,19 @@ Package epstopdf Info: Source file: <calibrate30.eps>
 (epstopdf)                    size: 261007 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate30-eps-converted-
 to.pdf calibrate30.eps>
-(epstopdf)             \includegraphics on input line 396.
+(epstopdf)             \includegraphics on input line 384.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate30-eps-converted-to.pdf, id=220, 434.62375pt x 326.21875pt>
+<calibrate30-eps-converted-to.pdf, id=216, 434.62375pt x 326.21875pt>
 File: calibrate30-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate30-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate30-eps-converted-to.pdf  used on input line 3
-96.
+84.
 (pdftex.def)             Requested size: 434.62268pt x 326.21794pt.
 
-:tex2html_wrap_indisplay1782:lthtmlCropMarkHeight:=332.21794pt
+:tex2html_wrap_indisplay1688:lthtmlCropMarkHeight:=332.21794pt
 
-:tex2html_wrap_indisplay1782:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[26 </home/fred-olav/afgv/book/calibrate30-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1688:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[24 </home/fred-olav/afgv/book/calibrate30-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate16.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 10973 bytes
@@ -725,19 +715,19 @@ Package epstopdf Info: Source file: <calibrate16.eps>
 (epstopdf)                    size: 6369 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate16-eps-converted-
 to.pdf calibrate16.eps>
-(epstopdf)             \includegraphics on input line 403.
+(epstopdf)             \includegraphics on input line 391.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate16-eps-converted-to.pdf, id=227, 335.2525pt x 215.80624pt>
+<calibrate16-eps-converted-to.pdf, id=223, 335.2525pt x 215.80624pt>
 File: calibrate16-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate16-eps-converted-to.pdf>
-Package pdftex.def Info: calibrate16-eps-converted-to.pdf  used on input line 4
-03.
+Package pdftex.def Info: calibrate16-eps-converted-to.pdf  used on input line 3
+91.
 (pdftex.def)             Requested size: 335.25168pt x 215.80571pt.
 
-:tex2html_wrap_indisplay1785:lthtmlCropMarkHeight:=221.80571pt
+:tex2html_wrap_indisplay1691:lthtmlCropMarkHeight:=221.80571pt
 
-:tex2html_wrap_indisplay1785:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[27 </home/fred-olav/afgv/book/calibrate16-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1691:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[25 </home/fred-olav/afgv/book/calibrate16-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate17.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 9602 bytes
@@ -746,29 +736,29 @@ Package epstopdf Info: Source file: <calibrate17.eps>
 (epstopdf)                    size: 4621 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate17-eps-converted-
 to.pdf calibrate17.eps>
-(epstopdf)             \includegraphics on input line 409.
+(epstopdf)             \includegraphics on input line 397.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate17-eps-converted-to.pdf, id=237, 165.61874pt x 96.36pt>
+<calibrate17-eps-converted-to.pdf, id=234, 165.61874pt x 96.36pt>
 File: calibrate17-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate17-eps-converted-to.pdf>
-Package pdftex.def Info: calibrate17-eps-converted-to.pdf  used on input line 4
-09.
+Package pdftex.def Info: calibrate17-eps-converted-to.pdf  used on input line 3
+97.
 (pdftex.def)             Requested size: 165.61833pt x 96.35974pt.
 
-:tex2html_wrap_indisplay1787:lthtmlCropMarkHeight:=102.35974pt
+:tex2html_wrap_indisplay1693:lthtmlCropMarkHeight:=102.35974pt
 
-:tex2html_wrap_indisplay1787:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[28 </home/fred-olav/afgv/book/calibrate17-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1693:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[26 </home/fred-olav/afgv/book/calibrate17-eps-converted-to.pdf>]
 
-:tex2html_wrap_inline1789:lthtmlCropMarkHeight:=15.88034pt
+:tex2html_wrap_inline1695:lthtmlCropMarkHeight:=15.88034pt
 
-:tex2html_wrap_inline1789:lthtmlCropMarkDepth:=4.13809pt:1ex:=5.16667pt
-[29]
+:tex2html_wrap_inline1695:lthtmlCropMarkDepth:=4.13809pt:1ex:=5.16667pt
+[27]
 
-:tex2html_wrap_inline1791:lthtmlCropMarkHeight:=13.73332pt
+:tex2html_wrap_inline1697:lthtmlCropMarkHeight:=13.73332pt
 
-:tex2html_wrap_inline1791:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
-[30]
+:tex2html_wrap_inline1697:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[28]
 Package epstopdf Info: Source file: <calibrate18.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 11349 bytes
@@ -777,29 +767,29 @@ Package epstopdf Info: Source file: <calibrate18.eps>
 (epstopdf)                    size: 6631 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate18-eps-converted-
 to.pdf calibrate18.eps>
-(epstopdf)             \includegraphics on input line 427.
+(epstopdf)             \includegraphics on input line 415.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate18-eps-converted-to.pdf, id=255, 335.2525pt x 215.80624pt>
+<calibrate18-eps-converted-to.pdf, id=252, 335.2525pt x 215.80624pt>
 File: calibrate18-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate18-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate18-eps-converted-to.pdf  used on input line 4
-27.
+15.
 (pdftex.def)             Requested size: 335.25168pt x 215.80571pt.
 
-:tex2html_wrap_indisplay1793:lthtmlCropMarkHeight:=221.80571pt
+:tex2html_wrap_indisplay1699:lthtmlCropMarkHeight:=221.80571pt
 
-:tex2html_wrap_indisplay1793:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[31 </home/fred-olav/afgv/book/calibrate18-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1699:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[29 </home/fred-olav/afgv/book/calibrate18-eps-converted-to.pdf>]
 
-:tex2html_wrap_inline1795:lthtmlCropMarkHeight:=14.2pt
+:tex2html_wrap_inline1701:lthtmlCropMarkHeight:=14.2pt
 
-:tex2html_wrap_inline1795:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[32]
+:tex2html_wrap_inline1701:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[30]
 
-:tex2html_wrap_inline1797:lthtmlCropMarkHeight:=14.2pt
+:tex2html_wrap_inline1703:lthtmlCropMarkHeight:=14.2pt
 
-:tex2html_wrap_inline1797:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[33]
+:tex2html_wrap_inline1703:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[31]
 Package epstopdf Info: Source file: <calibrate34.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 2259749 bytes
@@ -808,19 +798,19 @@ Package epstopdf Info: Source file: <calibrate34.eps>
 (epstopdf)                    size: 238015 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate34-eps-converted-
 to.pdf calibrate34.eps>
-(epstopdf)             \includegraphics on input line 445.
+(epstopdf)             \includegraphics on input line 433.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate34-eps-converted-to.pdf, id=273, 1028.84375pt x 609.27625pt>
+<calibrate34-eps-converted-to.pdf, id=270, 1028.84375pt x 609.27625pt>
 File: calibrate34-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate34-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate34-eps-converted-to.pdf  used on input line 4
-45.
+33.
 (pdftex.def)             Requested size: 216.81pt x 128.38873pt.
 
-:tex2html_wrap_indisplay1801:lthtmlCropMarkHeight:=134.38873pt
+:tex2html_wrap_indisplay1707:lthtmlCropMarkHeight:=134.38873pt
 
-:tex2html_wrap_indisplay1801:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[34 </home/fred-olav/afgv/book/calibrate34-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1707:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[32 </home/fred-olav/afgv/book/calibrate34-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate19.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 14398 bytes
@@ -829,19 +819,19 @@ Package epstopdf Info: Source file: <calibrate19.eps>
 (epstopdf)                    size: 7501 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate19-eps-converted-
 to.pdf calibrate19.eps>
-(epstopdf)             \includegraphics on input line 451.
+(epstopdf)             \includegraphics on input line 439.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate19-eps-converted-to.pdf, id=280, 335.2525pt x 215.80624pt>
+<calibrate19-eps-converted-to.pdf, id=277, 335.2525pt x 215.80624pt>
 File: calibrate19-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate19-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate19-eps-converted-to.pdf  used on input line 4
-51.
+39.
 (pdftex.def)             Requested size: 335.25168pt x 215.80571pt.
 
-:tex2html_wrap_indisplay1805:lthtmlCropMarkHeight:=221.80571pt
+:tex2html_wrap_indisplay1711:lthtmlCropMarkHeight:=221.80571pt
 
-:tex2html_wrap_indisplay1805:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[35 </home/fred-olav/afgv/book/calibrate19-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1711:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[33 </home/fred-olav/afgv/book/calibrate19-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate03.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 12847 bytes
@@ -850,19 +840,19 @@ Package epstopdf Info: Source file: <calibrate03.eps>
 (epstopdf)                    size: 14337 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate03-eps-converted-
 to.pdf calibrate03.eps>
-(epstopdf)             \includegraphics on input line 458.
+(epstopdf)             \includegraphics on input line 446.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate03-eps-converted-to.pdf, id=289, 407.5225pt x 302.12875pt>
+<calibrate03-eps-converted-to.pdf, id=286, 407.5225pt x 302.12875pt>
 File: calibrate03-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate03-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate03-eps-converted-to.pdf  used on input line 4
-58.
+46.
 (pdftex.def)             Requested size: 407.5215pt x 302.128pt.
 
-:tex2html_wrap_indisplay1810:lthtmlCropMarkHeight:=308.128pt
+:tex2html_wrap_indisplay1716:lthtmlCropMarkHeight:=308.128pt
 
-:tex2html_wrap_indisplay1810:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[36 </home/fred-olav/afgv/book/calibrate03-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1716:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[34 </home/fred-olav/afgv/book/calibrate03-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate04.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 14440 bytes
@@ -871,19 +861,19 @@ Package epstopdf Info: Source file: <calibrate04.eps>
 (epstopdf)                    size: 12250 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate04-eps-converted-
 to.pdf calibrate04.eps>
-(epstopdf)             \includegraphics on input line 464.
+(epstopdf)             \includegraphics on input line 452.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate04-eps-converted-to.pdf, id=309, 407.5225pt x 302.12875pt>
+<calibrate04-eps-converted-to.pdf, id=306, 407.5225pt x 302.12875pt>
 File: calibrate04-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate04-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate04-eps-converted-to.pdf  used on input line 4
-64.
+52.
 (pdftex.def)             Requested size: 407.5215pt x 302.128pt.
 
-:tex2html_wrap_indisplay1812:lthtmlCropMarkHeight:=308.128pt
+:tex2html_wrap_indisplay1718:lthtmlCropMarkHeight:=308.128pt
 
-:tex2html_wrap_indisplay1812:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[37 </home/fred-olav/afgv/book/calibrate04-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1718:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[35 </home/fred-olav/afgv/book/calibrate04-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate05.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 13522 bytes
@@ -892,19 +882,19 @@ Package epstopdf Info: Source file: <calibrate05.eps>
 (epstopdf)                    size: 15517 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate05-eps-converted-
 to.pdf calibrate05.eps>
-(epstopdf)             \includegraphics on input line 470.
+(epstopdf)             \includegraphics on input line 458.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate05-eps-converted-to.pdf, id=327, 400.49625pt x 302.12875pt>
+<calibrate05-eps-converted-to.pdf, id=323, 400.49625pt x 302.12875pt>
 File: calibrate05-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate05-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate05-eps-converted-to.pdf  used on input line 4
-70.
+58.
 (pdftex.def)             Requested size: 400.49527pt x 302.128pt.
 
-:tex2html_wrap_indisplay1818:lthtmlCropMarkHeight:=308.128pt
+:tex2html_wrap_indisplay1724:lthtmlCropMarkHeight:=308.128pt
 
-:tex2html_wrap_indisplay1818:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[38 </home/fred-olav/afgv/book/calibrate05-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1724:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[36 </home/fred-olav/afgv/book/calibrate05-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate26.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 19562 bytes
@@ -913,19 +903,19 @@ Package epstopdf Info: Source file: <calibrate26.eps>
 (epstopdf)                    size: 17031 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate26-eps-converted-
 to.pdf calibrate26.eps>
-(epstopdf)             \includegraphics on input line 476.
+(epstopdf)             \includegraphics on input line 464.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate26-eps-converted-to.pdf, id=348, 262.9825pt x 257.96375pt>
+<calibrate26-eps-converted-to.pdf, id=344, 262.9825pt x 257.96375pt>
 File: calibrate26-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate26-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate26-eps-converted-to.pdf  used on input line 4
-76.
+64.
 (pdftex.def)             Requested size: 262.98184pt x 257.9631pt.
 
-:tex2html_wrap_indisplay1822:lthtmlCropMarkHeight:=263.9631pt
+:tex2html_wrap_indisplay1728:lthtmlCropMarkHeight:=263.9631pt
 
-:tex2html_wrap_indisplay1822:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[39 </home/fred-olav/afgv/book/calibrate26-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1728:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[37 </home/fred-olav/afgv/book/calibrate26-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate27.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 19564 bytes
@@ -934,19 +924,19 @@ Package epstopdf Info: Source file: <calibrate27.eps>
 (epstopdf)                    size: 16759 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate27-eps-converted-
 to.pdf calibrate27.eps>
-(epstopdf)             \includegraphics on input line 482.
+(epstopdf)             \includegraphics on input line 470.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate27-eps-converted-to.pdf, id=369, 262.9825pt x 257.96375pt>
+<calibrate27-eps-converted-to.pdf, id=366, 262.9825pt x 257.96375pt>
 File: calibrate27-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate27-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate27-eps-converted-to.pdf  used on input line 4
-82.
+70.
 (pdftex.def)             Requested size: 262.98184pt x 257.9631pt.
 
-:tex2html_wrap_indisplay1824:lthtmlCropMarkHeight:=263.9631pt
+:tex2html_wrap_indisplay1730:lthtmlCropMarkHeight:=263.9631pt
 
-:tex2html_wrap_indisplay1824:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[40 </home/fred-olav/afgv/book/calibrate27-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1730:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[38 </home/fred-olav/afgv/book/calibrate27-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate31.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 17957 bytes
@@ -955,19 +945,19 @@ Package epstopdf Info: Source file: <calibrate31.eps>
 (epstopdf)                    size: 15953 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate31-eps-converted-
 to.pdf calibrate31.eps>
-(epstopdf)             \includegraphics on input line 490.
+(epstopdf)             \includegraphics on input line 478.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate31-eps-converted-to.pdf, id=390, 441.65pt x 237.88875pt>
+<calibrate31-eps-converted-to.pdf, id=387, 441.65pt x 237.88875pt>
 File: calibrate31-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate31-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate31-eps-converted-to.pdf  used on input line 4
-90.
+78.
 (pdftex.def)             Requested size: 441.64891pt x 237.88815pt.
 
-:tex2html_wrap_indisplay1834:lthtmlCropMarkHeight:=243.88815pt
+:tex2html_wrap_indisplay1740:lthtmlCropMarkHeight:=243.88815pt
 
-:tex2html_wrap_indisplay1834:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[41 </home/fred-olav/afgv/book/calibrate31-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1740:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[39 </home/fred-olav/afgv/book/calibrate31-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate32.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 20535 bytes
@@ -976,29 +966,34 @@ Package epstopdf Info: Source file: <calibrate32.eps>
 (epstopdf)                    size: 18012 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate32-eps-converted-
 to.pdf calibrate32.eps>
-(epstopdf)             \includegraphics on input line 496.
+(epstopdf)             \includegraphics on input line 484.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate32-eps-converted-to.pdf, id=409, 441.65pt x 333.245pt>
+<calibrate32-eps-converted-to.pdf, id=406, 441.65pt x 333.245pt>
 File: calibrate32-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate32-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate32-eps-converted-to.pdf  used on input line 4
-96.
+84.
 (pdftex.def)             Requested size: 441.64891pt x 333.24417pt.
 
-:tex2html_wrap_indisplay1836:lthtmlCropMarkHeight:=339.24417pt
+:tex2html_wrap_indisplay1742:lthtmlCropMarkHeight:=339.24417pt
 
-:tex2html_wrap_indisplay1836:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[42 </home/fred-olav/afgv/book/calibrate32-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1742:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[40 </home/fred-olav/afgv/book/calibrate32-eps-converted-to.pdf>]
 
-:tex2html_wrap_inline1848:lthtmlCropMarkHeight:=13.0pt
+:tex2html_wrap_inline1748:lthtmlCropMarkHeight:=13.0pt
 
-:tex2html_wrap_inline1848:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1748:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[41]
+
+:tex2html_wrap_inline1754:lthtmlCropMarkHeight:=13.0pt
+
+:tex2html_wrap_inline1754:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[42]
+
+:tex2html_wrap_inline1761:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline1761:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 [43]
-
-:tex2html_wrap_inline1855:lthtmlCropMarkHeight:=15.51027pt
-
-:tex2html_wrap_inline1855:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[44]
 Package epstopdf Info: Source file: <calibrate25.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 227312 bytes
@@ -1007,19 +1002,19 @@ Package epstopdf Info: Source file: <calibrate25.eps>
 (epstopdf)                    size: 180981 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate25-eps-converted-
 to.pdf calibrate25.eps>
-(epstopdf)             \includegraphics on input line 519.
+(epstopdf)             \includegraphics on input line 513.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate25-eps-converted-to.pdf, id=439, 557.08125pt x 418.56375pt>
+<calibrate25-eps-converted-to.pdf, id=440, 557.08125pt x 418.56375pt>
 File: calibrate25-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate25-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate25-eps-converted-to.pdf  used on input line 5
-19.
+13.
 (pdftex.def)             Requested size: 361.34999pt x 271.50755pt.
 
-:tex2html_wrap_indisplay1857:lthtmlCropMarkHeight:=277.50755pt
+:tex2html_wrap_indisplay1763:lthtmlCropMarkHeight:=277.50755pt
 
-:tex2html_wrap_indisplay1857:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[45 </home/fred-olav/afgv/book/calibrate25-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1763:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[44 </home/fred-olav/afgv/book/calibrate25-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate21.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 211272 bytes
@@ -1028,19 +1023,19 @@ Package epstopdf Info: Source file: <calibrate21.eps>
 (epstopdf)                    size: 168355 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate21-eps-converted-
 to.pdf calibrate21.eps>
-(epstopdf)             \includegraphics on input line 527.
+(epstopdf)             \includegraphics on input line 521.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate21-eps-converted-to.pdf, id=446, 557.08125pt x 500.87125pt>
+<calibrate21-eps-converted-to.pdf, id=447, 557.08125pt x 500.87125pt>
 File: calibrate21-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate21-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate21-eps-converted-to.pdf  used on input line 5
-27.
+21.
 (pdftex.def)             Requested size: 361.34999pt x 324.89754pt.
 
-:tex2html_wrap_indisplay1873:lthtmlCropMarkHeight:=330.89754pt
+:tex2html_wrap_indisplay1779:lthtmlCropMarkHeight:=330.89754pt
 
-:tex2html_wrap_indisplay1873:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[46 </home/fred-olav/afgv/book/calibrate21-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1779:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[45 </home/fred-olav/afgv/book/calibrate21-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate10.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 16378 bytes
@@ -1049,19 +1044,19 @@ Package epstopdf Info: Source file: <calibrate10.eps>
 (epstopdf)                    size: 12952 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate10-eps-converted-
 to.pdf calibrate10.eps>
-(epstopdf)             \includegraphics on input line 533.
+(epstopdf)             \includegraphics on input line 527.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate10-eps-converted-to.pdf, id=453, 423.5825pt x 262.9825pt>
+<calibrate10-eps-converted-to.pdf, id=454, 423.5825pt x 262.9825pt>
 File: calibrate10-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate10-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate10-eps-converted-to.pdf  used on input line 5
-33.
+27.
 (pdftex.def)             Requested size: 423.58147pt x 262.98184pt.
 
-:tex2html_wrap_indisplay1875:lthtmlCropMarkHeight:=268.98184pt
+:tex2html_wrap_indisplay1781:lthtmlCropMarkHeight:=268.98184pt
 
-:tex2html_wrap_indisplay1875:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[47 </home/fred-olav/afgv/book/calibrate10-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1781:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[46 </home/fred-olav/afgv/book/calibrate10-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate22.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 209579 bytes
@@ -1070,13 +1065,13 @@ Package epstopdf Info: Source file: <calibrate22.eps>
 (epstopdf)                    size: 167021 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate22-eps-converted-
 to.pdf calibrate22.eps>
-(epstopdf)             \includegraphics on input line 540.
+(epstopdf)             \includegraphics on input line 534.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate22-eps-converted-to.pdf, id=472, 557.08125pt x 349.305pt>
+<calibrate22-eps-converted-to.pdf, id=473, 557.08125pt x 349.305pt>
 File: calibrate22-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate22-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate22-eps-converted-to.pdf  used on input line 5
-40.
+34.
 (pdftex.def)             Requested size: 201.70514pt x 126.47249pt.
 Package epstopdf Info: Source file: <calibrate23.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
@@ -1086,19 +1081,19 @@ Package epstopdf Info: Source file: <calibrate23.eps>
 (epstopdf)                    size: 136861 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate23-eps-converted-
 to.pdf calibrate23.eps>
-(epstopdf)             \includegraphics on input line 540.
+(epstopdf)             \includegraphics on input line 534.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate23-eps-converted-to.pdf, id=473, 557.08125pt x 339.2675pt>
+<calibrate23-eps-converted-to.pdf, id=474, 557.08125pt x 339.2675pt>
 File: calibrate23-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate23-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate23-eps-converted-to.pdf  used on input line 5
-40.
+34.
 (pdftex.def)             Requested size: 207.6639pt x 126.47249pt.
 
-:tex2html_wrap_indisplay1878:lthtmlCropMarkHeight:=132.47249pt
+:tex2html_wrap_indisplay1784:lthtmlCropMarkHeight:=132.47249pt
 
-:tex2html_wrap_indisplay1878:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[48 </home/fred-olav/afgv/book/calibrate22-eps-converted-to.pdf> </home/fred-ol
+:tex2html_wrap_indisplay1784:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[47 </home/fred-olav/afgv/book/calibrate22-eps-converted-to.pdf> </home/fred-ol
 av/afgv/book/calibrate23-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate20.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
@@ -1108,19 +1103,19 @@ Package epstopdf Info: Source file: <calibrate20.eps>
 (epstopdf)                    size: 76096 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate20-eps-converted-
 to.pdf calibrate20.eps>
-(epstopdf)             \includegraphics on input line 546.
+(epstopdf)             \includegraphics on input line 540.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate20-eps-converted-to.pdf, id=482, 557.08125pt x 222.8325pt>
+<calibrate20-eps-converted-to.pdf, id=483, 557.08125pt x 222.8325pt>
 File: calibrate20-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate20-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate20-eps-converted-to.pdf  used on input line 5
-46.
+40.
 (pdftex.def)             Requested size: 361.34999pt x 144.5436pt.
 
-:tex2html_wrap_indisplay1880:lthtmlCropMarkHeight:=150.5436pt
+:tex2html_wrap_indisplay1786:lthtmlCropMarkHeight:=150.5436pt
 
-:tex2html_wrap_indisplay1880:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[49 </home/fred-olav/afgv/book/calibrate20-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1786:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[48 </home/fred-olav/afgv/book/calibrate20-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate24.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 20039 bytes
@@ -1129,19 +1124,19 @@ Package epstopdf Info: Source file: <calibrate24.eps>
 (epstopdf)                    size: 16694 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate24-eps-converted-
 to.pdf calibrate24.eps>
-(epstopdf)             \includegraphics on input line 552.
+(epstopdf)             \includegraphics on input line 546.
 Package epstopdf Info: Output file is already uptodate.
 <calibrate24-eps-converted-to.pdf, id=491, 379.4175pt x 271.0125pt>
 File: calibrate24-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate24-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate24-eps-converted-to.pdf  used on input line 5
-52.
+46.
 (pdftex.def)             Requested size: 379.41656pt x 271.01183pt.
 
-:tex2html_wrap_indisplay1882:lthtmlCropMarkHeight:=277.01183pt
+:tex2html_wrap_indisplay1788:lthtmlCropMarkHeight:=277.01183pt
 
-:tex2html_wrap_indisplay1882:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[50 </home/fred-olav/afgv/book/calibrate24-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1788:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[49 </home/fred-olav/afgv/book/calibrate24-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate33.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 2386960 bytes
@@ -1150,39 +1145,39 @@ Package epstopdf Info: Source file: <calibrate33.eps>
 (epstopdf)                    size: 170760 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate33-eps-converted-
 to.pdf calibrate33.eps>
-(epstopdf)             \includegraphics on input line 558.
+(epstopdf)             \includegraphics on input line 552.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate33-eps-converted-to.pdf, id=511, 624.3325pt x 1028.84375pt>
+<calibrate33-eps-converted-to.pdf, id=512, 624.3325pt x 1028.84375pt>
 File: calibrate33-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate33-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate33-eps-converted-to.pdf  used on input line 5
-58.
+52.
 (pdftex.def)             Requested size: 175.4216pt x 289.07999pt.
 
-:tex2html_wrap_indisplay1888:lthtmlCropMarkHeight:=295.07999pt
+:tex2html_wrap_indisplay1794:lthtmlCropMarkHeight:=295.07999pt
 
-:tex2html_wrap_indisplay1888:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[51 </home/fred-olav/afgv/book/calibrate33-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1794:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[50 </home/fred-olav/afgv/book/calibrate33-eps-converted-to.pdf>]
 
-:tex2html_wrap_inline1892:lthtmlCropMarkHeight:=13.79915pt
+:tex2html_wrap_inline1798:lthtmlCropMarkHeight:=13.79915pt
 
-:tex2html_wrap_inline1892:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1798:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[51]
+
+:tex2html_wrap_inline1806:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline1806:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
 [52]
 
-:tex2html_wrap_inline1900:lthtmlCropMarkHeight:=13.73332pt
+:tex2html_wrap_inline1810:lthtmlCropMarkHeight:=13.73332pt
 
-:tex2html_wrap_inline1900:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1810:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
 [53]
 
-:tex2html_wrap_inline1904:lthtmlCropMarkHeight:=13.73332pt
+:tex2html_wrap_inline1814:lthtmlCropMarkHeight:=13.73332pt
 
-:tex2html_wrap_inline1904:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1814:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
 [54]
-
-:tex2html_wrap_inline1908:lthtmlCropMarkHeight:=13.73332pt
-
-:tex2html_wrap_inline1908:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
-[55]
 Package epstopdf Info: Source file: <oilbath.eps>
 (epstopdf)                    date: 2021-04-09 18:35:53
 (epstopdf)                    size: 234595 bytes
@@ -1191,18 +1186,18 @@ Package epstopdf Info: Source file: <oilbath.eps>
 (epstopdf)                    size: 186775 bytes
 (epstopdf)             Command: <repstopdf --outfile=oilbath-eps-converted-to.p
 df oilbath.eps>
-(epstopdf)             \includegraphics on input line 588.
+(epstopdf)             \includegraphics on input line 582.
 Package epstopdf Info: Output file is already uptodate.
 <oilbath-eps-converted-to.pdf, id=535, 536.0025pt x 805.0075pt>
 File: oilbath-eps-converted-to.pdf Graphic file (type pdf)
 <use oilbath-eps-converted-to.pdf>
-Package pdftex.def Info: oilbath-eps-converted-to.pdf  used on input line 588.
+Package pdftex.def Info: oilbath-eps-converted-to.pdf  used on input line 582.
 (pdftex.def)             Requested size: 216.81pt x 325.62091pt.
 
-:tex2html_wrap_indisplay1920:lthtmlCropMarkHeight:=331.62091pt
+:tex2html_wrap_indisplay1826:lthtmlCropMarkHeight:=331.62091pt
 
-:tex2html_wrap_indisplay1920:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[56 </home/fred-olav/afgv/book/oilbath-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1826:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[55 </home/fred-olav/afgv/book/oilbath-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <dryblock.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 85404 bytes
@@ -1211,19 +1206,19 @@ Package epstopdf Info: Source file: <dryblock.eps>
 (epstopdf)                    size: 69289 bytes
 (epstopdf)             Command: <repstopdf --outfile=dryblock-eps-converted-to.
 pdf dryblock.eps>
-(epstopdf)             \includegraphics on input line 594.
+(epstopdf)             \includegraphics on input line 588.
 Package epstopdf Info: Output file is already uptodate.
-<dryblock-eps-converted-to.pdf, id=542, 557.08125pt x 370.38374pt>
+<dryblock-eps-converted-to.pdf, id=543, 557.08125pt x 370.38374pt>
 File: dryblock-eps-converted-to.pdf Graphic file (type pdf)
 <use dryblock-eps-converted-to.pdf>
-Package pdftex.def Info: dryblock-eps-converted-to.pdf  used on input line 594.
+Package pdftex.def Info: dryblock-eps-converted-to.pdf  used on input line 588.
 
 (pdftex.def)             Requested size: 361.34999pt x 240.25488pt.
 
-:tex2html_wrap_indisplay1922:lthtmlCropMarkHeight:=246.25488pt
+:tex2html_wrap_indisplay1828:lthtmlCropMarkHeight:=246.25488pt
 
-:tex2html_wrap_indisplay1922:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[57 </home/fred-olav/afgv/book/dryblock-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1828:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[56 </home/fred-olav/afgv/book/dryblock-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate11.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 11706 bytes
@@ -1232,44 +1227,44 @@ Package epstopdf Info: Source file: <calibrate11.eps>
 (epstopdf)                    size: 9049 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate11-eps-converted-
 to.pdf calibrate11.eps>
-(epstopdf)             \includegraphics on input line 601.
+(epstopdf)             \includegraphics on input line 595.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate11-eps-converted-to.pdf, id=549, 240.9pt x 145.54375pt>
+<calibrate11-eps-converted-to.pdf, id=550, 240.9pt x 145.54375pt>
 File: calibrate11-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate11-eps-converted-to.pdf>
-Package pdftex.def Info: calibrate11-eps-converted-to.pdf  used on input line 6
-01.
+Package pdftex.def Info: calibrate11-eps-converted-to.pdf  used on input line 5
+95.
 (pdftex.def)             Requested size: 240.8994pt x 145.54338pt.
 
-:tex2html_wrap_indisplay1927:lthtmlCropMarkHeight:=151.54338pt
+:tex2html_wrap_indisplay1833:lthtmlCropMarkHeight:=151.54338pt
 
-:tex2html_wrap_indisplay1927:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[58 </home/fred-olav/afgv/book/calibrate11-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1833:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[57 </home/fred-olav/afgv/book/calibrate11-eps-converted-to.pdf>]
 
-:tex2html_wrap_indisplay1929:lthtmlCropMarkHeight:=22.31808pt
+:tex2html_wrap_indisplay1835:lthtmlCropMarkHeight:=22.31808pt
 
-:tex2html_wrap_indisplay1929:lthtmlCropMarkDepth:=8.23141pt:1ex:=5.16667pt
+:tex2html_wrap_indisplay1835:lthtmlCropMarkDepth:=8.23141pt:1ex:=5.16667pt
+[58]
+
+:tex2html_wrap_inline1837:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline1837:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 [59]
 
-:tex2html_wrap_inline1931:lthtmlCropMarkHeight:=14.2pt
+:tex2html_wrap_inline1839:lthtmlCropMarkHeight:=14.2pt
 
-:tex2html_wrap_inline1931:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1839:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 [60]
 
-:tex2html_wrap_inline1933:lthtmlCropMarkHeight:=14.2pt
+:tex2html_wrap_inline1841:lthtmlCropMarkHeight:=14.2pt
 
-:tex2html_wrap_inline1933:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1841:lthtmlCropMarkDepth:=3.35555pt:1ex:=5.16667pt
 [61]
 
-:tex2html_wrap_inline1935:lthtmlCropMarkHeight:=14.2pt
+:tex2html_wrap_inline1843:lthtmlCropMarkHeight:=14.2pt
 
-:tex2html_wrap_inline1935:lthtmlCropMarkDepth:=3.35555pt:1ex:=5.16667pt
+:tex2html_wrap_inline1843:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 [62]
-
-:tex2html_wrap_inline1937:lthtmlCropMarkHeight:=14.2pt
-
-:tex2html_wrap_inline1937:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[63]
 Package epstopdf Info: Source file: <deadweight_1.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 125842 bytes
@@ -1278,19 +1273,19 @@ Package epstopdf Info: Source file: <deadweight_1.eps>
 (epstopdf)                    size: 101136 bytes
 (epstopdf)             Command: <repstopdf --outfile=deadweight_1-eps-converted
 -to.pdf deadweight_1.eps>
-(epstopdf)             \includegraphics on input line 637.
+(epstopdf)             \includegraphics on input line 631.
 Package epstopdf Info: Output file is already uptodate.
-<deadweight_1-eps-converted-to.pdf, id=582, 557.08125pt x 370.38374pt>
+<deadweight_1-eps-converted-to.pdf, id=583, 557.08125pt x 370.38374pt>
 File: deadweight_1-eps-converted-to.pdf Graphic file (type pdf)
 <use deadweight_1-eps-converted-to.pdf>
 Package pdftex.def Info: deadweight_1-eps-converted-to.pdf  used on input line 
-637.
+631.
 (pdftex.def)             Requested size: 289.07999pt x 192.20503pt.
 
-:tex2html_wrap_indisplay1939:lthtmlCropMarkHeight:=198.20503pt
+:tex2html_wrap_indisplay1845:lthtmlCropMarkHeight:=198.20503pt
 
-:tex2html_wrap_indisplay1939:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[64 </home/fred-olav/afgv/book/deadweight_1-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1845:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[63 </home/fred-olav/afgv/book/deadweight_1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <deadweight_3.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 55706 bytes
@@ -1299,19 +1294,19 @@ Package epstopdf Info: Source file: <deadweight_3.eps>
 (epstopdf)                    size: 45903 bytes
 (epstopdf)             Command: <repstopdf --outfile=deadweight_3-eps-converted
 -to.pdf deadweight_3.eps>
-(epstopdf)             \includegraphics on input line 643.
+(epstopdf)             \includegraphics on input line 637.
 Package epstopdf Info: Output file is already uptodate.
-<deadweight_3-eps-converted-to.pdf, id=589, 557.08125pt x 370.38374pt>
+<deadweight_3-eps-converted-to.pdf, id=590, 557.08125pt x 370.38374pt>
 File: deadweight_3-eps-converted-to.pdf Graphic file (type pdf)
 <use deadweight_3-eps-converted-to.pdf>
 Package pdftex.def Info: deadweight_3-eps-converted-to.pdf  used on input line 
-643.
+637.
 (pdftex.def)             Requested size: 289.07999pt x 192.20503pt.
 
-:tex2html_wrap_indisplay1941:lthtmlCropMarkHeight:=198.20503pt
+:tex2html_wrap_indisplay1847:lthtmlCropMarkHeight:=198.20503pt
 
-:tex2html_wrap_indisplay1941:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[65 </home/fred-olav/afgv/book/deadweight_3-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1847:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[64 </home/fred-olav/afgv/book/deadweight_3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <deadweight_2.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 92749 bytes
@@ -1320,19 +1315,19 @@ Package epstopdf Info: Source file: <deadweight_2.eps>
 (epstopdf)                    size: 75072 bytes
 (epstopdf)             Command: <repstopdf --outfile=deadweight_2-eps-converted
 -to.pdf deadweight_2.eps>
-(epstopdf)             \includegraphics on input line 649.
+(epstopdf)             \includegraphics on input line 643.
 Package epstopdf Info: Output file is already uptodate.
-<deadweight_2-eps-converted-to.pdf, id=596, 557.08125pt x 370.38374pt>
+<deadweight_2-eps-converted-to.pdf, id=597, 557.08125pt x 370.38374pt>
 File: deadweight_2-eps-converted-to.pdf Graphic file (type pdf)
 <use deadweight_2-eps-converted-to.pdf>
 Package pdftex.def Info: deadweight_2-eps-converted-to.pdf  used on input line 
-649.
+643.
 (pdftex.def)             Requested size: 361.34999pt x 240.25488pt.
 
-:tex2html_wrap_indisplay1943:lthtmlCropMarkHeight:=246.25488pt
+:tex2html_wrap_indisplay1849:lthtmlCropMarkHeight:=246.25488pt
 
-:tex2html_wrap_indisplay1943:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[66 </home/fred-olav/afgv/book/deadweight_2-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1849:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[65 </home/fred-olav/afgv/book/deadweight_2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate12.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 11609 bytes
@@ -1341,19 +1336,19 @@ Package epstopdf Info: Source file: <calibrate12.eps>
 (epstopdf)                    size: 9498 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate12-eps-converted-
 to.pdf calibrate12.eps>
-(epstopdf)             \includegraphics on input line 655.
+(epstopdf)             \includegraphics on input line 649.
 Package epstopdf Info: Output file is already uptodate.
-<calibrate12-eps-converted-to.pdf, id=603, 299.1175pt x 154.5775pt>
+<calibrate12-eps-converted-to.pdf, id=604, 299.1175pt x 154.5775pt>
 File: calibrate12-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate12-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate12-eps-converted-to.pdf  used on input line 6
-55.
+49.
 (pdftex.def)             Requested size: 299.11676pt x 154.5771pt.
 
-:tex2html_wrap_indisplay1945:lthtmlCropMarkHeight:=160.5771pt
+:tex2html_wrap_indisplay1851:lthtmlCropMarkHeight:=160.5771pt
 
-:tex2html_wrap_indisplay1945:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[67 </home/fred-olav/afgv/book/calibrate12-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1851:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[66 </home/fred-olav/afgv/book/calibrate12-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <calibrate13.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 11459 bytes
@@ -1362,44 +1357,44 @@ Package epstopdf Info: Source file: <calibrate13.eps>
 (epstopdf)                    size: 7180 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate13-eps-converted-
 to.pdf calibrate13.eps>
-(epstopdf)             \includegraphics on input line 661.
+(epstopdf)             \includegraphics on input line 655.
 Package epstopdf Info: Output file is already uptodate.
 <calibrate13-eps-converted-to.pdf, id=616, 283.0575pt x 201.75375pt>
 File: calibrate13-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate13-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate13-eps-converted-to.pdf  used on input line 6
-61.
+55.
 (pdftex.def)             Requested size: 283.0568pt x 201.75325pt.
 
-:tex2html_wrap_indisplay1947:lthtmlCropMarkHeight:=207.75325pt
+:tex2html_wrap_indisplay1853:lthtmlCropMarkHeight:=207.75325pt
 
-:tex2html_wrap_indisplay1947:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[68 </home/fred-olav/afgv/book/calibrate13-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1853:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[67 </home/fred-olav/afgv/book/calibrate13-eps-converted-to.pdf>]
 
-:tex2html_wrap_inline1949:lthtmlCropMarkHeight:=14.33331pt
+:tex2html_wrap_inline1855:lthtmlCropMarkHeight:=14.33331pt
 
-:tex2html_wrap_inline1949:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1855:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[68]
+
+:tex2html_wrap_indisplay1857:lthtmlCropMarkHeight:=15.0pt
+
+:tex2html_wrap_indisplay1857:lthtmlCropMarkDepth:=3.0pt:1ex:=5.16667pt
 [69]
 
-:tex2html_wrap_indisplay1951:lthtmlCropMarkHeight:=15.0pt
+:tex2html_wrap_inline1861:lthtmlCropMarkHeight:=11.16667pt
 
-:tex2html_wrap_indisplay1951:lthtmlCropMarkDepth:=3.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1861:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
 [70]
 
-:tex2html_wrap_inline1955:lthtmlCropMarkHeight:=11.16667pt
+:tex2html_wrap_inline1863:lthtmlCropMarkHeight:=11.16667pt
 
-:tex2html_wrap_inline1955:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
+:tex2html_wrap_inline1863:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
 [71]
 
-:tex2html_wrap_inline1957:lthtmlCropMarkHeight:=11.16667pt
+:tex2html_wrap_inline1865:lthtmlCropMarkHeight:=11.16667pt
 
-:tex2html_wrap_inline1957:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
+:tex2html_wrap_inline1865:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
 [72]
-
-:tex2html_wrap_inline1959:lthtmlCropMarkHeight:=11.16667pt
-
-:tex2html_wrap_inline1959:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
-[73]
 Package epstopdf Info: Source file: <calibrate14.eps>
 (epstopdf)                    date: 2021-04-09 18:35:52
 (epstopdf)                    size: 11186 bytes
@@ -1408,49 +1403,49 @@ Package epstopdf Info: Source file: <calibrate14.eps>
 (epstopdf)                    size: 6132 bytes
 (epstopdf)             Command: <repstopdf --outfile=calibrate14-eps-converted-
 to.pdf calibrate14.eps>
-(epstopdf)             \includegraphics on input line 697.
+(epstopdf)             \includegraphics on input line 691.
 Package epstopdf Info: Output file is already uptodate.
 <calibrate14-eps-converted-to.pdf, id=650, 283.0575pt x 157.58875pt>
 File: calibrate14-eps-converted-to.pdf Graphic file (type pdf)
 <use calibrate14-eps-converted-to.pdf>
 Package pdftex.def Info: calibrate14-eps-converted-to.pdf  used on input line 6
-97.
+91.
 (pdftex.def)             Requested size: 283.0568pt x 157.58835pt.
 
-:tex2html_wrap_indisplay1963:lthtmlCropMarkHeight:=163.58835pt
+:tex2html_wrap_indisplay1869:lthtmlCropMarkHeight:=163.58835pt
 
-:tex2html_wrap_indisplay1963:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[74 </home/fred-olav/afgv/book/calibrate14-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1869:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[73 </home/fred-olav/afgv/book/calibrate14-eps-converted-to.pdf>]
 
-:tex2html_wrap_inline1966:lthtmlCropMarkHeight:=14.2pt
+:tex2html_wrap_inline1872:lthtmlCropMarkHeight:=14.2pt
 
-:tex2html_wrap_inline1966:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_inline1872:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[74]
+
+:tex2html_wrap_inline1874:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline1874:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 [75]
 
-:tex2html_wrap_inline1968:lthtmlCropMarkHeight:=14.2pt
+:tex2html_wrap_indisplay1876:lthtmlCropMarkHeight:=22.31808pt
 
-:tex2html_wrap_inline1968:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+:tex2html_wrap_indisplay1876:lthtmlCropMarkDepth:=8.23141pt:1ex:=5.16667pt
 [76]
 
-:tex2html_wrap_indisplay1970:lthtmlCropMarkHeight:=22.31808pt
+:tex2html_wrap_indisplay1878:lthtmlCropMarkHeight:=22.4514pt
 
-:tex2html_wrap_indisplay1970:lthtmlCropMarkDepth:=8.23141pt:1ex:=5.16667pt
+:tex2html_wrap_indisplay1878:lthtmlCropMarkDepth:=8.23141pt:1ex:=5.16667pt
 [77]
 
-:tex2html_wrap_indisplay1972:lthtmlCropMarkHeight:=22.4514pt
+:tex2html_wrap_inline1880:lthtmlCropMarkHeight:=16.19144pt
 
-:tex2html_wrap_indisplay1972:lthtmlCropMarkDepth:=8.23141pt:1ex:=5.16667pt
+:tex2html_wrap_inline1880:lthtmlCropMarkDepth:=4.13809pt:1ex:=5.16667pt
 [78]
 
-:tex2html_wrap_inline1974:lthtmlCropMarkHeight:=16.19144pt
+:tex2html_wrap_inline1887:lthtmlCropMarkHeight:=15.51027pt
 
-:tex2html_wrap_inline1974:lthtmlCropMarkDepth:=4.13809pt:1ex:=5.16667pt
+:tex2html_wrap_inline1887:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
 [79]
-
-:tex2html_wrap_inline1981:lthtmlCropMarkHeight:=15.51027pt
-
-:tex2html_wrap_inline1981:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[80]
 Package epstopdf Info: Source file: <ph_buffer_capsules.eps>
 (epstopdf)                    date: 2021-04-09 18:35:53
 (epstopdf)                    size: 39535 bytes
@@ -1459,29 +1454,29 @@ Package epstopdf Info: Source file: <ph_buffer_capsules.eps>
 (epstopdf)                    size: 33170 bytes
 (epstopdf)             Command: <repstopdf --outfile=ph_buffer_capsules-eps-con
 verted-to.pdf ph_buffer_capsules.eps>
-(epstopdf)             \includegraphics on input line 741.
+(epstopdf)             \includegraphics on input line 735.
 Package epstopdf Info: Output file is already uptodate.
-<ph_buffer_capsules-eps-converted-to.pdf, id=685, 557.08125pt x 648.4225pt>
+<ph_buffer_capsules-eps-converted-to.pdf, id=686, 557.08125pt x 648.4225pt>
 File: ph_buffer_capsules-eps-converted-to.pdf Graphic file (type pdf)
 <use ph_buffer_capsules-eps-converted-to.pdf>
 Package pdftex.def Info: ph_buffer_capsules-eps-converted-to.pdf  used on input
- line 741.
+ line 735.
 (pdftex.def)             Requested size: 216.81pt x 252.35936pt.
 
-:tex2html_wrap_indisplay1985:lthtmlCropMarkHeight:=258.35936pt
+:tex2html_wrap_indisplay1891:lthtmlCropMarkHeight:=258.35936pt
 
-:tex2html_wrap_indisplay1985:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
-[81 </home/fred-olav/afgv/book/ph_buffer_capsules-eps-converted-to.pdf>]
+:tex2html_wrap_indisplay1891:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[80 </home/fred-olav/afgv/book/ph_buffer_capsules-eps-converted-to.pdf>]
 
-:tex2html_wrap_inline1993:lthtmlCropMarkHeight:=9.35558pt
+:tex2html_wrap_inline1899:lthtmlCropMarkHeight:=9.35558pt
 
-:tex2html_wrap_inline1993:lthtmlCropMarkDepth:=1.79999pt:1ex:=5.16667pt
-[82]
+:tex2html_wrap_inline1899:lthtmlCropMarkDepth:=1.79999pt:1ex:=5.16667pt
+[81]
 
-:tex2html_wrap_inline1998:lthtmlCropMarkHeight:=14.33331pt
+:tex2html_wrap_inline1904:lthtmlCropMarkHeight:=14.33331pt
 
-:tex2html_wrap_inline1998:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
-[83] (./images.aux)
+:tex2html_wrap_inline1904:lthtmlCropMarkDepth:=2.33331pt:1ex:=5.16667pt
+[82] (./images.aux)
 
 Package rerunfilecheck Warning: File `images.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -1492,8 +1487,8 @@ Package rerunfilecheck Info: Checksums for `images.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11082 strings out of 478994
- 161612 string characters out of 5864752
+ 11081 strings out of 478994
+ 161605 string characters out of 5864752
  648458 words of memory out of 5000000
  28296 multiletter control sequences out of 15000+600000
  407253 words of font info for 41 fonts, out of 8000000 for 9000
@@ -1506,10 +1501,10 @@ c/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on images.pdf (83 pages, 2327377 bytes).
+Output written on images.pdf (82 pages, 2329378 bytes).
 PDF statistics:
- 750 PDF objects out of 1000 (max. 8388607)
- 501 compressed objects within 6 object streams
- 83 named destinations out of 1000 (max. 500000)
+ 751 PDF objects out of 1000 (max. 8388607)
+ 503 compressed objects within 6 object streams
+ 82 named destinations out of 1000 (max. 500000)
  206 words of extra memory for PDF output out of 10000 (max. 10000000)
 
