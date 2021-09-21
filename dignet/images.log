@@ -1,0 +1,3428 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.8.11)  21 SEP 2021 04:57
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./images.tex
+(./images.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
+\c@figure=\count186
+\c@table=\count187
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box47
+\UL@hyphenbox=\box48
+\UL@skip=\skip49
+\UL@hook=\toks15
+\UL@height=\dimen139
+\UL@pe=\count188
+\UL@pixel=\dimen140
+\ULC@box=\box49
+Package: ulem 2019/11/18
+\ULdepth=\dimen141
+) (/usr/share/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 105.
+(/usr/share/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+))
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+) (/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen144
+\ar@mcellbox=\box50
+\extrarowheight=\dimen145
+\NC@list=\toks17
+\extratabsurround=\skip50
+\backup@length=\skip51
+\ar@cellbox=\box51
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip52
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen146
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen147
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count189
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count190
+\leftroot@=\count191
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count192
+\DOTSCASE@=\count193
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen148
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count194
+\c@MaxMatrixCols=\count195
+\dotsspace@=\muskip16
+\c@parentequation=\count196
+\dspbrk@lvl=\count197
+\tag@help=\toks19
+\row@=\count198
+\column@=\count199
+\maxfields@=\count266
+\andhelp@=\toks20
+\eqnshift@=\dimen149
+\alignsep@=\dimen150
+\tagshift@=\dimen151
+\tagwidth@=\dimen152
+\totwidth@=\dimen153
+\lineht@=\dimen154
+\@envbody=\toks21
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count267
+\lst@gtempboxa=\box54
+\lst@token=\toks23
+\lst@length=\count268
+\lst@currlwidth=\dimen155
+\lst@column=\count269
+\lst@pos=\count270
+\lst@lostspace=\dimen156
+\lst@width=\dimen157
+\lst@newlines=\count271
+\lst@lineno=\count272
+\lst@maxwidth=\dimen158
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count273
+\lst@skipnumbers=\count274
+\lst@framebox=\box55
+) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+(/usr/share/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen159
+\c@nlinenum=\count275
+\TeXr@lab=\toks24
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+) (/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen160
+\Hy@linkcounter=\count276
+\Hy@pagecounter=\count277
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
+) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count278
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4073.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4073.
+Package hyperref Info: Option `hyperindex' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count279
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen161
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count280
+\Field@Width=\dimen162
+\Fld@charsize=\dimen163
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring ON on input line 6093.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count281
+\c@Item=\count282
+\c@Hfootnote=\count283
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+(/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count284
+\c@bookmark@seq@number=\count285
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip55
+) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+\@indexfile=\write3
+\openout3 = `images.idx'.
+
+Writing index file images.idx
+\sizebox=\box56
+\lthtmlwrite=\write4
+(/usr/share/texmf-dist/tex/latex/preview/preview.sty
+Package: preview 2017/04/24 12.3 (AUCTeX/preview-latex)
+(/usr/share/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+) (/usr/share/texmf-dist/tex/latex/preview/prtightpage.def
+\PreviewBorder=\dimen164
+)
+\pr@snippet=\count286
+\pr@box=\box57
+\pr@output=\toks25
+)
+\lthtmlPageBox=\box58
+\lthtmlCropMarkHeight=\dimen165
+\lthtmlCropMarkDepth=\dimen166
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count287
+\l__pdf_internal_box=\box59
+)
+
+LaTeX Warning: Unused global option(s):
+    [margin=2cm].
+
+(./images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count288
+\scratchdimen=\dimen167
+\scratchbox=\box60
+\nofMPsegments=\count289
+\nofMParguments=\count290
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count291
+\MPscratchDim=\dimen168
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
+\everyMPtoPDFconversion=\toks27
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+(/usr/share/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count294
+Package hyperref Info: Link coloring ON on input line 161.
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count295
+)
+LaTeX Info: Redefining \ref on input line 161.
+LaTeX Info: Redefining \pageref on input line 161.
+LaTeX Info: Redefining \nameref on input line 161.
+\@outlinefile=\write5
+\openout5 = `images.out'.
+
+Preview: Fontsize 12pt
+Preview: PDFoutput 1
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=676.8738pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=11.74988pt
+
+latex2htmlLength oddsidemargin=0.0pt
+
+latex2htmlLength evensidemargin=0.0pt
+
+Package epstopdf Info: Source file: <AMS_screen_1.eps>
+(epstopdf)                    date: 2020-06-12 13:07:16
+(epstopdf)                    size: 91989 bytes
+(epstopdf)             Output file: <AMS_screen_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:06:56
+(epstopdf)                    size: 15537 bytes
+(epstopdf)             Command: <repstopdf --outfile=AMS_screen_1-eps-converted
+-to.pdf AMS_screen_1.eps>
+(epstopdf)             \includegraphics on input line 187.
+Package epstopdf Info: Output file is already uptodate.
+<AMS_screen_1-eps-converted-to.pdf, id=4, 437.635pt x 493.845pt>
+File: AMS_screen_1-eps-converted-to.pdf Graphic file (type pdf)
+<use AMS_screen_1-eps-converted-to.pdf>
+Package pdftex.def Info: AMS_screen_1-eps-converted-to.pdf  used on input line 
+187.
+(pdftex.def)             Requested size: 361.34999pt x 407.76624pt.
+
+:tex2html_wrap_indisplay4479:lthtmlCropMarkHeight:=413.76624pt
+
+:tex2html_wrap_indisplay4479:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+Preview: Tightpage -32891 -32891 32891 32891
+[1
+Non-PDF special ignored!
+<special> papersize=597.50787pt,845.04684pt
+ </home/fred-olav/afgv/book/AMS_screen_1-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4485:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4485:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+:tex2html_wrap_inline4487:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4487:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[3]
+Package epstopdf Info: Source file: <digital_68.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10279 bytes
+(epstopdf)             Output file: <digital_68-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:06:57
+(epstopdf)                    size: 11184 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_68-eps-converted-t
+o.pdf digital_68.eps>
+(epstopdf)             \includegraphics on input line 207.
+Package epstopdf Info: Output file is already uptodate.
+<digital_68-eps-converted-to.pdf, id=21, 417.56pt x 100.375pt>
+File: digital_68-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_68-eps-converted-to.pdf>
+Package pdftex.def Info: digital_68-eps-converted-to.pdf  used on input line 20
+7.
+(pdftex.def)             Requested size: 417.55896pt x 100.37474pt.
+
+:tex2html_wrap_indisplay4489:lthtmlCropMarkHeight:=106.37474pt
+
+:tex2html_wrap_indisplay4489:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[4 </home/fred-olav/afgv/book/digital_68-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4491:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4491:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[5]
+
+:tex2html_wrap_inline4493:lthtmlCropMarkHeight:=13.0pt
+
+:tex2html_wrap_inline4493:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[6]
+
+:tex2html_wrap_inline4495:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4495:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[7]
+Package epstopdf Info: Source file: <digital_69.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9592 bytes
+(epstopdf)             Output file: <digital_69-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:06:58
+(epstopdf)                    size: 10671 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_69-eps-converted-t
+o.pdf digital_69.eps>
+(epstopdf)             \includegraphics on input line 231.
+Package epstopdf Info: Output file is already uptodate.
+<digital_69-eps-converted-to.pdf, id=57, 275.0275pt x 73.27374pt>
+File: digital_69-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_69-eps-converted-to.pdf>
+Package pdftex.def Info: digital_69-eps-converted-to.pdf  used on input line 23
+1.
+(pdftex.def)             Requested size: 275.02682pt x 73.27354pt.
+
+:tex2html_wrap_indisplay4499:lthtmlCropMarkHeight:=79.27354pt
+
+:tex2html_wrap_indisplay4499:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[8 </home/fred-olav/afgv/book/digital_69-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4501:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4501:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[9]
+
+:tex2html_wrap_inline4503:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4503:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[10]
+
+:tex2html_wrap_inline4505:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4505:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[11]
+
+:tex2html_wrap_inline4509:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4509:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[12]
+Package epstopdf Info: Source file: <digital_70.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9185 bytes
+(epstopdf)             Output file: <digital_70-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:06:58
+(epstopdf)                    size: 3945 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_70-eps-converted-t
+o.pdf digital_70.eps>
+(epstopdf)             \includegraphics on input line 261.
+Package epstopdf Info: Output file is already uptodate.
+<digital_70-eps-converted-to.pdf, id=92, 149.55875pt x 62.2325pt>
+File: digital_70-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_70-eps-converted-to.pdf>
+Package pdftex.def Info: digital_70-eps-converted-to.pdf  used on input line 26
+1.
+(pdftex.def)             Requested size: 149.55838pt x 62.23235pt.
+
+:tex2html_wrap_indisplay4511:lthtmlCropMarkHeight:=68.23235pt
+
+:tex2html_wrap_indisplay4511:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[13 </home/fred-olav/afgv/book/digital_70-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_74.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9710 bytes
+(epstopdf)             Output file: <digital_74-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:06:59
+(epstopdf)                    size: 9697 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_74-eps-converted-t
+o.pdf digital_74.eps>
+(epstopdf)             \includegraphics on input line 268.
+Package epstopdf Info: Output file is already uptodate.
+<digital_74-eps-converted-to.pdf, id=102, 282.05376pt x 75.28125pt>
+File: digital_74-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_74-eps-converted-to.pdf>
+Package pdftex.def Info: digital_74-eps-converted-to.pdf  used on input line 26
+8.
+(pdftex.def)             Requested size: 282.05305pt x 75.28105pt.
+
+:tex2html_wrap_indisplay4514:lthtmlCropMarkHeight:=81.28105pt
+
+:tex2html_wrap_indisplay4514:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[14 </home/fred-olav/afgv/book/digital_74-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4517:lthtmlCropMarkHeight:=13.79915pt
+
+:tex2html_wrap_inline4517:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[15]
+
+:tex2html_wrap_indisplay4519:lthtmlCropMarkHeight:=16.11026pt
+
+:tex2html_wrap_indisplay4519:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[16]
+
+:tex2html_wrap_indisplay4521:lthtmlCropMarkHeight:=16.11026pt
+
+:tex2html_wrap_indisplay4521:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[17]
+
+:tex2html_wrap_indisplay4523:lthtmlCropMarkHeight:=16.11026pt
+
+:tex2html_wrap_indisplay4523:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[18]
+
+:tex2html_wrap_inline4525:lthtmlCropMarkHeight:=11.16667pt
+
+:tex2html_wrap_inline4525:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[19]
+
+:tex2html_wrap_inline4527:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4527:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[20]
+
+:tex2html_wrap_indisplay4529:lthtmlCropMarkHeight:=16.42136pt
+
+:tex2html_wrap_indisplay4529:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[21]
+
+:tex2html_wrap_inline4531:lthtmlCropMarkHeight:=15.82137pt
+
+:tex2html_wrap_inline4531:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[22]
+
+:tex2html_wrap_inline4533:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4533:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[23]
+
+:tex2html_wrap_inline4535:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4535:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[24]
+
+:tex2html_wrap_inline4537:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4537:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[25]
+
+:tex2html_wrap_inline4539:lthtmlCropMarkHeight:=15.82137pt
+
+:tex2html_wrap_inline4539:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[26]
+
+:tex2html_wrap_inline4545:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4545:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[27]
+
+:tex2html_wrap_inline4547:lthtmlCropMarkHeight:=15.91026pt
+
+:tex2html_wrap_inline4547:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[28]
+
+:tex2html_wrap_inline4557:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4557:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[29]
+Package epstopdf Info: Source file: <digital_71.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 12763 bytes
+(epstopdf)             Output file: <digital_71-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:06:59
+(epstopdf)                    size: 9780 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_71-eps-converted-t
+o.pdf digital_71.eps>
+(epstopdf)             \includegraphics on input line 365.
+Package epstopdf Info: Output file is already uptodate.
+<digital_71-eps-converted-to.pdf, id=186, 410.53375pt x 155.58125pt>
+File: digital_71-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_71-eps-converted-to.pdf>
+Package pdftex.def Info: digital_71-eps-converted-to.pdf  used on input line 36
+5.
+(pdftex.def)             Requested size: 410.53275pt x 155.58086pt.
+
+:tex2html_wrap_indisplay4561:lthtmlCropMarkHeight:=161.58086pt
+
+:tex2html_wrap_indisplay4561:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[30 </home/fred-olav/afgv/book/digital_71-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_73.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 20956 bytes
+(epstopdf)             Output file: <digital_73-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:00
+(epstopdf)                    size: 11282 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_73-eps-converted-t
+o.pdf digital_73.eps>
+(epstopdf)             \includegraphics on input line 372.
+Package epstopdf Info: Output file is already uptodate.
+<digital_73-eps-converted-to.pdf, id=198, 410.53375pt x 270.00874pt>
+File: digital_73-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_73-eps-converted-to.pdf>
+Package pdftex.def Info: digital_73-eps-converted-to.pdf  used on input line 37
+2.
+(pdftex.def)             Requested size: 410.53275pt x 270.00807pt.
+
+:tex2html_wrap_indisplay4564:lthtmlCropMarkHeight:=276.00807pt
+
+:tex2html_wrap_indisplay4564:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[31 </home/fred-olav/afgv/book/digital_73-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_72.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 116556 bytes
+(epstopdf)             Output file: <digital_72-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-06-13 10:07:06
+(epstopdf)                    size: 11649 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_72-eps-converted-t
+o.pdf digital_72.eps>
+(epstopdf)             \includegraphics on input line 378.
+Package epstopdf Info: Output file is already uptodate.
+<digital_72-eps-converted-to.pdf, id=208, 485.815pt x 218.8175pt>
+File: digital_72-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_72-eps-converted-to.pdf>
+Package pdftex.def Info: digital_72-eps-converted-to.pdf  used on input line 37
+8.
+(pdftex.def)             Requested size: 433.62pt x 195.30788pt.
+
+:tex2html_wrap_indisplay4568:lthtmlCropMarkHeight:=201.30788pt
+
+:tex2html_wrap_indisplay4568:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[32 </home/fred-olav/afgv/book/digital_72-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4570:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4570:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[33]
+
+:tex2html_wrap_inline4572:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4572:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[34]
+
+:tex2html_wrap_inline4574:lthtmlCropMarkHeight:=13.0pt
+
+:tex2html_wrap_inline4574:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[35]
+
+:tex2html_wrap_inline4580:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4580:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[36]
+Package epstopdf Info: Source file: <digital_67.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 13993 bytes
+(epstopdf)             Output file: <digital_67-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:00
+(epstopdf)                    size: 11244 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_67-eps-converted-t
+o.pdf digital_67.eps>
+(epstopdf)             \includegraphics on input line 410.
+Package epstopdf Info: Output file is already uptodate.
+<digital_67-eps-converted-to.pdf, id=231, 360.34625pt x 204.765pt>
+File: digital_67-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_67-eps-converted-to.pdf>
+Package pdftex.def Info: digital_67-eps-converted-to.pdf  used on input line 41
+0.
+(pdftex.def)             Requested size: 360.34537pt x 204.76448pt.
+
+:tex2html_wrap_indisplay4586:lthtmlCropMarkHeight:=210.76448pt
+
+:tex2html_wrap_indisplay4586:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[37 </home/fred-olav/afgv/book/digital_67-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4593:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4593:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[38]
+
+:tex2html_wrap_indisplay4597:lthtmlCropMarkHeight:=259.69963pt
+
+:tex2html_wrap_indisplay4597:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[39]
+Package epstopdf Info: Source file: <digital_01.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9113 bytes
+(epstopdf)             Output file: <digital_01-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:01
+(epstopdf)                    size: 6501 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_01-eps-converted-t
+o.pdf digital_01.eps>
+(epstopdf)             \includegraphics on input line 479.
+Package epstopdf Info: Output file is already uptodate.
+<digital_01-eps-converted-to.pdf, id=250, 256.96pt x 128.48pt>
+File: digital_01-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_01-eps-converted-to.pdf>
+Package pdftex.def Info: digital_01-eps-converted-to.pdf  used on input line 47
+9.
+(pdftex.def)             Requested size: 256.95937pt x 128.47968pt.
+
+:tex2html_wrap_indisplay4604:lthtmlCropMarkHeight:=134.47968pt
+
+:tex2html_wrap_indisplay4604:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[40 </home/fred-olav/afgv/book/digital_01-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4606:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4606:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[41]
+
+:tex2html_wrap_inline4608:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4608:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[42]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 497.
+
+
+:tex2html_wrap_indisplay4610:lthtmlCropMarkHeight:=22.4514pt
+
+:tex2html_wrap_indisplay4610:lthtmlCropMarkDepth:=9.23141pt:1ex:=5.16667pt
+[43]
+
+:tex2html_wrap_inline4612:lthtmlCropMarkHeight:=11.16667pt
+
+:tex2html_wrap_inline4612:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[44]
+
+:tex2html_wrap_indisplay4616:lthtmlCropMarkHeight:=22.31808pt
+
+:tex2html_wrap_indisplay4616:lthtmlCropMarkDepth:=11.58696pt:1ex:=5.16667pt
+[45]
+
+:tex2html_wrap_indisplay4618:lthtmlCropMarkHeight:=125.59982pt
+
+:tex2html_wrap_indisplay4618:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[46]
+
+:tex2html_wrap_inline4622:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4622:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[47]
+Package epstopdf Info: Source file: <digital_48.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8056 bytes
+(epstopdf)             Output file: <digital_48-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:02
+(epstopdf)                    size: 3968 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_48-eps-converted-t
+o.pdf digital_48.eps>
+(epstopdf)             \includegraphics on input line 550.
+Package epstopdf Info: Output file is already uptodate.
+<digital_48-eps-converted-to.pdf, id=292, 254.9525pt x 42.1575pt>
+File: digital_48-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_48-eps-converted-to.pdf>
+Package pdftex.def Info: digital_48-eps-converted-to.pdf  used on input line 55
+0.
+(pdftex.def)             Requested size: 254.95186pt x 42.15738pt.
+
+:tex2html_wrap_indisplay4626:lthtmlCropMarkHeight:=48.15738pt
+
+:tex2html_wrap_indisplay4626:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[48 </home/fred-olav/afgv/book/digital_48-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4628:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4628:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[49]
+
+:tex2html_wrap_indisplay4634:lthtmlCropMarkHeight:=23.11809pt
+
+:tex2html_wrap_indisplay4634:lthtmlCropMarkDepth:=11.23141pt:1ex:=5.16667pt
+[50]
+
+:tex2html_wrap_indisplay4636:lthtmlCropMarkHeight:=15.0pt
+
+:tex2html_wrap_indisplay4636:lthtmlCropMarkDepth:=3.0pt:1ex:=5.16667pt
+[51]
+
+:tex2html_wrap_indisplay4640:lthtmlCropMarkHeight:=23.11809pt
+
+:tex2html_wrap_indisplay4640:lthtmlCropMarkDepth:=11.23141pt:1ex:=5.16667pt
+[52]
+Package epstopdf Info: Source file: <digital_50.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8222 bytes
+(epstopdf)             Output file: <digital_50-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:02
+(epstopdf)                    size: 4646 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_50-eps-converted-t
+o.pdf digital_50.eps>
+(epstopdf)             \includegraphics on input line 580.
+Package epstopdf Info: Output file is already uptodate.
+<digital_50-eps-converted-to.pdf, id=319, 275.0275pt x 57.21375pt>
+File: digital_50-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_50-eps-converted-to.pdf>
+Package pdftex.def Info: digital_50-eps-converted-to.pdf  used on input line 58
+0.
+(pdftex.def)             Requested size: 275.02682pt x 57.2136pt.
+
+:tex2html_wrap_indisplay4652:lthtmlCropMarkHeight:=63.2136pt
+
+:tex2html_wrap_indisplay4652:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[53 </home/fred-olav/afgv/book/digital_50-eps-converted-to.pdf>]
+
+:tex2html_wrap_indisplay4654:lthtmlCropMarkHeight:=21.85141pt
+
+:tex2html_wrap_indisplay4654:lthtmlCropMarkDepth:=8.23141pt:1ex:=5.16667pt
+[54]
+
+:tex2html_wrap_indisplay4656:lthtmlCropMarkHeight:=15.0pt
+
+:tex2html_wrap_indisplay4656:lthtmlCropMarkDepth:=3.0pt:1ex:=5.16667pt
+[55]
+Package epstopdf Info: Source file: <digital_02.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9938 bytes
+(epstopdf)             Output file: <digital_02-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:03
+(epstopdf)                    size: 6073 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_02-eps-converted-t
+o.pdf digital_02.eps>
+(epstopdf)             \includegraphics on input line 599.
+Package epstopdf Info: Output file is already uptodate.
+<digital_02-eps-converted-to.pdf, id=337, 334.24875pt x 87.32625pt>
+File: digital_02-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_02-eps-converted-to.pdf>
+Package pdftex.def Info: digital_02-eps-converted-to.pdf  used on input line 59
+9.
+(pdftex.def)             Requested size: 334.24792pt x 87.32603pt.
+
+:tex2html_wrap_indisplay4663:lthtmlCropMarkHeight:=93.32603pt
+
+:tex2html_wrap_indisplay4663:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[56 </home/fred-olav/afgv/book/digital_02-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_79.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10205 bytes
+(epstopdf)             Output file: <digital_79-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:03
+(epstopdf)                    size: 6127 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_79-eps-converted-t
+o.pdf digital_79.eps>
+(epstopdf)             \includegraphics on input line 605.
+Package epstopdf Info: Output file is already uptodate.
+<digital_79-eps-converted-to.pdf, id=346, 334.24875pt x 89.33376pt>
+File: digital_79-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_79-eps-converted-to.pdf>
+Package pdftex.def Info: digital_79-eps-converted-to.pdf  used on input line 60
+5.
+(pdftex.def)             Requested size: 334.24792pt x 89.33353pt.
+
+:tex2html_wrap_indisplay4665:lthtmlCropMarkHeight:=95.33353pt
+
+:tex2html_wrap_indisplay4665:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[57 </home/fred-olav/afgv/book/digital_79-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_03.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11358 bytes
+(epstopdf)             Output file: <digital_03-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:04
+(epstopdf)                    size: 11170 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_03-eps-converted-t
+o.pdf digital_03.eps>
+(epstopdf)             \includegraphics on input line 611.
+Package epstopdf Info: Output file is already uptodate.
+<digital_03-eps-converted-to.pdf, id=355, 328.22626pt x 186.6975pt>
+File: digital_03-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_03-eps-converted-to.pdf>
+Package pdftex.def Info: digital_03-eps-converted-to.pdf  used on input line 61
+1.
+(pdftex.def)             Requested size: 328.22545pt x 186.69704pt.
+
+:tex2html_wrap_indisplay4667:lthtmlCropMarkHeight:=192.69704pt
+
+:tex2html_wrap_indisplay4667:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[58 </home/fred-olav/afgv/book/digital_03-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_01.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 13855 bytes
+(epstopdf)             Output file: <adc_01-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:04
+(epstopdf)                    size: 11449 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_01-eps-converted-to.pd
+f adc_01.eps>
+(epstopdf)             \includegraphics on input line 619.
+Package epstopdf Info: Output file is already uptodate.
+<adc_01-eps-converted-to.pdf, id=377, 409.53pt x 221.82875pt>
+File: adc_01-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_01-eps-converted-to.pdf>
+Package pdftex.def Info: adc_01-eps-converted-to.pdf  used on input line 619.
+(pdftex.def)             Requested size: 409.52899pt x 221.82819pt.
+
+:tex2html_wrap_indisplay4671:lthtmlCropMarkHeight:=227.82819pt
+
+:tex2html_wrap_indisplay4671:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[59 </home/fred-olav/afgv/book/adc_01-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_02.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 14280 bytes
+(epstopdf)             Output file: <adc_02-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:05
+(epstopdf)                    size: 12009 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_02-eps-converted-to.pd
+f adc_02.eps>
+(epstopdf)             \includegraphics on input line 625.
+Package epstopdf Info: Output file is already uptodate.
+<adc_02-eps-converted-to.pdf, id=396, 409.53pt x 221.82875pt>
+File: adc_02-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_02-eps-converted-to.pdf>
+Package pdftex.def Info: adc_02-eps-converted-to.pdf  used on input line 625.
+(pdftex.def)             Requested size: 409.52899pt x 221.82819pt.
+
+:tex2html_wrap_indisplay4673:lthtmlCropMarkHeight:=227.82819pt
+
+:tex2html_wrap_indisplay4673:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[60 </home/fred-olav/afgv/book/adc_02-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4677:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4677:lthtmlCropMarkDepth:=1.79999pt:1ex:=5.16667pt
+[61]
+Package epstopdf Info: Source file: <adc_03.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 15012 bytes
+(epstopdf)             Output file: <adc_03-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:06
+(epstopdf)                    size: 14890 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_03-eps-converted-to.pd
+f adc_03.eps>
+(epstopdf)             \includegraphics on input line 637.
+Package epstopdf Info: Output file is already uptodate.
+<adc_03-eps-converted-to.pdf, id=420, 409.53pt x 256.96pt>
+File: adc_03-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_03-eps-converted-to.pdf>
+Package pdftex.def Info: adc_03-eps-converted-to.pdf  used on input line 637.
+(pdftex.def)             Requested size: 409.52899pt x 256.95937pt.
+
+:tex2html_wrap_indisplay4683:lthtmlCropMarkHeight:=262.95937pt
+
+:tex2html_wrap_indisplay4683:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[62 </home/fred-olav/afgv/book/adc_03-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_04.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 15799 bytes
+(epstopdf)             Output file: <adc_04-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:06
+(epstopdf)                    size: 15863 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_04-eps-converted-to.pd
+f adc_04.eps>
+(epstopdf)             \includegraphics on input line 643.
+Package epstopdf Info: Output file is already uptodate.
+<adc_04-eps-converted-to.pdf, id=442, 438.63875pt x 257.96375pt>
+File: adc_04-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_04-eps-converted-to.pdf>
+Package pdftex.def Info: adc_04-eps-converted-to.pdf  used on input line 643.
+(pdftex.def)             Requested size: 438.63766pt x 257.9631pt.
+
+:tex2html_wrap_indisplay4685:lthtmlCropMarkHeight:=263.9631pt
+
+:tex2html_wrap_indisplay4685:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[63 </home/fred-olav/afgv/book/adc_04-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_05.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 16571 bytes
+(epstopdf)             Output file: <adc_05-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:07
+(epstopdf)                    size: 15723 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_05-eps-converted-to.pd
+f adc_05.eps>
+(epstopdf)             \includegraphics on input line 649.
+Package epstopdf Info: Output file is already uptodate.
+<adc_05-eps-converted-to.pdf, id=465, 418.56375pt x 312.16624pt>
+File: adc_05-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_05-eps-converted-to.pdf>
+Package pdftex.def Info: adc_05-eps-converted-to.pdf  used on input line 649.
+(pdftex.def)             Requested size: 418.56271pt x 312.16548pt.
+
+:tex2html_wrap_indisplay4687:lthtmlCropMarkHeight:=318.16548pt
+
+:tex2html_wrap_indisplay4687:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[64 </home/fred-olav/afgv/book/adc_05-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_06.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 14016 bytes
+(epstopdf)             Output file: <adc_06-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:07
+(epstopdf)                    size: 8398 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_06-eps-converted-to.pd
+f adc_06.eps>
+(epstopdf)             \includegraphics on input line 655.
+Package epstopdf Info: Output file is already uptodate.
+<adc_06-eps-converted-to.pdf, id=487, 353.32pt x 182.6825pt>
+File: adc_06-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_06-eps-converted-to.pdf>
+Package pdftex.def Info: adc_06-eps-converted-to.pdf  used on input line 655.
+(pdftex.def)             Requested size: 353.31914pt x 182.68204pt.
+
+:tex2html_wrap_indisplay4689:lthtmlCropMarkHeight:=188.68204pt
+
+:tex2html_wrap_indisplay4689:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[65 </home/fred-olav/afgv/book/adc_06-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_07.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 12435 bytes
+(epstopdf)             Output file: <adc_07-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:08
+(epstopdf)                    size: 11734 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_07-eps-converted-to.pd
+f adc_07.eps>
+(epstopdf)             \includegraphics on input line 661.
+Package epstopdf Info: Output file is already uptodate.
+<adc_07-eps-converted-to.pdf, id=500, 400.49625pt x 324.21124pt>
+File: adc_07-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_07-eps-converted-to.pdf>
+Package pdftex.def Info: adc_07-eps-converted-to.pdf  used on input line 661.
+(pdftex.def)             Requested size: 400.49527pt x 324.21045pt.
+
+:tex2html_wrap_indisplay4691:lthtmlCropMarkHeight:=330.21045pt
+
+:tex2html_wrap_indisplay4691:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[66 </home/fred-olav/afgv/book/adc_07-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4693:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4693:lthtmlCropMarkDepth:=1.79999pt:1ex:=5.16667pt
+[67]
+Package epstopdf Info: Source file: <adc_08.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 16784 bytes
+(epstopdf)             Output file: <adc_08-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:09
+(epstopdf)                    size: 11290 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_08-eps-converted-to.pd
+f adc_08.eps>
+(epstopdf)             \includegraphics on input line 673.
+Package epstopdf Info: Output file is already uptodate.
+<adc_08-eps-converted-to.pdf, id=524, 406.51875pt x 272.01625pt>
+File: adc_08-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_08-eps-converted-to.pdf>
+Package pdftex.def Info: adc_08-eps-converted-to.pdf  used on input line 673.
+(pdftex.def)             Requested size: 406.51775pt x 272.01558pt.
+
+:tex2html_wrap_indisplay4701:lthtmlCropMarkHeight:=278.01558pt
+
+:tex2html_wrap_indisplay4701:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[68 </home/fred-olav/afgv/book/adc_08-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_09.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 20624 bytes
+(epstopdf)             Output file: <adc_09-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:09
+(epstopdf)                    size: 14388 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_09-eps-converted-to.pd
+f adc_09.eps>
+(epstopdf)             \includegraphics on input line 679.
+Package epstopdf Info: Output file is already uptodate.
+<adc_09-eps-converted-to.pdf, id=539, 441.65pt x 236.885pt>
+File: adc_09-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_09-eps-converted-to.pdf>
+Package pdftex.def Info: adc_09-eps-converted-to.pdf  used on input line 679.
+(pdftex.def)             Requested size: 441.64891pt x 236.88441pt.
+
+:tex2html_wrap_indisplay4703:lthtmlCropMarkHeight:=242.88441pt
+
+:tex2html_wrap_indisplay4703:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[69 </home/fred-olav/afgv/book/adc_09-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4708:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4708:lthtmlCropMarkDepth:=3.35555pt:1ex:=5.16667pt
+[70]
+
+:tex2html_wrap_inline4710:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4710:lthtmlCropMarkDepth:=3.35555pt:1ex:=5.16667pt
+[71]
+
+:tex2html_wrap_inline4712:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4712:lthtmlCropMarkDepth:=1.79999pt:1ex:=5.16667pt
+[72]
+Package epstopdf Info: Source file: <adc_10.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 10780 bytes
+(epstopdf)             Output file: <adc_10-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:10
+(epstopdf)                    size: 13096 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_10-eps-converted-to.pd
+f adc_10.eps>
+(epstopdf)             \includegraphics on input line 704.
+Package epstopdf Info: Output file is already uptodate.
+<adc_10-eps-converted-to.pdf, id=570, 369.38pt x 172.645pt>
+File: adc_10-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_10-eps-converted-to.pdf>
+Package pdftex.def Info: adc_10-eps-converted-to.pdf  used on input line 704.
+(pdftex.def)             Requested size: 369.37909pt x 172.64456pt.
+
+:tex2html_wrap_indisplay4714:lthtmlCropMarkHeight:=178.64456pt
+
+:tex2html_wrap_indisplay4714:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[73 </home/fred-olav/afgv/book/adc_10-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4716:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4716:lthtmlCropMarkDepth:=1.79999pt:1ex:=5.16667pt
+[74]
+Package epstopdf Info: Source file: <adc_11.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 9746 bytes
+(epstopdf)             Output file: <adc_11-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:10
+(epstopdf)                    size: 11742 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_11-eps-converted-to.pd
+f adc_11.eps>
+(epstopdf)             \includegraphics on input line 716.
+Package epstopdf Info: Output file is already uptodate.
+<adc_11-eps-converted-to.pdf, id=597, 369.38pt x 172.645pt>
+File: adc_11-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_11-eps-converted-to.pdf>
+Package pdftex.def Info: adc_11-eps-converted-to.pdf  used on input line 716.
+(pdftex.def)             Requested size: 369.37909pt x 172.64456pt.
+
+:tex2html_wrap_indisplay4718:lthtmlCropMarkHeight:=178.64456pt
+
+:tex2html_wrap_indisplay4718:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[75 </home/fred-olav/afgv/book/adc_11-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_12.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 12894 bytes
+(epstopdf)             Output file: <adc_12-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:11
+(epstopdf)                    size: 13864 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_12-eps-converted-to.pd
+f adc_12.eps>
+(epstopdf)             \includegraphics on input line 722.
+Package epstopdf Info: Output file is already uptodate.
+<adc_12-eps-converted-to.pdf, id=620, 387.4475pt x 173.64874pt>
+File: adc_12-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_12-eps-converted-to.pdf>
+Package pdftex.def Info: adc_12-eps-converted-to.pdf  used on input line 722.
+(pdftex.def)             Requested size: 387.44655pt x 173.64832pt.
+
+:tex2html_wrap_indisplay4720:lthtmlCropMarkHeight:=179.64832pt
+
+:tex2html_wrap_indisplay4720:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[76 </home/fred-olav/afgv/book/adc_12-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_13.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 10124 bytes
+(epstopdf)             Output file: <adc_13-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:12
+(epstopdf)                    size: 10511 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_13-eps-converted-to.pd
+f adc_13.eps>
+(epstopdf)             \includegraphics on input line 728.
+Package epstopdf Info: Output file is already uptodate.
+<adc_13-eps-converted-to.pdf, id=642, 369.38pt x 172.645pt>
+File: adc_13-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_13-eps-converted-to.pdf>
+Package pdftex.def Info: adc_13-eps-converted-to.pdf  used on input line 728.
+(pdftex.def)             Requested size: 369.37909pt x 172.64456pt.
+
+:tex2html_wrap_indisplay4724:lthtmlCropMarkHeight:=178.64456pt
+
+:tex2html_wrap_indisplay4724:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[77 </home/fred-olav/afgv/book/adc_13-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4726:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4726:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[78]
+Package epstopdf Info: Source file: <adc_14.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 10379 bytes
+(epstopdf)             Output file: <adc_14-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:12
+(epstopdf)                    size: 10738 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_14-eps-converted-to.pd
+f adc_14.eps>
+(epstopdf)             \includegraphics on input line 740.
+Package epstopdf Info: Output file is already uptodate.
+<adc_14-eps-converted-to.pdf, id=665, 346.29375pt x 159.59625pt>
+File: adc_14-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_14-eps-converted-to.pdf>
+Package pdftex.def Info: adc_14-eps-converted-to.pdf  used on input line 740.
+(pdftex.def)             Requested size: 346.2929pt x 159.59584pt.
+
+:tex2html_wrap_indisplay4728:lthtmlCropMarkHeight:=165.59584pt
+
+:tex2html_wrap_indisplay4728:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[79 </home/fred-olav/afgv/book/adc_14-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_15.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 15245 bytes
+(epstopdf)             Output file: <adc_15-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:13
+(epstopdf)                    size: 11352 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_15-eps-converted-to.pd
+f adc_15.eps>
+(epstopdf)             \includegraphics on input line 746.
+Package epstopdf Info: Output file is already uptodate.
+<adc_15-eps-converted-to.pdf, id=685, 424.58624pt x 221.82875pt>
+File: adc_15-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_15-eps-converted-to.pdf>
+Package pdftex.def Info: adc_15-eps-converted-to.pdf  used on input line 746.
+(pdftex.def)             Requested size: 424.5852pt x 221.82819pt.
+
+:tex2html_wrap_indisplay4730:lthtmlCropMarkHeight:=227.82819pt
+
+:tex2html_wrap_indisplay4730:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[80 </home/fred-olav/afgv/book/adc_15-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_16.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 16351 bytes
+(epstopdf)             Output file: <adc_16-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:13
+(epstopdf)                    size: 15203 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_16-eps-converted-to.pd
+f adc_16.eps>
+(epstopdf)             \includegraphics on input line 752.
+Package epstopdf Info: Output file is already uptodate.
+<adc_16-eps-converted-to.pdf, id=700, 438.63875pt x 225.84375pt>
+File: adc_16-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_16-eps-converted-to.pdf>
+Package pdftex.def Info: adc_16-eps-converted-to.pdf  used on input line 752.
+(pdftex.def)             Requested size: 438.63766pt x 225.84319pt.
+
+:tex2html_wrap_indisplay4732:lthtmlCropMarkHeight:=231.84319pt
+
+:tex2html_wrap_indisplay4732:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[81 </home/fred-olav/afgv/book/adc_16-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4734:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4734:lthtmlCropMarkDepth:=3.35555pt:1ex:=5.16667pt
+[82]
+Package epstopdf Info: Source file: <adc_17.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 16932 bytes
+(epstopdf)             Output file: <adc_17-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:14
+(epstopdf)                    size: 17205 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_17-eps-converted-to.pd
+f adc_17.eps>
+(epstopdf)             \includegraphics on input line 764.
+Package epstopdf Info: Output file is already uptodate.
+<adc_17-eps-converted-to.pdf, id=722, 438.63875pt x 225.84375pt>
+File: adc_17-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_17-eps-converted-to.pdf>
+Package pdftex.def Info: adc_17-eps-converted-to.pdf  used on input line 764.
+(pdftex.def)             Requested size: 438.63766pt x 225.84319pt.
+
+:tex2html_wrap_indisplay4736:lthtmlCropMarkHeight:=231.84319pt
+
+:tex2html_wrap_indisplay4736:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[83 </home/fred-olav/afgv/book/adc_17-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_18.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 14751 bytes
+(epstopdf)             Output file: <adc_18-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:14
+(epstopdf)                    size: 12284 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_18-eps-converted-to.pd
+f adc_18.eps>
+(epstopdf)             \includegraphics on input line 770.
+Package epstopdf Info: Output file is already uptodate.
+<adc_18-eps-converted-to.pdf, id=743, 438.63875pt x 221.82875pt>
+File: adc_18-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_18-eps-converted-to.pdf>
+Package pdftex.def Info: adc_18-eps-converted-to.pdf  used on input line 770.
+(pdftex.def)             Requested size: 438.63766pt x 221.82819pt.
+
+:tex2html_wrap_indisplay4738:lthtmlCropMarkHeight:=227.82819pt
+
+:tex2html_wrap_indisplay4738:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[84 </home/fred-olav/afgv/book/adc_18-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_19.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 15952 bytes
+(epstopdf)             Output file: <adc_19-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:15
+(epstopdf)                    size: 16572 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_19-eps-converted-to.pd
+f adc_19.eps>
+(epstopdf)             \includegraphics on input line 776.
+Package epstopdf Info: Output file is already uptodate.
+<adc_19-eps-converted-to.pdf, id=759, 438.63875pt x 221.82875pt>
+File: adc_19-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_19-eps-converted-to.pdf>
+Package pdftex.def Info: adc_19-eps-converted-to.pdf  used on input line 776.
+(pdftex.def)             Requested size: 438.63766pt x 221.82819pt.
+
+:tex2html_wrap_indisplay4740:lthtmlCropMarkHeight:=227.82819pt
+
+:tex2html_wrap_indisplay4740:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[85 </home/fred-olav/afgv/book/adc_19-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_20.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 16438 bytes
+(epstopdf)             Output file: <adc_20-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:16
+(epstopdf)                    size: 14735 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_20-eps-converted-to.pd
+f adc_20.eps>
+(epstopdf)             \includegraphics on input line 782.
+Package epstopdf Info: Output file is already uptodate.
+<adc_20-eps-converted-to.pdf, id=781, 417.56pt x 221.82875pt>
+File: adc_20-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_20-eps-converted-to.pdf>
+Package pdftex.def Info: adc_20-eps-converted-to.pdf  used on input line 782.
+(pdftex.def)             Requested size: 417.55896pt x 221.82819pt.
+
+:tex2html_wrap_indisplay4742:lthtmlCropMarkHeight:=227.82819pt
+
+:tex2html_wrap_indisplay4742:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[86 </home/fred-olav/afgv/book/adc_20-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4744:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4744:lthtmlCropMarkDepth:=3.35555pt:1ex:=5.16667pt
+[87]
+
+:tex2html_wrap_inline4750:lthtmlCropMarkHeight:=14.2pt
+
+:tex2html_wrap_inline4750:lthtmlCropMarkDepth:=2.63336pt:1ex:=5.16667pt
+[88]
+Package epstopdf Info: Source file: <adc_21.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 16610 bytes
+(epstopdf)             Output file: <adc_21-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:16
+(epstopdf)                    size: 13304 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_21-eps-converted-to.pd
+f adc_21.eps>
+(epstopdf)             \includegraphics on input line 800.
+Package epstopdf Info: Output file is already uptodate.
+<adc_21-eps-converted-to.pdf, id=807, 402.50375pt x 247.92625pt>
+File: adc_21-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_21-eps-converted-to.pdf>
+Package pdftex.def Info: adc_21-eps-converted-to.pdf  used on input line 800.
+(pdftex.def)             Requested size: 402.50276pt x 247.92564pt.
+
+:tex2html_wrap_indisplay4752:lthtmlCropMarkHeight:=253.92564pt
+
+:tex2html_wrap_indisplay4752:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[89 </home/fred-olav/afgv/book/adc_21-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_22.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 21874 bytes
+(epstopdf)             Output file: <adc_22-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:17
+(epstopdf)                    size: 14602 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_22-eps-converted-to.pd
+f adc_22.eps>
+(epstopdf)             \includegraphics on input line 806.
+Package epstopdf Info: Output file is already uptodate.
+<adc_22-eps-converted-to.pdf, id=822, 430.60875pt x 238.8925pt>
+File: adc_22-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_22-eps-converted-to.pdf>
+Package pdftex.def Info: adc_22-eps-converted-to.pdf  used on input line 806.
+(pdftex.def)             Requested size: 430.60768pt x 238.8919pt.
+
+:tex2html_wrap_indisplay4754:lthtmlCropMarkHeight:=244.8919pt
+
+:tex2html_wrap_indisplay4754:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[90 </home/fred-olav/afgv/book/adc_22-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_23.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 17569 bytes
+(epstopdf)             Output file: <adc_23-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:17
+(epstopdf)                    size: 12126 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_23-eps-converted-to.pd
+f adc_23.eps>
+(epstopdf)             \includegraphics on input line 812.
+Package epstopdf Info: Output file is already uptodate.
+<adc_23-eps-converted-to.pdf, id=837, 422.57875pt x 201.75375pt>
+File: adc_23-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_23-eps-converted-to.pdf>
+Package pdftex.def Info: adc_23-eps-converted-to.pdf  used on input line 812.
+(pdftex.def)             Requested size: 422.57771pt x 201.75325pt.
+
+:tex2html_wrap_indisplay4756:lthtmlCropMarkHeight:=207.75325pt
+
+:tex2html_wrap_indisplay4756:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[91 </home/fred-olav/afgv/book/adc_23-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <adc_24.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 18262 bytes
+(epstopdf)             Output file: <adc_24-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:18
+(epstopdf)                    size: 13623 bytes
+(epstopdf)             Command: <repstopdf --outfile=adc_24-eps-converted-to.pd
+f adc_24.eps>
+(epstopdf)             \includegraphics on input line 818.
+Package epstopdf Info: Output file is already uptodate.
+<adc_24-eps-converted-to.pdf, id=853, 411.5375pt x 210.7875pt>
+File: adc_24-eps-converted-to.pdf Graphic file (type pdf)
+<use adc_24-eps-converted-to.pdf>
+Package pdftex.def Info: adc_24-eps-converted-to.pdf  used on input line 818.
+(pdftex.def)             Requested size: 411.5365pt x 210.78699pt.
+
+:tex2html_wrap_indisplay4758:lthtmlCropMarkHeight:=216.78699pt
+
+:tex2html_wrap_indisplay4758:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[92 </home/fred-olav/afgv/book/adc_24-eps-converted-to.pdf>]
+
+:tex2html_wrap_indisplay4763:lthtmlCropMarkHeight:=51.09993pt
+
+:tex2html_wrap_indisplay4763:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[93]
+
+:tex2html_wrap_indisplay4767:lthtmlCropMarkHeight:=51.09993pt
+
+:tex2html_wrap_indisplay4767:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[94]
+
+:tex2html_wrap_inline4769:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4769:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[95]
+Package epstopdf Info: Source file: <digital_04.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8578 bytes
+(epstopdf)             Output file: <digital_04-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:18
+(epstopdf)                    size: 4445 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_04-eps-converted-t
+o.pdf digital_04.eps>
+(epstopdf)             \includegraphics on input line 868.
+Package epstopdf Info: Output file is already uptodate.
+<digital_04-eps-converted-to.pdf, id=885, 239.89626pt x 42.1575pt>
+File: digital_04-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_04-eps-converted-to.pdf>
+Package pdftex.def Info: digital_04-eps-converted-to.pdf  used on input line 86
+8.
+(pdftex.def)             Requested size: 239.89566pt x 42.15738pt.
+
+:tex2html_wrap_indisplay4778:lthtmlCropMarkHeight:=48.15738pt
+
+:tex2html_wrap_indisplay4778:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[96 </home/fred-olav/afgv/book/digital_04-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_05.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10946 bytes
+(epstopdf)             Output file: <digital_05-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:19
+(epstopdf)                    size: 9157 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_05-eps-converted-t
+o.pdf digital_05.eps>
+(epstopdf)             \includegraphics on input line 874.
+Package epstopdf Info: Output file is already uptodate.
+<digital_05-eps-converted-to.pdf, id=894, 207.77625pt x 155.58125pt>
+File: digital_05-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_05-eps-converted-to.pdf>
+Package pdftex.def Info: digital_05-eps-converted-to.pdf  used on input line 87
+4.
+(pdftex.def)             Requested size: 207.77573pt x 155.58086pt.
+
+:tex2html_wrap_indisplay4780:lthtmlCropMarkHeight:=161.58086pt
+
+:tex2html_wrap_indisplay4780:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[97 </home/fred-olav/afgv/book/digital_05-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4789:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4789:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[98]
+Package epstopdf Info: Source file: <digital_08.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 15234 bytes
+(epstopdf)             Output file: <digital_08-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:20
+(epstopdf)                    size: 7440 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_08-eps-converted-t
+o.pdf digital_08.eps>
+(epstopdf)             \includegraphics on input line 887.
+Package epstopdf Info: Output file is already uptodate.
+<digital_08-eps-converted-to.pdf, id=912, 248.93pt x 186.6975pt>
+File: digital_08-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_08-eps-converted-to.pdf>
+Package pdftex.def Info: digital_08-eps-converted-to.pdf  used on input line 88
+7.
+(pdftex.def)             Requested size: 248.92938pt x 186.69704pt.
+
+:tex2html_wrap_indisplay4793:lthtmlCropMarkHeight:=192.69704pt
+
+:tex2html_wrap_indisplay4793:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[99 </home/fred-olav/afgv/book/digital_08-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_07.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 17232 bytes
+(epstopdf)             Output file: <digital_07-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:20
+(epstopdf)                    size: 9079 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_07-eps-converted-t
+o.pdf digital_07.eps>
+(epstopdf)             \includegraphics on input line 893.
+Package epstopdf Info: Output file is already uptodate.
+<digital_07-eps-converted-to.pdf, id=924, 188.705pt x 258.9675pt>
+File: digital_07-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_07-eps-converted-to.pdf>
+Package pdftex.def Info: digital_07-eps-converted-to.pdf  used on input line 89
+3.
+(pdftex.def)             Requested size: 188.70453pt x 258.96684pt.
+
+:tex2html_wrap_indisplay4795:lthtmlCropMarkHeight:=264.96684pt
+
+:tex2html_wrap_indisplay4795:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[100 </home/fred-olav/afgv/book/digital_07-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_06.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 15239 bytes
+(epstopdf)             Output file: <digital_06-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:21
+(epstopdf)                    size: 7218 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_06-eps-converted-t
+o.pdf digital_06.eps>
+(epstopdf)             \includegraphics on input line 899.
+Package epstopdf Info: Output file is already uptodate.
+<digital_06-eps-converted-to.pdf, id=939, 189.70876pt x 186.6975pt>
+File: digital_06-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_06-eps-converted-to.pdf>
+Package pdftex.def Info: digital_06-eps-converted-to.pdf  used on input line 89
+9.
+(pdftex.def)             Requested size: 189.70828pt x 186.69704pt.
+
+:tex2html_wrap_indisplay4799:lthtmlCropMarkHeight:=192.69704pt
+
+:tex2html_wrap_indisplay4799:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[101 </home/fred-olav/afgv/book/digital_06-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_09.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 17743 bytes
+(epstopdf)             Output file: <digital_09-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:21
+(epstopdf)                    size: 9899 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_09-eps-converted-t
+o.pdf digital_09.eps>
+(epstopdf)             \includegraphics on input line 906.
+Package epstopdf Info: Output file is already uptodate.
+<digital_09-eps-converted-to.pdf, id=951, 324.21124pt x 248.93pt>
+File: digital_09-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_09-eps-converted-to.pdf>
+Package pdftex.def Info: digital_09-eps-converted-to.pdf  used on input line 90
+6.
+(pdftex.def)             Requested size: 324.21045pt x 248.92938pt.
+
+:tex2html_wrap_indisplay4806:lthtmlCropMarkHeight:=254.92938pt
+
+:tex2html_wrap_indisplay4806:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[102 </home/fred-olav/afgv/book/digital_09-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_11.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9638 bytes
+(epstopdf)             Output file: <digital_11-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:22
+(epstopdf)                    size: 8784 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_11-eps-converted-t
+o.pdf digital_11.eps>
+(epstopdf)             \includegraphics on input line 913.
+Package epstopdf Info: Output file is already uptodate.
+<digital_11-eps-converted-to.pdf, id=966, 407.5225pt x 110.4125pt>
+File: digital_11-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_11-eps-converted-to.pdf>
+Package pdftex.def Info: digital_11-eps-converted-to.pdf  used on input line 91
+3.
+(pdftex.def)             Requested size: 407.5215pt x 110.41222pt.
+
+:tex2html_wrap_indisplay4813:lthtmlCropMarkHeight:=116.41222pt
+
+:tex2html_wrap_indisplay4813:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[103 </home/fred-olav/afgv/book/digital_11-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_10.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 54306 bytes
+(epstopdf)             Output file: <digital_10-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:23
+(epstopdf)                    size: 8133 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_10-eps-converted-t
+o.pdf digital_10.eps>
+(epstopdf)             \includegraphics on input line 919.
+Package epstopdf Info: Output file is already uptodate.
+<digital_10-eps-converted-to.pdf, id=979, 414.54875pt x 308.15125pt>
+File: digital_10-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_10-eps-converted-to.pdf>
+Package pdftex.def Info: digital_10-eps-converted-to.pdf  used on input line 91
+9.
+(pdftex.def)             Requested size: 289.07999pt x 214.89095pt.
+
+:tex2html_wrap_indisplay4817:lthtmlCropMarkHeight:=220.89095pt
+
+:tex2html_wrap_indisplay4817:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[104 </home/fred-olav/afgv/book/digital_10-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_12.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11001 bytes
+(epstopdf)             Output file: <digital_12-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:23
+(epstopdf)                    size: 10020 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_12-eps-converted-t
+o.pdf digital_12.eps>
+(epstopdf)             \includegraphics on input line 925.
+Package epstopdf Info: Output file is already uptodate.
+<digital_12-eps-converted-to.pdf, id=986, 407.5225pt x 183.68625pt>
+File: digital_12-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_12-eps-converted-to.pdf>
+Package pdftex.def Info: digital_12-eps-converted-to.pdf  used on input line 92
+5.
+(pdftex.def)             Requested size: 407.5215pt x 183.68578pt.
+
+:tex2html_wrap_indisplay4821:lthtmlCropMarkHeight:=189.68578pt
+
+:tex2html_wrap_indisplay4821:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[105 </home/fred-olav/afgv/book/digital_12-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_13.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11009 bytes
+(epstopdf)             Output file: <digital_13-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:24
+(epstopdf)                    size: 10029 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_13-eps-converted-t
+o.pdf digital_13.eps>
+(epstopdf)             \includegraphics on input line 931.
+Package epstopdf Info: Output file is already uptodate.
+<digital_13-eps-converted-to.pdf, id=1001, 376.40625pt x 184.69pt>
+File: digital_13-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_13-eps-converted-to.pdf>
+Package pdftex.def Info: digital_13-eps-converted-to.pdf  used on input line 93
+1.
+(pdftex.def)             Requested size: 376.40532pt x 184.68953pt.
+
+:tex2html_wrap_indisplay4825:lthtmlCropMarkHeight:=190.68953pt
+
+:tex2html_wrap_indisplay4825:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[106 </home/fred-olav/afgv/book/digital_13-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_14.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11254 bytes
+(epstopdf)             Output file: <digital_14-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:24
+(epstopdf)                    size: 11928 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_14-eps-converted-t
+o.pdf digital_14.eps>
+(epstopdf)             \includegraphics on input line 937.
+Package epstopdf Info: Output file is already uptodate.
+<digital_14-eps-converted-to.pdf, id=1017, 426.59375pt x 181.67876pt>
+File: digital_14-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_14-eps-converted-to.pdf>
+Package pdftex.def Info: digital_14-eps-converted-to.pdf  used on input line 93
+7.
+(pdftex.def)             Requested size: 426.5927pt x 181.6783pt.
+
+:tex2html_wrap_indisplay4827:lthtmlCropMarkHeight:=187.6783pt
+
+:tex2html_wrap_indisplay4827:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[107 </home/fred-olav/afgv/book/digital_14-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4831:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4831:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[108]
+
+:tex2html_wrap_inline4835:lthtmlCropMarkHeight:=12.32pt
+
+:tex2html_wrap_inline4835:lthtmlCropMarkDepth:=0.32pt:1ex:=5.16667pt
+[109]
+
+:tex2html_wrap_inline4837:lthtmlCropMarkHeight:=12.32pt
+
+:tex2html_wrap_inline4837:lthtmlCropMarkDepth:=0.32pt:1ex:=5.16667pt
+[110]
+
+:tex2html_wrap_inline4839:lthtmlCropMarkHeight:=12.32pt
+
+:tex2html_wrap_inline4839:lthtmlCropMarkDepth:=0.32pt:1ex:=5.16667pt
+[111]
+Package epstopdf Info: Source file: <digital_34.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 60487 bytes
+(epstopdf)             Output file: <digital_34-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:25
+(epstopdf)                    size: 8173 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_34-eps-converted-t
+o.pdf digital_34.eps>
+(epstopdf)             \includegraphics on input line 967.
+Package epstopdf Info: Output file is already uptodate.
+<digital_34-eps-converted-to.pdf, id=1054, 486.81876pt x 318.18875pt>
+File: digital_34-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_34-eps-converted-to.pdf>
+Package pdftex.def Info: digital_34-eps-converted-to.pdf  used on input line 96
+7.
+(pdftex.def)             Requested size: 289.07999pt x 188.94351pt.
+
+:tex2html_wrap_indisplay4847:lthtmlCropMarkHeight:=194.94351pt
+
+:tex2html_wrap_indisplay4847:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[112 </home/fred-olav/afgv/book/digital_34-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_15.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11853 bytes
+(epstopdf)             Output file: <digital_15-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:26
+(epstopdf)                    size: 14614 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_15-eps-converted-t
+o.pdf digital_15.eps>
+(epstopdf)             \includegraphics on input line 979.
+Package epstopdf Info: Output file is already uptodate.
+<digital_15-eps-converted-to.pdf, id=1061, 438.63875pt x 315.1775pt>
+File: digital_15-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_15-eps-converted-to.pdf>
+Package pdftex.def Info: digital_15-eps-converted-to.pdf  used on input line 97
+9.
+(pdftex.def)             Requested size: 438.63766pt x 315.17673pt.
+
+:tex2html_wrap_indisplay4861:lthtmlCropMarkHeight:=321.17673pt
+
+:tex2html_wrap_indisplay4861:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[113 </home/fred-olav/afgv/book/digital_15-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_16.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10290 bytes
+(epstopdf)             Output file: <digital_16-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:26
+(epstopdf)                    size: 7253 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_16-eps-converted-t
+o.pdf digital_16.eps>
+(epstopdf)             \includegraphics on input line 987.
+Package epstopdf Info: Output file is already uptodate.
+<digital_16-eps-converted-to.pdf, id=1076, 364.36125pt x 136.51pt>
+File: digital_16-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_16-eps-converted-to.pdf>
+Package pdftex.def Info: digital_16-eps-converted-to.pdf  used on input line 98
+7.
+(pdftex.def)             Requested size: 364.36035pt x 136.50966pt.
+
+:tex2html_wrap_indisplay4871:lthtmlCropMarkHeight:=142.50966pt
+
+:tex2html_wrap_indisplay4871:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[114 </home/fred-olav/afgv/book/digital_16-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4875:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4875:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[115]
+Package epstopdf Info: Source file: <digital_17.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8412 bytes
+(epstopdf)             Output file: <digital_17-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:27
+(epstopdf)                    size: 5700 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_17-eps-converted-t
+o.pdf digital_17.eps>
+(epstopdf)             \includegraphics on input line 999.
+Package epstopdf Info: Output file is already uptodate.
+<digital_17-eps-converted-to.pdf, id=1093, 198.7425pt x 91.34125pt>
+File: digital_17-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_17-eps-converted-to.pdf>
+Package pdftex.def Info: digital_17-eps-converted-to.pdf  used on input line 99
+9.
+(pdftex.def)             Requested size: 198.742pt x 91.34102pt.
+
+:tex2html_wrap_indisplay4879:lthtmlCropMarkHeight:=97.34102pt
+
+:tex2html_wrap_indisplay4879:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[116 </home/fred-olav/afgv/book/digital_17-eps-converted-to.pdf>]
+
+:tex2html_wrap_indisplay4881:lthtmlCropMarkHeight:=155.39978pt
+
+:tex2html_wrap_indisplay4881:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[117]
+Package epstopdf Info: Source file: <digital_18.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 12747 bytes
+(epstopdf)             Output file: <digital_18-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:27
+(epstopdf)                    size: 9221 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_18-eps-converted-t
+o.pdf digital_18.eps>
+(epstopdf)             \includegraphics on input line 1038.
+Package epstopdf Info: Output file is already uptodate.
+<digital_18-eps-converted-to.pdf, id=1106, 421.575pt x 121.45375pt>
+File: digital_18-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_18-eps-converted-to.pdf>
+Package pdftex.def Info: digital_18-eps-converted-to.pdf  used on input line 10
+38.
+(pdftex.def)             Requested size: 421.57396pt x 121.45343pt.
+
+:tex2html_wrap_indisplay4887:lthtmlCropMarkHeight:=127.45343pt
+
+:tex2html_wrap_indisplay4887:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[118 </home/fred-olav/afgv/book/digital_18-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_78.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 13994 bytes
+(epstopdf)             Output file: <digital_78-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:28
+(epstopdf)                    size: 10072 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_78-eps-converted-t
+o.pdf digital_78.eps>
+(epstopdf)             \includegraphics on input line 1044.
+Package epstopdf Info: Output file is already uptodate.
+<digital_78-eps-converted-to.pdf, id=1118, 421.575pt x 157.58875pt>
+File: digital_78-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_78-eps-converted-to.pdf>
+Package pdftex.def Info: digital_78-eps-converted-to.pdf  used on input line 10
+44.
+(pdftex.def)             Requested size: 421.57396pt x 157.58835pt.
+
+:tex2html_wrap_indisplay4889:lthtmlCropMarkHeight:=163.58835pt
+
+:tex2html_wrap_indisplay4889:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[119 </home/fred-olav/afgv/book/digital_78-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_19.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9714 bytes
+(epstopdf)             Output file: <digital_19-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:28
+(epstopdf)                    size: 7565 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_19-eps-converted-t
+o.pdf digital_19.eps>
+(epstopdf)             \includegraphics on input line 1050.
+Package epstopdf Info: Output file is already uptodate.
+<digital_19-eps-converted-to.pdf, id=1130, 179.67125pt x 105.39375pt>
+File: digital_19-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_19-eps-converted-to.pdf>
+Package pdftex.def Info: digital_19-eps-converted-to.pdf  used on input line 10
+50.
+(pdftex.def)             Requested size: 179.67079pt x 105.39348pt.
+
+:tex2html_wrap_indisplay4891:lthtmlCropMarkHeight:=111.39348pt
+
+:tex2html_wrap_indisplay4891:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[120 </home/fred-olav/afgv/book/digital_19-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_20.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9396 bytes
+(epstopdf)             Output file: <digital_20-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:29
+(epstopdf)                    size: 6605 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_20-eps-converted-t
+o.pdf digital_20.eps>
+(epstopdf)             \includegraphics on input line 1057.
+Package epstopdf Info: Output file is already uptodate.
+<digital_20-eps-converted-to.pdf, id=1142, 355.3275pt x 100.375pt>
+File: digital_20-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_20-eps-converted-to.pdf>
+Package pdftex.def Info: digital_20-eps-converted-to.pdf  used on input line 10
+57.
+(pdftex.def)             Requested size: 355.32661pt x 100.37474pt.
+
+:tex2html_wrap_indisplay4900:lthtmlCropMarkHeight:=106.37474pt
+
+:tex2html_wrap_indisplay4900:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[121 </home/fred-olav/afgv/book/digital_20-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_39.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10569 bytes
+(epstopdf)             Output file: <digital_39-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:30
+(epstopdf)                    size: 9664 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_39-eps-converted-t
+o.pdf digital_39.eps>
+(epstopdf)             \includegraphics on input line 1063.
+Package epstopdf Info: Output file is already uptodate.
+<digital_39-eps-converted-to.pdf, id=1155, 369.38pt x 133.49875pt>
+File: digital_39-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_39-eps-converted-to.pdf>
+Package pdftex.def Info: digital_39-eps-converted-to.pdf  used on input line 10
+63.
+(pdftex.def)             Requested size: 369.37909pt x 133.4984pt.
+
+:tex2html_wrap_indisplay4902:lthtmlCropMarkHeight:=139.4984pt
+
+:tex2html_wrap_indisplay4902:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[122 </home/fred-olav/afgv/book/digital_39-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_38.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 12448 bytes
+(epstopdf)             Output file: <digital_38-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:30
+(epstopdf)                    size: 9660 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_38-eps-converted-t
+o.pdf digital_38.eps>
+(epstopdf)             \includegraphics on input line 1069.
+Package epstopdf Info: Output file is already uptodate.
+<digital_38-eps-converted-to.pdf, id=1170, 385.44pt x 151.56625pt>
+File: digital_38-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_38-eps-converted-to.pdf>
+Package pdftex.def Info: digital_38-eps-converted-to.pdf  used on input line 10
+69.
+(pdftex.def)             Requested size: 385.43906pt x 151.56587pt.
+
+:tex2html_wrap_indisplay4904:lthtmlCropMarkHeight:=157.56587pt
+
+:tex2html_wrap_indisplay4904:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[123 </home/fred-olav/afgv/book/digital_38-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4906:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4906:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[124]
+
+:tex2html_wrap_inline4910:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4910:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[125]
+
+:tex2html_wrap_inline4912:lthtmlCropMarkHeight:=13.73332pt
+
+:tex2html_wrap_inline4912:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[126]
+Package epstopdf Info: Source file: <digital_21.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 13131 bytes
+(epstopdf)             Output file: <digital_21-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:31
+(epstopdf)                    size: 6671 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_21-eps-converted-t
+o.pdf digital_21.eps>
+(epstopdf)             \includegraphics on input line 1093.
+Package epstopdf Info: Output file is already uptodate.
+<digital_21-eps-converted-to.pdf, id=1197, 315.1775pt x 158.5925pt>
+File: digital_21-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_21-eps-converted-to.pdf>
+Package pdftex.def Info: digital_21-eps-converted-to.pdf  used on input line 10
+93.
+(pdftex.def)             Requested size: 315.17673pt x 158.59209pt.
+
+:tex2html_wrap_indisplay4920:lthtmlCropMarkHeight:=164.59209pt
+
+:tex2html_wrap_indisplay4920:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[127 </home/fred-olav/afgv/book/digital_21-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_22.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 13434 bytes
+(epstopdf)             Output file: <digital_22-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:31
+(epstopdf)                    size: 8741 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_22-eps-converted-t
+o.pdf digital_22.eps>
+(epstopdf)             \includegraphics on input line 1099.
+Package epstopdf Info: Output file is already uptodate.
+<digital_22-eps-converted-to.pdf, id=1208, 315.1775pt x 309.155pt>
+File: digital_22-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_22-eps-converted-to.pdf>
+Package pdftex.def Info: digital_22-eps-converted-to.pdf  used on input line 10
+99.
+(pdftex.def)             Requested size: 315.17673pt x 309.15424pt.
+
+:tex2html_wrap_indisplay4926:lthtmlCropMarkHeight:=315.15424pt
+
+:tex2html_wrap_indisplay4926:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[128 </home/fred-olav/afgv/book/digital_22-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_36.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11728 bytes
+(epstopdf)             Output file: <digital_36-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:32
+(epstopdf)                    size: 7812 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_36-eps-converted-t
+o.pdf digital_36.eps>
+(epstopdf)             \includegraphics on input line 1105.
+Package epstopdf Info: Output file is already uptodate.
+<digital_36-eps-converted-to.pdf, id=1220, 432.61626pt x 206.7725pt>
+File: digital_36-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_36-eps-converted-to.pdf>
+Package pdftex.def Info: digital_36-eps-converted-to.pdf  used on input line 11
+05.
+(pdftex.def)             Requested size: 432.6152pt x 206.77199pt.
+
+:tex2html_wrap_indisplay4930:lthtmlCropMarkHeight:=212.77199pt
+
+:tex2html_wrap_indisplay4930:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[129 </home/fred-olav/afgv/book/digital_36-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_37.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 13809 bytes
+(epstopdf)             Output file: <digital_37-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:32
+(epstopdf)                    size: 10065 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_37-eps-converted-t
+o.pdf digital_37.eps>
+(epstopdf)             \includegraphics on input line 1111.
+Package epstopdf Info: Output file is already uptodate.
+<digital_37-eps-converted-to.pdf, id=1229, 437.635pt x 188.705pt>
+File: digital_37-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_37-eps-converted-to.pdf>
+Package pdftex.def Info: digital_37-eps-converted-to.pdf  used on input line 11
+11.
+(pdftex.def)             Requested size: 437.63393pt x 188.70453pt.
+
+:tex2html_wrap_indisplay4934:lthtmlCropMarkHeight:=194.70453pt
+
+:tex2html_wrap_indisplay4934:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[130 </home/fred-olav/afgv/book/digital_37-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_23.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10757 bytes
+(epstopdf)             Output file: <digital_23-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:33
+(epstopdf)                    size: 5912 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_23-eps-converted-t
+o.pdf digital_23.eps>
+(epstopdf)             \includegraphics on input line 1119.
+Package epstopdf Info: Output file is already uptodate.
+<digital_23-eps-converted-to.pdf, id=1244, 356.33125pt x 179.67125pt>
+File: digital_23-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_23-eps-converted-to.pdf>
+Package pdftex.def Info: digital_23-eps-converted-to.pdf  used on input line 11
+19.
+(pdftex.def)             Requested size: 356.33037pt x 179.67079pt.
+
+:tex2html_wrap_indisplay4942:lthtmlCropMarkHeight:=185.67079pt
+
+:tex2html_wrap_indisplay4942:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[131 </home/fred-olav/afgv/book/digital_23-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_24.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9607 bytes
+(epstopdf)             Output file: <digital_24-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:33
+(epstopdf)                    size: 5584 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_24-eps-converted-t
+o.pdf digital_24.eps>
+(epstopdf)             \includegraphics on input line 1125.
+Package epstopdf Info: Output file is already uptodate.
+<digital_24-eps-converted-to.pdf, id=1253, 283.0575pt x 206.7725pt>
+File: digital_24-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_24-eps-converted-to.pdf>
+Package pdftex.def Info: digital_24-eps-converted-to.pdf  used on input line 11
+25.
+(pdftex.def)             Requested size: 283.0568pt x 206.77199pt.
+
+:tex2html_wrap_indisplay4946:lthtmlCropMarkHeight:=212.77199pt
+
+:tex2html_wrap_indisplay4946:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[132 </home/fred-olav/afgv/book/digital_24-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_26.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 12149 bytes
+(epstopdf)             Output file: <digital_26-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:34
+(epstopdf)                    size: 5086 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_26-eps-converted-t
+o.pdf digital_26.eps>
+(epstopdf)             \includegraphics on input line 1131.
+Package epstopdf Info: Output file is already uptodate.
+<digital_26-eps-converted-to.pdf, id=1262, 342.27875pt x 154.5775pt>
+File: digital_26-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_26-eps-converted-to.pdf>
+Package pdftex.def Info: digital_26-eps-converted-to.pdf  used on input line 11
+31.
+(pdftex.def)             Requested size: 342.2779pt x 154.5771pt.
+
+:tex2html_wrap_indisplay4950:lthtmlCropMarkHeight:=160.5771pt
+
+:tex2html_wrap_indisplay4950:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[133 </home/fred-olav/afgv/book/digital_26-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_35.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11279 bytes
+(epstopdf)             Output file: <digital_35-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:35
+(epstopdf)                    size: 6478 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_35-eps-converted-t
+o.pdf digital_35.eps>
+(epstopdf)             \includegraphics on input line 1138.
+Package epstopdf Info: Output file is already uptodate.
+<digital_35-eps-converted-to.pdf, id=1272, 173.64874pt x 100.375pt>
+File: digital_35-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_35-eps-converted-to.pdf>
+Package pdftex.def Info: digital_35-eps-converted-to.pdf  used on input line 11
+38.
+(pdftex.def)             Requested size: 173.64832pt x 100.37474pt.
+
+:tex2html_wrap_indisplay4953:lthtmlCropMarkHeight:=106.37474pt
+
+:tex2html_wrap_indisplay4953:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[134 </home/fred-olav/afgv/book/digital_35-eps-converted-to.pdf>]
+
+:tex2html_wrap_indisplay4957:lthtmlCropMarkHeight:=140.4998pt
+
+:tex2html_wrap_indisplay4957:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[135]
+
+:tex2html_wrap_indisplay4959:lthtmlCropMarkHeight:=140.4998pt
+
+:tex2html_wrap_indisplay4959:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[136]
+Package epstopdf Info: Source file: <digital_75.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11013 bytes
+(epstopdf)             Output file: <digital_75-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:35
+(epstopdf)                    size: 9863 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_75-eps-converted-t
+o.pdf digital_75.eps>
+(epstopdf)             \includegraphics on input line 1206.
+Package epstopdf Info: Output file is already uptodate.
+<digital_75-eps-converted-to.pdf, id=1289, 360.34625pt x 107.40125pt>
+File: digital_75-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_75-eps-converted-to.pdf>
+Package pdftex.def Info: digital_75-eps-converted-to.pdf  used on input line 12
+06.
+(pdftex.def)             Requested size: 360.34537pt x 107.40097pt.
+
+:tex2html_wrap_indisplay4963:lthtmlCropMarkHeight:=113.40097pt
+
+:tex2html_wrap_indisplay4963:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[137 </home/fred-olav/afgv/book/digital_75-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_40.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 13521 bytes
+(epstopdf)             Output file: <digital_40-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:36
+(epstopdf)                    size: 7678 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_40-eps-converted-t
+o.pdf digital_40.eps>
+(epstopdf)             \includegraphics on input line 1212.
+Package epstopdf Info: Output file is already uptodate.
+<digital_40-eps-converted-to.pdf, id=1304, 345.29pt x 186.6975pt>
+File: digital_40-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_40-eps-converted-to.pdf>
+Package pdftex.def Info: digital_40-eps-converted-to.pdf  used on input line 12
+12.
+(pdftex.def)             Requested size: 345.28914pt x 186.69704pt.
+
+:tex2html_wrap_indisplay4965:lthtmlCropMarkHeight:=192.69704pt
+
+:tex2html_wrap_indisplay4965:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[138 </home/fred-olav/afgv/book/digital_40-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_25.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 116038 bytes
+(epstopdf)             Output file: <digital_25-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:37
+(epstopdf)                    size: 93405 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_25-eps-converted-t
+o.pdf digital_25.eps>
+(epstopdf)             \includegraphics on input line 1218.
+Package epstopdf Info: Output file is already uptodate.
+<digital_25-eps-converted-to.pdf, id=1316, 557.08125pt x 370.38374pt>
+File: digital_25-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_25-eps-converted-to.pdf>
+Package pdftex.def Info: digital_25-eps-converted-to.pdf  used on input line 12
+18.
+(pdftex.def)             Requested size: 433.62pt x 288.30473pt.
+
+:tex2html_wrap_indisplay4967:lthtmlCropMarkHeight:=294.30473pt
+
+:tex2html_wrap_indisplay4967:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[139 </home/fred-olav/afgv/book/digital_25-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_27.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 12725 bytes
+(epstopdf)             Output file: <digital_27-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:37
+(epstopdf)                    size: 7807 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_27-eps-converted-t
+o.pdf digital_27.eps>
+(epstopdf)             \includegraphics on input line 1225.
+Package epstopdf Info: Output file is already uptodate.
+<digital_27-eps-converted-to.pdf, id=1324, 410.53375pt x 181.67876pt>
+File: digital_27-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_27-eps-converted-to.pdf>
+Package pdftex.def Info: digital_27-eps-converted-to.pdf  used on input line 12
+25.
+(pdftex.def)             Requested size: 410.53275pt x 181.6783pt.
+
+:tex2html_wrap_indisplay4972:lthtmlCropMarkHeight:=187.6783pt
+
+:tex2html_wrap_indisplay4972:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[140 </home/fred-olav/afgv/book/digital_27-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_29.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8618 bytes
+(epstopdf)             Output file: <digital_29-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:38
+(epstopdf)                    size: 6759 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_29-eps-converted-t
+o.pdf digital_29.eps>
+(epstopdf)             \includegraphics on input line 1233.
+Package epstopdf Info: Output file is already uptodate.
+<digital_29-eps-converted-to.pdf, id=1336, 423.5825pt x 87.32625pt>
+File: digital_29-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_29-eps-converted-to.pdf>
+Package pdftex.def Info: digital_29-eps-converted-to.pdf  used on input line 12
+33.
+(pdftex.def)             Requested size: 423.58147pt x 87.32603pt.
+
+:tex2html_wrap_indisplay4980:lthtmlCropMarkHeight:=93.32603pt
+
+:tex2html_wrap_indisplay4980:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[141 </home/fred-olav/afgv/book/digital_29-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline4988:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline4988:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[142]
+Package epstopdf Info: Source file: <digital_28.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9084 bytes
+(epstopdf)             Output file: <digital_28-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:38
+(epstopdf)                    size: 7858 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_28-eps-converted-t
+o.pdf digital_28.eps>
+(epstopdf)             \includegraphics on input line 1248.
+Package epstopdf Info: Output file is already uptodate.
+<digital_28-eps-converted-to.pdf, id=1352, 423.5825pt x 74.2775pt>
+File: digital_28-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_28-eps-converted-to.pdf>
+Package pdftex.def Info: digital_28-eps-converted-to.pdf  used on input line 12
+48.
+(pdftex.def)             Requested size: 423.58147pt x 74.27731pt.
+
+:tex2html_wrap_indisplay4999:lthtmlCropMarkHeight:=80.27731pt
+
+:tex2html_wrap_indisplay4999:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[143 </home/fred-olav/afgv/book/digital_28-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_32.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 122444 bytes
+(epstopdf)             Output file: <digital_32-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:39
+(epstopdf)                    size: 11772 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_32-eps-converted-t
+o.pdf digital_32.eps>
+(epstopdf)             \includegraphics on input line 1254.
+Package epstopdf Info: Output file is already uptodate.
+<digital_32-eps-converted-to.pdf, id=1365, 667.49374pt x 331.2375pt>
+File: digital_32-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_32-eps-converted-to.pdf>
+Package pdftex.def Info: digital_32-eps-converted-to.pdf  used on input line 12
+54.
+(pdftex.def)             Requested size: 361.34999pt x 179.32047pt.
+
+:tex2html_wrap_indisplay5001:lthtmlCropMarkHeight:=185.32047pt
+
+:tex2html_wrap_indisplay5001:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[144 </home/fred-olav/afgv/book/digital_32-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_30.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9223 bytes
+(epstopdf)             Output file: <digital_30-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:40
+(epstopdf)                    size: 7984 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_30-eps-converted-t
+o.pdf digital_30.eps>
+(epstopdf)             \includegraphics on input line 1260.
+Package epstopdf Info: Output file is already uptodate.
+<digital_30-eps-converted-to.pdf, id=1372, 423.5825pt x 91.34125pt>
+File: digital_30-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_30-eps-converted-to.pdf>
+Package pdftex.def Info: digital_30-eps-converted-to.pdf  used on input line 12
+60.
+(pdftex.def)             Requested size: 423.58147pt x 91.34102pt.
+
+:tex2html_wrap_indisplay5003:lthtmlCropMarkHeight:=97.34102pt
+
+:tex2html_wrap_indisplay5003:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[145 </home/fred-olav/afgv/book/digital_30-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_31.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9241 bytes
+(epstopdf)             Output file: <digital_31-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:40
+(epstopdf)                    size: 8249 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_31-eps-converted-t
+o.pdf digital_31.eps>
+(epstopdf)             \includegraphics on input line 1266.
+Package epstopdf Info: Output file is already uptodate.
+<digital_31-eps-converted-to.pdf, id=1385, 423.5825pt x 89.33376pt>
+File: digital_31-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_31-eps-converted-to.pdf>
+Package pdftex.def Info: digital_31-eps-converted-to.pdf  used on input line 12
+66.
+(pdftex.def)             Requested size: 423.58147pt x 89.33353pt.
+
+:tex2html_wrap_indisplay5005:lthtmlCropMarkHeight:=95.33353pt
+
+:tex2html_wrap_indisplay5005:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[146 </home/fred-olav/afgv/book/digital_31-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline5009:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline5009:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[147]
+
+:tex2html_wrap_inline5011:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline5011:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[148]
+
+:tex2html_wrap_inline5017:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline5017:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[149]
+
+:tex2html_wrap_inline5019:lthtmlCropMarkHeight:=15.51027pt
+
+:tex2html_wrap_inline5019:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[150]
+Package epstopdf Info: Source file: <digital_77.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 431530 bytes
+(epstopdf)             Output file: <digital_77-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:43
+(epstopdf)                    size: 94105 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_77-eps-converted-t
+o.pdf digital_77.eps>
+(epstopdf)             \includegraphics on input line 1299.
+Package epstopdf Info: Output file is already uptodate.
+<digital_77-eps-converted-to.pdf, id=1413, 501.875pt x 291.0875pt>
+File: digital_77-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_77-eps-converted-to.pdf>
+Package pdftex.def Info: digital_77-eps-converted-to.pdf  used on input line 12
+99.
+(pdftex.def)             Requested size: 361.34999pt x 209.5917pt.
+
+:tex2html_wrap_indisplay5030:lthtmlCropMarkHeight:=215.5917pt
+
+:tex2html_wrap_indisplay5030:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[151 </home/fred-olav/afgv/book/digital_77-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_41.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 54563 bytes
+(epstopdf)             Output file: <digital_41-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:43
+(epstopdf)                    size: 7466 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_41-eps-converted-t
+o.pdf digital_41.eps>
+(epstopdf)             \includegraphics on input line 1307.
+Package epstopdf Info: Output file is already uptodate.
+<digital_41-eps-converted-to.pdf, id=1421, 530.98375pt x 213.79875pt>
+File: digital_41-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_41-eps-converted-to.pdf>
+Package pdftex.def Info: digital_41-eps-converted-to.pdf  used on input line 13
+07.
+(pdftex.def)             Requested size: 361.34999pt x 145.49866pt.
+
+:tex2html_wrap_indisplay5038:lthtmlCropMarkHeight:=151.49866pt
+
+:tex2html_wrap_indisplay5038:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[152 </home/fred-olav/afgv/book/digital_41-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_42.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 274377 bytes
+(epstopdf)             Output file: <digital_42-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:45
+(epstopdf)                    size: 52139 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_42-eps-converted-t
+o.pdf digital_42.eps>
+(epstopdf)             \includegraphics on input line 1313.
+Package epstopdf Info: Output file is already uptodate.
+<digital_42-eps-converted-to.pdf, id=1428, 594.22pt x 500.87125pt>
+File: digital_42-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_42-eps-converted-to.pdf>
+Package pdftex.def Info: digital_42-eps-converted-to.pdf  used on input line 13
+13.
+(pdftex.def)             Requested size: 361.34999pt x 304.5986pt.
+
+:tex2html_wrap_indisplay5040:lthtmlCropMarkHeight:=310.5986pt
+
+:tex2html_wrap_indisplay5040:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[153 </home/fred-olav/afgv/book/digital_42-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_43.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 83291 bytes
+(epstopdf)             Output file: <digital_43-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:46
+(epstopdf)                    size: 23330 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_43-eps-converted-t
+o.pdf digital_43.eps>
+(epstopdf)             \includegraphics on input line 1319.
+Package epstopdf Info: Output file is already uptodate.
+<digital_43-eps-converted-to.pdf, id=1435, 416.55624pt x 246.9225pt>
+File: digital_43-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_43-eps-converted-to.pdf>
+Package pdftex.def Info: digital_43-eps-converted-to.pdf  used on input line 13
+19.
+(pdftex.def)             Requested size: 361.34999pt x 214.20668pt.
+
+:tex2html_wrap_indisplay5042:lthtmlCropMarkHeight:=220.20668pt
+
+:tex2html_wrap_indisplay5042:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[154 </home/fred-olav/afgv/book/digital_43-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_46.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 52919 bytes
+(epstopdf)             Output file: <digital_46-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:47
+(epstopdf)                    size: 6973 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_46-eps-converted-t
+o.pdf digital_46.eps>
+(epstopdf)             \includegraphics on input line 1325.
+Package epstopdf Info: Output file is already uptodate.
+<digital_46-eps-converted-to.pdf, id=1442, 604.2575pt x 175.65625pt>
+File: digital_46-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_46-eps-converted-to.pdf>
+Package pdftex.def Info: digital_46-eps-converted-to.pdf  used on input line 13
+25.
+(pdftex.def)             Requested size: 361.34999pt x 105.04343pt.
+
+:tex2html_wrap_indisplay5044:lthtmlCropMarkHeight:=111.04343pt
+
+:tex2html_wrap_indisplay5044:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[155 </home/fred-olav/afgv/book/digital_46-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_44.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 429839 bytes
+(epstopdf)             Output file: <digital_44-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:49
+(epstopdf)                    size: 80301 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_44-eps-converted-t
+o.pdf digital_44.eps>
+(epstopdf)             \includegraphics on input line 1331.
+Package epstopdf Info: Output file is already uptodate.
+<digital_44-eps-converted-to.pdf, id=1449, 644.4075pt x 258.9675pt>
+File: digital_44-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_44-eps-converted-to.pdf>
+Package pdftex.def Info: digital_44-eps-converted-to.pdf  used on input line 13
+31.
+(pdftex.def)             Requested size: 361.34999pt x 145.22232pt.
+
+:tex2html_wrap_indisplay5046:lthtmlCropMarkHeight:=151.22232pt
+
+:tex2html_wrap_indisplay5046:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[156 </home/fred-olav/afgv/book/digital_44-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_45.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 186693 bytes
+(epstopdf)             Output file: <digital_45-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:51
+(epstopdf)                    size: 15717 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_45-eps-converted-t
+o.pdf digital_45.eps>
+(epstopdf)             \includegraphics on input line 1337.
+Package epstopdf Info: Output file is already uptodate.
+<digital_45-eps-converted-to.pdf, id=1456, 644.4075pt x 368.37625pt>
+File: digital_45-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_45-eps-converted-to.pdf>
+Package pdftex.def Info: digital_45-eps-converted-to.pdf  used on input line 13
+37.
+(pdftex.def)             Requested size: 361.34999pt x 206.57594pt.
+
+:tex2html_wrap_indisplay5048:lthtmlCropMarkHeight:=212.57594pt
+
+:tex2html_wrap_indisplay5048:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[157 </home/fred-olav/afgv/book/digital_45-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_33.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 111973 bytes
+(epstopdf)             Output file: <digital_33-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:52
+(epstopdf)                    size: 11441 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_33-eps-converted-t
+o.pdf digital_33.eps>
+(epstopdf)             \includegraphics on input line 1344.
+Package epstopdf Info: Output file is already uptodate.
+<digital_33-eps-converted-to.pdf, id=1464, 644.4075pt x 337.26pt>
+File: digital_33-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_33-eps-converted-to.pdf>
+Package pdftex.def Info: digital_33-eps-converted-to.pdf  used on input line 13
+44.
+(pdftex.def)             Requested size: 361.34999pt x 189.12675pt.
+
+:tex2html_wrap_indisplay5055:lthtmlCropMarkHeight:=195.12675pt
+
+:tex2html_wrap_indisplay5055:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[158 </home/fred-olav/afgv/book/digital_33-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <current39.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 12337 bytes
+(epstopdf)             Output file: <current39-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:52
+(epstopdf)                    size: 10779 bytes
+(epstopdf)             Command: <repstopdf --outfile=current39-eps-converted-to
+.pdf current39.eps>
+(epstopdf)             \includegraphics on input line 1352.
+Package epstopdf Info: Output file is already uptodate.
+<current39-eps-converted-to.pdf, id=1471, 318.18875pt x 113.42375pt>
+File: current39-eps-converted-to.pdf Graphic file (type pdf)
+<use current39-eps-converted-to.pdf>
+Package pdftex.def Info: current39-eps-converted-to.pdf  used on input line 135
+2.
+(pdftex.def)             Requested size: 318.18796pt x 113.42346pt.
+
+:tex2html_wrap_indisplay5059:lthtmlCropMarkHeight:=119.42346pt
+
+:tex2html_wrap_indisplay5059:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[159 </home/fred-olav/afgv/book/current39-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <current40.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 13623 bytes
+(epstopdf)             Output file: <current40-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:53
+(epstopdf)                    size: 8764 bytes
+(epstopdf)             Command: <repstopdf --outfile=current40-eps-converted-to
+.pdf current40.eps>
+(epstopdf)             \includegraphics on input line 1358.
+Package epstopdf Info: Output file is already uptodate.
+<current40-eps-converted-to.pdf, id=1490, 277.035pt x 176.66pt>
+File: current40-eps-converted-to.pdf Graphic file (type pdf)
+<use current40-eps-converted-to.pdf>
+Package pdftex.def Info: current40-eps-converted-to.pdf  used on input line 135
+8.
+(pdftex.def)             Requested size: 277.03432pt x 176.65956pt.
+
+:tex2html_wrap_indisplay5063:lthtmlCropMarkHeight:=182.65956pt
+
+:tex2html_wrap_indisplay5063:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[160 </home/fred-olav/afgv/book/current40-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <current41.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 15719 bytes
+(epstopdf)             Output file: <current41-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:54
+(epstopdf)                    size: 12026 bytes
+(epstopdf)             Command: <repstopdf --outfile=current41-eps-converted-to
+.pdf current41.eps>
+(epstopdf)             \includegraphics on input line 1364.
+Package epstopdf Info: Output file is already uptodate.
+<current41-eps-converted-to.pdf, id=1506, 363.3575pt x 176.66pt>
+File: current41-eps-converted-to.pdf Graphic file (type pdf)
+<use current41-eps-converted-to.pdf>
+Package pdftex.def Info: current41-eps-converted-to.pdf  used on input line 136
+4.
+(pdftex.def)             Requested size: 363.3566pt x 176.65956pt.
+
+:tex2html_wrap_indisplay5065:lthtmlCropMarkHeight:=182.65956pt
+
+:tex2html_wrap_indisplay5065:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[161 </home/fred-olav/afgv/book/current41-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <268_communicator.eps>
+(epstopdf)                    date: 2020-06-12 13:07:16
+(epstopdf)                    size: 71111 bytes
+(epstopdf)             Output file: <268_communicator-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:54
+(epstopdf)                    size: 57946 bytes
+(epstopdf)             Command: <repstopdf --outfile=268_communicator-eps-conve
+rted-to.pdf 268_communicator.eps>
+(epstopdf)             \includegraphics on input line 1370.
+Package epstopdf Info: Output file is already uptodate.
+<268_communicator-eps-converted-to.pdf, id=1526, 483.8075pt x 805.0075pt>
+File: 268_communicator-eps-converted-to.pdf Graphic file (type pdf)
+<use 268_communicator-eps-converted-to.pdf>
+Package pdftex.def Info: 268_communicator-eps-converted-to.pdf  used on input l
+ine 1370.
+(pdftex.def)             Requested size: 144.54pt x 240.49687pt.
+Package epstopdf Info: Source file: <375_communicator.eps>
+(epstopdf)                    date: 2020-06-12 13:07:16
+(epstopdf)                    size: 76932 bytes
+(epstopdf)             Output file: <375_communicator-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:07:55
+(epstopdf)                    size: 62542 bytes
+(epstopdf)             Command: <repstopdf --outfile=375_communicator-eps-conve
+rted-to.pdf 375_communicator.eps>
+(epstopdf)             \includegraphics on input line 1370.
+Package epstopdf Info: Output file is already uptodate.
+<375_communicator-eps-converted-to.pdf, id=1527, 471.7625pt x 805.0075pt>
+File: 375_communicator-eps-converted-to.pdf Graphic file (type pdf)
+<use 375_communicator-eps-converted-to.pdf>
+Package pdftex.def Info: 375_communicator-eps-converted-to.pdf  used on input l
+ine 1370.
+(pdftex.def)             Requested size: 144.54pt x 246.63858pt.
+
+:tex2html_wrap_indisplay5067:lthtmlCropMarkHeight:=252.63858pt
+
+:tex2html_wrap_indisplay5067:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[162 </home/fred-olav/afgv/book/268_communicator-eps-converted-to.pdf> </home/f
+red-olav/afgv/book/375_communicator-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_80.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 2623598 bytes
+(epstopdf)             Output file: <digital_80-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:08
+(epstopdf)                    size: 249360 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_80-eps-converted-t
+o.pdf digital_80.eps>
+(epstopdf)             \includegraphics on input line 1377.
+Package epstopdf Info: Output file is already uptodate.
+<digital_80-eps-converted-to.pdf, id=1536, 1028.84375pt x 684.5575pt>
+File: digital_80-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_80-eps-converted-to.pdf>
+Package pdftex.def Info: digital_80-eps-converted-to.pdf  used on input line 13
+77.
+(pdftex.def)             Requested size: 289.07999pt x 192.34329pt.
+
+:tex2html_wrap_indisplay5076:lthtmlCropMarkHeight:=198.34329pt
+
+:tex2html_wrap_indisplay5076:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[163 </home/fred-olav/afgv/book/digital_80-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <current15.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9243 bytes
+(epstopdf)             Output file: <current15-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:09
+(epstopdf)                    size: 5202 bytes
+(epstopdf)             Command: <repstopdf --outfile=current15-eps-converted-to
+.pdf current15.eps>
+(epstopdf)             \includegraphics on input line 1383.
+Package epstopdf Info: Output file is already uptodate.
+<current15-eps-converted-to.pdf, id=1544, 255.95625pt x 105.39375pt>
+File: current15-eps-converted-to.pdf Graphic file (type pdf)
+<use current15-eps-converted-to.pdf>
+Package pdftex.def Info: current15-eps-converted-to.pdf  used on input line 138
+3.
+(pdftex.def)             Requested size: 255.95561pt x 105.39348pt.
+
+:tex2html_wrap_indisplay5078:lthtmlCropMarkHeight:=111.39348pt
+
+:tex2html_wrap_indisplay5078:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[164 </home/fred-olav/afgv/book/current15-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <current16.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10169 bytes
+(epstopdf)             Output file: <current16-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:09
+(epstopdf)                    size: 5726 bytes
+(epstopdf)             Command: <repstopdf --outfile=current16-eps-converted-to
+.pdf current16.eps>
+(epstopdf)             \includegraphics on input line 1389.
+Package epstopdf Info: Output file is already uptodate.
+<current16-eps-converted-to.pdf, id=1553, 255.95625pt x 211.79124pt>
+File: current16-eps-converted-to.pdf Graphic file (type pdf)
+<use current16-eps-converted-to.pdf>
+Package pdftex.def Info: current16-eps-converted-to.pdf  used on input line 138
+9.
+(pdftex.def)             Requested size: 255.95561pt x 211.79073pt.
+
+:tex2html_wrap_indisplay5082:lthtmlCropMarkHeight:=217.79073pt
+
+:tex2html_wrap_indisplay5082:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[165 </home/fred-olav/afgv/book/current16-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <current17.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9623 bytes
+(epstopdf)             Output file: <current17-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:10
+(epstopdf)                    size: 5607 bytes
+(epstopdf)             Command: <repstopdf --outfile=current17-eps-converted-to
+.pdf current17.eps>
+(epstopdf)             \includegraphics on input line 1395.
+Package epstopdf Info: Output file is already uptodate.
+<current17-eps-converted-to.pdf, id=1562, 255.95625pt x 211.79124pt>
+File: current17-eps-converted-to.pdf Graphic file (type pdf)
+<use current17-eps-converted-to.pdf>
+Package pdftex.def Info: current17-eps-converted-to.pdf  used on input line 139
+5.
+(pdftex.def)             Requested size: 255.95561pt x 211.79073pt.
+
+:tex2html_wrap_indisplay5084:lthtmlCropMarkHeight:=217.79073pt
+
+:tex2html_wrap_indisplay5084:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[166 </home/fred-olav/afgv/book/current17-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <current18.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10192 bytes
+(epstopdf)             Output file: <current18-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:10
+(epstopdf)                    size: 6057 bytes
+(epstopdf)             Command: <repstopdf --outfile=current18-eps-converted-to
+.pdf current18.eps>
+(epstopdf)             \includegraphics on input line 1401.
+Package epstopdf Info: Output file is already uptodate.
+<current18-eps-converted-to.pdf, id=1571, 283.0575pt x 211.79124pt>
+File: current18-eps-converted-to.pdf Graphic file (type pdf)
+<use current18-eps-converted-to.pdf>
+Package pdftex.def Info: current18-eps-converted-to.pdf  used on input line 140
+1.
+(pdftex.def)             Requested size: 283.0568pt x 211.79073pt.
+
+:tex2html_wrap_indisplay5086:lthtmlCropMarkHeight:=217.79073pt
+
+:tex2html_wrap_indisplay5086:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[167 </home/fred-olav/afgv/book/current18-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <current20.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9984 bytes
+(epstopdf)             Output file: <current20-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:11
+(epstopdf)                    size: 5975 bytes
+(epstopdf)             Command: <repstopdf --outfile=current20-eps-converted-to
+.pdf current20.eps>
+(epstopdf)             \includegraphics on input line 1407.
+Package epstopdf Info: Output file is already uptodate.
+<current20-eps-converted-to.pdf, id=1580, 283.0575pt x 211.79124pt>
+File: current20-eps-converted-to.pdf Graphic file (type pdf)
+<use current20-eps-converted-to.pdf>
+Package pdftex.def Info: current20-eps-converted-to.pdf  used on input line 140
+7.
+(pdftex.def)             Requested size: 283.0568pt x 211.79073pt.
+
+:tex2html_wrap_indisplay5088:lthtmlCropMarkHeight:=217.79073pt
+
+:tex2html_wrap_indisplay5088:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[168 </home/fred-olav/afgv/book/current20-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <current19.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10566 bytes
+(epstopdf)             Output file: <current19-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:11
+(epstopdf)                    size: 6130 bytes
+(epstopdf)             Command: <repstopdf --outfile=current19-eps-converted-to
+.pdf current19.eps>
+(epstopdf)             \includegraphics on input line 1413.
+Package epstopdf Info: Output file is already uptodate.
+<current19-eps-converted-to.pdf, id=1589, 279.0425pt x 211.79124pt>
+File: current19-eps-converted-to.pdf Graphic file (type pdf)
+<use current19-eps-converted-to.pdf>
+Package pdftex.def Info: current19-eps-converted-to.pdf  used on input line 141
+3.
+(pdftex.def)             Requested size: 279.04181pt x 211.79073pt.
+
+:tex2html_wrap_indisplay5090:lthtmlCropMarkHeight:=217.79073pt
+
+:tex2html_wrap_indisplay5090:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[169 </home/fred-olav/afgv/book/current19-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <current21.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 13509 bytes
+(epstopdf)             Output file: <current21-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:12
+(epstopdf)                    size: 9487 bytes
+(epstopdf)             Command: <repstopdf --outfile=current21-eps-converted-to
+.pdf current21.eps>
+(epstopdf)             \includegraphics on input line 1420.
+Package epstopdf Info: Output file is already uptodate.
+<current21-eps-converted-to.pdf, id=1599, 395.4775pt x 197.73875pt>
+File: current21-eps-converted-to.pdf Graphic file (type pdf)
+<use current21-eps-converted-to.pdf>
+Package pdftex.def Info: current21-eps-converted-to.pdf  used on input line 142
+0.
+(pdftex.def)             Requested size: 395.47653pt x 197.73827pt.
+
+:tex2html_wrap_indisplay5093:lthtmlCropMarkHeight:=203.73827pt
+
+:tex2html_wrap_indisplay5093:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[170 </home/fred-olav/afgv/book/current21-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Rosemount_333.eps>
+(epstopdf)                    date: 2020-06-12 13:07:17
+(epstopdf)                    size: 76135 bytes
+(epstopdf)             Output file: <Rosemount_333-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:12
+(epstopdf)                    size: 61985 bytes
+(epstopdf)             Command: <repstopdf --outfile=Rosemount_333-eps-converte
+d-to.pdf Rosemount_333.eps>
+(epstopdf)             \includegraphics on input line 1427.
+Package epstopdf Info: Output file is already uptodate.
+<Rosemount_333-eps-converted-to.pdf, id=1612, 557.08125pt x 370.38374pt>
+File: Rosemount_333-eps-converted-to.pdf Graphic file (type pdf)
+<use Rosemount_333-eps-converted-to.pdf>
+Package pdftex.def Info: Rosemount_333-eps-converted-to.pdf  used on input line
+ 1427.
+(pdftex.def)             Requested size: 289.07999pt x 192.20503pt.
+
+:tex2html_wrap_indisplay5096:lthtmlCropMarkHeight:=198.20503pt
+
+:tex2html_wrap_indisplay5096:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[171 </home/fred-olav/afgv/book/Rosemount_333-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <modbus_01.eps>
+(epstopdf)                    date: 2020-06-12 13:07:21
+(epstopdf)                    size: 22248 bytes
+(epstopdf)             Output file: <modbus_01-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:13
+(epstopdf)                    size: 13501 bytes
+(epstopdf)             Command: <repstopdf --outfile=modbus_01-eps-converted-to
+.pdf modbus_01.eps>
+(epstopdf)             \includegraphics on input line 1435.
+Package epstopdf Info: Output file is already uptodate.
+<modbus_01-eps-converted-to.pdf, id=1619, 440.64626pt x 218.8175pt>
+File: modbus_01-eps-converted-to.pdf Graphic file (type pdf)
+<use modbus_01-eps-converted-to.pdf>
+Package pdftex.def Info: modbus_01-eps-converted-to.pdf  used on input line 143
+5.
+(pdftex.def)             Requested size: 440.64517pt x 218.81696pt.
+
+:tex2html_wrap_indisplay5104:lthtmlCropMarkHeight:=224.81696pt
+
+:tex2html_wrap_indisplay5104:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[172 </home/fred-olav/afgv/book/modbus_01-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <modbus_02.eps>
+(epstopdf)                    date: 2020-06-12 13:07:21
+(epstopdf)                    size: 21399 bytes
+(epstopdf)             Output file: <modbus_02-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:14
+(epstopdf)                    size: 13239 bytes
+(epstopdf)             Command: <repstopdf --outfile=modbus_02-eps-converted-to
+.pdf modbus_02.eps>
+(epstopdf)             \includegraphics on input line 1441.
+Package epstopdf Info: Output file is already uptodate.
+<modbus_02-eps-converted-to.pdf, id=1631, 427.5975pt x 204.765pt>
+File: modbus_02-eps-converted-to.pdf Graphic file (type pdf)
+<use modbus_02-eps-converted-to.pdf>
+Package pdftex.def Info: modbus_02-eps-converted-to.pdf  used on input line 144
+1.
+(pdftex.def)             Requested size: 427.59645pt x 204.76448pt.
+
+:tex2html_wrap_indisplay5106:lthtmlCropMarkHeight:=210.76448pt
+
+:tex2html_wrap_indisplay5106:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[173 </home/fred-olav/afgv/book/modbus_02-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <modbus_03.eps>
+(epstopdf)                    date: 2020-06-12 13:07:21
+(epstopdf)                    size: 25984 bytes
+(epstopdf)             Output file: <modbus_03-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:14
+(epstopdf)                    size: 15546 bytes
+(epstopdf)             Command: <repstopdf --outfile=modbus_03-eps-converted-to
+.pdf modbus_03.eps>
+(epstopdf)             \includegraphics on input line 1447.
+Package epstopdf Info: Output file is already uptodate.
+<modbus_03-eps-converted-to.pdf, id=1643, 427.5975pt x 418.56375pt>
+File: modbus_03-eps-converted-to.pdf Graphic file (type pdf)
+<use modbus_03-eps-converted-to.pdf>
+Package pdftex.def Info: modbus_03-eps-converted-to.pdf  used on input line 144
+7.
+(pdftex.def)             Requested size: 427.59645pt x 418.56271pt.
+
+:tex2html_wrap_indisplay5108:lthtmlCropMarkHeight:=424.56271pt
+
+:tex2html_wrap_indisplay5108:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[174 </home/fred-olav/afgv/book/modbus_03-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_47.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10617 bytes
+(epstopdf)             Output file: <digital_47-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:15
+(epstopdf)                    size: 9839 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_47-eps-converted-t
+o.pdf digital_47.eps>
+(epstopdf)             \includegraphics on input line 1454.
+Package epstopdf Info: Output file is already uptodate.
+<digital_47-eps-converted-to.pdf, id=1655, 420.57124pt x 218.8175pt>
+File: digital_47-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_47-eps-converted-to.pdf>
+Package pdftex.def Info: digital_47-eps-converted-to.pdf  used on input line 14
+54.
+(pdftex.def)             Requested size: 420.57022pt x 218.81696pt.
+
+:tex2html_wrap_indisplay5111:lthtmlCropMarkHeight:=224.81696pt
+
+:tex2html_wrap_indisplay5111:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[175 </home/fred-olav/afgv/book/digital_47-eps-converted-to.pdf>]
+
+:tex2html_wrap_indisplay5116:lthtmlCropMarkHeight:=154.99979pt
+
+:tex2html_wrap_indisplay5116:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[176]
+
+:tex2html_wrap_indisplay5118:lthtmlCropMarkHeight:=95.39987pt
+
+:tex2html_wrap_indisplay5118:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[177]
+Package epstopdf Info: Source file: <digital_76.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 271958 bytes
+(epstopdf)             Output file: <digital_76-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:16
+(epstopdf)                    size: 243796 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_76-eps-converted-t
+o.pdf digital_76.eps>
+(epstopdf)             \includegraphics on input line 1516.
+Package epstopdf Info: Output file is already uptodate.
+<digital_76-eps-converted-to.pdf, id=1678, 434.62375pt x 252.945pt>
+File: digital_76-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_76-eps-converted-to.pdf>
+Package pdftex.def Info: digital_76-eps-converted-to.pdf  used on input line 15
+16.
+(pdftex.def)             Requested size: 434.62268pt x 252.94438pt.
+
+:tex2html_wrap_indisplay5120:lthtmlCropMarkHeight:=258.94438pt
+
+:tex2html_wrap_indisplay5120:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[178 </home/fred-olav/afgv/book/digital_76-eps-converted-to.pdf>]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+523.
+(/usr/share/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1523.
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+525.
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1525.
+
+
+Overfull \hbox (109.2492pt too wide) in paragraph at lines 1534--1535
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (109.2492pt too wide) in paragraph at lines 1536--1537
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (38.74933pt too wide) in paragraph at lines 1538--1539
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.94928pt too wide) in paragraph at lines 1539--1540
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.94928pt too wide) in paragraph at lines 1540--1541
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.94928pt too wide) in paragraph at lines 1541--1542
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.94928pt too wide) in paragraph at lines 1542--1543
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+:lstlisting1326:lthtmlCropMarkHeight:=391.69958pt
+
+:lstlisting1326:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[179]
+Overfull \hbox (109.2492pt too wide) in paragraph at lines 1567--1568
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (137.44916pt too wide) in paragraph at lines 1569--1570
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (38.74933pt too wide) in paragraph at lines 1571--1572
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.94928pt too wide) in paragraph at lines 1572--1573
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.94928pt too wide) in paragraph at lines 1573--1574
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.94928pt too wide) in paragraph at lines 1574--1575
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+:lstlisting1344:lthtmlCropMarkHeight:=377.1996pt
+
+:lstlisting1344:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[180]
+
+:tex2html_wrap_inline5127:lthtmlCropMarkHeight:=15.91026pt
+
+:tex2html_wrap_inline5127:lthtmlCropMarkDepth:=3.0pt:1ex:=5.16667pt
+[181]
+Package epstopdf Info: Source file: <digital_53.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9559 bytes
+(epstopdf)             Output file: <digital_53-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:17
+(epstopdf)                    size: 8785 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_53-eps-converted-t
+o.pdf digital_53.eps>
+(epstopdf)             \includegraphics on input line 1596.
+Package epstopdf Info: Output file is already uptodate.
+<digital_53-eps-converted-to.pdf, id=1751, 294.09875pt x 88.33pt>
+File: digital_53-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_53-eps-converted-to.pdf>
+Package pdftex.def Info: digital_53-eps-converted-to.pdf  used on input line 15
+96.
+(pdftex.def)             Requested size: 294.09802pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5129:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5129:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[182 </home/fred-olav/afgv/book/digital_53-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_54.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9542 bytes
+(epstopdf)             Output file: <digital_54-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:18
+(epstopdf)                    size: 8997 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_54-eps-converted-t
+o.pdf digital_54.eps>
+(epstopdf)             \includegraphics on input line 1602.
+Package epstopdf Info: Output file is already uptodate.
+<digital_54-eps-converted-to.pdf, id=1766, 384.43625pt x 88.33pt>
+File: digital_54-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_54-eps-converted-to.pdf>
+Package pdftex.def Info: digital_54-eps-converted-to.pdf  used on input line 16
+02.
+(pdftex.def)             Requested size: 384.4353pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5131:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5131:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[183 </home/fred-olav/afgv/book/digital_54-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_55.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9562 bytes
+(epstopdf)             Output file: <digital_55-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:18
+(epstopdf)                    size: 8914 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_55-eps-converted-t
+o.pdf digital_55.eps>
+(epstopdf)             \includegraphics on input line 1609.
+Package epstopdf Info: Output file is already uptodate.
+<digital_55-eps-converted-to.pdf, id=1781, 294.09875pt x 88.33pt>
+File: digital_55-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_55-eps-converted-to.pdf>
+Package pdftex.def Info: digital_55-eps-converted-to.pdf  used on input line 16
+09.
+(pdftex.def)             Requested size: 294.09802pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5136:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5136:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[184 </home/fred-olav/afgv/book/digital_55-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_56.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9577 bytes
+(epstopdf)             Output file: <digital_56-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:19
+(epstopdf)                    size: 9129 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_56-eps-converted-t
+o.pdf digital_56.eps>
+(epstopdf)             \includegraphics on input line 1615.
+Package epstopdf Info: Output file is already uptodate.
+<digital_56-eps-converted-to.pdf, id=1796, 384.43625pt x 88.33pt>
+File: digital_56-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_56-eps-converted-to.pdf>
+Package pdftex.def Info: digital_56-eps-converted-to.pdf  used on input line 16
+15.
+(pdftex.def)             Requested size: 384.4353pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5138:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5138:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[185 </home/fred-olav/afgv/book/digital_56-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_57.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9563 bytes
+(epstopdf)             Output file: <digital_57-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:19
+(epstopdf)                    size: 8978 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_57-eps-converted-t
+o.pdf digital_57.eps>
+(epstopdf)             \includegraphics on input line 1622.
+Package epstopdf Info: Output file is already uptodate.
+<digital_57-eps-converted-to.pdf, id=1812, 294.09875pt x 88.33pt>
+File: digital_57-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_57-eps-converted-to.pdf>
+Package pdftex.def Info: digital_57-eps-converted-to.pdf  used on input line 16
+22.
+(pdftex.def)             Requested size: 294.09802pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5143:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5143:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[186 </home/fred-olav/afgv/book/digital_57-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_58.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10234 bytes
+(epstopdf)             Output file: <digital_58-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:20
+(epstopdf)                    size: 9192 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_58-eps-converted-t
+o.pdf digital_58.eps>
+(epstopdf)             \includegraphics on input line 1628.
+Package epstopdf Info: Output file is already uptodate.
+<digital_58-eps-converted-to.pdf, id=1827, 384.43625pt x 88.33pt>
+File: digital_58-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_58-eps-converted-to.pdf>
+Package pdftex.def Info: digital_58-eps-converted-to.pdf  used on input line 16
+28.
+(pdftex.def)             Requested size: 384.4353pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5145:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5145:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[187 </home/fred-olav/afgv/book/digital_58-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_59.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9563 bytes
+(epstopdf)             Output file: <digital_59-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:21
+(epstopdf)                    size: 8813 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_59-eps-converted-t
+o.pdf digital_59.eps>
+(epstopdf)             \includegraphics on input line 1635.
+Package epstopdf Info: Output file is already uptodate.
+<digital_59-eps-converted-to.pdf, id=1843, 294.09875pt x 88.33pt>
+File: digital_59-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_59-eps-converted-to.pdf>
+Package pdftex.def Info: digital_59-eps-converted-to.pdf  used on input line 16
+35.
+(pdftex.def)             Requested size: 294.09802pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5150:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5150:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[188 </home/fred-olav/afgv/book/digital_59-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_60.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10234 bytes
+(epstopdf)             Output file: <digital_60-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:21
+(epstopdf)                    size: 9025 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_60-eps-converted-t
+o.pdf digital_60.eps>
+(epstopdf)             \includegraphics on input line 1641.
+Package epstopdf Info: Output file is already uptodate.
+<digital_60-eps-converted-to.pdf, id=1858, 384.43625pt x 88.33pt>
+File: digital_60-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_60-eps-converted-to.pdf>
+Package pdftex.def Info: digital_60-eps-converted-to.pdf  used on input line 16
+41.
+(pdftex.def)             Requested size: 384.4353pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5152:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5152:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[189 </home/fred-olav/afgv/book/digital_60-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_61.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9515 bytes
+(epstopdf)             Output file: <digital_61-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:22
+(epstopdf)                    size: 9037 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_61-eps-converted-t
+o.pdf digital_61.eps>
+(epstopdf)             \includegraphics on input line 1648.
+Package epstopdf Info: Output file is already uptodate.
+<digital_61-eps-converted-to.pdf, id=1873, 294.09875pt x 88.33pt>
+File: digital_61-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_61-eps-converted-to.pdf>
+Package pdftex.def Info: digital_61-eps-converted-to.pdf  used on input line 16
+48.
+(pdftex.def)             Requested size: 294.09802pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5157:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5157:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[190 </home/fred-olav/afgv/book/digital_61-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_62.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9564 bytes
+(epstopdf)             Output file: <digital_62-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:22
+(epstopdf)                    size: 9058 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_62-eps-converted-t
+o.pdf digital_62.eps>
+(epstopdf)             \includegraphics on input line 1655.
+Package epstopdf Info: Output file is already uptodate.
+<digital_62-eps-converted-to.pdf, id=1888, 294.09875pt x 88.33pt>
+File: digital_62-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_62-eps-converted-to.pdf>
+Package pdftex.def Info: digital_62-eps-converted-to.pdf  used on input line 16
+55.
+(pdftex.def)             Requested size: 294.09802pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5162:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5162:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[191 </home/fred-olav/afgv/book/digital_62-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_63.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10528 bytes
+(epstopdf)             Output file: <digital_63-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:23
+(epstopdf)                    size: 9039 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_63-eps-converted-t
+o.pdf digital_63.eps>
+(epstopdf)             \includegraphics on input line 1662.
+Package epstopdf Info: Output file is already uptodate.
+<digital_63-eps-converted-to.pdf, id=1903, 429.605pt x 88.33pt>
+File: digital_63-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_63-eps-converted-to.pdf>
+Package pdftex.def Info: digital_63-eps-converted-to.pdf  used on input line 16
+62.
+(pdftex.def)             Requested size: 429.60394pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5167:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5167:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[192 </home/fred-olav/afgv/book/digital_63-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_64.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9539 bytes
+(epstopdf)             Output file: <digital_64-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:24
+(epstopdf)                    size: 8819 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_64-eps-converted-t
+o.pdf digital_64.eps>
+(epstopdf)             \includegraphics on input line 1668.
+Package epstopdf Info: Output file is already uptodate.
+<digital_64-eps-converted-to.pdf, id=1918, 294.09875pt x 88.33pt>
+File: digital_64-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_64-eps-converted-to.pdf>
+Package pdftex.def Info: digital_64-eps-converted-to.pdf  used on input line 16
+68.
+(pdftex.def)             Requested size: 294.09802pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5169:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5169:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[193 </home/fred-olav/afgv/book/digital_64-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_65.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 10542 bytes
+(epstopdf)             Output file: <digital_65-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:24
+(epstopdf)                    size: 9063 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_65-eps-converted-t
+o.pdf digital_65.eps>
+(epstopdf)             \includegraphics on input line 1675.
+Package epstopdf Info: Output file is already uptodate.
+<digital_65-eps-converted-to.pdf, id=1934, 429.605pt x 88.33pt>
+File: digital_65-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_65-eps-converted-to.pdf>
+Package pdftex.def Info: digital_65-eps-converted-to.pdf  used on input line 16
+75.
+(pdftex.def)             Requested size: 429.60394pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5174:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5174:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[194 </home/fred-olav/afgv/book/digital_65-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <digital_66.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9566 bytes
+(epstopdf)             Output file: <digital_66-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:08:25
+(epstopdf)                    size: 8819 bytes
+(epstopdf)             Command: <repstopdf --outfile=digital_66-eps-converted-t
+o.pdf digital_66.eps>
+(epstopdf)             \includegraphics on input line 1681.
+Package epstopdf Info: Output file is already uptodate.
+<digital_66-eps-converted-to.pdf, id=1949, 294.09875pt x 88.33pt>
+File: digital_66-eps-converted-to.pdf Graphic file (type pdf)
+<use digital_66-eps-converted-to.pdf>
+Package pdftex.def Info: digital_66-eps-converted-to.pdf  used on input line 16
+81.
+(pdftex.def)             Requested size: 294.09802pt x 88.32977pt.
+
+:tex2html_wrap_indisplay5176:lthtmlCropMarkHeight:=94.32977pt
+
+:tex2html_wrap_indisplay5176:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[195 </home/fred-olav/afgv/book/digital_66-eps-converted-to.pdf>]
+
+:lstlisting1415:lthtmlCropMarkHeight:=116.19987pt
+
+:lstlisting1415:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[196]
+Overfull \hbox (109.2492pt too wide) in paragraph at lines 1722--1723
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (116.2992pt too wide) in paragraph at lines 1724--1725
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (81.04926pt too wide) in paragraph at lines 1726--1727
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (95.14923pt too wide) in paragraph at lines 1727--1728
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (116.2992pt too wide) in paragraph at lines 1734--1735
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+:lstlisting1420:lthtmlCropMarkHeight:=580.19939pt
+
+:lstlisting1420:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[197]
+Overfull \hbox (109.2492pt too wide) in paragraph at lines 1760--1761
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (109.2492pt too wide) in paragraph at lines 1762--1763
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (59.89929pt too wide) in paragraph at lines 1764--1765
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.99927pt too wide) in paragraph at lines 1765--1766
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (88.09924pt too wide) in paragraph at lines 1769--1770
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+:lstlisting1438:lthtmlCropMarkHeight:=420.69955pt
+
+:lstlisting1438:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[198] (./images.aux)
+
+Package rerunfilecheck Warning: File `images.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `images.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 12096 strings out of 478994
+ 181308 string characters out of 5864751
+ 708458 words of memory out of 5000000
+ 28979 multiletter control sequences out of 15000+600000
+ 408106 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 71i,8n,74p,278b,1306s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on images.pdf (198 pages, 1854682 bytes).
+PDF statistics:
+ 2165 PDF objects out of 2487 (max. 8388607)
+ 1537 compressed objects within 16 object streams
+ 328 named destinations out of 1000 (max. 500000)
+ 591 words of extra memory for PDF output out of 10000 (max. 10000000)
+
