@@ -1,0 +1,1782 @@
+\batchmode
+\documentclass[12pt,a4paper,margin=2cm]{book}
+\RequirePackage{ifthen}
+
+
+
+
+\usepackage{ulem}
+
+
+\usepackage{makeidx}
+
+
+\usepackage[dvips]{graphicx} 
+
+
+\usepackage{array}
+\usepackage{amsmath}
+
+
+\usepackage{xcolor}
+
+
+\usepackage{listings}
+\usepackage{makecell} 
+\usepackage[	pdftitle = "{Automatiseringssystemer For Gand VGS}",    pdfauthor = "{Fred-Olav Mosdal}",    colorlinks = true,    breaklinks= true,    hyperindex = true]{hyperref}
+
+
+\lstdefinelanguage{pseudocode}
+{morekeywords={DECLARE,BEGIN,END,LOOP,ENDLOOP,SET,IF,THEN,CALL,RETURN,ELSEIF,ELSE,ENDIF,PRINT,OUTPUT,AND,OR},
+ morecomment=[l]{//}
+}
+
+
+\lstloadlanguages{pseudocode,[ANSI]C}
+
+
+\lstset{frame=single,keywordstyle=\color{blue}\bfseries ,commentstyle=\color{red}\itshape }
+
+
+
+\setlength{\parskip}{1em} 
+
+\setlength{\parindent}{0em} 
+
+
+
+\setlength{\textwidth}{16cm} 
+
+\setlength{\evensidemargin}{0cm} 
+
+\setlength{\oddsidemargin}{0cm} 
+
+\setlength{\extrarowheight}{3pt}  % adds extra space to the top of each LaTeX ("tabular") table row to make superscripted math expressions look better
+
+
+\makeindex
+
+
+
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\usepackage[tightpage,active]{preview}
+\newbox\lthtmlPageBox
+\newdimen\lthtmlCropMarkHeight
+\newdimen\lthtmlCropMarkDepth
+\long\def\lthtmlTightVBoxA#1{\def\lthtmllabel{#1}
+    \setbox\lthtmlPageBox\vbox\bgroup\catcode`\_=8 }%
+\long\def\lthtmlTightVBoxZ{\egroup
+    \lthtmlCropMarkHeight=\ht\lthtmlPageBox \advance \lthtmlCropMarkHeight 6pt
+    \lthtmlCropMarkDepth=\dp\lthtmlPageBox
+    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
+    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
+    \begin{preview}\copy\lthtmlPageBox\end{preview}}%
+\long\def\lthtmlTightFBoxA#1{\def\lthtmllabel{#1}%
+    \adjustnormalsize\setbox\lthtmlPageBox=\vbox\bgroup %
+    \let\ifinner=\iffalse \let\)\liih@math %
+    \bgroup\catcode`\_=8 }%
+\long\def\lthtmlTightFBoxZ{\egroup
+    \@next\next\@currlist{}{\def\next{\voidb@x}}%
+    \expandafter\box\next\egroup %
+    \lthtmlCropMarkHeight=\ht\lthtmlPageBox \advance \lthtmlCropMarkHeight 6pt
+    \lthtmlCropMarkDepth=\dp\lthtmlPageBox
+    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
+    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
+    \begin{preview}\copy\lthtmlPageBox\end{preview}}%
+    \long\def\lthtmlinlinemathA#1#2\lthtmlindisplaymathZ{\lthtmlTightVBoxA{#1}{\hbox\bgroup#2\egroup}\lthtmlTightVBoxZ}
+    \def\lthtmlinlineA#1#2\lthtmlinlineZ{\lthtmlTightVBoxA{#1}{\hbox\bgroup#2\egroup}\lthtmlTightVBoxZ}
+    \long\def\lthtmldisplayA#1#2\lthtmldisplayZ{\lthtmlTightVBoxA{#1}{#2}\lthtmlTightVBoxZ}
+    \long\def\lthtmldisplayB#1#2\lthtmldisplayZ{\\edef\preveqno{(\theequation)}%
+        \lthtmlTightVBoxA{#1}{\let\@eqnnum\relax#2}\lthtmlTightVBoxZ}
+    \long\def\lthtmlfigureA#1{\let\@savefreelist\@freelist
+        \lthtmlTightFBoxA{#1}}
+    \long\def\lthtmlfigureZ{
+        \lthtmlTightFBoxZ\global\let\@freelist\@savefreelist}
+    \long\def\lthtmlpictureA#1{\let\@savefreelist\@freelist
+        \lthtmlTightVBoxA{#1}}
+    \long\def\lthtmlpictureZ{
+        \lthtmlTightVBoxZ\global\let\@freelist\@savefreelist}
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\Tau}{\textrm{T}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\Alpha}{\textrm{A}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Chi}{\textrm{X}}
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+\stepcounter{chapter}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4479}%
+$\displaystyle \includegraphics[width=5in]{AMS_screen_1.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4485}%
+$ -35$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4487}%
+$ -1022$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4489}%
+$\displaystyle \includegraphics{digital_68.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4491}%
+$ 10^3 - 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4493}%
+$ -$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4495}%
+$ 2^{10} - 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4499}%
+$\displaystyle \includegraphics{digital_69.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4501}%
+$ 2^9 - 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4503}%
+$ -2^9$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4505}%
+$ -512$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4509}%
+$ -32768$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4511}%
+$\displaystyle \includegraphics{digital_70.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4514}%
+$\displaystyle \includegraphics{digital_74.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4517}%
+$ ^{o}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4519}%
+$\displaystyle 1002349 = 1.002349 \times 10^{6}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4521}%
+$\displaystyle 678.331 = 6.78331 \times 10^{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4523}%
+$\displaystyle 0.00004532 = 4.523 \times 10^{-5}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4525}%
+$ m$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4527}%
+$ E$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4529}%
+$\displaystyle \pm 1.m \times 2^{E}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4531}%
+$ \pm 1.m \times 2^{E}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4533}%
+$ \times 2^0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4535}%
+$ m = 0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4537}%
+$ E = 0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4539}%
+$ \pm 0.m \times 2^{E}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4545}%
+$ 2^0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4547}%
+$ 2^{-bias}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4557}%
+$ -127$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4561}%
+$\displaystyle \includegraphics{digital_71.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4564}%
+$\displaystyle \includegraphics{digital_73.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4568}%
+$\displaystyle \includegraphics[width=6in]{digital_72.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4570}%
+$ 2^{32} - 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4572}%
+$ 2^{16} - 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4574}%
+$ \pm$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4580}%
+$ -327.68$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4586}%
+$\displaystyle \includegraphics{digital_67.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4593}%
+$ 2^8$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4597}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil \vrule \cr
+\noalign{\hrule }
+$\downarrow$ LSB / MSB $\rightarrow$ & 000 & 001 & 010 & 011 & 100 & 101 & 110 & 111 \cr
+\noalign{\hrule }
+0000 & NUL & DLE & SP & 0 & @ & P & ` & p \cr
+\noalign{\hrule }
+0001 & SOH & DC1 & ! & 1 & A & Q & a & q \cr
+\noalign{\hrule }
+0010 & STX & DC2 & " & 2 & B & R & b & r \cr
+\noalign{\hrule }
+0011 & ETX & DC3 & \# & 3 & C & S & c & s \cr
+\noalign{\hrule }
+0100 & EOT & DC4 & \$ & 4 & D & T & d & t \cr
+\noalign{\hrule }
+0101 & ENQ & NAK & \% & 5 & E & U & e & u \cr
+\noalign{\hrule }
+0110 & ACK & SYN & \& & 6 & F & V & f & v \cr
+\noalign{\hrule }
+0111 & BEL & ETB & ' & 7 & G & W & g & w \cr
+\noalign{\hrule }
+1000 & BS & CAN & ( & 8 & H & X & h & x \cr
+\noalign{\hrule }
+1001 & HT & EM & ) & 9 & I & Y & i & y \cr
+\noalign{\hrule }
+1010 & LF & SUB & * & : & J & Z & j & z \cr
+\noalign{\hrule }
+1011 & VT & ESC & + & ; & K & $[$ & k & $\{$ \cr
+\noalign{\hrule }
+1100 & FF & FS & , & $<$ & L & $\backslash$ & l & $|$ \cr
+\noalign{\hrule }
+1101 & CR & GS & $-$ & $=$ & M & $]$ & m & $\}$ \cr
+\noalign{\hrule }
+1110 & SO & RS & . & $>$ & N & \^{} & n & \~{} \cr
+\noalign{\hrule }
+1111 & SI & US & / & ? & O & \_ & o & DEL \cr
+\noalign{\hrule }
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4604}%
+$\displaystyle \includegraphics{digital_01.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4606}%
+$ 2^{12}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4608}%
+$ 2^{12} - 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4610}%
+$\displaystyle \hbox{Analog resolution} = {\hbox{Analog span} \over {2^n - 1}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4612}%
+$ n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4616}%
+$\displaystyle {V_{in} \over V_{fullscale}} = {\hbox{Counts} \over 2^n - 1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4618}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil \vrule \cr
+\noalign{\hrule }
+$V_{in}$ & Counts (decimal) & Counts (hex) \cr
+\noalign{\hrule }
+0 V & 0 & \texttt{000} \cr
+\noalign{\hrule }
+2.46 mV & 1 & \texttt{001} \cr
+\noalign{\hrule }
+3.85 V & 1576 & \texttt{628} \cr
+\noalign{\hrule }
+4.59 V & 1879 & \texttt{757} \cr
+\noalign{\hrule }
+6.11 V & 2502 & \texttt{9C6} \cr
+\noalign{\hrule }
+9.998 V & 4094 & \texttt{FFE} \cr
+\noalign{\hrule }
+10 V & 4095 & \texttt{FFF} \cr
+\noalign{\hrule }
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4622}%
+$ -3.3$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4626}%
+$\displaystyle \includegraphics{digital_48.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4628}%
+$ -100$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4634}%
+$\displaystyle {300 - (-100) \over 450 - (-100)} = 0.7273 \hbox{ per unit}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4636}%
+$\displaystyle (0.7273)(16) + 4 = 15.636 \hbox{ mA}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4640}%
+$\displaystyle {{26.7 - (-3.3)} \over {103.3 - (-3.3)}} = {30 \over 106.6} = 0.2814 \hbox{ per unit}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4652}%
+$\displaystyle \includegraphics{digital_50.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4654}%
+$\displaystyle {2649 \over 4095} = 0.6469 \hbox{ per unit}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4656}%
+$\displaystyle (0.6469)(1881.35 - 868.65) + 868.65 = 1523.75 \hbox{ degrees F}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4663}%
+$\displaystyle \includegraphics{digital_02.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4665}%
+$\displaystyle \includegraphics{digital_79.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4667}%
+$\displaystyle \includegraphics{digital_03.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4671}%
+$\displaystyle \includegraphics{adc_01.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4673}%
+$\displaystyle \includegraphics{adc_02.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4677}%
+$ V_{in}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4683}%
+$\displaystyle \includegraphics{adc_03.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4685}%
+$\displaystyle \includegraphics{adc_04.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4687}%
+$\displaystyle \includegraphics{adc_05.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4689}%
+$\displaystyle \includegraphics{adc_06.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4691}%
+$\displaystyle \includegraphics{adc_07.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4693}%
+$ R_G$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4701}%
+$\displaystyle \includegraphics{adc_08.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4703}%
+$\displaystyle \includegraphics{adc_09.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4708}%
+$ V_{signal}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4710}%
+$ R_{fixed}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4712}%
+$ R_{RTD}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4714}%
+$\displaystyle \includegraphics{adc_10.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4716}%
+$ V_{excite}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4718}%
+$\displaystyle \includegraphics{adc_11.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4720}%
+$\displaystyle \includegraphics{adc_12.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4724}%
+$\displaystyle \includegraphics{adc_13.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4726}%
+$ -15$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4728}%
+$\displaystyle \includegraphics{adc_14.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4730}%
+$\displaystyle \includegraphics{adc_15.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4732}%
+$\displaystyle \includegraphics{adc_16.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4734}%
+$ V_{noise} = I_{ground} R_{wire}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4736}%
+$\displaystyle \includegraphics{adc_17.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4738}%
+$\displaystyle \includegraphics{adc_18.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4740}%
+$\displaystyle \includegraphics{adc_19.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4742}%
+$\displaystyle \includegraphics{adc_20.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4744}%
+$ V_{signal} + V_{common-mode}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4750}%
+$ V_{common-mode}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4752}%
+$\displaystyle \includegraphics{adc_21.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4754}%
+$\displaystyle \includegraphics{adc_22.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4756}%
+$\displaystyle \includegraphics{adc_23.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4758}%
+$\displaystyle \includegraphics{adc_24.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4763}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Analog} & \textbf{Digital} \cr
+\noalign{\hrule }
+Only one signal per channel & Many signals per channel possible \cr
+\noalign{\hrule }
+Instantaneous & Time-delayed \cr
+\noalign{\hrule }
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4767}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Analog} & \textbf{Digital} \cr
+\noalign{\hrule }
+Corrupted by any amount of noise & Immune to certain (limited) amounts of noise \cr
+\noalign{\hrule }
+Unlimited resolution & Limited resolution \cr
+\noalign{\hrule }
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4769}%
+$ 2^{16}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4778}%
+$\displaystyle \includegraphics{digital_04.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4780}%
+$\displaystyle \includegraphics{digital_05.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4789}%
+$ -3$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4793}%
+$\displaystyle \includegraphics{digital_08.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4795}%
+$\displaystyle \includegraphics{digital_07.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4799}%
+$\displaystyle \includegraphics{digital_06.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4806}%
+$\displaystyle \includegraphics{digital_09.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4813}%
+$\displaystyle \includegraphics{digital_11.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4817}%
+$\displaystyle \includegraphics[width=4in]{digital_10.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4821}%
+$\displaystyle \includegraphics{digital_12.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4825}%
+$\displaystyle \includegraphics{digital_13.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4827}%
+$\displaystyle \includegraphics{digital_14.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4831}%
+$ 10^{14}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4835}%
+$ <$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4837}%
+$ ><$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4839}%
+$ >$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4847}%
+$\displaystyle \includegraphics[width=4in]{digital_34.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{subsubsection}
+\stepcounter{subsubsection}
+\stepcounter{subsubsection}
+\stepcounter{subsubsection}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4861}%
+$\displaystyle \includegraphics{digital_15.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4871}%
+$\displaystyle \includegraphics{digital_16.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4875}%
+$ -5$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4879}%
+$\displaystyle \includegraphics{digital_17.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4881}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Pin number} & \textbf{Assignment} & \textbf{Abbreviation} \cr
+\noalign{\hrule }
+1 & Carrier Detect & CD \cr
+\noalign{\hrule }
+\textbf{2} & \textbf{Received Data} & \textbf{RD} \cr
+\noalign{\hrule }
+\textbf{3} & \textbf{Transmitted Data} & \textbf{TD} \cr
+\noalign{\hrule }
+4 & Data Terminal Ready & DTR \cr
+\noalign{\hrule }
+\textbf{5} & \textbf{Signal Ground} & \textbf{Gnd} \cr
+\noalign{\hrule }
+6 & Data Set Ready & DSR \cr
+\noalign{\hrule }
+7 & Request To Send & RTS \cr
+\noalign{\hrule }
+8 & Clear To Send & CTS \cr
+\noalign{\hrule }
+9 & Ring Indicator & RI \cr
+\noalign{\hrule }
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4887}%
+$\displaystyle \includegraphics{digital_18.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4889}%
+$\displaystyle \includegraphics{digital_78.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4891}%
+$\displaystyle \includegraphics{digital_19.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4900}%
+$\displaystyle \includegraphics{digital_20.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4902}%
+$\displaystyle \includegraphics{digital_39.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4904}%
+$\displaystyle \includegraphics{digital_38.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4906}%
+$ -200$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4910}%
+$ -2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4912}%
+$ -1.5$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4920}%
+$\displaystyle \includegraphics{digital_21.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4926}%
+$\displaystyle \includegraphics{digital_22.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4930}%
+$\displaystyle \includegraphics{digital_36.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4934}%
+$\displaystyle \includegraphics{digital_37.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4942}%
+$\displaystyle \includegraphics{digital_23.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4946}%
+$\displaystyle \includegraphics{digital_24.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4950}%
+$\displaystyle \includegraphics{digital_26.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4953}%
+$\displaystyle \includegraphics{digital_35.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4957}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Pin number} & \textbf{Assignment} & \textbf{Abbreviation} \cr
+\noalign{\hrule }
+1 & Transmit Data (+) & TD+ \cr
+\noalign{\hrule }
+2 & Transmit Data ($-$) & TD$-$ \cr
+\noalign{\hrule }
+3 & Receive Data (+) & RD+ \cr
+\noalign{\hrule }
+4 & (not used) &  \cr
+\noalign{\hrule }
+5 & (not used) &  \cr
+\noalign{\hrule }
+6 & Receive Data ($-$) & RD$-$ \cr
+\noalign{\hrule }
+7 & (not used) &  \cr
+\noalign{\hrule }
+8 & (not used) &  \cr
+\noalign{\hrule }
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4959}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Pin number} & \textbf{Assignment} & \textbf{Abbreviation} \cr
+\noalign{\hrule }
+1 & Pair ``A'' (+) & BI\_DA+ \cr
+\noalign{\hrule }
+2 & Pair ``A'' ($-$) & BI\_DA$-$ \cr
+\noalign{\hrule }
+3 & Pair ``B'' (+) & BI\_DB+ \cr
+\noalign{\hrule }
+4 & Pair ``C'' (+) & BI\_DC+ \cr
+\noalign{\hrule }
+5 & Pair ``C'' ($-$) & BI\_DC$-$ \cr
+\noalign{\hrule }
+6 & Pair ``B'' ($-$) & BI\_DB$-$ \cr
+\noalign{\hrule }
+7 & Pair ``D'' (+) & BI\_DD+ \cr
+\noalign{\hrule }
+8 & Pair ``D'' ($-$) & BI\_DD$-$ \cr
+\noalign{\hrule }
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4963}%
+$\displaystyle \includegraphics{digital_75.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4965}%
+$\displaystyle \includegraphics{digital_40.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4967}%
+$\displaystyle \includegraphics[width=6in]{digital_25.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4972}%
+$\displaystyle \includegraphics{digital_27.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4980}%
+$\displaystyle \includegraphics{digital_29.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline4988}%
+$ 2^{32}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4999}%
+$\displaystyle \includegraphics{digital_28.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5001}%
+$\displaystyle \includegraphics[width=5in]{digital_32.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5003}%
+$\displaystyle \includegraphics{digital_30.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5005}%
+$\displaystyle \includegraphics{digital_31.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5009}%
+$ 2^{128}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5011}%
+$ 3.4 \times 10^{38}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5017}%
+$ 5.98 \times 10^{24}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5019}%
+$ 5.98 \times 10^{27}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5030}%
+$\displaystyle \includegraphics[width=5in]{digital_77.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5038}%
+$\displaystyle \includegraphics[width=5in]{digital_41.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5040}%
+$\displaystyle \includegraphics[width=5in]{digital_42.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5042}%
+$\displaystyle \includegraphics[width=5in]{digital_43.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5044}%
+$\displaystyle \includegraphics[width=5in]{digital_46.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5046}%
+$\displaystyle \includegraphics[width=5in]{digital_44.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5048}%
+$\displaystyle \includegraphics[width=5in]{digital_45.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5055}%
+$\displaystyle \includegraphics[width=5in]{digital_33.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5059}%
+$\displaystyle \includegraphics{current39.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5063}%
+$\displaystyle \includegraphics{current40.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5065}%
+$\displaystyle \includegraphics{current41.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5067}%
+$\displaystyle \includegraphics[width=2in]{268_communicator.eps} \hskip 30pt \includegraphics[width=2in]{375_communicator.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5076}%
+$\displaystyle \includegraphics[width=4in]{digital_80.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5078}%
+$\displaystyle \includegraphics{current15.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5082}%
+$\displaystyle \includegraphics{current16.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5084}%
+$\displaystyle \includegraphics{current17.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5086}%
+$\displaystyle \includegraphics{current18.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5088}%
+$\displaystyle \includegraphics{current20.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5090}%
+$\displaystyle \includegraphics{current19.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5093}%
+$\displaystyle \includegraphics{current21.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5096}%
+$\displaystyle \includegraphics[width=4in]{Rosemount_333.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5104}%
+$\displaystyle \includegraphics{modbus_01.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5106}%
+$\displaystyle \includegraphics{modbus_02.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5108}%
+$\displaystyle \includegraphics{modbus_03.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5111}%
+$\displaystyle \includegraphics{digital_47.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5116}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Modbus code} & \textbf{Function} \cr
+(decimal) &  \cr
+\noalign{\hrule }
+01 & Read one or more PLC output ``coils'' (1 bit each) \cr
+\noalign{\hrule }
+02 & Read one or more PLC input ``contacts'' (1 bit each) \cr
+\noalign{\hrule }
+03 & Read one or more PLC ``holding'' registers (16 bits each) \cr
+\noalign{\hrule }
+04 & Read one or more PLC analog input registers (16 bits each) \cr
+\noalign{\hrule }
+05 & Write (force) a single PLC output ``coil'' (1 bit) \cr
+\noalign{\hrule }
+06 & Write (preset) a single PLC ``holding'' register (16 bits) \cr
+\noalign{\hrule }
+15 & Write (force) multiple PLC output ``coils'' (1 bit each) \cr
+\noalign{\hrule }
+16 & Write (preset) multiple PLC ``holding'' registers (16 bits each) \cr
+\noalign{\hrule }
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5118}%
+$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil & 
+\vrule \quad\hfil # \  \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Modbus codes} & \textbf{Address range} & \textbf{Purpose} \cr
+(decimal) & (decimal) & \cr
+\noalign{\hrule }
+01, 05, 15 & 00001 to 09999 & Discrete outputs (``coils''), \textit{read/write} \cr
+\noalign{\hrule }
+02 & 10001 to 19999 & Discrete inputs (``contacts''), \textit{read-only} \cr
+\noalign{\hrule }
+04 & 30001 to 39999 & Analog input registers, \textit{read-only} \cr
+\noalign{\hrule }
+03, 06, 16 & 40001 to 49999 & ``Holding'' registers, \textit{read/write} \cr
+\noalign{\hrule }
+} % End of \halign 
+}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5120}%
+$\displaystyle \includegraphics{digital_76.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting1326}%
+\begin{lstlisting}
+#include <stdio.h>
+#include <modbus.h>
+\par
+modbus_t *Device;
+\par
+int main (void)
+{
+  int read_count;
+  uint16_t inreg_word[4];
+\par
+Device = modbus_new_tcp ("192.168.0.10", 502);
+  modbus_set_error_recovery (Device, MODBUS_ERROR_RECOVERY_LINK);
+\par
+read_count = modbus_read_registers (Device, 9000, 4, inreg_word);
+\par
+printf("Number of registers read = %i \n", read_count);
+  printf("Value of register 49001 = %i \n", inreg_word[0]);
+  printf("Value of register 49002 = %i \n", inreg_word[1]);
+  printf("Value of register 49003 = %i \n", inreg_word[2]);
+  printf("Value of register 49004 = %i \n", inreg_word[3]);
+\par
+modbus_close (Device);
+  modbus_free (Device);
+\par
+return read_count;
+}
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting1344}%
+\begin{lstlisting}
+#include <stdio.h>
+#include <modbus.h>
+\par
+modbus_t *Device;
+\par
+int main (void)
+{
+  int read_count;
+  uint16_t inreg_word[3];
+\par
+Device = modbus_new_tcp ("192.168.0.10", 502);
+  modbus_set_error_recovery (Device, MODBUS_ERROR_RECOVERY_LINK);
+\par
+read_count = modbus_read_input_registers (Device, 14, 3, inreg_word);
+\par
+printf("Number of registers read = %i \n", read_count);
+  printf("Value of register 30015 = %i \n", inreg_word[0]);
+  printf("Value of register 30016 = %i \n", inreg_word[1]);
+  printf("Value of register 30017 = %i \n", inreg_word[2]);
+\par
+modbus_close (Device);
+  modbus_free (Device);
+\par
+return read_count;
+}
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline5127}%
+$ (n-1)^{th}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5129}%
+$\displaystyle \includegraphics{digital_53.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5131}%
+$\displaystyle \includegraphics{digital_54.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5136}%
+$\displaystyle \includegraphics{digital_55.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5138}%
+$\displaystyle \includegraphics{digital_56.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5143}%
+$\displaystyle \includegraphics{digital_57.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5145}%
+$\displaystyle \includegraphics{digital_58.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5150}%
+$\displaystyle \includegraphics{digital_59.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5152}%
+$\displaystyle \includegraphics{digital_60.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5157}%
+$\displaystyle \includegraphics{digital_61.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5162}%
+$\displaystyle \includegraphics{digital_62.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5167}%
+$\displaystyle \includegraphics{digital_63.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5169}%
+$\displaystyle \includegraphics{digital_64.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsubsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5174}%
+$\displaystyle \includegraphics{digital_65.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay5176}%
+$\displaystyle \includegraphics{digital_66.eps}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting1415}%
+\begin{lstlisting}
+\par
+union {
+    float fp;
+    uint16_t intg[2];
+    uint8_t by[4];
+  } junk;
+\par
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting1420}%
+\begin{lstlisting}
+#include <stdio.h>
+#include <modbus.h>
+\par
+modbus_t *Device;
+\par
+int main (void)
+{
+  int read_count;
+\par
+union {
+    uint16_t word[2];
+    uint8_t byte[4];
+  } in;
+\par
+union {
+    float real;
+    uint8_t byte[4];
+  } out;
+\par
+Device = modbus_new_tcp ("192.168.0.10", 502);
+  modbus_set_error_recovery (Device, MODBUS_ERROR_RECOVERY_LINK);
+\par
+read_count = modbus_read_input_registers (Device, 19, 2, in.word);
+\par
+printf("Value of 16-bit register 30020 = %i \n", in.word[0]);
+  printf("Value of 16-bit register 30021 = %i \n", in.word[1]);
+\par
+out.byte[0] = in.byte[2];
+  out.byte[1] = in.byte[3];
+  out.byte[2] = in.byte[0];
+  out.byte[3] = in.byte[1];
+\par
+printf("Value of 32-bit floating-point number = %f \n", out.real);
+  \par
+modbus_close (Device);
+  modbus_free (Device);
+\par
+return read_count;
+}
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{lstlisting1438}%
+\begin{lstlisting}
+#include <stdio.h>
+#include <modbus.h>
+\par
+modbus_t *Device;
+\par
+int main (void)
+{
+  int read_count;
+  uint16_t word[2];
+  float real;
+\par
+Device = modbus_new_tcp ("192.68.0.10", 502);
+  modbus_set_error_recovery (Device, MODBUS_ERROR_RECOVERY_LINK);
+\par
+read_count = modbus_read_input_registers (Device, 2998, 2, word);
+\par
+printf("Value of 16-bit register 32999 = %i \n", word[0]);
+  printf("Value of 16-bit register 33000 = %i \n", word[1]);
+\par
+real = modbus_get_float(word);
+\par
+printf("Value of 32-bit floating-point number = %f \n", real);
+  \par
+modbus_close (Device);
+  modbus_free (Device);
+\par
+return read_count;
+}
+\end{lstlisting}%
+\lthtmlfigureZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+
+\end{document}
