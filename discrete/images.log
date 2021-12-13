@@ -1,0 +1,1374 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.8.11)  12 NOV 2021 10:03
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./images.tex
+(./images.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
+\c@figure=\count186
+\c@table=\count187
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box47
+\UL@hyphenbox=\box48
+\UL@skip=\skip49
+\UL@hook=\toks15
+\UL@height=\dimen139
+\UL@pe=\count188
+\UL@pixel=\dimen140
+\ULC@box=\box49
+Package: ulem 2019/11/18
+\ULdepth=\dimen141
+) (/usr/share/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 105.
+(/usr/share/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+))
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+) (/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen144
+\ar@mcellbox=\box50
+\extrarowheight=\dimen145
+\NC@list=\toks17
+\extratabsurround=\skip50
+\backup@length=\skip51
+\ar@cellbox=\box51
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip52
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen146
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen147
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count189
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count190
+\leftroot@=\count191
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count192
+\DOTSCASE@=\count193
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen148
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count194
+\c@MaxMatrixCols=\count195
+\dotsspace@=\muskip16
+\c@parentequation=\count196
+\dspbrk@lvl=\count197
+\tag@help=\toks19
+\row@=\count198
+\column@=\count199
+\maxfields@=\count266
+\andhelp@=\toks20
+\eqnshift@=\dimen149
+\alignsep@=\dimen150
+\tagshift@=\dimen151
+\tagwidth@=\dimen152
+\totwidth@=\dimen153
+\lineht@=\dimen154
+\@envbody=\toks21
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count267
+\lst@gtempboxa=\box54
+\lst@token=\toks23
+\lst@length=\count268
+\lst@currlwidth=\dimen155
+\lst@column=\count269
+\lst@pos=\count270
+\lst@lostspace=\dimen156
+\lst@width=\dimen157
+\lst@newlines=\count271
+\lst@lineno=\count272
+\lst@maxwidth=\dimen158
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count273
+\lst@skipnumbers=\count274
+\lst@framebox=\box55
+) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+(/usr/share/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen159
+\c@nlinenum=\count275
+\TeXr@lab=\toks24
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+) (/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen160
+\Hy@linkcounter=\count276
+\Hy@pagecounter=\count277
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
+) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count278
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4073.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4073.
+Package hyperref Info: Option `hyperindex' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count279
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen161
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count280
+\Field@Width=\dimen162
+\Fld@charsize=\dimen163
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring ON on input line 6093.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count281
+\c@Item=\count282
+\c@Hfootnote=\count283
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+(/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count284
+\c@bookmark@seq@number=\count285
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip55
+) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+\@indexfile=\write3
+\openout3 = `images.idx'.
+
+Writing index file images.idx
+\sizebox=\box56
+\lthtmlwrite=\write4
+(/usr/share/texmf-dist/tex/latex/preview/preview.sty
+Package: preview 2017/04/24 12.3 (AUCTeX/preview-latex)
+(/usr/share/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+) (/usr/share/texmf-dist/tex/latex/preview/prtightpage.def
+\PreviewBorder=\dimen164
+)
+\pr@snippet=\count286
+\pr@box=\box57
+\pr@output=\toks25
+)
+\lthtmlPageBox=\box58
+\lthtmlCropMarkHeight=\dimen165
+\lthtmlCropMarkDepth=\dimen166
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count287
+\l__pdf_internal_box=\box59
+)
+
+LaTeX Warning: Unused global option(s):
+    [margin=2cm].
+
+(./images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count288
+\scratchdimen=\dimen167
+\scratchbox=\box60
+\nofMPsegments=\count289
+\nofMParguments=\count290
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count291
+\MPscratchDim=\dimen168
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
+\everyMPtoPDFconversion=\toks27
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+(/usr/share/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count294
+Package hyperref Info: Link coloring ON on input line 161.
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count295
+)
+LaTeX Info: Redefining \ref on input line 161.
+LaTeX Info: Redefining \pageref on input line 161.
+LaTeX Info: Redefining \nameref on input line 161.
+(./images.out) (./images.out)
+\@outlinefile=\write5
+\openout5 = `images.out'.
+
+Preview: Fontsize 12pt
+Preview: PDFoutput 1
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=676.8738pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=11.74988pt
+
+latex2htmlLength oddsidemargin=0.0pt
+
+latex2htmlLength evensidemargin=0.0pt
+
+Package epstopdf Info: Source file: <discrete01.eps>
+(epstopdf)                    date: 2021-08-17 09:02:55
+(epstopdf)                    size: 10505 bytes
+(epstopdf)             Output file: <discrete01-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-11-12 10:03:06
+(epstopdf)                    size: 7921 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete01-eps-converted-t
+o.pdf discrete01.eps>
+(epstopdf)             \includegraphics on input line 188.
+Package epstopdf Info: Output file is already uptodate.
+<discrete01-eps-converted-to.pdf, id=4, 173.64874pt x 143.53625pt>
+File: discrete01-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete01-eps-converted-to.pdf>
+Package pdftex.def Info: discrete01-eps-converted-to.pdf  used on input line 18
+8.
+(pdftex.def)             Requested size: 173.64832pt x 143.53589pt.
+
+:tex2html_wrap_indisplay1173:lthtmlCropMarkHeight:=149.53589pt
+
+:tex2html_wrap_indisplay1173:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+Preview: Tightpage -32891 -32891 32891 32891
+[1
+Non-PDF special ignored!
+<special> papersize=597.50787pt,845.04684pt
+ </home/fred-olav/afgv/book/discrete01-eps-converted-to.pdf{/var/lib/texmf/font
+s/map/pdftex/updmap/pdftex.map}>]
+Package epstopdf Info: Source file: <discrete02.eps>
+(epstopdf)                    date: 2021-08-17 09:02:55
+(epstopdf)                    size: 10459 bytes
+(epstopdf)             Output file: <discrete02-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-11-12 10:03:06
+(epstopdf)                    size: 7567 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete02-eps-converted-t
+o.pdf discrete02.eps>
+(epstopdf)             \includegraphics on input line 194.
+Package epstopdf Info: Output file is already uptodate.
+<discrete02-eps-converted-to.pdf, id=20, 177.66376pt x 143.53625pt>
+File: discrete02-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete02-eps-converted-to.pdf>
+Package pdftex.def Info: discrete02-eps-converted-to.pdf  used on input line 19
+4.
+(pdftex.def)             Requested size: 177.66331pt x 143.53589pt.
+
+:tex2html_wrap_indisplay1175:lthtmlCropMarkHeight:=149.53589pt
+
+:tex2html_wrap_indisplay1175:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[2 </home/fred-olav/afgv/book/discrete02-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete03.eps>
+(epstopdf)                    date: 2021-08-17 09:02:55
+(epstopdf)                    size: 10513 bytes
+(epstopdf)             Output file: <discrete03-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-11-12 10:03:07
+(epstopdf)                    size: 10766 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete03-eps-converted-t
+o.pdf discrete03.eps>
+(epstopdf)             \includegraphics on input line 200.
+Package epstopdf Info: Output file is already uptodate.
+<discrete03-eps-converted-to.pdf, id=35, 207.77625pt x 143.53625pt>
+File: discrete03-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete03-eps-converted-to.pdf>
+Package pdftex.def Info: discrete03-eps-converted-to.pdf  used on input line 20
+0.
+(pdftex.def)             Requested size: 207.77573pt x 143.53589pt.
+
+:tex2html_wrap_indisplay1177:lthtmlCropMarkHeight:=149.53589pt
+
+:tex2html_wrap_indisplay1177:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[3 </home/fred-olav/afgv/book/discrete03-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete32.eps>
+(epstopdf)                    date: 2021-08-17 09:02:55
+(epstopdf)                    size: 14977 bytes
+(epstopdf)             Output file: <discrete32-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-11-12 10:03:07
+(epstopdf)                    size: 9573 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete32-eps-converted-t
+o.pdf discrete32.eps>
+(epstopdf)             \includegraphics on input line 206.
+Package epstopdf Info: Output file is already uptodate.
+<discrete32-eps-converted-to.pdf, id=52, 436.63126pt x 333.245pt>
+File: discrete32-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete32-eps-converted-to.pdf>
+Package pdftex.def Info: discrete32-eps-converted-to.pdf  used on input line 20
+6.
+(pdftex.def)             Requested size: 436.63019pt x 333.24417pt.
+
+:tex2html_wrap_indisplay1179:lthtmlCropMarkHeight:=339.24417pt
+
+:tex2html_wrap_indisplay1179:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[4 </home/fred-olav/afgv/book/discrete32-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete33.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 12146 bytes
+(epstopdf)             Output file: <discrete33-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:44
+(epstopdf)                    size: 6901 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete33-eps-converted-t
+o.pdf discrete33.eps>
+(epstopdf)             \includegraphics on input line 212.
+Package epstopdf Info: Output file is already uptodate.
+<discrete33-eps-converted-to.pdf, id=64, 228.855pt x 134.5025pt>
+File: discrete33-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete33-eps-converted-to.pdf>
+Package pdftex.def Info: discrete33-eps-converted-to.pdf  used on input line 21
+2.
+(pdftex.def)             Requested size: 228.85443pt x 134.50215pt.
+
+:tex2html_wrap_indisplay1183:lthtmlCropMarkHeight:=140.50215pt
+
+:tex2html_wrap_indisplay1183:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[5 </home/fred-olav/afgv/book/discrete33-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete34.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 21540 bytes
+(epstopdf)             Output file: <discrete34-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:45
+(epstopdf)                    size: 17126 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete34-eps-converted-t
+o.pdf discrete34.eps>
+(epstopdf)             \includegraphics on input line 218.
+Package epstopdf Info: Output file is already uptodate.
+<discrete34-eps-converted-to.pdf, id=77, 426.59375pt x 333.245pt>
+File: discrete34-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete34-eps-converted-to.pdf>
+Package pdftex.def Info: discrete34-eps-converted-to.pdf  used on input line 21
+8.
+(pdftex.def)             Requested size: 426.5927pt x 333.24417pt.
+
+:tex2html_wrap_indisplay1187:lthtmlCropMarkHeight:=339.24417pt
+
+:tex2html_wrap_indisplay1187:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[6 </home/fred-olav/afgv/book/discrete34-eps-converted-to.pdf>]
+
+:tex2html_wrap_indisplay1189:lthtmlCropMarkHeight:=80.89989pt
+
+:tex2html_wrap_indisplay1189:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[7]
+Package epstopdf Info: Source file: <discrete04.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11388 bytes
+(epstopdf)             Output file: <discrete04-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:46
+(epstopdf)                    size: 6039 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete04-eps-converted-t
+o.pdf discrete04.eps>
+(epstopdf)             \includegraphics on input line 250.
+Package epstopdf Info: Output file is already uptodate.
+<discrete04-eps-converted-to.pdf, id=102, 230.8625pt x 154.5775pt>
+File: discrete04-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete04-eps-converted-to.pdf>
+Package pdftex.def Info: discrete04-eps-converted-to.pdf  used on input line 25
+0.
+(pdftex.def)             Requested size: 230.86192pt x 154.5771pt.
+
+:tex2html_wrap_indisplay1192:lthtmlCropMarkHeight:=160.5771pt
+
+:tex2html_wrap_indisplay1192:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[8 </home/fred-olav/afgv/book/discrete04-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete05.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11214 bytes
+(epstopdf)             Output file: <discrete05-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:46
+(epstopdf)                    size: 7691 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete05-eps-converted-t
+o.pdf discrete05.eps>
+(epstopdf)             \includegraphics on input line 256.
+Package epstopdf Info: Output file is already uptodate.
+<discrete05-eps-converted-to.pdf, id=111, 232.87pt x 147.55125pt>
+File: discrete05-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete05-eps-converted-to.pdf>
+Package pdftex.def Info: discrete05-eps-converted-to.pdf  used on input line 25
+6.
+(pdftex.def)             Requested size: 232.86942pt x 147.55087pt.
+
+:tex2html_wrap_indisplay1194:lthtmlCropMarkHeight:=153.55087pt
+
+:tex2html_wrap_indisplay1194:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[9 </home/fred-olav/afgv/book/discrete05-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete06.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8146 bytes
+(epstopdf)             Output file: <discrete06-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:47
+(epstopdf)                    size: 2594 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete06-eps-converted-t
+o.pdf discrete06.eps>
+(epstopdf)             \includegraphics on input line 262.
+Package epstopdf Info: Output file is already uptodate.
+<discrete06-eps-converted-to.pdf, id=123, 56.21pt x 37.13875pt>
+File: discrete06-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete06-eps-converted-to.pdf>
+Package pdftex.def Info: discrete06-eps-converted-to.pdf  used on input line 26
+2.
+(pdftex.def)             Requested size: 56.20985pt x 37.13866pt.
+
+:tex2html_wrap_indisplay1196:lthtmlCropMarkHeight:=43.13866pt
+
+:tex2html_wrap_indisplay1196:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[10 </home/fred-olav/afgv/book/discrete06-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete28.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11611 bytes
+(epstopdf)             Output file: <discrete28-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:47
+(epstopdf)                    size: 6022 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete28-eps-converted-t
+o.pdf discrete28.eps>
+(epstopdf)             \includegraphics on input line 268.
+Package epstopdf Info: Output file is already uptodate.
+<discrete28-eps-converted-to.pdf, id=129, 339.2675pt x 120.45pt>
+File: discrete28-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete28-eps-converted-to.pdf>
+Package pdftex.def Info: discrete28-eps-converted-to.pdf  used on input line 26
+8.
+(pdftex.def)             Requested size: 339.26666pt x 120.44969pt.
+
+:tex2html_wrap_indisplay1198:lthtmlCropMarkHeight:=126.44969pt
+
+:tex2html_wrap_indisplay1198:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[11 </home/fred-olav/afgv/book/discrete28-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete27.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 16194 bytes
+(epstopdf)             Output file: <discrete27-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:48
+(epstopdf)                    size: 6760 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete27-eps-converted-t
+o.pdf discrete27.eps>
+(epstopdf)             \includegraphics on input line 274.
+Package epstopdf Info: Output file is already uptodate.
+<discrete27-eps-converted-to.pdf, id=138, 234.8775pt x 201.75375pt>
+File: discrete27-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete27-eps-converted-to.pdf>
+Package pdftex.def Info: discrete27-eps-converted-to.pdf  used on input line 27
+4.
+(pdftex.def)             Requested size: 234.87692pt x 201.75325pt.
+
+:tex2html_wrap_indisplay1200:lthtmlCropMarkHeight:=207.75325pt
+
+:tex2html_wrap_indisplay1200:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[12 </home/fred-olav/afgv/book/discrete27-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete10.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8568 bytes
+(epstopdf)             Output file: <discrete10-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:48
+(epstopdf)                    size: 7154 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete10-eps-converted-t
+o.pdf discrete10.eps>
+(epstopdf)             \includegraphics on input line 281.
+Package epstopdf Info: Output file is already uptodate.
+<discrete10-eps-converted-to.pdf, id=147, 211.79124pt x 81.30376pt>
+File: discrete10-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete10-eps-converted-to.pdf>
+Package pdftex.def Info: discrete10-eps-converted-to.pdf  used on input line 28
+1.
+(pdftex.def)             Requested size: 211.79073pt x 81.30354pt.
+
+:tex2html_wrap_indisplay1203:lthtmlCropMarkHeight:=87.30354pt
+
+:tex2html_wrap_indisplay1203:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[13 </home/fred-olav/afgv/book/discrete10-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete07.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 11424 bytes
+(epstopdf)             Output file: <discrete07-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:49
+(epstopdf)                    size: 8462 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete07-eps-converted-t
+o.pdf discrete07.eps>
+(epstopdf)             \includegraphics on input line 287.
+Package epstopdf Info: Output file is already uptodate.
+<discrete07-eps-converted-to.pdf, id=161, 303.1325pt x 109.40875pt>
+File: discrete07-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete07-eps-converted-to.pdf>
+Package pdftex.def Info: discrete07-eps-converted-to.pdf  used on input line 28
+7.
+(pdftex.def)             Requested size: 303.13176pt x 109.40846pt.
+
+:tex2html_wrap_indisplay1205:lthtmlCropMarkHeight:=115.40846pt
+
+:tex2html_wrap_indisplay1205:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[14 </home/fred-olav/afgv/book/discrete07-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <form_c_contacts.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 168101 bytes
+(epstopdf)             Output file: <form_c_contacts-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:50
+(epstopdf)                    size: 134416 bytes
+(epstopdf)             Command: <repstopdf --outfile=form_c_contacts-eps-conver
+ted-to.pdf form_c_contacts.eps>
+(epstopdf)             \includegraphics on input line 293.
+Package epstopdf Info: Output file is already uptodate.
+<form_c_contacts-eps-converted-to.pdf, id=173, 557.08125pt x 370.38374pt>
+File: form_c_contacts-eps-converted-to.pdf Graphic file (type pdf)
+<use form_c_contacts-eps-converted-to.pdf>
+Package pdftex.def Info: form_c_contacts-eps-converted-to.pdf  used on input li
+ne 293.
+(pdftex.def)             Requested size: 289.07999pt x 192.20503pt.
+
+:tex2html_wrap_indisplay1207:lthtmlCropMarkHeight:=198.20503pt
+
+:tex2html_wrap_indisplay1207:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[15 </home/fred-olav/afgv/book/form_c_contacts-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <limit_switch_1.eps>
+(epstopdf)                    date: 2020-06-12 13:07:20
+(epstopdf)                    size: 130282 bytes
+(epstopdf)             Output file: <limit_switch_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:51
+(epstopdf)                    size: 104626 bytes
+(epstopdf)             Command: <repstopdf --outfile=limit_switch_1-eps-convert
+ed-to.pdf limit_switch_1.eps>
+(epstopdf)             \includegraphics on input line 299.
+Package epstopdf Info: Output file is already uptodate.
+<limit_switch_1-eps-converted-to.pdf, id=180, 557.08125pt x 370.38374pt>
+File: limit_switch_1-eps-converted-to.pdf Graphic file (type pdf)
+<use limit_switch_1-eps-converted-to.pdf>
+Package pdftex.def Info: limit_switch_1-eps-converted-to.pdf  used on input lin
+e 299.
+(pdftex.def)             Requested size: 289.07999pt x 192.20503pt.
+
+:tex2html_wrap_indisplay1209:lthtmlCropMarkHeight:=198.20503pt
+
+:tex2html_wrap_indisplay1209:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[16 </home/fred-olav/afgv/book/limit_switch_1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete08.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 9100 bytes
+(epstopdf)             Output file: <discrete08-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:51
+(epstopdf)                    size: 7480 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete08-eps-converted-t
+o.pdf discrete08.eps>
+(epstopdf)             \includegraphics on input line 306.
+Package epstopdf Info: Output file is already uptodate.
+<discrete08-eps-converted-to.pdf, id=187, 211.79124pt x 99.37125pt>
+File: discrete08-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete08-eps-converted-to.pdf>
+Package pdftex.def Info: discrete08-eps-converted-to.pdf  used on input line 30
+6.
+(pdftex.def)             Requested size: 211.79073pt x 99.371pt.
+
+:tex2html_wrap_indisplay1212:lthtmlCropMarkHeight:=105.371pt
+
+:tex2html_wrap_indisplay1212:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[17 </home/fred-olav/afgv/book/discrete08-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete09.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 18043 bytes
+(epstopdf)             Output file: <discrete09-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:52
+(epstopdf)                    size: 12248 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete09-eps-converted-t
+o.pdf discrete09.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+<discrete09-eps-converted-to.pdf, id=199, 324.21124pt x 369.38pt>
+File: discrete09-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete09-eps-converted-to.pdf>
+Package pdftex.def Info: discrete09-eps-converted-to.pdf  used on input line 31
+2.
+(pdftex.def)             Requested size: 324.21045pt x 369.37909pt.
+
+:tex2html_wrap_indisplay1216:lthtmlCropMarkHeight:=375.37909pt
+
+:tex2html_wrap_indisplay1216:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[18 </home/fred-olav/afgv/book/discrete09-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline1218:lthtmlCropMarkHeight:=13.0pt
+
+:tex2html_wrap_inline1218:lthtmlCropMarkDepth:=1.0pt:1ex:=5.16667pt
+[19]
+Package epstopdf Info: Source file: <discrete29.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 17548 bytes
+(epstopdf)             Output file: <discrete29-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:52
+(epstopdf)                    size: 11437 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete29-eps-converted-t
+o.pdf discrete29.eps>
+(epstopdf)             \includegraphics on input line 324.
+Package epstopdf Info: Output file is already uptodate.
+<discrete29-eps-converted-to.pdf, id=221, 324.21124pt x 351.3125pt>
+File: discrete29-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete29-eps-converted-to.pdf>
+Package pdftex.def Info: discrete29-eps-converted-to.pdf  used on input line 32
+4.
+(pdftex.def)             Requested size: 324.21045pt x 351.31163pt.
+
+:tex2html_wrap_indisplay1224:lthtmlCropMarkHeight:=357.31163pt
+
+:tex2html_wrap_indisplay1224:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[20 </home/fred-olav/afgv/book/discrete29-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <prox_switch_3.eps>
+(epstopdf)                    date: 2020-06-12 13:07:23
+(epstopdf)                    size: 153563 bytes
+(epstopdf)             Output file: <prox_switch_3-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:53
+(epstopdf)                    size: 122961 bytes
+(epstopdf)             Command: <repstopdf --outfile=prox_switch_3-eps-converte
+d-to.pdf prox_switch_3.eps>
+(epstopdf)             \includegraphics on input line 330.
+Package epstopdf Info: Output file is already uptodate.
+<prox_switch_3-eps-converted-to.pdf, id=237, 557.08125pt x 370.38374pt>
+File: prox_switch_3-eps-converted-to.pdf Graphic file (type pdf)
+<use prox_switch_3-eps-converted-to.pdf>
+Package pdftex.def Info: prox_switch_3-eps-converted-to.pdf  used on input line
+ 330.
+(pdftex.def)             Requested size: 180.67499pt x 120.12462pt.
+Package epstopdf Info: Source file: <prox_switch_1.eps>
+(epstopdf)                    date: 2020-06-12 13:07:23
+(epstopdf)                    size: 259708 bytes
+(epstopdf)             Output file: <prox_switch_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:55
+(epstopdf)                    size: 206562 bytes
+(epstopdf)             Command: <repstopdf --outfile=prox_switch_1-eps-converte
+d-to.pdf prox_switch_1.eps>
+(epstopdf)             \includegraphics on input line 330.
+Package epstopdf Info: Output file is already uptodate.
+<prox_switch_1-eps-converted-to.pdf, id=238, 557.08125pt x 370.38374pt>
+File: prox_switch_1-eps-converted-to.pdf Graphic file (type pdf)
+<use prox_switch_1-eps-converted-to.pdf>
+Package pdftex.def Info: prox_switch_1-eps-converted-to.pdf  used on input line
+ 330.
+(pdftex.def)             Requested size: 180.67499pt x 120.12462pt.
+
+:tex2html_wrap_indisplay1226:lthtmlCropMarkHeight:=126.12462pt
+
+:tex2html_wrap_indisplay1226:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[21 </home/fred-olav/afgv/book/prox_switch_3-eps-converted-to.pdf> </home/fred-
+olav/afgv/book/prox_switch_1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <prox_switch_2.eps>
+(epstopdf)                    date: 2020-06-12 13:07:23
+(epstopdf)                    size: 150448 bytes
+(epstopdf)             Output file: <prox_switch_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:56
+(epstopdf)                    size: 120450 bytes
+(epstopdf)             Command: <repstopdf --outfile=prox_switch_2-eps-converte
+d-to.pdf prox_switch_2.eps>
+(epstopdf)             \includegraphics on input line 336.
+Package epstopdf Info: Output file is already uptodate.
+<prox_switch_2-eps-converted-to.pdf, id=247, 557.08125pt x 418.56375pt>
+File: prox_switch_2-eps-converted-to.pdf Graphic file (type pdf)
+<use prox_switch_2-eps-converted-to.pdf>
+Package pdftex.def Info: prox_switch_2-eps-converted-to.pdf  used on input line
+ 336.
+(pdftex.def)             Requested size: 361.34999pt x 271.50755pt.
+
+:tex2html_wrap_indisplay1228:lthtmlCropMarkHeight:=277.50755pt
+
+:tex2html_wrap_indisplay1228:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[22 </home/fred-olav/afgv/book/prox_switch_2-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete11.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8739 bytes
+(epstopdf)             Output file: <discrete11-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:56
+(epstopdf)                    size: 7484 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete11-eps-converted-t
+o.pdf discrete11.eps>
+(epstopdf)             \includegraphics on input line 343.
+Package epstopdf Info: Output file is already uptodate.
+<discrete11-eps-converted-to.pdf, id=254, 211.79124pt x 86.3225pt>
+File: discrete11-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete11-eps-converted-to.pdf>
+Package pdftex.def Info: discrete11-eps-converted-to.pdf  used on input line 34
+3.
+(pdftex.def)             Requested size: 211.79073pt x 86.32227pt.
+
+:tex2html_wrap_indisplay1233:lthtmlCropMarkHeight:=92.32227pt
+
+:tex2html_wrap_indisplay1233:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[23 </home/fred-olav/afgv/book/discrete11-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <press_switch_1.eps>
+(epstopdf)                    date: 2020-06-12 13:07:22
+(epstopdf)                    size: 54347 bytes
+(epstopdf)             Output file: <press_switch_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:57
+(epstopdf)                    size: 44749 bytes
+(epstopdf)             Command: <repstopdf --outfile=press_switch_1-eps-convert
+ed-to.pdf press_switch_1.eps>
+(epstopdf)             \includegraphics on input line 349.
+Package epstopdf Info: Output file is already uptodate.
+<press_switch_1-eps-converted-to.pdf, id=266, 557.08125pt x 269.005pt>
+File: press_switch_1-eps-converted-to.pdf Graphic file (type pdf)
+<use press_switch_1-eps-converted-to.pdf>
+Package pdftex.def Info: press_switch_1-eps-converted-to.pdf  used on input lin
+e 349.
+(pdftex.def)             Requested size: 361.34999pt x 174.49406pt.
+
+:tex2html_wrap_indisplay1235:lthtmlCropMarkHeight:=180.49406pt
+
+:tex2html_wrap_indisplay1235:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[24 </home/fred-olav/afgv/book/press_switch_1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <pressure_switch_4.eps>
+(epstopdf)                    date: 2020-06-12 13:07:23
+(epstopdf)                    size: 178684 bytes
+(epstopdf)             Output file: <pressure_switch_4-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:58
+(epstopdf)                    size: 142758 bytes
+(epstopdf)             Command: <repstopdf --outfile=pressure_switch_4-eps-conv
+erted-to.pdf pressure_switch_4.eps>
+(epstopdf)             \includegraphics on input line 355.
+Package epstopdf Info: Output file is already uptodate.
+<pressure_switch_4-eps-converted-to.pdf, id=273, 557.08125pt x 370.38374pt>
+File: pressure_switch_4-eps-converted-to.pdf Graphic file (type pdf)
+<use pressure_switch_4-eps-converted-to.pdf>
+Package pdftex.def Info: pressure_switch_4-eps-converted-to.pdf  used on input 
+line 355.
+(pdftex.def)             Requested size: 361.34999pt x 240.25488pt.
+
+:tex2html_wrap_indisplay1237:lthtmlCropMarkHeight:=246.25488pt
+
+:tex2html_wrap_indisplay1237:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[25 </home/fred-olav/afgv/book/pressure_switch_4-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <pressure_switch_5.eps>
+(epstopdf)                    date: 2020-06-12 13:07:23
+(epstopdf)                    size: 136564 bytes
+(epstopdf)             Output file: <pressure_switch_5-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:03:59
+(epstopdf)                    size: 109500 bytes
+(epstopdf)             Command: <repstopdf --outfile=pressure_switch_5-eps-conv
+erted-to.pdf pressure_switch_5.eps>
+(epstopdf)             \includegraphics on input line 361.
+Package epstopdf Info: Output file is already uptodate.
+<pressure_switch_5-eps-converted-to.pdf, id=281, 557.08125pt x 441.65pt>
+File: pressure_switch_5-eps-converted-to.pdf Graphic file (type pdf)
+<use pressure_switch_5-eps-converted-to.pdf>
+Package pdftex.def Info: pressure_switch_5-eps-converted-to.pdf  used on input 
+line 361.
+(pdftex.def)             Requested size: 361.34999pt x 286.48279pt.
+
+:tex2html_wrap_indisplay1239:lthtmlCropMarkHeight:=292.48279pt
+
+:tex2html_wrap_indisplay1239:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[26 </home/fred-olav/afgv/book/pressure_switch_5-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <tilt_switch_1.eps>
+(epstopdf)                    date: 2020-06-12 13:07:23
+(epstopdf)                    size: 30402 bytes
+(epstopdf)             Output file: <tilt_switch_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:00
+(epstopdf)                    size: 25886 bytes
+(epstopdf)             Command: <repstopdf --outfile=tilt_switch_1-eps-converte
+d-to.pdf tilt_switch_1.eps>
+(epstopdf)             \includegraphics on input line 367.
+Package epstopdf Info: Output file is already uptodate.
+<tilt_switch_1-eps-converted-to.pdf, id=288, 557.08125pt x 371.3875pt>
+File: tilt_switch_1-eps-converted-to.pdf Graphic file (type pdf)
+<use tilt_switch_1-eps-converted-to.pdf>
+Package pdftex.def Info: tilt_switch_1-eps-converted-to.pdf  used on input line
+ 367.
+(pdftex.def)             Requested size: 180.67499pt x 120.45015pt.
+Package epstopdf Info: Source file: <tilt_switch_2.eps>
+(epstopdf)                    date: 2020-06-12 13:07:23
+(epstopdf)                    size: 27661 bytes
+(epstopdf)             Output file: <tilt_switch_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:00
+(epstopdf)                    size: 23730 bytes
+(epstopdf)             Command: <repstopdf --outfile=tilt_switch_2-eps-converte
+d-to.pdf tilt_switch_2.eps>
+(epstopdf)             \includegraphics on input line 367.
+Package epstopdf Info: Output file is already uptodate.
+<tilt_switch_2-eps-converted-to.pdf, id=289, 557.08125pt x 371.3875pt>
+File: tilt_switch_2-eps-converted-to.pdf Graphic file (type pdf)
+<use tilt_switch_2-eps-converted-to.pdf>
+Package pdftex.def Info: tilt_switch_2-eps-converted-to.pdf  used on input line
+ 367.
+(pdftex.def)             Requested size: 180.67499pt x 120.45015pt.
+
+:tex2html_wrap_indisplay1241:lthtmlCropMarkHeight:=126.45015pt
+
+:tex2html_wrap_indisplay1241:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[27 </home/fred-olav/afgv/book/tilt_switch_1-eps-converted-to.pdf> </home/fred-
+olav/afgv/book/tilt_switch_2-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <pressure_switch_3.eps>
+(epstopdf)                    date: 2020-06-12 13:07:23
+(epstopdf)                    size: 123662 bytes
+(epstopdf)             Output file: <pressure_switch_3-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:01
+(epstopdf)                    size: 99419 bytes
+(epstopdf)             Command: <repstopdf --outfile=pressure_switch_3-eps-conv
+erted-to.pdf pressure_switch_3.eps>
+(epstopdf)             \includegraphics on input line 373.
+Package epstopdf Info: Output file is already uptodate.
+<pressure_switch_3-eps-converted-to.pdf, id=298, 536.0025pt x 805.0075pt>
+File: pressure_switch_3-eps-converted-to.pdf Graphic file (type pdf)
+<use pressure_switch_3-eps-converted-to.pdf>
+Package pdftex.def Info: pressure_switch_3-eps-converted-to.pdf  used on input 
+line 373.
+(pdftex.def)             Requested size: 216.81pt x 325.62091pt.
+
+:tex2html_wrap_indisplay1243:lthtmlCropMarkHeight:=331.62091pt
+
+:tex2html_wrap_indisplay1243:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[28 </home/fred-olav/afgv/book/pressure_switch_3-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <pressure_switch_2.eps>
+(epstopdf)                    date: 2020-06-12 13:07:23
+(epstopdf)                    size: 62122 bytes
+(epstopdf)             Output file: <pressure_switch_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:01
+(epstopdf)                    size: 50955 bytes
+(epstopdf)             Command: <repstopdf --outfile=pressure_switch_2-eps-conv
+erted-to.pdf pressure_switch_2.eps>
+(epstopdf)             \includegraphics on input line 379.
+Package epstopdf Info: Output file is already uptodate.
+<pressure_switch_2-eps-converted-to.pdf, id=305, 536.0025pt x 805.0075pt>
+File: pressure_switch_2-eps-converted-to.pdf Graphic file (type pdf)
+<use pressure_switch_2-eps-converted-to.pdf>
+Package pdftex.def Info: pressure_switch_2-eps-converted-to.pdf  used on input 
+line 379.
+(pdftex.def)             Requested size: 216.81pt x 325.62091pt.
+
+:tex2html_wrap_indisplay1247:lthtmlCropMarkHeight:=331.62091pt
+
+:tex2html_wrap_indisplay1247:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[29 </home/fred-olav/afgv/book/pressure_switch_2-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete12.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8642 bytes
+(epstopdf)             Output file: <discrete12-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:02
+(epstopdf)                    size: 7393 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete12-eps-converted-t
+o.pdf discrete12.eps>
+(epstopdf)             \includegraphics on input line 386.
+Package epstopdf Info: Output file is already uptodate.
+<discrete12-eps-converted-to.pdf, id=312, 211.79124pt x 86.3225pt>
+File: discrete12-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete12-eps-converted-to.pdf>
+Package pdftex.def Info: discrete12-eps-converted-to.pdf  used on input line 38
+6.
+(pdftex.def)             Requested size: 211.79073pt x 86.32227pt.
+
+:tex2html_wrap_indisplay1250:lthtmlCropMarkHeight:=92.32227pt
+
+:tex2html_wrap_indisplay1250:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[30 </home/fred-olav/afgv/book/discrete12-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <level_switch_1.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 163078 bytes
+(epstopdf)             Output file: <level_switch_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:03
+(epstopdf)                    size: 130393 bytes
+(epstopdf)             Command: <repstopdf --outfile=level_switch_1-eps-convert
+ed-to.pdf level_switch_1.eps>
+(epstopdf)             \includegraphics on input line 393.
+Package epstopdf Info: Output file is already uptodate.
+<level_switch_1-eps-converted-to.pdf, id=325, 557.08125pt x 418.56375pt>
+File: level_switch_1-eps-converted-to.pdf Graphic file (type pdf)
+<use level_switch_1-eps-converted-to.pdf>
+Package pdftex.def Info: level_switch_1-eps-converted-to.pdf  used on input lin
+e 393.
+(pdftex.def)             Requested size: 361.34999pt x 271.50755pt.
+
+:tex2html_wrap_indisplay1255:lthtmlCropMarkHeight:=277.50755pt
+
+:tex2html_wrap_indisplay1255:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[31 </home/fred-olav/afgv/book/level_switch_1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <level_switch_8.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 11941 bytes
+(epstopdf)             Output file: <level_switch_8-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:04
+(epstopdf)                    size: 6297 bytes
+(epstopdf)             Command: <repstopdf --outfile=level_switch_8-eps-convert
+ed-to.pdf level_switch_8.eps>
+(epstopdf)             \includegraphics on input line 399.
+Package epstopdf Info: Output file is already uptodate.
+<level_switch_8-eps-converted-to.pdf, id=333, 362.35374pt x 133.49875pt>
+File: level_switch_8-eps-converted-to.pdf Graphic file (type pdf)
+<use level_switch_8-eps-converted-to.pdf>
+Package pdftex.def Info: level_switch_8-eps-converted-to.pdf  used on input lin
+e 399.
+(pdftex.def)             Requested size: 362.35286pt x 133.4984pt.
+
+:tex2html_wrap_indisplay1257:lthtmlCropMarkHeight:=139.4984pt
+
+:tex2html_wrap_indisplay1257:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[32 </home/fred-olav/afgv/book/level_switch_8-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <level_switch_9.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 9122 bytes
+(epstopdf)             Output file: <level_switch_9-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:04
+(epstopdf)                    size: 5253 bytes
+(epstopdf)             Command: <repstopdf --outfile=level_switch_9-eps-convert
+ed-to.pdf level_switch_9.eps>
+(epstopdf)             \includegraphics on input line 405.
+Package epstopdf Info: Output file is already uptodate.
+<level_switch_9-eps-converted-to.pdf, id=342, 382.42876pt x 91.34125pt>
+File: level_switch_9-eps-converted-to.pdf Graphic file (type pdf)
+<use level_switch_9-eps-converted-to.pdf>
+Package pdftex.def Info: level_switch_9-eps-converted-to.pdf  used on input lin
+e 405.
+(pdftex.def)             Requested size: 382.42781pt x 91.34102pt.
+
+:tex2html_wrap_indisplay1259:lthtmlCropMarkHeight:=97.34102pt
+
+:tex2html_wrap_indisplay1259:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[33 </home/fred-olav/afgv/book/level_switch_9-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <level_switch_2.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 99031 bytes
+(epstopdf)             Output file: <level_switch_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:05
+(epstopdf)                    size: 79957 bytes
+(epstopdf)             Command: <repstopdf --outfile=level_switch_2-eps-convert
+ed-to.pdf level_switch_2.eps>
+(epstopdf)             \includegraphics on input line 412.
+Package epstopdf Info: Output file is already uptodate.
+<level_switch_2-eps-converted-to.pdf, id=351, 557.08125pt x 418.56375pt>
+File: level_switch_2-eps-converted-to.pdf Graphic file (type pdf)
+<use level_switch_2-eps-converted-to.pdf>
+Package pdftex.def Info: level_switch_2-eps-converted-to.pdf  used on input lin
+e 412.
+(pdftex.def)             Requested size: 361.34999pt x 271.50755pt.
+
+:tex2html_wrap_indisplay1262:lthtmlCropMarkHeight:=277.50755pt
+
+:tex2html_wrap_indisplay1262:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[34 </home/fred-olav/afgv/book/level_switch_2-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <level_switch_5.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 97986 bytes
+(epstopdf)             Output file: <level_switch_5-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:06
+(epstopdf)                    size: 79190 bytes
+(epstopdf)             Command: <repstopdf --outfile=level_switch_5-eps-convert
+ed-to.pdf level_switch_5.eps>
+(epstopdf)             \includegraphics on input line 419.
+Package epstopdf Info: Output file is already uptodate.
+<level_switch_5-eps-converted-to.pdf, id=358, 557.08125pt x 370.38374pt>
+File: level_switch_5-eps-converted-to.pdf Graphic file (type pdf)
+<use level_switch_5-eps-converted-to.pdf>
+Package pdftex.def Info: level_switch_5-eps-converted-to.pdf  used on input lin
+e 419.
+(pdftex.def)             Requested size: 361.34999pt x 240.25488pt.
+
+:tex2html_wrap_indisplay1265:lthtmlCropMarkHeight:=246.25488pt
+
+:tex2html_wrap_indisplay1265:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[35 </home/fred-olav/afgv/book/level_switch_5-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <level_switch_3.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 92643 bytes
+(epstopdf)             Output file: <level_switch_3-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:06
+(epstopdf)                    size: 74993 bytes
+(epstopdf)             Command: <repstopdf --outfile=level_switch_3-eps-convert
+ed-to.pdf level_switch_3.eps>
+(epstopdf)             \includegraphics on input line 426.
+Package epstopdf Info: Output file is already uptodate.
+<level_switch_3-eps-converted-to.pdf, id=365, 557.08125pt x 370.38374pt>
+File: level_switch_3-eps-converted-to.pdf Graphic file (type pdf)
+<use level_switch_3-eps-converted-to.pdf>
+Package pdftex.def Info: level_switch_3-eps-converted-to.pdf  used on input lin
+e 426.
+(pdftex.def)             Requested size: 361.34999pt x 240.25488pt.
+
+:tex2html_wrap_indisplay1268:lthtmlCropMarkHeight:=246.25488pt
+
+:tex2html_wrap_indisplay1268:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[36 </home/fred-olav/afgv/book/level_switch_3-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <level_switch_4.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 71192 bytes
+(epstopdf)             Output file: <level_switch_4-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:07
+(epstopdf)                    size: 58096 bytes
+(epstopdf)             Command: <repstopdf --outfile=level_switch_4-eps-convert
+ed-to.pdf level_switch_4.eps>
+(epstopdf)             \includegraphics on input line 433.
+Package epstopdf Info: Output file is already uptodate.
+<level_switch_4-eps-converted-to.pdf, id=372, 536.0025pt x 805.0075pt>
+File: level_switch_4-eps-converted-to.pdf Graphic file (type pdf)
+<use level_switch_4-eps-converted-to.pdf>
+Package pdftex.def Info: level_switch_4-eps-converted-to.pdf  used on input lin
+e 433.
+(pdftex.def)             Requested size: 289.07999pt x 434.15712pt.
+
+:tex2html_wrap_indisplay1271:lthtmlCropMarkHeight:=440.15712pt
+
+:tex2html_wrap_indisplay1271:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[37 </home/fred-olav/afgv/book/level_switch_4-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <level_switch_6.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 13566 bytes
+(epstopdf)             Output file: <level_switch_6-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:07
+(epstopdf)                    size: 10269 bytes
+(epstopdf)             Command: <repstopdf --outfile=level_switch_6-eps-convert
+ed-to.pdf level_switch_6.eps>
+(epstopdf)             \includegraphics on input line 440.
+Package epstopdf Info: Output file is already uptodate.
+<level_switch_6-eps-converted-to.pdf, id=380, 247.92625pt x 264.99pt>
+File: level_switch_6-eps-converted-to.pdf Graphic file (type pdf)
+<use level_switch_6-eps-converted-to.pdf>
+Package pdftex.def Info: level_switch_6-eps-converted-to.pdf  used on input lin
+e 440.
+(pdftex.def)             Requested size: 247.92564pt x 264.98935pt.
+
+:tex2html_wrap_indisplay1274:lthtmlCropMarkHeight:=270.98935pt
+
+:tex2html_wrap_indisplay1274:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[38 </home/fred-olav/afgv/book/level_switch_6-eps-converted-to.pdf>]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 446.
+
+
+:tex2html_wrap_inline1280:lthtmlCropMarkHeight:=16.83109pt
+
+:tex2html_wrap_inline1280:lthtmlCropMarkDepth:=4.13809pt:1ex:=5.16667pt
+[39]
+Package epstopdf Info: Source file: <level_switch_7.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 13391 bytes
+(epstopdf)             Output file: <level_switch_7-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:08
+(epstopdf)                    size: 7208 bytes
+(epstopdf)             Command: <repstopdf --outfile=level_switch_7-eps-convert
+ed-to.pdf level_switch_7.eps>
+(epstopdf)             \includegraphics on input line 452.
+Package epstopdf Info: Output file is already uptodate.
+<level_switch_7-eps-converted-to.pdf, id=396, 357.335pt x 238.8925pt>
+File: level_switch_7-eps-converted-to.pdf Graphic file (type pdf)
+<use level_switch_7-eps-converted-to.pdf>
+Package pdftex.def Info: level_switch_7-eps-converted-to.pdf  used on input lin
+e 452.
+(pdftex.def)             Requested size: 357.33412pt x 238.8919pt.
+
+:tex2html_wrap_indisplay1282:lthtmlCropMarkHeight:=244.8919pt
+
+:tex2html_wrap_indisplay1282:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[40 </home/fred-olav/afgv/book/level_switch_7-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete13.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8690 bytes
+(epstopdf)             Output file: <discrete13-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:09
+(epstopdf)                    size: 7745 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete13-eps-converted-t
+o.pdf discrete13.eps>
+(epstopdf)             \includegraphics on input line 459.
+Package epstopdf Info: Output file is already uptodate.
+<discrete13-eps-converted-to.pdf, id=405, 211.79124pt x 86.3225pt>
+File: discrete13-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete13-eps-converted-to.pdf>
+Package pdftex.def Info: discrete13-eps-converted-to.pdf  used on input line 45
+9.
+(pdftex.def)             Requested size: 211.79073pt x 86.32227pt.
+
+:tex2html_wrap_indisplay1289:lthtmlCropMarkHeight:=92.32227pt
+
+:tex2html_wrap_indisplay1289:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[41 </home/fred-olav/afgv/book/discrete13-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <temp_switch_1.eps>
+(epstopdf)                    date: 2020-06-12 13:07:23
+(epstopdf)                    size: 97095 bytes
+(epstopdf)             Output file: <temp_switch_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:09
+(epstopdf)                    size: 78500 bytes
+(epstopdf)             Command: <repstopdf --outfile=temp_switch_1-eps-converte
+d-to.pdf temp_switch_1.eps>
+(epstopdf)             \includegraphics on input line 465.
+Package epstopdf Info: Output file is already uptodate.
+<temp_switch_1-eps-converted-to.pdf, id=417, 536.0025pt x 805.0075pt>
+File: temp_switch_1-eps-converted-to.pdf Graphic file (type pdf)
+<use temp_switch_1-eps-converted-to.pdf>
+Package pdftex.def Info: temp_switch_1-eps-converted-to.pdf  used on input line
+ 465.
+(pdftex.def)             Requested size: 216.81pt x 325.62091pt.
+
+:tex2html_wrap_indisplay1291:lthtmlCropMarkHeight:=331.62091pt
+
+:tex2html_wrap_indisplay1291:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[42 </home/fred-olav/afgv/book/temp_switch_1-eps-converted-to.pdf>]
+
+:tex2html_wrap_inline1293:lthtmlCropMarkHeight:=13.79915pt
+
+:tex2html_wrap_inline1293:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[43]
+Package epstopdf Info: Source file: <intro_21.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 59787 bytes
+(epstopdf)             Output file: <intro_21-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:01:47
+(epstopdf)                    size: 49116 bytes
+(epstopdf)             Command: <repstopdf --outfile=intro_21-eps-converted-to.
+pdf intro_21.eps>
+(epstopdf)             \includegraphics on input line 477.
+Package epstopdf Info: Output file is already uptodate.
+<intro_21-eps-converted-to.pdf, id=429, 536.0025pt x 805.0075pt>
+File: intro_21-eps-converted-to.pdf Graphic file (type pdf)
+<use intro_21-eps-converted-to.pdf>
+Package pdftex.def Info: intro_21-eps-converted-to.pdf  used on input line 477.
+
+(pdftex.def)             Requested size: 216.81pt x 325.62091pt.
+
+:tex2html_wrap_indisplay1311:lthtmlCropMarkHeight:=331.62091pt
+
+:tex2html_wrap_indisplay1311:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[44 </home/fred-olav/afgv/book/intro_21-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <discrete14.eps>
+(epstopdf)                    date: 2020-06-12 13:07:18
+(epstopdf)                    size: 8585 bytes
+(epstopdf)             Output file: <discrete14-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:10
+(epstopdf)                    size: 7176 bytes
+(epstopdf)             Command: <repstopdf --outfile=discrete14-eps-converted-t
+o.pdf discrete14.eps>
+(epstopdf)             \includegraphics on input line 484.
+Package epstopdf Info: Output file is already uptodate.
+<discrete14-eps-converted-to.pdf, id=436, 211.79124pt x 81.30376pt>
+File: discrete14-eps-converted-to.pdf Graphic file (type pdf)
+<use discrete14-eps-converted-to.pdf>
+Package pdftex.def Info: discrete14-eps-converted-to.pdf  used on input line 48
+4.
+(pdftex.def)             Requested size: 211.79073pt x 81.30354pt.
+
+:tex2html_wrap_indisplay1314:lthtmlCropMarkHeight:=87.30354pt
+
+:tex2html_wrap_indisplay1314:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[45 </home/fred-olav/afgv/book/discrete14-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <flow_switch_1.eps>
+(epstopdf)                    date: 2020-06-12 13:07:19
+(epstopdf)                    size: 90100 bytes
+(epstopdf)             Output file: <flow_switch_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-09-14 10:04:11
+(epstopdf)                    size: 72989 bytes
+(epstopdf)             Command: <repstopdf --outfile=flow_switch_1-eps-converte
+d-to.pdf flow_switch_1.eps>
+(epstopdf)             \includegraphics on input line 490.
+Package epstopdf Info: Output file is already uptodate.
+<flow_switch_1-eps-converted-to.pdf, id=448, 536.0025pt x 805.0075pt>
+File: flow_switch_1-eps-converted-to.pdf Graphic file (type pdf)
+<use flow_switch_1-eps-converted-to.pdf>
+Package pdftex.def Info: flow_switch_1-eps-converted-to.pdf  used on input line
+ 490.
+(pdftex.def)             Requested size: 216.81pt x 325.62091pt.
+
+:tex2html_wrap_indisplay1316:lthtmlCropMarkHeight:=331.62091pt
+
+:tex2html_wrap_indisplay1316:lthtmlCropMarkDepth:=0.0pt:1ex:=5.16667pt
+[46 </home/fred-olav/afgv/book/flow_switch_1-eps-converted-to.pdf>] (./images.a
+ux)
+Package rerunfilecheck Info: File `images.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 11072 strings out of 478994
+ 162368 string characters out of 5864751
+ 643458 words of memory out of 5000000
+ 28315 multiletter control sequences out of 15000+600000
+ 407600 words of font info for 42 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 71i,8n,74p,278b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on images.pdf (46 pages, 1953692 bytes).
+PDF statistics:
+ 491 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+

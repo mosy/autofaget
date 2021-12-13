@@ -17,6 +17,14 @@ $noresave{$key} = "$nosave";
 # labels from external_latex_labels array.
 
 
+$key = q/Differential_pressure_transmitters/;
+$external_latex_labels{$key} = q|1.5|; 
+$noresave{$key} = "$nosave";
+
+$key = q/Purged_pressure/;
+$external_latex_labels{$key} = q|1.6.6|; 
+$noresave{$key} = "$nosave";
+
 $key = q/_/;
 $external_latex_labels{$key} = q|<|; 
 $noresave{$key} = "$nosave";

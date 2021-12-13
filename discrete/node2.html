@@ -1,0 +1,1158 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2020.2 (Released July 1, 2020) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Discrete process measurement</TITLE>
+<META NAME="description" CONTENT="Discrete process measurement">
+<META NAME="keywords" CONTENT="html">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2020.2">
+
+<LINK REL="STYLESHEET" HREF="html.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html57"
+  HREF="node2.html#SECTION00210000000000000000">&ldquo;Normal&rdquo; status of a switch</A>
+<LI><A ID="tex2html58"
+  HREF="node2.html#SECTION00220000000000000000">Hand switches</A>
+<LI><A ID="tex2html59"
+  HREF="node2.html#SECTION00230000000000000000">Limit switches</A>
+<LI><A ID="tex2html60"
+  HREF="node2.html#SECTION00240000000000000000">Proximity switches</A>
+<LI><A ID="tex2html61"
+  HREF="node2.html#SECTION00250000000000000000">Pressure switches</A>
+<LI><A ID="tex2html62"
+  HREF="node2.html#SECTION00260000000000000000">Level switches</A>
+<UL>
+<LI><A ID="tex2html63"
+  HREF="node2.html#SECTION00261000000000000000">Float-type level switches</A>
+<LI><A ID="tex2html64"
+  HREF="node2.html#SECTION00262000000000000000">Tuning fork level switches</A>
+<LI><A ID="tex2html65"
+  HREF="node2.html#SECTION00263000000000000000">Paddle-wheel level switches</A>
+<LI><A ID="tex2html66"
+  HREF="node2.html#SECTION00264000000000000000">Ultrasonic level switches</A>
+<LI><A ID="tex2html67"
+  HREF="node2.html#SECTION00265000000000000000">Capacitive level switches</A>
+<LI><A ID="tex2html68"
+  HREF="node2.html#SECTION00266000000000000000">Conductive level switches</A>
+</UL>
+<BR>
+<LI><A ID="tex2html69"
+  HREF="node2.html#SECTION00270000000000000000">Temperature switches</A>
+<LI><A ID="tex2html70"
+  HREF="node2.html#SECTION00280000000000000000">Flow switches</A>
+<LI><A ID="tex2html71"
+  HREF="node2.html#SECTION00290000000000000000">Review of fundamental principles</A>
+<LI><A ID="tex2html72"
+  HREF="node2.html#SECTION002100000000000000000">References</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00200000000000000000">
+Discrete process measurement</A>
+</H1>
+
+<P>
+<A ID="Process_switches"></A>
+<P>
+The word &ldquo;discrete&rdquo; means <SPAN  CLASS="textit">individual</SPAN> or <SPAN  CLASS="textit">distinct</SPAN>.  In engineering, a &ldquo;discrete&rdquo; variable or measurement refers to a true-or-false condition.  Thus, a discrete sensor is one that is only able to indicate whether the measured variable is above or below a specified setpoint. <A NAME="37"></A>
+
+<P>
+Discrete sensors typically take the form of <SPAN  CLASS="textit">switches</SPAN>, built to &ldquo;trip&rdquo; when the measured quantity either exceeds or falls below a specified value.  These devices are less sophisticated than so-called <SPAN  CLASS="textit">continuous</SPAN> sensors capable of reporting an analog value, but they are quite useful in industry. <A NAME="40"></A>
+
+<P>
+Many different types of discrete sensors exist, detecting variables such as position, fluid pressure, material level, temperature, and fluid flow rate.  The output of a discrete sensor is typically electrical in nature, whether it be an active voltage signal or just resistive continuity between two terminals on the device.
+
+<P>
+
+<H1><A ID="SECTION00210000000000000000">
+&ldquo;Normal&rdquo; status of a switch</A>
+</H1>
+
+<P>
+<A ID="normal_switch"></A>
+<P>
+Perhaps the most confusing aspect of discrete sensors is the definition of a sensor's <SPAN  CLASS="textit">normal</SPAN> status.  Electrical switch contacts are typically classified as either <SPAN  CLASS="textit">normally-open</SPAN> or <SPAN  CLASS="textit">normally-closed</SPAN>, referring to the open or closed status of the contacts under &ldquo;normal&rdquo; conditions.  But what exactly defines &ldquo;normal&rdquo; for a switch?  The answer is not complex, but is often misunderstood due to the ambiguous nature of the word <SPAN  CLASS="textit">normal</SPAN>.  <A NAME="47"></A>
+
+<P>
+The &ldquo;normal&rdquo; status for a switch is the status its electrical contacts are in <SPAN  CLASS="textit">during a condition of no physical stimulation</SPAN>.  Another way to think of the &ldquo;normal&rdquo; status is to think in terms of the switch being <SPAN  CLASS="textit">at rest</SPAN>.  For a momentary-contact pushbutton switch, this would be the status of the switch contact when it is <SPAN  CLASS="textit">not</SPAN> being pressed.  Electrical switches are always drawn in schematic diagrams in their &ldquo;normal&rdquo; statuses, regardless of their application.  For instance, the following diagram shows a normally-open pushbutton switch controlling a lamp on a 120 volt AC circuit (the &ldquo;hot&rdquo; and &ldquo;neutral&rdquo; poles of the AC power source labeled L1 and L2, respectively):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete01.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 27.87ex; vertical-align: -0.10ex; " SRC="img1.svg"
+ ALT="$\displaystyle \includegraphics{discrete01.eps}$">
+</DIV><P></P>
+
+<P>
+We can tell this switch is a normally-open (NO) switch because it is drawn in an open position.  The lamp will energize only if someone presses the switch, holding its normally-open contacts in the &ldquo;closed&rdquo; position.  Normally-open switch contacts are sometimes referred to in the electrical industry as <SPAN  CLASS="textit">form-A</SPAN> contacts. <A NAME="53"></A>
+
+<P>
+If we had used a normally-closed pushbutton switch instead, the behavior would be exactly opposite.  The lamp would energize if the switch was left alone, but it would turn off if anyone pressed the switch.  Normally-closed switch contacts are sometimes referred to in the electrical industry as <SPAN  CLASS="textit">form-B</SPAN> contacts:  <A NAME="55"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete02.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 27.87ex; vertical-align: -0.10ex; " SRC="img2.svg"
+ ALT="$\displaystyle \includegraphics{discrete02.eps}$">
+</DIV><P></P>
+
+<P>
+This seems rather simple, don't you think?  What could possibly be confusing about the &ldquo;normal&rdquo; status of a switch?  The confusion becomes evident, though, when you begin to consider <SPAN  CLASS="textit">process</SPAN> switches (i.e. switches actuated by process measurements such as pressure, flow, level, etc.).  In order to better understand this concept, we will consider a simple application of a <SPAN  CLASS="textit">flow</SPAN> switch: a switch built to actuate when a sufficient rate of fluid flows through a pipe.  <A NAME="59"></A> <A NAME="60"></A>
+
+<P>
+
+<P>
+A flow switch is built to detect fluid flow through a pipe.  In a schematic diagram, the switch symbol appears to be a toggle switch with a &ldquo;flag&rdquo; hanging below.  The schematic diagram, of course, only shows the circuitry and not the pipe where the switch is physically mounted:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete03.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 27.87ex; vertical-align: -0.10ex; " SRC="img3.svg"
+ ALT="$\displaystyle \includegraphics{discrete03.eps}$">
+</DIV><P></P>
+
+<P>
+This particular flow switch is used to trigger an alarm light if coolant flow through the pipe ever falls to a dangerously low level, and the contacts are <SPAN  CLASS="textit">normally-closed</SPAN> as evidenced by the closed status in the diagram.  Here is where things get confusing: even though this switch is designated as &ldquo;normally-closed,&rdquo; it will spend most of its lifetime being held in the open status by the presence of adequate coolant flow through the pipe.  Only when the flow through the pipe slows down enough will this switch return to its &ldquo;normal&rdquo; status and conduct electrical power to the lamp.  In other words, the &ldquo;normal&rdquo; status for this switch (closed) is actually an <SPAN  CLASS="textit">abnormal</SPAN> status for the process it operates within (low flow), for the simple reason that the switch should be stimulated and not at rest while the process is operating as it should.  
+
+<P>
+Students often wonder why process switch contacts are labeled according to this convention of &ldquo;no stimulation&rdquo; instead of according to the typical status of the process in which the switch is used.  The answer to this question is that the manufacturer of the switch has no idea whatsoever as to your intended use.  A flow switch manufacturer does not know or care whether their product gets used as a low-flow detector or as a high-flow detector.  In other words, the manufacturer cannot predict what the typical status of <SPAN  CLASS="textit">your</SPAN> process will be, and so the definition of &ldquo;normal&rdquo; status for the switch must be founded on some common criterion unrelated to your particular application.  That common criterion is the resting status: when the sensor is exposed to the <SPAN  CLASS="textit">least</SPAN> (or no) amount of stimulation from the process it senses.
+
+<P>
+<P>
+Here is a listing of &ldquo;normal&rdquo; definitions for various process switch types:
+
+<P>
+
+<UL>
+<LI><SPAN  CLASS="textbf">Limit switch</SPAN>: target not contacting the switch
+</LI>
+<LI><SPAN  CLASS="textbf">Proximity switch</SPAN>: target far away
+</LI>
+<LI><SPAN  CLASS="textbf">Pressure switch</SPAN>: low pressure (or even a vacuum)
+</LI>
+<LI><SPAN  CLASS="textbf">Level switch</SPAN>: low level (empty)
+</LI>
+<LI><SPAN  CLASS="textbf">Temperature switch</SPAN>: low temperature (cold)
+</LI>
+<LI><SPAN  CLASS="textbf">Flow switch</SPAN>: low flow rate (fluid stopped)
+</LI>
+</UL>
+
+<P>
+These are the conditions represented by the switch statuses shown in a schematic diagram.  These may very well <SPAN  CLASS="textit">not</SPAN> be the statuses of the switches when they are exposed to <SPAN  CLASS="textit">typical</SPAN> operating conditions in the process.
+
+<P>
+
+<P>
+A helpful tip to remember about process switches and their respective schematic diagram symbols is that the symbols are conventionally drawn in such a way that an <SPAN  CLASS="textit">upward</SPAN> motion of the movable switch element represents <SPAN  CLASS="textit">increasing stimulus</SPAN>.  Here are some examples of this, showing various process switch types and NO/NC contact configurations, comparing their states with no stimulus versus when the stimulus exceeds the each switch's threshold or &ldquo;trip&rdquo; setting.  The <SPAN  CLASS="textit">normal</SPAN> status of each switch as defined by the manufacturer is labeled in green text:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete32.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 64.45ex; vertical-align: -0.10ex; " SRC="img4.svg"
+ ALT="$\displaystyle \includegraphics{discrete32.eps}$">
+</DIV><P></P>
+
+<P>
+It is imperative<A ID="tex2html1"
+  HREF="footnode.html#foot80"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A> to remember that the way a switch is drawn in a schematic diagram merely represents its &ldquo;normal&rdquo; status as defined by the manufacturer.  This may or may not be the switch's status during &ldquo;typical&rdquo; operation of the process, and it may or may not be the status of that switch at the time of concern when you are examining the schematic!  The &ldquo;normal&rdquo; status of a switch means just one thing: what that switch will do when subjected to minimum stimulus &ndash; that is to say, what it will do when its stimulus is less than the actuation threshold of the switch.  <A NAME="81"></A>
+
+<P>
+
+<P>
+For example, the LED in this circuit will turn on if the liquid level rises above 14 inches <SPAN  CLASS="textit">and</SPAN> the pressure falls below 22 PSI <SPAN  CLASS="textit">and</SPAN> either the flow is less than 3 gallons per minute <SPAN  CLASS="textit">or</SPAN> the temperature is greater than 125 degrees Fahrenheit:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete33.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 26.13ex; vertical-align: -0.10ex; " SRC="img5.svg"
+ ALT="$\displaystyle \includegraphics{discrete33.eps}$">
+</DIV><P></P>
+
+<P>
+Since we know we need a switch to be <SPAN  CLASS="textit">closed</SPAN> in order to conduct electricity and provide a path for current in this circuit, we are looking for the necessary conditions to close each switch.  For any normally-closed (NC) switch, this means a stimulus value less than the actuation threshold.  For any normally-open (NO) switch, this means a stimulus value great enough to exceed the threshold and &ldquo;hold&rdquo; the switch in its actuated state.  Since the flow and pressure switches in this circuit are both NC, we are looking for flow and pressure values less than the respective settings.  Since the level and temperature switches are both NO, we are looking for level and temperature values in excess of their respective settings.
+
+<P>
+<P>
+The present status of a switch may be determined by comparing its stimulating quantity against its trip (threshold) setting.  A switch will be in its &ldquo;normal&rdquo; (resting) state when the stimulus value is less than the threshold value.  Conversely, a switch will be in its &ldquo;actuated&rdquo; state when the stimulus value exceeds the threshold value.  Determination of a switch's status, therefore, is a matter of comparing the stimulus quantity to the threshold &ldquo;trip&rdquo; setting.  One cannot simply look at the schematic diagram to tell what the switch is doing &ndash; one must <SPAN  CLASS="textit">compare</SPAN> the switch's setting versus against a known stimulus value in order to tell whether it will be in its resting state or not.
+
+<P>
+Likewise, if we happen to know the switch's present status in a system, we may qualitatively determine the stimulating quantity by comparing the present status against the &ldquo;normal&rdquo; (resting) status.  If a switch is in its resting state, then the stimulating quantity must be less than the trip threshold.  If a switch is in its actuated (non-normal) state, then the stimulating quantity must be greater than the trip threshold<A ID="tex2html2"
+  HREF="footnode.html#foot303"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>.  The next example showcases these determinations.
+
+<P>
+
+<P>
+In this next example, we see a pictorial representation of multiple switches wired to the discrete input channels of a programmable logic controller (PLC), with red LED indicators denoting the real-time status of each input on the PLC:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete34.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 64.45ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$\displaystyle \includegraphics{discrete34.eps}$">
+</DIV><P></P>
+
+<P>
+We may determine a switch's degree of stimulation by comparing its present status with its &ldquo;normal&rdquo; status.  If a switch happens to be in the same state as its normal state (i.e. resting), we know its stimulus must be less than the threshold (trip) value.  If a switch happens to be in the opposite state as its normal state (i.e. actuated), we know its stimulus has exceeded the threshold (trip) value.  The states of these four switches may be shown in a table:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil # \ \hfil &
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil & 
+\vrule \quad\hfil # \ \hfil \vrule \cr
+\noalign{\hrule }
+\textbf{Switch} & \textbf{Normal status} & \textbf{Present status} & \textbf{Trip value} & \textbf{Stimulus} \cr
+\noalign{\hrule }
+Pressure & Normally-closed (NC) & Closed & 12 PSI & $P <$ 12 PSI \cr
+\noalign{\hrule }
+Temperature & Normally-open (NO) & Closed & 235 $^{o}$F & $T >$ 235 $^{o}$F \cr
+\noalign{\hrule }
+Level & Normally-closed (NC) & Closed & 4 inches & $L <$ 4 inches \cr
+\noalign{\hrule }
+Limit & Normally-open (NO) & Open & n/a & \textit{no contact} \cr
+\noalign{\hrule }
+} % End of \halign 
+}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 14.64ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$\displaystyle \vbox{\offinterlineskip
+\halign{\strut
+\vrule \quad\hfil  ...">
+</DIV><P></P> 
+<P>
+
+<H1><A ID="SECTION00220000000000000000">
+Hand switches</A>
+</H1>
+
+<P>
+A <SPAN  CLASS="textit">hand switch</SPAN> is exactly what the name implies: an electrical switch actuated by a person's hand motion.  These may take the form of toggle, pushbutton, rotary, pull-chain, etc.  A common form of industrial pushbutton switch looks something like this: <A NAME="106"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete04.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 30.00ex; vertical-align: -0.10ex; " SRC="img8.svg"
+ ALT="$\displaystyle \includegraphics{discrete04.eps}$">
+</DIV><P></P>
+
+<P>
+The threaded neck inserts through a hole cut into a metal or plastic panel, with a matching nut to hold it in place.  Thus, the button faces the human operator(s) while the switch contacts reside on the other side of the panel.
+
+<P>
+When pressed, the downward motion of the actuator breaks the electrical bridge between the two NC contacts, forming a new bridge between the NO contacts:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete05.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 28.65ex; vertical-align: -0.10ex; " SRC="img9.svg"
+ ALT="$\displaystyle \includegraphics{discrete05.eps}$">
+</DIV><P></P>
+
+<P>
+The schematic diagram symbol for this type of switch looks much like the real thing, with the normally-closed contact set on top and the normally-open contact set below:  <A NAME="109"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete06.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 7.35ex; vertical-align: -0.10ex; " SRC="img10.svg"
+ ALT="$\displaystyle \includegraphics{discrete06.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+Connecting two of the terminals together makes this form of switch electrically identical to a <SPAN  CLASS="textit">Form C</SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete28.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.42ex; vertical-align: -0.10ex; " SRC="img11.svg"
+ ALT="$\displaystyle \includegraphics{discrete28.eps}$">
+</DIV><P></P>
+
+<P>
+This switch contact arrangement is sometimes referred to as a <SPAN  CLASS="textit">form-C</SPAN> contact set, since it incorporates both a form-A contact (normally-open) as well as a form-B contact (normally-closed). <A NAME="114"></A>
+
+<P>
+
+<P>
+Most industrial hand switches are available in modular form, where sets of switch contact blocks may be &ldquo;stacked&rdquo; together to be actuated by the same pushbutton or rotary knob.  This allows an almost unlimited number of switch contacts to be simultaneously actuated by a single actuating mechanism.  Different actuator types such as pushbuttons, rotary selectors, knobs, and keyswitches may also be interchanged with contact modules for maximum flexibility:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete27.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 39.10ex; vertical-align: -0.10ex; " SRC="img12.svg"
+ ALT="$\displaystyle \includegraphics{discrete27.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H1><A ID="SECTION00230000000000000000">
+Limit switches</A>
+</H1>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete10.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 15.87ex; vertical-align: -0.10ex; " SRC="img13.svg"
+ ALT="$\displaystyle \includegraphics{discrete10.eps}$">
+</DIV><P></P>
+
+<P>
+A <SPAN  CLASS="textit">limit switch</SPAN> detects the physical motion of an object by direct contact with that object.  An example of a limit switch is the switch detecting the open position of an automobile door, automatically energizing the cabin light when the door opens.  <A NAME="119"></A>
+
+<P>
+Recall from section <A HREF="#normal_switch">1.1</A> that the &ldquo;normal&rdquo; status of a switch is the resting condition of <SPAN  CLASS="textit">no stimulation</SPAN>.  A limit switch will be in its &ldquo;normal&rdquo; status when it is not in contact with anything (i.e. nothing touching the switch actuator mechanism).  <A NAME="122"></A>
+
+<P>
+Limit switches find many uses in industry, particular in robotic control and CNC (Computer Numerical Control) machine tool systems.  In many motion-control systems, the moving elements have &ldquo;home&rdquo; positions where the computer assigns a position value of zero.  For example, the axis controls on a CNC machine tool such as a lathe or mill all return to their &ldquo;home&rdquo; positions upon start-up, so the computer can know with confidence the starting locations of each piece.  These home positions are detected by means of limit switches.  The computer commands each servo motor to travel fully in one direction until a limit switch on each axis trips.  The position counter for each axis resets to zero as soon as the respective limit switch detects that the home position has been reached.  <A NAME="123"></A>
+
+<P>
+A typical limit switch design uses a roller-tipped lever to make contact with the moving part.  Screw terminals on the switch body provide connection points with the NC and NO contacts inside the switch.  Most limit switches of this design share a &ldquo;common&rdquo; terminal between the NC and NO contacts like this:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete07.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 21.29ex; vertical-align: -0.10ex; " SRC="img14.svg"
+ ALT="$\displaystyle \includegraphics{discrete07.eps}$">
+</DIV><P></P>
+
+<P>
+This switch contact arrangement is sometimes referred to as a <SPAN  CLASS="textit">form-C</SPAN> contact set, since it incorporates both a form-A contact (normally-open) as well as a form-B contact (normally-closed). <A NAME="126"></A>
+
+<P>
+
+<P>
+A close-up view of several limit switches (used on a drum sequencer) shows the arrangement of connection terminals for form-C contacts.  Each limit switch has its own &ldquo;NO&rdquo; (normally-open), &ldquo;NC&rdquo; (normally-closed), and &ldquo;C&rdquo; (common) screw terminal for wires to attach:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{form_c_contacts.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img15.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{form_c_contacts.eps}$">
+</DIV><P></P>
+
+<P>
+A limit switch assembly attached to the stem of a rotary valve &ndash; used to detect the fully-closed and fully-open positions of the valve &ndash; is shown in the following photograph:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{limit_switch_1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 37.26ex; vertical-align: -0.10ex; " SRC="img16.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{limit_switch_1.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H1><A ID="SECTION00240000000000000000">
+Proximity switches</A>
+</H1>
+
+<P>
+A <SPAN  CLASS="textit">proximity switch</SPAN> is one detecting the proximity (closeness) of some object.  By definition, these switches are <SPAN  CLASS="textit">non-contact sensors</SPAN>, using magnetic, electric, or optical means to sense the proximity of objects. <A NAME="132"></A>
+
+<P>
+Recall from section <A HREF="#normal_switch">1.1</A> that the &ldquo;normal&rdquo; status of a switch is the resting condition of <SPAN  CLASS="textit">no stimulation</SPAN>.  A proximity switch will be in its &ldquo;normal&rdquo; status when it is distant from any detectable object.  <A NAME="135"></A>
+
+<P>
+Being non-contact in nature, proximity switches are often used instead of direct-contact limit switches for the same purpose of detecting the position of a machine part, with the advantage of never wearing out over time due to repeated physical contact.  
+
+<P>
+Most proximity switches are <SPAN  CLASS="textit">active</SPAN> in design.  That is, they incorporate a powered electronic circuit to sense the proximity of an object.  <SPAN  CLASS="textit">Inductive</SPAN> proximity switches sense the presence of metallic objects through the use of a high-frequency magnetic field.  <SPAN  CLASS="textit">Capacitive</SPAN> proximity switches sense the presence of non-metallic objects through the use of a high-frequency electric field.  <SPAN  CLASS="textit">Optical</SPAN> proximity switches detect the interruption of a light beam by an object.  <SPAN  CLASS="textit">Ultrasonic</SPAN> proximity switches sense the presence of dense matter by the reflection of sound waves.
+
+<P>
+The schematic diagram symbol for a proximity switch with mechanical contacts is the same as for a mechanical limit switch, except the switch symbol is enclosed by a diamond shape, indicating a powered (active) device:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete08.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 19.35ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\displaystyle \includegraphics{discrete08.eps}$">
+</DIV><P></P>
+
+<P>
+Many proximity switches, though, do not provide &ldquo;dry contact<A ID="tex2html3"
+  HREF="footnode.html#foot142"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A>&rdquo; outputs.  Instead, their output elements are transistors configured either to <SPAN  CLASS="textit">source</SPAN> current or <SPAN  CLASS="textit">sink</SPAN> current.  The terms &ldquo;sourcing&rdquo; and &ldquo;sinking&rdquo; are best understood by visualizing electric current in the direction of <SPAN  CLASS="textit">conventional flow</SPAN> rather than <SPAN  CLASS="textit">electron flow</SPAN>.  <A NAME="147"></A>  <A NAME="148"></A>  <A NAME="149"></A>  <A NAME="150"></A>
+
+<P>
+
+<P>
+The following schematic diagrams contrast the two modes of switch operation, using red arrows to show the direction of current (conventional flow notation).  In both examples, the load being driven by each proximity switch is a light-emitting diode (LED): <A NAME="151"></A> <A NAME="152"></A> <A NAME="153"></A> <A NAME="154"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete09.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 71.42ex; vertical-align: -0.10ex; " SRC="img18.svg"
+ ALT="$\displaystyle \includegraphics{discrete09.eps}$">
+</DIV><P></P>
+
+<P>
+A common coloring convention for electronic proximity switches is brown for +V power supply, blue for ground (<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img19.svg"
+ ALT="$-$"></SPAN> pole of power supply), and black for the switched output signal.  This convention is common to sinking and sourcing proximity switches alike.
+
+<P>
+An electronic switch designed to sink current through its signal wire is alternatively referred to as an <SPAN  CLASS="textit">NPN</SPAN> switch due to the type of transistor used in its output.  Conversely, an electronic switch designed to source current through its signal wire may be referred to as a <SPAN  CLASS="textit">PNP</SPAN> switch.  The key to understanding these labels is to recognize the emitter terminal of the output transistor is always the one connected to the power supply rail.  For a sinking switch, this means the emitter must connect to the negative rail, necessitating<A ID="tex2html4"
+  HREF="footnode.html#foot305"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">4</SPAN></SUP></A> an NPN transistor to do the switching.  For a sourcing switch, this means the emitter must connect to the positive rail, in which case only a PNP transistor will suffice.  <A NAME="160"></A>  <A NAME="161"></A>
+
+<P>
+
+<P>
+Yet another convention for describing sourcing and sinking transistor switches is to refer to them as <SPAN  CLASS="textit">high-side</SPAN> switches and <SPAN  CLASS="textit">low-side</SPAN> switches, respectively.  A sourcing transistor (PNP) has its emitter terminal attached directly to the &ldquo;high&rdquo; rail (+) of the DC power supply.  A sinking transistor (NPN), by contrast, has its emitter terminal attached directly to the &ldquo;low&rdquo; rail (<SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img19.svg"
+ ALT="$-$"></SPAN>) of the DC power supply.  <A NAME="164"></A>  <A NAME="165"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete29.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 67.94ex; vertical-align: -0.10ex; " SRC="img20.svg"
+ ALT="$\displaystyle \includegraphics{discrete29.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+These photographs show two different styles of electronic proximity switch:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{prox_switch_3.eps} \hskip 30pt \includegraphics[width=2.5in]{prox_switch_1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.36ex; vertical-align: -0.10ex; " SRC="img21.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{prox_switch_3.eps} \hskip 30pt \includegraphics[width=2.5in]{prox_switch_1.eps}$">
+</DIV><P></P>
+
+<P>
+Many industrial proximity switches have built-in LED indicator lamps to help technicians diagnose circuit problems by directly indicating switch status.  With just a glance, one may tell whether or not the proximity switch is detecting the presence of an object.
+
+<P>
+
+<P>
+The next photograph shows a proximity switch detecting the passing of teeth on a chain sprocket, generating a slow square-wave electrical signal as the sprocket rotates.  Such a switch may be used as a rotational speed sensor (sprocket speed proportional to signal frequency) or as a broken chain sensor (when sensing the rotation of the driven sprocket instead of the drive sprocket):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{prox_switch_2.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.55ex; vertical-align: -0.10ex; " SRC="img22.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{prox_switch_2.eps}$">
+</DIV><P></P>
+
+<P>
+<P>
+Like other types of process switches, proximity switches come in both &ldquo;normally open&rdquo; (NO) and &ldquo;normally closed&rdquo; (NC) varieties.  This distinction has nothing whatsoever to do with sourcing versus sinking (PNP vs. NPN), but rather what the status of the proximity switch will be when no objects are near.  Thus, it is possible to find normally-open proximity switches that are sinking (NPN) as well as normally-open proximity switches that are sourcing (PNP), and normally-closed proximity switches in either sinking or sourcing designs as well.
+
+<P>
+These switch characteristics are commonly fixed, and must be specified when ordering the device.  Likewise, the detection range of a proximity switch is usually a fixed parameter rather than being adjustable.
+
+<P>
+
+<H1><A ID="SECTION00250000000000000000">
+Pressure switches</A>
+</H1>
+
+<P>
+A <SPAN  CLASS="textit">pressure switch</SPAN> is one detecting the presence of fluid pressure.  Pressure switches often use diaphragms or bellows as the pressure-sensing element, the motion of which actuates one or more switch contacts. <A NAME="172"></A>
+
+<P>
+Recall from section <A HREF="#normal_switch">1.1</A> that the &ldquo;normal&rdquo; status of a switch is the resting condition of <SPAN  CLASS="textit">no stimulation</SPAN>.  A pressure switch will be in its &ldquo;normal&rdquo; status when it senses minimum pressure (e.g. an applied pressure, or in some cases a vacuum condition)<A ID="tex2html5"
+  HREF="footnode.html#foot175"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">5</SPAN></SUP></A>.  For a pressure switch, &ldquo;normal&rdquo; status is any fluid pressure <SPAN  CLASS="textit">below</SPAN> the trip threshold of the switch.  <A NAME="177"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete11.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 16.84ex; vertical-align: -0.10ex; " SRC="img23.svg"
+ ALT="$\displaystyle \includegraphics{discrete11.eps}$">
+</DIV><P></P>
+
+<P>
+The following photograph shows two pressure switches sensing the same fluid pressure as an electronic pressure transmitter (the device on the far left) because they are all plumbed to a common tube:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{press_switch_1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 33.84ex; vertical-align: -0.10ex; " SRC="img24.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{press_switch_1.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+A legacy design of pressure switch uses a bourdon tube as the pressure-sensing element, and a glass bulb partially filled with mercury as the electrical switching element.  When applied pressure causes the bourdon tube to flex sufficiently, the glass bulb tilts far enough to cause the mercury to fall against a pair of electrodes, thus completing an electrical circuit.  A great many pressure switches of this design were sold under the brand name of &ldquo;Mercoid,&rdquo; with a few appearing in this photograph of a steam boiler (the round-shaped units with glass covers allowing inspection of the bourdon tube and mercury tilt switch):  <A NAME="180"></A>  <A NAME="181"></A>  <A NAME="182"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{pressure_switch_4.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img25.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{pressure_switch_4.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+A close-up photograph of one of these pressure switches appears here.  The bourdon tube is grey in color, and almost as wide in diameter as the circular switch housing.  The mercury tilt switch bottles have yellow-colored plastic caps covering up their external electrical contacts:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{pressure_switch_5.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 55.43ex; vertical-align: -0.10ex; " SRC="img26.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{pressure_switch_5.eps}$">
+</DIV><P></P>
+
+<P>
+The next set of photographs show a mercury tilt switch removed from the pressure switch mechanism, so you may see the switch in two different states (contact open on the left, and closed on the right):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=2.5in]{tilt_switch_1.eps} \hskip 30pt \includegraphics[width=2.5in]{tilt_switch_2.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 23.42ex; vertical-align: -0.10ex; " SRC="img27.svg"
+ ALT="$\displaystyle \includegraphics[width=2.5in]{tilt_switch_1.eps} \hskip 30pt \includegraphics[width=2.5in]{tilt_switch_2.eps}$">
+</DIV><P></P>
+
+<P>
+Advantages of mercury tilt switches include immunity to switch contact degradation from harmful atmospheres (oil mist, dirt, dust, corrosion) as well as safety in explosive atmospheres (since a spark contained within a hermetically sealed glass bulb cannot touch off an explosion in the surrounding atmosphere).  Disadvantages include the possibility of intermittent electrical contact resulting from mechanical vibration, as well as sensitivity to mounting angle (i.e. you would <SPAN  CLASS="textit">not</SPAN> want to use this kind of switch aboard a moving vehicle!).
+
+<P>
+
+<P>
+A pressure switch manufactured by the Danfoss corporation appears in the next photograph.  This particular model of pressure switch has windows on the front cover allowing a technician to see the pressure limit setting inside:  <A NAME="188"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{pressure_switch_3.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="img28.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{pressure_switch_3.eps}$">
+</DIV><P></P>
+
+<P>
+This switch balances the force generated by a pressure-sensing element against a mechanical spring.  Tension on the spring may be adjusted by a technician, which means the trip point of this switch is adjustable.
+
+<P>
+One of the settings on this switch is the <SPAN  CLASS="textit">deadband</SPAN> or <SPAN  CLASS="textit">differential</SPAN> pressure setting, seen in the lower window.  This setting determines the amount of pressure change required to re-set the switch to its normal state after it has tripped.  For example, a high-pressure switch with a trip point of 67 PSI (changes state at 67 PSI, increasing) that re-sets back to its normal state at a pressure of 63 PSI decreasing has a &ldquo;deadband&rdquo; or &ldquo;differential&rdquo; pressure setting of 4 PSI (67 PSI <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.29ex; " SRC="img19.svg"
+ ALT="$-$"></SPAN> 63 PSI = 4 PSI).  <A NAME="192"></A>  <A NAME="193"></A>
+
+<P>
+
+<P>
+The &ldquo;differential&rdquo; pressure setting of a gauge pressure switch is not to be confused with a true <SPAN  CLASS="textit">differential pressure</SPAN> switch.  In the next photograph, we see a pressure switch truly actuated by <SPAN  CLASS="textit">differential</SPAN> pressure (the difference in fluid pressure sensed between two ports):  <A NAME="196"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{pressure_switch_2.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="img29.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{pressure_switch_2.eps}$">
+</DIV><P></P>
+
+<P>
+The electrical switch element is located underneath the blue cover, while the diaphragm pressure element is located within the grey metal housing.  The net force exerted on the diaphragm by the two fluid pressures varies in magnitude and direction with the magnitude of those pressures.  If the two fluid pressures are precisely equal, the diaphragm experiences no net force (zero differential pressure).
+
+<P>
+Like the Danfoss gauge pressure switch seen previously, this differential pressure switch has a &ldquo;trip&rdquo; or &ldquo;limit&rdquo; setting as well as a &ldquo;dead-band&rdquo; or &ldquo;differential&rdquo; setting.  It is important to recognize and clearly distinguish the two meanings of <SPAN  CLASS="textit">differential pressure</SPAN> in the context of this device.  It senses differences in pressure between two input ports (&ldquo;differential pressure&rdquo; &ndash; the difference between two different fluid pressure connections), but being a switch, it also exhibits some dead band in its action (&ldquo;differential pressure&rdquo; &ndash; a change in pressure required to re-set the switch's state).
+
+<P>
+
+<H1><A ID="SECTION00260000000000000000">
+Level switches</A>
+</H1>
+
+<P>
+<A ID="level_switch"></A>
+<P>
+A <SPAN  CLASS="textit">level switch</SPAN> is one detecting the level of liquid or solid (granules or powder) in a vessel.  Level switches often use floats as the level-sensing element, the motion of which actuates one or more switch contacts. <A NAME="202"></A>
+
+<P>
+Recall from section <A HREF="#normal_switch">1.1</A> that the &ldquo;normal&rdquo; status of a switch is the resting condition of <SPAN  CLASS="textit">no stimulation</SPAN>.  A level switch will be in its &ldquo;normal&rdquo; status when it senses minimum level (e.g. an empty vessel).  For a level switch, &ldquo;normal&rdquo; status is any fluid level <SPAN  CLASS="textit">below</SPAN> the trip threshold of the switch.  <A NAME="206"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete12.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 16.84ex; vertical-align: -0.10ex; " SRC="img30.svg"
+ ALT="$\displaystyle \includegraphics{discrete12.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00261000000000000000">
+Float-type level switches</A>
+</H2>
+
+<P>
+Some level switches use a <SPAN  CLASS="textit">float</SPAN> to sense the level of a liquid surface, actuating an electrical switch by the motion of the float.  The electrical schematic symbol for a level switch is actually based on this type of mechanism, with a round &ldquo;ball&rdquo; float drawn as the actuating element:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete12.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 16.84ex; vertical-align: -0.10ex; " SRC="img30.svg"
+ ALT="$\displaystyle \includegraphics{discrete12.eps}$">
+</DIV><P></P>
+
+<P>
+An example of this technology is a level switch manufactured by Magnetrol, with two such switches shown in the following photograph of a steam boiler.  These switches sense water level in the steam drum of the boiler: <A NAME="211"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{level_switch_1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.55ex; vertical-align: -0.10ex; " SRC="img31.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{level_switch_1.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+The Magnetrol float switch mechanism uses a mercury tilt bulb, tilted by a magnet's attraction to a steel rod lifted into position by a float.  The float directly senses liquid level, positioning the steel rod either closer to or farther away from the magnet.  If the rod comes close enough to the magnet, the mercury bottle tilts to change the switch's electrical status:  <A NAME="213"></A>  <A NAME="214"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level_switch_8.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 25.94ex; vertical-align: -0.10ex; " SRC="img32.svg"
+ ALT="$\displaystyle \includegraphics{level_switch_8.eps}$">
+</DIV><P></P>
+
+<P>
+A feature of this design is complete isolation between the electrical components and the &ldquo;wet&rdquo; components sensing the liquid level.  The steel rod moves inside a non-magnetic metal tube, with the tube sealing process fluid pressure from escape while still allowing the magnetic tilt switch to sense float position.
+
+<P>
+<P>
+Simpler float switch designs also exist for direct installation in open (vented) process vessels, resembling the float valve assembly on a water-flush toilet.  Any &ldquo;limit&rdquo; style switching element will work here, including inductive proximity switches, to sense the float's position in an environment where no isolation need exist between the switch and the process fluid(s):
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level_switch_9.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 17.81ex; vertical-align: -0.10ex; " SRC="img33.svg"
+ ALT="$\displaystyle \includegraphics{level_switch_9.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00262000000000000000">
+Tuning fork level switches</A>
+</H2>
+
+<P>
+This level switch uses a metal <SPAN  CLASS="textit">tuning fork</SPAN> structure to detect the presence of a liquid or solid (powder or granules) in a vessel:  <A NAME="219"></A>  <A NAME="220"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{level_switch_2.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 52.55ex; vertical-align: -0.10ex; " SRC="img34.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{level_switch_2.eps}$">
+</DIV><P></P>
+
+<P>
+An electronic circuit continuously excites the tuning fork, causing it to mechanically vibrate.  When the prongs of the fork contact anything with substantial mass, the resonant frequency of the fork decreases.  The circuit detects this frequency change and indicates the presence of mass contacting the fork.  The forks' vibrating motion tends to shake off any accumulated material, such that this style of level switch tends to be resistant to fouling.
+
+<P>
+<P>
+It should be noted that the previous photograph of the tuning-fork style level switch is complete: the fork &ldquo;paddles&rdquo; are only a couple of inches long and require no physical extensions in order to properly detect liquid or solid material at that point.
+
+<P>
+
+<H2><A ID="SECTION00263000000000000000">
+Paddle-wheel level switches</A>
+</H2>
+
+<P>
+A more primitive variation on the theme of a &ldquo;tuning fork&rdquo; level switch is the <SPAN  CLASS="textit">rotating paddle</SPAN> switch, used to detect the level of powder or granular solid material.  This level switch uses an electric motor to slowly rotate a metal paddle inside the process vessel.  If solid material rises to the level of the paddle, the material's bulk will place a mechanical load on the paddle.  A torque-sensitive switch mechanically linked to the motor actuates when enough torsional effort is detected on the part of the motor.  A great many level switches of this design sold in the United States under the trade-name <SPAN  CLASS="textit">Bindicator</SPAN> (so-called because they detected the level of solid material in storage <SPAN  CLASS="textit">bins</SPAN>).  <A NAME="226"></A>
+
+<P>
+A &ldquo;Bindicator&rdquo; style of level switch appears in this photograph (painted black, against a white-painted hopper), used to detect the presence of soda ash powder in a hopper at a water treatment plant:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{level_switch_5.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img35.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{level_switch_5.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00264000000000000000">
+Ultrasonic level switches</A>
+</H2>
+
+<P>
+Yet another style of electronic level switch uses ultrasonic sound waves to detect the presence of process material (either solid or liquid) at one point:  <A NAME="229"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=5in]{level_switch_3.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.52ex; vertical-align: -0.10ex; " SRC="img36.svg"
+ ALT="$\displaystyle \includegraphics[width=5in]{level_switch_3.eps}$">
+</DIV><P></P>
+
+<P>
+Sound waves pass back and forth within the gap of the probe, sent and received by piezoelectric transducers.  The presence of any substance other than gas within that gap affects the received audio power, thus signaling to the electronic circuit within the bulkier portion of the device that process level has reached the detection point.  The lack of moving parts makes this probe quite reliable, although it may become &ldquo;fooled&rdquo; by heavy fouling.
+
+<P>
+
+<H2><A ID="SECTION00265000000000000000">
+Capacitive level switches</A>
+</H2>
+
+<P>
+Another electronic liquid level switch technology is <SPAN  CLASS="textit">capacitive</SPAN>: sensing level by changes in electrical capacitance between the switch and the liquid.  <A NAME="233"></A>  The following photograph shows a couple of capacitive switches sensing the presence of water in a plastic storage vessel:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=4in]{level_switch_4.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 83.91ex; vertical-align: -0.10ex; " SRC="img37.svg"
+ ALT="$\displaystyle \includegraphics[width=4in]{level_switch_4.eps}$">
+</DIV><P></P>
+
+<P>
+
+<H2><A ID="SECTION00266000000000000000">
+Conductive level switches</A>
+</H2>
+
+<P>
+Perhaps the simplest (and oldest) form of electrical level detection is where a pair of metal electrodes contacts the process material to form a complete electrical circuit, actuating a relay.  This type of switch, of course, only works with granular solids and liquids that are electrically conductive (e.g. potable or dirty water, acids, caustics, food liquids, coal, metal powders) and not with non-conducting materials (e.g. ultra-pure water, oils, ceramic powders).
+
+<P>
+A legacy design for conductive level switches is the model 1500 &ldquo;induction relay&rdquo; originally manufactured by B/W Controls, using a special transformer/relay to generate an isolated AC probe voltage and sense the presence of liquid:  <A NAME="236"></A>  <A NAME="237"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level_switch_6.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 51.29ex; vertical-align: -0.10ex; " SRC="img38.svg"
+ ALT="$\displaystyle \includegraphics{level_switch_6.eps}$">
+</DIV><P></P>
+
+<P>
+Line voltage (120 VAC) energizes the primary coil, sending a magnetic field through the laminated ferrous<A ID="tex2html6"
+  HREF="footnode.html#foot239"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">6</SPAN></SUP></A> core of the relay.  This magnetic field easily passes through the center of the secondary coil when the secondary circuit is open (no liquid closing the probe circuit), thus completing the magnetic &ldquo;circuit&rdquo; in the core.  With the magnetic circuit thus completed, the armature will not be attracted to the core.  However, when a circuit is completed by liquid level rising to contact both probes, the secondary coil's resulting current &ldquo;bucks&rdquo; the magnetic flux<A ID="tex2html7"
+  HREF="footnode.html#foot306"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">7</SPAN></SUP></A> through its center, causing more magnetic flux to bypass to the end poles where it attracts the ferrous armature toward the core frame.  This physical attraction actuates switch contacts which then signal the presence of liquid level at the probes.  <A NAME="243"></A>
+
+<P>
+
+<P>
+The following pair of illustrations shows the two conditions of this level switch, with the magnetic lines of flux highlighted as dashed lines through the core:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{level_switch_7.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 46.26ex; vertical-align: -0.10ex; " SRC="img40.svg"
+ ALT="$\displaystyle \includegraphics{level_switch_7.eps}$">
+</DIV><P></P>
+
+<P>
+The &ldquo;transformer&rdquo; design of this particular conductive level switch not only provides electrical isolation between the probes and the energizing (120 VAC) circuit, but it also enables a wide range of detection voltages to be generated for the probes just by altering the number of wire &ldquo;turns&rdquo; in the secondary coil.  The B/W Controls model 1500 inductive relay is available in a variety of AC voltage output levels, ranging from 12 VAC (for detecting metallic substances) to 800 VAC for use with demineralized water such as that found in steam boiler systems.
+
+<P>
+<P>
+More modern variations on the same design theme use much lower AC voltages<A ID="tex2html8"
+  HREF="footnode.html#foot245"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">8</SPAN></SUP></A> to energize the probes, employing sensitive semiconductor amplifier circuits to detect probe current and signal liquid level.
+
+<P>
+
+<H1><A ID="SECTION00270000000000000000">
+Temperature switches</A>
+</H1>
+
+<P>
+A <SPAN  CLASS="textit">temperature switch</SPAN> is one detecting the temperature of some substance.  Temperature switches often use bimetallic strips as the temperature-sensing element, the motion of which actuates one or more switch contacts.  An alternative design uses a metal bulb filled with a fluid that expands with temperature, causing the switch mechanism to actuate based on the pressure this fluid exerts against a diaphragm or bellows.  This latter temperature switch design is really a pressure switch, whose pressure is a direct function of process temperature by virtue of the physics of the entrapped fluid inside the sensing bulb. <A NAME="248"></A>
+
+<P>
+Recall from section <A HREF="#normal_switch">1.1</A> that the &ldquo;normal&rdquo; status of a switch is the resting condition of <SPAN  CLASS="textit">no stimulation</SPAN>.  A temperature switch will be in its &ldquo;normal&rdquo; status when it senses minimum temperature (i.e. cold, in some cases a condition colder than ambient)<A ID="tex2html9"
+  HREF="footnode.html#foot251"><SUP><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">9</SPAN></SUP></A>.  For a temperature switch, &ldquo;normal&rdquo; status is any sensed temperature <SPAN  CLASS="textit">below</SPAN> the trip threshold of the switch.  <A NAME="253"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete13.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 16.84ex; vertical-align: -0.10ex; " SRC="img41.svg"
+ ALT="$\displaystyle \includegraphics{discrete13.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+The following photograph shows a temperature-actuated switch manufactured by the Ashcroft corporation:  <A NAME="255"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{temp_switch_1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="img42.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{temp_switch_1.eps}$">
+</DIV><P></P>
+
+<P>
+Like all other process switches, temperature switches exhibit a certain amount of <SPAN  CLASS="textit">deadband</SPAN> in their switching action.  A temperature switch that trips at 300 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img43.svg"
+ ALT="$^{o}$"></SPAN>F <SPAN  CLASS="textit">rising</SPAN>, for example, will not re-set at 300 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img43.svg"
+ ALT="$^{o}$"></SPAN>F <SPAN  CLASS="textit">falling</SPAN>.  That switch would more likely reset at some lower temperature such as 295 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img43.svg"
+ ALT="$^{o}$"></SPAN>F.  With mechanical switch designs, some amount of deadband is inevitable due to friction inside the mechanism.  However, process switch deadband is actually a useful characteristic as it helps avoid repeated &ldquo;nuisance&rdquo; alarms from happening.    <A NAME="263"></A>
+
+<P>
+To understand this concept, it is helpful to imagine a scenario where the process variable is at or very near the trip point.  For our hypothetical temperature switch with a trip point of 300 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img43.svg"
+ ALT="$^{o}$"></SPAN>F (rising), imagine a situation where the process temperature is precisely 300.0 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img43.svg"
+ ALT="$^{o}$"></SPAN>F.  Any further rise in temperature will of course trip the switch (sounding an alarm).  With no deadband, however, the switch will immediately re-set when the temperature falls back down to 300.0 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img43.svg"
+ ALT="$^{o}$"></SPAN>F.  This means the switch may possibly &ldquo;cycle&rdquo; back and forth between its trip and reset states with just a minute change in process temperature (300.0 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img43.svg"
+ ALT="$^{o}$"></SPAN>F to 300.1 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img43.svg"
+ ALT="$^{o}$"></SPAN>F and back again).  If the temperature switch is activating an alarm every time it trips, it will create a series of alarm events prompting operators to repeatedly acknowledge the alarm.  This is a nuisance to operations personnel, as it distracts them from addressing what they already realize is a process problem.  It is better for the switch to trip at 300.0 <SPAN CLASS="MATH"><IMG STYLE="height: 1.70ex; vertical-align: -0.10ex; " SRC="img43.svg"
+ ALT="$^{o}$"></SPAN>F rising <SPAN  CLASS="textit">and remain in that tripped state</SPAN> until the temperature falls down to some degree substantially below the trip point.  This way, the operators only receive <SPAN  CLASS="textit">one</SPAN> alarm event rather than multiple alarm events for each process temperature excursion.
+
+<P>
+Some mechanical temperature switches come equipped with a separate adjustment for deadband (also called <SPAN  CLASS="textit">differential</SPAN>).  Setting this deadband adjustment in a mechanical temperature switch requires the technician to repeatedly subject the sensing element to a rising and falling temperature, to check that the switch trips at the proper setting and resets at the proper setting.  This is analogous to cycling the process variable back and forth when adjusting the &ldquo;zero&rdquo; and &ldquo;span&rdquo; settings of an analog transmitter: checking to see that the transmitter repeatedly outputs a 0% signal at the lower range value (LRV) and a 100% signal at the upper range value (URV).  <A NAME="273"></A>
+
+<P>
+<P>
+
+<P>
+For discrete temperature-sensing applications demanding high accuracy and repeatability, <SPAN  CLASS="textit">electronic</SPAN> temperature switch circuits using thermocouples, RTDs, or thermistors may be used instead of a mechanical (bi-metallic or filled bulb) sensing element.  The operation and configuration of discrete electronic temperature switches is very similar to that of continuous electronic temperature transmitters.  
+
+<P>
+An example of an electronic temperature switch module is the Moore Industries model SPA (&ldquo;Site Programmable Alarm&rdquo;), shown here:  <A NAME="275"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{intro_21.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="img44.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{intro_21.eps}$">
+</DIV><P></P>
+
+<P>
+Not only is this particular model capable of directly interpreting both RTD and thermocouple signals, but it will also input 4-20 mA loop current signals as well.  This means you may build a temperature switch system out of a 4-20 mA loop-powered temperature transmitter (located in the field) and an SPA switch module (located in a protected environment such as a control room or electrical enclosure).  Many other manufacturers and models of electronic switching units exist, with the Moore Industries SPA being just one example.
+
+<P>
+With electronic temperature switches, the adjustment of deadband (differential) is both precise and flexible.  Unlike mechanical switches where deadband is primarily a function of friction, and therefore liable to change over time as the device wears, electronic switching circuits may be precisely set for any trip and reset points along its measurement range, remaining very stable over time.  
+
+<P>
+
+<H1><A ID="SECTION00280000000000000000">
+Flow switches</A>
+</H1>
+
+<P>
+A <SPAN  CLASS="textit">flow switch</SPAN> is one detecting the flow of some fluid through a pipe.  Flow switches often use &ldquo;paddles&rdquo; as the flow-sensing element, the motion of which actuates one or more switch contacts. <A NAME="279"></A>
+
+<P>
+Recall from section <A HREF="#normal_switch">1.1</A> that the &ldquo;normal&rdquo; status of a switch is the resting condition of <SPAN  CLASS="textit">no stimulation</SPAN>.  A flow switch will be in its &ldquo;normal&rdquo; status when it senses minimum flow (i.e. no fluid moving through the pipe).  For a flow switch, &ldquo;normal&rdquo; status is any fluid flow rate <SPAN  CLASS="textit">below</SPAN> the trip threshold of the switch.  <A NAME="283"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics{discrete14.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 15.87ex; vertical-align: -0.10ex; " SRC="img45.svg"
+ ALT="$\displaystyle \includegraphics{discrete14.eps}$">
+</DIV><P></P>
+
+<P>
+
+<P>
+A simple paddle placed in the midst of a fluid stream generates a mechanical force which may be used to actuate a switch mechanism, as shown in the following photograph:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\includegraphics[width=3in]{flow_switch_1.eps}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="displaymath">
+<IMG STYLE="height: 62.98ex; vertical-align: -0.10ex; " SRC="img46.svg"
+ ALT="$\displaystyle \includegraphics[width=3in]{flow_switch_1.eps}$">
+</DIV><P></P>
+
+<P>
+Like all other process switches, flow switches exhibit <SPAN  CLASS="textit">deadband</SPAN> (also called <SPAN  CLASS="textit">differential</SPAN>) in their switching action.  A flow switch that trips at 15 GPM <SPAN  CLASS="textit">rising</SPAN>, for example, will not re-set at 15 GPM <SPAN  CLASS="textit">falling</SPAN>.  That switch would more likely reset at some lower flow rate such as 14 GPM.  With the &ldquo;trip&rdquo; and &ldquo;reset&rdquo; points being different, the switch avoids unnecessary cycling if the process flow rate hovers near one critical value.   <A NAME="290"></A>  <A NAME="291"></A>
+
+<P>
+
+<H1><A ID="SECTION00290000000000000000">
+Review of fundamental principles</A>
+</H1>
+
+<P>
+Shown here is a partial listing of principles applied in the subject matter of this chapter, given for the purpose of expanding the reader's view of this chapter's concepts and of their general inter-relationships with concepts elsewhere in the book.  Your abilities as a problem-solver and as a life-long learner will be greatly enhanced by mastering the applications of these principles to a wide variety of topics, the more varied the better.
+
+<P>
+
+<UL>
+<LI><SPAN  CLASS="textbf">&ldquo;Normal&rdquo; switch status</SPAN>: the &ldquo;normal&rdquo; status of a switch contact as defined by the manufacturer is its <SPAN  CLASS="textit">resting</SPAN> condition (minimum stimulus).
+</LI>
+<LI><SPAN  CLASS="textbf">Sourcing versus sinking</SPAN>: whether the electronic device in question is outputting (conventional flow) current or inputting current.  Relevant to the proper connection of electronic switches (especially proximity switches).
+</LI>
+<LI><SPAN  CLASS="textbf">Deadband and hysteresis</SPAN>: the difference in response with the independent variable increasing versus decreasing.  Usually caused by friction in a mechanism.  Relevant to the &ldquo;trip&rdquo; settings of process switches: the value at which a switch changes state when its stimulus increases is not the same value it changes state when its stimulus decreases.
+</LI>
+</UL>
+
+<P>
+
+<H1><A ID="SECTION002100000000000000000">
+References</A>
+</H1>
+
+<P>
+
+&ldquo;Installation and Service Manual &ndash; 1500 Induction Control Relays&rdquo;, document 511 1500.M4R 02/05.Z145 10M, AMETEK Automation and Process Technologies, Clawson, MI, 2005.
+
+<P>
+<P>
+
+&ldquo;Installation and Service Manual &ndash; 5200 Solid State Relays&rdquo;, document 432 5200.M4R 05/07.Z152, AMETEK Automation and Process Technologies, Clawson, MI, 2007.
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="html.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html53"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A> 
+<A ID="tex2html55"
+  HREF="node3.html">
+<IMG WIDTH="43" HEIGHT="24" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Index</A>
+<B> Up:</B> <A
+ HREF="html.html">html</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Contents</A>
+ &nbsp; <B>  <A ID="tex2html54"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A ID="tex2html56"
+  HREF="node3.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

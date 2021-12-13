@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 57 38" version="1.2">
+<g id="surface1">
+<path style="fill:none;stroke-width:9.75;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:6;" d="M 520 182.5 L 340 182.5 " transform="matrix(0.1,0,0,-0.1,0.5,37.5)"/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 36.75 19.25 C 36.75 18.007812 35.742188 17 34.5 17 C 33.257812 17 32.25 18.007812 32.25 19.25 C 32.25 20.492188 33.257812 21.5 34.5 21.5 C 35.742188 21.5 36.75 20.492188 36.75 19.25 "/>
+<path style="fill:none;stroke-width:9.75;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:6;" d="M 400 152.5 L 160 152.5 " transform="matrix(0.1,0,0,-0.1,0.5,37.5)"/>
+<path style="fill:none;stroke-width:9.75;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:6;" d="M 280 332.5 L 280 152.5 " transform="matrix(0.1,0,0,-0.1,0.5,37.5)"/>
+<path style="fill:none;stroke-width:9.75;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:6;" d="M 220 182.5 L 40 182.5 " transform="matrix(0.1,0,0,-0.1,0.5,37.5)"/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 24.75 19.25 C 24.75 18.007812 23.742188 17 22.5 17 C 21.257812 17 20.25 18.007812 20.25 19.25 C 20.25 20.492188 21.257812 21.5 22.5 21.5 C 23.742188 21.5 24.75 20.492188 24.75 19.25 "/>
+<path style="fill:none;stroke-width:9.75;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:6;" d="M 220 62.5 L 40 62.5 " transform="matrix(0.1,0,0,-0.1,0.5,37.5)"/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 24.75 31.25 C 24.75 30.007812 23.742188 29 22.5 29 C 21.257812 29 20.25 30.007812 20.25 31.25 C 20.25 32.492188 21.257812 33.5 22.5 33.5 C 23.742188 33.5 24.75 32.492188 24.75 31.25 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 36.75 31.25 C 36.75 30.007812 35.742188 29 34.5 29 C 33.257812 29 32.25 30.007812 32.25 31.25 C 32.25 32.492188 33.257812 33.5 34.5 33.5 C 35.742188 33.5 36.75 32.492188 36.75 31.25 "/>
+<path style="fill:none;stroke-width:9.75;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:6;" d="M 520 62.5 L 340 62.5 " transform="matrix(0.1,0,0,-0.1,0.5,37.5)"/>
+</g>
+</svg>
